@@ -1,0 +1,8 @@
+.vim/.netrwhist
+.vim/pack/
+.vim/syntax/
+
+# custom variables
+.vim/plugin/custom.vim
+
+.vim/tmp/

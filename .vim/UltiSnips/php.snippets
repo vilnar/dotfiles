@@ -1,0 +1,50 @@
+snippet pubf "Public function" b
+public function ${1:name}()
+{
+}$0
+endsnippet
+
+snippet ebr "echo br" b
+echo '<br>';$0
+endsnippet
+
+snippet exx "exit fast" b
+exit('exit debug');$0
+endsnippet
+
+snippet ddpr "debug print_r format" b
+echo '<pre>';
+print_r(${1:name});
+echo '</pre>';
+exit('dump');$0
+endsnippet
+
+snippet ddva "debug var_dump format" b
+echo '<pre>';
+var_dump(${1:name});
+echo '</pre>';
+exit('dump');$0
+endsnippet
+
+snippet ddco "debug var_dump console" b
+echo PHP_EOL;
+print_r(${1:name});
+echo PHP_EOL;
+exit('debug' . PHP_EOL);$0
+endsnippet
+
+snippet ddyquery "yii get raw sql" b
+${1:query}->createCommand()->getRawSql()$0
+endsnippet
+
+snippet ddinfile "debug in file" b
+file_put_contents('file_path', [
+    print_r(${1:name}, true) . "\n",
+    "-----------\n\n"
+], FILE_APPEND);$0
+endsnippet
+
+snippet ddtrace "stack trace debug" b
+var_dump((new \Exception())->getTraceAsString());
+exit('trace');$0
+endsnippet

@@ -1,0 +1,13 @@
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	ci = commit
+	hist = log --decorate --graph
+	bsort = branch --sort=-committerdate
+	subup = submodule update --recursive --init
+	last = log -1 HEAD
+	diff-names = diff --name-status
+	show-merged = show --first-parent
+[core]
+	editor = vim

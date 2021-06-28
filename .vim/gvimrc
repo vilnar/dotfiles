@@ -1,0 +1,10 @@
+" hide menu
+set guioptions=cM
+
+" make gVim automatically maximize
+set lines=999 columns=999
+
+set guifont=Monospace\ 11
+
+" disable blink cursor
+set guicursor+=a:blinkon0
