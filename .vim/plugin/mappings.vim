@@ -34,13 +34,13 @@ vnoremap <Leader>rw y:%s#\<<C-R>"\>\C##gc<left><left><left>
 vnoremap <Leader>rv <Esc>:'<,'>s#\<\>\C##gc<left><left><left><left><left><left><left><left>
 
 " grep
-nnoremap <Leader>gg :grep! -rni --exclude-dir=".git" -e "" ./<left><left><left><left>
-nnoremap <expr> <Leader>gd ':grep! -rni --exclude-dir=".git" -e "" ' .  expand('%:h')
-nnoremap <expr> <Leader>gc ':grep! -rni --exclude-dir=".git" -e "" ' .  expand('%')
+nnoremap <Leader>gg :grep! -rni --exclude-dir=".git" -e '' ./<left><left><left><left>
+nnoremap <expr> <Leader>gd ":grep! -rni --exclude-dir='.git' -e '' " .  expand('%:h')
+nnoremap <expr> <Leader>gc ":grep! -rni --exclude-dir='.git' -e '' " .  expand('%')
 
-vnoremap <Leader>gg y:grep! -rni --exclude-dir=".git" -e "<C-R>"" ./
-vnoremap <expr> <Leader>gd 'y:grep! -rni --exclude-dir=".git" -e "<C-R>"" ' .  expand('%:h')
-vnoremap <expr> <Leader>gc 'y:grep! -rni --exclude-dir=".git" -e "<C-R>"" ' .  expand('%')
+vnoremap <Leader>gg y:grep! -rni --exclude-dir=".git" -e '<C-R>"' ./
+vnoremap <expr> <Leader>gd "y:grep! -rni --exclude-dir='.git' -e '<C-R>\"' " .  expand('%:h')
+vnoremap <expr> <Leader>gc "y:grep! -rni --exclude-dir='.git' -e '<C-R>\"' " .  expand('%')
 
 
 " Read from shell and move to new buffer

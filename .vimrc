@@ -46,10 +46,6 @@ execute 'set directory=' . s:tmp_path
 " colorscheme simplelight
 colorscheme simpledark
 
-" TODO: test this settings
-" open new tab in quick fix list
-set switchbuf=newtab
-
 
 " Installed plugin
 " mkdir -p ~/.vim/pack/vendor/start
