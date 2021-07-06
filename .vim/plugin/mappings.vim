@@ -73,8 +73,8 @@ nnoremap <Leader>l :normal ^vg_"+y<CR>
 " tabs switching
 nnoremap <Leader>t :tabs<CR>:tabnext<Space>
 
-" list buffers
-nnoremap <Leader>bb :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
+" buffers list
+nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
 
 " use C-6
 " nnoremap <Leader><tab> :b#<CR>
@@ -93,6 +93,7 @@ cnoremap <F6> :set list!<CR>
 
 noremap <F7> :tabnew<CR>:setlocal hidden<CR>
 noremap <F8> :set wrap!<CR>
+noremap <F9> :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
 
 " clear whitespace in block
 vnoremap <F10> <Esc>:'<,'>s/\s\+$//e<CR>

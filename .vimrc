@@ -46,7 +46,6 @@ execute 'set directory=' . s:tmp_path
 " colorscheme simplelight
 colorscheme simpledark
 
-
 " Installed plugin
 " mkdir -p ~/.vim/pack/vendor/start
 
@@ -60,7 +59,7 @@ colorscheme simpledark
 " git clone https://github.com/preservim/nerdtree  ~/.vim/pack/vendor/start/nerdtree
 
 " git clone https://github.com/tpope/vim-fugitive  ~/.vim/pack/vendor/start/vim-fugitive
-" vim -u NONE -c "helptags fugitive/doc" -c q
+" :helptags .vim/pack/vendor/start/vim-fugitive/doc/
 " help fugitive
 
 " help caser
@@ -69,5 +68,5 @@ colorscheme simpledark
 " git clone https://github.com/SirVer/ultisnips ~/.vim/pack/vendor/start/ultisnips
 
 " git clone https://github.com/jlanzarotta/bufexplorer ~/.vim/pack/vendor/start/bufexplorer
-" vim -u NONE -c "helptags bufexplorer/doc" -c q
+" :helptags .vim/pack/vendor/start/bufexplorer/doc/
 " help bufexplorer

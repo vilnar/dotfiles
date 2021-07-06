@@ -15,6 +15,7 @@ hi PreProc    cterm=NONE ctermfg=white guifg=white
 hi Type	      cterm=NONE ctermfg=white guifg=white
 hi Special    cterm=NONE ctermfg=white guifg=white
 hi Delimiter  cterm=NONE ctermfg=white guifg=white
+hi MatchParen cterm=NONE ctermbg=blue ctermfg=green
 
 
 
