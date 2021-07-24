@@ -43,9 +43,29 @@ vnoremap <expr> <Leader>gd "y:grep! -rni --exclude-dir='.git' -e '<C-R>\"' " .  
 vnoremap <expr> <Leader>gc "y:grep! -rni --exclude-dir='.git' -e '<C-R>\"' " .  expand('%')
 
 
+function! s:createScratchByName(name)
+	enew
+	setlocal buftype=nofile
+	setlocal bufhidden=hide
+	setlocal noswapfile 
+	execute 'file ' . a:name
+endfunction
+
+function! s:createFilesScratch()
+	let name = '__Files__'
+	let bufnumber = bufnr(name)
+	if bufnumber == -1 
+		call s:createScratchByName(name)
+	else
+		execute 'bdelete ' . name 
+		call s:createScratchByName(name)
+	endif
+endfunction
+
 " Read from shell and move to new buffer
-" command! -nargs=* -complete=shellcmd FilesBuffer enew | setlocal buftype=nofile bufhidden=hide noswapfile | file [Files] | r <args>
-command! -nargs=* -complete=shellcmd FilesBuffer enew | setlocal buftype=nofile bufhidden=hide noswapfile | r <args>
+command! -nargs=* -complete=shellcmd FilesBuffer call s:createFilesScratch() | r <args>
+" command! -nargs=* -complete=shellcmd FilesBuffer enew | setlocal buftype=nofile bufhidden=hide noswapfile | r <args>
+
 " find file
 nnoremap <Leader>ff :FilesBuffer !find ./ -not -path "./.git/*" -iname ""<left>
 nnoremap <Leader>fu :FilesBuffer !find ./ -not -path "./.git/*" -name "<C-R><C-W>*"<left>
@@ -80,7 +100,7 @@ nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Spa
 " nnoremap <Leader><tab> :b#<CR>
 
 " close current hidden buffer
-nnoremap <Leader>c :bd %<CR>
+nnoremap <Leader>c :bdelete %<CR>
 
 " Open current file with Encode
 nnoremap <Leader>ee :edit ++enc= %<left><left>

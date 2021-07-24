@@ -43,8 +43,8 @@ endif
 execute 'set backupdir=' . s:tmp_path
 execute 'set directory=' . s:tmp_path
 
-" colorscheme simplelight
-colorscheme simpledark
+" colorscheme lightsimple
+colorscheme darksimple
 
 " Installed plugin
 " mkdir -p ~/.vim/pack/vendor/start
