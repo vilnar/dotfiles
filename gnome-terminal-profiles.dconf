@@ -1,6 +1,6 @@
 [/]
 default='da8abb20-3518-4952-8d00-2ef20796665c'
-list=['622dcd63-7efe-4085-8c23-b320b778372e', '7be77ef6-b29a-49fe-aaee-04c4db3aa5d8', 'da8abb20-3518-4952-8d00-2ef20796665c']
+list=['622dcd63-7efe-4085-8c23-b320b778372e', '7be77ef6-b29a-49fe-aaee-04c4db3aa5d8', 'da8abb20-3518-4952-8d00-2ef20796665c', '71f98168-aa00-406f-9a5b-ca0c5fc87bc1']
 
 [:622dcd63-7efe-4085-8c23-b320b778372e]
 audible-bell=false
@@ -16,6 +16,22 @@ use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
 visible-name='test_encode'
+
+[:71f98168-aa00-406f-9a5b-ca0c5fc87bc1]
+audible-bell=false
+background-color='rgb(0,43,54)'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cursor-blink-mode='off'
+cursor-colors-set=false
+default-size-columns=100
+foreground-color='rgb(131,148,150)'
+highlight-colors-set=false
+palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='azu'
 
 [:7be77ef6-b29a-49fe-aaee-04c4db3aa5d8]
 background-color='rgb(247,247,247)'
@@ -37,12 +53,14 @@ audible-bell=false
 background-color='rgb(20,20,20)'
 bold-color-same-as-fg=true
 bold-is-bright=false
+cell-height-scale=1.0
+cell-width-scale=1.0
 cursor-blink-mode='off'
 cursor-colors-set=false
 default-size-columns=100
 foreground-color='rgb(197,200,198)'
 highlight-colors-set=false
-palette=['rgb(40,42,46)', 'rgb(165,66,66)', 'rgb(140,148,64)', 'rgb(222,147,95)', 'rgb(95,129,157)', 'rgb(133,103,143)', 'rgb(94,141,135)', 'rgb(150,152,150)', 'rgb(55,59,65)', 'rgb(204,102,102)', 'rgb(181,189,104)', 'rgb(240,198,116)', 'rgb(129,162,190)', 'rgb(178,148,187)', 'rgb(138,190,183)', 'rgb(197,200,198)']
+palette=['rgb(57,60,66)', 'rgb(144,59,59)', 'rgb(140,148,64)', 'rgb(222,147,95)', 'rgb(95,129,157)', 'rgb(133,103,143)', 'rgb(94,141,135)', 'rgb(150,152,150)', 'rgb(72,78,86)', 'rgb(204,102,102)', 'rgb(181,189,104)', 'rgb(240,198,116)', 'rgb(129,162,190)', 'rgb(178,148,187)', 'rgb(138,190,183)', 'rgb(197,200,198)']
 use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
