@@ -29,27 +29,35 @@ install_vim: clean_vim
 	ln -sf `pwd`/vimrc ~/.vimrc
 	ln -sf `pwd`/vim   ~/.vim
 	@echo Installing plugins
+	rm -Rf ~/.vim/pack/vendor/start
 	mkdir -p ~/.vim/pack/vendor/start
 	git clone https://github.com/tpope/vim-commentary  ~/.vim/pack/vendor/start/vim-commentary
+	vim -c "helptags ~/.vim/pack/vendor/start/vim-commentary/doc/ |q"
 	git clone https://github.com/tpope/vim-surround  ~/.vim/pack/vendor/start/vim-surround
+	vim -c "helptags ~/.vim/pack/vendor/start/vim-surround/doc/ |q"
 	git clone https://github.com/preservim/nerdtree  ~/.vim/pack/vendor/start/nerdtree
+	vim -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc/ |q"
 	git clone https://github.com/tpope/vim-fugitive  ~/.vim/pack/vendor/start/vim-fugitive
+	vim -c "helptags ~/.vim/pack/vendor/start/vim-fugitive/doc/ |q"
 	git clone https://github.com/arthurxavierx/vim-caser  ~/.vim/pack/vendor/start/vim-caser
+	vim -c "helptags ~/.vim/pack/vendor/start/vim-caser/doc/ |q"
 	git clone https://github.com/SirVer/ultisnips ~/.vim/pack/vendor/start/ultisnips
+	vim -c "helptags ~/.vim/pack/vendor/start/ultisnips/doc/ |q"
 	git clone https://github.com/jlanzarotta/bufexplorer ~/.vim/pack/vendor/start/bufexplorer
+	vim -c "helptags ~/.vim/pack/vendor/start/bufexplorer/doc/ |q"
 
 clean_vim:
 	rm -Rf ~/.vimrc
 	rm -Rf ~/.vim
 
 install_git: clean_git
-	ln -sf `pwd`/gitconfig ~/.gitconfig
+	cp `pwd`/gitconfig ~/.gitconfig
 
 clean_git:
 	rm -Rf ~/.gitconfig
 
 install_bash: clean_bash
-	ln -sf `pwd`/bash_aliases ~/.bash_aliases
+	cp `pwd`/bash_aliases ~/.bash_aliases
 	dconf load /org/gnome/terminal/legacy/profiles:/ < `pwd`/gnome-terminal-profiles.dconf
 
 clean_bash:

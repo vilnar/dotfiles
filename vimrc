@@ -45,28 +45,3 @@ execute 'set directory=' . s:tmp_path
 
 " colorscheme lightsimple
 colorscheme darksimple
-
-" Installed plugin
-" mkdir -p ~/.vim/pack/vendor/start
-
-" help commentary
-" git clone https://github.com/tpope/vim-commentary  ~/.vim/pack/vendor/start/vim-commentary
-
-" help surround
-" git clone https://github.com/tpope/vim-surround  ~/.vim/pack/vendor/start/vim-surround
-
-" help nerdtree
-" git clone https://github.com/preservim/nerdtree  ~/.vim/pack/vendor/start/nerdtree
-
-" git clone https://github.com/tpope/vim-fugitive  ~/.vim/pack/vendor/start/vim-fugitive
-" :helptags .vim/pack/vendor/start/vim-fugitive/doc/
-" help fugitive
-
-" help caser
-" git clone https://github.com/arthurxavierx/vim-caser  ~/.vim/pack/vendor/start/vim-caser
-
-" git clone https://github.com/SirVer/ultisnips ~/.vim/pack/vendor/start/ultisnips
-
-" git clone https://github.com/jlanzarotta/bufexplorer ~/.vim/pack/vendor/start/bufexplorer
-" :helptags .vim/pack/vendor/start/bufexplorer/doc/
-" help bufexplorer
