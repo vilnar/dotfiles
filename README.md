@@ -1,10 +1,5 @@
 # Dotfiles
-## Gnome terminal profile
-Export:
+## Help
 ```
-dconf dump /org/gnome/terminal/legacy/profiles:/ > gnome-terminal-profiles.dconf
-```
-Import:
-```
-dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.dconf
+make help
 ```
