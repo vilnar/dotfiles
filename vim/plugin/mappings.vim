@@ -47,17 +47,17 @@ function! s:createScratchByName(name)
 	enew
 	setlocal buftype=nofile
 	setlocal bufhidden=hide
-	setlocal noswapfile 
+	setlocal noswapfile
 	execute 'file ' . a:name
 endfunction
 
 function! s:createFilesScratch()
 	let name = '__Files__'
 	let bufnumber = bufnr(name)
-	if bufnumber == -1 
+	if bufnumber == -1
 		call s:createScratchByName(name)
 	else
-		execute 'bdelete ' . name 
+		execute 'bdelete ' . name
 		call s:createScratchByName(name)
 	endif
 endfunction

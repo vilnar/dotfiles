@@ -17,7 +17,7 @@ help:
 	@echo 'installed files                                                        '
 	@echo '                                                                       '
 
-all: install_vim install_git 
+all: install_vim install_git
 	@echo ""
 	@echo "dotfiles - Making yourself at home"
 	@echo "=================================="
