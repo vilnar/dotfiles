@@ -4,6 +4,8 @@ let g:bufExplorerSortBy = "mru"
 let g:bufExplorerShowRelativePath = 1
 nnoremap <silent> <leader>bb :BufExplorerHorizontalSplit<CR>
 
+let php_special_functions = 0
+
 let g:UltiSnipsExpandTrigger="<tab>"
 " list all snippets for current filetype
 let g:UltiSnipsListSnippets="<c-d>"

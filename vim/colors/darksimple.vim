@@ -6,7 +6,7 @@ endif
 
 let colors_name = "darksimple"
 
-highlight Comment		cterm=NONE ctermfg=cyan guifg=cyan
+highlight Comment		cterm=NONE ctermfg=grey guifg=grey
 highlight Constant		cterm=NONE ctermfg=magenta guifg=magenta
 highlight String		cterm=NONE ctermfg=magenta guifg=magenta
 highlight MatchParen		cterm=NONE ctermbg=blue ctermfg=yellow
