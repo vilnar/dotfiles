@@ -28,6 +28,9 @@ command! IndentUsingTab :setlocal expandtab!
 
 command! SnippetsOpen :execute 'edit ~/.vim/UltiSnips/'
 
+command! HexRead :execute '%!xxd' | setlocal filetype=xxd
+command! HexWrite :execute '%!xxd -r' | setlocal binary | setlocal filetype=xxd
+
 if !exists("*s:ReloadConfigs")
 	function s:ReloadConfigs()
 		let is_buffer_empty = line('$') == 1 && getline(1) == ''
@@ -58,3 +61,14 @@ function s:FileRename()
 	endif
 endfunction
 command! FileRename call s:FileRename()
+
+
+
+function! s:SearchInOpenedBuffers(pattern)
+	execute 'cclose'
+	execute 'cexpr []'
+	" echomsg 'debug SearchInOpenedBuffers : ' . a:pattern
+	execute 'bufdo vimgrepadd /' . a:pattern . '/g %'
+	execute 'cwindow'
+endfunction
+command! -nargs=1 SearchInOpenedBuffers call s:SearchInOpenedBuffers(<f-args>)

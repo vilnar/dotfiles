@@ -8,3 +8,5 @@ set guifont=Monospace\ 11
 
 " disable blink cursor
 set guicursor+=a:blinkon0
+
+colorscheme lightsimple
