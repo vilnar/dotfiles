@@ -3,7 +3,7 @@ if !exists('loaded_nerd_tree')
 endif
 
 " disable plugin netrw
-let loaded_netrwPlugin = 1
+" let loaded_netrwPlugin = 1
 
 " nerdtree
 let g:NERDTreeMouseMode=2
@@ -63,11 +63,11 @@ function! NERDTreeYankName()
 endfunction
 
 
-function s:ExploreCurrenFolder()
-	let current_folder = expand("%:h")
-	if current_folder == ""
-		let current_folder = getcwd()
-	endif
-	execute "edit " . current_folder
-endfunction
-command! Ex :call s:ExploreCurrenFolder()
+" function s:ExploreCurrenFolder()
+" 	let current_folder = expand("%:h")
+" 	if current_folder == ""
+" 		let current_folder = getcwd()
+" 	endif
+" 	execute "edit " . current_folder
+" endfunction
+" command! Ex :call s:ExploreCurrenFolder()

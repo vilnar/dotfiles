@@ -1,6 +1,6 @@
 [/]
 default='258d519d-3900-4699-bea2-539ae91d8f32'
-list=['622dcd63-7efe-4085-8c23-b320b778372e', '7be77ef6-b29a-49fe-aaee-04c4db3aa5d8', 'da8abb20-3518-4952-8d00-2ef20796665c', '71f98168-aa00-406f-9a5b-ca0c5fc87bc1', '258d519d-3900-4699-bea2-539ae91d8f32']
+list=['622dcd63-7efe-4085-8c23-b320b778372e', '7be77ef6-b29a-49fe-aaee-04c4db3aa5d8', 'da8abb20-3518-4952-8d00-2ef20796665c', '258d519d-3900-4699-bea2-539ae91d8f32']
 
 [:258d519d-3900-4699-bea2-539ae91d8f32]
 audible-bell=false
@@ -14,7 +14,7 @@ cursor-colors-set=false
 default-size-columns=100
 foreground-color='rgb(235,219,178)'
 highlight-colors-set=false
-palette=['rgb(40,40,40)', 'rgb(144,59,59)', 'rgb(152,151,26)', 'rgb(215,153,33)', 'rgb(69,133,136)', 'rgb(177,98,134)', 'rgb(104,157,106)', 'rgb(168,153,132)', 'rgb(146,131,116)', 'rgb(204,102,102)', 'rgb(184,187,38)', 'rgb(250,189,47)', 'rgb(131,165,152)', 'rgb(211,134,155)', 'rgb(142,192,124)', 'rgb(235,219,178)']
+palette=['rgb(40,40,40)', 'rgb(165,67,67)', 'rgb(152,151,26)', 'rgb(215,153,33)', 'rgb(69,133,136)', 'rgb(177,98,134)', 'rgb(104,157,106)', 'rgb(168,153,132)', 'rgb(146,131,116)', 'rgb(204,102,102)', 'rgb(184,187,38)', 'rgb(250,189,47)', 'rgb(131,165,152)', 'rgb(211,134,155)', 'rgb(142,192,124)', 'rgb(235,219,178)']
 use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
@@ -34,22 +34,6 @@ use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
 visible-name='test_encode'
-
-[:71f98168-aa00-406f-9a5b-ca0c5fc87bc1]
-audible-bell=false
-background-color='rgb(0,43,54)'
-bold-color-same-as-fg=true
-bold-is-bright=false
-cursor-blink-mode='off'
-cursor-colors-set=false
-default-size-columns=100
-foreground-color='rgb(131,148,150)'
-highlight-colors-set=false
-palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
-use-theme-colors=false
-use-theme-transparency=false
-use-transparent-background=false
-visible-name='azu'
 
 [:7be77ef6-b29a-49fe-aaee-04c4db3aa5d8]
 background-color='rgb(247,247,247)'

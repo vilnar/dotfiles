@@ -43,7 +43,7 @@ vnoremap <expr> <Leader>gd "y:grep! -rni --exclude-dir='.git' -e '<C-R>\"' " .  
 vnoremap <expr> <Leader>gc "y:grep! -rni --exclude-dir='.git' -e '<C-R>\"' " .  expand('%')
 
 
-function! s:createScratchByName(name)
+function! s:createScratchByName(name) abort
 	enew
 	setlocal buftype=nofile
 	setlocal bufhidden=hide
@@ -51,7 +51,7 @@ function! s:createScratchByName(name)
 	execute 'file ' . a:name
 endfunction
 
-function! s:createFilesScratch()
+function! s:createFilesScratch() abort
 	let name = '__Files__'
 	let bufnumber = bufnr(name)
 	if bufnumber == -1
@@ -71,11 +71,19 @@ nnoremap <Leader>ff :FilesBuffer !find ./ -not -path "./.git/*" -iname ""<left>
 nnoremap <Leader>fu :FilesBuffer !find ./ -not -path "./.git/*" -name "<C-R><C-W>*"<left>
 nnoremap <Leader>fp :FilesBuffer !find ./ -not -path "./.git/*" -path "**"<left><left>
 vnoremap <Leader>fp y:FilesBuffer !find ./ -not -path "./.git/*" -path "*<C-R>"*"<left><left>
-" find and open in quick fix
-nnoremap <Leader>fq :cexpr system('find . -iname "" -printf "%p:1:1:%f\n"')<left>
 
-" open quickfix list
-nnoremap <Leader>q :copen<CR>
+" quickfix toggle
+command -bang -nargs=? QFix call s:QFixToggle(<bang>0)
+function! s:QFixToggle(forced) abort
+	if exists("g:qfix_win") && a:forced == 0
+		cclose
+		unlet g:qfix_win
+	else
+		copen 10
+		let g:qfix_win = bufnr("$")
+	endif
+endfunction
+nnoremap <Leader>q :QFix<CR>
 
 nnoremap <Leader>h :noh<CR>
 
@@ -96,8 +104,6 @@ nnoremap <Leader>t :tabs<CR>:tabnext<Space>
 " buffers list
 nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
 
-" use C-6
-" nnoremap <Leader><tab> :b#<CR>
 
 " close current hidden buffer
 nnoremap <Leader>c :bdelete %<CR>

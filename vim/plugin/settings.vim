@@ -2,7 +2,7 @@ let g:fugitive_dynamic_colors = 0
 let g:bufExplorerShowNoName = 1
 let g:bufExplorerSortBy = "mru"
 let g:bufExplorerShowRelativePath = 1
-nnoremap <silent> <leader>bb :BufExplorerHorizontalSplit<CR>
+nnoremap <silent> <leader><Tab> :BufExplorerHorizontalSplit<CR>
 
 let php_special_functions = 0
 

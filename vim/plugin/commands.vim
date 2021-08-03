@@ -4,8 +4,8 @@ command! WhiteSpaceTrailSearch /\s\+$
 command! EncodeDetectThis :!chardet3 %
 command! EncodingSupportedShow :help encoding-values
 
-command! PathFolderAbsoluteCopy :let @+=expand('%:p:h')
-command! PathFolderRelativeCopy :let @+=expand('%:h')
+command! PathDirectoryAbsoluteCopy :let @+=expand('%:p:h')
+command! PathDirectoryRelativeCopy :let @+=expand('%:h')
 command! PathFileAbsoluteCopy :let @+=expand('%:p')
 command! PathFileRelativeCopy :let @+=expand('%')
 command! FileNameCopy :let @+=expand('%:t')
@@ -32,14 +32,17 @@ command! HexRead :execute '%!xxd' | setlocal filetype=xxd
 command! HexWrite :execute '%!xxd -r' | setlocal binary | setlocal filetype=xxd
 
 if !exists("*s:ReloadConfigs")
-	function s:ReloadConfigs()
+	function s:ReloadConfigs() abort
 		let is_buffer_empty = line('$') == 1 && getline(1) == ''
 		let is_name_buffer_empty = bufname() == ''
 		if !is_buffer_empty && !is_name_buffer_empty
 			execute 'write'
 		endif
 		execute 'source ~/.vimrc'
+		execute 'source ~/.vim/plugin/commands.vim'
 		execute 'source ~/.vim/plugin/mappings.vim'
+		execute 'source ~/.vim/plugin/settings.vim'
+		execute 'source ~/.vim/plugin/custom.vim'
 		if has("gui_running")
 			execute 'source ~/.vim/.gvimrc'
 		endif
@@ -51,7 +54,7 @@ endif
 command! ReloadConfigs call s:ReloadConfigs()
 
 
-function s:FileRename()
+function! s:FileRename() abort
 	let old_name = expand('%')
 	let new_name = input('New file name: ', expand('%'), 'file')
 	if new_name != '' && new_name != old_name
@@ -63,8 +66,7 @@ endfunction
 command! FileRename call s:FileRename()
 
 
-
-function! s:SearchInOpenedBuffers(pattern)
+function! s:SearchInOpenedBuffers(pattern) abort
 	execute 'cclose'
 	execute 'cexpr []'
 	" echomsg 'debug SearchInOpenedBuffers : ' . a:pattern

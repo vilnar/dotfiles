@@ -1,5 +1,5 @@
 filetype plugin indent on
-" filetype indent off
+syntax on
 
 set showcmd
 set ignorecase
