@@ -74,3 +74,5 @@ function! s:SearchInOpenedBuffers(pattern) abort
 	execute 'cwindow'
 endfunction
 command! -nargs=1 SearchInOpenedBuffers call s:SearchInOpenedBuffers(<f-args>)
+
+command! CtagsGenerate :AsyncRun 'ctags'

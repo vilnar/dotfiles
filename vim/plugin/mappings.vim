@@ -34,13 +34,13 @@ vnoremap <Leader>rw y:%s#\<<C-R>"\>\C##gc<left><left><left>
 vnoremap <Leader>rv <Esc>:'<,'>s#\<\>\C##gc<left><left><left><left><left><left><left><left>
 
 " grep
-nnoremap <Leader>gg :grep! -rni --exclude-dir=".git" -e '' ./<left><left><left><left>
-nnoremap <expr> <Leader>gd ":grep! -rni --exclude-dir='.git' -e '' " .  expand('%:h')
-nnoremap <expr> <Leader>gc ":grep! -rni --exclude-dir='.git' -e '' " .  expand('%')
+nnoremap <Leader>gg :AsyncRun grep -rni --exclude-dir=".git" -e '' ./<left><left><left><left>
+nnoremap <expr> <Leader>gd ":AsyncRun grep -rni --exclude-dir='.git' -e '' " .  expand('%:h')
+nnoremap <expr> <Leader>gc ":AsyncRun grep -rni --exclude-dir='.git' -e '' " .  expand('%')
 
-vnoremap <Leader>gg y:grep! -rni --exclude-dir=".git" -e '<C-R>"' ./
-vnoremap <expr> <Leader>gd "y:grep! -rni --exclude-dir='.git' -e '<C-R>\"' " .  expand('%:h')
-vnoremap <expr> <Leader>gc "y:grep! -rni --exclude-dir='.git' -e '<C-R>\"' " .  expand('%')
+vnoremap <Leader>gg y:AsyncRun grep -rni --exclude-dir=".git" -e '<C-R>"' ./
+vnoremap <expr> <Leader>gd "y:AsyncRun grep -rni --exclude-dir='.git' -e '<C-R>\"' " .  expand('%:h')
+vnoremap <expr> <Leader>gc "y:AsyncRun grep -rni --exclude-dir='.git' -e '<C-R>\"' " .  expand('%')
 
 
 function! s:createScratchByName(name) abort
@@ -73,17 +73,18 @@ nnoremap <Leader>fp :FilesBuffer !find ./ -not -path "./.git/*" -path "**"<left>
 vnoremap <Leader>fp y:FilesBuffer !find ./ -not -path "./.git/*" -path "*<C-R>"*"<left><left>
 
 " quickfix toggle
-command -bang -nargs=? QFix call s:QFixToggle(<bang>0)
-function! s:QFixToggle(forced) abort
-	if exists("g:qfix_win") && a:forced == 0
-		cclose
-		unlet g:qfix_win
+function! ToggleQuickFix()
+	if empty(filter(getwininfo(), 'v:val.quickfix'))
+		copen 16
 	else
-		copen 10
-		let g:qfix_win = bufnr("$")
+		cclose
 	endif
 endfunction
-nnoremap <Leader>q :QFix<CR>
+
+nnoremap <silent> <leader>q :call ToggleQuickFix()<cr>
+
+nnoremap <Leader>7 :setlocal number!<CR>
+
 
 nnoremap <Leader>h :noh<CR>
 
@@ -129,3 +130,6 @@ set keymap=ukrainian-enhanced
 set iminsert=0 " Default - latin layout
 set imsearch=0 " Default - latin layout in sea
 inoremap <C-\> <C-^>
+
+" find in tags:
+nnoremap <leader>t :ltag! <c-r>=expand("<cword>")<cr><bar>lwindow<CR>

@@ -12,3 +12,7 @@ let g:UltiSnipsListSnippets="<c-d>"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+
+let g:asyncrun_open = 16
+let g:asyncrun_save = 2
