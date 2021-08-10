@@ -75,7 +75,7 @@ vnoremap <Leader>fp y:FilesBuffer !find ./ -not -path "./.git/*" -path "*<C-R>"*
 " quickfix toggle
 function! ToggleQuickFix()
 	if empty(filter(getwininfo(), 'v:val.quickfix'))
-		copen 16
+		copen 8
 	else
 		cclose
 	endif

@@ -6,7 +6,6 @@ function s:MarkdownPreviewRun()
 	let html_tmp = "/tmp/vim-markdown.html"
 	execute ':w!'
 	execute ':w! ' . md_tmp
-	execute '!pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' . html_tmp . ' ' . md_tmp
-	execute '!firefox ' . html_tmp . ' > /dev/null 2> /dev/null&'
+	execute 'AsyncRun pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' . html_tmp . ' ' . md_tmp . ' && firefox ' . html_tmp . ' > /dev/null 2> /dev/null&'
 endfunction
 command! MarkdownPreview call s:MarkdownPreviewRun()
