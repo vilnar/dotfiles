@@ -1,17 +1,15 @@
 filetype plugin indent on
 syntax on
 
-set showcmd
-set ignorecase
-set smartcase
-set incsearch
-set hlsearch
+set smartcase incsearch hlsearch
 set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
+set mouse=
+
+set showcmd
 
 set showbreak=->
 set nowrap
 
-set mouse=
 set confirm
 
 set history=1000
