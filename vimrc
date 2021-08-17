@@ -1,23 +1,18 @@
 filetype plugin indent on
 syntax on
 
-set smartcase incsearch hlsearch
-set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
-set mouse=
-
-set showcmd
+" One line to copy. Settings to make it easier to find, disable mouse and enable status line
+set smartcase incsearch hlsearch mouse= laststatus=2 ruler
 
 set showbreak=->
+set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
 set nowrap
-set laststatus=2
-set ruler
-
-set confirm
 
 set history=1000
 set wildmenu wildmode=full
 set wildignorecase
 set shortmess-=S
+set showcmd
 
 set autoread
 set autowrite
@@ -26,9 +21,10 @@ set tabstop=8 softtabstop=8 shiftwidth=8
 set backspace=indent,eol,start
 
 set splitbelow
-
 set title
+
 set hidden
+set confirm
 
 " fix security
 set modelines=0
