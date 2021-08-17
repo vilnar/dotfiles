@@ -4,5 +4,6 @@ vim/syntax/
 
 # custom variables
 vim/plugin/custom.vim
+vim/customsnippets/
 
 vim/tmp/

@@ -1,2 +1,2 @@
 " fix markdown highlighting problem
-syntax sync minlines=10000
+syntax sync minlines=5000

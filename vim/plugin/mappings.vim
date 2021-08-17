@@ -8,9 +8,6 @@ noremap <Leader>y "+y
 noremap <Leader>p "+p
 noremap <Leader>P "+P
 
-" disable Ex mode
-nnoremap Q <Nop>
-
 " Exact selected multiline string search
 vnoremap * "vy/\V<C-R>=substitute(escape(@v,'/\'),'\n','\\n','g')<CR><CR>
 
@@ -43,7 +40,7 @@ vnoremap <expr> <Leader>gd "y:AsyncRun grep -rni --exclude-dir='.git' -e '<C-R>\
 vnoremap <expr> <Leader>gc "y:AsyncRun grep -rni --exclude-dir='.git' -e '<C-R>\"' " .  expand('%')
 
 
-function! s:createScratchByName(name) abort
+function! CreateScratchByName(name) abort
 	enew
 	setlocal buftype=nofile
 	setlocal bufhidden=hide
@@ -51,19 +48,19 @@ function! s:createScratchByName(name) abort
 	execute 'file ' . a:name
 endfunction
 
-function! s:createFilesScratch() abort
+function! CreateFilesScratch() abort
 	let name = '__Files__'
 	let bufnumber = bufnr(name)
 	if bufnumber == -1
-		call s:createScratchByName(name)
+		call CreateScratchByName(name)
 	else
 		execute 'bdelete ' . name
-		call s:createScratchByName(name)
+		call CreateScratchByName(name)
 	endif
 endfunction
 
 " Read from shell and move to new buffer
-command! -nargs=* -complete=shellcmd FilesBuffer call s:createFilesScratch() | r <args>
+command! -nargs=* -complete=shellcmd FilesBuffer call CreateFilesScratch() | r <args>
 " command! -nargs=* -complete=shellcmd FilesBuffer enew | setlocal buftype=nofile bufhidden=hide noswapfile | r <args>
 
 " find file
@@ -81,9 +78,20 @@ function! ToggleQuickFix()
 	endif
 endfunction
 
-nnoremap <silent> <leader>q :call ToggleQuickFix()<cr>
+" disable Ex mode
+" nnoremap Q <Nop>
+nnoremap <silent> Q :call ToggleQuickFix()<CR>
 
-nnoremap <Leader>7 :setlocal number!<CR>
+nnoremap <Leader>1 :setlocal number!<CR>
+
+function! ToggleMouse()
+	if &mouse == 'a'
+		set mouse=
+	else
+		set mouse=a
+	endif
+endfunction
+nnoremap <Leader>2 :call ToggleMouse()<CR>
 
 
 nnoremap <Leader>h :noh<CR>
@@ -132,4 +140,4 @@ set imsearch=0 " Default - latin layout in sea
 inoremap <C-\> <C-^>
 
 " find in tags:
-nnoremap <leader>t :ltag! <c-r>=expand("<cword>")<cr><bar>lwindow<CR>
+nnoremap <leader>t :TS <c-r>=expand("<cword>")<cr><CR>

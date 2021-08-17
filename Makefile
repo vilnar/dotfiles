@@ -49,6 +49,10 @@ install_vim: clean_vim
 	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/asyncrun/doc/" -c q
 	git clone https://github.com/jparise/vim-graphql ~/.vim/pack/vendor/start/vim-graphql
 	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-graphql/doc/" -c q
+	git clone https://github.com/exvim/ex-utility ~/.vim/pack/vendor/start/ex-utility
+	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/ex-utility/doc/" -c q
+	git clone https://github.com/exvim/ex-tags ~/.vim/pack/vendor/start/ex-tags
+	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/ex-tags/doc/" -c q
 
 clean_vim:
 	rm -Rf ~/.vimrc

@@ -10,6 +10,8 @@ set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
 
 set showbreak=->
 set nowrap
+set laststatus=2
+set ruler
 
 set mouse=
 set confirm
@@ -25,7 +27,6 @@ set autowrite
 set tabstop=8 softtabstop=8 shiftwidth=8
 set backspace=indent,eol,start
 
-set laststatus=2
 set splitbelow
 
 set title

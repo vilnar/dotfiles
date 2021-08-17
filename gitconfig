@@ -9,5 +9,6 @@
 	last = log -1 HEAD
 	diff-names = diff --name-status
 	show-merged = show --first-parent
+	conflocal = config --local --list
 [core]
 	editor = vim

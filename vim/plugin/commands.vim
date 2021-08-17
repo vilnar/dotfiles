@@ -27,12 +27,14 @@ command! IndentUsingSpace :setlocal expandtab
 command! IndentUsingTab :setlocal expandtab!
 
 command! SnippetsOpen :execute 'edit ~/.vim/UltiSnips/'
+command! SnippetsCustomOpen :execute 'edit ~/.vim/customsnippets/'
+
 
 command! HexRead :execute '%!xxd' | setlocal filetype=xxd
 command! HexWrite :execute '%!xxd -r' | setlocal binary | setlocal filetype=xxd
 
-if !exists("*s:ReloadConfigs")
-	function s:ReloadConfigs() abort
+if !exists("*ReloadConfigs")
+	function ReloadConfigs() abort
 		let is_buffer_empty = line('$') == 1 && getline(1) == ''
 		let is_name_buffer_empty = bufname() == ''
 		if !is_buffer_empty && !is_name_buffer_empty
@@ -51,10 +53,10 @@ if !exists("*s:ReloadConfigs")
 		endif
 	endfunction
 endif
-command! ReloadConfigs call s:ReloadConfigs()
+command! ReloadConfigs call ReloadConfigs()
 
 
-function! s:FileRename() abort
+function! FileRename() abort
 	let old_name = expand('%')
 	let new_name = input('New file name: ', expand('%'), 'file')
 	if new_name != '' && new_name != old_name
@@ -63,16 +65,16 @@ function! s:FileRename() abort
 		redraw!
 	endif
 endfunction
-command! FileRename call s:FileRename()
+command! FileRename call FileRename()
 
 
-function! s:SearchInOpenedBuffers(pattern) abort
+function! SearchInOpenedBuffers(pattern) abort
 	execute 'cclose'
 	execute 'cexpr []'
 	" echomsg 'debug SearchInOpenedBuffers : ' . a:pattern
 	execute 'bufdo vimgrepadd /' . a:pattern . '/g %'
 	execute 'cwindow'
 endfunction
-command! -nargs=1 SearchInOpenedBuffers call s:SearchInOpenedBuffers(<f-args>)
+command! -nargs=1 SearchInOpenedBuffers call SearchInOpenedBuffers(<f-args>)
 
 command! CtagsGenerate :AsyncRun 'ctags'
