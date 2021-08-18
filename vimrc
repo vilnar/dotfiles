@@ -1,8 +1,8 @@
 filetype plugin indent on
 syntax on
 
-" One line to copy. Settings to make it easier to find, disable mouse and enable status line
-set smartcase incsearch hlsearch mouse= laststatus=2 ruler
+" One line to copy. Settings to make it easier to find, enable status line and disable mouse
+set ignorecase smartcase incsearch hlsearch laststatus=2 ruler mouse=
 
 set showbreak=->
 set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
