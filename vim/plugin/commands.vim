@@ -41,7 +41,6 @@ if !exists("*ReloadConfigs")
 			execute 'write'
 		endif
 		execute 'source ~/.vimrc'
-		execute 'source ~/.vim/plugin/commands.vim'
 		execute 'source ~/.vim/plugin/mappings.vim'
 		execute 'source ~/.vim/plugin/settings.vim'
 		execute 'source ~/.vim/plugin/custom.vim'

@@ -7,67 +7,16 @@ let mapleader=" "
 noremap <Leader>y "+y
 noremap <Leader>p "+p
 noremap <Leader>P "+P
+noremap <Leader>d "+d
 
-" Exact selected multiline string search
-vnoremap * "vy/\V<C-R>=substitute(escape(@v,'/\'),'\n','\\n','g')<CR><CR>
 
 " Easier moving of code blocks
 vnoremap < <gv
 vnoremap > >gv
 
+" disable Ex mode
+nnoremap Q <Nop>
 
-" Searching for all characters as normal text
-command! -nargs=1 SearchEscape :let @/='\V'.escape(<q-args>, '\\')| normal! n
-nnoremap <Leader>ss :SearchEscape<space>
-" nnoremap <expr> <Leader>su ':SearchEscape ' . expand('<cword>')
-vnoremap <Leader>ss y:SearchEscape<space><C-R>"
-
-" replace
-nnoremap <Leader>rr :%s###gc<left><left><left><left>
-vnoremap <Leader>rr y:%s#<C-R>"##gc<left><left><left>
-vnoremap <Leader>rb <Esc>:'<,'>s###gc<left><left><left><left>
-
-vnoremap <Leader>rw y:%s#\<<C-R>"\>\C##gc<left><left><left>
-vnoremap <Leader>rv <Esc>:'<,'>s#\<\>\C##gc<left><left><left><left><left><left><left><left>
-
-" grep
-nnoremap <Leader>gg :AsyncRun grep -rni --exclude-dir=".git" -e '' ./<left><left><left><left>
-nnoremap <expr> <Leader>gd ":AsyncRun grep -rni --exclude-dir='.git' -e '' " .  expand('%:h')
-nnoremap <expr> <Leader>gc ":AsyncRun grep -rni --exclude-dir='.git' -e '' " .  expand('%')
-
-vnoremap <Leader>gg y:AsyncRun grep -rni --exclude-dir=".git" -e '<C-R>"' ./
-vnoremap <expr> <Leader>gd "y:AsyncRun grep -rni --exclude-dir='.git' -e '<C-R>\"' " .  expand('%:h')
-vnoremap <expr> <Leader>gc "y:AsyncRun grep -rni --exclude-dir='.git' -e '<C-R>\"' " .  expand('%')
-
-
-function! CreateScratchByName(name) abort
-	enew
-	setlocal buftype=nofile
-	setlocal bufhidden=hide
-	setlocal noswapfile
-	execute 'file ' . a:name
-endfunction
-
-function! CreateFilesScratch() abort
-	let name = '__Files__'
-	let bufnumber = bufnr(name)
-	if bufnumber == -1
-		call CreateScratchByName(name)
-	else
-		execute 'bdelete ' . name
-		call CreateScratchByName(name)
-	endif
-endfunction
-
-" Read from shell and move to new buffer
-command! -nargs=* -complete=shellcmd FilesBuffer call CreateFilesScratch() | r <args>
-" command! -nargs=* -complete=shellcmd FilesBuffer enew | setlocal buftype=nofile bufhidden=hide noswapfile | r <args>
-
-" find file
-nnoremap <Leader>ff :FilesBuffer !find ./ -not -path "./.git/*" -iname ""<left>
-nnoremap <Leader>fu :FilesBuffer !find ./ -not -path "./.git/*" -name "<C-R><C-W>*"<left>
-nnoremap <Leader>fp :FilesBuffer !find ./ -not -path "./.git/*" -path "**"<left><left>
-vnoremap <Leader>fp y:FilesBuffer !find ./ -not -path "./.git/*" -path "*<C-R>"*"<left><left>
 
 " quickfix toggle
 function! ToggleQuickFix()
@@ -78,9 +27,7 @@ function! ToggleQuickFix()
 	endif
 endfunction
 
-" disable Ex mode
-" nnoremap Q <Nop>
-nnoremap <silent> Q :call ToggleQuickFix()<CR>
+nnoremap <silent> <leader>3 :call ToggleQuickFix()<CR>
 
 nnoremap <Leader>1 :setlocal number!<CR>
 
