@@ -40,3 +40,7 @@ execute 'set directory=' . s:tmp_path
 
 " colorscheme lightsimple
 colorscheme darksimple
+
+nnoremap <space> <nop>
+xnoremap <space> <nop>
+let mapleader=" "

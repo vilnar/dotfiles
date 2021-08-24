@@ -1,4 +1,4 @@
-function! CreateScratchByName(name) abort
+function! CreateScratchByName(name)
 	enew
 	setlocal buftype=nofile
 	setlocal bufhidden=hide
@@ -6,7 +6,7 @@ function! CreateScratchByName(name) abort
 	execute 'file ' . a:name
 endfunction
 
-function! CreateFilesScratch() abort
+function! CreateFilesScratch()
 	let name = '__Files__'
 	let bufnumber = bufnr(name)
 	if bufnumber == -1
@@ -19,7 +19,6 @@ endfunction
 
 " Read from shell and move to new buffer
 command! -nargs=* -complete=shellcmd FilesBuffer call CreateFilesScratch() | r <args>
-" command! -nargs=* -complete=shellcmd FilesBuffer enew | setlocal buftype=nofile bufhidden=hide noswapfile | r <args>
 
 " find file
 nnoremap <Leader>ff :FilesBuffer !find ./ -not -path "./.git/*" -iname ""<left>

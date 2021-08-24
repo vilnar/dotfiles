@@ -1,8 +1,3 @@
-nnoremap <space> <nop>
-xnoremap <space> <nop>
-let mapleader=" "
-
-
 " OS clipboard yank and paste
 noremap <Leader>y "+y
 noremap <Leader>p "+p
