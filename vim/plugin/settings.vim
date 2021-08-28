@@ -17,3 +17,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let g:asyncrun_open = 8
 let g:asyncrun_save = 2
+
+
+
+" find in tags by plugin ex-tags
+nnoremap <leader>t :TS <c-r>=expand("<cword>")<cr><CR>

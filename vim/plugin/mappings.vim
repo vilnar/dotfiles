@@ -80,6 +80,3 @@ set keymap=ukrainian-enhanced
 set iminsert=0 " Default - latin layout
 set imsearch=0 " Default - latin layout in sea
 inoremap <C-\> <C-^>
-
-" find in tags:
-nnoremap <leader>t :TS <c-r>=expand("<cword>")<cr><CR>
