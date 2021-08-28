@@ -15,11 +15,11 @@ nnoremap Q <Nop>
 
 " quickfix toggle
 function! ToggleQuickFix()
-	if empty(filter(getwininfo(), 'v:val.quickfix'))
-		copen 8
-	else
-		cclose
-	endif
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen 8
+    else
+        cclose
+    endif
 endfunction
 
 nnoremap <silent> <leader>3 :call ToggleQuickFix()<CR>
@@ -27,11 +27,11 @@ nnoremap <silent> <leader>3 :call ToggleQuickFix()<CR>
 nnoremap <Leader>1 :setlocal number!<CR>
 
 function! ToggleMouse()
-	if &mouse == 'a'
-		set mouse=
-	else
-		set mouse=a
-	endif
+    if &mouse == 'a'
+        set mouse=
+    else
+        set mouse=a
+    endif
 endfunction
 nnoremap <Leader>2 :call ToggleMouse()<CR>
 
