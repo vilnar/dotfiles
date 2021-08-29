@@ -2,7 +2,8 @@ let g:fugitive_dynamic_colors = 0
 let g:bufExplorerShowNoName = 1
 let g:bufExplorerSortBy = "mru"
 let g:bufExplorerShowRelativePath = 1
-nnoremap <silent> <leader><Tab> :BufExplorerHorizontalSplit<CR>
+let g:bufExplorerDisableDefaultKeyMapping = 1
+nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
 
 let php_special_functions = 0
 
@@ -21,4 +22,4 @@ let g:asyncrun_save = 2
 
 
 " find in tags by plugin ex-tags
-nnoremap <leader>t :TS <c-r>=expand("<cword>")<cr><CR>
+nnoremap <leader>t :TSelect <c-r>=expand("<cword>")<cr><CR>

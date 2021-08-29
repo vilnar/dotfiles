@@ -53,7 +53,8 @@ nnoremap <Leader>l :normal ^vg_"+y<CR>
 nnoremap <Leader>t :tabs<CR>:tabnext<Space>
 
 " buffers list
-nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
+" nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
+" nnoremap <Leader>b :ls<CR>:b<Space>
 
 
 " close current hidden buffer
