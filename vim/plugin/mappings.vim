@@ -9,12 +9,23 @@ noremap <Leader>d "+d
 vnoremap < <gv
 vnoremap > >gv
 
-" disable Ex mode
-nnoremap Q <Nop>
+" don't use Ex mode, use Q for formatting
+nnoremap Q gq
+nnoremap <C-LeftMouse> <nop>
 
 
-" quickfix toggle
-function! ToggleQuickFix()
+nnoremap <Leader>1 :setlocal number!<CR>
+
+function! MouseToggle()
+    if &mouse == 'a'
+        set mouse=
+    else
+        set mouse=a
+    endif
+endfunction
+nnoremap <Leader>2 :call MouseToggle()<CR>
+
+function! QuickFixToggle()
     if empty(filter(getwininfo(), 'v:val.quickfix'))
         copen 8
     else
@@ -22,21 +33,11 @@ function! ToggleQuickFix()
     endif
 endfunction
 
-nnoremap <silent> <leader>3 :call ToggleQuickFix()<CR>
-
-nnoremap <Leader>1 :setlocal number!<CR>
-
-function! ToggleMouse()
-    if &mouse == 'a'
-        set mouse=
-    else
-        set mouse=a
-    endif
-endfunction
-nnoremap <Leader>2 :call ToggleMouse()<CR>
+nnoremap <silent> <leader>3 :call QuickFixToggle()<CR>
 
 
 nnoremap <Leader>h :noh<CR>
+
 
 "Move and indent lines on Ctrl+j and Ctrl+k
 nnoremap <C-j> :m .+1<CR>==

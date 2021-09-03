@@ -16,7 +16,6 @@ highlight Identifier        cterm=NONE ctermfg=black guifg=black
 highlight Function          cterm=NONE ctermfg=black guifg=black
 highlight Special           cterm=NONE ctermfg=black guifg=black
 highlight Delimiter         cterm=NONE ctermfg=black guifg=black
-highlight phpVarSelector    cterm=NONE ctermfg=black guifg=black
 
 
 

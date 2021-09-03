@@ -19,4 +19,3 @@ highlight Identifier        cterm=NONE ctermfg=white guifg=white
 highlight Function          cterm=NONE ctermfg=white guifg=white
 highlight Special           cterm=NONE ctermfg=white guifg=white
 highlight Delimiter         cterm=NONE ctermfg=white guifg=white
-highlight phpVarSelector    cterm=NONE ctermfg=white guifg=white

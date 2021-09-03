@@ -53,6 +53,8 @@ install_vim: clean_vim
 	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/ex-utility/doc/" -c q
 	git clone https://github.com/exvim/ex-tags ~/.vim/pack/vendor/start/ex-tags
 	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/ex-tags/doc/" -c q
+	git clone https://github.com/mg979/vim-visual-multi ~/.vim/pack/vendor/start/vim-visual-multi
+	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-visual-multi/doc/" -c q
 
 clean_vim:
 	rm -Rf ~/.vimrc

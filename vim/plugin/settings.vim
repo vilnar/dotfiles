@@ -23,3 +23,6 @@ let g:asyncrun_save = 2
 
 " find in tags by plugin ex-tags
 nnoremap <leader>t :TSelect <c-r>=expand("<cword>")<cr><CR>
+
+
+let g:VM_mouse_mappings = 1

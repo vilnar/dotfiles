@@ -34,7 +34,7 @@ command! HexRead :execute '%!xxd' | setlocal filetype=xxd
 command! HexWrite :execute '%!xxd -r' | setlocal binary | setlocal filetype=xxd
 
 if !exists("*ReloadConfigs")
-    function ReloadConfigs() abort
+    function ReloadConfigs()
         let is_buffer_empty = line('$') == 1 && getline(1) == ''
         let is_name_buffer_empty = bufname() == ''
         if !is_buffer_empty && !is_name_buffer_empty
@@ -50,9 +50,10 @@ if !exists("*ReloadConfigs")
         if !is_buffer_empty && !is_name_buffer_empty
             execute 'edit'
         endif
+        echomsg 'reload config done'
     endfunction
 endif
-command! ReloadConfigs call ReloadConfigs()
+command! ReloadConfigs :call ReloadConfigs()
 
 
 function! FileRename() abort
@@ -64,7 +65,7 @@ function! FileRename() abort
         redraw!
     endif
 endfunction
-command! FileRename call FileRename()
+command! FileRename :call FileRename()
 
 
 function! SearchInOpenedBuffers(pattern) abort
@@ -76,5 +77,6 @@ function! SearchInOpenedBuffers(pattern) abort
 endfunction
 command! -nargs=1 SearchInOpenedBuffers call SearchInOpenedBuffers(<f-args>)
 
+command! CtagsGenerateForC :execute 'AsyncRun ctags `find . -name "*.[ch]" -print`'
 command! CtagsGenerateGo :execute 'AsyncRun ctags `find . -name "*.go" -print`'
 command! CtagsGeneratePhp :execute 'AsyncRun ctags `find . -name "*.php" -print`'

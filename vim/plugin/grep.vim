@@ -1,5 +1,6 @@
 " grep
 nnoremap <Leader>gg :AsyncRun grep -rni --exclude-dir=".git" -e '' ./<left><left><left><left>
+nnoremap <Leader>gi :AsyncRun grep -rni --exclude-dir=".git" --include \*.go -e '' ./<left><left><left><left>
 nnoremap <expr> <Leader>gd ":AsyncRun grep -rni --exclude-dir='.git' -e '' " .  expand('%:h')
 nnoremap <expr> <Leader>gc ":AsyncRun grep -rni --exclude-dir='.git' -e '' " .  expand('%')
 
