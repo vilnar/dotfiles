@@ -4,11 +4,13 @@
     br = branch
     ci = commit
     hist = log --decorate --graph
+    hist-all = log --decorate --graph --all
     bsort = branch --sort=-committerdate
     subup = submodule update --recursive --init
     last = log -1 HEAD
     diff-names = diff --name-status
     show-merged = show --first-parent
-    conflocal = config --local --list
+    conf-local = config --local --list
+    unstage = reset HEAD
 [core]
     editor = vim
