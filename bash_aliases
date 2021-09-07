@@ -1,6 +1,9 @@
 # move to trash, use like `del {file_name}`
 alias del='gio trash'
 
+alias date_timestamp='date +"%s"'
+alias date_format='date +"%Y-%m-%d %T"'
+
 alias clearfile='truncate --size 0'
 alias upbash='source ~/.profile'
 alias gr='grep --recursive --line-number --ignore-case'
@@ -14,6 +17,7 @@ alias dc='docker-compose'
 alias dcup='docker-compose up -d && docker-compose ps'
 alias dcdown='docker-compose down -v'
 alias dcstop='docker-compose stop'
+alias dcbuild='docker-compose up -d --build && docker-compose ps'
 
 # vim
 alias e='vim'
