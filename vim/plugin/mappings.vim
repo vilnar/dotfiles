@@ -35,6 +35,7 @@ endfunction
 
 nnoremap <silent> <leader>3 :call QuickFixToggle()<CR>
 
+nnoremap <leader>4 :only<CR>
 
 nnoremap <Leader>h :noh<CR>
 
@@ -46,6 +47,7 @@ inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
+
 
 " copy line without newline
 nnoremap <Leader>l :normal ^vg_"+y<CR>

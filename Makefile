@@ -31,30 +31,28 @@ install_vim: clean_vim
 	@echo Installing plugins
 	rm -Rf ~/.vim/pack/vendor/start
 	mkdir -p ~/.vim/pack/vendor/start
-	git clone https://github.com/tpope/vim-commentary  ~/.vim/pack/vendor/start/vim-commentary
+	git clone https://github.com/tpope/vim-commentary  ~/.vim/pack/vendor/start/vim-commentary && cd ~/.vim/pack/vendor/start/vim-commentary && git checkout v1.3 && cd -
 	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-commentary/doc/" -c q
-	git clone https://github.com/tpope/vim-surround  ~/.vim/pack/vendor/start/vim-surround
+	git clone https://github.com/tpope/vim-surround  ~/.vim/pack/vendor/start/vim-surround && cd ~/.vim/pack/vendor/start/vim-surround && git checkout v2.1 && cd -
 	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-surround/doc/" -c q
-	git clone https://github.com/preservim/nerdtree  ~/.vim/pack/vendor/start/nerdtree
-	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc/" -c q
-	git clone https://github.com/tpope/vim-fugitive  ~/.vim/pack/vendor/start/vim-fugitive
+	git clone https://github.com/tpope/vim-fugitive  ~/.vim/pack/vendor/start/vim-fugitive && cd ~/.vim/pack/vendor/start/vim-fugitive && git checkout v3.3 && cd -
 	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-fugitive/doc/" -c q
+	git clone https://github.com/preservim/nerdtree  ~/.vim/pack/vendor/start/nerdtree && cd ~/.vim/pack/vendor/start/nerdtree && git checkout 6.10.12 && cd -
+	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc/" -c q
+	git clone https://github.com/SirVer/ultisnips ~/.vim/pack/vendor/start/ultisnips && cd ~/.vim/pack/vendor/start/ultisnips && git checkout 3.2 && cd -
+	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/ultisnips/doc/" -c q
+	git clone https://github.com/jlanzarotta/bufexplorer ~/.vim/pack/vendor/start/bufexplorer && cd ~/.vim/pack/vendor/start/bufexplorer && git checkout v7.4.21 && cd -
+	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/bufexplorer/doc/" -c q
+	git clone https://github.com/skywind3000/asyncrun.vim ~/.vim/pack/vendor/start/asyncrun && cd ~/.vim/pack/vendor/start/asyncrun && git checkout 2.8.6 && cd -
+	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/asyncrun/doc/" -c q
+	git clone https://github.com/jparise/vim-graphql ~/.vim/pack/vendor/start/vim-graphql && cd ~/.vim/pack/vendor/start/vim-graphql && git checkout v1.4 && cd -
+	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-graphql/doc/" -c q
 	git clone https://github.com/arthurxavierx/vim-caser  ~/.vim/pack/vendor/start/vim-caser
 	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-caser/doc/" -c q
-	git clone https://github.com/SirVer/ultisnips ~/.vim/pack/vendor/start/ultisnips
-	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/ultisnips/doc/" -c q
-	git clone https://github.com/jlanzarotta/bufexplorer ~/.vim/pack/vendor/start/bufexplorer
-	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/bufexplorer/doc/" -c q
-	git clone https://github.com/skywind3000/asyncrun.vim ~/.vim/pack/vendor/start/asyncrun
-	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/asyncrun/doc/" -c q
-	git clone https://github.com/jparise/vim-graphql ~/.vim/pack/vendor/start/vim-graphql
-	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-graphql/doc/" -c q
 	git clone https://github.com/exvim/ex-utility ~/.vim/pack/vendor/start/ex-utility
 	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/ex-utility/doc/" -c q
 	git clone https://github.com/exvim/ex-tags ~/.vim/pack/vendor/start/ex-tags
 	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/ex-tags/doc/" -c q
-	git clone https://github.com/mg979/vim-visual-multi ~/.vim/pack/vendor/start/vim-visual-multi
-	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-visual-multi/doc/" -c q
 
 clean_vim:
 	rm -Rf ~/.vimrc

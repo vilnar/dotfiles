@@ -43,4 +43,4 @@ colorscheme darksimple
 
 nnoremap <space> <nop>
 xnoremap <space> <nop>
-let mapleader=" "
+let mapleader="\<Space>"

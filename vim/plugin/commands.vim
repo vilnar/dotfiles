@@ -14,6 +14,7 @@ command! FileEncodingShow :echo &fileencoding?&fileencoding:&encoding
 command! FileFormatShow :echo &fileformat
 command! FileTypeShow :echo &filetype
 command! FileTabSizeShow :echo &tabstop
+command! FileNoEndOfLineToggle :setlocal nofixendofline!
 
 if executable('jq')
     command! JsonFormatThis :%!jq .
@@ -78,5 +79,5 @@ endfunction
 command! -nargs=1 SearchInOpenedBuffers call SearchInOpenedBuffers(<f-args>)
 
 command! CtagsGenerateForC :execute 'AsyncRun ctags `find . -name "*.[ch]" -print`'
-command! CtagsGenerateGo :execute 'AsyncRun ctags `find . -name "*.go" -print`'
+command! CtagsGenerateGo :execute 'AsyncRun ctags `find . -name "*.go" -print && find . -name "*.proto" -print`'
 command! CtagsGeneratePhp :execute 'AsyncRun ctags `find . -name "*.php" -print`'

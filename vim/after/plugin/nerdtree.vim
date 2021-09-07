@@ -2,21 +2,6 @@ if !exists('loaded_nerd_tree')
     finish
 endif
 
-" disable plugin netrw
-" let loaded_netrwPlugin = 1
-
-" nerdtree
-let g:NERDTreeMouseMode=2
-let g:NERDTreeWinSize=40
-let g:NERDTreeMinimalUI=1
-let g:NERDTreeShowHidden=1
-let g:NERDTreeDirArrows=1
-let g:NERDTreeShowLineNumbers=0
-let g:NERDTreeNodeDelimiter = "\u00a0"
-
-nnoremap <leader>nt :NERDTreeToggle<cr>
-nnoremap <leader>nf :NERDTreeFind<cr>
-
 " fix vim session + nerdtree
 set sessionoptions-=blank
 
