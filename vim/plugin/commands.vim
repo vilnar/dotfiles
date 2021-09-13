@@ -81,3 +81,5 @@ command! -nargs=1 SearchInOpenedBuffers call SearchInOpenedBuffers(<f-args>)
 command! CtagsGenerateForC :execute 'AsyncRun ctags `find . -name "*.[ch]" -print`'
 command! CtagsGenerateGo :execute 'AsyncRun ctags `find . -name "*.go" -print && find . -name "*.proto" -print`'
 command! CtagsGeneratePhp :execute 'AsyncRun ctags `find . -name "*.php" -print`'
+
+command! SettingsShowAll :enew | put=execute('set all')

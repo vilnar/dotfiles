@@ -38,9 +38,20 @@ endif
 execute 'set backupdir=' . s:tmp_path
 execute 'set directory=' . s:tmp_path
 
+" Fix work with docker volumes.
+" When writing a file a backup is made.
+" This option make a copy of the file and overwirte the original one.
+set backupcopy=yes
+
 " colorscheme lightsimple
 colorscheme darksimple
 
 nnoremap <space> <nop>
 xnoremap <space> <nop>
 let mapleader="\<Space>"
+
+
+" cursor shape in difference mode
+let &t_SI = "\<esc>[6 q"
+let &t_SR = "\<esc>[3 q"
+let &t_EI = "\<esc>[2 q"
