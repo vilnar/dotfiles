@@ -17,20 +17,20 @@ nnoremap <C-LeftMouse> <nop>
 nnoremap <Leader>1 :setlocal number!<CR>
 
 function! MouseToggle()
-    if &mouse == 'a'
-        set mouse=
-    else
-        set mouse=a
-    endif
+  if &mouse == 'a'
+    set mouse=
+  else
+    set mouse=a
+  endif
 endfunction
 nnoremap <Leader>2 :call MouseToggle()<CR>
 
 function! QuickFixToggle()
-    if empty(filter(getwininfo(), 'v:val.quickfix'))
-        copen 8
-    else
-        cclose
-    endif
+  if empty(filter(getwininfo(), 'v:val.quickfix'))
+    copen 8
+  else
+    cclose
+  endif
 endfunction
 
 nnoremap <silent> <leader>3 :call QuickFixToggle()<CR>

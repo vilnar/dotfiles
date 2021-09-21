@@ -17,7 +17,7 @@ command! FileTabSizeShow :echo &tabstop
 command! FileNoEndOfLineToggle :setlocal nofixendofline!
 
 if executable('jq')
-    command! JsonFormatThis :%!jq .
+  command! JsonFormatThis :%!jq .
 endif
 
 command! BufferCloseOthers :%bd|e#
@@ -35,46 +35,46 @@ command! HexRead :execute '%!xxd' | setlocal filetype=xxd
 command! HexWrite :execute '%!xxd -r' | setlocal binary | setlocal filetype=xxd
 
 if !exists("*ReloadConfigs")
-    function ReloadConfigs()
-        let is_buffer_empty = line('$') == 1 && getline(1) == ''
-        let is_name_buffer_empty = bufname() == ''
-        if !is_buffer_empty && !is_name_buffer_empty
-            execute 'write'
-        endif
-        execute 'source ~/.vimrc'
-        execute 'source ~/.vim/plugin/mappings.vim'
-        execute 'source ~/.vim/plugin/settings.vim'
-        execute 'source ~/.vim/plugin/custom.vim'
-        if has("gui_running")
-            execute 'source ~/.vim/.gvimrc'
-        endif
-        if !is_buffer_empty && !is_name_buffer_empty
-            execute 'edit'
-        endif
-        echomsg 'reload config done'
-    endfunction
+  function ReloadConfigs()
+    let is_buffer_empty = line('$') == 1 && getline(1) == ''
+    let is_name_buffer_empty = bufname() == ''
+    if !is_buffer_empty && !is_name_buffer_empty
+      execute 'write'
+    endif
+    execute 'source ~/.vimrc'
+    execute 'source ~/.vim/plugin/mappings.vim'
+    execute 'source ~/.vim/plugin/settings.vim'
+    execute 'source ~/.vim/plugin/custom.vim'
+    if has("gui_running")
+      execute 'source ~/.vim/.gvimrc'
+    endif
+    if !is_buffer_empty && !is_name_buffer_empty
+      execute 'edit'
+    endif
+    echomsg 'reload config done'
+  endfunction
 endif
 command! ReloadConfigs :call ReloadConfigs()
 
 
 function! FileRename() abort
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-        execute 'saveas ' . new_name
-        execute 'silent !rm ' . old_name
-        redraw!
-    endif
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    execute 'saveas ' . new_name
+    execute 'silent !rm ' . old_name
+    redraw!
+  endif
 endfunction
 command! FileRename :call FileRename()
 
 
 function! SearchInOpenedBuffers(pattern) abort
-    execute 'cclose'
-    execute 'cexpr []'
-    " echomsg 'debug SearchInOpenedBuffers : ' . a:pattern
-    execute 'bufdo vimgrepadd /' . a:pattern . '/g %'
-    execute 'cwindow'
+  execute 'cclose'
+  execute 'cexpr []'
+  " echomsg 'debug SearchInOpenedBuffers : ' . a:pattern
+  execute 'bufdo vimgrepadd /' . a:pattern . '/g %'
+  execute 'cwindow'
 endfunction
 command! -nargs=1 SearchInOpenedBuffers call SearchInOpenedBuffers(<f-args>)
 

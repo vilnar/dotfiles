@@ -12,5 +12,6 @@
     show-merged = show --first-parent
     conf-local = config --local --list
     unstage = reset HEAD
+    show-files-in-commit = diff-tree --no-commit-id --name-only -r
 [core]
     editor = vim

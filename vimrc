@@ -1,8 +1,9 @@
 filetype plugin indent on
 syntax on
 
-" One line to copy. Settings to make it easier to find, enable status line and disable mouse
-set ignorecase smartcase incsearch hlsearch laststatus=2 ruler mouse=
+set ignorecase smartcase incsearch hlsearch
+set laststatus=2 ruler
+set mouse=
 
 set showbreak=->
 set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
@@ -32,7 +33,6 @@ set confirm
 " fix security
 set modelines=0
 set nomodeline
-
 
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp

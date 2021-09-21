@@ -1,7 +1,7 @@
 set background=light
 highlight clear
 if exists("syntax_on")
-    syntax reset
+  syntax reset
 endif
 
 let colors_name = "lightsimple"
