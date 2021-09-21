@@ -6,7 +6,10 @@ set ignorecase smartcase incsearch hlsearch laststatus=2 ruler mouse=
 
 set showbreak=->
 set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
-set nowrap
+set wrap
+
+set encoding=utf-8
+set fileencoding=utf-8
 
 set history=1000
 set wildmenu wildmode=full
@@ -31,12 +34,8 @@ set modelines=0
 set nomodeline
 
 
-let s:tmp_path = $HOME . "/.vim/tmp"
-if !isdirectory(s:tmp_path)
-	call mkdir(s:tmp_path, "p")
-endif
-execute 'set backupdir=' . s:tmp_path
-execute 'set directory=' . s:tmp_path
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Fix work with docker volumes.
 " When writing a file a backup is made.
@@ -50,8 +49,14 @@ nnoremap <space> <nop>
 xnoremap <space> <nop>
 let mapleader="\<Space>"
 
+" Fix slow O inserts
+set timeout timeoutlen=1000 ttimeoutlen=100
+
+" mark trailing spaces as errors
+match ErrorMsg '\s\+$'
 
 " cursor shape in difference mode
 let &t_SI = "\<esc>[6 q"
 let &t_SR = "\<esc>[3 q"
 let &t_EI = "\<esc>[2 q"
+

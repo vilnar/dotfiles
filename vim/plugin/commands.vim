@@ -83,3 +83,7 @@ command! CtagsGenerateGo :execute 'AsyncRun ctags `find . -name "*.go" -print &&
 command! CtagsGeneratePhp :execute 'AsyncRun ctags `find . -name "*.php" -print`'
 
 command! SettingsShowAll :enew | put=execute('set all')
+
+
+command! GoVimRuntime exec ':cd ' . $VIMRUNTIME
+command! ColorTest exec ':e ' . $VIMRUNTIME . '/syntax/colortest.vim'

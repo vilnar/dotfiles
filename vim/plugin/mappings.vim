@@ -52,8 +52,8 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " copy line without newline
 nnoremap <Leader>l :normal ^vg_"+y<CR>
 
-" tabs switching
-nnoremap <Leader>t :tabs<CR>:tabnext<Space>
+" " tabs switching
+" nnoremap <Leader>t :tabs<CR>:tabnext<Space>
 
 " buffers list
 " nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
