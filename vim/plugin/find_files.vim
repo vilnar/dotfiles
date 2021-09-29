@@ -24,4 +24,4 @@ command! -nargs=* -complete=shellcmd FilesBuffer call CreateFilesScratch() | r <
 nnoremap <Leader>ff :FilesBuffer !find * -not -path "./.git/*" -iname ""<left>
 nnoremap <Leader>fu :FilesBuffer !find * -not -path "./.git/*" -name "<C-R><C-W>*"<left>
 nnoremap <Leader>fp :FilesBuffer !find * -not -path "./.git/*" -iname "**"<left><left>
-vnoremap <Leader>fp y:FilesBuffer !find * -not -path "./.git/*" -iname "*<C-R>"*"<left><left>
+vnoremap <Leader>fp y:FilesBuffer !find * -not -path "./.git/*" -path "*<C-R>"*"<left><left>

@@ -52,11 +52,8 @@ let mapleader="\<Space>"
 " Fix slow O inserts
 set timeout timeoutlen=1000 ttimeoutlen=100
 
-" mark trailing spaces as errors
-match ErrorMsg '\s\+$'
 
 " cursor shape in difference mode
 let &t_SI = "\<esc>[6 q"
 let &t_SR = "\<esc>[3 q"
 let &t_EI = "\<esc>[2 q"
-

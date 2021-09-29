@@ -9,3 +9,11 @@ function! SpellUkToggle()
   setlocal spell! spelllang=uk
 endfunction
 command! SpellUkToggle :call SpellUkToggle()
+
+
+
+" ctrl+^ for change keymap in INSERT mode
+set keymap=ukrainian-enhanced
+set iminsert=0 " Default - latin layout
+set imsearch=0 " Default - latin layout in sea
+inoremap <C-\> <C-^>
