@@ -5,6 +5,7 @@
     ci = commit
     hist = log --decorate --graph
     hist-all = log --decorate --graph --all
+    hist-oneline = log --graph --oneline
     bsort = branch --sort=-committerdate
     subup = submodule update --recursive --init
     last = log -1 HEAD
@@ -13,5 +14,10 @@
     conf-local = config --local --list
     unstage = reset HEAD
     show-files-in-commit = diff-tree --no-commit-id --name-only -r
+    tagsort = tag -l --sort=v:refname
 [core]
     editor = vim
+[diff]
+	tool = gvimdiff
+[merge]
+	tool = gvimdiff
