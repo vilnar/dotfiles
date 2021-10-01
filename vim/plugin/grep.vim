@@ -1,9 +1,14 @@
-" grep
+" grep in project
 nnoremap <Leader>gg :AsyncRun grep -rni --exclude="tags" --exclude-dir=".git" -e '' ./<left><left><left><left>
-nnoremap <Leader>gi :AsyncRun grep -rni --exclude="tags" --exclude-dir=".git" --include \*.go -e '' ./<left><left><left><left>
-nnoremap <expr> <Leader>gd ":AsyncRun grep -rni --exclude='tags' --exclude-dir='.git' -e '' " .  expand('%:h')
-nnoremap <expr> <Leader>gc ":AsyncRun grep -rni --exclude='tags' --exclude-dir='.git' -e '' " .  expand('%')
-
 vnoremap <Leader>gg y:AsyncRun grep -rni --exclude-dir=".git" -e '<C-R>"' ./
-vnoremap <expr> <Leader>gd "y:AsyncRun grep -rni --exclude='tags' --exclude-dir='.git' -e '<C-R>\"' " .  expand('%:h')
-vnoremap <expr> <Leader>gc "y:AsyncRun grep -rni --exclude='tags' --exclude-dir='.git' -e '<C-R>\"' " .  expand('%')
+
+" grep in current directory
+nnoremap <expr> <Leader>gd ":AsyncRun grep -rni -e '' " .  expand('%:h')
+vnoremap <expr> <Leader>gd "y:AsyncRun grep -rni -e '<C-R>\"' " .  expand('%:h')
+
+" grep by filetype
+nnoremap <Leader>gi :AsyncRun grep -rni --include \*.go -e '' ./<left><left><left><left>
+
+" grep in current file
+nnoremap <Leader>gc :vimgrep //g % \| cw
+vnoremap <expr> <Leader>gc "y:vimgrep /<C-R>\"/g % \| cw"
