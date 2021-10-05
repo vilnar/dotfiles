@@ -7,7 +7,7 @@ set mouse=
 
 set showbreak=->
 set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
-set wrap
+set nowrap
 
 set encoding=utf-8
 set fileencoding=utf-8

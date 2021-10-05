@@ -33,7 +33,3 @@ nnoremap <Leader>l :normal ^vg_"+y<CR>
 
 " Open current file with Encode
 nnoremap <Leader>ee :edit ++enc= %<left><left>
-
-
-noremap <F9> :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
-
