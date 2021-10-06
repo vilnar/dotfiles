@@ -10,5 +10,6 @@ noremap <F7> :tabnew<CR>:setlocal hidden<CR>
 " nnoremap <Leader>b :ls<CR>:b<Space>
 " close current hidden buffer
 nnoremap <Leader>c :bdelete %<CR>
+command! BufferCloseOthers :%bd|e#
 
 noremap <F8> :set wrap!<CR>

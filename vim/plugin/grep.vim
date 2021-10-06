@@ -12,3 +12,13 @@ nnoremap <Leader>gi :AsyncRun grep -rni --include \*.go -e '' ./<left><left><lef
 " grep in current file
 nnoremap <Leader>gc :vimgrep //g % \| cw
 vnoremap <expr> <Leader>gc "y:vimgrep /<C-R>\"/g % \| cw"
+
+
+function! SearchInOpenedBuffers(pattern) abort
+  execute 'cclose'
+  execute 'cexpr []'
+  " echomsg 'debug SearchInOpenedBuffers : ' . a:pattern
+  execute 'bufdo vimgrepadd /' . a:pattern . '/g %'
+  execute 'cwindow'
+endfunction
+command! -nargs=1 SearchInOpenedBuffers call SearchInOpenedBuffers(<f-args>)

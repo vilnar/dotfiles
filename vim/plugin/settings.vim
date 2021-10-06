@@ -1,3 +1,28 @@
+if !exists("*ReloadConfigs")
+  function ReloadConfigs()
+    let is_buffer_empty = line('$') == 1 && getline(1) == ''
+    let is_name_buffer_empty = bufname() == ''
+    if !is_buffer_empty && !is_name_buffer_empty
+      execute 'write'
+    endif
+    execute 'source ~/.vimrc'
+    execute 'source ~/.vim/plugin/mappings.vim'
+    execute 'source ~/.vim/plugin/settings.vim'
+    execute 'source ~/.vim/plugin/custom.vim'
+    if has("gui_running")
+      execute 'source ~/.vim/.gvimrc'
+    endif
+    if !is_buffer_empty && !is_name_buffer_empty
+      execute 'edit'
+    endif
+    echomsg 'reload config done'
+  endfunction
+endif
+command! ReloadConfigs :call ReloadConfigs()
+
+command! SettingsShowAll :enew | put=execute('set all')
+
+
 " :help netrw
 " let g:netrw_banner = 0
 " disable plugin netrw
