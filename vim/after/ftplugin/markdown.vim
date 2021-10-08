@@ -7,5 +7,6 @@ function s:MarkdownPreviewRun()
   execute ':w!'
   execute ':w! ' . md_tmp
   execute 'AsyncRun pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' . html_tmp . ' ' . md_tmp . ' && firefox ' . html_tmp . ' > /dev/null 2> /dev/null&'
+  " execute 'AsyncRun markdown ' . md_tmp . ' -> ' . html_tmp . ' && firefox ' . html_tmp . ' > /dev/null 2> /dev/null&'
 endfunction
 command! MarkdownPreview call s:MarkdownPreviewRun()

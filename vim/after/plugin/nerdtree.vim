@@ -47,3 +47,22 @@ function! NERDTreeYankName()
   endif
 endfunction
 
+
+autocmd VimEnter * call NERDTreeAddKeyMap({
+      \ 'key': 'yt',
+      \ 'callback': 'NERDTreeOpenTerminal',
+      \ 'quickhelpText': 'open terminal in current node' })
+
+function! NERDTreeOpenTerminal()
+  let n = g:NERDTreeFileNode.GetSelected()
+  if n != {}
+    let path = n.path.str()
+    if !isdirectory(path)
+      echoerr "Not found directory: " . path
+      return
+    endif
+    execute '!gnome-terminal --working-directory=' . path
+    call nerdtree#echo("Open terminal in " . path)
+  endif
+endfunction
+
