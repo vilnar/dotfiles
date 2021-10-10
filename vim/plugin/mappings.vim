@@ -31,5 +31,6 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 nnoremap <Leader>l :normal ^vg_"+y<CR>
 
 
-" Open current file with Encode
-nnoremap <Leader>ee :edit ++enc= %<left><left>
+" Turn off linewise keys. Normally, the `j' and `k' keys move the cursor down one entire line. with line wrapping on, this can cause the cursor to actually skip a few lines on the screen because it's moving from line N to line N+1 in the file. I want this to act more visually -- I want `down' to mean the next line on the screen
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')

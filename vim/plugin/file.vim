@@ -1,3 +1,6 @@
+set autoread
+set autowrite
+
 command! PathDirectoryAbsoluteCopy :let @+=expand('%:p:h')
 command! PathDirectoryRelativeCopy :let @+=expand('%:h')
 command! PathFileAbsoluteCopy :let @+=expand('%:p')
@@ -22,7 +25,11 @@ function! FileRename() abort
 endfunction
 command! FileRename :call FileRename()
 
-command! IndentationToSpaceConvert :setlocal expandtab|retab
-command! IndentationToTabsConvert :setlocal noexpandtab|%retab!
-command! IndentUsingSpace :setlocal expandtab
-command! IndentUsingTab :setlocal expandtab!
+
+" Open current file with Encode
+nnoremap <Leader>ee :edit ++enc= %<left><left>
+
+" command! FileEncodeReopenWithWinCyrilic :e ++enc=cp1251
+command! EncodeDetectThis :!chardet3 %
+command! EncodingSupportedShow :help encoding-values
+command! FileEncodingShow :echo &fileencoding?&fileencoding:&encoding

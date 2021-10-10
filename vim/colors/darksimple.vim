@@ -7,7 +7,8 @@ endif
 let colors_name = "darksimple"
 
 highlight Comment       cterm=NONE ctermfg=grey guifg=grey
-highlight LineNr        cterm=NONE ctermfg=darkgrey guifg=darkgrey
+" highlight LineNr        cterm=NONE ctermfg=darkgrey guifg=darkgrey
+highlight LineNr        cterm=NONE ctermbg=darkgrey ctermfg=white
 highlight Constant      cterm=NONE ctermfg=magenta guifg=magenta
 highlight String        cterm=NONE ctermfg=magenta guifg=magenta
 

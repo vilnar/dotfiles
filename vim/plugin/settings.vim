@@ -9,6 +9,7 @@ if !exists("*ReloadConfigs")
     execute 'source ~/.vim/plugin/mappings.vim'
     execute 'source ~/.vim/plugin/settings.vim'
     execute 'source ~/.vim/plugin/custom.vim'
+    execute 'source ~/.vim/plugin/tui.vim'
     if has("gui_running")
       execute 'source ~/.vim/.gvimrc'
     endif
