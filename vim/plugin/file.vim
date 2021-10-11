@@ -33,3 +33,4 @@ nnoremap <Leader>ee :edit ++enc= %<left><left>
 command! EncodeDetectThis :!chardet3 %
 command! EncodingSupportedShow :help encoding-values
 command! FileEncodingShow :echo &fileencoding?&fileencoding:&encoding
+command! CdToFile :execute 'cd ' . expand('%:p:h')
