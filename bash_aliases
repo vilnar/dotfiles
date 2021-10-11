@@ -15,8 +15,10 @@ alias git_config_user_personal="git config user.email $(git config --get persona
 # docker
 alias dc='docker-compose'
 alias dcup='docker-compose up -d && docker-compose ps'
-alias dcdown='docker-compose down -v'
 alias dcstop='docker-compose stop'
+alias dcrestart='docker-compose stop && docker-compose up -d && docker-compose ps'
+alias dcrestart_down='docker-compose down && docker-compose up -d && docker-compose ps'
+alias dcdown='docker-compose down -v'
 alias dcbuild='docker-compose up -d --build && docker-compose ps'
 
 # vim
