@@ -42,11 +42,9 @@ function! s:statusline_expr()
   let fug = "%{exists('g:loaded_fugitive') ? fugitive#statusline() : ''}"
   let sep = ' %= '
   let ftype  = "%{len(&filetype) ? '  ' . &filetype . ' ' : ' '}"
-  let fencoding  = "%{&fileencoding ? '[' . &fileencoding . '] ' : '[' . &encoding . '] '}"
-  " let pos = ' %-12(%l:%c%V%) '
   let pos = ' %l:%c '
   let pct = ' %P'
 
-  return '%F %<' . modified . ro . sep . fug . ftype . fencoding . pos . '%*' . pct
+  return '%F %<' . modified . ro . sep . fug . ftype . pos . '%*' . pct
 endfunction
 let &statusline = s:statusline_expr()
