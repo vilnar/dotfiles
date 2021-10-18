@@ -45,6 +45,6 @@ function! s:statusline_expr()
   let pos = ' %l:%c '
   let pct = ' %P'
 
-  return '%F %<' . modified . ro . sep . fug . ftype . pos . '%*' . pct
+  return '%f %<' . modified . ro . sep . fug . ftype . pos . '%*' . pct
 endfunction
 let &statusline = s:statusline_expr()
