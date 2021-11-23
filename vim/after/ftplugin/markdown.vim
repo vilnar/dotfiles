@@ -9,7 +9,7 @@ function s:MarkdownToHtml()
   execute ':w!'
   execute ':w! ' . s:md_tmp
   execute 'AsyncRun -silent pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' . s:html_tmp . ' ' . s:md_tmp
-  echomsg 'INFO: Markdown compiled in html!'
+  " echomsg 'INFO: Markdown compiled in html!'
 endfunction
 
 function s:MarkdownPreviewRun()

@@ -30,6 +30,8 @@ set confirm
 
 set nomore
 
+set display+=lastline
+
 " cursor shape in difference mode
 let &t_SI = "\<esc>[6 q"
 let &t_SR = "\<esc>[3 q"

@@ -29,3 +29,6 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " copy line without newline
 nnoremap <Leader>l :normal ^vg_"+y<CR>
+
+" highlight
+nnoremap <Leader>8 :keepjumps normal! mi*`i<CR>
