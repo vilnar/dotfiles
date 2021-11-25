@@ -26,3 +26,19 @@ set backupcopy=yes
 nnoremap <space> <nop>
 xnoremap <space> <nop>
 let mapleader="\<Space>"
+
+
+call plug#begin()
+Plug 'tpope/vim-commentary', { 'tag': 'v1.3' }
+Plug 'tpope/vim-surround', { 'tag': 'v2.1' }
+Plug 'tpope/vim-fugitive', { 'tag': 'v3.3' }
+Plug 'preservim/nerdtree', { 'tag': '6.10.12' }
+Plug 'SirVer/ultisnips', { 'tag': '3.2' }
+Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.21' }
+Plug 'skywind3000/asyncrun.vim', { 'tag': '2.8.6' }
+Plug 'jparise/vim-graphql', { 'tag': 'v1.4' }
+Plug 'arthurxavierx/vim-caser'
+Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.7' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+call plug#end()

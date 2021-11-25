@@ -7,3 +7,7 @@ vim/plugin/custom.vim
 vim/customsnippets/
 
 vim/tmp/
+
+# vim plug
+vim/plugged/
+vim/autoload/

@@ -38,15 +38,3 @@ let &t_SR = "\<esc>[3 q"
 let &t_EI = "\<esc>[2 q"
 
 set laststatus=2
-function! s:statusline_expr()
-  let modified = "%{&modified ? '[+] ' : !&modifiable ? '[x] ' : ''}"
-  let ro  = "%{&readonly ? '[RO] ' : ''}"
-  let fug = "%{exists('g:loaded_fugitive') ? fugitive#statusline() : ''}"
-  let sep = ' %= '
-  let ftype  = "%{len(&filetype) ? '  ' . &filetype . ' ' : ' '}"
-  let pos = ' %l:%c '
-  let pct = ' %P'
-
-  return '%f %<' . modified . ro . sep . fug . ftype . pos . '%*' . pct
-endfunction
-let &statusline = s:statusline_expr()

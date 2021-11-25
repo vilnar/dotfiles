@@ -49,13 +49,6 @@ nnoremap <leader>nt :NERDTreeToggle<cr>
 nnoremap <leader>nf :NERDTreeFind<cr>
 
 
-" :help bufexplorer
-let g:fugitive_dynamic_colors = 0
-let g:bufExplorerShowNoName = 1
-let g:bufExplorerSortBy = "mru"
-let g:bufExplorerShowRelativePath = 1
-let g:bufExplorerDisableDefaultKeyMapping = 1
-nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
 
 
 " :help UltiSnips
@@ -73,5 +66,34 @@ let g:asyncrun_open = 8
 let g:asyncrun_save = 2
 
 
-" :help extags
-nnoremap <leader>t :TSelect <c-r>=expand("<cword>")<cr><CR>
+" https://github.com/junegunn/fzf.vim
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+nnoremap <silent><nowait> <leader>; :Commands<CR>
+nnoremap <silent><nowait> <leader>fz :Files<CR>
+
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+nnoremap <silent><nowait> <leader>gg :Rg<CR>
+
+
+nnoremap <leader>t :Tags <c-r>=expand("<cword>")<cr><CR>
+
+
+" nnoremap <silent><nowait> <leader>b :Buffers<CR>
+
+" :help bufexplorer
+let g:fugitive_dynamic_colors = 0
+let g:bufExplorerShowNoName = 1
+let g:bufExplorerSortBy = "mru"
+let g:bufExplorerShowRelativePath = 1
+let g:bufExplorerDisableDefaultKeyMapping = 1
+nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
+
+nnoremap <silent><nowait> <leader>i :Snippets<CR>
