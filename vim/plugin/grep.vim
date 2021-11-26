@@ -7,7 +7,7 @@ nnoremap <expr> <Leader>gd ":AsyncRun grep -rni -e '' " .  expand('%:h')
 vnoremap <expr> <Leader>gd "y:AsyncRun grep -rni -e '<C-R>\"' " .  expand('%:h')
 
 " grep by filetype
-nnoremap <Leader>gi :AsyncRun grep -rni --include \*.go -e '' ./<left><left><left><left>
+" nnoremap <Leader>gi :AsyncRun grep -rni --include \*.go -e '' ./<left><left><left><left>
 
 " grep in current file
 nnoremap <Leader>gc :vimgrep //g % \| cw

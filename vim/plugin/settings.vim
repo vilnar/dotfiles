@@ -67,10 +67,6 @@ let g:asyncrun_save = 2
 
 
 " https://github.com/junegunn/fzf.vim
-" Mapping selecting mappings
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
 
 nnoremap <silent><nowait> <leader>; :Commands<CR>
 nnoremap <silent><nowait> <leader>fz :Files<CR>
@@ -79,11 +75,11 @@ nnoremap <silent><nowait> <leader>fz :Files<CR>
 
 
 
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
-nnoremap <silent><nowait> <leader>gg :Rg<CR>
+" command! -bang -nargs=* Rg
+"   \ call fzf#vim#grep(
+"   \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+"   \   fzf#vim#with_preview(), <bang>0)
+" nnoremap <silent><nowait> <leader>gg :Rg<CR>
 
 " set up an rg command with options for reuse. Refer to the other gist file (.zshrc) for details on $RG_COMMAND_BASE
 let g:rg_command = 'rg --column --line-number --no-heading --color "always"'
@@ -104,9 +100,11 @@ endfun
 
 " Search literal string recursive ignoring case
 command! -bang -nargs=* RG call Fzf_grep(['--ignore-case', '--fixed-strings'], <q-args>, <bang>0)
+command! -bang -nargs=* RGI call Fzf_grep(['--ignore-case', '--fixed-strings', '--no-ignore'], <q-args>, <bang>0)
 
 " Search literal string recursive case sensitive
 command! -bang -nargs=* RGS call Fzf_grep(['--fixed-strings'], <q-args>, <bang>0)
+command! -bang -nargs=* RGSI call Fzf_grep(['--fixed-strings', '--no-ignore'], <q-args>, <bang>0)
 
 " Search recursive case sensitive as RegExp (using ripgrep RegExp engine, _not_ vim RegExp engine)
 command! -bang -nargs=* RGX call Fzf_grep([], <q-args>, <bang>0)
@@ -120,21 +118,24 @@ nnoremap <silent><leader>gu "zyiw :let cmd = 'RGSW ' . @z <bar> call histadd("cm
 " Search files for visually selected text
 xnoremap <silent><leader>gg "zy :let cmd = 'RGS ' . @z <bar> call histadd("cmd", cmd) <bar> execute cmd <cr>
 
+let g:fzf_history_dir = '~/.fzf-history'
+nnoremap <silent><nowait> <leader>gg :RG <CR>
 
-
+nnoremap <silent><nowait> <leader>gi :RGI <CR>
+xnoremap <silent><leader>gi "zy :let cmd = 'RGSI ' . @z <bar> call histadd("cmd", cmd) <bar> execute cmd <cr>
 
 
 nnoremap <leader>t :Tags <c-r>=expand("<cword>")<cr><CR>
 
 
-" nnoremap <silent><nowait> <leader>b :Buffers<CR>
+nnoremap <silent><nowait> <leader>b :Buffers<CR>
 
 " :help bufexplorer
-let g:fugitive_dynamic_colors = 0
-let g:bufExplorerShowNoName = 1
-let g:bufExplorerSortBy = "mru"
-let g:bufExplorerShowRelativePath = 1
-let g:bufExplorerDisableDefaultKeyMapping = 1
-nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
+" let g:fugitive_dynamic_colors = 0
+" let g:bufExplorerShowNoName = 1
+" let g:bufExplorerSortBy = "mru"
+" let g:bufExplorerShowRelativePath = 1
+" let g:bufExplorerDisableDefaultKeyMapping = 1
+" nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
 
 nnoremap <silent><nowait> <leader>i :Snippets<CR>
