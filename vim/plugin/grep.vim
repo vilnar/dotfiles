@@ -1,6 +1,6 @@
 " grep in project
 " nnoremap <Leader>gg :AsyncRun grep -rni --exclude="tags" --exclude-dir=".git" -e '' ./<left><left><left><left>
-vnoremap <Leader>gg y:AsyncRun grep -rni --exclude="tags" --exclude-dir=".git" -e '<C-R>"' ./
+" vnoremap <Leader>gg y:AsyncRun grep -rni --exclude="tags" --exclude-dir=".git" -e '<C-R>"' ./
 
 " grep in current directory
 nnoremap <expr> <Leader>gd ":AsyncRun grep -rni -e '' " .  expand('%:h')
