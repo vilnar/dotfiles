@@ -66,15 +66,15 @@ let g:asyncrun_open = 8
 let g:asyncrun_save = 2
 
 
+
 " https://github.com/junegunn/fzf.vim
-
 nnoremap <silent><nowait> <leader>; :Commands<CR>
-nnoremap <silent><nowait> <leader>fz :Files<CR>
-" nnoremap <silent> <Space>. :Files <C-r>=expand("%:h")<CR>/<CR>
+nnoremap <silent><nowait> <leader>ff :Files<CR>
+nnoremap <silent><nowait> <leader>fc :Files <C-r>=expand("%:h")<CR>/<CR>
 
 
 
-
+" FZF_GREP --------------------------------------------------------------------------------------------
 " command! -bang -nargs=* Rg
 "   \ call fzf#vim#grep(
 "   \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
@@ -85,18 +85,16 @@ nnoremap <silent><nowait> <leader>fz :Files<CR>
 let g:rg_command = 'rg --column --line-number --no-heading --color "always"'
 
 " concatenate together all the necessary options for the final call to the rg command
-fun! BuildRgCommand(opts, qargs)
+function! BuildRgCommand(opts, qargs)
   let l:list = [g:rg_command] + a:opts + ['--', shellescape(a:qargs)]
   return join(l:list, ' ')
-endfun
+endfunction
 
 " construct the rg command and pass it to the fzf grep command with all necessary options
-fun! Fzf_grep(opts, qargs, bang) abort
+function! Fzf_grep(opts, qargs, bang) abort
   let l:rg = BuildRgCommand(a:opts, a:qargs)
   call fzf#vim#grep(l:rg, 1, {}, a:bang)
-endfun
-
-" custom commands
+endfunction
 
 " Search literal string recursive ignoring case
 command! -bang -nargs=* RG call Fzf_grep(['--ignore-case', '--fixed-strings'], <q-args>, <bang>0)
@@ -112,20 +110,24 @@ command! -bang -nargs=* RGX call Fzf_grep([], <q-args>, <bang>0)
 " Seach literal string recursive case sensitive with word boundaries
 command! -bang -nargs=* RGSW call Fzf_grep(['-w', '--fixed-strings'], <q-args>, <bang>0)
 
-" Search files for word under cursor
-nnoremap <silent><leader>gu "zyiw :let cmd = 'RGSW ' . @z <bar> call histadd("cmd", cmd) <bar> execute cmd<cr>
-
 " Search files for visually selected text
 xnoremap <silent><leader>gg "zy :let cmd = 'RGS ' . @z <bar> call histadd("cmd", cmd) <bar> execute cmd <cr>
 
 let g:fzf_history_dir = '~/.fzf-history'
 nnoremap <silent><nowait> <leader>gg :RG <CR>
 
+" no ignore
 nnoremap <silent><nowait> <leader>gi :RGI <CR>
 xnoremap <silent><leader>gi "zy :let cmd = 'RGSI ' . @z <bar> call histadd("cmd", cmd) <bar> execute cmd <cr>
 
+" Search files for word under cursor
+nnoremap <silent><leader>gu "zyiw :let cmd = 'RGSW ' . @z <bar> call histadd("cmd", cmd) <bar> execute cmd<cr>
+
+
+
 
 nnoremap <leader>t :Tags <c-r>=expand("<cword>")<cr><CR>
+
 
 
 nnoremap <silent><nowait> <leader>b :Buffers<CR>
@@ -137,5 +139,6 @@ nnoremap <silent><nowait> <leader>b :Buffers<CR>
 " let g:bufExplorerShowRelativePath = 1
 " let g:bufExplorerDisableDefaultKeyMapping = 1
 " nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
+
 
 nnoremap <silent><nowait> <leader>i :Snippets<CR>

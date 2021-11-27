@@ -10,7 +10,9 @@ nnoremap <Leader>1 :setlocal number!<CR>
 
 " colorscheme lightsimple
 " colorscheme darksimple
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme seoul256
+" colorscheme seoul256-light
 
 set showbreak=->
 set nowrap

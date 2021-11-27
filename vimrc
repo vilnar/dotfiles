@@ -41,4 +41,6 @@ Plug 'arthurxavierx/vim-caser'
 Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.7' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/goyo.vim'
 call plug#end()
