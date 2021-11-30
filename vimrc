@@ -6,6 +6,7 @@ set ruler
 set mouse=
 
 set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
+set linebreak
 set wrap
 
 set encoding=utf-8
@@ -43,4 +44,5 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'yegappan/grep'
 call plug#end()
