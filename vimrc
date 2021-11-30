@@ -32,17 +32,17 @@ let mapleader="\<Space>"
 call plug#begin()
 Plug 'tpope/vim-commentary', { 'tag': 'v1.3' }
 Plug 'tpope/vim-surround', { 'tag': 'v2.1' }
-Plug 'tpope/vim-fugitive', { 'tag': 'v3.3' }
+Plug 'tpope/vim-fugitive', { 'tag': 'v3.6' }
 Plug 'preservim/nerdtree', { 'tag': '6.10.12' }
 Plug 'SirVer/ultisnips', { 'tag': '3.2' }
 Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.21' }
 Plug 'skywind3000/asyncrun.vim', { 'tag': '2.8.6' }
 Plug 'jparise/vim-graphql', { 'tag': 'v1.4' }
-Plug 'arthurxavierx/vim-caser'
+Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f34bf6' }
 Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.7' }
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/seoul256.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'yegappan/grep'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'tag': '0.28.0' }
+Plug 'junegunn/fzf.vim', { 'commit': 'd6aa21476b2854694e6aa7b0941b8992a906c5ec' }
+Plug 'junegunn/seoul256.vim', { 'commit': '57e545942fff2f796f26715bc0e937243dfa30c0' }
+Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2' }
+Plug 'yegappan/grep', { 'commit': '823a27e0a541133d04c23359876afdc6eaa055db' }
 call plug#end()
