@@ -4,7 +4,7 @@ function! OpenTerminal()
     echoerr "Not found directory: " . path
     return
   endif
-  execute '!gnome-terminal --working-directory=' . path
+  execute 'Dispatch gnome-terminal --working-directory=' . path
 endfunction
 
 command! OpenTerminalHere :call OpenTerminal()
