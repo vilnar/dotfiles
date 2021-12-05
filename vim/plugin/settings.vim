@@ -73,3 +73,7 @@ let g:bufExplorerSortBy = "mru"
 let g:bufExplorerShowRelativePath = 1
 let g:bufExplorerDisableDefaultKeyMapping = 1
 nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
+
+
+" help codefmt
+vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>

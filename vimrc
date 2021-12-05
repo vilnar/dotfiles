@@ -48,4 +48,9 @@ Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2'
 Plug 'skywind3000/asyncrun.vim', { 'tag': '2.8.6' }
 Plug 'tpope/vim-dispatch', {'commit': '3505862b3898be5db3c78ba1b92c703349478d68'}
 
+" format code (command example :FormatLines)
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+
 call plug#end()
