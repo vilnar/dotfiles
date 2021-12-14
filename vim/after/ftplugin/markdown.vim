@@ -1,20 +1,29 @@
 if !executable('pandoc')
+  " echoerr 'pandoc not installed!'
   finish
 endif
 
-let s:html_tmp = "/tmp/vim-markdown.html"
-let s:md_tmp = "/tmp/vim-markdown.md"
+function s:GetName()
+  return winnr() . '-' . bufnr()
+endfunction
+
+function s:GetMarkdownTmpPath()
+  return '/tmp/' . s:GetName() . '.md'
+endfunction
+
+function s:GetHtmlTmpPath()
+  return '/tmp/' . s:GetName() . '.html'
+endfunction
 
 function s:MarkdownToHtml()
   execute ':w!'
-  execute ':w! ' . s:md_tmp
-  execute 'AsyncRun -silent pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' . s:html_tmp . ' ' . s:md_tmp
-  " echomsg 'INFO: Markdown compiled in html!'
+  execute ':w! ' . s:GetMarkdownTmpPath()
+  execute 'Dispatch pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' . s:GetHtmlTmpPath() . ' ' . s:GetMarkdownTmpPath()
 endfunction
 
 function s:MarkdownPreviewRun()
   call s:MarkdownToHtml()
-  execute '!firefox ' . s:html_tmp . ' > /dev/null 2> /dev/null&'
+  execute 'Dispatch firefox ' . s:GetHtmlTmpPath() . ' > /dev/null 2> /dev/null&'
 endfunction
 command! MarkdownPreview call s:MarkdownPreviewRun()
 
