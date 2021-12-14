@@ -4,6 +4,10 @@ alias del='gio trash'
 alias date_timestamp='date +"%s"'
 alias date_format='date +"%Y-%m-%d %T"'
 
+alias cc='clear && clear'
+
+# clearfile > file.log
+# alias clearfile='echo -n ""'
 alias clearfile='truncate --size 0'
 alias upbash='source ~/.profile'
 alias gr='grep --recursive --line-number --ignore-case'
@@ -17,8 +21,8 @@ alias dc='docker-compose'
 alias dcup='docker-compose up -d && docker-compose ps'
 alias dcstop='docker-compose stop'
 alias dcrestart='docker-compose stop && docker-compose up -d && docker-compose ps'
-alias dcrestart_down='docker-compose down && docker-compose up -d && docker-compose ps'
 alias dcdown='docker-compose down -v'
+alias dcclear='docker-compose down -v && docker-compose up -d --build && docker-compose ps'
 alias dcbuild='docker-compose up -d --build && docker-compose ps'
 
 # vim
