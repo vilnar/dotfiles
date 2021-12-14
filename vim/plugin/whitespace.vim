@@ -5,7 +5,7 @@ function! WhiteSpaceTrailClearInRange() range
 endfunction
 command! -range WhiteSpaceTrailClear <line1>,<line2>call WhiteSpaceTrailClearInRange()
 " clear whitespace in block
-" vnoremap <F10> <Esc>:'<,'>s/\s\+$//e<CR>
+vnoremap <F10> <Esc>:'<,'>WhiteSpaceTrailClear<CR>
 
 
 " show whitespace

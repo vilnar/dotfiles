@@ -8,11 +8,14 @@ set cursorline
 nnoremap <Leader>1 :setlocal number!<CR>
 
 
+
 " colorscheme lightsimple
 " colorscheme darksimple
-" colorscheme jellybeans
-colorscheme seoul256
-" colorscheme seoul256-light
+
+let g:gruvbox_contrast_dark = 'medium' 
+let g:gruvbox_invert_selection = 0
+set background=dark
+colorscheme gruvbox
 
 set showbreak=->
 set nowrap
@@ -23,6 +26,8 @@ set wildmenu wildmode=full
 set wildignorecase
 set shortmess-=S
 set showcmd
+" set complete=.,b,u,t 
+set complete=.,t 
 
 set splitbelow
 set title

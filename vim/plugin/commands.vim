@@ -2,6 +2,10 @@ if executable('jq')
   command! JsonFormatThis :%!jq .
 endif
 
+if executable('sort')
+  command! SortThis :%!sort
+endif
+
 command! SnippetsOpen :execute 'edit ~/.vim/UltiSnips/'
 command! SnippetsCustomOpen :execute 'edit ~/.vim/customsnippets/'
 

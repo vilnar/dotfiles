@@ -17,6 +17,9 @@ highlight Function          cterm=NONE ctermfg=black guifg=black
 highlight Special           cterm=NONE ctermfg=black guifg=black
 highlight Delimiter         cterm=NONE ctermfg=black guifg=black
 
+highlight CursorLine    cterm=NONE ctermbg=254 guibg=#f0f0f0
+highlight CursorLineNr  cterm=NONE ctermbg=254 guibg=#f0f0f0 ctermfg=23 guifg=#494b53
+
 hi Error  cterm=NONE guifg=#d70000 guibg=NONE gui=NONE
 hi ErrorMsg cterm=NONE guifg=#d70000 guibg=NONE gui=NONE
 hi ModeMsg cterm=NONE guifg=#1c1c1c guibg=#d7af5f gui=NONE
