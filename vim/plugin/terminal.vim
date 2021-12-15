@@ -1,42 +1,23 @@
-function! OpenTerminal()
-  let path = expand('%:p:h')
+vim9script
+def OpenTerminal()
+  var path = expand('%:p:h')
   if !isdirectory(path)
-    echoerr "Not found directory: " . path
+    echoerr "Not found directory: " .. path
     return
   endif
-  execute 'Dispatch gnome-terminal --working-directory=' . path
-endfunction
+  execute 'Dispatch gnome-terminal --working-directory=' .. path
+enddef
 
-command! OpenTerminalHere :call OpenTerminal()
-noremap <F9> :call OpenTerminal()<CR>
+command OpenTerminalHere OpenTerminal()
+noremap <F9> :vim9cmd <SID>OpenTerminal()<CR>
 
-function! OpenInternalTerminal()
-  let path = expand('%:p:h')
+def OpenInternalTerminal()
+  var path = expand('%:p:h')
   if !isdirectory(path)
-    echoerr "Not found directory: " . path
+    echoerr "Not found directory: " .. path
     return
   endif
   execute 'terminal'
-  execute 'cd ' . path
-endfunction
-command! OpenInternalTerminalHere :call OpenInternalTerminal()
-
-
-autocmd VimEnter * call NERDTreeAddKeyMap({
-      \ 'key': 'yt',
-      \ 'callback': 'NERDTreeOpenTerminal',
-      \ 'quickhelpText': 'open terminal in current node' })
-
-function! NERDTreeOpenTerminal()
-  let n = g:NERDTreeFileNode.GetSelected()
-  if n != {}
-    let path = n.path.str()
-    if !isdirectory(path)
-      echoerr "Not found directory: " . path
-      return
-    endif
-    execute 'Dispatch gnome-terminal --working-directory=' . path
-    call nerdtree#echo("Open terminal in " . path)
-  endif
-endfunction
-
+  execute 'cd ' .. path
+enddef
+command OpenInternalTerminalHere OpenInternalTerminal()
