@@ -1,7 +1,3 @@
-if !exists('loaded_nerd_tree')
-  finish
-endif
-
 " fix vim session + nerdtree
 set sessionoptions-=blank
 
@@ -19,6 +15,7 @@ function! NERDTreeYankFullPath()
   endif
 endfunction
 
+
 autocmd VimEnter * call NERDTreeAddKeyMap({
       \ 'key': 'yr',
       \ 'callback': 'NERDTreeYankRelativePath',
@@ -33,6 +30,7 @@ function! NERDTreeYankRelativePath()
   endif
 endfunction
 
+
 autocmd VimEnter * call NERDTreeAddKeyMap({
       \ 'key': 'yn',
       \ 'callback': 'NERDTreeYankName',
@@ -46,3 +44,23 @@ function! NERDTreeYankName()
     call nerdtree#echo("Copy file name " . file_name)
   endif
 endfunction
+
+
+autocmd VimEnter * call NERDTreeAddKeyMap({
+      \ 'key': 'yt',
+      \ 'callback': 'NERDTreeOpenTerminal',
+      \ 'quickhelpText': 'open terminal in current node' })
+
+function! NERDTreeOpenTerminal()
+  let n = g:NERDTreeFileNode.GetSelected()
+  if n != {}
+    let path = n.path.str()
+    if !isdirectory(path)
+      echoerr "Not found directory: " . path
+      return
+    endif
+    execute 'Dispatch gnome-terminal --working-directory=' . path
+    call nerdtree#echo("Open terminal in " . path)
+  endif
+endfunction
+
