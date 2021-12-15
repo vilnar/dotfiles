@@ -1,1 +1,1 @@
-setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab commentstring=//\ %s
+setlocal tabstop=8 softtabstop=4 shiftwidth=4 expandtab commentstring=//\ %s

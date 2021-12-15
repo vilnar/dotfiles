@@ -1,18 +1,15 @@
 set autoread
 set autowrite
 
-command! PathDirectoryAbsoluteCopy :let @+=expand('%:p:h')
-command! PathDirectoryRelativeCopy :let @+=expand('%:h')
-command! PathFileAbsoluteCopy :let @+=expand('%:p')
-command! PathFileRelativeCopy :let @+=expand('%')
+command! PathDirCopyAbsolute :let @+=expand('%:p:h')
+command! PathDirCopyRelative :let @+=expand('%:h')
+command! PathFileCopyAbsolute :let @+=expand('%:p')
+command! PathFileCopyRelative :let @+=expand('%')
 
-command! FileNameCopy :let @+=expand('%:t')
+command! FileCopyName :let @+=expand('%:t')
 
-command! FileFormatShow :echo &fileformat
-command! FileTypeShow :echo &filetype
-command! FileTabSizeShow :echo &tabstop
-command! FileNoEndOfLineToggle :setlocal nofixendofline!
-
+command! EditorShowLineEncoding :echo &fileformat
+command! EditorShowType :echo &filetype
 
 function! FileRename() abort
   let old_name = expand('%')
@@ -32,5 +29,5 @@ nnoremap <Leader>ee :edit ++enc= %<left><left>
 " command! FileEncodeReopenWithWinCyrilic :e ++enc=cp1251
 command! EncodeDetectThis :!chardet3 %
 command! EncodingSupportedShow :help encoding-values
-command! FileEncodingShow :echo &fileencoding?&fileencoding:&encoding
+command! EncodingShow :echo &fileencoding?&fileencoding:&encoding
 command! CdToFile :execute 'cd ' . expand('%:p:h')
