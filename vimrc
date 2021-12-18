@@ -53,5 +53,6 @@ Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
 Plug 'junegunn/seoul256.vim', { 'commit': '57e545942fff2f796f26715bc0e937243dfa30c0' }
+Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.7' }
 
 call plug#end()
