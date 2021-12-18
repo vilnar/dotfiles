@@ -1,10 +1,19 @@
+vim9script
+
 augroup AutoSettingsFileType
-  autocmd!
-  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-  autocmd BufRead,BufNewFile .gitignore,.env.local,.env,.env.example,.env.test setlocal filetype=conf
+  autocmd FileType * {
+    setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+  }
+  autocmd BufRead,BufNewFile .gitignore,.env.local,.env,.env.example,.env.test,*.conf {
+    setlocal filetype=conf
+  }
 augroup END
-augroup KeepScreenPosition
-  autocmd!
-  autocmd BufWinLeave * let b:winview = winsaveview()
-  autocmd BufWinEnter * if exists('b:winview') | call winrestview(b:winview) | unlet b:winview
-augroup END
+
+# augroup KeepScreenPosition
+#   autocmd BufWinLeave * {
+#     var winview = winsaveview()
+#   }
+#   autocmd BufWinEnter * {
+#     if exists('winview') | winrestview(winview) | unvar winview
+#   }
+# augroup END

@@ -1,11 +1,12 @@
 vim9script
+
 def OpenTerminal()
   var path = expand('%:p:h')
   if !isdirectory(path)
     echoerr "Not found directory: " .. path
     return
   endif
-  execute 'Dispatch gnome-terminal --working-directory=' .. path
+  execute 'Start! gnome-terminal --working-directory=' .. path
 enddef
 
 command OpenTerminalHere OpenTerminal()

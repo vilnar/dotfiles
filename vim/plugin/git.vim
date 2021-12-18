@@ -1,22 +1,24 @@
-function! FileHistory()
-  let path = expand('%:p')
+vim9script 
+
+def RunFileHistory()
+  var path = expand('%:p')
   if !filereadable(path)
-    echoerr "Not found file: " . path
+    echoerr "Not found file: " .. path
     return
   endif
-  execute 'Dispatch gitk ' . path
-endfunction
+  execute 'Start! gitk ' .. path
+enddef
 
-command! FileHistory :call FileHistory()
+command FileHistory RunFileHistory()
 
 
-function! BlameFile()
-  let path = expand('%:p')
+def RunBlameFile()
+  var path = expand('%:p')
   if !filereadable(path)
-    echoerr "Not found file: " . path
+    echoerr "Not found file: " .. path
     return
   endif
-  execute 'Dispatch git gui blame ' . path
-endfunction
+  execute 'Start! git gui blame ' .. path
+enddef
 
-command! BlameFile :call BlameFile()
+command BlameFile RunBlameFile()

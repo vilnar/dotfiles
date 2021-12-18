@@ -1,9 +1,11 @@
+vim9script
+
 set mouse=a
-function! MouseToggle()
+def MouseToggle()
   if &mouse == 'a'
-    set mouse=
+    execute 'set mouse='
   else
-    set mouse=a
+    execute 'set mouse=a'
   endif
-endfunction
-nnoremap <Leader>2 :call MouseToggle()<CR>
+enddef
+nnoremap <Leader>2 :vim9cmd <SID>MouseToggle()<CR>

@@ -1,27 +1,29 @@
-function! CreateScratchByName(name)
+vim9script
+
+def CreateScratchByName(name: string)
   enew
   setlocal buftype=nofile
   setlocal bufhidden=hide
   setlocal noswapfile
-  execute 'file ' . a:name
-endfunction
+  execute 'file ' .. name
+enddef
 
-function! CreateFilesScratch()
-  let name = '__Files__'
-  let bufnumber = bufnr(name)
+def CreateFilesScratch()
+  var name = '__Files__'
+  var bufnumber = bufnr(name)
   if bufnumber == -1
-    call CreateScratchByName(name)
+    CreateScratchByName(name)
   else
-    execute 'bdelete ' . name
-    call CreateScratchByName(name)
+    execute 'bdelete ' .. name
+    CreateScratchByName(name)
   endif
-endfunction
+enddef
 
-" Read from shell and move to new buffer
-command! -nargs=* -complete=shellcmd FilesBuffer call CreateFilesScratch() | r <args>
+# Read from shell and move to new buffer
+command -nargs=* -complete=shellcmd FilesBuffer CreateFilesScratch() | r <args>
 
-" find file
-" nnoremap <Leader>ff :FilesBuffer !find * -not -path "./.git/*" -iname ""<left>
-" nnoremap <Leader>fu :FilesBuffer !find * -not -path "./.git/*" -name "<C-R><C-W>*"<left>
-nnoremap <Leader>fp :FilesBuffer !find * -not -path "./.git/*" -iname "**"<left><left>
-vnoremap <Leader>fp y:FilesBuffer !find * -not -path "./.git/*" -path "*<C-R>"*"<left><left>
+# find file
+# nnoremap <Leader>ff :FilesBuffer !find * -not -path "./.git/*" -iname ""<left>
+# nnoremap <Leader>fu :FilesBuffer !find * -not -path "./.git/*" -name "<C-R><C-W>*"<left>
+nnoremap <Leader>fp :vim9cmd FilesBuffer !find * -not -path "./.git/*" -iname "**"<left><left>
+vnoremap <Leader>fp y:vim9cmd FilesBuffer !find * -not -path "./.git/*" -path "*<C-R>"*"<left><left>

@@ -1,19 +1,21 @@
-" help spell
-" `z=` - Finding suggestions for bad words
-function! SpellEnToggle()
-  setlocal spell! spelllang=en_us
-endfunction
-command! SpellEnToggle :call SpellEnToggle()
+vim9script
 
-function! SpellUkToggle()
-  setlocal spell! spelllang=uk
-endfunction
-command! SpellUkToggle :call SpellUkToggle()
+# help spell
+# `z=` - Finding suggestions for bad words
+def RunSpellEnToggle()
+  execute 'setlocal spell! spelllang=en_us'
+enddef
+command SpellEnToggle RunSpellEnToggle()
+
+def RunSpellUkToggle()
+  execute 'setlocal spell! spelllang=uk'
+enddef
+command SpellUkToggle RunSpellUkToggle()
 
 
 
-" ctrl+^ for change keymap in INSERT mode
+# ctrl+^ for change keymap in INSERT mode
 set keymap=ukrainian-enhanced
-set iminsert=0 " Default - latin layout
-set imsearch=0 " Default - latin layout in sea
+set iminsert=0 # Default - latin layout
+set imsearch=0 # Default - latin layout in sea
 inoremap <C-\> <C-^>

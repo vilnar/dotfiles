@@ -1,21 +1,20 @@
-" Fix slow O inserts
+vim9script
+
+# Fix slow O inserts
 set timeout timeoutlen=1000 ttimeoutlen=100
 
-" set number
+# set number
 set signcolumn=number
-" set numberwidth=6
+# set numberwidth=6
 set cursorline
 nnoremap <Leader>1 :setlocal number!<CR>
 
 
 
-" colorscheme lightsimple
-" colorscheme darksimple
+# colorscheme lightsimple
+# colorscheme darksimple
 
-let g:gruvbox_contrast_dark = 'medium' 
-let g:gruvbox_invert_selection = 0
-set background=dark
-colorscheme gruvbox
+colorscheme seoul256
 
 set showbreak=->
 set nowrap
@@ -26,7 +25,7 @@ set wildmenu wildmode=full
 set wildignorecase
 set shortmess-=S
 set showcmd
-" set complete=.,b,u,t 
+# set complete=.,b,u,t 
 set complete=.,t 
 
 set splitbelow
@@ -39,9 +38,9 @@ set nomore
 
 set display+=lastline
 
-" cursor shape in difference mode
-let &t_SI = "\<esc>[6 q"
-let &t_SR = "\<esc>[3 q"
-let &t_EI = "\<esc>[2 q"
+# cursor shape in difference mode
+&t_SI = "\<esc>[6 q"
+&t_SR = "\<esc>[3 q"
+&t_EI = "\<esc>[2 q"
 
 set laststatus=2

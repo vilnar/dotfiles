@@ -52,6 +52,6 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-Plug 'morhetz/gruvbox', { 'commit': 'bf2885a95efdad7bd5e4794dd0213917770d79b7' }
+Plug 'junegunn/seoul256.vim', { 'commit': '57e545942fff2f796f26715bc0e937243dfa30c0' }
 
 call plug#end()
