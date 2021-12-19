@@ -3,13 +3,18 @@ vim9script
 # Exact selected multiline string search
 vnoremap * "vy/\V<C-R>=substitute(escape(@v, '/\'), '\n', '\\n', 'g')<CR><CR>
 
-command! -nargs=1 SearchMultiLine :let @/='\V' . substitute(escape(<q-args>, '/\'), '\r', '\\n', 'g') | normal! n
+command! -nargs=1 SearchMultiLine :vim9cmd @/ = '\V' .. substitute(escape(<q-args>, '/\'), '\r', '\\n', 'g') | normal! n
 nnoremap <Leader>sm :SearchMultiLine<space>
 
-# Searching for all characters as normal text
-command! -nargs=1 SearchEscape :let @/='\V' . escape(<q-args>, '\\') | normal! n
+command! -nargs=1 SearchEscape :vim9cmd @/ = '\V' .. escape(<q-args>, '\\') | normal! n
 nnoremap <Leader>se :SearchEscape<space>
 vnoremap <Leader>se y:SearchEscape<space><C-R>"
+# def EscapeText()
+#   var text = getreg('"')
+#   var textEsc = escape(text, '\\')
+#   @/ = '\V' .. textEsc
+# enddef
+# vnoremap <Leader>se y:vim9cmd <SID>EscapeText()<CR>
 
 vnoremap <Leader>ss y/<C-R>"
 
