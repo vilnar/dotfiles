@@ -1,6 +1,7 @@
 vim9script
 
 command WhiteSpaceTrailSearch /\s\+$
+
 def WhiteSpaceTrailClearInRange(firstline: number, lastline: number)
   execute ":" .. firstline .. "," .. lastline .. "s/\\s\\+$//e"
 enddef

@@ -12,6 +12,7 @@ if !exists("g:ReloadConfigs")
     execute 'source ~/.vim/plugin/settings.vim'
     execute 'source ~/.vim/plugin/custom.vim'
     execute 'source ~/.vim/plugin/tui.vim'
+    execute 'source ~/.vim/plugin/test.vim'
     if has("gui_running")
       execute 'source ~/.vim/.gvimrc'
     endif

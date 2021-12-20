@@ -7,4 +7,5 @@ def OpenNewTabWithSelectedText()
   execute 'file __TEMP__'
   append(0, split(text, '\n'))
 enddef
-xnoremap <leader>os y:vim9cmd <SID>OpenNewTabWithSelectedText()<CR>
+# move selected to new tab
+xnoremap <leader>ms y:vim9cmd <SID>OpenNewTabWithSelectedText()<CR>

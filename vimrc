@@ -55,4 +55,6 @@ Plug 'google/vim-glaive'
 Plug 'junegunn/seoul256.vim', { 'commit': '57e545942fff2f796f26715bc0e937243dfa30c0' }
 Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.7' }
 
+Plug 'will133/vim-dirdiff', { 'commit': '84bc8999fde4b3c2d8b228b560278ab30c7ea4c9' }
+
 call plug#end()
