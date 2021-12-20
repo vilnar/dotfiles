@@ -1,0 +1,8 @@
+[
+  {
+    "id": "SideBarCustom", "caption": "-"
+  },
+  {
+    "caption": "Open Folders in New Window", "command": "side_bar_open_in_new_window", "args": {"dirs": []}
+  },
+]

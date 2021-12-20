@@ -1,0 +1,12 @@
+[
+    {
+        "keys": ["ctrl+k", "s"],
+        "command": "git",
+        "args": {"argv": ["status"]}
+    },
+    {
+        "keys": ["ctrl+k", "b"],
+        "command": "git",
+        "args": {"argv": ["branch", "--sort=-committerdate"]}
+    },
+]

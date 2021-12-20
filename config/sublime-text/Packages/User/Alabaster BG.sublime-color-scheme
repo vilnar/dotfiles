@@ -1,0 +1,21 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+  "variables":
+  {
+  },
+  "globals":
+  {
+    "brackets_options": "glow",
+  },
+  "rules":
+  [
+    {
+      "name":       "Comments",
+      "scope":      "comment, punctuation.definition.comment, invalid comment",
+      // "foreground": "#999",
+      // "foreground": "#AA3731",
+      // "background": "none"
+      "background": "#EEE"
+    },
+  ]
+}

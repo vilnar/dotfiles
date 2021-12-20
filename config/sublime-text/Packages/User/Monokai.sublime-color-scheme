@@ -1,0 +1,77 @@
+{
+    "variables":
+    {
+        "pink": "hsl(300, 30%, 68%)",
+        "blue5": "hsl(180, 36%, 54%)",
+        "grey-custom1": "#cbccc6",
+        "green-custom1": "#a6e22e",
+        "beige-custom1": "#ebdbb2",
+        "blue-custom1": "#5ccfe680",
+    },
+    "globals":
+    {
+        "brackets_options": "bold glow",
+        "brackets_foreground": "var(green-custom1)",
+        "bracket_contents_options": "underline",
+        "bracket_contents_foreground": "var(green-custom1)",
+    },
+    "rules":
+    [
+        {
+            "scope": "string punctuation.definition.expression",
+            "foreground": "var(grey-custom1)"
+        },
+        {
+            "name": "Function call",
+            "scope": "variable.function, variable.annotation",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "Library function",
+            "scope": "support.function, support.macro",
+            "foreground": "var(blue)",
+            "font_style": "italic"
+        },
+        {
+            "scope": "variable",
+            "foreground": "var(beige-custom1)"
+        },
+        {
+            "name": "Separators like ; or ,",
+            "scope": "punctuation.separator, punctuation.terminator",
+            "foreground": "var(grey-custom1)"
+        },
+        {
+            "name": "Punctuation",
+            "scope": "punctuation.section",
+            "foreground": "var(grey-custom1)"
+        },
+        {
+            "name": "Accessor",
+            "scope": "punctuation.accessor",
+            "foreground": "var(grey-custom1)"
+        },
+        {
+            "name": "Tag start/end",
+            "scope": "punctuation.definition.tag.end, punctuation.definition.tag.begin, punctuation.definition.tag",
+            "foreground": "var(blue-custom1)"
+        },
+        {
+            "name": "Storage type",
+            "scope": "storage.type",
+            "foreground": "var(pink)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Library constant",
+            "scope": "support.constant",
+            "foreground": "var(pink)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Operator assignment",
+            "scope": "keyword.operator.assignment",
+            "foreground": "var(orange)",
+        },
+    ]
+}

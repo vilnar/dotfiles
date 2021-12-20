@@ -1,0 +1,11 @@
+{
+  "installed_packages":
+  [
+    "Package Control",
+  ],
+  "auto_upgrade": false,
+  "bootstrapped": true,
+  "in_process_packages":
+  [
+  ],
+}
