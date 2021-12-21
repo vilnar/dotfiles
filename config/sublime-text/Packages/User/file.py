@@ -10,14 +10,17 @@ class FileDeleteCommand(sublime_plugin.WindowCommand):
     def run(self):
         file_path = self.window.extract_variables().get('file')
         if not os.path.exists(file_path):
-            print("File not found in path: {}".format(PLUGIN_PATH, file_path))
+            print("{} File not found in path: {}".format(PLUGIN_PATH, file_path))
             self.view.window().run_command("show_panel", args={'panel': 'console'})
             return
 
-        SHELL_COMMAND = "gio trash {}".format(file_path)
-        p = subprocess.run(SHELL_COMMAND, shell=True, capture_output=False)
+        p = subprocess.run(
+            "gio trash {}".format(file_path),
+            shell=True,
+            capture_output=False
+        )
         if p.returncode != 0:
-            print("gio trash failed. Error code: {}".format(PLUGIN_PATH, p.returncode))
+            print("{} gio trash failed. Error code: {}".format(PLUGIN_PATH, p.returncode))
             self.window.run_command("show_panel", args={'panel': 'console'})
             return
 
@@ -47,7 +50,7 @@ class CopyCurrentFolderPathCommand(sublime_plugin.TextCommand):
         window = self.view.window()
         path = self.view.file_name()
         if not os.path.exists(path):
-            print("File not found in path: {}".format(PLUGIN_PATH, path))
+            print("{} File not found in path: {}".format(PLUGIN_PATH, path))
             window.run_command("show_panel", args={'panel': 'console'})
             return
         current_dir = os.path.dirname(path)
@@ -60,7 +63,7 @@ class CopyFileNameCommand(sublime_plugin.TextCommand):
         window = self.view.window()
         path = self.view.file_name()
         if not os.path.exists(path):
-            print("File not found in path: {}".format(PLUGIN_PATH, path))
+            print("{} File not found in path: {}".format(PLUGIN_PATH, path))
             window.run_command("show_panel", args={'panel': 'console'})
             return
         name = os.path.split(path)[1]
