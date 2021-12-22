@@ -15,7 +15,6 @@ augroup KeepScreenPosition
   }
   autocmd BufWinEnter * {
     if exists('b:winviewCustom')
-      echomsg "Debug BufWinEnter"
       winrestview(b:winviewCustom)
       unlet b:winviewCustom
     endif
