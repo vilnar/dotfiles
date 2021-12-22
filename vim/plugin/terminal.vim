@@ -22,3 +22,15 @@ def OpenInternalTerminal()
   execute 'cd ' .. path
 enddef
 command OpenInternalTerminalHere OpenInternalTerminal()
+
+
+def OpenFileInNewTerminal()
+  var path = expand('%:p')
+  if !filereadable(path)
+    echoerr "Not found file: " .. path
+    return
+  endif
+  execute 'Start! gnome-terminal -- vim ' .. path
+enddef
+command OpenFileInNewTerminal OpenFileInNewTerminal()
+noremap <Leader>ot :vim9cmd <SID>OpenFileInNewTerminal()<CR>
