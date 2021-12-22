@@ -9,11 +9,15 @@ augroup AutoSettingsFileType
   }
 augroup END
 
-# augroup KeepScreenPosition
-#   autocmd BufWinLeave * {
-#     var winview = winsaveview()
-#   }
-#   autocmd BufWinEnter * {
-#     if exists('winview') | winrestview(winview) | unvar winview
-#   }
-# augroup END
+augroup KeepScreenPosition
+  autocmd BufWinLeave * {
+    b:winviewCustom = winsaveview()
+  }
+  autocmd BufWinEnter * {
+    if exists('b:winviewCustom')
+      echomsg "Debug BufWinEnter"
+      winrestview(b:winviewCustom)
+      unlet b:winviewCustom
+    endif
+  }
+augroup END
