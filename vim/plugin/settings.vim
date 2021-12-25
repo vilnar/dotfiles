@@ -22,9 +22,10 @@ if !exists("g:ReloadConfigs")
     echomsg 'reload config done'
   enddef
 endif
-command! ReloadConfigs ReloadConfigs()
+command ReloadConfigs ReloadConfigs()
+nnoremap <F5> :vim9cmd <SID>ReloadConfigs()<CR>
 
-command! SettingsShowAll :enew | put=execute('set all')
+command SettingsShowAll :enew | put = execute('set all')
 
 
 # :help netrw
@@ -80,3 +81,7 @@ nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
 
 # help codefmt
 vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>
+
+
+g:goyo_width = 120
+g:goyo_linenr = 1

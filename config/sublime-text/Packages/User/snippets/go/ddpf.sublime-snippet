@@ -1,7 +1,6 @@
 <snippet>
 <content><![CDATA[
 fmt.Printf("%#v\n", $1)
-fmt.Printf("%+v\n", $1)
 os.Exit(1)
 ]]>
 </content>

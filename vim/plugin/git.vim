@@ -8,7 +8,6 @@ def RunFileHistory()
   endif
   execute 'Start! gitk ' .. path
 enddef
-
 command FileHistory RunFileHistory()
 
 
@@ -20,5 +19,15 @@ def RunBlameFile()
   endif
   execute 'Start! git gui blame ' .. path
 enddef
-
 command BlameFile RunBlameFile()
+
+
+def RunGitHistory()
+  var path = getcwd()
+  if !isdirectory(path)
+    echoerr "Not found directory: " .. path
+    return
+  endif
+  execute 'Start! gitk ' .. path
+enddef
+command GitHistory RunGitHistory()

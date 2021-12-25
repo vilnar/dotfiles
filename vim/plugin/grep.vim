@@ -37,5 +37,5 @@ def SearchInOpenedBuffers(pattern: string)
   execute 'bufdo vimgrepadd /' .. pattern .. '/g %'
   execute 'cwindow'
 enddef
-command! -nargs=1 SearchInOpenedBuffers SearchInOpenedBuffers(<f-args>)
+command -nargs=1 SearchInOpenedBuffers SearchInOpenedBuffers(<f-args>)
 

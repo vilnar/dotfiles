@@ -3,7 +3,7 @@
   "auto_complete": false,
   "auto_complete_use_index": false,
   "auto_complete_commit_on_tab": true,
-  "auto_complete_with_fields": false,
+  "auto_complete_with_fields": true,
   "tab_completion": false,
 
   // index files
