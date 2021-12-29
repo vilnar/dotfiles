@@ -1,12 +1,13 @@
 [
-  { "keys": ["alt+1"], "command": "toggle_side_bar" },
-  { "keys": ["alt+2"], "command": "reveal_in_side_bar" },
+  { "keys": ["ctrl+7"], "command": "toggle_side_bar" },
+  { "keys": ["ctrl+8"], "command": "reveal_in_side_bar" },
   { "keys": ["ctrl+alt+s"], "command": "save_all" },
   { "keys": ["alt+z"], "command": "show_at_center" },
   { "keys": ["ctrl+shift+o"], "command": "prompt_open_folder" },
   { "keys": ["f8"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
   { "keys": ["f10"], "command": "trim_trailing_white_space" },
   { "keys": ["ctrl+alt+="], "command": "reindent" },
+  { "keys": ["alt+space"], "command": "auto_complete" },
 
   // find word under cursor whithout checkout to find panel
   { "keys": ["alt+u"], "command": "find_under_cursor" },
@@ -35,9 +36,9 @@
     "command": "clone_file_to_new_view",
   },
 
- // fast copy line wihout eol
+  // fast copy line wihout eol
   {
-    "keys": ["ctl+alt+c"], "command": "run_macro_file",
+    "keys": ["ctrl+alt+l"], "command": "run_macro_file",
     "args": {"file": "res://Packages/User/macros/CopyLineNoEOL.sublime-macro"},
     "context":
     [
@@ -56,6 +57,14 @@
   {
     "keys": ["ctrl+k", "p"],
     "command": "find_files_by_part_path",
+  },
+
+  {
+    "keys": ["f1"],
+    "command": "markdown_view_html",
+    "context": [
+      { "key": "selector", "operator": "equal", "operand": "text.html.markdown" },
+    ],
   },
 
 

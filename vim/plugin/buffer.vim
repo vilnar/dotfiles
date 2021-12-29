@@ -1,6 +1,7 @@
 vim9script
 
 nnoremap <leader>4 :only<CR>
+nnoremap <leader>c :close<CR>
 
 noremap <F7> :tabnew<CR>:setlocal hidden<CR>
 # tabs switching
@@ -10,6 +11,6 @@ noremap <F7> :tabnew<CR>:setlocal hidden<CR>
 # nnoremap <Leader>b :ls<CR>:b<Space>
 
 # close current buffer
-nnoremap <Leader>c :bdelete %<CR>
+nnoremap <Leader>q :bdelete %<CR>
 
 command BufferCloseOthers :%bd|e#

@@ -85,3 +85,6 @@ vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>
 
 g:goyo_width = 120
 g:goyo_linenr = 1
+
+# GoImportRun
+g:goimports = 0

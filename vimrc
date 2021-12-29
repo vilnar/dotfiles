@@ -51,6 +51,7 @@ Plug 'tpope/vim-dispatch', {'commit': '3505862b3898be5db3c78ba1b92c703349478d68'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'mattn/vim-goimports'
 
 Plug 'junegunn/seoul256.vim', { 'commit': '57e545942fff2f796f26715bc0e937243dfa30c0' }
 Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.7' }

@@ -12,7 +12,8 @@ command PathDirCopyRelative :vim9cmd CopyPath(expand('%:h'))
 command PathFileCopyAbsolute :vim9cmd CopyPath(expand('%:p'))
 command PathFileCopyRelative :vim9cmd CopyPath(expand('%'))
 
-command FileCopyName :vim9cmd CopyPath(expand('%:t'))
+command FileCopyNameAll :vim9cmd CopyPath(expand('%:t'))
+command FileCopyName :vim9cmd CopyPath(expand('%:t:r'))
 # command FileCopyName :vim9cmd exe "@+ = expand('%:t')"
 
 command EditorShowLineEncoding :echo &fileformat

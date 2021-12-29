@@ -1,6 +1,6 @@
 [/]
 default='faff35c6-04e4-49d0-ab0b-3c118e2ef6c1'
-list=['622dcd63-7efe-4085-8c23-b320b778372e', '7be77ef6-b29a-49fe-aaee-04c4db3aa5d8', 'da8abb20-3518-4952-8d00-2ef20796665c', '258d519d-3900-4699-bea2-539ae91d8f32', 'faff35c6-04e4-49d0-ab0b-3c118e2ef6c1', '4f99df0e-cc37-4161-9c71-12a6df2ff1b2', '291d46dd-a1d3-47ae-bfd3-5f494d600575']
+list=['622dcd63-7efe-4085-8c23-b320b778372e', '7be77ef6-b29a-49fe-aaee-04c4db3aa5d8', 'da8abb20-3518-4952-8d00-2ef20796665c', '258d519d-3900-4699-bea2-539ae91d8f32', 'faff35c6-04e4-49d0-ab0b-3c118e2ef6c1', '4f99df0e-cc37-4161-9c71-12a6df2ff1b2', '94fa997e-ec13-4b63-a6f7-2b41cf694c18']
 
 [:258d519d-3900-4699-bea2-539ae91d8f32]
 audible-bell=false
@@ -19,21 +19,6 @@ use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
 visible-name='gruvbox'
-
-[:291d46dd-a1d3-47ae-bfd3-5f494d600575]
-background-color='rgb(218,218,218)'
-bold-color-same-as-fg=true
-bold-is-bright=false
-cursor-blink-mode='off'
-cursor-colors-set=false
-default-size-columns=100
-foreground-color='rgb(78,78,78)'
-highlight-colors-set=false
-palette=['rgb(78,78,78)', 'rgb(175,95,95)', 'rgb(95,136,95)', 'rgb(175,135,96)', 'rgb(95,135,174)', 'rgb(135,95,135)', 'rgb(95,135,135)', 'rgb(228,228,228)', 'rgb(58,58,58)', 'rgb(135,1,0)', 'rgb(0,95,0)', 'rgb(216,134,95)', 'rgb(0,135,175)', 'rgb(135,2,95)', 'rgb(0,135,135)', 'rgb(238,238,238)']
-text-blink-mode='never'
-use-theme-colors=false
-use-theme-transparency=false
-visible-name='seoul256-light'
 
 [:4f99df0e-cc37-4161-9c71-12a6df2ff1b2]
 audible-bell=false
@@ -82,6 +67,21 @@ text-blink-mode='never'
 use-theme-colors=false
 use-theme-transparency=false
 visible-name='light'
+
+[:94fa997e-ec13-4b63-a6f7-2b41cf694c18]
+background-color='rgb(247,247,247)'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cursor-blink-mode='off'
+cursor-colors-set=false
+default-size-columns=100
+foreground-color='rgb(0,0,0)'
+highlight-colors-set=false
+palette=['rgb(0,0,0)', 'rgb(170,55,49)', 'rgb(68,140,39)', 'rgb(203,144,0)', 'rgb(50,92,192)', 'rgb(122,62,157)', 'rgb(0,131,178)', 'rgb(247,247,247)', 'rgb(119,119,119)', 'rgb(240,80,80)', 'rgb(96,203,0)', 'rgb(255,188,93)', 'rgb(0,122,204)', 'rgb(230,76,230)', 'rgb(0,170,203)', 'rgb(247,247,247)']
+text-blink-mode='never'
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='alabaster'
 
 [:da8abb20-3518-4952-8d00-2ef20796665c]
 audible-bell=false

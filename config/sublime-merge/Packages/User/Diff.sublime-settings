@@ -1,4 +1,4 @@
 {
-  "word_wrap": "auto",
+  "word_wrap": false,
   "draw_white_space": "all",
 }
