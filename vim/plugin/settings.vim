@@ -25,7 +25,8 @@ endif
 command ReloadConfigs ReloadConfigs()
 nnoremap <F5> :vim9cmd <SID>ReloadConfigs()<CR>
 
-command SettingsShowAll :enew | put = execute('set all')
+command EditorShowSettings :enew | put = execute('set all')
+command EditorShowMaps :enew | put = execute('map')
 
 
 # :help netrw

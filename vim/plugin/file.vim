@@ -20,12 +20,12 @@ command EditorShowLineEncoding :echo &fileformat
 command EditorShowType :echo &filetype
 
 def RenameFile()
-  var old_name = expand('%')
-  var new_name = input('New file name: ', expand('%'), 'file')
-  if new_name != '' && new_name != old_name
-    execute 'saveas ' .. new_name
-    execute 'silent !rm ' .. old_name
-    redraw!
+  var prev_path = expand('%')
+  var current_path = input('New file name: ', expand('%'), 'file')
+  if current_path != '' && current_path != prev_path
+    execute 'saveas ' .. current_path
+    delete(prev_path)
+    execute 'edit'
   endif
 enddef
 command FileRename RenameFile()

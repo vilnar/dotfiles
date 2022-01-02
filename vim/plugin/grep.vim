@@ -25,9 +25,9 @@ vnoremap <expr> <Leader>gd "y:AsyncRun grep -rni -e '<C-R>\"' " ..  <SID>GetRela
 # grep by filetype
 nnoremap <Leader>gi :AsyncRun grep -rni --include \*.go -e '' ./<left><left><left><left>
 
-# grep in current file
-nnoremap <Leader>gc :vimgrep //g % \| cw
-vnoremap <expr> <Leader>gc "y:vimgrep /<C-R>\"/g % \| cw"
+# grep in current buffer
+nnoremap <Leader>gb :vimgrep //g % \| cw<left><left><left><left><left><left><left><left><left>
+vnoremap <expr> <Leader>gb "y:vimgrep /<C-R>\"/g % \| cw"
 
 
 def SearchInOpenedBuffers(pattern: string)

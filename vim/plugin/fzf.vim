@@ -7,7 +7,8 @@ nnoremap <silent><nowait> <leader>; :Commands<CR>
 nnoremap <leader>t :Tags <C-R>=expand("<cword>")<CR><CR>
 nnoremap <silent><nowait> <leader>i :Snippets<CR>
 
-
+# https://github.com/sharkdp/fd
+$FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --exclude .git --no-ignore'
 nnoremap <silent><nowait> <leader>ff :Files<CR>
 nnoremap <silent><nowait> <leader>fc :Files <C-R>=expand("%:h")<CR>/<CR>
 nnoremap <expr> <leader>fu ':Files<CR>' .. expand('<cword>')
