@@ -9,6 +9,7 @@ nnoremap <silent><nowait> <leader>i :Snippets<CR>
 
 # https://github.com/sharkdp/fd
 $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --exclude .git --no-ignore'
+g:fzf_preview_window = []
 nnoremap <silent><nowait> <leader>ff :Files<CR>
 nnoremap <silent><nowait> <leader>fc :Files <C-R>=expand("%:h")<CR>/<CR>
 nnoremap <expr> <leader>fu ':Files<CR>' .. expand('<cword>')
