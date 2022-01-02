@@ -11,6 +11,7 @@ set wrap
 
 set encoding=utf-8
 set fileencoding=utf-8
+set scrolloff=5
 
 " fix security
 set modelines=0

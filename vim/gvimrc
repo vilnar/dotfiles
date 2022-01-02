@@ -1,12 +1,14 @@
-" hide menu
+vim9script
+# hide menu
 set guioptions=cM
 
-" make gVim automatically maximize
+# make gVim automatically maximize
 set lines=999 columns=999
 
-set guifont=Monospace\ 12
+# set guifont=Monospace\ 12
+set guifont=Fira\ Code\ 12
 
-" disable blink cursor
+# disable blink cursor
 set guicursor+=a:blinkon0
 
-" colorscheme lightsimple
+# colorscheme lightsimple

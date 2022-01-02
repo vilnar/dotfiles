@@ -1,0 +1,31 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+  "variables":
+  {
+    "fg-from-original": "#000000",
+  },
+  "globals":
+  {
+    "brackets_options": "glow",
+  },
+  "rules":
+  [
+    {
+      "name":       "Comments",
+      "scope":      "comment, punctuation.definition.comment, invalid comment",
+      "foreground": "#AA3731",
+      "background": "none",
+      // "background": "#EEE"
+    },
+
+    {
+      "scope": "variable",
+      "foreground": "var(fg-from-original)"
+    },
+    {
+      "name": "Regex in string",
+      "scope": "string.quoted keyword.control.anchor.regexp, string.quoted keyword.operator.or.regexp, string.quoted keyword.operator.negation.regexp, string.quoted keyword.operator.quantifier.regexp, string.quoted constant.character.character-class.regexp, string.quoted constant.other.character-class.set.regexp, string.quoted meta.assertion.look-behind.regexp, string.quoted meta.assertion.look-ahead.regexp, string.quoted meta.assertion.no-capture-group.regexp, string.quoted punctuation.definition.group, string.quoted punctuation.definition.string.regex-delimiter, string.quoted punctuation.definition.character-class",
+      "foreground": "var(fg-from-original)",
+    },
+  ]
+}
