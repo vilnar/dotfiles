@@ -15,10 +15,6 @@ class FindUnderCursorCommand(sublime_plugin.WindowCommand):
 
 class FindInCurrentFileCommand(sublime_plugin.WindowCommand):
     def run(self):
-        view = self.window.active_view()
-        view.run_command("expand_selection", {"to": "word"})
-        view.run_command("slurp_find_string")
-        id_group = self.window.active_group()
         self.window.run_command("show_panel",
             args={
                 "panel": "find_in_files",
@@ -27,6 +23,7 @@ class FindInCurrentFileCommand(sublime_plugin.WindowCommand):
                 "where": "<current file>",
             }
         )
+
 
 class FindInCurrentFolderCommand(sublime_plugin.TextCommand):
     def run(self, edit):
