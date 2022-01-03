@@ -6,16 +6,19 @@ import subprocess
 
 PLUGIN_PATH = "User/find_files.py"
 
-class FindInCurrentFolderCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
-        window = self.view.window()
-        current_dir = os.path.dirname(self.view.file_name())
-        if not os.path.exists(current_dir):
-            print("{} Directory not found in path: {}".format(PLUGIN_PATH, current_dir))
-            window.run_command("show_panel", args={'panel': 'console'})
-            return
+# source https://github.com/fgb/goto_selection
+class GotoSelectionCommand(sublime_plugin.WindowCommand):
+    def run(self, select_word_under_cursor = False):
+        view = self.window.active_view()
+        selection = view.sel()[0]
+        overlay_args = {"overlay":"goto", "show_files" : True}
 
-        window.run_command("show_panel", args={"panel": "find_in_files", "where": current_dir})
+        if not selection.empty():
+            overlay_args["text"] = view.substr(selection)
+        elif select_word_under_cursor:
+            overlay_args["text"] = view.substr(view.word(selection))
+
+        self.window.run_command("show_overlay", overlay_args)
 
 
 class FindFilesByPartPathCommand(sublime_plugin.WindowCommand):

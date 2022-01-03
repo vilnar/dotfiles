@@ -9,17 +9,18 @@
   { "keys": ["ctrl+alt+="], "command": "reindent" },
   { "keys": ["alt+space"], "command": "auto_complete" },
 
-  // find word under cursor whithout checkout to find panel
-  { "keys": ["alt+u"], "command": "find_under_cursor" },
+  { "keys": ["alt+u"], "command": "find_under_cursor" }, // find word under cursor whithout checkout to find panel
+  { "keys": ["alt+f"], "command": "find_in_current_file" },
+  { "keys": ["ctrl+k", "f"], "command": "find_in_current_folder" },
 
   { "keys": ["alt+m"], "command": "open_new_tab_with_selected_text" },
 
-  // goto selection
   {
     "keys": ["alt+g"],
     "command": "goto_selection",
     "args": {"select_word_under_cursor": true}
   },
+  { "keys": ["ctrl+k", "p"], "command": "find_files_by_part_path" },
 
 
   { "keys": ["alt+o"], "command": "open_file_in_new_window" },
@@ -47,16 +48,6 @@
         "operand": true, "match_all": false,
       },
     ],
-  },
-
-  // custom plugin: find
-  {
-    "keys": ["ctrl+k", "f"],
-    "command": "find_in_current_folder",
-  },
-  {
-    "keys": ["ctrl+k", "p"],
-    "command": "find_files_by_part_path",
   },
 
   {

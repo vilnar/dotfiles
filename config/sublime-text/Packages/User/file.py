@@ -44,6 +44,7 @@ class OpenFileInNewWindow(sublime_plugin.TextCommand):
         sublime.active_window().open_file(path)
         sublime.set_timeout(lambda: sublime.status_message('New window open!!!'), 0)
 
+
 class OpenFileInExternal(sublime_plugin.TextCommand):
     def run(self, edit):
         window = self.view.window()
