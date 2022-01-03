@@ -29,7 +29,7 @@
   "line_padding_bottom": 1,
   "line_padding_top": 1,
   "line_numbers": true,
-  "highlight_line": false,
+  "highlight_line": true,
   // gutter
   "margin": 0,
   "caret_style": "solid",
