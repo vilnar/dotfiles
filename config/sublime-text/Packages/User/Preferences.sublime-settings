@@ -26,8 +26,6 @@
   // "draw_centered": true,
 
   // lines
-  "line_padding_bottom": 1,
-  "line_padding_top": 1,
   "line_numbers": true,
   "highlight_line": true,
   // gutter
@@ -62,9 +60,11 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  // "font_face": "Dejavu Sans Mono Book",
-  "font_face": "Fira Code Regular",
+  "font_face": "Dejavu Sans Mono Book",
+  // "font_face": "Fira Code Regular",
   "font_size": 12,
+  "line_padding_bottom": 2,
+  "line_padding_top": 2,
   "font_options":
   [
     "no_liga",

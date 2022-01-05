@@ -33,4 +33,4 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 nnoremap <Leader>l :normal ^vg_"+y<CR>
 
 # highlight
-nnoremap <Leader>8 :keepjumps normal! mi*`i<CR>
+nnoremap <silent> <Leader>8 :vim9cmd @/ = '\<' .. expand('<cword>') .. '\>' <bar> set hls <cr>

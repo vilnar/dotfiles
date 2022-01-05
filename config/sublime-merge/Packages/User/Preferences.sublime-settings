@@ -1,9 +1,8 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-  // "font_face": "Dejavu Sans Mono Book",
-  // "font_size": 12,
-  "font_face": "Fira Code",
+  "font_face": "Dejavu Sans Mono Book",
+  // "font_face": "Fira Code",
   "font_size": 12,
   "line_padding_top": 2,
   "line_padding_bottom": 2,

@@ -13,4 +13,15 @@ noremap <F7> :tabnew<CR>:setlocal hidden<CR>
 # close current buffer
 nnoremap <Leader>q :bdelete %<CR>
 
-command BufferCloseOthers :%bd|e#
+def CloseOtherBuffers()
+  var curr = bufnr("%")
+  var last = bufnr("$")
+
+  if curr > 1
+    execute ":1," .. (curr - 1) .. "bd"
+  endif
+  if curr < last
+    execute ":" .. (curr + 1) .. "," .. last .. "bd"
+  endif
+enddef
+command BufferCloseOthers CloseOtherBuffers()
