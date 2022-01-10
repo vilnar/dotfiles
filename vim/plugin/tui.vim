@@ -13,14 +13,13 @@ nnoremap <Leader>1 :setlocal number!<CR>
 
 # colorscheme lightsimple
 # colorscheme darksimple
-colorscheme seoul256
-# g:jellybeans_overrides = {
-#  'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
-  # 'Identifier': { 'guifg': 'e8e8d3', 'ctermfg': 'White' },
-  # 'background': { 'guibg': '0E1415' },
-  # 'Comment': { 'guifg': 'DFDF8E', 'ctermfg': 'DarkYellow' },
-# }
-# colorscheme jellybeans
+g:jellybeans_overrides = {
+ 'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
+ # 'Identifier': { 'guifg': 'e8e8d3', 'ctermfg': 'White' },
+ # 'background': { 'guibg': '0E1415' },
+ # 'Comment': { 'guifg': 'DFDF8E', 'ctermfg': 'DarkYellow' },
+}
+colorscheme jellybeans
 
 
 set showbreak=->

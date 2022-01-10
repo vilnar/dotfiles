@@ -33,4 +33,9 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 nnoremap <Leader>l :normal ^vg_"+y<CR>
 
 # highlight
-nnoremap <silent> <Leader>8 :vim9cmd @/ = '\<' .. expand('<cword>') .. '\>' <bar> set hls <cr>
+def RunSearchUnderCursor()
+  var scom = '\<' .. expand('<cword>') .. '\>'
+  @/ = scom
+  execute "histadd('/', '" .. scom .. "')"
+enddef
+nnoremap <silent> <Leader>8 :vim9cmd <SID>RunSearchUnderCursor()<BAR>set hls<CR>

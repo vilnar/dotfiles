@@ -11,6 +11,7 @@ def RunSpellUkToggle()
   execute 'setlocal spell! spelllang=uk'
 enddef
 command SpellUkToggle RunSpellUkToggle()
+nnoremap <F4> :vim9cmd <SID>RunSpellUkToggle()<CR>
 
 
 
