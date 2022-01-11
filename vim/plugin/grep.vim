@@ -39,3 +39,7 @@ def SearchInOpenedBuffers(pattern: string)
 enddef
 command -nargs=1 SearchInOpenedBuffers SearchInOpenedBuffers(<f-args>)
 
+
+# grep for regex (-P is enable PATTERNS are Perl regular expressions)
+# nnoremap <Leader>gr :AsyncRun grep -nroHP '' ./<left><left><left><left>
+nnoremap <expr> <Leader>gr ":AsyncRun grep -nroHP '' " .. expand('%')
