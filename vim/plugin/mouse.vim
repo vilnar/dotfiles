@@ -8,4 +8,4 @@ def MouseToggle()
     execute 'set mouse=a'
   endif
 enddef
-nnoremap <Leader>2 :vim9cmd <SID>MouseToggle()<CR>
+nnoremap <Leader>1 :vim9cmd <SID>MouseToggle()<CR>

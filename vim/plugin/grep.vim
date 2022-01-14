@@ -19,15 +19,15 @@ def GetRelativePathForGrep(): string
 enddef
 
 # grep in current directory
-nnoremap <expr> <Leader>gd ":AsyncRun grep -rni -e '' " ..  <SID>GetRelativePathForGrep()
-vnoremap <expr> <Leader>gd "y:AsyncRun grep -rni -e '<C-R>\"' " ..  <SID>GetRelativePathForGrep()
+nnoremap <expr> <Leader>gd ":AsyncRun grep -rnie '' " ..  <SID>GetRelativePathForGrep()
+vnoremap <expr> <Leader>gd "y:AsyncRun grep -rnie '<C-R>\"' " ..  <SID>GetRelativePathForGrep()
 
 # grep by filetype
 nnoremap <Leader>gi :AsyncRun grep -rni --include \*.go -e '' ./<left><left><left><left>
 
 # grep in current buffer
-nnoremap <Leader>gb :vimgrep //g % \| cw<left><left><left><left><left><left><left><left><left>
-vnoremap <expr> <Leader>gb "y:vimgrep /<C-R>\"/g % \| cw"
+noremap <expr> <Leader>gb ":AsyncRun grep -nrHe '' " .. expand('%') 
+vnoremap <expr> <Leader>gb "y:AsyncRun grep -nrHe '<C-R>\"' " .. expand('%') 
 
 
 def SearchInOpenedBuffers(pattern: string)

@@ -7,6 +7,9 @@
   "globals":
   {
     "brackets_options": "glow",
+    "highlight": "#CB9000",
+    // "background": "#FFFFEA",
+    // "line_highlight": "#eeeecc",
   },
   "rules":
   [

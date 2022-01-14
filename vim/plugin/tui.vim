@@ -7,15 +7,20 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 set signcolumn=number
 # set numberwidth=6
 set cursorline
-nnoremap <Leader>1 :setlocal number!<CR>
+# nnoremap <Leader>1 :setlocal number!<CR>
 
 
 
 # colorscheme lightsimple
 # colorscheme darksimple
+
 g:jellybeans_overrides = {
  'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
+ 'Comment': { 'guifg': 'ffb964', 'ctermfg': 'Yellow' },
+ 'Type': { 'guifg': '8197bf', 'ctermfg': 'DarkBlue' },
 }
+g:jellybeans_use_term_italics = 0
+g:jellybeans_use_gui_italics = 0
 colorscheme jellybeans
 
 

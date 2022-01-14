@@ -1,5 +1,7 @@
 vim9script
 
+setlocal wrap
+
 if !executable('pandoc')
   # echoerr 'pandoc not installed!'
   finish

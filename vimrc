@@ -48,11 +48,11 @@ Plug 'skywind3000/asyncrun.vim', { 'tag': '2.8.6' }
 Plug 'tpope/vim-dispatch', {'commit': '3505862b3898be5db3c78ba1b92c703349478d68'}
 
 " format code (command example :FormatLines)
-Plug 'google/vim-maktaba'
-Plug 'google/vim-codefmt'
-Plug 'google/vim-glaive'
+Plug 'google/vim-maktaba', { 'commit': 'f5127b339a9d776f220cc0393783c55def9d8ce0' }
+Plug 'google/vim-codefmt', { 'commit': '605dc002cabfec67eded553298aba21ab392ea78' }
+Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d' }
 
-Plug 'mattn/vim-goimports'
+Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
 Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.7' }
 
