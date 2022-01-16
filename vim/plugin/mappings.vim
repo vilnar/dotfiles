@@ -29,6 +29,10 @@ vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
 
+# Jump to next split
+nnoremap <Leader>w <C-w>w
+
+
 # copy line without newline
 nnoremap <Leader>l :normal ^vg_"+y<CR>
 

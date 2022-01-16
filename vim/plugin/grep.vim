@@ -26,7 +26,7 @@ vnoremap <expr> <Leader>gd "y:AsyncRun grep -rnie '<C-R>\"' " ..  <SID>GetRelati
 nnoremap <Leader>gi :AsyncRun grep -rni --include \*.go -e '' ./<left><left><left><left>
 
 # grep in current buffer
-noremap <expr> <Leader>gb ":AsyncRun grep -nrHe '' " .. expand('%') 
+noremap <expr> <Leader>gb ":AsyncRun grep -nirHe '' " .. expand('%') 
 vnoremap <expr> <Leader>gb "y:AsyncRun grep -nrHe '<C-R>\"' " .. expand('%') 
 
 
