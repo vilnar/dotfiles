@@ -19,8 +19,10 @@ class FindInCurrentFileCommand(sublime_plugin.WindowCommand):
         self.window.run_command("show_panel",
             args={
                 "panel": "find_in_files",
-                "whole_word": False,
                 "case_sensitive": False,
+                "whole_word": False,
+                "show_context": False,
+                "use_buffer": True,
                 "where": "<current file>",
             }
         )
