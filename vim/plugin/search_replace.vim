@@ -41,6 +41,7 @@ enddef
 nnoremap <Leader>rr :%s///gc<left><left><left><left>
 vnoremap <Leader>rr y:vim9cmd <SID>EscapeTextForReplace(false)<CR>
 vnoremap <Leader>rb <Esc>:'<,'>s///gc<left><left><left><left>
+nnoremap <Leader>ru :%s/\<<C-R>=expand("<cword>")<CR>\>\C//gc<left><left><left>
 
 vnoremap <Leader>rw y:vim9cmd <SID>EscapeTextForReplace(true)<CR>
 vnoremap <Leader>rv <Esc>:'<,'>s/\<\>\C//gc<left><left><left><left><left><left><left><left>
