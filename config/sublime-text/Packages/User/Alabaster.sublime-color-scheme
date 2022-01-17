@@ -8,8 +8,6 @@
   {
     "brackets_options": "glow",
     "highlight": "#CB9000",
-    // "background": "#FFFFEA",
-    // "line_highlight": "#eeeecc",
   },
   "rules":
   [
@@ -30,25 +28,10 @@
       "foreground": "var(magenta)"
     },
 
-    // {
-    //   "name": "Keyword",
-    //   "scope": "keyword - keyword.operator, keyword.operator.word",
-    //   "foreground": "var(grey)",
-    // },
-    // {
-    //   "name": "Storage",
-    //   "scope": "storage",
-    //   "foreground": "var(grey)",
-    // },
-    // {
-    //   "name": "Library function",
-    //   "scope": "support.function, support.macro",
-    //   "foreground": "var(grey)",
-    // },
-    // {
-    //   "name": "Library constant",
-    //   "scope": "support.constant",
-    //   "foreground": "var(grey)",
-    // },
+    {
+      "name":       "Punctuation",
+      "scope":      "punctuation, keyword.operator",
+      "foreground": "var(grey)"
+    },
   ]
 }

@@ -31,3 +31,22 @@ class TrimTrailingWhiteSpaceCommand(sublime_plugin.TextCommand):
         else:
             sublime.set_timeout(lambda: sublime.status_message('Trimmer: no leading whitespace to remove.'), 0)
 
+
+class ToggleWhiteSpaceCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        default_options = ["all"]
+        user_options = sublime.load_settings("Preferences.sublime-settings").get("draw_white_space", default_options)
+        if user_options == default_options:
+            user_options = ["none"]
+        user_options.sort()
+
+        options = self.view.settings().get("draw_white_space", default_options)
+        options.sort()
+
+        if options == default_options:
+            options = user_options
+        else:
+            options = default_options
+
+        self.view.settings().set("draw_white_space", options)
+

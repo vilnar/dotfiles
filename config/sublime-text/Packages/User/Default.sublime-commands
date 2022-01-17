@@ -4,8 +4,8 @@
   { "caption": "Json Format", "command": "json_format" },
   { "caption": "Find Files By Part Path", "command": "find_files_by_part_path" },
   { "caption": "File Delete", "command": "file_delete" },
-  { "caption": "Open File In New Window", "command": "open_file_in_new_window" },
-  { "caption": "Open File In External", "command": "open_file_in_external" },
-  { "caption": "Clone File To New View", "command": "clone_file_to_new_view" },
+  { "caption": "Open File In Window", "command": "open_file_in_new_window" },
+  { "caption": "Open File In Vim", "command": "open_file_in_vim" },
+  { "caption": "Clone To New View", "command": "clone_file_to_new_view" },
   { "caption": "Selected To New Tab", "command": "open_new_tab_with_selected_text" },
 ]

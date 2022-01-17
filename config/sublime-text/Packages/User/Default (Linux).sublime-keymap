@@ -9,6 +9,8 @@
   { "keys": ["ctrl+alt+="], "command": "reindent" },
   { "keys": ["alt+space"], "command": "auto_complete" },
 
+  { "keys": ["f9"], "command": "toggle_white_space"},
+
   { "keys": ["alt+u"], "command": "find_under_cursor" }, // find word under cursor whithout checkout to find panel
   { "keys": ["alt+f"], "command": "find_in_current_file" },
   { "keys": ["ctrl+k", "f"], "command": "find_in_current_folder" },

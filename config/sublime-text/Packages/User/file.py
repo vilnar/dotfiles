@@ -45,12 +45,12 @@ class OpenFileInNewWindow(sublime_plugin.TextCommand):
         sublime.set_timeout(lambda: sublime.status_message('New window open!!!'), 0)
 
 
-class OpenFileInExternal(sublime_plugin.TextCommand):
+class OpenFileInVim(sublime_plugin.TextCommand):
     def run(self, edit):
         window = self.view.window()
         path = self.view.file_name()
         if not path:
-            window.status_message("View is temp, don't open in new window")
+            window.status_message("View is temp, don't open in vim")
             return
         if not os.path.exists(path):
             print("{} File not found in path: {}".format(PLUGIN_PATH, path))
