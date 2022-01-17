@@ -28,12 +28,12 @@ vnoremap <Leader>ss y/<C-R>"
 
 
 # replace
-def EscapeTextForReplace(isWhole: bool)
+def EscapeTextForReplace(isWholeWord: bool)
   var text = getreg('"')
   var textEsc = escape(text, '/\')
 
   var scomm = ':%s/' .. textEsc .. '//gc'
-  if isWhole
+  if isWholeWord
     scomm = ':%s/\<' .. textEsc .. '\>\C//gc'
   endif
   feedkeys(scomm)
