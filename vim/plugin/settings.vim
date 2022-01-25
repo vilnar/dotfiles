@@ -2,9 +2,9 @@ vim9script
 
 if !exists("g:ReloadConfigs")
   def g:ReloadConfigs()
-    var is_buffer_empty = line('$') == 1 && getline(1) == ''
-    var is_name_buffer_empty = bufname() == ''
-    if !is_buffer_empty && !is_name_buffer_empty
+    var is_empty_buffer = line('$') == 1 && getline(1) == ''
+    var is_empty_bufname = bufname() == ''
+    if !is_empty_buffer && !is_empty_bufname
       execute 'write'
     endif
     execute 'source ~/.vimrc'
@@ -16,7 +16,7 @@ if !exists("g:ReloadConfigs")
     if has("gui_running")
       execute 'source ~/.vim/.gvimrc'
     endif
-    if !is_buffer_empty && !is_name_buffer_empty
+    if !is_empty_buffer && !is_empty_bufname
       execute 'edit'
     endif
     echomsg 'reload config done'
