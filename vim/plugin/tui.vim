@@ -16,18 +16,11 @@ if (has("termguicolors"))
 endif
 # colorscheme lightsimple
 # colorscheme darksimple
-# g:jellybeans_overrides = {
-#   'background': { 'ctermbg': '303841', '256ctermbg': '303841', 'guibg': '303841' },
-#   'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
-# }
-# g:jellybeans_use_term_italics = 0
-# g:jellybeans_use_gui_italics = 0
-# colorscheme jellybeans
 
 g:gruvbox_invert_selection = 0
 g:gruvbox_italic = 0
-set background=light
 g:gruvbox_contrast_light = "hard"
+set background=light
 # g:gruvbox_contrast_dark = "medium"
 # set background=dark
 colorscheme gruvbox

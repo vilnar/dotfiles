@@ -14,9 +14,11 @@ nnoremap <silent><nowait> <leader>ff :Files<CR>
 nnoremap <silent><nowait> <leader>fc :Files <C-R>=expand("%:h")<CR>/<CR>
 nnoremap <expr> <leader>fu ':Files<CR>' .. expand('<cword>')
 
-def FilesSelectedSearch()
-  var raw_search = getreg('"')
+def GotoSelection()
+  var text = getreg('"')
+  # replace for php namespaces
+  text = substitute(text, '\', '/', 'g')
   exec ":Files"
-  feedkeys(raw_search)
+  feedkeys(text)
 enddef
-xnoremap <leader>ff y:vim9cmd <SID>FilesSelectedSearch()<CR>
+xnoremap <leader>ff y:vim9cmd <SID>GotoSelection()<CR>
