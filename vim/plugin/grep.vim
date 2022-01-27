@@ -33,7 +33,6 @@ vnoremap <expr> <Leader>gb "y:AsyncRun grep -nrHe '<C-R>\"' " .. expand('%')
 def SearchInOpenedBuffers(pattern: string)
   execute 'cclose'
   execute 'cexpr []'
-  # echomsg 'debug SearchInOpenedBuffers : ' .. a:pattern
   execute 'bufdo vimgrepadd /' .. pattern .. '/g %'
   execute 'cwindow'
 enddef

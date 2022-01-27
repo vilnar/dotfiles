@@ -2,8 +2,8 @@ vim9script
 
 # search multilines
 def EscapeSearchTextMultiLines(text: string, pat: string)
-  var textEsc = substitute(escape(text, '/\'), pat, '\\n', 'g')
-  var scom = '\V' .. textEsc
+  var text_esc = substitute(escape(text, '/\'), pat, '\\n', 'g')
+  var scom = '\V' .. text_esc
   @/ = scom
   histadd('/', scom)
 enddef
@@ -15,8 +15,8 @@ nnoremap <Leader>sm :SearchMultiLine<space>
 
 # search
 def EscapeSearchText(text: string)
-  var textEsc = escape(text, '/\')
-  var scom = '\V' .. textEsc
+  var text_esc = escape(text, '/\')
+  var scom = '\V' .. text_esc
   @/ = scom
   histadd('/', scom)
 enddef
@@ -28,13 +28,13 @@ vnoremap <Leader>ss y/<C-R>"
 
 
 # replace
-def EscapeTextForReplace(isWholeWord: bool)
+def EscapeTextForReplace(is_whole_word: bool)
   var text = getreg('"')
-  var textEsc = escape(text, '/\')
+  var text_esc = escape(text, '/\')
 
-  var scomm = ':%s/' .. textEsc .. '//gc'
-  if isWholeWord
-    scomm = ':%s/\<' .. textEsc .. '\>\C//gc'
+  var scomm = ':%s/' .. text_esc .. '//gc'
+  if is_whole_word
+    scomm = ':%s/\<' .. text_esc .. '\>\C//gc'
   endif
   feedkeys(scomm)
 enddef

@@ -29,9 +29,20 @@
     },
 
     {
-      "name":       "Punctuation",
-      "scope":      "punctuation, keyword.operator",
+      "name":       "Keyword logical",
+      // "scope":      "keyword",
+      "scope":      "keyword.operator.logical",
       "foreground": "var(grey)"
+    },
+    {
+      "name": "markup code",
+      "scope": "markup.raw",
+      "background": "color(var(selection) alpha(0.38))",
+    },
+    {
+      "name": "markup code",
+      "scope": "markup.raw.inline",
+      "background": "color(var(selection) alpha(0.5))",
     },
   ]
 }

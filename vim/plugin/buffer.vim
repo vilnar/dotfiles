@@ -14,14 +14,14 @@ noremap <F7> :tabnew<CR>:setlocal hidden<CR>
 nnoremap <Leader>q :bdelete %<CR>
 
 def CloseOtherBuffers()
-  var curr = bufnr("%")
-  var last = bufnr("$")
+  var curr_buff = bufnr("%")
+  var last_buff = bufnr("$")
 
-  if curr > 1
-    execute ":1," .. (curr - 1) .. "bd"
+  if curr_buff > 1
+    execute ":1," .. (curr_buff - 1) .. "bd"
   endif
-  if curr < last
-    execute ":" .. (curr + 1) .. "," .. last .. "bd"
+  if curr_buff < last_buff
+    execute ":" .. (curr_buff + 1) .. "," .. last_buff .. "bd"
   endif
 enddef
 command BufferCloseOthers CloseOtherBuffers()

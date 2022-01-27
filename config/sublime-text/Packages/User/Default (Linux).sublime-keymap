@@ -8,6 +8,7 @@
   { "keys": ["f10"], "command": "trim_trailing_white_space" },
   { "keys": ["ctrl+alt+="], "command": "reindent" },
   { "keys": ["alt+space"], "command": "auto_complete" },
+  { "keys": ["ctrl+f5"], "command": "close_workspace" },
 
   { "keys": ["f9"], "command": "toggle_white_space"},
 
