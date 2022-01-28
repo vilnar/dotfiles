@@ -34,7 +34,7 @@ class FindFilesByPartPathCommand(sublime_plugin.WindowCommand):
         win = sublime.active_window()
         folder = win.extract_variables().get("folder")
 
-        SHELL_COMMAND = [
+        p = subprocess.run([
             '/usr/bin/find',
             folder,
             '-not',
@@ -42,8 +42,7 @@ class FindFilesByPartPathCommand(sublime_plugin.WindowCommand):
             './.git/*',
             '-iname',
             '*{}'.format(query)
-        ]
-        p = subprocess.run(SHELL_COMMAND, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         if p.returncode != 0:
             print("{} Bash find: failed, error code: {}".format(PLUGIN_PATH, p.returncode))
             win.run_command("show_panel", args={'panel': 'console'})

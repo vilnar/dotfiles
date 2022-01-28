@@ -6,7 +6,7 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 # set number
 set signcolumn=number
 # set numberwidth=6
-# set cursorline
+set cursorline
 # nnoremap <Leader>1 :setlocal number!<CR>
 
 
@@ -14,16 +14,18 @@ set signcolumn=number
 if (has("termguicolors"))
   set termguicolors
 endif
-# colorscheme lightsimple
+colorscheme lightsimple
 # colorscheme darksimple
 
-g:gruvbox_invert_selection = 0
-g:gruvbox_italic = 0
-g:gruvbox_contrast_light = "hard"
-set background=light
+# g:gruvbox_improved_warnings = 1
+# g:gruvbox_invert_selection = 0
+# g:gruvbox_italic = 0
+# g:gruvbox_underline = 1
+# g:gruvbox_contrast_light = "hard"
 # g:gruvbox_contrast_dark = "medium"
+# set background=light
 # set background=dark
-colorscheme gruvbox
+# colorscheme gruvbox
 
 
 set showbreak=->
