@@ -1,6 +1,6 @@
 [/]
-default='e830e346-98a1-4daa-b01d-d8fea0739609'
-list=['622dcd63-7efe-4085-8c23-b320b778372e', '7be77ef6-b29a-49fe-aaee-04c4db3aa5d8', 'b58db4a4-6560-4f30-9b84-5e214968e781', 'e830e346-98a1-4daa-b01d-d8fea0739609']
+default='7be77ef6-b29a-49fe-aaee-04c4db3aa5d8'
+list=['622dcd63-7efe-4085-8c23-b320b778372e', '7be77ef6-b29a-49fe-aaee-04c4db3aa5d8', 'b58db4a4-6560-4f30-9b84-5e214968e781', 'e830e346-98a1-4daa-b01d-d8fea0739609', 'aa76637b-5f4b-4d4d-aaaf-425d8da8303a']
 
 [:622dcd63-7efe-4085-8c23-b320b778372e]
 audible-bell=false
@@ -18,7 +18,7 @@ use-transparent-background=false
 visible-name='test_encode'
 
 [:7be77ef6-b29a-49fe-aaee-04c4db3aa5d8]
-background-color='rgb(255,255,223)'
+background-color='rgb(247,247,247)'
 bold-color-same-as-fg=true
 bold-is-bright=false
 cell-height-scale=1.2000000000000002
@@ -27,11 +27,29 @@ cursor-colors-set=false
 default-size-columns=100
 foreground-color='rgb(0,0,0)'
 highlight-colors-set=false
-palette=['rgb(0,0,0)', 'rgb(179,0,0)', 'rgb(8,103,8)', 'rgb(170,85,0)', 'rgb(50,92,192)', 'rgb(160,75,115)', 'rgb(52,120,120)', 'rgb(255,255,223)', 'rgb(85,85,85)', 'rgb(218,105,105)', 'rgb(42,156,42)', 'rgb(223,223,61)', 'rgb(191,219,254)', 'rgb(123,43,94)', 'rgb(103,224,224)', 'rgb(255,255,255)']
+palette=['rgb(0,0,0)', 'rgb(179,0,0)', 'rgb(8,103,8)', 'rgb(170,85,0)', 'rgb(50,92,192)', 'rgb(160,75,115)', 'rgb(52,120,120)', 'rgb(240,240,240)', 'rgb(85,85,85)', 'rgb(218,105,105)', 'rgb(42,156,42)', 'rgb(223,223,61)', 'rgb(191,219,254)', 'rgb(123,43,94)', 'rgb(103,224,224)', 'rgb(247,247,247)']
 text-blink-mode='never'
 use-theme-colors=false
 use-theme-transparency=false
 visible-name='light'
+
+[:aa76637b-5f4b-4d4d-aaaf-425d8da8303a]
+audible-bell=false
+background-color='rgb(46,52,64)'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cell-height-scale=1.2000000000000002
+cell-width-scale=1.0
+cursor-blink-mode='off'
+cursor-colors-set=false
+default-size-columns=100
+foreground-color='rgb(216,222,233)'
+highlight-colors-set=false
+palette=['rgb(59,66,82)', 'rgb(191,97,106)', 'rgb(163,190,140)', 'rgb(235,203,139)', 'rgb(129,161,193)', 'rgb(180,142,173)', 'rgb(136,192,208)', 'rgb(229,233,240)', 'rgb(76,86,106)', 'rgb(191,97,106)', 'rgb(163,190,140)', 'rgb(235,203,139)', 'rgb(129,161,193)', 'rgb(180,142,173)', 'rgb(143,188,187)', 'rgb(236,239,244)']
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='nord'
 
 [:b58db4a4-6560-4f30-9b84-5e214968e781]
 audible-bell=false
