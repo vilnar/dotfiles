@@ -14,7 +14,7 @@ set cursorline
 if (has("termguicolors"))
   set termguicolors
 endif
-colorscheme lightsimple
+# colorscheme lightsimple
 # colorscheme darksimple
 
 # g:gruvbox_improved_warnings = 1
@@ -26,6 +26,13 @@ colorscheme lightsimple
 # set background=light
 # set background=dark
 # colorscheme gruvbox
+
+g:jellybeans_overrides = {
+  'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
+}
+g:jellybeans_use_term_italics = 0
+g:jellybeans_use_gui_italics = 0
+colorscheme jellybeans
 
 
 set showbreak=->

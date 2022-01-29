@@ -8,8 +8,8 @@
   "line_padding_bottom": 2,
   "font_options": ["no_liga", "no_calt"],
   "caret_style": "solid",
-  "theme": "Merge.sublime-theme", // light
-  // "theme": "Merge Dark.sublime-theme", // dark
+  // "theme": "Merge.sublime-theme", // light
+  "theme": "Merge Dark.sublime-theme", // dark
   "diff_style": "side-by-side",
   "side_bar_layout": "tabs",
   "time_format": "24h",
