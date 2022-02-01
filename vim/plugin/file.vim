@@ -37,5 +37,5 @@ nnoremap <Leader>ee :edit ++enc= %<left><left>
 # command FileEncodeReopenWithWinCyrilic :e ++enc=cp1251
 command EncodeDetectThis :!chardet3 %
 command EncodingSupportedShow :help encoding-values
-command EncodingShow :echo &fileencoding?&fileencoding:&encoding
+command EncodingShow :echo exists(&fileencoding) ? &fileencoding : &encoding
 command CdToFile :execute 'cd ' .. expand('%:p:h')
