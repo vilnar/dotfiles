@@ -78,6 +78,7 @@ g:bufExplorerSortBy = "mru"
 g:bufExplorerShowRelativePath = 1
 g:bufExplorerDisableDefaultKeyMapping = 1
 nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
+# nnoremap <silent> <leader>b :Buffers<CR>
 
 
 # help codefmt

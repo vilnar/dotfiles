@@ -1,6 +1,6 @@
 [/]
 default='faff35c6-04e4-49d0-ab0b-3c118e2ef6c1'
-list=['622dcd63-7efe-4085-8c23-b320b778372e', '7be77ef6-b29a-49fe-aaee-04c4db3aa5d8', 'b58db4a4-6560-4f30-9b84-5e214968e781', 'e830e346-98a1-4daa-b01d-d8fea0739609', 'faff35c6-04e4-49d0-ab0b-3c118e2ef6c1']
+list=['622dcd63-7efe-4085-8c23-b320b778372e', '7be77ef6-b29a-49fe-aaee-04c4db3aa5d8', 'faff35c6-04e4-49d0-ab0b-3c118e2ef6c1', 'db07a3b1-886c-4f67-b8c0-d63ffecd0323']
 
 [:622dcd63-7efe-4085-8c23-b320b778372e]
 audible-bell=false
@@ -33,9 +33,9 @@ use-theme-colors=false
 use-theme-transparency=false
 visible-name='light'
 
-[:b58db4a4-6560-4f30-9b84-5e214968e781]
+[:db07a3b1-886c-4f67-b8c0-d63ffecd0323]
 audible-bell=false
-background-color='rgb(40,40,40)'
+background-color='rgb(242,238,222)'
 bold-color-same-as-fg=true
 bold-is-bright=false
 cell-height-scale=1.2000000000000002
@@ -43,31 +43,15 @@ cell-width-scale=1.0
 cursor-blink-mode='off'
 cursor-colors-set=false
 default-size-columns=100
-foreground-color='rgb(230,212,163)'
-highlight-colors-set=false
-palette=['rgb(40,40,40)', 'rgb(190,15,23)', 'rgb(134,135,21)', 'rgb(204,136,26)', 'rgb(55,115,117)', 'rgb(160,75,115)', 'rgb(87,142,87)', 'rgb(151,135,113)', 'rgb(127,112,97)', 'rgb(247,48,40)', 'rgb(170,176,30)', 'rgb(247,177,37)', 'rgb(113,149,134)', 'rgb(199,112,137)', 'rgb(125,182,105)', 'rgb(230,212,163)']
+foreground-color='rgb(0,0,0)'
+highlight-background-color='rgb(216,213,199)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(0,0,0)'
+palette=['rgb(0,0,0)', 'rgb(204,62,40)', 'rgb(33,102,9)', 'rgb(181,137,0)', 'rgb(30,111,204)', 'rgb(92,33,165)', 'rgb(21,140,134)', 'rgb(170,170,170)', 'rgb(85,85,85)', 'rgb(204,62,40)', 'rgb(33,102,9)', 'rgb(181,137,0)', 'rgb(30,111,204)', 'rgb(92,33,165)', 'rgb(21,140,134)', 'rgb(170,170,170)']
 use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
-visible-name='gruvbox'
-
-[:e830e346-98a1-4daa-b01d-d8fea0739609]
-audible-bell=false
-background-color='rgb(249,245,215)'
-bold-color-same-as-fg=true
-bold-is-bright=false
-cell-height-scale=1.2000000000000002
-cell-width-scale=1.0
-cursor-blink-mode='off'
-cursor-colors-set=false
-default-size-columns=100
-foreground-color='rgb(46,42,41)'
-highlight-colors-set=false
-palette=['rgb(249,245,215)', 'rgb(190,15,23)', 'rgb(134,135,21)', 'rgb(204,136,26)', 'rgb(55,115,117)', 'rgb(160,75,115)', 'rgb(87,142,87)', 'rgb(104,92,81)', 'rgb(127,112,97)', 'rgb(137,0,9)', 'rgb(102,98,13)', 'rgb(165,99,17)', 'rgb(14,83,101)', 'rgb(123,43,94)', 'rgb(53,106,70)', 'rgb(46,42,41)']
-use-theme-colors=false
-use-theme-transparency=false
-use-transparent-background=false
-visible-name='gruvbox-light'
+visible-name='paper'
 
 [:faff35c6-04e4-49d0-ab0b-3c118e2ef6c1]
 audible-bell=false

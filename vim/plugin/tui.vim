@@ -16,17 +16,7 @@ if (has("termguicolors"))
 endif
 # colorscheme lightsimple
 # colorscheme darksimple
-
-# g:gruvbox_improved_warnings = 1
-# g:gruvbox_invert_selection = 0
-# g:gruvbox_italic = 0
-# g:gruvbox_underline = 1
-# g:gruvbox_contrast_light = "hard"
-# g:gruvbox_contrast_dark = "medium"
-# g:gruvbox_guisp_fallback = "bg" # fix spell colors
-# set background=light
-# set background=dark
-# colorscheme gruvbox
+# colorscheme paper
 
 g:jellybeans_overrides = {
   'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
