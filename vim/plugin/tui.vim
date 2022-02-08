@@ -18,15 +18,19 @@ endif
 # colorscheme darksimple
 # colorscheme paper
 
+# g:jellybeans_background_color = '151515'
+g:jellybeans_background_color = '1E1E1E'
 g:jellybeans_overrides = {
   'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
+  'CursorLine': { 'guibg': '262626', 'ctermbg': 'DarkGrey' },
+  'CursorColumn': { 'guibg': '262626', 'ctermbg': 'DarkGrey' },
 }
 g:jellybeans_use_term_italics = 0
 g:jellybeans_use_gui_italics = 0
 colorscheme jellybeans
 
 # fix internal terminal colors scheme - jellybeans
-if exists('*term_setansicolors') && get(g:, 'colors_name', 'default') == "jellybeans"
+if get(g:, 'colors_name', 'default') == "jellybeans"
   g:terminal_ansi_colors = repeat([0], 16)
 
   g:terminal_ansi_colors[0] = "#414141"

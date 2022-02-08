@@ -55,7 +55,7 @@ visible-name='paper'
 
 [:faff35c6-04e4-49d0-ab0b-3c118e2ef6c1]
 audible-bell=false
-background-color='rgb(21,21,21)'
+background-color='rgb(30,30,30)'
 bold-color-same-as-fg=true
 bold-is-bright=false
 cell-height-scale=1.2000000000000002
