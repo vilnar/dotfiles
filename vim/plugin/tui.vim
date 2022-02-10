@@ -18,6 +18,7 @@ endif
 # colorscheme darksimple
 # colorscheme paper
 
+
 # g:jellybeans_background_color = '151515'
 g:jellybeans_background_color = '1E1E1E'
 g:jellybeans_overrides = {
@@ -66,6 +67,7 @@ noremap <F8> :set wrap!<CR>
 set history=1000
 set wildmenu wildmode=full
 set wildignorecase
+set wildoptions=pum pumheight=20
 set shortmess-=S
 set showcmd
 # set complete=.,b,u,t 
@@ -86,4 +88,31 @@ set display+=lastline
 &t_SR = "\<esc>[3 q"
 &t_EI = "\<esc>[2 q"
 
+
+
 set laststatus=2
+
+def g:StatuslineExpr(): string
+  var file_path = "%f "
+  var modified = "%{&modified ? '[+] ' : ''}"
+  var readonly  = "%{&readonly ? '[RO] ' : ''}"
+  var separate = ' %= '
+  var win_nr = "[%{winnr()}] "
+  # var fugitive = "%{exists('g:loaded_fugitive') ? fugitive#statusline() : ''}"
+  # var ftype  = "%{len(&filetype) ? '['.&filetype.'] ' : ''}"
+  # var fencoding  = "%{&fileencoding ? '['.&fileencoding.'] ' : '['.&encoding.'] '}"
+  var position = ' %l:%c '
+  var percent = ' %P'
+
+  return file_path .. modified .. readonly .. separate .. win_nr  .. position .. percent
+enddef
+set statusline=%!StatuslineExpr()
+
+# nnoremap <Leader>w <C-w>w
+nnoremap <Leader>w <C-w>p
+nnoremap <Leader>1 1<C-w>w
+nnoremap <Leader>2 2<C-w>w
+nnoremap <Leader>3 3<C-w>w
+nnoremap <Leader>4 4<C-w>w
+nnoremap <Leader>5 5<C-w>w
+nnoremap <Leader>6 6<C-w>w

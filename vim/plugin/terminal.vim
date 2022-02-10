@@ -33,4 +33,3 @@ def OpenFileInNewTerminal()
   execute 'Start! gnome-terminal -- vim ' .. path
 enddef
 command OpenFileInNewTerminal OpenFileInNewTerminal()
-noremap <Leader>ot :vim9cmd <SID>OpenFileInNewTerminal()<CR>

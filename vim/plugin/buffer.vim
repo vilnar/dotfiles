@@ -1,6 +1,6 @@
 vim9script
 
-nnoremap <leader>3 :only<CR>
+nnoremap <leader>o :only<CR>
 nnoremap <leader>c :close<CR>
 
 noremap <F7> :tabnew<CR>:setlocal hidden<CR>

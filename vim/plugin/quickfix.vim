@@ -8,4 +8,4 @@ def QuickFixToggle()
   endif
 enddef
 
-nnoremap <silent> <leader>2 :vim9cmd <SID>QuickFixToggle()<CR>
+nnoremap <silent> <leader>\ :vim9cmd <SID>QuickFixToggle()<CR>
