@@ -39,8 +39,8 @@ Plug 'SirVer/ultisnips', { 'tag': '3.2' }
 Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.21' }
 Plug 'jparise/vim-graphql', { 'tag': 'v1.4' }
 Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f34bf6' }
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'tag': '0.28.0' }
-Plug 'junegunn/fzf.vim', { 'commit': 'd6aa21476b2854694e6aa7b0941b8992a906c5ec' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'tag': '0.29.0' }
+Plug 'junegunn/fzf.vim', { 'commit': '1f7bfa4007043c30027b2cd79625e8aac5cff1f9' }
 Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2' }
 
 " async
@@ -55,6 +55,5 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
 Plug 'nanotech/jellybeans.vim', { 'commit': 'ef83bf4dc8b3eacffc97bf5c96ab2581b415c9fa' }
-Plug 'https://gitlab.com/yorickpeterse/vim-paper.git'
 
 call plug#end()

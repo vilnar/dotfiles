@@ -16,7 +16,6 @@ if (has("termguicolors"))
 endif
 # colorscheme lightsimple
 # colorscheme darksimple
-# colorscheme paper
 
 
 # g:jellybeans_background_color = '151515'
@@ -71,7 +70,8 @@ set wildoptions=pum pumheight=20
 set shortmess-=S
 set showcmd
 # set complete=.,b,u,t 
-set complete=.,t 
+# set complete=.,t 
+set complete=. 
 
 set splitbelow
 set title
