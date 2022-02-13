@@ -12,12 +12,13 @@ help:
 	@echo '   make install_vim                 install vim files                  '
 	@echo '   make install_git                 install git files                  '
 	@echo '   make export_bash                 export bash profile                '
+	@echo '   make install_gtk                 install gtk files                  '
 	@echo '                                                                       '
 	@echo 'WARNING: when install configuration files, the files are first deleted '
 	@echo 'to avoid conflicts                                                     '
 	@echo '                                                                       '
 # TODO: add install ctags
-all: install_bash install_vim install_git
+all: install_bash install_vim install_git install_gtk
 	@echo ""
 	@echo "dotfiles install"
 	@echo "=================================="
@@ -55,3 +56,9 @@ clean_bash:
 
 export_bash:
 	dconf dump /org/gnome/terminal/legacy/profiles:/ > `pwd`/gnome-terminal-profiles.dconf
+
+install_gtk:
+	ln -sf `pwd`/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/gtk.css
+
+clean_gtk:
+	rm -Rf ~/.config/gtk-3.0/gtk.css

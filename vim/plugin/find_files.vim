@@ -20,7 +20,7 @@ def CreateFilesScratch()
 enddef
 
 # Read from shell and move to new buffer
-command -nargs=* -complete=shellcmd FilesBuffer CreateFilesScratch() | r <args>
+command -nargs=* -complete=shellcmd FilesBuffer CreateFilesScratch() | read <args>
 
 # find file
 # nnoremap <Leader>ff :FilesBuffer !find * -not -path "./.git/*" -iname ""<left>
