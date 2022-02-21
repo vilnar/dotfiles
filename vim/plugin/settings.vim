@@ -9,6 +9,7 @@ if !exists("g:ReloadConfigs")
     endif
     execute 'source ~/.vimrc'
     execute 'source ~/.vim/plugin/mappings.vim'
+    execute 'source ~/.vim/plugin/mouse.vim'
     execute 'source ~/.vim/plugin/settings.vim'
     execute 'source ~/.vim/plugin/custom.vim'
     execute 'source ~/.vim/plugin/tui.vim'
@@ -69,6 +70,9 @@ g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 # :help asyncrun
 g:asyncrun_open = 8
 g:asyncrun_save = 2
+nnoremap <F12> :vim9cmd AsyncStop<CR>
+inoremap <F12> <ESC>:vim9cmd AsyncStop<CR>
+cnoremap <F12> <ESC>:vim9cmd AsyncStop<CR>
 
 
 # :help bufexplorer

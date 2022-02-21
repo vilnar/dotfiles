@@ -6,9 +6,17 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 # set number
 set signcolumn=number
 # set numberwidth=6
-set cursorline
-# nnoremap <Leader>1 :setlocal number!<CR>
 
+set cursorline
+augroup MyCursorLine
+  autocmd OptionSet diff {
+    if &diff
+      &cursorline = 0
+    else
+      &cursorline = 1 
+    endif
+  }
+augroup end
 
 
 if (has("termguicolors"))
@@ -17,58 +25,88 @@ endif
 # colorscheme lightsimple
 # colorscheme darksimple
 
-g:gruvbox_improved_warnings = 1
-g:gruvbox_invert_selection = 0
-g:gruvbox_italic = 0
-g:gruvbox_underline = 1
-g:gruvbox_contrast_light = "hard"
-g:gruvbox_contrast_dark = "hard"
-g:gruvbox_guisp_fallback = "bg" # fix spell colors
-# set background=light
-set background=dark
-colorscheme gruvbox
 
+augroup MyColors
+  autocmd ColorScheme railscasts {
+    highlight Ignore ctermbg=NONE ctermfg=243 cterm=NONE guibg=NONE guifg=#767676 gui=NONE
+    highlight phpIdentifier ctermbg=NONE ctermfg=254 cterm=NONE guibg=NONE guifg=#e4e4e4 gui=NONE
+  }
+  autocmd ColorScheme gruvbox {
+    highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
+    highlight CursorLine ctermbg=DarkGrey ctermfg=NONE cterm=NONE guibg=#32302f guifg=NONE gui=NONE
+  }
+augroup end
 
-
-# g:jellybeans_background_color = '151515'
-# g:jellybeans_background_color = '1E1E1E'
-# g:jellybeans_overrides = {
-#   'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
-#   'CursorLine': { 'guibg': '262626', 'ctermbg': 'DarkGrey' },
-#   'CursorColumn': { 'guibg': '262626', 'ctermbg': 'DarkGrey' },
-# }
-# g:jellybeans_use_term_italics = 0
-# g:jellybeans_use_gui_italics = 0
-# colorscheme jellybeans
-
-# # fix internal terminal colors scheme - jellybeans
-# if get(g:, 'colors_name', 'default') == "jellybeans"
-#   g:terminal_ansi_colors = repeat([0], 16)
-
-#   g:terminal_ansi_colors[0] = "#414141"
-#   g:terminal_ansi_colors[8] = "#BDBDBD"
-
-#   g:terminal_ansi_colors[1] = "#E87174"
-#   g:terminal_ansi_colors[9] = "#FFA0A2"
-
-#   g:terminal_ansi_colors[2] = "#93B97E"
-#   g:terminal_ansi_colors[10] = "#B8BB26"
-
-#   g:terminal_ansi_colors[3] = "#FFB981"
-#   g:terminal_ansi_colors[11] = "#FFDBA5"
-
-#   g:terminal_ansi_colors[4] = "#648699"
-#   g:terminal_ansi_colors[12] = "#ABD9F3"
-
-#   g:terminal_ansi_colors[5] = "#E1C0F6"
-#   g:terminal_ansi_colors[13] = "#FBDAFC"
-
-#   g:terminal_ansi_colors[6] = "#00988E"
-#   g:terminal_ansi_colors[14] = "#00B3A8"
-
-#   g:terminal_ansi_colors[7] = "#DEDEDE"
-#   g:terminal_ansi_colors[15] = "#FEFEFE"
+# set background=dark
+# colorscheme railscasts
+# if get(g:, 'colors_name', 'default') == "railscasts"
+#   g:terminal_ansi_colors = [
+#         '#000000', # 0    black
+#         '#870000', # 1    dark red
+#         '#005F00', # 2    dark green
+#         '#DFAF5F', # 3    brown
+#         '#4477AA', # 4    dark blue
+#         '#870087', # 5    dark magenta
+#         '#5FAFAF', # 6    dark cyan
+#         '#A8A8A8', # 7    light grey
+#         '#00988E', # 8    dark grey
+#         '#FF0000', # 9    red
+#         '#87AF5F', # 10   green
+#         '#FFDF5F', # 11   yellow
+#         '#00FFFF', # 12   blue
+#         '#8787FF', # 13   magenta
+#         '#00FFFF', # 14   cyan
+#         '#E4E4E4', # 15   white
+#   ]
 # endif
+
+# g:gruvbox_invert_selection = 0
+# g:gruvbox_italic = 0
+# g:gruvbox_underline = 1
+# g:gruvbox_contrast_light = "hard"
+# g:gruvbox_contrast_dark = "hard"
+# g:gruvbox_guisp_fallback = "bg" # fix spell colors
+# g:gruvbox_vert_split = "bg1"
+# g:gruvbox_hls_highlight = "purple"
+# # set background=light
+# set background=dark
+# colorscheme gruvbox
+
+
+# g:jellybeans_background_color = '151515' # default
+# g:jellybeans_background_color = '1E1E1E'
+g:jellybeans_overrides = {
+  'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
+  'CursorLine': { 'guibg': '262626', 'ctermbg': 'DarkGrey' },
+  'CursorColumn': { 'guibg': '262626', 'ctermbg': 'DarkGrey' },
+  'markdownCode': { 'guifg': '99ad6a', 'ctermfg': 'Green' },
+  'markdownCodeBlock': { 'guifg': '99ad6a', 'ctermfg': 'Green' },
+  'Ignore': { 'guifg': '888888', 'ctermfg': 'Grey' },
+}
+g:jellybeans_use_term_italics = 0
+g:jellybeans_use_gui_italics = 0
+colorscheme jellybeans
+# fix internal terminal colors scheme - jellybeans
+if get(g:, 'colors_name', 'default') == "jellybeans"
+  g:terminal_ansi_colors = [
+        '#414141', # 0    black
+        '#E87174', # 1    dark red
+        '#93B97E', # 2    dark green
+        '#FFB981', # 3    brown
+        '#648699', # 4    dark blue
+        '#E1C0F6', # 5    dark magenta
+        '#FBDAFC', # 6    dark cyan
+        '#00988E', # 7    light grey
+        '#DEDEDE', # 8    dark grey
+        '#BDBDBD', # 9    red
+        '#FFA0A2', # 10   green
+        '#B8BB26', # 11   yellow
+        '#FFDBA5', # 12   blue
+        '#ABD9F3', # 13   magenta
+        '#00B3A8', # 14   cyan
+        '#FEFEFE', # 15   white
+  ]
+endif
 
 
 set showbreak=->
@@ -111,12 +149,12 @@ def g:StatuslineExpr(): string
   var separate = " %= "
   var win_nr = "[%{winnr()}] "
   # var fugitive = "%{exists('g:loaded_fugitive') ? fugitive#statusline() : ''}"
-  # var ftype  = "%{len(&filetype) ? '['.&filetype.'] ' : ''}"
   # var fencoding  = "%{&fileencoding ? '['.&fileencoding.'] ' : '['.&encoding.'] '}"
+  var ftype  = "%{len(&filetype) ? '['.&filetype.'] ' : ''}"
   var position = " %l:%c "
   var percent = " %P"
 
-  return file_path .. modified .. readonly .. separate .. win_nr  .. position .. percent
+  return file_path .. modified .. readonly .. separate .. win_nr  .. ftype .. position .. percent
 enddef
 set statusline=%!StatuslineExpr()
 

@@ -1,8 +1,8 @@
 vim9script
 
 # grep in project
-nnoremap <Leader>gg :AsyncRun grep -rni --exclude="tags" --exclude-dir=".git" -e '' ./<left><left><left><left>
-vnoremap <Leader>gg y:AsyncRun grep -rni --exclude="tags" --exclude-dir=".git" -e '<C-R>"' ./
+nnoremap <Leader>gg :Dispatch grep -rni --exclude="tags" --exclude-dir=".git" -e '' ./<left><left><left><left>
+vnoremap <Leader>gg y:Dispatch grep -rni --exclude="tags" --exclude-dir=".git" -e '<C-R>"' ./
 
 
 def GetRelativePathForGrep(): string
@@ -19,15 +19,15 @@ def GetRelativePathForGrep(): string
 enddef
 
 # grep in current directory
-nnoremap <expr> <Leader>gd ":AsyncRun grep -rnie '' " ..  <SID>GetRelativePathForGrep()
-vnoremap <expr> <Leader>gd "y:AsyncRun grep -rnie '<C-R>\"' " ..  <SID>GetRelativePathForGrep()
+nnoremap <expr> <Leader>gd ":Dispatch grep -rnie '' " ..  <SID>GetRelativePathForGrep()
+vnoremap <expr> <Leader>gd "y:Dispatch grep -rnie '<C-R>\"' " ..  <SID>GetRelativePathForGrep()
 
 # grep by filetype
-nnoremap <Leader>gi :AsyncRun grep -rni --include \*.go -e '' ./<left><left><left><left>
+nnoremap <Leader>gi :Dispatch grep -rni --include \*.go -e '' ./<left><left><left><left>
 
 # grep in current buffer
-noremap <expr> <Leader>gb ":AsyncRun grep -nirHe '' " .. expand('%') 
-vnoremap <expr> <Leader>gb "y:AsyncRun grep -nrHe '<C-R>\"' " .. expand('%') 
+noremap <expr> <Leader>gb ":Dispatch grep -nirHe '' " .. expand('%') 
+vnoremap <expr> <Leader>gb "y:Dispatch grep -nrHe '<C-R>\"' " .. expand('%') 
 
 
 def SearchInOpenedBuffers(pattern: string)
@@ -40,5 +40,5 @@ command -nargs=1 SearchInOpenedBuffers SearchInOpenedBuffers(<f-args>)
 
 
 # grep for regex (-P is enable PATTERNS are Perl regular expressions)
-# nnoremap <Leader>gr :AsyncRun grep -nroHP '' ./<left><left><left><left>
-nnoremap <expr> <Leader>gr ":AsyncRun grep -nroHP '' " .. expand('%')
+# nnoremap <Leader>gr :Dispatch grep -nroHP '' ./<left><left><left><left>
+nnoremap <expr> <Leader>gr ":Dispatch grep -nroHP '' " .. expand('%')

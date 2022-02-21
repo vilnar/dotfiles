@@ -35,6 +35,7 @@ Plug 'tpope/vim-commentary', { 'tag': 'v1.3' }
 Plug 'tpope/vim-surround', { 'tag': 'v2.1' }
 Plug 'tpope/vim-fugitive', { 'tag': 'v3.6' }
 Plug 'preservim/nerdtree', { 'tag': '6.10.12' }
+" Plug 'tpope/vim-vinegar', { 'commit': 'bb1bcddf43cfebe05eb565a84ab069b357d0b3d6' }
 Plug 'SirVer/ultisnips', { 'tag': '3.2' }
 Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.21' }
 Plug 'jparise/vim-graphql', { 'tag': 'v1.4' }
@@ -56,5 +57,6 @@ Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312caf
 
 Plug 'nanotech/jellybeans.vim', { 'commit': 'ef83bf4dc8b3eacffc97bf5c96ab2581b415c9fa' }
 Plug 'gruvbox-community/gruvbox', { 'commit': '9395ee71627d7202343c606a2e1d3c7967bfb256' }
+Plug 'dhruvasagar/vim-railscasts-theme', { 'commit': 'b5dd9c5edc7cd93a6948ee2ede0fe899457548e1' }
 
 call plug#end()
