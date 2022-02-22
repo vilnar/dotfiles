@@ -43,7 +43,7 @@
   // fast copy line wihout eol
   {
     "keys": ["ctrl+alt+l"], "command": "run_macro_file",
-    "args": {"file": "res://Packages/User/macros/CopyLineNoEOL.sublime-macro"},
+    "args": {"file": "res://Packages/User/macros/copy_line_no_eol.sublime-macro"},
     "context":
     [
       {
@@ -51,6 +51,10 @@
         "operand": true, "match_all": false,
       },
     ],
+  },
+  {
+    "keys": ["alt+d"], "command": "run_macro_file",
+    "args": {"file": "res://Packages/User/macros/delete_all.sublime-macro"},
   },
 
   {
@@ -166,7 +170,7 @@
   // like vim
   // {
   //   "keys": ["alt+v"], "command": "run_macro_file",
-  //   "args": {"file": "res://Packages/User/macros/SelectLineNoEOL.sublime-macro"},
+  //   "args": {"file": "res://Packages/User/macros/select_line_no_eol.sublime-macro"},
   //   "context":
   //   [
   //     {

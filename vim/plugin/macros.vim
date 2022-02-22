@@ -4,4 +4,4 @@ vim9script
 # in command mode <C-R>{register}
 
 # clear file and save
-@c = ':1VGGdd:w'
+@c = ':1VGGd:w'
