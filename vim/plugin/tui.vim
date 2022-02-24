@@ -108,10 +108,12 @@ set nomore
 
 set display+=lastline
 
-# cursor shape in difference mode
-&t_SI = "\<esc>[6 q"
-&t_SR = "\<esc>[3 q"
-&t_EI = "\<esc>[2 q"
+if !has('gui_running')
+  # cursor shape in difference mode
+  &t_SI = "\<esc>[6 q"
+  &t_SR = "\<esc>[3 q"
+  &t_EI = "\<esc>[2 q"
+endif
 
 
 
