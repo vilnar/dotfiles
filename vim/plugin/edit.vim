@@ -6,7 +6,7 @@ set backspace=indent,eol,start
 
 command IndentConvertToSpace :setlocal expandtab|retab
 command IndentConvertToTabs :setlocal noexpandtab|%retab!
-command IndentUseSpace :setlocal expandtab
-command IndentUseTab :setlocal expandtab!
+command IndentUseSpace :set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
+command IndentUseTab :setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 command EditorShowTabSize :echo &tabstop
 command EditorLastLineEndsNewLineToggle :setlocal nofixendofline!

@@ -12,8 +12,10 @@ augroup MyCursorLine
   autocmd OptionSet diff {
     if &diff
       &cursorline = 0
+      &list = 1
     else
       &cursorline = 1 
+      &list = 0
     endif
   }
 augroup end
@@ -41,7 +43,7 @@ g:gruvbox_contrast_dark = "hard"
 g:gruvbox_guisp_fallback = "bg" # fix spell colors
 g:gruvbox_vert_split = "bg1"
 g:gruvbox_hls_highlight = "purple"
-# set background=light
+# # set background=light
 set background=dark
 colorscheme gruvbox
 
@@ -59,7 +61,7 @@ colorscheme gruvbox
 # g:jellybeans_use_term_italics = 0
 # g:jellybeans_use_gui_italics = 0
 # colorscheme jellybeans
-# fix internal terminal colors scheme - jellybeans
+# # fix internal terminal colors scheme - jellybeans
 # if get(g:, 'colors_name', 'default') == "jellybeans"
 #   g:terminal_ansi_colors = [
 #         '#414141', # 0    black
