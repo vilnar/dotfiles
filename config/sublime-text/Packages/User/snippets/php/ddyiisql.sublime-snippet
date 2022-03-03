@@ -1,8 +1,0 @@
-<snippet>
-<content>
-<![CDATA[$1->createCommand()->getRawSql()]]>
-</content>
-<tabTrigger>ddyiisql</tabTrigger>
-<scope>source.php</scope>
-<description>print_r debug yii query</description>
-</snippet>

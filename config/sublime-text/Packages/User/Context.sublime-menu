@@ -1,6 +1,0 @@
-[
-  { "caption": "-", "id": "file-custom" },
-  { "caption": "Copy Relative Path", "command": "side_bar_copy_relative_path", "args": { "paths": [] } },
-  // { "caption": "Copy Folder Path", "command": "copy_current_folder_path" },
-  { "caption": "Copy Name", "command": "copy_file_name" },
-]

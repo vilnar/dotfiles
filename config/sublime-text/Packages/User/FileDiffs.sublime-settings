@@ -1,4 +1,0 @@
-{
-  // "cmd": ["meld", "$file1", "$file2"],
-  "cmd": ["gvimdiff", "$file1", "$file2"],
-}
