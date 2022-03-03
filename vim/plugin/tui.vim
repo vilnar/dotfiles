@@ -31,6 +31,7 @@ endif
 augroup MyColors
   autocmd ColorScheme gruvbox {
     highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
+    highlight Function ctermbg=NONE ctermfg=172 cterm=bold guibg=NONE guifg=#d79921 gui=bold
     highlight CursorLine ctermbg=DarkGrey ctermfg=NONE cterm=NONE guibg=#32302f guifg=NONE gui=NONE
   }
 augroup end

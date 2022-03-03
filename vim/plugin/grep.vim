@@ -23,7 +23,7 @@ nnoremap <expr> <Leader>gd ":Dispatch grep -rnie '' " ..  <SID>GetRelativePathFo
 vnoremap <expr> <Leader>gd "y:Dispatch grep -rnie '<C-R>\"' " ..  <SID>GetRelativePathForGrep()
 
 # grep by filetype
-nnoremap <Leader>gi :Dispatch grep -rni --include \*.go -e '' ./<left><left><left><left>
+nnoremap <Leader>gi :Dispatch grep -rni --include=*.go -e '' ./<left><left><left><left>
 
 # grep in current buffer
 noremap <expr> <Leader>gb ":Dispatch grep -nirHe '' " .. expand('%') 

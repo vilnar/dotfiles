@@ -79,8 +79,8 @@ cnoremap <F12> <ESC>:vim9cmd AsyncStop<CR>
 # :help bufexplorer
 g:fugitive_dynamic_colors = 0
 g:bufExplorerShowNoName = 1
-# g:bufExplorerSortBy = "mru"
-g:bufExplorerSortBy = "number"
+g:bufExplorerSortBy = "mru"
+# g:bufExplorerSortBy = "number"
 g:bufExplorerShowRelativePath = 1
 g:bufExplorerDisableDefaultKeyMapping = 1
 nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
