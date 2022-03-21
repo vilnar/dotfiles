@@ -7,6 +7,7 @@ def EscapeSearchTextMultiLines(text: string, pat: string)
   @/ = scom
   histadd('/', scom)
 enddef
+
 vnoremap * y:vim9cmd <SID>EscapeSearchTextMultiLines(getreg('"'), '\n')<CR>
 
 command -nargs=1 SearchMultiLine :vim9cmd EscapeSearchTextMultiLines(<q-args>, '\r') | normal! n
@@ -20,6 +21,7 @@ def EscapeSearchText(text: string)
   @/ = scom
   histadd('/', scom)
 enddef
+
 command -nargs=1 SearchEscape :vim9cmd EscapeSearchText(<q-args>) | normal! n
 nnoremap <Leader>se :SearchEscape<space>
 vnoremap <Leader>se y:vim9cmd <SID>EscapeSearchText(getreg('"'))<CR>
@@ -40,6 +42,7 @@ def EscapeTextForReplace(is_whole_word: bool)
   endif
   feedkeys(scomm)
 enddef
+
 nnoremap <Leader>rr :%s///gc<left><left><left><left>
 vnoremap <Leader>rr y:vim9cmd <SID>EscapeTextForReplace(false)<CR>
 vnoremap <Leader>rb <Esc>:'<,'>s///gc<left><left><left><left>

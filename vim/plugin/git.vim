@@ -6,7 +6,7 @@ def RunFileHistory()
     echoerr "Not found file: " .. path
     return
   endif
-  execute 'Start! gitk ' .. path
+  execute 'Start! git-dag ' .. path
 enddef
 command FileHistory RunFileHistory()
 
@@ -28,6 +28,6 @@ def RunGitHistory()
     echoerr "Not found directory: " .. path
     return
   endif
-  execute 'Start! gitk ' .. path
+  execute 'Start! git-dag ' .. path
 enddef
 command GitHistory RunGitHistory()

@@ -85,6 +85,7 @@ colorscheme gruvbox
 # endif
 
 
+# set linebreak
 set showbreak=->
 set nowrap
 noremap <F8> :set wrap!<CR>
