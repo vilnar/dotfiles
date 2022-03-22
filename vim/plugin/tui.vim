@@ -49,41 +49,6 @@ set background=dark
 colorscheme gruvbox
 
 
-# g:jellybeans_background_color = '151515' # default
-# g:jellybeans_background_color = '1E1E1E'
-# g:jellybeans_overrides = {
-#   'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
-#   'CursorLine': { 'guibg': '262626', 'ctermbg': 'DarkGrey' },
-#   'CursorColumn': { 'guibg': '262626', 'ctermbg': 'DarkGrey' },
-#   'markdownCode': { 'guifg': '99ad6a', 'ctermfg': 'Green' },
-#   'markdownCodeBlock': { 'guifg': '99ad6a', 'ctermfg': 'Green' },
-#   'Ignore': { 'guifg': '888888', 'ctermfg': 'Grey' },
-# }
-# g:jellybeans_use_term_italics = 0
-# g:jellybeans_use_gui_italics = 0
-# colorscheme jellybeans
-# # fix internal terminal colors scheme - jellybeans
-# if get(g:, 'colors_name', 'default') == "jellybeans"
-#   g:terminal_ansi_colors = [
-#         '#414141', # 0    black
-#         '#E87174', # 1    dark red
-#         '#93B97E', # 2    dark green
-#         '#FFB981', # 3    brown
-#         '#648699', # 4    dark blue
-#         '#E1C0F6', # 5    dark magenta
-#         '#FBDAFC', # 6    dark cyan
-#         '#00988E', # 7    light grey
-#         '#DEDEDE', # 8    dark grey
-#         '#BDBDBD', # 9    red
-#         '#FFA0A2', # 10   green
-#         '#B8BB26', # 11   yellow
-#         '#FFDBA5', # 12   blue
-#         '#ABD9F3', # 13   magenta
-#         '#00B3A8', # 14   cyan
-#         '#FEFEFE', # 15   white
-#   ]
-# endif
-
 
 # set linebreak
 set showbreak=->

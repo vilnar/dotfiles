@@ -14,7 +14,7 @@ enddef
 command -bang -nargs=* MyTags call RunMyTags(<q-args>)
 
 def RunMyBufferTags(query: string)
-  var spec = {"options": ["+i"], "placeholder": "--tag {2}:{-1}:{3..}"}
+  var spec = {"options": ["+i"], "placeholder": "{2}:{3..}"}
   call fzf#vim#buffer_tags(query, fzf#vim#with_preview(spec), 0)
 enddef
 command -bang -nargs=* MyBufferTags call RunMyBufferTags(<q-args>)

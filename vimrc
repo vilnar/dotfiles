@@ -40,7 +40,7 @@ Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.21' }
 Plug 'jparise/vim-graphql', { 'tag': 'v1.4' }
 Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f34bf6' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'tag': '0.29.0' }
-Plug 'junegunn/fzf.vim', { 'commit': '1f7bfa4007043c30027b2cd79625e8aac5cff1f9' }
+Plug 'junegunn/fzf.vim', { 'commit': 'b23e4bb8f853cb9641a609c5c8545751276958b0' }
 Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2' }
 
 " async
@@ -54,7 +54,6 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
-Plug 'nanotech/jellybeans.vim', { 'commit': 'ef83bf4dc8b3eacffc97bf5c96ab2581b415c9fa' }
 Plug 'gruvbox-community/gruvbox', { 'commit': '9395ee71627d7202343c606a2e1d3c7967bfb256' }
 
 call plug#end()
