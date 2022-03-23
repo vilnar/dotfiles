@@ -34,22 +34,27 @@ augroup MyColors
     highlight Function ctermbg=NONE ctermfg=172 cterm=bold guibg=NONE guifg=#d79921 gui=bold
     highlight CursorLine ctermbg=DarkGrey ctermfg=NONE cterm=NONE guibg=#32302f guifg=NONE gui=NONE
   }
+  autocmd ColorScheme zenburn {
+    highlight markdownCode ctermbg=NONE ctermfg=174 cterm=NONE guibg=NONE guifg=#cc9393 gui=NONE
+    highlight markdownCodeBlock ctermbg=NONE ctermfg=174 cterm=NONE guibg=NONE guifg=#cc9393 gui=NONE
+  }
 augroup end
 
-# g:gruvbox_invert_selection = 0
-# g:gruvbox_italic = 0
-# g:gruvbox_underline = 1
-# g:gruvbox_contrast_light = "hard"
-# g:gruvbox_contrast_dark = "hard"
-# g:gruvbox_guisp_fallback = "bg" # fix spell colors
-# g:gruvbox_vert_split = "bg1"
-# g:gruvbox_hls_highlight = "purple"
+g:gruvbox_invert_selection = 0
+g:gruvbox_italic = 0
+g:gruvbox_underline = 1
+g:gruvbox_contrast_light = "hard"
+g:gruvbox_contrast_dark = "hard"
+g:gruvbox_guisp_fallback = "bg" # fix spell colors
+g:gruvbox_vert_split = "bg1"
+g:gruvbox_hls_highlight = "purple"
 # # set background=light
-# set background=dark
-# colorscheme gruvbox
-
 set background=dark
-colorscheme zenburn
+colorscheme gruvbox
+
+# g:zenburn_high_Contrast = 1
+# set background=dark
+# colorscheme zenburn
 
 
 
