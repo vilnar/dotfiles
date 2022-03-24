@@ -1,8 +1,10 @@
 vim9script
 
+const ESCAPE_CHARS = '\~ \* \$ \[ \] /\'
+
 # search multilines
 def EscapeSearchTextMultiLines(text: string, pat: string)
-  var text_esc = substitute(escape(text, '/\'), pat, '\\n', 'g')
+  var text_esc = substitute(escape(text, ESCAPE_CHARS), pat, '\\n', 'g')
   var scom = '\V' .. text_esc
   @/ = scom
   histadd('/', scom)
@@ -16,7 +18,7 @@ nnoremap <Leader>sm :SearchMultiLine<space>
 
 # search
 def EscapeSearchText(text: string)
-  var text_esc = escape(text, '/\')
+  var text_esc = escape(text, ESCAPE_CHARS)
   var scom = '\V' .. text_esc
   @/ = scom
   histadd('/', scom)
@@ -32,7 +34,7 @@ vnoremap <Leader>ss y/<C-R>"
 # replace
 def EscapeTextForReplace(is_whole_word: bool)
   var text = getreg('"')
-  var text_esc = escape(text, '/\')
+  var text_esc = escape(text, ESCAPE_CHARS)
 
   # ,$        - start from current position cursor
   # 1,''-&&   - continue from first line from buffer

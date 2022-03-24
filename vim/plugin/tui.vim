@@ -52,7 +52,10 @@ g:gruvbox_hls_highlight = "purple"
 set background=dark
 colorscheme gruvbox
 
+
+# g:zenburn_color_also_Ignore = 1
 # g:zenburn_high_Contrast = 1
+# g:zenburn_alternate_Visual = 1
 # set background=dark
 # colorscheme zenburn
 
