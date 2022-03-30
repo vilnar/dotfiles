@@ -3,6 +3,7 @@ vim9script
 set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
 set autoindent
 set backspace=indent,eol,start
+set formatoptions=qjl
 
 command IndentConvertToSpace :setlocal expandtab|retab
 command IndentConvertToTabs :setlocal noexpandtab|%retab!

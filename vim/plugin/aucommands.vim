@@ -1,9 +1,6 @@
 vim9script
 
 augroup AutoSettingsFileType
-  autocmd FileType * {
-    setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-  }
   autocmd BufRead,BufNewFile .gitignore,.env.local,.env,.env.example,.env.test,*.conf {
     setlocal filetype=conf
   }

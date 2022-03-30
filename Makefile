@@ -13,12 +13,13 @@ help:
 	@echo '   make install_git                 install git files                  '
 	@echo '   make export_bash                 export bash profile                '
 	@echo '   make install_gtk                 install gtk files                  '
+	@echo '   make install_alacritty           install alacritty files            '
 	@echo '                                                                       '
 	@echo 'WARNING: when install configuration files, the files are first deleted '
 	@echo 'to avoid conflicts                                                     '
 	@echo '                                                                       '
-# TODO: add install ctags
-all: install_bash install_vim install_git install_gtk
+
+all: install_bash install_vim install_git install_gtk install_alacritty
 	@echo ""
 	@echo "dotfiles install"
 	@echo "=================================="
@@ -62,3 +63,9 @@ install_gtk:
 
 clean_gtk:
 	rm -Rf ~/.config/gtk-3.0/gtk.css
+
+install_alacritty:
+	ln -sf `pwd`/config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
+clean_alacritty:
+	rm -Rf ~/.config/alacritty/alacritty.yml

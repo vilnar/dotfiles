@@ -13,3 +13,4 @@ endif
 
 command HexRead :execute ':%!xxd' | setlocal filetype=xxd
 command HexWrite :execute ':%!xxd -r' | setlocal binary | setlocal filetype=xxd
+command Version :enew | put = execute('version')

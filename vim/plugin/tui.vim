@@ -24,6 +24,7 @@ augroup end
 if (has("termguicolors"))
   set termguicolors
 endif
+
 # colorscheme lightsimple
 # colorscheme darksimple
 
@@ -91,6 +92,11 @@ if !has('gui_running')
   &t_SI = "\<esc>[6 q"
   &t_SR = "\<esc>[3 q"
   &t_EI = "\<esc>[2 q"
+
+  if &term =~ '^\%(alacritty\)'
+    &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  endif
 endif
 
 
