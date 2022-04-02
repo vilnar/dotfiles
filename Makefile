@@ -60,9 +60,11 @@ export_bash:
 
 install_gtk:
 	ln -sf `pwd`/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/gtk.css
+	ln -sf `pwd`/config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
 
 clean_gtk:
 	rm -Rf ~/.config/gtk-3.0/gtk.css
+	rm -Rf ~/.config/gtk-3.0/settings.css
 
 install_alacritty:
 	ln -sf `pwd`/config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
