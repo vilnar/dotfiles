@@ -21,12 +21,12 @@ nnoremap <Leader>h :nohlsearch<CR>
 
 
 # Move and indent lines on Ctrl+j and Ctrl+k
-nnoremap <C-S-j> :m .+1<CR>==
-nnoremap <C-S-k> :m .-2<CR>==
-inoremap <C-S-j> <Esc>:m .+1<CR>==gi
-inoremap <C-S-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-S-j> :m '>+1<CR>gv=gv
-vnoremap <C-S-k> :m '<-2<CR>gv=gv
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 
 

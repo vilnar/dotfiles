@@ -10,6 +10,7 @@ help:
 	@echo '   make all                         install everything                 '
 	@echo '   make install_bash                install bashrc                     '
 	@echo '   make install_vim                 install vim files                  '
+	@echo '   make install_geany               install geany files                '
 	@echo '   make install_git                 install git files                  '
 	@echo '   make export_bash                 export bash profile                '
 	@echo '   make install_gtk                 install gtk files                  '
@@ -19,7 +20,7 @@ help:
 	@echo 'to avoid conflicts                                                     '
 	@echo '                                                                       '
 
-all: install_bash install_vim install_git install_gtk install_alacritty
+all: install_bash install_vim install_geany install_git install_gtk install_alacritty
 	@echo ""
 	@echo "dotfiles install"
 	@echo "=================================="
@@ -38,6 +39,11 @@ clean_vim:
 	rm -Rf ~/.vimrc
 	rm -Rf ~/.vim
 
+install_geany: clean_geany
+	ln -sf `pwd`/config/geany ~/.config/
+
+clean_geany:
+	rm -Rf ~/.config/geany
 
 install_git: clean_git
 	cp `pwd`/gitconfig ~/.gitconfig

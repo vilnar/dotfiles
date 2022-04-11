@@ -55,6 +55,5 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
 Plug 'gruvbox-community/gruvbox', { 'commit': '9395ee71627d7202343c606a2e1d3c7967bfb256' }
-Plug 'jnurmine/Zenburn', { 'commit': 'de2fa06a93fe1494638ec7b2fdd565898be25de6' }
 
 call plug#end()

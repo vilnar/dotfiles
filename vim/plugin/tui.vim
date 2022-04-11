@@ -32,12 +32,10 @@ endif
 augroup MyColors
   autocmd ColorScheme gruvbox {
     highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
-    highlight Function ctermbg=NONE ctermfg=172 cterm=bold guibg=NONE guifg=#d79921 gui=bold
-    highlight CursorLine ctermbg=DarkGrey ctermfg=NONE cterm=NONE guibg=#32302f guifg=NONE gui=NONE
-  }
-  autocmd ColorScheme zenburn {
-    highlight markdownCode ctermbg=NONE ctermfg=174 cterm=NONE guibg=NONE guifg=#cc9393 gui=NONE
-    highlight markdownCodeBlock ctermbg=NONE ctermfg=174 cterm=NONE guibg=NONE guifg=#cc9393 gui=NONE
+    if &background == "dark"
+      highlight Function ctermbg=NONE ctermfg=172 cterm=bold guibg=NONE guifg=#d79921 gui=bold
+      highlight CursorLine ctermbg=DarkGrey ctermfg=NONE cterm=NONE guibg=#32302f guifg=NONE gui=NONE
+    endif
   }
 augroup end
 
@@ -52,14 +50,6 @@ g:gruvbox_hls_highlight = "purple"
 # # set background=light
 set background=dark
 colorscheme gruvbox
-
-
-# g:zenburn_color_also_Ignore = 1
-# g:zenburn_high_Contrast = 1
-# g:zenburn_alternate_Visual = 1
-# set background=dark
-# colorscheme zenburn
-
 
 
 # set linebreak
