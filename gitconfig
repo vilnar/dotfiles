@@ -4,6 +4,7 @@
     br = branch
     ci = commit
     hist = log --decorate --graph
+    hist-one = log --graph --abbrev-commit --decorate  --first-parent
     hist-all = log --decorate --graph --all
     hist-oneline = log --graph --oneline
     bsort = branch --sort=-committerdate
@@ -15,9 +16,10 @@
     unstage = reset HEAD
     show-files-in-commit = diff-tree --no-commit-id --name-only -r
     tagsort = tag -l --sort=v:refname
+    last-before-merge = log HEAD@{1} -1
 [core]
     editor = vim
 [diff]
-	tool = gvimdiff
+    tool = gvimdiff
 [merge]
-	tool = gvimdiff
+    tool = gvimdiff
