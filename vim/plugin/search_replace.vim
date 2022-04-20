@@ -36,11 +36,10 @@ def EscapeTextForReplace(is_whole_word: bool)
   var text = getreg('"')
   var text_esc = escape(text, ESCAPE_CHARS)
 
-  # ,$        - start from current position cursor
-  # 1,''-&&   - continue from first line from buffer
-  var scomm = ':,$s/' .. text_esc .. "//gc | 1,''-&&"
+  # ,$  - start from current position cursor
+  var scomm = ":,$s/" .. text_esc .. "//gc"
   if is_whole_word
-    scomm = ':,$s/\<' .. text_esc .. "\\>\\C//gc | 1,''-&&"
+    scomm = ":,$s/\<" .. text_esc .. "\\>\\C//gc"
   endif
   feedkeys(scomm)
 enddef

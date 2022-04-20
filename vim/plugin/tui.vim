@@ -7,18 +7,13 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 set signcolumn=number
 # set numberwidth=6
 
-set cursorline
-augroup MyCursorLine
-  autocmd OptionSet diff {
-    if &diff
-      &cursorline = 0
-      &list = 1
-    else
-      &cursorline = 1 
-      &list = 0
-    endif
-  }
-augroup end
+if &diff
+  set nocursorline
+  set list
+else
+  set cursorline
+  set nolist
+endif
 
 
 if (has("termguicolors"))
@@ -30,26 +25,37 @@ endif
 
 
 augroup MyColors
+  autocmd ColorScheme default {
+    highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
+    highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
+  }
   autocmd ColorScheme gruvbox {
     highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
     if &background == "dark"
-      highlight Function ctermbg=NONE ctermfg=172 cterm=bold guibg=NONE guifg=#d79921 gui=bold
-      highlight CursorLine ctermbg=DarkGrey ctermfg=NONE cterm=NONE guibg=#32302f guifg=NONE gui=NONE
+      highlight Function    ctermbg=NONE ctermfg=172 cterm=bold guibg=NONE guifg=#d79921 gui=bold
+      highlight CursorLine  ctermbg=DarkGrey ctermfg=NONE cterm=NONE guibg=#32302f guifg=NONE gui=NONE
+      highlight Visual      ctermbg=239 ctermfg=NONE cterm=bold guibg=#44475A guifg=NONE gui=bold
     endif
   }
 augroup end
 
-g:gruvbox_invert_selection = 0
-g:gruvbox_italic = 0
-g:gruvbox_underline = 1
-g:gruvbox_contrast_light = "hard"
-g:gruvbox_contrast_dark = "hard"
-g:gruvbox_guisp_fallback = "bg" # fix spell colors
-g:gruvbox_vert_split = "bg1"
-g:gruvbox_hls_highlight = "purple"
-# # set background=light
+# g:gruvbox_invert_selection = 0
+# g:gruvbox_italic = 0
+# g:gruvbox_underline = 1
+# g:gruvbox_contrast_light = "hard"
+# g:gruvbox_contrast_dark = "hard"
+# g:gruvbox_guisp_fallback = "bg" # fix spell colors
+# g:gruvbox_vert_split = "bg1"
+# g:gruvbox_hls_highlight = "purple"
+# set background=light
+# set background=dark
+# colorscheme gruvbox
+
+
+# set background=light
 set background=dark
-colorscheme gruvbox
+colorscheme PaperColor
+
 
 
 # set linebreak
@@ -64,8 +70,8 @@ set wildoptions=pum pumheight=20
 set shortmess-=S
 set showcmd
 # set complete=.,b,u,t 
-# set complete=.,t 
-set complete=. 
+set complete=.,t 
+# set complete=. 
 
 set splitbelow
 set title

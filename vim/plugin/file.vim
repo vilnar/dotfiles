@@ -31,6 +31,19 @@ enddef
 command FileRename RenameFile()
 
 
+def RemoveFile()
+  var path = expand('%:p')
+  if !filereadable(path)
+    echoerr "Not found file: " .. path
+    return
+  endif
+  execute "bdelete " .. expand('%')
+  execute "!gio trash " .. path
+  echomsg "File removed!"
+enddef
+command FileRemove RemoveFile()
+
+
 # Open current file with Encode
 nnoremap <Leader>ee :edit ++enc= %<left><left>
 
