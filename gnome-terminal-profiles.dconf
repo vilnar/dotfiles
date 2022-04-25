@@ -1,44 +1,32 @@
 [/]
 default='b58db4a4-6560-4f30-9b84-5e214968e781'
-list=['622dcd63-7efe-4085-8c23-b320b778372e', '7be77ef6-b29a-49fe-aaee-04c4db3aa5d8', 'faff35c6-04e4-49d0-ab0b-3c118e2ef6c1', 'b58db4a4-6560-4f30-9b84-5e214968e781', 'c80b4b19-9fc5-4160-8bfa-0b0fb308ff19']
+list=['b58db4a4-6560-4f30-9b84-5e214968e781', 'c80b4b19-9fc5-4160-8bfa-0b0fb308ff19', '8c6244de-7e3c-46b0-94d7-b9e4afbfd533']
 
-[:622dcd63-7efe-4085-8c23-b320b778372e]
+[:8c6244de-7e3c-46b0-94d7-b9e4afbfd533]
 audible-bell=false
-background-color='rgb(28,28,28)'
-bold-is-bright=true
-cell-height-scale=1.2000000000000002
-cursor-blink-mode='off'
-default-size-columns=120
-encoding='ISO-8859-5'
-foreground-color='rgb(208,208,208)'
-palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
-use-theme-colors=false
-use-theme-transparency=false
-use-transparent-background=false
-visible-name='test_encode'
-
-[:7be77ef6-b29a-49fe-aaee-04c4db3aa5d8]
-background-color='rgb(247,247,247)'
+background-color='rgb(242,238,222)'
 bold-color-same-as-fg=true
 bold-is-bright=false
-cell-height-scale=1.2000000000000002
+cell-height-scale=1.0
+cell-width-scale=1.0
 cursor-blink-mode='off'
 cursor-colors-set=false
 default-size-columns=100
 foreground-color='rgb(0,0,0)'
 highlight-colors-set=false
-palette=['rgb(0,0,0)', 'rgb(179,0,0)', 'rgb(8,103,8)', 'rgb(170,85,0)', 'rgb(50,92,192)', 'rgb(160,75,115)', 'rgb(52,120,120)', 'rgb(240,240,240)', 'rgb(85,85,85)', 'rgb(218,105,105)', 'rgb(42,156,42)', 'rgb(223,223,61)', 'rgb(191,219,254)', 'rgb(123,43,94)', 'rgb(103,224,224)', 'rgb(247,247,247)']
+palette=['rgb(0,0,0)', 'rgb(204,62,40)', 'rgb(33,102,9)', 'rgb(181,137,0)', 'rgb(30,111,204)', 'rgb(92,33,165)', 'rgb(21,140,134)', 'rgb(170,170,170)', 'rgb(85,85,85)', 'rgb(204,62,40)', 'rgb(33,102,9)', 'rgb(181,137,0)', 'rgb(30,111,204)', 'rgb(92,33,165)', 'rgb(21,140,134)', 'rgb(170,170,170)']
 text-blink-mode='never'
 use-theme-colors=false
 use-theme-transparency=false
-visible-name='light'
+use-transparent-background=false
+visible-name='paper'
 
 [:b58db4a4-6560-4f30-9b84-5e214968e781]
 audible-bell=false
 background-color='rgb(29,32,33)'
 bold-color-same-as-fg=true
 bold-is-bright=false
-cell-height-scale=1.2000000000000002
+cell-height-scale=1.0
 cell-width-scale=1.0
 cursor-blink-mode='off'
 cursor-colors-set=false
@@ -46,6 +34,7 @@ default-size-columns=100
 foreground-color='rgb(235,219,178)'
 highlight-colors-set=false
 palette=['rgb(40,40,40)', 'rgb(204,36,29)', 'rgb(152,151,26)', 'rgb(215,153,33)', 'rgb(69,133,136)', 'rgb(177,98,134)', 'rgb(104,157,106)', 'rgb(168,153,132)', 'rgb(146,131,116)', 'rgb(251,73,52)', 'rgb(184,187,38)', 'rgb(250,189,47)', 'rgb(131,165,152)', 'rgb(211,134,155)', 'rgb(142,192,124)', 'rgb(235,219,178)']
+text-blink-mode='never'
 use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
@@ -56,7 +45,7 @@ audible-bell=false
 background-color='rgb(249,245,215)'
 bold-color-same-as-fg=true
 bold-is-bright=false
-cell-height-scale=1.2000000000000002
+cell-height-scale=1.0
 cell-width-scale=1.0
 cursor-blink-mode='off'
 cursor-colors-set=false
@@ -64,25 +53,8 @@ default-size-columns=100
 foreground-color='rgb(60,56,54)'
 highlight-colors-set=false
 palette=['rgb(251,241,199)', 'rgb(204,36,29)', 'rgb(152,151,26)', 'rgb(215,153,33)', 'rgb(69,133,136)', 'rgb(177,98,134)', 'rgb(104,157,106)', 'rgb(124,111,100)', 'rgb(146,131,116)', 'rgb(157,0,6)', 'rgb(121,116,14)', 'rgb(181,118,20)', 'rgb(7,102,120)', 'rgb(143,63,113)', 'rgb(66,123,88)', 'rgb(60,56,54)']
+text-blink-mode='never'
 use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
 visible-name='gruvbox-light'
-
-[:faff35c6-04e4-49d0-ab0b-3c118e2ef6c1]
-audible-bell=false
-background-color='rgb(30,30,30)'
-bold-color-same-as-fg=true
-bold-is-bright=false
-cell-height-scale=1.2000000000000002
-cell-width-scale=1.0
-cursor-blink-mode='off'
-cursor-colors-set=false
-default-size-columns=100
-foreground-color='rgb(232,232,211)'
-highlight-colors-set=false
-palette=['rgb(65,65,65)', 'rgb(232,113,116)', 'rgb(147,185,126)', 'rgb(255,185,129)', 'rgb(100,134,153)', 'rgb(225,192,246)', 'rgb(0,152,142)', 'rgb(222,222,222)', 'rgb(189,189,189)', 'rgb(255,160,162)', 'rgb(184,187,38)', 'rgb(255,219,165)', 'rgb(171,217,243)', 'rgb(251,218,252)', 'rgb(0,179,168)', 'rgb(254,254,254)']
-use-theme-colors=false
-use-theme-transparency=false
-use-transparent-background=false
-visible-name='jellybeans'

@@ -10,17 +10,15 @@ help:
 	@echo '   make all                         install everything                 '
 	@echo '   make install_bash                install bashrc                     '
 	@echo '   make install_vim                 install vim files                  '
-	@echo '   make install_geany               install geany files                '
 	@echo '   make install_git                 install git files                  '
 	@echo '   make export_bash                 export bash profile                '
 	@echo '   make install_gtk                 install gtk files                  '
-	@echo '   make install_alacritty           install alacritty files            '
 	@echo '                                                                       '
 	@echo 'WARNING: when install configuration files, the files are first deleted '
 	@echo 'to avoid conflicts                                                     '
 	@echo '                                                                       '
 
-all: install_bash install_vim install_geany install_git install_gtk install_alacritty
+all: install_bash install_vim install_git install_gtk
 	@echo ""
 	@echo "dotfiles install"
 	@echo "=================================="
@@ -39,11 +37,6 @@ clean_vim:
 	rm -Rf ~/.vimrc
 	rm -Rf ~/.vim
 
-install_geany: clean_geany
-	ln -sf `pwd`/config/geany ~/.config/
-
-clean_geany:
-	rm -Rf ~/.config/geany
 
 install_git: clean_git
 	cp `pwd`/gitconfig ~/.gitconfig
@@ -64,6 +57,7 @@ clean_bash:
 export_bash:
 	dconf dump /org/gnome/terminal/legacy/profiles:/ > `pwd`/gnome-terminal-profiles.dconf
 
+
 install_gtk:
 	ln -sf `pwd`/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/gtk.css
 	ln -sf `pwd`/config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
@@ -71,9 +65,3 @@ install_gtk:
 clean_gtk:
 	rm -Rf ~/.config/gtk-3.0/gtk.css
 	rm -Rf ~/.config/gtk-3.0/settings.css
-
-install_alacritty:
-	ln -sf `pwd`/config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-
-clean_alacritty:
-	rm -Rf ~/.config/alacritty/alacritty.yml

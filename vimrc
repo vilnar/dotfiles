@@ -55,6 +55,6 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
 Plug 'gruvbox-community/gruvbox', { 'commit': '9395ee71627d7202343c606a2e1d3c7967bfb256' }
-Plug 'NLKNguyen/papercolor-theme', { 'commit': 'afde171829b1416125bf07a81fc28e4490aa91b2' }
+Plug 'https://gitlab.com/yorickpeterse/vim-paper.git', { 'commit': '93e06e7066b3e0f609e5cfc75d0589f0599e9fad' }
 
 call plug#end()
