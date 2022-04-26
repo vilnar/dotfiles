@@ -29,10 +29,6 @@ augroup MyColors
     highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
     highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
   }
-  autocmd ColorScheme paper {
-    highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
-    highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
-  }
   autocmd ColorScheme gruvbox {
     highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
     if &background == "dark"
@@ -55,7 +51,7 @@ g:gruvbox_hls_highlight = "purple"
 # set background=light
 set background=dark
 colorscheme gruvbox
-# colorscheme paper
+# colorscheme grey
 
 
 # set linebreak
