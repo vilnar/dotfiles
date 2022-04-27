@@ -27,11 +27,11 @@ augroup MyColors
     highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
   }
   autocmd ColorScheme gruvbox {
-    highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
+    highlight Ignore  ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
     if &background == "dark"
       highlight Function    ctermbg=NONE ctermfg=172 cterm=bold guibg=NONE guifg=#d79921 gui=bold
       highlight CursorLine  ctermbg=DarkGrey ctermfg=NONE cterm=NONE guibg=#32302f guifg=NONE gui=NONE
-      highlight Visual      ctermbg=239 ctermfg=NONE cterm=bold guibg=#44475A guifg=NONE gui=bold
+      highlight Visual      ctermbg=241 ctermfg=16 cterm=NONE guibg=#665c54 guifg=#000000 gui=NONE
     endif
   }
 augroup end
