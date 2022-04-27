@@ -20,9 +20,6 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-# colorscheme lightsimple
-# colorscheme darksimple
-
 
 augroup MyColors
   autocmd ColorScheme default {
@@ -47,11 +44,9 @@ g:gruvbox_contrast_dark = "hard"
 g:gruvbox_guisp_fallback = "bg" # fix spell colors
 g:gruvbox_vert_split = "bg1"
 g:gruvbox_hls_highlight = "purple"
-
 # set background=light
 set background=dark
 colorscheme gruvbox
-# colorscheme grey
 
 
 # set linebreak
@@ -101,7 +96,6 @@ def g:StatuslineExpr(): string
   var readonly  = "%{&readonly ? '[RO] ' : ''}"
   var separate = " %= "
   var win_nr = "[%{winnr()}] "
-  # var fugitive = "%{exists('g:loaded_fugitive') ? fugitive#statusline() : ''}"
   # var fencoding  = "%{&fileencoding ? '['.&fileencoding.'] ' : '['.&encoding.'] '}"
   var ftype  = "%{len(&filetype) ? '['.&filetype.'] ' : ''}"
   var position = " %l:%c "
