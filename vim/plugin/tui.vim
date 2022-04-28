@@ -7,14 +7,7 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 set signcolumn=number
 # set numberwidth=6
 
-if &diff
-  set nocursorline
-  set list
-else
-  set cursorline
-  set nolist
-endif
-
+set cursorline
 
 if (has("termguicolors"))
   set termguicolors
@@ -31,7 +24,7 @@ augroup MyColors
     if &background == "dark"
       highlight Function    ctermbg=NONE ctermfg=172 cterm=bold guibg=NONE guifg=#d79921 gui=bold
       highlight CursorLine  ctermbg=DarkGrey ctermfg=NONE cterm=NONE guibg=#32302f guifg=NONE gui=NONE
-      highlight Visual      ctermbg=241 ctermfg=16 cterm=NONE guibg=#665c54 guifg=#000000 gui=NONE
+      highlight Visual      ctermbg=241 ctermfg=16 cterm=NONE guibg=#665c54 guifg=#EBDBB2 gui=NONE
     endif
   }
 augroup end
