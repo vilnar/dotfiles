@@ -30,8 +30,11 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 
 
-# copy line without newline
-nnoremap <Leader>l :normal ^vg_"+y<CR>
+def CopyWithoutNewLine()
+  execute ':normal ^vg_"+y$'
+  echomsg "copy without new line!"
+enddef
+nnoremap <Leader>l :vim9cmd <SID>CopyWithoutNewLine()<CR>
 
 # highlight
 def RunSearchUnderCursor()

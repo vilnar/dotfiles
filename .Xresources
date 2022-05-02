@@ -1,0 +1,59 @@
+! ~/.Xresources
+
+*international: true
+*customization: -color
+
+!## TERMINAL COMMON
+
+*color0:  #000000
+*color1:  #aa0000
+*color2:  #00aa00
+*color3:  #aa5522
+*color4:  #0000ee
+*color5:  #aa00aa
+*color6:  #00aaaa
+*color7:  #aaaaaa
+*color8:  #555555
+*color9:  #ff4444
+*color10: #44ff44
+*color11: #ffff00
+*color12: #5c5cff
+*color13: #ff00ff
+*color14: #00ffff
+*color15: #ffffff
+*colorBD: #ffffff
+
+!## XTERM
+XTerm.customization:     -none
+XTerm.background:        #000000
+XTerm.VT100.background:  #000000
+XTerm.foreground:        #aaaaaa
+XTerm.VT100.foreground:  #aaaaaa
+XTerm.termName:    xterm-256color
+XTerm*ttyModes:    start ^- stop ^-
+XTerm*boldMode:    false
+XTerm*allowBoldFonts: false
+XTerm*scrollBar:   false
+XTerm*colorBDMode: true
+XTerm*visualBell: false
+XTerm*bellIsUrgent: true
+XTerm*faceName: MONOSPACE
+XTerm*faceSize: 14
+
+!## RXVT
+Rxvt*visualBell:   false
+URxvt.urgentOnBell: true
+URxvt.termName: rxvt-256color
+
+Rxvt*scrollBar:    false
+URxvt.thickness: 4
+URxvt.scrollBar_floating: true
+URxvt.scrollstyle: plain
+
+Rxvt*background:   #000000
+Rxvt*foreground:   #aaaaaa
+URxvt.underlineColor: #777777
+URxvt.boldFont:
+URxvt.italicFont:
+URxvt.boldItalicFont:
+

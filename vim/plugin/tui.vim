@@ -1,5 +1,5 @@
-vim9script
 
+vim9script
 # Fix slow O inserts
 set timeout timeoutlen=1000 ttimeoutlen=100
 
@@ -19,10 +19,18 @@ augroup MyColors
     highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
     highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
   }
+  autocmd ColorScheme vividchalk {
+    highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
+    highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
+    highlight phpIdentifier ctermbg=NONE ctermfg=White cterm=NONE guibg=NONE guifg=#EEEEEE gui=NONE
+    highlight Ignore        ctermbg=NONE ctermfg=DarkMagenta cterm=NONE guibg=NONE guifg=#9933CC gui=NONE
+    highlight Search        cterm=underline gui=underline
+    highlight DiffText      guibg=#AA0000
+  }
   autocmd ColorScheme gruvbox {
     highlight Ignore  ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
     if &background == "dark"
-      highlight Function    ctermbg=NONE ctermfg=172 cterm=bold guibg=NONE guifg=#d79921 gui=bold
+      highlight Function    ctermbg=NONE ctermfg=172 cterm=NONE guibg=NONE guifg=#d79921 gui=NONE
       highlight CursorLine  ctermbg=DarkGrey ctermfg=NONE cterm=NONE guibg=#32302f guifg=NONE gui=NONE
       highlight Visual      ctermbg=241 ctermfg=16 cterm=NONE guibg=#665c54 guifg=#EBDBB2 gui=NONE
     endif
@@ -38,8 +46,29 @@ g:gruvbox_guisp_fallback = "bg" # fix spell colors
 g:gruvbox_vert_split = "bg1"
 g:gruvbox_hls_highlight = "purple"
 # set background=light
-set background=dark
-colorscheme gruvbox
+# set background=dark
+# colorscheme gruvbox
+colorscheme vividchalk
+if get(g:, 'colors_name', 'default') == "vividchalk"
+  g:terminal_ansi_colors = [
+    '#000000',
+    '#aa0000',
+    '#00aa00',
+    '#aa5522',
+    '#0000ee',
+    '#aa00aa',
+    '#00aaaa',
+    '#aaaaaa',
+    '#555555',
+    '#ff4444',
+    '#44ff44',
+    '#ffff00',
+    '#5c5cff',
+    '#ff00ff',
+    '#00ffff',
+    '#ffffff'
+    ]
+endif
 
 
 # set linebreak
