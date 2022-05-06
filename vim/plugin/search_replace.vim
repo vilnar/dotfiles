@@ -5,7 +5,8 @@ const ESCAPE_CHARS = '\~ \* \$ \[ \] /\'
 # search multilines
 def EscapeSearchTextMultiLines(text: string, pat: string)
   var text_esc = substitute(escape(text, ESCAPE_CHARS), pat, '\\n', 'g')
-  var scom = '\V' .. text_esc
+  # var scom = '\V' .. text_esc
+  var scom = text_esc
   @/ = scom
   histadd('/', scom)
 enddef
@@ -19,7 +20,8 @@ nnoremap <Leader>sm :SearchMultiLine<space>
 # search
 def EscapeSearchText(text: string)
   var text_esc = escape(text, ESCAPE_CHARS)
-  var scom = '\V' .. text_esc
+  # var scom = '\V' .. text_esc
+  var scom = text_esc
   @/ = scom
   histadd('/', scom)
 enddef

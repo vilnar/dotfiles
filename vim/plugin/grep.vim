@@ -1,8 +1,8 @@
 vim9script
 
 # grep in project
-nnoremap <Leader>gg :Dispatch grep -rni --exclude="tags" --exclude-dir=".git" -e '' ./<left><left><left><left>
-vnoremap <Leader>gg y:Dispatch grep -rni --exclude="tags" --exclude-dir=".git" -e '<C-R>"' ./
+nnoremap <Leader>gg :Dispatch grep -rni --exclude="tags" --exclude-dir=".git" '' ./<left><left><left><left>
+vnoremap <Leader>gg y:Dispatch grep -rn --exclude="tags" --exclude-dir=".git" '<C-R>"' ./
 
 
 def GetRelativePathForGrep(): string
@@ -19,15 +19,15 @@ def GetRelativePathForGrep(): string
 enddef
 
 # grep in current directory
-nnoremap <expr> <Leader>gd ":Dispatch grep -rnie '' " ..  <SID>GetRelativePathForGrep()
-vnoremap <expr> <Leader>gd "y:Dispatch grep -rnie '<C-R>\"' " ..  <SID>GetRelativePathForGrep()
+nnoremap <expr> <Leader>gd ":Dispatch grep -rni '' " ..  <SID>GetRelativePathForGrep()
+vnoremap <expr> <Leader>gd "y:Dispatch grep -rn '<C-R>\"' " ..  <SID>GetRelativePathForGrep()
 
 # grep by filetype
-nnoremap <Leader>gi :Dispatch grep -rni --include=*.go -e '' ./<left><left><left><left>
+nnoremap <Leader>gi :Dispatch grep -rn --include=*.go '' ./<left><left><left><left>
 
 # grep in current buffer
-noremap <expr> <Leader>gb ":Dispatch grep -nirHe '' " .. expand('%') 
-vnoremap <expr> <Leader>gb "y:Dispatch grep -nrHe '<C-R>\"' " .. expand('%') 
+noremap <expr> <Leader>gb ":Dispatch grep -nirH '' " .. expand('%') 
+vnoremap <expr> <Leader>gb "y:Dispatch grep -nrH '<C-R>\"' " .. expand('%') 
 
 
 def SearchInOpenedBuffers(pattern: string)

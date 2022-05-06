@@ -7,7 +7,7 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 set signcolumn=number
 # set numberwidth=6
 
-set cursorline
+set nocursorline
 
 if (has("termguicolors"))
   set termguicolors
@@ -18,6 +18,12 @@ augroup MyColors
   autocmd ColorScheme default {
     highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
     highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
+  }
+  autocmd ColorScheme iceberg {
+    if &background == "light"
+      highlight Identifier cterm=NONE ctermfg=237 guifg=#33374c
+      highlight SpecialKey cterm=NONE ctermfg=10 guifg=#5FD7A7
+    endif
   }
   autocmd ColorScheme vividchalk {
     highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
@@ -45,30 +51,31 @@ g:gruvbox_contrast_dark = "hard"
 g:gruvbox_guisp_fallback = "bg" # fix spell colors
 g:gruvbox_vert_split = "bg1"
 g:gruvbox_hls_highlight = "purple"
-# set background=light
 # set background=dark
 # colorscheme gruvbox
-colorscheme vividchalk
-if get(g:, 'colors_name', 'default') == "vividchalk"
-  g:terminal_ansi_colors = [
-    '#000000',
-    '#aa0000',
-    '#00aa00',
-    '#aa5522',
-    '#0000ee',
-    '#aa00aa',
-    '#00aaaa',
-    '#aaaaaa',
-    '#555555',
-    '#ff4444',
-    '#44ff44',
-    '#ffff00',
-    '#5c5cff',
-    '#ff00ff',
-    '#00ffff',
-    '#ffffff'
-    ]
-endif
+# colorscheme vividchalk
+# if get(g:, 'colors_name', 'default') == "vividchalk"
+#   g:terminal_ansi_colors = [
+#     '#000000',
+#     '#aa0000',
+#     '#00aa00',
+#     '#aa5522',
+#     '#0000ee',
+#     '#aa00aa',
+#     '#00aaaa',
+#     '#aaaaaa',
+#     '#555555',
+#     '#ff4444',
+#     '#44ff44',
+#     '#ffff00',
+#     '#5c5cff',
+#     '#ff00ff',
+#     '#00ffff',
+#     '#ffffff'
+#     ]
+# endif
+set background=light
+colorscheme iceberg
 
 
 # set linebreak

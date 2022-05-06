@@ -15,10 +15,11 @@ if !exists("g:ReloadConfigs")
     execute 'source ~/.vim/plugin/settings.vim'
     execute 'source ~/.vim/plugin/custom.vim'
     execute 'source ~/.vim/plugin/tui.vim'
+    execute 'source ~/.vim/plugin/search_replace.vim'
     execute 'source ~/.vim/plugin/test.vim'
     execute 'source ~/.vim/plugin/macros.vim'
     if has("gui_running")
-      execute 'source ~/.vim/.gvimrc'
+      execute 'source ~/.vim/gvimrc'
     endif
     if !is_empty_buffer && !is_empty_bufname
       execute 'edit'

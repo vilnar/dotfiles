@@ -7,8 +7,7 @@ g:fzf_history_dir = '~/.fzf-history'
 # $FZF_DEFAULT_OPTS = '+i'
 
 def RunMyTags(query: string)
-  # +i - Case-sensitive match
-  var spec = {"options": ["+i"], "placeholder": "--tag {2}:{-1}:{3..}"}
+  var spec = {"options": ["+i", "--preview-window", "down"], "placeholder": "--tag {2}:{-1}:{3..}"}
   call fzf#vim#tags(query, fzf#vim#with_preview(spec), 0)
 enddef
 command -bang -nargs=* MyTags call RunMyTags(<q-args>)
