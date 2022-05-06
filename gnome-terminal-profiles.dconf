@@ -1,6 +1,44 @@
 [/]
-default='b58db4a4-6560-4f30-9b84-5e214968e781'
-list=['b58db4a4-6560-4f30-9b84-5e214968e781', 'c80b4b19-9fc5-4160-8bfa-0b0fb308ff19']
+default='3942c3ce-a804-47f9-bdfe-9fe753791a05'
+list=['b58db4a4-6560-4f30-9b84-5e214968e781', 'c80b4b19-9fc5-4160-8bfa-0b0fb308ff19', '520c373b-7acb-4bb9-9eb3-ad568581f84d', '3942c3ce-a804-47f9-bdfe-9fe753791a05']
+
+[:3942c3ce-a804-47f9-bdfe-9fe753791a05]
+audible-bell=false
+background-color='rgb(232,233,236)'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cell-height-scale=1.0
+cell-width-scale=1.0
+cursor-blink-mode='off'
+cursor-colors-set=false
+default-size-columns=100
+foreground-color='rgb(51,55,76)'
+highlight-colors-set=false
+palette=['rgb(220,223,231)', 'rgb(204,81,122)', 'rgb(102,142,61)', 'rgb(197,115,57)', 'rgb(45,83,158)', 'rgb(119,89,180)', 'rgb(63,131,166)', 'rgb(51,55,76)', 'rgb(131,137,163)', 'rgb(204,55,104)', 'rgb(89,128,48)', 'rgb(182,102,45)', 'rgb(34,71,142)', 'rgb(104,69,173)', 'rgb(50,118,152)', 'rgb(38,42,63)']
+text-blink-mode='never'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='iceberg'
+
+[:520c373b-7acb-4bb9-9eb3-ad568581f84d]
+audible-bell=false
+background-color='rgb(0,0,0)'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cell-height-scale=1.0
+cell-width-scale=1.0
+cursor-blink-mode='off'
+cursor-colors-set=false
+default-size-columns=100
+foreground-color='rgb(170,170,170)'
+highlight-colors-set=false
+palette=['rgb(0,0,0)', 'rgb(170,0,0)', 'rgb(0,170,0)', 'rgb(170,85,34)', 'rgb(79,118,161)', 'rgb(170,0,170)', 'rgb(0,170,170)', 'rgb(170,170,170)', 'rgb(85,85,85)', 'rgb(255,68,68)', 'rgb(68,255,68)', 'rgb(255,255,0)', 'rgb(92,92,255)', 'rgb(255,0,255)', 'rgb(0,255,255)', 'rgb(255,255,255)']
+text-blink-mode='never'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='tpope'
 
 [:b58db4a4-6560-4f30-9b84-5e214968e781]
 audible-bell=false
