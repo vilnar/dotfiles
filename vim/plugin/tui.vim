@@ -1,4 +1,3 @@
-
 vim9script
 # Fix slow O inserts
 set timeout timeoutlen=1000 ttimeoutlen=100
@@ -22,7 +21,8 @@ augroup MyColors
   autocmd ColorScheme iceberg {
     if &background == "light"
       highlight Identifier cterm=NONE ctermfg=237 guifg=#33374c
-      highlight SpecialKey cterm=NONE ctermfg=10 guifg=#5FD7A7
+      highlight SpecialKey cterm=NONE ctermfg=248 guifg=#a5b0d3 guibg=#DCDFE7
+      highlight NonText cterm=NONE ctermfg=248 guifg=#a5b0d3 guibg=#DCDFE7
     endif
   }
   autocmd ColorScheme vividchalk {
@@ -33,49 +33,48 @@ augroup MyColors
     highlight Search        cterm=underline gui=underline
     highlight DiffText      guibg=#AA0000
   }
-  autocmd ColorScheme gruvbox {
-    highlight Ignore  ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
-    if &background == "dark"
-      highlight Function    ctermbg=NONE ctermfg=172 cterm=NONE guibg=NONE guifg=#d79921 gui=NONE
-      highlight CursorLine  ctermbg=DarkGrey ctermfg=NONE cterm=NONE guibg=#32302f guifg=NONE gui=NONE
-      highlight Visual      ctermbg=241 ctermfg=16 cterm=NONE guibg=#665c54 guifg=#EBDBB2 gui=NONE
-    endif
-  }
 augroup end
 
-g:gruvbox_invert_selection = 0
-g:gruvbox_italic = 0
-g:gruvbox_underline = 1
-g:gruvbox_contrast_light = "hard"
-g:gruvbox_contrast_dark = "hard"
-g:gruvbox_guisp_fallback = "bg" # fix spell colors
-g:gruvbox_vert_split = "bg1"
-g:gruvbox_hls_highlight = "purple"
 # set background=dark
-# colorscheme gruvbox
 # colorscheme vividchalk
-# if get(g:, 'colors_name', 'default') == "vividchalk"
-#   g:terminal_ansi_colors = [
-#     '#000000',
-#     '#aa0000',
-#     '#00aa00',
-#     '#aa5522',
-#     '#0000ee',
-#     '#aa00aa',
-#     '#00aaaa',
-#     '#aaaaaa',
-#     '#555555',
-#     '#ff4444',
-#     '#44ff44',
-#     '#ffff00',
-#     '#5c5cff',
-#     '#ff00ff',
-#     '#00ffff',
-#     '#ffffff'
-#     ]
-# endif
+if get(g:, 'colors_name', 'default') == "vividchalk"
+  g:terminal_ansi_colors = [
+    '#000000',
+    '#aa0000',
+    '#00aa00',
+    '#aa5522',
+    '#0000ee',
+    '#aa00aa',
+    '#00aaaa',
+    '#aaaaaa',
+    '#555555',
+    '#ff4444',
+    '#44ff44',
+    '#ffff00',
+    '#5c5cff',
+    '#ff00ff',
+    '#00ffff',
+    '#ffffff'
+    ]
+endif
+
 set background=light
 colorscheme iceberg
+if get(g:, 'colors_name', 'default') == "iceberg"
+  g:fzf_colors = {'fg': ['fg', 'Normal'],
+  'bg':      ['bg', 'Normal'],
+  'hl':      ['fg', 'Comment'],
+  'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  'hl+':     ['fg', 'Normal'],
+  'info':    ['fg', 'PreProc'],
+  'border':  ['fg', 'Ignore'],
+  'prompt':  ['fg', 'Conditional'],
+  'pointer': ['fg', 'Exception'],
+  'marker':  ['fg', 'Keyword'],
+  'spinner': ['fg', 'Label'],
+  'header':  ['fg', 'Comment']}
+endif
 
 
 # set linebreak
