@@ -6,8 +6,6 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 set signcolumn=number
 # set numberwidth=6
 
-set nocursorline
-
 if (has("termguicolors"))
   set termguicolors
 endif
@@ -32,11 +30,13 @@ augroup MyColors
     highlight Ignore        ctermbg=NONE ctermfg=DarkMagenta cterm=NONE guibg=NONE guifg=#9933CC gui=NONE
     highlight Search        cterm=underline gui=underline
     highlight DiffText      guibg=#AA0000
+    highlight Error         guibg=#AA0000
+    highlight ErrorMsg      guibg=#AA0000
   }
 augroup end
 
-# set background=dark
-# colorscheme vividchalk
+set background=dark
+colorscheme vividchalk
 if get(g:, 'colors_name', 'default') == "vividchalk"
   g:terminal_ansi_colors = [
     '#000000',
@@ -58,8 +58,8 @@ if get(g:, 'colors_name', 'default') == "vividchalk"
     ]
 endif
 
-set background=light
-colorscheme iceberg
+# set background=light
+# colorscheme iceberg
 if get(g:, 'colors_name', 'default') == "iceberg"
   g:fzf_colors = {'fg': ['fg', 'Normal'],
   'bg':      ['bg', 'Normal'],
