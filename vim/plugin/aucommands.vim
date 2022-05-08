@@ -17,13 +17,3 @@ augroup KeepScreenPosition
     endif
   }
 augroup END
-
-augroup MyCursorLine
- autocmd BufEnter * {
-    if &diff
-      set nocursorline
-    else
-      set cursorline
-    endif
-  }
-augroup END

@@ -5,6 +5,7 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 # set number
 set signcolumn=number
 # set numberwidth=6
+set cursorline
 
 if (has("termguicolors"))
   set termguicolors
@@ -32,6 +33,8 @@ augroup MyColors
     highlight DiffText      guibg=#AA0000
     highlight Error         guibg=#AA0000
     highlight ErrorMsg      guibg=#AA0000
+    highlight SpecialKey    guifg=#494949
+    highlight NonText       guifg=#494949
   }
 augroup end
 
