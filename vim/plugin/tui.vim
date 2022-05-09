@@ -3,9 +3,10 @@ vim9script
 set timeout timeoutlen=1000 ttimeoutlen=100
 
 # set number
-set signcolumn=number
+# set signcolumn=number
 # set numberwidth=6
-set cursorline
+# set cursorline
+# set cursorlineopt=number
 
 if (has("termguicolors"))
   set termguicolors
@@ -30,6 +31,7 @@ augroup MyColors
     highlight phpIdentifier ctermbg=NONE ctermfg=White cterm=NONE guibg=NONE guifg=#EEEEEE gui=NONE
     highlight Ignore        ctermbg=NONE ctermfg=DarkMagenta cterm=NONE guibg=NONE guifg=#9933CC gui=NONE
     highlight Search        cterm=underline gui=underline
+    highlight CurSearch     cterm=underline gui=underline guibg=#B6662D
     highlight DiffText      guibg=#AA0000
     highlight Error         guibg=#AA0000
     highlight ErrorMsg      guibg=#AA0000

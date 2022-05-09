@@ -17,3 +17,19 @@ augroup KeepScreenPosition
     endif
   }
 augroup END
+
+
+set cursorline
+augroup MyCursorLine
+  autocmd VimEnter,WinEnter,BufWinEnter,WinLeave,BufWinLeave * {
+    if &diff
+      # set nocursorline
+      highlight CursorLine    cterm=underline ctermbg=NONE gui=underline guibg=NONE
+      highlight CursorColumn  cterm=underline ctermbg=NONE gui=underline guibg=NONE
+    else
+      # set cursorline
+      highlight CursorLine    cterm=NONE ctermbg=DarkGrey gui=NONE guibg=#333333
+      highlight CursorColumn  cterm=NONE ctermbg=DarkGrey gui=NONE guibg=#333333 
+    endif
+  }
+augroup END
