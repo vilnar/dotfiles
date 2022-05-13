@@ -12,6 +12,7 @@ if !exists("g:ReloadConfigs")
     execute 'source ~/.vim/plugin/mouse.vim'
     execute 'source ~/.vim/plugin/edit.vim'
     execute 'source ~/.vim/plugin/file.vim'
+    execute 'source ~/.vim/plugin/fzf.vim'
     execute 'source ~/.vim/plugin/settings.vim'
     execute 'source ~/.vim/plugin/custom.vim'
     execute 'source ~/.vim/plugin/tui.vim'

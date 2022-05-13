@@ -2,28 +2,31 @@ vim9script
 
 # https://github.com/junegunn/fzf.vim
 g:fzf_history_dir = '~/.fzf-history'
-# g:fzf_preview_window = []
 
-# $FZF_DEFAULT_OPTS = '+i'
 
 def RunMyTags(query: string)
-  var spec = {"options": ["+i", "--preview-window", "down"], "placeholder": "--tag {2}:{-1}:{3..}"}
+  var spec = {"options": ["--preview-window", "down", "--nth", "1,2,3", "+i"], "placeholder": "--tag {2}:{-1}:{3..}"}
   call fzf#vim#tags(query, fzf#vim#with_preview(spec), 0)
 enddef
 command -bang -nargs=* MyTags call RunMyTags(<q-args>)
 
-def RunMyBufferTags(query: string)
-  var spec = {"options": ["+i"], "placeholder": "{2}:{3..}"}
+def RunMyBufferTags(query: string, is_case_sensitive: bool)
+  var spec = {"options": ["--preview-window", "down", "--nth", "1,2"], "placeholder": "{2}:{3..}"}
+  if is_case_sensitive
+    spec = {"options": ["--preview-window", "down", "--nth", "1,2", "+i"], "placeholder": "{2}:{3..}"}
+  endif
   call fzf#vim#buffer_tags(query, fzf#vim#with_preview(spec), 0)
 enddef
-command -bang -nargs=* MyBufferTags call RunMyBufferTags(<q-args>)
+command -bang -nargs=* MyBufferTagsCaseSensitive call RunMyBufferTags(<q-args>, true)
+command -bang -nargs=* MyBufferTags call RunMyBufferTags(<q-args>, false)
 
 nnoremap <silent><nowait> <leader>; :Commands<CR>
 # nnoremap <leader>tt :Tags '<C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>tt :MyTags <C-R>=expand("<cword>")<CR><CR>
 # nnoremap <leader>tb :BTags '<C-R>=expand("<cword>")<CR><CR> 
-nnoremap <leader>tb :MyBufferTags <C-R>=expand("<cword>")<CR><CR> 
-nnoremap <leader>tf :BTags<CR>
+nnoremap <leader>tb :MyBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR> 
+# nnoremap <leader>tf :BTags<CR>
+nnoremap <leader>tf :MyBufferTags<CR>
 nnoremap <silent><nowait> <leader>i :Snippets<CR>
 
 

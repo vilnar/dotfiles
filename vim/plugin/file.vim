@@ -12,6 +12,13 @@ command PathDirCopyRelative :vim9cmd CopyPath(expand('%:h'))
 command PathFileCopyAbsolute :vim9cmd CopyPath(expand('%:p'))
 command PathFileCopyRelative :vim9cmd CopyPath(expand('%'))
 
+def CopyPathWithLine(path: string)
+  var path_with_line = path .. ':' .. line(".")
+  @+ = path_with_line
+  echo "copied to clipboard path with line: " .. path_with_line
+enddef
+command PathFileWithLine :vim9cmd CopyPathWithLine(expand('%')) 
+
 command FileCopyNameAll :vim9cmd CopyPath(expand('%:t'))
 command FileCopyName :vim9cmd CopyPath(expand('%:t:r'))
 # command FileCopyName :vim9cmd exe "@+ = expand('%:t')"
