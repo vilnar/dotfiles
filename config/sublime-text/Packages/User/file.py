@@ -27,14 +27,14 @@ class FileDeleteCommand(sublime_plugin.WindowCommand):
         # self.window.active_view().close()
         self.window.status_message("gio trash done!")
 
+    def is_enabled(self):
+        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
+
 
 class OpenFileInNewWindow(sublime_plugin.TextCommand):
     def run(self, edit):
         window = self.view.window()
         path = self.view.file_name()
-        if not path:
-            window.status_message("View is temp, don't open in new window")
-            return
         if not os.path.exists(path):
             print("{} File not found in path: {}".format(PLUGIN_PATH, path))
             window.run_command("show_panel", args={'panel': 'console'})
@@ -43,6 +43,9 @@ class OpenFileInNewWindow(sublime_plugin.TextCommand):
         sublime.run_command("new_window")
         sublime.active_window().open_file(path)
         sublime.set_timeout(lambda: sublime.status_message('New window open!!!'), 0)
+
+    def is_enabled(self):
+        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
 
 
 class OpenFileInVim(sublime_plugin.TextCommand):
@@ -68,28 +71,52 @@ class OpenFileInVim(sublime_plugin.TextCommand):
             return
         sublime.set_timeout(lambda: sublime.status_message('Open file in vim'), 0)
 
+    def is_enabled(self):
+        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
+
 
 class CopyCurrentFolderPathCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         window = self.view.window()
         path = self.view.file_name()
-        if not os.path.exists(path):
-            print("{} File not found in path: {}".format(PLUGIN_PATH, path))
-            window.run_command("show_panel", args={'panel': 'console'})
-            return
+
         dirPath = os.path.dirname(path)
         sublime.set_clipboard(dirPath)
         window.status_message("Copied {} to clipboard".format(dirPath))
+
+    def is_enabled(self):
+        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
 
 
 class CopyFileNameCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         window = self.view.window()
         path = self.view.file_name()
-        if not os.path.exists(path):
-            print("{} File not found in path: {}".format(PLUGIN_PATH, path))
-            window.run_command("show_panel", args={'panel': 'console'})
-            return
+
         name = os.path.split(path)[1]
         sublime.set_clipboard(name)
         window.status_message("Copied {} to clipboard".format(name))
+
+    def is_enabled(self):
+        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
+
+class CopyFilePathWithLineCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        window = self.view.window()
+        path = self.view.file_name()
+        root_paths = window.folders()
+
+        relative_path = path
+        for root in root_paths:
+            if path.startswith(root):
+                relative_path = os.path.relpath(path, root)
+                break
+
+        line = self.view.rowcol(self.view.sel()[0].begin())[0] + 1
+
+        result = "{}:{}".format(relative_path, line)
+        sublime.set_clipboard(result)
+        window.status_message("Copied {} to clipboard".format(result))
+
+    def is_enabled(self):
+        return bool(self.view.file_name() and len(self.view.file_name()) > 0)

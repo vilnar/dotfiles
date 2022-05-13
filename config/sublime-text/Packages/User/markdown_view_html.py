@@ -27,10 +27,6 @@ class MarkdownViewHtmlCommand(sublime_plugin.TextCommand):
     def run(self, edit, target='browser'):
 
         file_path = self.view.file_name()
-        if not is_markdown(self.view):
-            print("{} Stop MarkdownViewHtml. File not markdown!".format(PLUGIN_PATH))
-            self.view.window().run_command("show_panel", args={'panel': 'console'})
-            return
 
         tmp_html_path = get_temp_preview_path(self.view)
         pp = subprocess.run(
@@ -56,6 +52,9 @@ class MarkdownViewHtmlCommand(sublime_plugin.TextCommand):
             #     return
 
         self.view.window().status_message("MarkdownViewHtml done!")
+
+    def is_enabled(self):
+        return is_markdown(self.view)
 
 class MarkdownViewHtmlListener(sublime_plugin.EventListener):
 
