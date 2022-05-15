@@ -12,6 +12,16 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+set cursorline
+augroup MyCursorLine
+  autocmd VimEnter,WinEnter,BufWinEnter,WinLeave,BufWinLeave * {
+      if &diff
+        set nocursorline
+      else
+        set cursorline
+      endif
+  }
+augroup END
 
 augroup MyColors
   autocmd ColorScheme default {
