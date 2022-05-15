@@ -13,8 +13,6 @@ help:
 	@echo '   make install_git                 install git files                  '
 	@echo '   make export_bash                 export bash profile                '
 	@echo '   make install_gtk                 install gtk files                  '
-	@echo '   make install_sublime_text        install sublime text files         '
-	@echo '   make install_sublime_merge       install sublime merge files        '
 	@echo '                                                                       '
 	@echo 'WARNING: when install configuration files, the files are first deleted '
 	@echo 'to avoid conflicts                                                     '
@@ -67,19 +65,3 @@ install_gtk:
 clean_gtk:
 	rm -Rf ~/.config/gtk-3.0/gtk.css
 	rm -Rf ~/.config/gtk-3.0/settings.css
-
-install_sublime_text: clear_sublime_text
-	@echo Place sublime-text config files
-	ln -sf `pwd`/config/sublime-text/Packages/User   ~/.config/sublime-text/Packages/User
-# 	TODO: add clone packages
-
-clear_sublime_text:
-	rm -Rf ~/.config/sublime-text/Packages/User
-
-
-install_sublime_merge: clear_sublime_merge
-	@echo Place sublime-merge config files
-	ln -sf `pwd`/config/sublime-merge/Packages/User   ~/.config/sublime-merge/Packages/User
-
-clear_sublime_merge:
-	rm -Rf ~/.config/sublime-merge/Packages/User
