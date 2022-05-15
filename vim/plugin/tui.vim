@@ -48,10 +48,14 @@ augroup MyColors
     highlight SpecialKey    guifg=#494949
     highlight NonText       guifg=#494949
   }
+  autocmd ColorScheme zenburn {
+    highlight Search cterm=underline gui=underline
+    highlight CurSearch guifg=#f8f893 guibg=#385f38 ctermfg=228 ctermbg=23 cterm=underline gui=underline
+  }
 augroup end
 
-set background=dark
-colorscheme vividchalk
+# set background=dark
+# colorscheme vividchalk
 if get(g:, 'colors_name', 'default') == "vividchalk"
   g:terminal_ansi_colors = [
     '#000000',
@@ -90,6 +94,15 @@ if get(g:, 'colors_name', 'default') == "iceberg"
   'spinner': ['fg', 'Label'],
   'header':  ['fg', 'Comment']}
 endif
+
+
+g:zenburn_high_Contrast = 0
+g:zenburn_italic_Comment = 0
+g:zenburn_color_also_Ignore = 1
+g:zenburn_alternate_Visual = 1
+g:zenburn_alternate_Error = 0
+g:zenburn_disable_Label_underline = 1
+colorscheme zenburn
 
 
 # set linebreak

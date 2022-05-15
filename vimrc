@@ -56,5 +56,6 @@ Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312caf
 
 Plug 'tpope/vim-vividchalk', { 'commit': 'be5c6251279bfcfa55cdea8c9a8ccd7a56c8a642' }
 Plug 'cocopon/iceberg.vim', { 'commit': '5ac9da61e8626d1218498a35e515f36387efe454' }
+Plug 'jnurmine/Zenburn', { 'commit': 'de2fa06a93fe1494638ec7b2fdd565898be25de6' }
 
 call plug#end()
