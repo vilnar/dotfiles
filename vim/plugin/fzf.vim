@@ -51,3 +51,6 @@ def GotoSelection()
   feedkeys(text)
 enddef
 xnoremap <leader>ff y:vim9cmd <SID>GotoSelection()<CR>
+
+
+nnoremap <leader>mm :Marks<CR>

@@ -1,9 +1,0 @@
-<snippet>
-<content><![CDATA[
-fmt.Printf("%#v\n", $1)
-]]>
-</content>
-    <tabTrigger>ddpr</tabTrigger>
-    <scope>source.go</scope>
-    <description>print variable</description>
-</snippet>
