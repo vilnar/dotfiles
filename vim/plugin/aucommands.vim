@@ -17,3 +17,7 @@ augroup KeepScreenPosition
     endif
   }
 augroup END
+
+# autocmd FileType fugitive set bufhidden=delete
+# autocmd FileType fugitive set bufhidden=hide
+autocmd FileType fugitive set bufhidden=
