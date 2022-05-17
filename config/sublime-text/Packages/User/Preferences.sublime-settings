@@ -1,7 +1,7 @@
 {
   // autocomplete
-  "auto_complete": false,
-  "auto_complete_use_index": false,
+  "auto_complete": true,
+  "auto_complete_use_index": true,
   "auto_complete_commit_on_tab": true,
   "auto_complete_with_fields": true,
   "tab_completion": false,
@@ -29,7 +29,7 @@
 
   // lines
   "line_numbers": true,
-  "highlight_line": true,
+  "highlight_line": false,
   // gutter
   "margin": 0,
   "caret_style": "solid",
@@ -81,7 +81,7 @@
   ],
 
   // behaviors
-  "save_on_focus_lost": true,
+  "save_on_focus_lost": false,
   "reveal_menu": false,
   "update_check": false,
   "drag_text": false,
@@ -97,6 +97,6 @@
   "dictionary": "Packages/Dictionaries/Ukrainian_uk_UA.dic",
   "ignored_packages":
   [
-		"Vintage",
+    "Vintage",
   ],
 }

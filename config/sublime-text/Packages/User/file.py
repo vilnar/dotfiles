@@ -6,6 +6,9 @@ import subprocess
 
 PLUGIN_PATH = "User/file.py"
 
+def is_file_exist(view):
+    return bool(view.file_name() and len(view.file_name()) > 0)
+
 class FileDeleteCommand(sublime_plugin.WindowCommand):
     def run(self):
         path = self.window.extract_variables().get('file')
@@ -28,7 +31,10 @@ class FileDeleteCommand(sublime_plugin.WindowCommand):
         self.window.status_message("gio trash done!")
 
     def is_enabled(self):
-        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
+        return is_file_exist(self.window.active_view())
+
+    def is_visible(self):
+        return is_file_exist(self.window.active_view())
 
 
 class OpenFileInNewWindow(sublime_plugin.TextCommand):
@@ -45,7 +51,10 @@ class OpenFileInNewWindow(sublime_plugin.TextCommand):
         sublime.set_timeout(lambda: sublime.status_message('New window open!!!'), 0)
 
     def is_enabled(self):
-        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
+        return is_file_exist(self.view)
+
+    def is_visible(self):
+        return is_file_exist(self.view)
 
 
 class OpenFileInVim(sublime_plugin.TextCommand):
@@ -72,7 +81,10 @@ class OpenFileInVim(sublime_plugin.TextCommand):
         sublime.set_timeout(lambda: sublime.status_message('Open file in vim'), 0)
 
     def is_enabled(self):
-        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
+        return is_file_exist(self.view)
+
+    def is_visible(self):
+        return is_file_exist(self.view)
 
 
 class CopyCurrentFolderPathCommand(sublime_plugin.TextCommand):
@@ -85,7 +97,10 @@ class CopyCurrentFolderPathCommand(sublime_plugin.TextCommand):
         window.status_message("Copied {} to clipboard".format(dirPath))
 
     def is_enabled(self):
-        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
+        return is_file_exist(self.view)
+
+    def is_visible(self):
+        return is_file_exist(self.view)
 
 
 class CopyFileNameCommand(sublime_plugin.TextCommand):
@@ -98,7 +113,10 @@ class CopyFileNameCommand(sublime_plugin.TextCommand):
         window.status_message("Copied {} to clipboard".format(name))
 
     def is_enabled(self):
-        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
+        return is_file_exist(self.view)
+
+    def is_visible(self):
+        return is_file_exist(self.view)
 
 class CopyFilePathWithLineCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -119,4 +137,7 @@ class CopyFilePathWithLineCommand(sublime_plugin.TextCommand):
         window.status_message("Copied {} to clipboard".format(result))
 
     def is_enabled(self):
-        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
+        return is_file_exist(self.view)
+
+    def is_visible(self):
+        return is_file_exist(self.view)

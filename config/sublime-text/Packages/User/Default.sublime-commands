@@ -8,4 +8,5 @@
   { "caption": "Open File In Vim", "command": "open_file_in_vim" },
   { "caption": "Clone To New View", "command": "clone_file_to_new_view" },
   { "caption": "Selected To New Tab", "command": "open_new_tab_with_selected_text" },
+  { "caption": "Print Bookmarks", "command": "print_bookmarks" },
 ]
