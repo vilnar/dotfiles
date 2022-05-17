@@ -1,0 +1,102 @@
+{
+  // autocomplete
+  "auto_complete": false,
+  "auto_complete_use_index": false,
+  "auto_complete_commit_on_tab": true,
+  "auto_complete_with_fields": true,
+  "tab_completion": false,
+
+  // index files
+  "index_files": true,
+  "show_definitions": false,
+
+  // ui
+  "adaptive_dividers": true,
+  "gtk_client_side_window_decorations": true,
+  "highlight_modified_tabs": true,
+  // "color_scheme": "Mariana.sublime-color-scheme",
+  "color_scheme": "Monokai.sublime-color-scheme",
+  "theme": "Adaptive.sublime-theme",
+  "overlay_scroll_bars": "disabled",
+  // draw
+  "draw_white_space": ["selection", "trailing", "isolated"],
+  "indent_guide_options":
+  [
+    "draw_normal",
+    "draw_active_single"
+  ],
+  // "draw_centered": true,
+
+  // lines
+  "line_numbers": true,
+  "highlight_line": true,
+  // gutter
+  "margin": 0,
+  "caret_style": "solid",
+  "block_caret": false,
+  "gutter": true,
+  "mini_diff": "auto",
+  // word wrap
+  "rulers": [120],
+  "word_wrap": false,
+  // status line
+  "show_encoding": true,
+  "show_git_status": true,
+  "show_line_endings": true,
+
+  // sidebar
+  // "preview_on_click": "only_left",
+  "bold_folder_labels": true,
+  "file_exclude_patterns": [],
+  "folder_exclude_patterns": [],
+
+  // file
+  "ensure_newline_at_eof_on_save": true,
+  "fallback_encoding": "Cyrillic (Windows 1251)",
+  "tab_size": 4,
+  "translate_tabs_to_spaces": true,
+  // TODO: test it!!!
+  "detect_indentation": false,
+  "trim_trailing_white_space_on_save": "none",
+  // "trim_trailing_white_space_on_save": "not_on_caret",
+  // "trim_only_modified_white_space": true,
+
+  // font
+  // "font_face": "Dejavu Sans Mono Book",
+  "font_face": "Fira Code",
+  "font_size": 14,
+  "line_padding_bottom": 2,
+  "line_padding_top": 2,
+  "font_options":
+  [
+    "no_liga",
+    "no_calt",
+    // "ss01", // r
+    // "ss02", // <= >=
+    // "ss03", // &
+    // "ss04", // $
+    // "ss05", // @
+    // "ss06", // \\
+    // "ss07", // =~ !~
+  ],
+
+  // behaviors
+  "save_on_focus_lost": true,
+  "reveal_menu": false,
+  "update_check": false,
+  "drag_text": false,
+  "auto_find_in_selection": false,
+  "auto_match_enabled": false,
+  "auto_pair_single_quotes": false,
+  "auto_pair_selected": true,
+  "remember_workspace": false,
+  "hot_exit": "always",
+  // "hot_exit": "only_on_quit",
+
+  // https://www.sublimetext.com/docs/spell_checking.html
+  "dictionary": "Packages/Dictionaries/Ukrainian_uk_UA.dic",
+  "ignored_packages":
+  [
+		"Vintage",
+  ],
+}

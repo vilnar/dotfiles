@@ -1,0 +1,85 @@
+{
+    "variables":
+    {
+        "blue-custom": "#5ccfe680",
+        "gold-custom": "#ffcc00",
+        "yellow-custom": "#f1fa8c",
+    },
+    "globals":
+    {
+        "brackets_options": "bold glow",
+        "brackets_foreground": "var(gold-custom)",
+        "bracket_contents_options": "underline",
+        "bracket_contents_foreground": "var(blue5)",
+        "line_highlight": "#ffffff10",
+    },
+    "rules":
+    [
+        {
+            "scope": "string punctuation.definition.expression",
+            "foreground": "var(white3)"
+        },
+        {
+            "scope": "variable",
+            "foreground": "var(white3)"
+            // "foreground": "#E8E8D3"
+            // "foreground": "#FFDBA5"
+        },
+        {
+            "name": "Punctuation",
+            "scope": "punctuation.separator, punctuation.terminator",
+            "foreground": "var(white3)"
+        },
+        {
+            "name": "Annotation Punctuation",
+            "scope": "punctuation.definition.annotation",
+            "foreground": "var(white3)"
+        },
+        {
+            "name": "Punctuation",
+            "foreground": "var(white3)"
+        },
+        {
+            "name": "Tag start/end",
+            "scope": "punctuation.definition.tag.end, punctuation.definition.tag.begin, punctuation.definition.tag",
+            "foreground": "var(blue-custom)"
+        },
+        {
+            "name": "Operator assignment",
+            "scope": "keyword.operator.assignment",
+            // "foreground": "var(orange3)",
+            "foreground": "var(yellow-custom)",
+        },
+        {
+            "name": "Regex in string",
+            "scope": "string.quoted keyword.control.anchor.regexp, string.quoted keyword.operator.or.regexp, string.quoted keyword.operator.negation.regexp, string.quoted keyword.operator.quantifier.regexp, string.quoted constant.character.character-class.regexp, string.quoted constant.other.character-class.set.regexp, string.quoted meta.assertion.look-behind.regexp, string.quoted meta.assertion.look-ahead.regexp, string.quoted meta.assertion.no-capture-group.regexp, string.quoted punctuation.definition.group, string.quoted punctuation.definition.string.regex-delimiter, string.quoted punctuation.definition.character-class",
+            "foreground": "var(green)",
+        },
+        {
+            "name": "Quotes",
+            "scope": "string.quoted punctuation.definition.string",
+            "foreground": "var(green)",
+        },
+
+        {
+            "scope": "diff.deleted",
+            "background": "hsla(357, 45%, 60%, 0.15)",
+            "foreground_adjust": "l(+ 5%)"
+        },
+        {
+            "scope": "diff.deleted.char",
+            "background": "hsla(357, 60%, 60%, 0.20)",
+            "foreground_adjust": "l(+ 10%)"
+        },
+        {
+            "scope": "diff.inserted",
+            "background": "hsla(180, 45%, 60%, 0.15)",
+            "foreground_adjust": "l(+ 5%)"
+        },
+        {
+            "scope": "diff.inserted.char",
+            "background": "hsla(180, 60%, 60%, 0.20)",
+            "foreground_adjust": "l(+ 10%)"
+        },
+    ]
+}

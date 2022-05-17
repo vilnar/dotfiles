@@ -1,0 +1,25 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+  // "font_face": "Dejavu Sans Mono Book",
+  "font_face": "Fira Code",
+  "font_size": 14,
+  "line_padding_top": 2,
+  "line_padding_bottom": 2,
+  "highlight_line": true,
+  "font_options": ["no_liga", "no_calt"],
+  "caret_style": "solid",
+  // "theme": "auto",
+  // "theme": "Merge.sublime-theme", // light
+  "theme": "Merge Dark.sublime-theme", // dark
+  "diff_style": "side-by-side",
+  "side_bar_layout": "tabs",
+  "time_format": "24h",
+  "always_show_command_status": false,
+  "expand_merge_commits_by_default": true,
+  "remember_workspace": false,
+  "image_diff_style": "onion-skin",
+  "render_commit_dialog_message_at_top": true,
+  "ignore_diff_white_space": false,
+  "update_check": false,
+}

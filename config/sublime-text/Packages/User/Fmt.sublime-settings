@@ -1,0 +1,9 @@
+{
+  "rules": [
+    {
+      "selector": "source.go",
+      "cmd": ["gofmt", "-s"],
+      "merge_type": "replace",
+    },
+  ],
+}
