@@ -1,10 +1,10 @@
 {
   // autocomplete
-  "auto_complete": true,
+  "auto_complete": false,
   "auto_complete_use_index": true,
   "auto_complete_commit_on_tab": true,
-  "auto_complete_with_fields": true,
-  "tab_completion": false,
+  "auto_complete_with_fields": false,
+  "tab_completion": true,
 
   // index files
   "index_files": true,
@@ -31,14 +31,14 @@
   "line_numbers": true,
   "highlight_line": false,
   // gutter
-  "margin": 0,
+  // "margin": 0,
   "caret_style": "solid",
   "block_caret": false,
   "gutter": true,
   "mini_diff": "auto",
   // word wrap
   "rulers": [120],
-  "word_wrap": false,
+  // "word_wrap": false,
   // status line
   "show_encoding": true,
   "show_git_status": true,
@@ -99,4 +99,19 @@
   [
     "Vintage",
   ],
+
+  "light_color_scheme": "Alabaster.sublime-color-scheme",
+  "dark_color_scheme": "Monokai.sublime-color-scheme",
+  "light_theme": "Adaptive.sublime-theme",
+  "dark_theme": "Adaptive.sublime-theme",
+  "draw_indent_guides": false,
+  "hide_new_tab_button": true,
+  "indent_subsequent_lines": true,
+  "indent_to_bracket": false,
+  "show_rel_path": true,
+  "git_diff_target": "head",
+  "margin": 10,
+  "word_wrap": true,
+  "control_character_style": "names",
+  "find_selected_text": true,
 }

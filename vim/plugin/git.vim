@@ -31,3 +31,5 @@ def RunGitHistory()
   execute 'Start! git-dag ' .. path
 enddef
 command GitHistory RunGitHistory()
+
+command GitLog :execute "G log -n 1000"
