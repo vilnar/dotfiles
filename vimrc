@@ -36,7 +36,7 @@ Plug 'tpope/vim-fugitive', { 'commit': 'b7287bd5421da62986d9abf9131509b2c9f918e4
 Plug 'preservim/nerdtree', { 'tag': '6.10.12' }
 " Plug 'tpope/vim-vinegar', { 'commit': 'bb1bcddf43cfebe05eb565a84ab069b357d0b3d6' }
 Plug 'SirVer/ultisnips', { 'tag': '3.2' }
-Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.21' }
+Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.24' }
 Plug 'jparise/vim-graphql', { 'tag': 'v1.4' }
 Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f34bf6' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'tag': '0.29.0' }
@@ -55,7 +55,8 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
 Plug 'tpope/vim-vividchalk', { 'commit': 'be5c6251279bfcfa55cdea8c9a8ccd7a56c8a642' }
-Plug 'cocopon/iceberg.vim', { 'commit': '5ac9da61e8626d1218498a35e515f36387efe454' }
 Plug 'jnurmine/Zenburn', { 'commit': 'de2fa06a93fe1494638ec7b2fdd565898be25de6' }
+
+Plug 'AndrewRadev/diffurcate.vim', { 'commit': 'b804675072220ff7c7ebcd24a028aa4aa35f09cc'}
 
 call plug#end()

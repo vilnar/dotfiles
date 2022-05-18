@@ -28,13 +28,6 @@ augroup MyColors
     highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
     highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
   }
-  autocmd ColorScheme iceberg {
-    if &background == "light"
-      highlight Identifier cterm=NONE ctermfg=237 guifg=#33374c
-      highlight SpecialKey cterm=NONE ctermfg=248 guifg=#a5b0d3 guibg=#DCDFE7
-      highlight NonText cterm=NONE ctermfg=248 guifg=#a5b0d3 guibg=#DCDFE7
-    endif
-  }
   autocmd ColorScheme vividchalk {
     highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
     highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
@@ -75,24 +68,6 @@ if get(g:, 'colors_name', 'default') == "vividchalk"
     '#00ffff',
     '#ffffff'
     ]
-endif
-
-# set background=light
-# colorscheme iceberg
-if get(g:, 'colors_name', 'default') == "iceberg"
-  g:fzf_colors = {'fg': ['fg', 'Normal'],
-  'bg':      ['bg', 'Normal'],
-  'hl':      ['fg', 'Comment'],
-  'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  'hl+':     ['fg', 'Normal'],
-  'info':    ['fg', 'PreProc'],
-  'border':  ['fg', 'Ignore'],
-  'prompt':  ['fg', 'Conditional'],
-  'pointer': ['fg', 'Exception'],
-  'marker':  ['fg', 'Keyword'],
-  'spinner': ['fg', 'Label'],
-  'header':  ['fg', 'Comment']}
 endif
 
 
