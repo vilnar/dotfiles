@@ -2,6 +2,7 @@ vim9script
 
 if executable('jq')
   command JsonFormatThis execute ":%!jq ."
+  command JsonMinifyThis execute ":%!jq -c ."
 elseif executable('python3')
   command JsonFormatThis execute ":%!python3 -m json.tool"
 endif

@@ -6,7 +6,7 @@
   "font_size": 14,
   "line_padding_top": 2,
   "line_padding_bottom": 2,
-  "highlight_line": true,
+  "highlight_line": false,
   "font_options": ["no_liga", "no_calt"],
   "caret_style": "solid",
   // "theme": "auto",

@@ -9,18 +9,18 @@ JQ_PATH = "/usr/bin/jq"
 
 class JsonFormatCommand(sublime_plugin.TextCommand):
 
-    def run(self, edit, syntax_sensitive=False):
+    def run(self, edit, is_minify = False):
         if not os.path.exists(JQ_PATH):
             print("{} JQ not found in path: {}".format(PLUGIN_PATH, JQ_PATH))
             self.view.window().run_command("show_panel", args={'panel': 'console'})
             return
 
         if self.has_empty_region(self.view.sel()):
-            self.parse_region(edit, sublime.Region(0, self.view.size()))
+            self.parse_region(edit, sublime.Region(0, self.view.size()), is_minify)
             return
 
         for region in self.view.sel():
-            self.parse_region(edit, region)
+            self.parse_region(edit, region, is_minify)
 
     def has_empty_region(self, selectionСoordinates):
         for region in selectionСoordinates:
@@ -28,10 +28,13 @@ class JsonFormatCommand(sublime_plugin.TextCommand):
                 return False
         return True
 
-    def parse_region(self, edit, region):
+    def parse_region(self, edit, region, is_minify):
         raw_json = self.view.substr(region)
+        commands = [JQ_PATH]
+        if is_minify:
+            commands.append("-c")
         p = subprocess.Popen(
-            [JQ_PATH],
+            commands,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             stdin=subprocess.PIPE,

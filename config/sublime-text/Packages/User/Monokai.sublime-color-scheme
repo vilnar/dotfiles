@@ -56,18 +56,6 @@
             "scope": "punctuation.definition.tag.end, punctuation.definition.tag.begin, punctuation.definition.tag",
             "foreground": "var(blue-custom1)"
         },
-        // {
-        //     "name": "Storage type",
-        //     "scope": "storage.type",
-        //     "foreground": "var(pink)",
-        //     // "font_style": "italic"
-        // },
-        // {
-        //     "name": "Library constant",
-        //     "scope": "support.constant",
-        //     "foreground": "var(pink)",
-        //     // "font_style": "italic"
-        // },
         {
             "name": "Operator assignment",
             "scope": "keyword.operator.assignment",
