@@ -130,9 +130,8 @@ class CopyFilePathWithLineCommand(sublime_plugin.TextCommand):
                 relative_path = os.path.relpath(path, root)
                 break
 
-        line = self.view.rowcol(self.view.sel()[0].begin())[0] + 1
-
-        result = "{}:{}".format(relative_path, line)
+        row, _ = self.view.rowcol(self.view.sel()[0].begin())
+        result = "{}:{}".format(relative_path, row + 1)
         sublime.set_clipboard(result)
         window.status_message("Copied {} to clipboard".format(result))
 
