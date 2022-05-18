@@ -1,0 +1,5 @@
+[
+   { "caption": "-" },
+   { "caption": "Clone File To New View", "command": "clone_file_to_new_view" },
+   { "caption": "-" }
+]
