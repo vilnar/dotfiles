@@ -7,7 +7,7 @@
   { "caption": "File Delete", "command": "file_delete" },
   { "caption": "Open File In Window", "command": "open_file_in_new_window" },
   { "caption": "Open File In Vim", "command": "open_file_in_vim" },
-  { "caption": "Clone To New View", "command": "clone_file_to_new_view" },
+  { "caption": "Split To Another Layout", "command": "split_to_another_layout" },
   { "caption": "Selected To New Tab", "command": "open_new_tab_with_selected_text" },
-  { "caption": "Print Bookmarks", "command": "print_bookmarks" },
+  { "caption": "Bookmarks Print", "command": "print_bookmarks" },
 ]

@@ -1,10 +1,11 @@
 {
   // autocomplete
-  "auto_complete": false,
+  "auto_complete": true,
   "auto_complete_use_index": true,
   "auto_complete_commit_on_tab": true,
-  "auto_complete_with_fields": false,
   "tab_completion": true,
+  "auto_complete_cycle": true,
+  "auto_complete_preserve_order": "none",
 
   // index files
   "index_files": true,
@@ -15,7 +16,7 @@
   "gtk_client_side_window_decorations": true,
   "highlight_modified_tabs": true,
   // "color_scheme": "Mariana.sublime-color-scheme",
-  "color_scheme": "Monokai.sublime-color-scheme",
+  "color_scheme": "Alabaster.sublime-color-scheme",
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
   // draw
@@ -31,7 +32,7 @@
   "line_numbers": true,
   "highlight_line": false,
   // gutter
-  // "margin": 0,
+  "margin": 0,
   "caret_style": "solid",
   "block_caret": false,
   "gutter": true,
@@ -47,8 +48,8 @@
   // sidebar
   // "preview_on_click": "only_left",
   "bold_folder_labels": true,
-  "file_exclude_patterns": [],
-  "folder_exclude_patterns": [],
+  // "file_exclude_patterns": [],
+  // "folder_exclude_patterns": [],
 
   // file
   "ensure_newline_at_eof_on_save": true,
@@ -110,7 +111,6 @@
   "indent_to_bracket": false,
   "show_rel_path": true,
   "git_diff_target": "head",
-  "margin": 10,
   "word_wrap": true,
   "control_character_style": "names",
   "find_selected_text": true,

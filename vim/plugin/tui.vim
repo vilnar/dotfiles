@@ -48,7 +48,7 @@ augroup MyColors
 augroup end
 
 # set background=dark
-# colorscheme vividchalk
+colorscheme vividchalk
 if get(g:, 'colors_name', 'default') == "vividchalk"
   g:terminal_ansi_colors = [
     '#000000',
@@ -77,7 +77,7 @@ g:zenburn_color_also_Ignore = 1
 g:zenburn_alternate_Visual = 1
 g:zenburn_alternate_Error = 0
 g:zenburn_disable_Label_underline = 1
-colorscheme zenburn
+# colorscheme zenburn
 
 
 # set linebreak

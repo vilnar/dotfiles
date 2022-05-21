@@ -2,10 +2,10 @@ import sublime
 import sublime_plugin
 
 
-PLUGIN_PATH = "User/file_clone.py"
+PLUGIN_PATH = "User/layout.py"
 
 # source https://forum.sublimetext.com/t/made-a-neat-plugin-for-easily-adding-a-new-view-into-a-file/33900/3
-class CloneFileToNewViewCommand(sublime_plugin.WindowCommand):
+class SplitToAnotherLayoutCommand(sublime_plugin.WindowCommand):
     def run(self):
         if (self.window.num_groups() < 2):
             self.window.run_command('clone_file')

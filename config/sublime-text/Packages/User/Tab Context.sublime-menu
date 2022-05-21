@@ -1,5 +1,5 @@
 [
    { "caption": "-" },
-   { "caption": "Clone File To New View", "command": "clone_file_to_new_view" },
+   { "caption": "Split To Another Layout", "command": "split_to_another_layout" },
    { "caption": "-" }
 ]

@@ -3,7 +3,6 @@
   "globals":
   {
     "brackets_options": "glow",
-    "highlight": "#CB9000",
   },
   "rules":
   [
@@ -15,6 +14,12 @@
       "name": "Regex in string",
       "scope": "string.quoted keyword.control.anchor.regexp, string.quoted keyword.operator.or.regexp, string.quoted keyword.operator.negation.regexp, string.quoted keyword.operator.quantifier.regexp, string.quoted constant.character.character-class.regexp, string.quoted constant.other.character-class.set.regexp, string.quoted meta.assertion.look-behind.regexp, string.quoted meta.assertion.look-ahead.regexp, string.quoted meta.assertion.no-capture-group.regexp, string.quoted punctuation.definition.group, string.quoted punctuation.definition.string.regex-delimiter, string.quoted punctuation.definition.character-class",
       "foreground": "var(fg)",
+    },
+    {
+      "name": "Comments",
+      "scope": "comment, punctuation.definition.comment",
+      "foreground": "#AA3731",
+      "background": "none"
     },
   ]
 }
