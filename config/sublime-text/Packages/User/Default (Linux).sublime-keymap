@@ -17,6 +17,7 @@
   { "keys": ["ctrl+k", "f"], "command": "find_in_current_folder" },
 
   { "keys": ["alt+m"], "command": "open_new_tab_with_selected_text" },
+  { "keys": ["alt+backspace"], "command": "color_scheme_toggle" },
 
   {
     "keys": ["alt+g"],
