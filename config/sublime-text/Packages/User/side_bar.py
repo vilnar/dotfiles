@@ -16,19 +16,50 @@ class SideBarOpenInNewWindowCommand(sublime_plugin.WindowCommand):
     def is_visible(self, dirs):
         return len(dirs) > 0
 
-
+# source https://forum.sublimetext.com/t/new-file-from-sidebar-context-menu/37626
+# and https://github.com/wisdman/SideBarMenuAdvanced
 class EnhancedNewFileAtCommand(sublime_plugin.WindowCommand):
     def run(self, dirs):
-        self.window.show_input_panel("File Name:", "",functools.partial(self.on_done, dirs[0]), None, None)
+        base = self.get_path(dirs)
+        if os.path.isfile(base):
+            base = os.path.dirname(base)
 
-    def on_done(self, dir_name, file_name):
-        view = self.window.new_file()
-        view.retarget(os.path.join(dir_name, file_name))
-        view.run_command("save")
+        self.window.show_input_panel('File Name:', "", functools.partial(self.on_done, base), None, None)
 
-    def is_visible(self, dirs):
-        return len(dirs) == 1
+    def get_path(self, paths):
+        try:
+            return paths[0]
+        except IndexError:
+            return self.window.active_view().file_name()
 
+    def on_done(self, base, leaf):
+        if not leaf:
+            return
+
+        new = os.path.join(base, leaf)
+        try:
+            if os.path.exists(new):
+                raise OSError("File or Folder already exists")
+
+            base = os.path.dirname(new)
+            if not os.path.exists(base):
+                os.makedirs(base)
+
+            with open(new, "w+", encoding="utf8", newline="") as f:
+                f.write(str(""))
+
+            self.window.open_file(new)
+
+        except OSError as error:
+            self.window.status_message('Unable to create file: "{}"'.format(error))
+        except:
+            self.window.status_message('Unable to create file: "{}"'.format(new))
+
+    def description(self):
+        return 'New File'
+
+    def is_visible(self, paths):
+        return len(paths) == 1
 
 class NewFileEventListener(sublime_plugin.EventListener):
     def on_window_command(self, window, cmd, args):
