@@ -45,8 +45,7 @@
   {
     "keys": ["ctrl+alt+l"], "command": "run_macro_file",
     "args": {"file": "res://Packages/User/macros/copy_line_no_eol.sublime-macro"},
-    "context":
-    [
+    "context": [
       {
         "key": "selection_empty", "operator": "equal",
         "operand": true, "match_all": false,
@@ -55,8 +54,7 @@
   },
 
   {
-    "keys": ["ctrl+k", "c"], "command": "run_macro_file",
-    "args": {"file": "res://Packages/User/macros/clear_file.sublime-macro"},
+    "keys": ["ctrl+k", "c"], "command": "clear_file",
   },
 
   {

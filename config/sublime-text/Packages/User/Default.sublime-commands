@@ -11,4 +11,5 @@
   { "caption": "Selected To New Tab", "command": "open_new_tab_with_selected_text" },
   { "caption": "Bookmarks Print", "command": "print_bookmarks" },
   { "caption": "Color Scheme Toggle Day/Night", "command": "color_scheme_toggle" },
+  { "caption": "File Clear", "command": "clear_file" },
 ]
