@@ -1,6 +1,6 @@
 {
   // Path to goimports binary
-  "goimports_bin": "/usr/bin/goimports",
+  "goimports_bin": "~/go/bin/goimports",
 
   // enable/disable plugin
   "goimports_enabled": false

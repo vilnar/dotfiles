@@ -13,7 +13,7 @@ def RunSpellUkToggle()
   echomsg "Toggle spell UK"
 enddef
 command SpellUkToggle RunSpellUkToggle()
-nnoremap <F4> :vim9cmd <SID>RunSpellUkToggle()<CR>
+nnoremap <F6> :vim9cmd <SID>RunSpellUkToggle()<CR>
 
 
 

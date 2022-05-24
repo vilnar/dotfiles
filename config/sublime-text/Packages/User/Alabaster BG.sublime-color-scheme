@@ -3,6 +3,7 @@
   "globals":
   {
     "brackets_options": "glow",
+    "highlight": "#007ACC",
   },
   "rules":
   [

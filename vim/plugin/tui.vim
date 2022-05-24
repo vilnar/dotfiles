@@ -77,6 +77,7 @@ g:zenburn_color_also_Ignore = 1
 g:zenburn_alternate_Visual = 1
 g:zenburn_alternate_Error = 0
 g:zenburn_disable_Label_underline = 1
+g:zenburn_unified_CursorColumn = 1
 colorscheme zenburn
 
 

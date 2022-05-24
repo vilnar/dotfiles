@@ -10,7 +10,6 @@ def OpenTerminal()
 enddef
 
 command OpenTerminalHere OpenTerminal()
-noremap <F9> :vim9cmd <SID>OpenTerminal()<CR>
 
 def OpenInternalTerminal()
   var path = expand('%:p:h')

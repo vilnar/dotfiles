@@ -11,7 +11,7 @@ vnoremap <F10> <Esc>:'<,'>WhiteSpaceTrailClear<CR>
 
 
 # show whitespace
-nnoremap <F6> :set list!<CR>
-inoremap <F6> <ESC>:set list!<CR>
-cnoremap <F6> <ESC>:set list!<CR>
+nnoremap <F9> :set list!<CR>
+inoremap <F9> <ESC>:set list!<CR>
+cnoremap <F9> <ESC>:set list!<CR>
 

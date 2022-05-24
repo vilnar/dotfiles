@@ -32,7 +32,7 @@ let mapleader="\<Space>"
 call plug#begin()
 Plug 'tpope/vim-commentary', { 'tag': 'v1.3' }
 Plug 'tpope/vim-surround', { 'tag': 'v2.1' }
-Plug 'tpope/vim-fugitive', { 'commit': 'b7287bd5421da62986d9abf9131509b2c9f918e4' }
+Plug 'tpope/vim-fugitive', { 'commit': '0e9f763c7b1102232d1e0548d14731d2af06982c' }
 Plug 'preservim/nerdtree', { 'tag': '6.10.12' }
 " Plug 'tpope/vim-vinegar', { 'commit': 'bb1bcddf43cfebe05eb565a84ab069b357d0b3d6' }
 Plug 'SirVer/ultisnips', { 'tag': '3.2' }
@@ -56,7 +56,5 @@ Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312caf
 
 Plug 'tpope/vim-vividchalk', { 'commit': 'be5c6251279bfcfa55cdea8c9a8ccd7a56c8a642' }
 Plug 'jnurmine/Zenburn', { 'commit': 'de2fa06a93fe1494638ec7b2fdd565898be25de6' }
-
-Plug 'AndrewRadev/diffurcate.vim', { 'commit': 'b804675072220ff7c7ebcd24a028aa4aa35f09cc'}
 
 call plug#end()

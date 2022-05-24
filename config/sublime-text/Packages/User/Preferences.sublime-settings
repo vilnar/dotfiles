@@ -16,7 +16,7 @@
   "gtk_client_side_window_decorations": true,
   "highlight_modified_tabs": true,
   // "color_scheme": "Mariana.sublime-color-scheme",
-  "color_scheme": "Monokai.sublime-color-scheme",
+  "color_scheme": "Mariana.sublime-color-scheme",
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
   // draw
@@ -34,6 +34,9 @@
   // gutter
   "margin": 0,
   "caret_style": "solid",
+  "caret_extra_top": 4,
+  "caret_extra_bottom": 4,
+  "caret_extra_width": 2,
   "block_caret": false,
   "gutter": true,
   "mini_diff": "auto",
@@ -102,7 +105,7 @@
   ],
 
   "light_color_scheme": "Alabaster.sublime-color-scheme",
-  "dark_color_scheme": "Monokai.sublime-color-scheme",
+  "dark_color_scheme": "Mariana.sublime-color-scheme",
   "light_theme": "Adaptive.sublime-theme",
   "dark_theme": "Adaptive.sublime-theme",
   "draw_indent_guides": false,
