@@ -5,23 +5,21 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 # set number
 # set signcolumn=number
 # set numberwidth=6
+
 # set cursorline
-# set cursorlineopt=number
+# augroup MyCursorLine
+#   autocmd VimEnter,WinEnter,BufWinEnter,WinLeave,BufWinLeave * {
+#       if &diff
+#         set nocursorline
+#       else
+#         set cursorline
+#       endif
+#   }
+# augroup END
 
 if (has("termguicolors"))
   set termguicolors
 endif
-
-set cursorline
-augroup MyCursorLine
-  autocmd VimEnter,WinEnter,BufWinEnter,WinLeave,BufWinLeave * {
-      if &diff
-        set nocursorline
-      else
-        set cursorline
-      endif
-  }
-augroup END
 
 augroup MyColors
   autocmd ColorScheme default {
