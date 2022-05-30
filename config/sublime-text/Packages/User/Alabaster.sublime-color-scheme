@@ -8,6 +8,7 @@
   {
     "brackets_options": "glow",
     "highlight": "#CB9000",
+    "caret": "var(orange)",
   },
   "rules":
   [

@@ -32,9 +32,13 @@ let mapleader="\<Space>"
 call plug#begin()
 Plug 'tpope/vim-commentary', { 'tag': 'v1.3' }
 Plug 'tpope/vim-surround', { 'tag': 'v2.1' }
+
+" git
 Plug 'tpope/vim-fugitive', { 'commit': '0e9f763c7b1102232d1e0548d14731d2af06982c' }
+" git diff between branches
+Plug 'idanarye/vim-merginal', { 'commit': 'd47689faa5623e8f455c62a9a1016c92cf66c09e' }
+
 Plug 'preservim/nerdtree', { 'tag': '6.10.12' }
-" Plug 'tpope/vim-vinegar', { 'commit': 'bb1bcddf43cfebe05eb565a84ab069b357d0b3d6' }
 Plug 'SirVer/ultisnips', { 'tag': '3.2' }
 Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.24' }
 Plug 'jparise/vim-graphql', { 'tag': 'v1.4' }

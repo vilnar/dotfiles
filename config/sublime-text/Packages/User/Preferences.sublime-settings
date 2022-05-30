@@ -16,7 +16,7 @@
   "gtk_client_side_window_decorations": true,
   "highlight_modified_tabs": true,
   // "color_scheme": "Mariana.sublime-color-scheme",
-  "color_scheme": "Mariana.sublime-color-scheme",
+  "color_scheme": "Alabaster.sublime-color-scheme",
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
   // draw

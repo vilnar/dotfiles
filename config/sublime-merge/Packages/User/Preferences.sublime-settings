@@ -21,7 +21,7 @@
 	"remember_workspace": false,
 	"render_commit_dialog_message_at_top": true,
 	"side_bar_layout": "tabs",
-	"theme": "Merge Dark.sublime-theme",
+	"theme": "Merge.sublime-theme",
 	"theme_dark": "Merge Dark.sublime-theme",
 	"theme_light": "Merge.sublime-theme",
 	"time_format": "24h",
