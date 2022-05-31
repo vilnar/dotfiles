@@ -1,6 +1,6 @@
 {
   // autocomplete
-  "auto_complete": true,
+  "auto_complete": false,
   "auto_complete_use_index": false,
   "auto_complete_commit_on_tab": true,
   "tab_completion": true,
@@ -16,7 +16,7 @@
   "gtk_client_side_window_decorations": true,
   "highlight_modified_tabs": true,
   // "color_scheme": "Mariana.sublime-color-scheme",
-  "color_scheme": "Alabaster.sublime-color-scheme",
+  "color_scheme": "Mariana.sublime-color-scheme",
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
   // draw
@@ -55,7 +55,7 @@
   // "folder_exclude_patterns": [],
 
   // file
-  "ensure_newline_at_eof_on_save": true,
+  "ensure_newline_at_eof_on_save": false,
   "fallback_encoding": "Cyrillic (Windows 1251)",
   "tab_size": 4,
   "translate_tabs_to_spaces": true,
@@ -85,7 +85,7 @@
   ],
 
   // behaviors
-  "save_on_focus_lost": false,
+  "save_on_focus_lost": true,
   "reveal_menu": false,
   "update_check": false,
   "drag_text": false,
@@ -96,6 +96,7 @@
   "remember_workspace": false,
   "hot_exit": "always",
   // "hot_exit": "only_on_quit",
+  "close_deleted_files": false,
 
   // https://www.sublimetext.com/docs/spell_checking.html
   "dictionary": "Packages/Dictionaries/Ukrainian_uk_UA.dic",
