@@ -34,7 +34,7 @@ Plug 'tpope/vim-commentary', { 'tag': 'v1.3' }
 Plug 'tpope/vim-surround', { 'tag': 'v2.1' }
 
 " git
-Plug 'tpope/vim-fugitive', { 'commit': '0e9f763c7b1102232d1e0548d14731d2af06982c' }
+Plug 'tpope/vim-fugitive', { 'commit': '5920f807f5a52957a6a09dd36aab1c00bfd85455' }
 " git diff between branches
 Plug 'idanarye/vim-merginal', { 'commit': 'd47689faa5623e8f455c62a9a1016c92cf66c09e' }
 
@@ -43,8 +43,8 @@ Plug 'SirVer/ultisnips', { 'tag': '3.2' }
 Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.24' }
 Plug 'jparise/vim-graphql', { 'tag': 'v1.4' }
 Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f34bf6' }
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'tag': '0.29.0' }
-Plug 'junegunn/fzf.vim', { 'commit': 'b23e4bb8f853cb9641a609c5c8545751276958b0' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': '3b7a962dc6db227d18faecb25c793431ce7e8640' }
+Plug 'junegunn/fzf.vim', { 'commit': 'd5f1f8641b24c0fd5b10a299824362a2a1b20ae0' }
 Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2' }
 
 " async

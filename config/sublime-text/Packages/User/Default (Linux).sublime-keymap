@@ -10,6 +10,8 @@
   { "keys": ["alt+space"], "command": "auto_complete" },
   { "keys": ["ctrl+f5"], "command": "close_workspace" },
 
+  { "keys": ["f4"], "command": "find_prev" },
+
   { "keys": ["f9"], "command": "toggle_white_space"},
 
   { "keys": ["alt+u"], "command": "find_under_cursor" }, // find word under cursor whithout checkout to find panel

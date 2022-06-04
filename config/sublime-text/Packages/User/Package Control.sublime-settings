@@ -2,6 +2,8 @@
   "installed_packages":
   [
     "Package Control",
+    "SublimeLinter",
+    "SublimeLinter-json",
   ],
   "auto_upgrade": false,
   "bootstrapped": true,
