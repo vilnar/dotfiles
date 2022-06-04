@@ -41,7 +41,6 @@ augroup MyColors
   }
   autocmd ColorScheme gruvbox {
     highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
-    highlight Function ctermbg=NONE ctermfg=172 cterm=bold guibg=NONE guifg=#d79921 gui=bold
     highlight CurSearch ctermbg=208 ctermfg=234 cterm=NONE guibg=#fe8019 guifg=#1d2021 gui=NONE
   }
 augroup end
