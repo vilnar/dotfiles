@@ -1,25 +1,6 @@
 [/]
-default='520c373b-7acb-4bb9-9eb3-ad568581f84d'
-list=['520c373b-7acb-4bb9-9eb3-ad568581f84d', '3942c3ce-a804-47f9-bdfe-9fe753791a05', 'a34e52db-bd6e-4bbd-bb3d-f76f4941228d']
-
-[:3942c3ce-a804-47f9-bdfe-9fe753791a05]
-audible-bell=false
-background-color='rgb(232,233,236)'
-bold-color-same-as-fg=true
-bold-is-bright=false
-cell-height-scale=1.0
-cell-width-scale=1.0
-cursor-blink-mode='off'
-cursor-colors-set=false
-default-size-columns=100
-foreground-color='rgb(51,55,76)'
-highlight-colors-set=false
-palette=['rgb(220,223,231)', 'rgb(204,81,122)', 'rgb(102,142,61)', 'rgb(197,115,57)', 'rgb(45,83,158)', 'rgb(119,89,180)', 'rgb(63,131,166)', 'rgb(51,55,76)', 'rgb(131,137,163)', 'rgb(204,55,104)', 'rgb(89,128,48)', 'rgb(182,102,45)', 'rgb(34,71,142)', 'rgb(104,69,173)', 'rgb(50,118,152)', 'rgb(38,42,63)']
-text-blink-mode='never'
-use-theme-colors=false
-use-theme-transparency=false
-use-transparent-background=false
-visible-name='iceberg-light'
+default='b58db4a4-6560-4f30-9b84-5e214968e781'
+list=['520c373b-7acb-4bb9-9eb3-ad568581f84d', 'b58db4a4-6560-4f30-9b84-5e214968e781']
 
 [:520c373b-7acb-4bb9-9eb3-ad568581f84d]
 audible-bell=false
@@ -40,9 +21,9 @@ use-theme-transparency=false
 use-transparent-background=false
 visible-name='tpope-dark'
 
-[:a34e52db-bd6e-4bbd-bb3d-f76f4941228d]
+[:b58db4a4-6560-4f30-9b84-5e214968e781]
 audible-bell=false
-background-color='rgb(63,63,63)'
+background-color='rgb(40,40,40)'
 bold-color-same-as-fg=true
 bold-is-bright=false
 cell-height-scale=1.0
@@ -50,11 +31,11 @@ cell-width-scale=1.0
 cursor-blink-mode='off'
 cursor-colors-set=false
 default-size-columns=100
-foreground-color='rgb(220,220,204)'
+foreground-color='rgb(235,219,178)'
 highlight-colors-set=false
-palette=['rgb(31,31,31)', 'rgb(204,147,147)', 'rgb(95,127,95)', 'rgb(255,215,167)', 'rgb(140,176,211)', 'rgb(143,143,143)', 'rgb(113,211,180)', 'rgb(223,228,207)', 'rgb(111,111,111)', 'rgb(236,179,179)', 'rgb(255,215,167)', 'rgb(140,176,211)', 'rgb(143,143,143)', 'rgb(113,211,180)', 'rgb(223,228,207)', 'rgb(255,207,175)']
+palette=['rgb(40,40,40)', 'rgb(204,36,29)', 'rgb(152,151,26)', 'rgb(215,153,33)', 'rgb(69,133,136)', 'rgb(177,98,134)', 'rgb(104,157,106)', 'rgb(168,153,132)', 'rgb(146,131,116)', 'rgb(251,73,52)', 'rgb(184,187,38)', 'rgb(250,189,47)', 'rgb(131,165,152)', 'rgb(211,134,155)', 'rgb(142,192,124)', 'rgb(235,219,178)']
 text-blink-mode='never'
 use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
-visible-name='zenburn'
+visible-name='gruvbox'
