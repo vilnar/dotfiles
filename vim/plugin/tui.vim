@@ -39,9 +39,8 @@ augroup MyColors
     highlight SpecialKey    guifg=#494949
     highlight NonText       guifg=#494949
   }
-  autocmd ColorScheme gruvbox {
-    highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
-    highlight CurSearch ctermbg=208 ctermfg=234 cterm=NONE guibg=#fe8019 guifg=#1d2021 gui=NONE
+  autocmd ColorScheme gruvbox8 {
+    highlight CurSearch ctermfg=208 ctermbg=235 guifg=#fe8019 guibg=#282828 gui=reverse cterm=reverse
   }
 augroup end
 
@@ -68,16 +67,9 @@ if get(g:, 'colors_name', 'default') == "vividchalk"
 endif
 
 
-g:gruvbox_invert_selection = 0
-g:gruvbox_italic = 0
-g:gruvbox_underline = 1
-g:gruvbox_contrast_light = "hard"
-g:gruvbox_contrast_dark = "medium"
-g:gruvbox_guisp_fallback = "bg" # fix spell colors
-g:gruvbox_vert_split = "bg1"
-g:gruvbox_hls_highlight = "purple"
+g:gruvbox_italics = 0
 set background=dark
-colorscheme gruvbox
+colorscheme gruvbox8
 
 
 # set linebreak
