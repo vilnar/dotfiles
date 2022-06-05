@@ -1,5 +1,5 @@
 [
    { "caption": "-" },
-   { "caption": "Split To Another Layout", "command": "split_to_another_layout" },
+   { "caption": "Clone To Right", "command": "clone_to_right" },
    { "caption": "-" }
 ]

@@ -12,7 +12,7 @@ command PathDirCopyRelative :vim9cmd CopyPath(expand('%:h'))
 command PathFileCopyAbsolute :vim9cmd CopyPath(expand('%:p'))
 command PathFileCopyRelative :vim9cmd CopyPath(expand('%'))
 
-def CopyPathWithLine(path: string)
+def CopyPathWithLine(path: string, is_vim_format = false)
   if path == ""
     echoerr "This is temp file, not copy path with line"
     return
@@ -22,10 +22,14 @@ def CopyPathWithLine(path: string)
     return
   endif
   var path_with_line = path .. ':' .. line(".")
+  if is_vim_format
+    path_with_line = "+" .. line(".") .. " " .. path
+  endif
   @+ = path_with_line
   echo "copied to clipboard path with line: " .. path_with_line
 enddef
 command PathFileWithLine :vim9cmd CopyPathWithLine(expand('%'))
+command PathFileWithLineVim :vim9cmd CopyPathWithLine(expand('%'), true)
 
 command FileCopyNameAll :vim9cmd CopyPath(expand('%:t'))
 command FileCopyName :vim9cmd CopyPath(expand('%:t:r'))

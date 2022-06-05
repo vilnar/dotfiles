@@ -15,18 +15,18 @@
   "adaptive_dividers": true,
   "gtk_client_side_window_decorations": true,
   "highlight_modified_tabs": true,
-  // "color_scheme": "Mariana.sublime-color-scheme",
-  "color_scheme": "Alabaster.sublime-color-scheme",
+  "color_scheme": "Mariana.sublime-color-scheme",
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
+
   // draw
   "draw_white_space": ["selection", "trailing", "isolated"],
+  "draw_indent_guides": true,
   "indent_guide_options":
   [
     "draw_normal",
     "draw_active_single"
   ],
-  // "draw_centered": true,
 
   // lines
   "line_numbers": true,
@@ -40,9 +40,11 @@
   "block_caret": false,
   "gutter": true,
   "mini_diff": "auto",
+
   // word wrap
   "rulers": [120],
-  // "word_wrap": false,
+  "word_wrap": false,
+
   // status line
   "show_encoding": true,
   "show_git_status": true,
@@ -107,15 +109,9 @@
 
   "light_color_scheme": "Alabaster.sublime-color-scheme",
   "dark_color_scheme": "Mariana.sublime-color-scheme",
-  "light_theme": "Adaptive.sublime-theme",
-  "dark_theme": "Adaptive.sublime-theme",
-  "draw_indent_guides": true,
   "hide_new_tab_button": true,
   "indent_subsequent_lines": true,
   "indent_to_bracket": false,
   "show_rel_path": true,
-  "git_diff_target": "head",
-  "word_wrap": true,
   "control_character_style": "names",
-  "find_selected_text": true,
 }
