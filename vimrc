@@ -36,7 +36,7 @@ Plug 'tpope/vim-surround', { 'tag': 'v2.1' }
 " git
 Plug 'tpope/vim-fugitive', { 'commit': '5920f807f5a52957a6a09dd36aab1c00bfd85455' }
 " git diff between branches
-Plug 'idanarye/vim-merginal', { 'commit': 'd47689faa5623e8f455c62a9a1016c92cf66c09e' }
+Plug 'idanarye/vim-merginal', { 'commit': 'd61345a6579a0e141499fc0deb4cdd0620d94344' }
 
 Plug 'preservim/nerdtree', { 'tag': '6.10.12' }
 Plug 'SirVer/ultisnips', { 'tag': '3.2' }

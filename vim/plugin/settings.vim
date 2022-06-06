@@ -19,6 +19,7 @@ if !exists("g:ReloadConfigs")
     execute 'source ~/.vim/plugin/search_replace.vim'
     execute 'source ~/.vim/plugin/test.vim'
     execute 'source ~/.vim/plugin/macros.vim'
+    execute 'source ~/.vim/plugin/layout.vim'
     if has("gui_running")
       execute 'source ~/.vim/gvimrc'
     endif

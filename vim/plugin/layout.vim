@@ -8,3 +8,6 @@ def OpenNewTabWithSelectedText()
 enddef
 # move selected to new tab
 xnoremap <leader>ms y:vim9cmd <SID>OpenNewTabWithSelectedText()<CR>
+
+
+nnoremap <Leader>mt :tab split<CR>
