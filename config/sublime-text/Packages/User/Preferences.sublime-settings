@@ -9,6 +9,7 @@
 
   // index files
   "index_files": true,
+  "index_exclude_gitignore": false,
   "show_definitions": false,
 
   // ui
@@ -69,6 +70,7 @@
 
   // font
   // "font_face": "Dejavu Sans Mono Book",
+  // "font_face": "Source Code Pro",
   "font_face": "Fira Code",
   "font_size": 14,
   "line_padding_bottom": 2,
@@ -113,5 +115,6 @@
   "indent_subsequent_lines": true,
   "indent_to_bracket": false,
   "show_rel_path": true,
+  // "control_character_style": "hex",
   "control_character_style": "names",
 }

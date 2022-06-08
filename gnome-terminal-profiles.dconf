@@ -23,7 +23,7 @@ visible-name='tpope-dark'
 
 [:b58db4a4-6560-4f30-9b84-5e214968e781]
 audible-bell=false
-background-color='rgb(40,40,40)'
+background-color='rgb(29,32,33)'
 bold-color-same-as-fg=true
 bold-is-bright=false
 cell-height-scale=1.0

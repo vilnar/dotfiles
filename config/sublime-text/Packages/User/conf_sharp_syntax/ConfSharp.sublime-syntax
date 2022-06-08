@@ -1,12 +1,11 @@
 %YAML 1.2
 ---
 
-name: ConfSimple
+name: ConfSharp
 file_extensions:
   - cfg
   - conf
   - config
-  - ini
   - .env
   - .env.dist
   - .env.local
@@ -27,10 +26,10 @@ file_extensions:
   - .env.defaults
   - .envrc
 
-scope: source.simpleconf
+scope: source.confsharp
 
 variables:
-  comment_char: '[#;]'
+  comment_char: '[#]'
 
 contexts:
   main:
@@ -39,21 +38,21 @@ contexts:
 
   comments:
     - match: ({{comment_char}}).*\n?
-      scope: punctuation.definition.comment.simpleconf
+      scope: punctuation.definition.comment.confsharp
 
   strings:
       # match interpolated string, if closing double-quote exists.
       - match: '"(?=.*"(?!''))'
-        scope: punctuation.definition.string.begin.simpleconf
+        scope: punctuation.definition.string.begin.confsharp
         push:
-          - meta_scope: string.interpolated.simpleconf
+          - meta_scope: string.interpolated.confsharp
           - match: '"'
-            scope: punctuation.definition.string.end.simpleconf
+            scope: punctuation.definition.string.end.confsharp
             pop: true
       - match: "'(?=.*'(?!\"\"))"
-        scope: punctuation.definition.string.begin.simpleconf
+        scope: punctuation.definition.string.begin.confsharp
         push:
-          - meta_scope: string.quoted.single.simpleconf
+          - meta_scope: string.quoted.single.confsharp
           - match: "'"
-            scope: punctuation.definition.string.end.simpleconf
+            scope: punctuation.definition.string.end.confsharp
             pop: true

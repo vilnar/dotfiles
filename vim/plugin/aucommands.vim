@@ -4,6 +4,9 @@ augroup AutoSettingsFileType
   autocmd BufRead,BufNewFile .gitignore,.env.local,.env,.env.example,.env.test,*.conf {
     setlocal filetype=conf
   }
+  autocmd BufRead,BufNewFile www.conf {
+    setlocal filetype=dosini
+  }
 augroup END
 
 augroup KeepScreenPosition

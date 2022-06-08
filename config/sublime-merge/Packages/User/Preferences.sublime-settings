@@ -1,6 +1,4 @@
 {
-	"always_show_command_status": false,
-	"always_show_commit_graph": true,
 	"block_caret": false,
 	"caret_extra_bottom": 4,
 	"caret_extra_top": 4,
@@ -8,7 +6,6 @@
 	"caret_style": "solid",
 	"diff_style": "side-by-side",
 	"draw_white_space": "all",
-	"expand_merge_commits_by_default": true,
 	"font_face": "Fira Code",
 	"font_options":
 	[
@@ -17,7 +14,7 @@
 	],
 	"font_size": 14,
 	"highlight_line": false,
-	"ignore_diff_white_space": false,
+	"ignore_diff_white_space": true,
 	"image_diff_style": "onion-skin",
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
