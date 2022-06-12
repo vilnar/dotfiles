@@ -6,7 +6,7 @@ set guioptions=cM
 set lines=999 columns=999
 
 # set guifont=Monospace\ 15
-set guifont=Fira\ Mono\ 14
+set guifont=Fira\ Code\ 14
 
 # disable blink cursor
 set guicursor+=a:blinkon0

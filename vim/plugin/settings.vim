@@ -42,9 +42,8 @@ command EditorShowMaps :enew | put = execute('map')
 # loaded_netrwPlugin = 1
 
 
-# :help php.vim
 g:php_special_functions = 0
-
+g:go_highlight_functions = 1
 
 # :help NERDTree
 g:NERDTreeMouseMode = 2

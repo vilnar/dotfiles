@@ -1,10 +1,10 @@
 {
   "variables":
   {
-    "font_face": "Fira Mono",
+    "font_face": "Fira Code",
     "font_size_sm": 13,
-    "font_size": 15,
-    "font_size_lg": 15,
+    "font_size": 14,
+    "font_size_lg": 16,
     "font_size_title": 21,
   },
   "rules":

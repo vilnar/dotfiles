@@ -70,7 +70,7 @@
 
   // font
   // "font_face": "Dejavu Sans Mono Book",
-  "font_face": "Fira Mono",
+  "font_face": "Fira Code",
   "font_size": 14,
   "line_padding_bottom": 2,
   "line_padding_top": 2,
