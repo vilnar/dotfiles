@@ -61,7 +61,57 @@ class EnhancedNewFileAtCommand(sublime_plugin.WindowCommand):
     def is_visible(self, paths):
         return len(paths) == 1
 
+
+class EnhancedRenamePathCommand(sublime_plugin.WindowCommand):
+    def run(self, paths):
+        branch, leaf = os.path.split(paths[0])
+        v = self.window.show_input_panel(
+            "New Name:",
+            leaf,
+            functools.partial(self.on_done, paths[0], branch),
+            None,
+            None)
+        name, ext = os.path.splitext(leaf)
+
+        v.sel().clear()
+        v.sel().add(sublime.Region(0, len(name)))
+
+    def is_case_change(self, old, new):
+        if old.lower() != new.lower():
+            return False
+        if os.stat(old).st_ino != os.stat(new).st_ino:
+            return False
+        return True
+
+    def on_done(self, old, branch, leaf):
+        new = os.path.join(branch, leaf)
+
+        if new == old:
+            return
+
+        try:
+            if os.path.isfile(new) and not self.is_case_change(old, new):
+                raise OSError("File already exists")
+
+            os.rename(old, new)
+
+            v = self.window.find_open_file(old)
+            if v:
+                v.retarget(new) # standard behavior
+                # Custom
+                v.assign_syntax(sublime.find_syntax_for_file(new))
+        except OSError as e:
+            sublime.status_message("Unable to rename: " + str(e))
+        except:
+            sublime.status_message("Unable to rename")
+
+    def is_visible(self, paths):
+        return len(paths) == 1
+
+
 class NewFileEventListener(sublime_plugin.EventListener):
     def on_window_command(self, window, cmd, args):
         if cmd == "new_file_at":
             return ("enhanced_new_file_at", args)
+        if cmd == "rename_path":
+            return ("enhanced_rename_path", args)
