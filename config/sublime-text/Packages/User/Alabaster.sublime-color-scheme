@@ -9,6 +9,7 @@
     "brackets_options": "glow",
     "highlight": "#CB9000",
     "caret": "var(active)",
+    "line_highlight": "#e6e6e6",
   },
   "rules":
   [

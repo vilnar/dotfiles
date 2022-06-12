@@ -25,6 +25,7 @@ augroup MyColors
   autocmd ColorScheme default {
     highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
     highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
+    highlight CurSearch ctermbg=yellow cterm=underline gui=underline
   }
   autocmd ColorScheme vividchalk {
     highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
@@ -78,6 +79,9 @@ g:gruvbox_vert_split = "bg1"
 g:gruvbox_hls_highlight = "purple"
 set background=dark
 colorscheme gruvbox
+
+# set background=light
+# colorscheme default
 
 
 # set linebreak
