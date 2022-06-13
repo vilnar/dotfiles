@@ -58,7 +58,6 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
-Plug 'tpope/vim-vividchalk', { 'commit': 'be5c6251279bfcfa55cdea8c9a8ccd7a56c8a642' }
 Plug 'gruvbox-community/gruvbox', { 'commit': '34ad436b234c5095d46bb065c5b32780618df83f' }
 
 call plug#end()

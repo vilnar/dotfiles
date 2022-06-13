@@ -26,5 +26,5 @@
 	"theme_dark": "Merge Dark.sublime-theme",
 	"theme_light": "Merge.sublime-theme",
 	"time_format": "24h",
-	"update_check": false,
+	"update_check": false
 }

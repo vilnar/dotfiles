@@ -27,46 +27,11 @@ augroup MyColors
     highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
     highlight CurSearch ctermbg=yellow cterm=underline gui=underline
   }
-  autocmd ColorScheme vividchalk {
-    highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
-    highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
-    highlight phpIdentifier ctermbg=NONE ctermfg=White cterm=NONE guibg=NONE guifg=#EEEEEE gui=NONE
-    highlight Ignore        ctermbg=NONE ctermfg=DarkMagenta cterm=NONE guibg=NONE guifg=#9933CC gui=NONE
-    highlight Search        cterm=underline gui=underline
-    highlight CurSearch     cterm=underline gui=underline guibg=#B6662D
-    highlight DiffText      guibg=#AA0000
-    highlight Error         guibg=#AA0000
-    highlight ErrorMsg      guibg=#AA0000
-    highlight SpecialKey    guifg=#494949
-    highlight NonText       guifg=#494949
-  }
   autocmd ColorScheme gruvbox {
     highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
     highlight CurSearch ctermfg=208 ctermbg=235 guifg=#fe8019 guibg=#282828 gui=reverse cterm=reverse
   }
 augroup end
-
-# colorscheme vividchalk
-if get(g:, 'colors_name', 'default') == "vividchalk"
-  g:terminal_ansi_colors = [
-    '#000000',
-    '#aa0000',
-    '#00aa00',
-    '#aa5522',
-    '#0000ee',
-    '#aa00aa',
-    '#00aaaa',
-    '#aaaaaa',
-    '#555555',
-    '#ff4444',
-    '#44ff44',
-    '#ffff00',
-    '#5c5cff',
-    '#ff00ff',
-    '#00ffff',
-    '#ffffff'
-    ]
-endif
 
 
 g:gruvbox_invert_selection = 0
