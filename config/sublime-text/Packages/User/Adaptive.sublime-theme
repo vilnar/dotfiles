@@ -2,28 +2,18 @@
 {
   "variables":
   {
-    // "font_face": "Dejavu Sans Mono Book",
-    // "font_face": "system",
-    "font_face": "Fira Code",
+    "font_face": "Fira Sans",
     "font_size_sm": 13,
-    "font_size": 14,
-    "font_size_lg": 16,
-    "font_size_title": 18,
+    "font_size": 15,
+    "font_size_lg": 17,
+    "font_size_title": 17,
   },
   "rules":
   [
-    // {
-    //   "class": "tab_label",
-    //   "font.size": 13,
-    // },
     {
       "class": "tabset_control",
       "tab_height": 42,
     },
-    // {
-    //   "class": "sidebar_label",
-    //   "font.size":  13,
-    // },
     {
       "class": "status_bar",
       "content_margin": [5, 5, 5, 5],

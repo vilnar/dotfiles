@@ -26,7 +26,7 @@ if !exists("g:ReloadConfigs")
     if !is_empty_buffer && !is_empty_bufname
       execute 'edit'
     endif
-    echomsg 'reload config done'
+    echomsg 'User configuration is overloaded!'
   enddef
 endif
 command ReloadConfigs ReloadConfigs()

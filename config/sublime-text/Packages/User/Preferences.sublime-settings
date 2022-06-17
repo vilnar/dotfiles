@@ -19,6 +19,7 @@
   "color_scheme": "Mariana.sublime-color-scheme",
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
+  "show_tab_close_buttons": true,
 
   // draw
   "draw_white_space": ["selection", "trailing", "isolated"],
@@ -69,11 +70,10 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  // "font_face": "Dejavu Sans Mono Book",
-  "font_face": "Fira Code",
+  "font_face": "Fira Mono",
   "font_size": 14,
-  "line_padding_bottom": 2,
-  "line_padding_top": 2,
+  "line_padding_bottom": 3,
+  "line_padding_top": 3,
   "font_options":
   [
     "no_liga",

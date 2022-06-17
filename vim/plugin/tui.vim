@@ -45,6 +45,7 @@ g:gruvbox_hls_highlight = "purple"
 set background=dark
 colorscheme gruvbox
 
+
 # set background=light
 # colorscheme default
 
@@ -90,6 +91,14 @@ endif
 
 set laststatus=2
 
+def GetIndtentation(): string
+  var mess = "T:" # tabs
+  if &expandtab == true
+    mess = "S:" # spaces
+  endif
+  return mess .. shiftwidth()
+enddef
+
 def g:StatuslineExpr(): string
   var file_path = "%f "
   var modified = "%{&modified ? '[+] ' : ''}"
@@ -98,10 +107,11 @@ def g:StatuslineExpr(): string
   var win_nr = "[%{winnr()}] "
   # var fencoding  = "%{&fileencoding ? '['.&fileencoding.'] ' : '['.&encoding.'] '}"
   var ftype  = "%{len(&filetype) ? '['.&filetype.'] ' : ''}"
+  var indentaition = "[" .. GetIndtentation() .. "]"
   var position = " %l:%c "
   var percent = " %P"
 
-  return file_path .. modified .. readonly .. separate .. win_nr  .. ftype .. position .. percent
+  return file_path .. modified .. readonly .. separate .. win_nr  .. ftype .. indentaition .. position .. percent
 enddef
 set statusline=%!StatuslineExpr()
 

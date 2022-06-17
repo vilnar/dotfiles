@@ -34,7 +34,7 @@ Plug 'tpope/vim-commentary', { 'commit': '3654775824337f466109f00eaf6759760f65be
 Plug 'tpope/vim-surround', { 'commit': 'bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea' }
 
 " git
-Plug 'tpope/vim-fugitive', { 'commit': '92c73bb0507338441733198d630a1fe5e7fdac3a' }
+Plug 'tpope/vim-fugitive', { 'commit': '6ae79e75a44ac3acb88f381ed52898c9f9e01d62' }
 " git diff between branches
 Plug 'idanarye/vim-merginal', { 'commit': 'd61345a6579a0e141499fc0deb4cdd0620d94344' }
 
