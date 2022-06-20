@@ -30,7 +30,6 @@ all: install_bash install_vim install_git install_gtk
 
 install_vim: clean_vim
 	@echo Place vim config files
-	ln -sf `pwd`/vimrc ~/.vimrc
 	ln -sf `pwd`/vim   ~/.vim
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	vim -u NONE -c "PlugInstall" -c q
