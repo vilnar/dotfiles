@@ -3,17 +3,17 @@ vim9script
 import "./custom.vim" as custom
 
 var PROJECTS = [
-  {id: 1, name: 'Code', dir: '~/Code', exec: ''}
+  {id: 1, name: 'Code', dir: '~/Code', execs: []}
 ]
 if exists("custom.PROJECTS")
   PROJECTS = custom.PROJECTS
 endif
 
 
-def MenuCB(id: number, result: number)
+def FzfCallback(name: string)
   var project = {}
   for i in PROJECTS
-    if i.id == result
+    if i.name == name
       project = i
     endif
   endfor
@@ -23,6 +23,9 @@ def MenuCB(id: number, result: number)
   endif
 
   exec ':cd ' .. project.dir
+  for cmd in project.execs
+    exec cmd
+  endfor
   echo "Opened selected project " .. project.name
 enddef
 
@@ -33,18 +36,8 @@ def ShowProjects()
     add(items, i.name)
   endfor
 
-  call popup_menu(
-    items,
-    {
-      title: " Project menu ",
-      callback: 'MenuCB',
-      line: 25, col: 60,
-      highlight: 'Question',
-      border: [],
-      close: 'click',
-      padding: [1, 1, 0, 1]
-    }
-  )
+  call fzf#run(fzf#wrap({'source': items, 'sink': function('FzfCallback')}))
 enddef
 
 command ProjectsShow :vim9cmd ShowProjects()
+nnoremap <leader>j :ProjectsShow<CR>

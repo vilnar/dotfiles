@@ -7,7 +7,7 @@ if !exists("g:ReloadConfigs")
     if !is_empty_buffer && !is_empty_bufname
       execute 'write'
     endif
-    execute 'source ~/.vimrc'
+    execute 'source ~/.vim/vimrc'
     execute 'source ~/.vim/plugin/mappings.vim'
     execute 'source ~/.vim/plugin/mouse.vim'
     execute 'source ~/.vim/plugin/edit.vim'

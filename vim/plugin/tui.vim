@@ -107,11 +107,11 @@ def g:StatuslineExpr(): string
   var win_nr = "[%{winnr()}] "
   # var fencoding  = "%{&fileencoding ? '['.&fileencoding.'] ' : '['.&encoding.'] '}"
   var ftype  = "%{len(&filetype) ? '['.&filetype.'] ' : ''}"
-  var indentaition = "[" .. GetIndtentation() .. "]"
+  var indentaition = GetIndtentation() .. " "
   var position = " %l:%c "
   var percent = " %P"
 
-  return file_path .. modified .. readonly .. separate .. win_nr  .. ftype .. indentaition .. position .. percent
+  return file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
 enddef
 set statusline=%!StatuslineExpr()
 
