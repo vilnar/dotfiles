@@ -1,8 +1,8 @@
 {
   "variables":
   {
-    "font_face": "Fira Sans",
-    "font_size_sm": 13,
+    "font_face": "Ubuntu Regular",
+    "font_size_sm": 14,
     "font_size": 15,
     "font_size_lg": 17,
     "font_size_title": 17,
