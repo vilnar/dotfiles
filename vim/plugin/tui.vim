@@ -47,6 +47,11 @@ augroup end
 
 
 colorscheme darkblue
+if get(g:, 'colors_name', 'default') == "darkblue"
+  g:terminal_ansi_colors[1] = "#D14A14"
+  g:terminal_ansi_colors[2] = "#5F875F"
+  g:terminal_ansi_colors[4] = "#5F87AF"
+endif
 
 
 
