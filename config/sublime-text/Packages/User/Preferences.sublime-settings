@@ -76,8 +76,8 @@
   "line_padding_top": 3,
   "font_options":
   [
-    "no_liga",
-    "no_calt",
+    // "no_liga",
+    // "no_calt",
     // "ss01", // r
     // "ss02", // <= >=
     // "ss03", // &
