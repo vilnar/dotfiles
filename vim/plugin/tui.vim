@@ -22,37 +22,40 @@ if (has("termguicolors"))
 endif
 
 augroup MyColors
+  autocmd ColorScheme default {
+    highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
+    highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
+    highlight CurSearch     ctermfg=white ctermbg=black cterm=NONE gui=NONE
+  }
   autocmd ColorScheme gruvbox {
     highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
     highlight CurSearch ctermfg=208 ctermbg=235 guifg=#fe8019 guibg=#282828 gui=reverse cterm=reverse
   }
-  autocmd ColorScheme darkblue {
-    highlight phpIdentifier guifg=#c0c0c0 guibg=NONE gui=NONE cterm=NONE
-    highlight link CurSearch IncSearch
-    hi MatchParen guifg=#7f7f8c guibg=#bdb76b gui=NONE cterm=NONE
-  }
 augroup end
 
 
-# g:gruvbox_invert_selection = 0
-# g:gruvbox_italic = 0
-# g:gruvbox_underline = 1
-# g:gruvbox_contrast_light = "hard"
-# g:gruvbox_contrast_dark = "medium"
-# g:gruvbox_guisp_fallback = "bg" # fix spell colors
-# g:gruvbox_vert_split = "bg1"
-# g:gruvbox_hls_highlight = "purple"
-# set background=dark
-# colorscheme gruvbox
+def UseDarkColors()
+  g:gruvbox_invert_selection = 0
+  g:gruvbox_italic = 0
+  g:gruvbox_underline = 1
+  g:gruvbox_contrast_light = "hard"
+  g:gruvbox_contrast_dark = "medium"
+  g:gruvbox_guisp_fallback = "bg" # fix spell colors
+  g:gruvbox_vert_split = "bg1"
+  g:gruvbox_hls_highlight = "purple"
+  set background=dark
+  colorscheme gruvbox
+enddef
+
+def UseLightColors()
+  # Palette scheme is Xterm
+  set background=light
+  colorscheme default2
+enddef
 
 
-colorscheme darkblue
-if get(g:, 'colors_name', 'default') == "darkblue"
-  g:terminal_ansi_colors[1] = "#D14A14"
-  g:terminal_ansi_colors[2] = "#5F875F"
-  g:terminal_ansi_colors[4] = "#5F87AF"
-endif
-
+# call UseDarkColors()
+call UseLightColors()
 
 
 # set linebreak

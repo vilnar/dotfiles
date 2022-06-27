@@ -1,6 +1,25 @@
 [/]
-default='d47b0d82-7a10-4756-b55e-d1c99c1389e4'
-list=['520c373b-7acb-4bb9-9eb3-ad568581f84d', 'b58db4a4-6560-4f30-9b84-5e214968e781', 'd47b0d82-7a10-4756-b55e-d1c99c1389e4']
+default='03156924-3e90-428b-b53f-566183096e07'
+list=['520c373b-7acb-4bb9-9eb3-ad568581f84d', 'b58db4a4-6560-4f30-9b84-5e214968e781', 'a76c03fb-dc72-40b9-921d-0b8078232010', '03156924-3e90-428b-b53f-566183096e07']
+
+[:03156924-3e90-428b-b53f-566183096e07]
+audible-bell=false
+background-color='rgb(255,255,255)'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cell-height-scale=1.0
+cell-width-scale=1.0
+cursor-blink-mode='off'
+cursor-colors-set=false
+default-size-columns=100
+foreground-color='rgb(0,0,0)'
+highlight-colors-set=false
+palette=['rgb(0,0,0)', 'rgb(205,0,0)', 'rgb(0,205,0)', 'rgb(205,205,0)', 'rgb(0,0,238)', 'rgb(205,0,205)', 'rgb(0,205,205)', 'rgb(229,229,229)', 'rgb(127,127,127)', 'rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(255,255,0)', 'rgb(92,92,255)', 'rgb(255,0,255)', 'rgb(0,255,255)', 'rgb(255,255,255)']
+text-blink-mode='never'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='xterm-light'
 
 [:520c373b-7acb-4bb9-9eb3-ad568581f84d]
 audible-bell=false
@@ -21,6 +40,25 @@ use-theme-transparency=false
 use-transparent-background=false
 visible-name='tpope-dark'
 
+[:a76c03fb-dc72-40b9-921d-0b8078232010]
+audible-bell=false
+background-color='rgb(247,247,247)'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cell-height-scale=1.0
+cell-width-scale=1.0
+cursor-blink-mode='off'
+cursor-colors-set=false
+default-size-columns=100
+foreground-color='rgb(0,0,0)'
+highlight-colors-set=false
+palette=['rgb(0,0,0)', 'rgb(170,55,49)', 'rgb(68,140,39)', 'rgb(203,144,0)', 'rgb(50,92,192)', 'rgb(122,62,157)', 'rgb(0,131,178)', 'rgb(247,247,247)', 'rgb(119,119,119)', 'rgb(240,80,80)', 'rgb(96,203,0)', 'rgb(255,188,93)', 'rgb(0,122,204)', 'rgb(230,76,230)', 'rgb(0,170,203)', 'rgb(247,247,247)']
+text-blink-mode='never'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='Alabaster'
+
 [:b58db4a4-6560-4f30-9b84-5e214968e781]
 audible-bell=false
 background-color='rgb(40,40,40)'
@@ -39,22 +77,3 @@ use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
 visible-name='gruvbox'
-
-[:d47b0d82-7a10-4756-b55e-d1c99c1389e4]
-audible-bell=false
-background-color='rgb(0,0,64)'
-bold-color-same-as-fg=true
-bold-is-bright=false
-cell-height-scale=1.0
-cell-width-scale=1.0
-cursor-blink-mode='off'
-cursor-colors-set=false
-default-size-columns=100
-foreground-color='rgb(192,192,192)'
-highlight-colors-set=false
-palette=['rgb(0,0,0)', 'rgb(209,74,20)', 'rgb(95,135,95)', 'rgb(255,165,0)', 'rgb(95,135,175)', 'rgb(139,0,139)', 'rgb(0,139,139)', 'rgb(192,192,192)', 'rgb(128,128,128)', 'rgb(255,160,160)', 'rgb(144,240,32)', 'rgb(255,255,96)', 'rgb(0,48,255)', 'rgb(255,0,255)', 'rgb(144,255,240)', 'rgb(255,255,255)']
-text-blink-mode='never'
-use-theme-colors=false
-use-theme-transparency=false
-use-transparent-background=false
-visible-name='darkblue'
