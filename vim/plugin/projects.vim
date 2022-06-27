@@ -40,4 +40,4 @@ def ShowProjects()
 enddef
 
 command ProjectsShow :vim9cmd ShowProjects()
-nnoremap <leader>j :ProjectsShow<CR>
+nnoremap <leader>jj :ProjectsShow<CR>

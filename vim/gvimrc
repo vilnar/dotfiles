@@ -5,7 +5,8 @@ set guioptions=cM
 # make gVim automatically maximize
 set lines=999 columns=999
 
-set guifont=Dejavu\ Sans\ Mono\ 13
+# set guifont=Dejavu\ Sans\ Mono\ 13
+set guifont=Cascadia\ Mono\ Semilight\ 14
 # set guifont=Fira\ Mono\ 14
 
 # disable blink cursor

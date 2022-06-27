@@ -54,8 +54,8 @@ def UseLightColors()
 enddef
 
 
-# call UseDarkColors()
-call UseLightColors()
+call UseDarkColors()
+# call UseLightColors()
 
 
 # set linebreak
