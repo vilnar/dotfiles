@@ -70,7 +70,7 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  "font_face": "Cascadia Mono Semilight",
+  "font_face": "Fira Mono",
   "font_size": 14,
   "line_padding_bottom": 3,
   "line_padding_top": 3,
