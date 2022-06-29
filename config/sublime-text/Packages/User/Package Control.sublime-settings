@@ -1,9 +1,10 @@
 {
   "installed_packages":
   [
+    "LSP",
+    "LSP-gopls",
+    "LSP-json",
     "Package Control",
-    "SublimeLinter",
-    "SublimeLinter-json",
   ],
   "auto_upgrade": false,
   "bootstrapped": true,
