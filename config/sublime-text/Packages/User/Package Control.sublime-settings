@@ -2,12 +2,15 @@
   "installed_packages":
   [
     "LSP",
+    "LSP-bash",
     "LSP-gopls",
     "LSP-json",
     "Package Control",
   ],
   "auto_upgrade": false,
   "bootstrapped": true,
+  "submit_usage": false,
+  "remove_orphaned": false,
   "in_process_packages":
   [
   ],
