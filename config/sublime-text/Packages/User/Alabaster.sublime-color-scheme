@@ -37,6 +37,10 @@
       "foreground": "var(grey)"
     },
     {
+      "scope": "constant.numeric.line-number.match",
+      "foreground": "var(red)"
+    },
+    {
       "name": "markup code",
       "scope": "markup.raw",
       "background": "color(var(selection) alpha(0.20))",
