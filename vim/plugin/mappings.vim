@@ -31,8 +31,8 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 
 def CopyWithoutNewLine()
-  execute ':normal ^vg_"+y$'
-  echomsg "copy without new line!"
+  execute ':normal ^vg_"+y'
+  echomsg "copy line: " .. line(".")
 enddef
 nnoremap <Leader>l :vim9cmd <SID>CopyWithoutNewLine()<CR>
 
