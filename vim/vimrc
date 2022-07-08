@@ -58,4 +58,8 @@ Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312caf
 
 Plug 'gruvbox-community/gruvbox', { 'commit': '34ad436b234c5095d46bb065c5b32780618df83f' }
 
+" LSP
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
+
 call plug#end()

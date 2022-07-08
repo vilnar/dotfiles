@@ -1,11 +1,11 @@
 {
   // autocomplete
-  "auto_complete": false,
+  "auto_complete": true,
   "auto_complete_use_index": false,
   "auto_complete_commit_on_tab": true,
-  "tab_completion": true,
-  "auto_complete_cycle": true,
-  "auto_complete_preserve_order": "none",
+  // "tab_completion": true,
+  // "auto_complete_cycle": true,
+  // "auto_complete_preserve_order": "none",
 
   // index files
   "index_files": true,
@@ -70,8 +70,8 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  "font_face": "Fira Mono",
-  "font_size": 14,
+  "font_face": "Ubuntu Mono",
+  "font_size": 16,
   "line_padding_bottom": 3,
   "line_padding_top": 3,
   "font_options":

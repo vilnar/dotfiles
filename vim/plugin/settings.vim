@@ -79,15 +79,15 @@ inoremap <F12> <ESC>:vim9cmd AsyncStop<CR>
 cnoremap <F12> <ESC>:vim9cmd AsyncStop<CR>
 
 
-# :help bufexplorer
 g:fugitive_dynamic_colors = 0
+
+# :help bufexplorer
 g:bufExplorerShowNoName = 1
 g:bufExplorerSortBy = "mru"
-# g:bufExplorerSortBy = "number"
 g:bufExplorerShowRelativePath = 1
 g:bufExplorerDisableDefaultKeyMapping = 1
 nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
-# nnoremap <silent> <leader>b :Buffers<CR>
+# nnoremap <leader>b :Buffers<CR>
 
 
 # help codefmt
@@ -101,3 +101,35 @@ g:goyo_linenr = 1
 g:goimports = 0
 
 g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sh']
+
+
+# LSP settings --------------------------------------------------
+# g:lsp_document_code_action_signs_enabled = 0
+
+# augroup LspGo
+#   var gopls_settings = {
+#     'name': 'gopls',
+#     'cmd': ['gopls'],
+#     'allowlist': ['go'],
+#     }
+#   autocmd User lsp_setup call lsp#register_server(gopls_settings)
+#   autocmd FileType go setlocal omnifunc=lsp#complete
+#   autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+#   autocmd FileType go nmap <buffer> ,r <plug>(lsp-references)
+#   autocmd FileType go nmap <buffer> ,i <plug>(lsp-implementation)
+#   autocmd FileType go nmap <buffer> ,t <plug>(lsp-type-definition)
+#   autocmd FileType go nmap <buffer> ,h <plug>(lsp-hover)
+#   autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
+#   autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+#   autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+# augroup END
+
+# g:lsp_settings_enable_suggestions = 0
+# g:lsp_settings = {
+#    'gopls': {
+#      'initialization_options': {
+#         "linksInHover": false,
+#         "linkTarget": "",
+#      }
+#    }
+# }

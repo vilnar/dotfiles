@@ -6,13 +6,14 @@
 	"caret_style": "solid",
 	"diff_style": "side-by-side",
 	"draw_white_space": "all",
-	"font_face": "Fira Mono",
+	"expand_merge_commits_by_default": false,
+	"font_face": "Ubuntu Mono",
 	"font_options":
 	[
 		"no_liga",
 		"no_calt"
 	],
-	"font_size": 14,
+	"font_size": 16,
 	"highlight_line": false,
 	"ignore_diff_white_space": false,
 	"image_diff_style": "onion-skin",
@@ -22,6 +23,7 @@
 	"remember_workspace": false,
 	"render_commit_dialog_message_at_top": true,
 	"side_bar_layout": "tabs",
+	"signature_error_highlighting": "no_public_key",
 	"theme": "Merge Dark.sublime-theme",
 	"theme_dark": "Merge Dark.sublime-theme",
 	"theme_light": "Merge.sublime-theme",
