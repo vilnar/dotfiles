@@ -86,7 +86,7 @@ g:bufExplorerShowNoName = 1
 g:bufExplorerSortBy = "mru"
 g:bufExplorerShowRelativePath = 1
 g:bufExplorerDisableDefaultKeyMapping = 1
-nnoremap <silent> <leader>b :BufExplorerHorizontalSplit<CR>
+nnoremap <silent> <leader>b :BufExplorer<CR>
 # nnoremap <leader>b :Buffers<CR>
 
 
@@ -104,32 +104,27 @@ g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sh']
 
 
 # LSP settings --------------------------------------------------
-# g:lsp_document_code_action_signs_enabled = 0
+g:lsp_document_code_action_signs_enabled = 0
 
-# augroup LspGo
-#   var gopls_settings = {
-#     'name': 'gopls',
-#     'cmd': ['gopls'],
-#     'allowlist': ['go'],
-#     }
-#   autocmd User lsp_setup call lsp#register_server(gopls_settings)
-#   autocmd FileType go setlocal omnifunc=lsp#complete
-#   autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
-#   autocmd FileType go nmap <buffer> ,r <plug>(lsp-references)
-#   autocmd FileType go nmap <buffer> ,i <plug>(lsp-implementation)
-#   autocmd FileType go nmap <buffer> ,t <plug>(lsp-type-definition)
-#   autocmd FileType go nmap <buffer> ,h <plug>(lsp-hover)
-#   autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
-#   autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
-#   autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
-# augroup END
+augroup LspGo
+  var gopls_settings = {
+    'name': 'gopls',
+    'cmd': ['gopls'],
+    'allowlist': ['go'],
+    'initialization_options': {
+      "linksInHover": false,
+      "linkTarget": "",
+    },
+    }
+  autocmd User lsp_setup call lsp#register_server(gopls_settings)
+  autocmd FileType go setlocal omnifunc=lsp#complete
+  autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+  autocmd FileType go nmap <buffer> ,r <plug>(lsp-references)
+  autocmd FileType go nmap <buffer> ,i <plug>(lsp-implementation)
+  autocmd FileType go nmap <buffer> ,t <plug>(lsp-type-definition)
+  autocmd FileType go nmap <buffer> ,h <plug>(lsp-hover)
+  autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
+  autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+  autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+augroup END
 
-# g:lsp_settings_enable_suggestions = 0
-# g:lsp_settings = {
-#    'gopls': {
-#      'initialization_options': {
-#         "linksInHover": false,
-#         "linkTarget": "",
-#      }
-#    }
-# }
