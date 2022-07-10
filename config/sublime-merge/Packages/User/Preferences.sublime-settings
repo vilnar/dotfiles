@@ -7,13 +7,13 @@
 	"diff_style": "side-by-side",
 	"draw_white_space": "all",
 	"expand_merge_commits_by_default": false,
-	"font_face": "Ubuntu Mono",
+	"font_face": "Dejavu Sans Mono",
 	"font_options":
 	[
 		"no_liga",
 		"no_calt"
 	],
-	"font_size": 16,
+	"font_size": 13.5,
 	"highlight_line": false,
 	"ignore_diff_white_space": false,
 	"image_diff_style": "onion-skin",

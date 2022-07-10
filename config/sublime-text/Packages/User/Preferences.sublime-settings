@@ -70,8 +70,8 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  "font_face": "Ubuntu Mono",
-  "font_size": 16,
+  "font_face": "Dejavu Sans Mono",
+  "font_size": 13.5,
   "line_padding_bottom": 3,
   "line_padding_top": 3,
   "font_options":
