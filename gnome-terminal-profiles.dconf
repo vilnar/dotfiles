@@ -1,6 +1,6 @@
 [/]
-default='b58db4a4-6560-4f30-9b84-5e214968e781'
-list=['b58db4a4-6560-4f30-9b84-5e214968e781', '03156924-3e90-428b-b53f-566183096e07']
+default='d1fbd978-05be-4da0-86cf-31884d2346df'
+list=['b58db4a4-6560-4f30-9b84-5e214968e781', '03156924-3e90-428b-b53f-566183096e07', 'd1fbd978-05be-4da0-86cf-31884d2346df']
 
 [:03156924-3e90-428b-b53f-566183096e07]
 audible-bell=false
@@ -39,3 +39,22 @@ use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
 visible-name='gruvbox'
+
+[:d1fbd978-05be-4da0-86cf-31884d2346df]
+audible-bell=false
+background-color='rgb(36,36,36)'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cell-height-scale=1.0
+cell-width-scale=1.0
+cursor-blink-mode='off'
+cursor-colors-set=false
+default-size-columns=100
+foreground-color='rgb(179,184,196)'
+highlight-colors-set=false
+palette=['rgb(58,62,66)', 'rgb(191,98,98)', 'rgb(162,165,101)', 'rgb(233,169,111)', 'rgb(120,155,173)', 'rgb(159,122,165)', 'rgb(99,142,138)', 'rgb(115,118,115)', 'rgb(93,99,105)', 'rgb(191,98,98)', 'rgb(165,167,110)', 'rgb(233,169,111)', 'rgb(120,155,173)', 'rgb(159,122,165)', 'rgb(159,122,165)', 'rgb(227,232,227)']
+text-blink-mode='never'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='spacegray'
