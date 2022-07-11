@@ -58,6 +58,7 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
 Plug 'gruvbox-community/gruvbox', { 'commit': '34ad436b234c5095d46bb065c5b32780618df83f' }
+Plug 'ackyshake/Spacegray.vim', { 'commit': 'c699ca10ed421c462bd1c87a158faaa570dc8e28' }
 
 " LSP
 Plug 'prabirshrestha/vim-lsp', { 'commit': '68c018eb1a79e0bbeb496f7040f7205b57cf3750' }
