@@ -31,10 +31,6 @@ augroup MyColors
     highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
     highlight CurSearch ctermfg=208 ctermbg=235 guifg=#fe8019 guibg=#282828 gui=reverse cterm=reverse
   }
-  autocmd ColorScheme spacegray {
-    highlight CurSearch ctermbg=9    ctermfg=0      guibg=#AF5F5F  guifg=#141617  cterm=NONE      gui=NONE
-    highlight lspReference guibg=#3A3E42 guifg=NONE cterm=NONE gui=NONE
-  }
 augroup end
 
 
