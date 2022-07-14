@@ -79,7 +79,23 @@
   { "keys": ["shift+f11"], "command": "goto_reference" },
   { "keys": ["ctrl+shift+f11"], "command": "goto_reference", "args": {"side_by_side": true, "clear_to_right": true} },
 
+
   // LSP ----------------------------------------------------
+  // revert default behaviour
+  { "keys": ["ctrl+s"], "command": "save", "args": { "async": true } },
+  {
+    "command": "lsp_save",
+    "keys": [
+      "ctrl+alt+s"
+    ],
+    "context": [
+      {
+        "key": "lsp.session_with_capability",
+        "operator": "equal",
+        "operand": "textDocumentSync.willSave | textDocumentSync.willSaveWaitUntil | codeActionProvider.codeActionKinds | documentFormattingProvider | documentRangeFormattingProvider"
+      }
+    ]
+  },
   // Goto Definition
   {
     "command": "lsp_symbol_definition",
