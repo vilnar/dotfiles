@@ -8,16 +8,12 @@ if !exists("g:ReloadConfigs")
       execute 'write'
     endif
     execute 'source ~/.vim/vimrc'
-    execute 'source ~/.vim/plugin/mouse.vim'
     execute 'source ~/.vim/plugin/file.vim'
-    execute 'source ~/.vim/plugin/fzf.vim'
     execute 'source ~/.vim/plugin/settings.vim'
     execute 'source ~/.vim/plugin/custom.vim'
     execute 'source ~/.vim/plugin/tui.vim'
-    execute 'source ~/.vim/plugin/search_replace.vim'
     execute 'source ~/.vim/plugin/test.vim'
     execute 'source ~/.vim/plugin/macros.vim'
-    execute 'source ~/.vim/plugin/layout.vim'
     if has("gui_running")
       execute 'source ~/.vim/gvimrc'
     endif

@@ -1,5 +1,14 @@
 vim9script
 
+import "./fzf.vim" as fzf
+import "./grep.vim" as grep
+import "./layout.vim" as layout
+import "./quickfix.vim" as quickfix
+import "./search_replace.vim" as search_replace
+import "./mouse.vim" as mouse
+import "./settings.vim" as settings
+import "./langs.vim" as langs
+
 # OS clipboard yank and paste
 noremap <Leader>y "+y
 noremap <Leader>p "+p
@@ -86,7 +95,7 @@ nnoremap <silent><nowait> <leader>i :Snippets<CR>
 nnoremap <silent><nowait> <leader>ff :MyFiles<CR>
 nnoremap <silent><nowait> <leader>fc :MyFiles <C-R>=expand("%:h")<CR>/<CR>
 nnoremap <expr> <leader>fu ':MyFiles<CR>' .. expand('<cword>')
-xnoremap <leader>ff y:vim9cmd <SID>GotoSelection()<CR>
+xnoremap <leader>ff y:vim9cmd <SID>fzf.GotoSelection()<CR>
 nnoremap <leader>mm :Marks<CR>
 
 
@@ -95,8 +104,8 @@ nnoremap <leader>mm :Marks<CR>
 nnoremap <Leader>gg :Dispatch grep -rni --exclude="tags" --exclude-dir=".git" '' ./<left><left><left><left>
 vnoremap <Leader>gg y:Dispatch grep -rn --exclude="tags" --exclude-dir=".git" '<C-R>"' ./
 # grep in current directory
-nnoremap <expr> <Leader>gd ":Dispatch grep -rni '' " ..  <SID>GetRelativePathForGrep()
-vnoremap <expr> <Leader>gd "y:Dispatch grep -rn '<C-R>\"' " ..  <SID>GetRelativePathForGrep()
+nnoremap <expr> <Leader>gd ":Dispatch grep -rni '' " ..  <SID>grep.GetRelativePathForGrep()
+vnoremap <expr> <Leader>gd "y:Dispatch grep -rn '<C-R>\"' " ..  <SID>grep.GetRelativePathForGrep()
 
 # grep by filetype
 nnoremap <Leader>gi :Dispatch grep -rn --include=*.go '' ./<left><left><left><left>
@@ -122,7 +131,7 @@ inoremap <C-\> <C-^>
 
 # LAYOUT -----------------------------------------------------------------------------
 # move selected to new tab
-xnoremap <leader>ms y:vim9cmd <SID>OpenNewTabWithSelectedText()<CR>
+xnoremap <leader>ms y:vim9cmd <SID>layout.OpenNewTabWithSelectedText()<CR>
 nnoremap <Leader>mt :tab split<CR>
 
 # nnoremap <Leader>w <C-w>w
@@ -137,35 +146,35 @@ nnoremap <Leader>6 6<C-w>w
 
 
 # QUICKFIX -----------------------------------------------------------------------------
-nnoremap <silent> <leader>\ :vim9cmd <SID>QuickFixToggle()<CR>
+nnoremap <silent> <leader>\ :vim9cmd <SID>quickfix.QuickFixToggle()<CR>
 
 
 
 # SEARCH AND REPLACE -----------------------------------------------------------------------------
-vnoremap * y:vim9cmd <SID>EscapeSearchTextMultiLines(getreg('"'), '\n')<CR>
+vnoremap * y:vim9cmd <SID>search_replace.EscapeSearchTextMultiLines(getreg('"'), '\n')<CR>
 nnoremap <Leader>sm :SearchMultiLine<space>
 nnoremap <Leader>se :SearchEscape<space>
-vnoremap <Leader>se y:vim9cmd <SID>EscapeSearchText(getreg('"'))<CR>
+vnoremap <Leader>se y:vim9cmd <SID>search_replace.EscapeSearchText(getreg('"'))<CR>
 
 vnoremap <Leader>ss y/<C-R>"
 
 nnoremap <Leader>rr :%s///gc<left><left><left><left>
-vnoremap <Leader>rr y:vim9cmd <SID>EscapeTextForReplace(false)<CR>
+vnoremap <Leader>rr y:vim9cmd <SID>search_replace.EscapeTextForReplace(false)<CR>
 vnoremap <Leader>rb <Esc>:'<,'>s///gc<left><left><left><left>
 
-nnoremap <Leader>ru viwy:vim9cmd <SID>EscapeTextForReplace(true)<CR>
-vnoremap <Leader>rw y:vim9cmd <SID>EscapeTextForReplace(true)<CR>
+nnoremap <Leader>ru viwy:vim9cmd <SID>search_replace.EscapeTextForReplace(true)<CR>
+vnoremap <Leader>rw y:vim9cmd <SID>search_replace.EscapeTextForReplace(true)<CR>
 
 vnoremap <Leader>rv <Esc>:'<,'>s/\<\>\C//gc<left><left><left><left><left><left><left><left>
 
 
 
 # F keys -----------------------------------------------------------------------------
-nnoremap <F3> :vim9cmd <SID>MouseToggle()<CR>
-inoremap <F3> <ESC>:vim9cmd <SID>MouseToggle()<CR>
-cnoremap <F3> <ESC>:vim9cmd <SID>MouseToggle()<CR>
-nnoremap <F5> :vim9cmd <SID>ReloadConfigs()<CR>
-nnoremap <F6> :vim9cmd <SID>RunSpellUkToggle()<CR>
+nnoremap <F3> :vim9cmd <SID>mouse.MouseToggle()<CR>
+inoremap <F3> <ESC>:vim9cmd <SID>mouse.MouseToggle()<CR>
+cnoremap <F3> <ESC>:vim9cmd <SID>mouse.MouseToggle()<CR>
+nnoremap <F5> :vim9cmd <SID>settings.ReloadConfigs()<CR>
+nnoremap <F6> :vim9cmd <SID>langs.RunSpellUkToggle()<CR>
 noremap <F7> :tabnew<CR>:setlocal hidden<CR>
 noremap <F8> :set wrap!<CR>
 
