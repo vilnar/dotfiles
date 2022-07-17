@@ -7,5 +7,3 @@ def QuickFixToggle()
     cclose
   endif
 enddef
-
-nnoremap <silent> <leader>\ :vim9cmd <SID>QuickFixToggle()<CR>

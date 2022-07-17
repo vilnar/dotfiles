@@ -10,6 +10,3 @@ def MouseToggle()
     echomsg 'Enable mouse'
   endif
 enddef
-nnoremap <F3> :vim9cmd <SID>MouseToggle()<CR>
-inoremap <F3> <ESC>:vim9cmd <SID>MouseToggle()<CR>
-cnoremap <F3> <ESC>:vim9cmd <SID>MouseToggle()<CR>

@@ -61,7 +61,6 @@ call UseDarkColors()
 # set linebreak
 set showbreak=->
 set nowrap
-noremap <F8> :set wrap!<CR>
 
 set history=1000
 set wildmenu wildmode=full
@@ -122,12 +121,3 @@ def g:StatuslineExpr(): string
   return file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
 enddef
 set statusline=%!StatuslineExpr()
-
-# nnoremap <Leader>w <C-w>w
-nnoremap <Leader>w <C-w>p
-nnoremap <Leader>1 1<C-w>w
-nnoremap <Leader>2 2<C-w>w
-nnoremap <Leader>3 3<C-w>w
-nnoremap <Leader>4 4<C-w>w
-nnoremap <Leader>5 5<C-w>w
-nnoremap <Leader>6 6<C-w>w

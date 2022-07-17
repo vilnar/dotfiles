@@ -1,18 +1,5 @@
 vim9script
 
-nnoremap <leader>o :only<CR>
-nnoremap <leader>c :close<CR>
-
-noremap <F7> :tabnew<CR>:setlocal hidden<CR>
-# tabs switching
-# nnoremap <Leader>t :tabs<CR>:tabnext<Space>
-# buffers list
-# nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
-# nnoremap <Leader>b :ls<CR>:b<Space>
-
-# close current buffer
-nnoremap <Leader>q :bdelete %<CR>
-
 def CloseOtherBuffers()
   var curr_buff = bufnr("%")
   var last_buff = bufnr("$")

@@ -38,6 +38,7 @@ Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf
 Plug 'tpope/vim-fugitive', { 'commit': '8b39d29d947618913ba1db32de605a6335875b99' }
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
+" Plug 'habamax/vim-dir'
 Plug 'SirVer/ultisnips', { 'commit': '5fc4862eea9bc72cf0f03c56a4a09fd76d9fee35' }
 Plug 'jlanzarotta/bufexplorer', { 'commit': '1be66e253730fd186a5a789a67a337420f431a71' }
 Plug 'jparise/vim-graphql', { 'commit': '4bf5d33bda83117537aa3c117dee5b9b14fc9333' }
@@ -60,6 +61,6 @@ Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312caf
 Plug 'gruvbox-community/gruvbox', { 'commit': '34ad436b234c5095d46bb065c5b32780618df83f' }
 
 " LSP
-" Plug 'prabirshrestha/vim-lsp', { 'commit': '68c018eb1a79e0bbeb496f7040f7205b57cf3750' }
+Plug 'prabirshrestha/vim-lsp', { 'commit': '68c018eb1a79e0bbeb496f7040f7205b57cf3750' }
 
 call plug#end()

@@ -21,6 +21,11 @@ augroup KeepScreenPosition
   }
 augroup END
 
-# autocmd FileType fugitive set bufhidden=delete
-# autocmd FileType fugitive set bufhidden=hide
-autocmd FileType fugitive set bufhidden=
+augroup FugitiveCustom
+  autocmd FileType fugitive setlocal bufhidden=
+  autocmd FileType git {
+    setlocal foldmethod=syntax
+    setlocal bufhidden=
+    setlocal buflisted
+  }
+augroup END

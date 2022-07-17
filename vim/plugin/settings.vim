@@ -8,7 +8,6 @@ if !exists("g:ReloadConfigs")
       execute 'write'
     endif
     execute 'source ~/.vim/vimrc'
-    execute 'source ~/.vim/plugin/mappings.vim'
     execute 'source ~/.vim/plugin/mouse.vim'
     execute 'source ~/.vim/plugin/file.vim'
     execute 'source ~/.vim/plugin/fzf.vim'
@@ -22,6 +21,7 @@ if !exists("g:ReloadConfigs")
     if has("gui_running")
       execute 'source ~/.vim/gvimrc'
     endif
+    execute 'source ~/.vim/plugin/mappings.vim'
     if !is_empty_buffer && !is_empty_bufname
       execute 'edit'
     endif
@@ -29,17 +29,19 @@ if !exists("g:ReloadConfigs")
   enddef
 endif
 command ReloadConfigs ReloadConfigs()
-nnoremap <F5> :vim9cmd <SID>ReloadConfigs()<CR>
 
 command EditorShowSettings :enew | put = execute('set all')
 command EditorShowMaps :enew | put = execute('map')
 
 
+
+
+
+# PLUGIN SETTINGS -----------------------------------------------------------------------------
 # :help netrw
 # g:netrw_banner = 0
 # disable plugin netrw
 # loaded_netrwPlugin = 1
-
 
 g:php_special_functions = 0
 g:go_highlight_functions = 1
@@ -55,28 +57,15 @@ g:NERDTreeNodeDelimiter = "\u00a0"
 g:NERDTreeRemoveFileCmd = "gio trash "
 g:NERDTreeRemoveDirCmd = "gio trash "
 g:NERDTreeHijackNetrw = 0
-nnoremap <leader>nt :NERDTreeToggle<cr>
-nnoremap <leader>nf :NERDTreeFind<cr>
-
-
 
 
 # :help UltiSnips
 g:UltiSnipsSnippetDirectories = ["UltiSnips", "customsnippets"]
-g:UltiSnipsExpandTrigger = "<tab>"
-# list all snippets for current filetype
-g:UltiSnipsListSnippets = "<c-d>"
-g:UltiSnipsExpandTrigger = "<tab>"
-g:UltiSnipsJumpForwardTrigger = "<c-b>"
-g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 
 
 # :help asyncrun
 g:asyncrun_open = 8
 g:asyncrun_save = 2
-nnoremap <F12> :vim9cmd AsyncStop<CR>
-inoremap <F12> <ESC>:vim9cmd AsyncStop<CR>
-cnoremap <F12> <ESC>:vim9cmd AsyncStop<CR>
 
 
 g:fugitive_dynamic_colors = 0
@@ -86,12 +75,6 @@ g:bufExplorerShowNoName = 1
 g:bufExplorerSortBy = "mru"
 g:bufExplorerShowRelativePath = 1
 g:bufExplorerDisableDefaultKeyMapping = 1
-nnoremap <silent> <leader>b :BufExplorer<CR>
-# nnoremap <leader>b :Buffers<CR>
-
-
-# help codefmt
-vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>
 
 
 g:goyo_width = 120
@@ -104,27 +87,4 @@ g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sh']
 
 
 # LSP settings --------------------------------------------------
-# g:lsp_document_code_action_signs_enabled = 0
-
-# augroup LspGo
-#   var gopls_settings = {
-#     'name': 'gopls',
-#     'cmd': ['gopls'],
-#     'allowlist': ['go'],
-#     'initialization_options': {
-#       "linksInHover": false,
-#       "linkTarget": "",
-#     },
-#     }
-#   autocmd User lsp_setup call lsp#register_server(gopls_settings)
-#   autocmd FileType go setlocal omnifunc=lsp#complete
-#   autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
-#   autocmd FileType go nmap <buffer> ,r <plug>(lsp-references)
-#   autocmd FileType go nmap <buffer> ,i <plug>(lsp-implementation)
-#   autocmd FileType go nmap <buffer> ,t <plug>(lsp-type-definition)
-#   autocmd FileType go nmap <buffer> ,h <plug>(lsp-hover)
-#   autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
-#   autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
-#   autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
-# augroup END
-
+g:lsp_document_code_action_signs_enabled = 0

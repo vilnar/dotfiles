@@ -63,8 +63,6 @@ enddef
 command FileRemove RemoveFile()
 
 
-# Open current file with Encode
-nnoremap <Leader>ee :edit ++enc= %<left><left>
 
 # command FileEncodeReopenWithWinCyrilic :e ++enc=cp1251
 command EncodeDetectThis :!chardet3 %

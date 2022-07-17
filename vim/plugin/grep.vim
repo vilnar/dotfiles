@@ -1,10 +1,5 @@
 vim9script
 
-# grep in project
-nnoremap <Leader>gg :Dispatch grep -rni --exclude="tags" --exclude-dir=".git" '' ./<left><left><left><left>
-vnoremap <Leader>gg y:Dispatch grep -rn --exclude="tags" --exclude-dir=".git" '<C-R>"' ./
-
-
 def GetRelativePathForGrep(): string
   var path = expand('%:h')
   if path == '.'
@@ -18,18 +13,6 @@ def GetRelativePathForGrep(): string
   return './' .. path .. '/'
 enddef
 
-# grep in current directory
-nnoremap <expr> <Leader>gd ":Dispatch grep -rni '' " ..  <SID>GetRelativePathForGrep()
-vnoremap <expr> <Leader>gd "y:Dispatch grep -rn '<C-R>\"' " ..  <SID>GetRelativePathForGrep()
-
-# grep by filetype
-nnoremap <Leader>gi :Dispatch grep -rn --include=*.go '' ./<left><left><left><left>
-
-# grep in current buffer
-noremap <expr> <Leader>gb ":Dispatch grep -nirH '' " .. expand('%') 
-vnoremap <expr> <Leader>gb "y:Dispatch grep -nrH '<C-R>\"' " .. expand('%') 
-
-
 def SearchInOpenedBuffers(pattern: string)
   execute 'cclose'
   execute 'cexpr []'
@@ -37,8 +20,3 @@ def SearchInOpenedBuffers(pattern: string)
   execute 'cwindow'
 enddef
 command -nargs=1 SearchInOpenedBuffers SearchInOpenedBuffers(<f-args>)
-
-
-# grep for regex (-P is enable PATTERNS are Perl regular expressions)
-# nnoremap <Leader>gr :Dispatch grep -nroHP '' ./<left><left><left><left>
-nnoremap <expr> <Leader>gr ":Dispatch grep -nroHP '' " .. expand('%')

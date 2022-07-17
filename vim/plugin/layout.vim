@@ -6,8 +6,3 @@ def OpenNewTabWithSelectedText()
   execute ':setlocal hidden' 
   append(0, split(text, '\n'))
 enddef
-# move selected to new tab
-xnoremap <leader>ms y:vim9cmd <SID>OpenNewTabWithSelectedText()<CR>
-
-
-nnoremap <Leader>mt :tab split<CR>
