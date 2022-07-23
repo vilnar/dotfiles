@@ -72,8 +72,8 @@
   // font
   "font_face": "Dejavu Sans Mono",
   "font_size": 13.5,
-  "line_padding_bottom": 3,
-  "line_padding_top": 3,
+  "line_padding_bottom": 5,
+  "line_padding_top": 5,
   "font_options":
   [
     // "no_liga",

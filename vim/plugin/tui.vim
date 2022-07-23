@@ -75,7 +75,6 @@ set complete=.
 set splitbelow
 set title
 
-set hidden
 set confirm
 
 set nomore

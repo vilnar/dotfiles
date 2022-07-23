@@ -175,7 +175,7 @@ inoremap <F3> <ESC>:vim9cmd <SID>mouse.MouseToggle()<CR>
 cnoremap <F3> <ESC>:vim9cmd <SID>mouse.MouseToggle()<CR>
 nnoremap <F5> :vim9cmd <SID>settings.ReloadConfigs()<CR>
 nnoremap <F6> :vim9cmd <SID>langs.RunSpellUkToggle()<CR>
-noremap <F7> :tabnew<CR>:setlocal hidden<CR>
+noremap <F7> :tabnew<CR>
 noremap <F8> :set wrap!<CR>
 
 # show whitespace
@@ -214,24 +214,25 @@ nnoremap <silent> <leader>b :BufExplorer<CR>
 # help codefmt
 vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>
 
-augroup LspGo
-  var gopls_settings = {
-    'name': 'gopls',
-    'cmd': ['gopls'],
-    'allowlist': ['go'],
-    'initialization_options': {
-      "linksInHover": false,
-      "linkTarget": "",
-    },
-    }
-  autocmd User lsp_setup call lsp#register_server(gopls_settings)
-  autocmd FileType go setlocal omnifunc=lsp#complete
-  autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
-  autocmd FileType go nmap <buffer> ,r <plug>(lsp-references)
-  autocmd FileType go nmap <buffer> ,i <plug>(lsp-implementation)
-  autocmd FileType go nmap <buffer> ,t <plug>(lsp-type-definition)
-  autocmd FileType go nmap <buffer> ,h <plug>(lsp-hover)
-  autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
-  autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
-  autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
-augroup END
+# # LSP
+# augroup LspGo
+#   var gopls_settings = {
+#     'name': 'gopls',
+#     'cmd': ['gopls'],
+#     'allowlist': ['go'],
+#     'initialization_options': {
+#       "linksInHover": false,
+#       "linkTarget": "",
+#     },
+#     }
+#   autocmd User lsp_setup call lsp#register_server(gopls_settings)
+#   autocmd FileType go setlocal omnifunc=lsp#complete
+#   autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+#   autocmd FileType go nmap <buffer> ,r <plug>(lsp-references)
+#   autocmd FileType go nmap <buffer> ,i <plug>(lsp-implementation)
+#   autocmd FileType go nmap <buffer> ,t <plug>(lsp-type-definition)
+#   autocmd FileType go nmap <buffer> ,h <plug>(lsp-hover)
+#   autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
+#   autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+#   autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+# augroup END

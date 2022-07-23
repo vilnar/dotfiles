@@ -8,6 +8,8 @@
     "globals":
     {
         "brackets_options": "bold glow",
+        "selection_border_width": "2",
+        "selection_corner_radius": "3",
         // "brackets_foreground": "var(gold-custom)",
         // "bracket_contents_options": "underline",
         // "bracket_contents_foreground": "var(blue5)",
