@@ -214,25 +214,28 @@ nnoremap <silent> <leader>b :BufExplorer<CR>
 # help codefmt
 vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>
 
-# # LSP
-# augroup LspGo
-#   var gopls_settings = {
-#     'name': 'gopls',
-#     'cmd': ['gopls'],
-#     'allowlist': ['go'],
-#     'initialization_options': {
-#       "linksInHover": false,
-#       "linkTarget": "",
-#     },
-#     }
-#   autocmd User lsp_setup call lsp#register_server(gopls_settings)
-#   autocmd FileType go setlocal omnifunc=lsp#complete
-#   autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
-#   autocmd FileType go nmap <buffer> ,r <plug>(lsp-references)
-#   autocmd FileType go nmap <buffer> ,i <plug>(lsp-implementation)
-#   autocmd FileType go nmap <buffer> ,t <plug>(lsp-type-definition)
-#   autocmd FileType go nmap <buffer> ,h <plug>(lsp-hover)
-#   autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
-#   autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
-#   autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
-# augroup END
+# LSP
+augroup LspGo
+  var gopls_settings = {
+    'name': 'gopls',
+    'cmd': ['gopls'],
+    'allowlist': ['go'],
+    'initialization_options': {
+      "linksInHover": false,
+      "linkTarget": "",
+    },
+    }
+  autocmd User lsp_setup call lsp#register_server(gopls_settings)
+  autocmd FileType go setlocal omnifunc=lsp#complete
+  autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+  autocmd FileType go nmap <buffer> ,r <plug>(lsp-references)
+  autocmd FileType go nmap <buffer> ,i <plug>(lsp-implementation)
+  autocmd FileType go nmap <buffer> ,t <plug>(lsp-type-definition)
+  autocmd FileType go nmap <buffer> ,h <plug>(lsp-hover)
+  autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
+  autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+  autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+augroup END
+
+nnoremap <silent> ,1 :call lsp#enable()<bar>echo "LSP enabled"<CR>
+nnoremap <silent> ,2 :call lsp#disable()<bar>echo "LSP disabled"<CR>

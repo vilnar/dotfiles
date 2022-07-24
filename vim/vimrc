@@ -32,18 +32,18 @@ let mapleader="\<Space>"
 call plug#begin()
 Plug 'tpope/vim-commentary', { 'commit': '3654775824337f466109f00eaf6759760f65be34' }
 Plug 'tpope/vim-surround', { 'commit': 'bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea' }
-Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf5' }
+" Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf5' }
 
 " git
 Plug 'tpope/vim-fugitive', { 'commit': '8b39d29d947618913ba1db32de605a6335875b99' }
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
 " Plug 'habamax/vim-dir'
-Plug 'SirVer/ultisnips', { 'commit': '5fc4862eea9bc72cf0f03c56a4a09fd76d9fee35' }
+Plug 'SirVer/ultisnips', { 'commit': '1edcb40ce749c47d5da42ab02dcdf21f9279bfbb' }
 Plug 'jlanzarotta/bufexplorer', { 'commit': '1be66e253730fd186a5a789a67a337420f431a71' }
 Plug 'jparise/vim-graphql', { 'commit': '4bf5d33bda83117537aa3c117dee5b9b14fc9333' }
 Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f34bf6' }
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': '51fdaad002a5ad827bd5ebfac43386592005d02c' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': 'ecc418ba77e52660ffdd9ed84727b12c3f377680' }
 Plug 'junegunn/fzf.vim', { 'commit': 'c311c0a95fc2529c26ab36a8f530e9dd4426304c' }
 Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2' }
 
@@ -59,8 +59,9 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
 Plug 'gruvbox-community/gruvbox', { 'commit': '34ad436b234c5095d46bb065c5b32780618df83f' }
+Plug 'romainl/Apprentice', { 'commit': '9942d0bb0a5d82f7a24450b00051c1f2cc008659' }
 
 " LSP
-" Plug 'prabirshrestha/vim-lsp', { 'commit': '68c018eb1a79e0bbeb496f7040f7205b57cf3750' }
+Plug 'prabirshrestha/vim-lsp', { 'commit': 'eb542a379fbb8147ac8ae346f50217df655acc1d' }
 
 call plug#end()

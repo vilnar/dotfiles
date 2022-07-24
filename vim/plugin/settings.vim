@@ -85,3 +85,6 @@ g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sh']
 # LSP settings --------------------------------------------------
 g:lsp_document_code_action_signs_enabled = 0
 g:lsp_diagnostics_highlights_insert_mode_enabled = 0
+g:lsp_auto_enable = 0
+command LspEnable :call lsp#enable()
+command LspDisable :call lsp#disable()
