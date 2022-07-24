@@ -36,6 +36,11 @@ augroup MyColors
     # replace color #ffffaf to low contrast #fad07a
     hi Search guifg=#262626 guibg=#fad07a gui=NONE cterm=NONE
     hi Function guifg=#fad07a guibg=NONE gui=NONE cterm=NONE
+    # diff color habit, DiffAdd - green, DiffDelete - red
+    hi DiffAdd guifg=#5f875f guibg=#262626 gui=reverse cterm=reverse
+    hi diffAdded guifg=#5f875f
+    hi DiffDelete guifg=#af5f5f guibg=#262626 gui=reverse cterm=reverse
+    hi diffRemoved guifg=#af5f5f
   }
 augroup end
 
