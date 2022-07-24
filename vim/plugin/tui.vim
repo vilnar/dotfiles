@@ -31,33 +31,20 @@ augroup MyColors
     highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
     highlight CurSearch ctermfg=208 ctermbg=235 guifg=#fe8019 guibg=#282828 gui=reverse cterm=reverse
   }
-  autocmd ColorScheme apprentice {
-    highlight CurSearch gui=reverse cterm=reverse
-    # replace color #ffffaf to low contrast #fad07a
-    hi Search guifg=#262626 guibg=#fad07a gui=NONE cterm=NONE
-    hi Function guifg=#fad07a guibg=NONE gui=NONE cterm=NONE
-    # diff color habit, DiffAdd - green, DiffDelete - red
-    hi DiffAdd guifg=#5f875f guibg=#262626 gui=reverse cterm=reverse
-    hi diffAdded guifg=#5f875f
-    hi DiffDelete guifg=#af5f5f guibg=#262626 gui=reverse cterm=reverse
-    hi diffRemoved guifg=#af5f5f
-  }
 augroup end
 
 
 def UseDarkColors()
-  # g:gruvbox_invert_selection = 0
-  # g:gruvbox_italic = 0
-  # g:gruvbox_underline = 1
-  # g:gruvbox_contrast_light = "hard"
-  # g:gruvbox_contrast_dark = "medium"
-  # g:gruvbox_guisp_fallback = "bg" # fix spell colors
-  # g:gruvbox_vert_split = "bg1"
-  # g:gruvbox_hls_highlight = "purple"
-  # set background=dark
-  # colorscheme gruvbox
-
-  colorscheme apprentice
+  g:gruvbox_invert_selection = 0
+  g:gruvbox_italic = 0
+  g:gruvbox_underline = 1
+  g:gruvbox_contrast_light = "hard"
+  g:gruvbox_contrast_dark = "medium"
+  g:gruvbox_guisp_fallback = "bg" # fix spell colors
+  g:gruvbox_vert_split = "bg1"
+  g:gruvbox_hls_highlight = "purple"
+  set background=dark
+  colorscheme gruvbox
 enddef
 
 def UseLightColors()
