@@ -1,7 +1,7 @@
 vim9script
 
-set autoread
-set autowrite
+# set autoread
+# set autowrite
 
 def CopyPath(path: string)
   @+ = path

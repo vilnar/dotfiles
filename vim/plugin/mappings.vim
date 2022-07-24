@@ -209,7 +209,7 @@ g:UltiSnipsJumpForwardTrigger = "<c-b>"
 g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 
 
-nnoremap <silent> <leader>b :BufExplorer<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
 
 # help codefmt
 vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>
