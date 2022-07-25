@@ -59,9 +59,12 @@ nnoremap <leader>c :close<CR>
 
 # tabs switching
 # nnoremap <Leader>t :tabs<CR>:tabnext<Space>
+
 # buffers list
 # nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
-# nnoremap <Leader>b :ls<CR>:b<Space>
+# nnoremap <Leader>b :ls<CR>:b<SPACE>
+nnoremap <silent> <leader>b :Buffers<CR>
+
 
 # close current buffer
 nnoremap <Leader>q :bdelete %<CR>
@@ -208,8 +211,6 @@ g:UltiSnipsExpandTrigger = "<tab>"
 g:UltiSnipsJumpForwardTrigger = "<c-b>"
 g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 
-
-nnoremap <silent> <leader>b :Buffers<CR>
 
 # help codefmt
 vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>

@@ -2,7 +2,6 @@
 {
   "show_code_actions_in_hover": false,
   "show_symbol_action_links": false,
-  "link_highlight_style": "disabled",
   "show_code_actions": "",
   "show_references_in_quick_panel": true,
   "popup_max_characters_width": 80,

@@ -38,7 +38,6 @@ Plug 'tpope/vim-surround', { 'commit': 'bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea
 Plug 'tpope/vim-fugitive', { 'commit': '8b39d29d947618913ba1db32de605a6335875b99' }
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
-" Plug 'habamax/vim-dir'
 Plug 'SirVer/ultisnips', { 'commit': '1edcb40ce749c47d5da42ab02dcdf21f9279bfbb' }
 Plug 'jparise/vim-graphql', { 'commit': '4bf5d33bda83117537aa3c117dee5b9b14fc9333' }
 Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f34bf6' }
