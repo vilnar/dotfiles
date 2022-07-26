@@ -58,6 +58,9 @@ Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312caf
 
 Plug 'gruvbox-community/gruvbox', { 'commit': '34ad436b234c5095d46bb065c5b32780618df83f' }
 
+" buffers
+Plug 'jlanzarotta/bufexplorer', { 'commit': '1be66e253730fd186a5a789a67a337420f431a71' }
+
 " LSP
 Plug 'prabirshrestha/vim-lsp', { 'commit': 'eb542a379fbb8147ac8ae346f50217df655acc1d' }
 

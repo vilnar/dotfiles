@@ -27,8 +27,7 @@ def UseDarkColors()
   g:gruvbox_invert_selection = 0
   g:gruvbox_italic = 0
   g:gruvbox_underline = 1
-  g:gruvbox_contrast_light = "hard"
-  g:gruvbox_contrast_dark = "medium"
+  g:gruvbox_contrast_dark = "soft"
   g:gruvbox_guisp_fallback = "bg" # fix spell colors
   g:gruvbox_vert_split = "bg1"
   g:gruvbox_hls_highlight = "purple"
