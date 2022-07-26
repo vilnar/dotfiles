@@ -1,10 +1,10 @@
 [/]
-default='b58db4a4-6560-4f30-9b84-5e214968e781'
-list=['03156924-3e90-428b-b53f-566183096e07', 'b58db4a4-6560-4f30-9b84-5e214968e781']
+default='395c4bee-f029-479a-bdf8-4d0a87e6e8c5'
+list=['b58db4a4-6560-4f30-9b84-5e214968e781', '395c4bee-f029-479a-bdf8-4d0a87e6e8c5', '931d1409-246f-4182-90d5-92e25b95f0ee']
 
-[:03156924-3e90-428b-b53f-566183096e07]
+[:395c4bee-f029-479a-bdf8-4d0a87e6e8c5]
 audible-bell=false
-background-color='rgb(255,255,255)'
+background-color='rgb(48,48,48)'
 bold-color-same-as-fg=true
 bold-is-bright=false
 cell-height-scale=1.0
@@ -12,18 +12,37 @@ cell-width-scale=1.0
 cursor-blink-mode='off'
 cursor-colors-set=false
 default-size-columns=100
-foreground-color='rgb(0,0,0)'
+foreground-color='rgb(215,215,215)'
 highlight-colors-set=false
-palette=['rgb(0,0,0)', 'rgb(205,0,0)', 'rgb(68,140,39)', 'rgb(203,144,0)', 'rgb(50,92,192)', 'rgb(205,0,205)', 'rgb(0,205,205)', 'rgb(229,229,229)', 'rgb(127,127,127)', 'rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(255,188,93)', 'rgb(92,92,255)', 'rgb(255,0,255)', 'rgb(0,255,255)', 'rgb(255,255,255)']
+palette=['rgb(48,48,48)', 'rgb(255,95,95)', 'rgb(175,215,135)', 'rgb(215,215,175)', 'rgb(135,215,255)', 'rgb(215,175,215)', 'rgb(135,215,175)', 'rgb(98,98,98)', 'rgb(68,68,68)', 'rgb(255,95,95)', 'rgb(175,215,135)', 'rgb(215,215,175)', 'rgb(135,215,255)', 'rgb(215,175,215)', 'rgb(135,215,175)', 'rgb(215,215,215)']
 text-blink-mode='never'
 use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
-visible-name='xterm-light'
+visible-name='LuciusDark'
+
+[:931d1409-246f-4182-90d5-92e25b95f0ee]
+audible-bell=false
+background-color='rgb(238,238,238)'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cell-height-scale=1.0
+cell-width-scale=1.0
+cursor-blink-mode='off'
+cursor-colors-set=false
+default-size-columns=100
+foreground-color='rgb(68,68,68)'
+highlight-colors-set=false
+palette=['rgb(68,68,68)', 'rgb(175,0,0)', 'rgb(0,135,0)', 'rgb(175,95,0)', 'rgb(0,95,175)', 'rgb(135,0,135)', 'rgb(0,135,135)', 'rgb(218,218,218)', 'rgb(158,158,158)', 'rgb(175,0,0)', 'rgb(0,135,0)', 'rgb(175,95,0)', 'rgb(0,95,175)', 'rgb(135,0,135)', 'rgb(0,135,135)', 'rgb(238,238,238)']
+text-blink-mode='never'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='LuciusLight'
 
 [:b58db4a4-6560-4f30-9b84-5e214968e781]
 audible-bell=false
-background-color='rgb(40,40,40)'
+background-color='rgb(50,48,47)'
 bold-color-same-as-fg=true
 bold-is-bright=false
 cell-height-scale=1.0

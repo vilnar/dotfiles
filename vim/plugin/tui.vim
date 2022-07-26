@@ -20,25 +20,31 @@ augroup MyColors
     highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
     highlight CurSearch ctermfg=208 ctermbg=235 guifg=#fe8019 guibg=#282828 gui=reverse cterm=reverse
   }
+  autocmd ColorScheme lucius {
+    highlight CurSearch gui=reverse cterm=reverse
+  }
 augroup end
 
 
 def UseDarkColors()
-  g:gruvbox_invert_selection = 0
-  g:gruvbox_italic = 0
-  g:gruvbox_underline = 1
-  g:gruvbox_contrast_dark = "soft"
-  g:gruvbox_guisp_fallback = "bg" # fix spell colors
-  g:gruvbox_vert_split = "bg1"
-  g:gruvbox_hls_highlight = "purple"
+  # g:gruvbox_invert_selection = 0
+  # g:gruvbox_italic = 0
+  # g:gruvbox_underline = 1
+  # g:gruvbox_contrast_dark = "soft"
+  # g:gruvbox_guisp_fallback = "bg" # fix spell colors
+  # g:gruvbox_vert_split = "bg1"
+  # g:gruvbox_hls_highlight = "purple"
+  # set background=dark
+  # colorscheme gruvbox
   set background=dark
-  colorscheme gruvbox
+  g:lucius_contrast = 'medium'
+  colorscheme lucius
 enddef
 
 def UseLightColors()
-  # Palette scheme is Xterm
   set background=light
-  colorscheme default2
+  g:lucius_contrast = 'medium'
+  colorscheme lucius
 enddef
 
 

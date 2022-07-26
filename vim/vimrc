@@ -45,6 +45,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': 'ecc418ba77e52660ff
 Plug 'junegunn/fzf.vim', { 'commit': 'c311c0a95fc2529c26ab36a8f530e9dd4426304c' }
 Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2' }
 
+" buffers
+Plug 'jlanzarotta/bufexplorer', { 'commit': '1be66e253730fd186a5a789a67a337420f431a71' }
+
 " async
 Plug 'skywind3000/asyncrun.vim', { 'commit': 'aa8a99e87e64276d52556f4d9d4f4a19afd37556' }
 Plug 'tpope/vim-dispatch', {'commit': '00e77d90452e3c710014b26dc61ea919bc895e92'}
@@ -57,9 +60,8 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
 Plug 'gruvbox-community/gruvbox', { 'commit': '34ad436b234c5095d46bb065c5b32780618df83f' }
+Plug 'jonathanfilip/vim-lucius', { 'commit': 'b5dea9864ae64714da4635993ad2fc2703e7c832' }
 
-" buffers
-Plug 'jlanzarotta/bufexplorer', { 'commit': '1be66e253730fd186a5a789a67a337420f431a71' }
 
 " LSP
 Plug 'prabirshrestha/vim-lsp', { 'commit': 'eb542a379fbb8147ac8ae346f50217df655acc1d' }
