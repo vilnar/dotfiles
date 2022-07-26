@@ -12,4 +12,5 @@
   { "caption": "Bookmarks Print", "command": "print_bookmarks" },
   { "caption": "Color Scheme Toggle Day/Night", "command": "color_scheme_toggle" },
   { "caption": "File Clear", "command": "clear_file" },
+  { "caption": "Project: Restart", "command": "project_restart" },
 ]
