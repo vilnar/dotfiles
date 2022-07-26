@@ -22,6 +22,7 @@ augroup MyColors
   }
   autocmd ColorScheme lucius {
     highlight CurSearch gui=reverse cterm=reverse
+    highlight phpIdentifier guifg=#d7d7d7
   }
 augroup end
 

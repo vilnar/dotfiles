@@ -105,18 +105,16 @@ nnoremap <leader>mm :Marks<CR>
 
 
 # GREP -----------------------------------------------------------------------------
-nnoremap <Leader>gg :Dispatch grep -rni --exclude="tags" --exclude-dir=".git" '' ./<left><left><left><left>
-vnoremap <Leader>gg y:Dispatch grep -rn --exclude="tags" --exclude-dir=".git" '<C-R>"' ./
-# grep in current directory
-nnoremap <expr> <Leader>gd ":Dispatch grep -rni '' " ..  <SID>grep.GetRelativePathForGrep()
-vnoremap <expr> <Leader>gd "y:Dispatch grep -rn '<C-R>\"' " ..  <SID>grep.GetRelativePathForGrep()
+noremap <Leader>gg :GrepInProjectEscape<space>
+vnoremap <Leader>gg y:vim9cmd <SID>grep.GrepInProject(getreg('"'))<CR>
 
-# grep by filetype
-nnoremap <Leader>gi :Dispatch grep -rn --include=*.go '' ./<left><left><left><left>
+nnoremap <Leader>gd :GrepInDirectoryEscape<space>
+vnoremap <Leader>gd y:vim9cmd <SID>grep.GrepInDirectory(getreg('"'))<CR>
 
-# grep in current buffer
-noremap <expr> <Leader>gb ":Dispatch grep -nirH '' " .. expand('%') 
-vnoremap <expr> <Leader>gb "y:Dispatch grep -nrH '<C-R>\"' " .. expand('%') 
+nnoremap <Leader>gb :GrepInBufferEscape<space>
+vnoremap <Leader>gb y:vim9cmd <SID>grep.GrepInBuffer(getreg('"'))<CR>
+
+nnoremap <Leader>gi :vim9cmd <SID>grep.GrepInProjectInput()<CR>
 
 # grep for regex (-P is enable PATTERNS are Perl regular expressions)
 # nnoremap <Leader>gr :Dispatch grep -nroHP '' ./<left><left><left><left>
