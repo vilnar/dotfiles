@@ -61,6 +61,7 @@ Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312caf
 
 Plug 'gruvbox-community/gruvbox', { 'commit': '34ad436b234c5095d46bb065c5b32780618df83f' }
 Plug 'jonathanfilip/vim-lucius', { 'commit': 'b5dea9864ae64714da4635993ad2fc2703e7c832' }
+Plug 'jnurmine/Zenburn', { 'commit': 'de2fa06a93fe1494638ec7b2fdd565898be25de6' }
 
 
 " LSP

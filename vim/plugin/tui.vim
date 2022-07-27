@@ -24,6 +24,9 @@ augroup MyColors
     highlight CurSearch gui=reverse cterm=reverse
     highlight phpIdentifier guifg=#d7d7d7
   }
+  autocmd ColorScheme zenburn {
+    highlight CurSearch gui=reverse cterm=reverse
+  }
 augroup end
 
 
@@ -37,9 +40,14 @@ def UseDarkColors()
   # g:gruvbox_hls_highlight = "purple"
   # set background=dark
   # colorscheme gruvbox
-  set background=dark
-  g:lucius_contrast = 'medium'
-  colorscheme lucius
+
+  # set background=dark
+  # g:lucius_contrast = 'medium'
+  # colorscheme lucius
+
+  g:zenburn_alternate_Visual = 1
+  g:zenburn_high_Contrast = 1
+  colorscheme zenburn
 enddef
 
 def UseLightColors()
