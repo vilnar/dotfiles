@@ -68,10 +68,10 @@ g:fugitive_dynamic_colors = 0
 
 # :help bufexplorer
 g:bufExplorerShowNoName = 1
-# g:bufExplorerSortBy = "mru"
-g:bufExplorerSortBy = "number"
+g:bufExplorerSortBy = "mru"
 g:bufExplorerShowRelativePath = 1
 g:bufExplorerDisableDefaultKeyMapping = 1
+g:bufExplorerShowTabBuffer = 1
 
 g:goyo_width = 120
 g:goyo_linenr = 1
