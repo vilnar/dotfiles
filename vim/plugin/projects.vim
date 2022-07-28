@@ -1,6 +1,6 @@
 vim9script
 
-import "./custom.vim" as custom
+import "../lib/custom.vim" as custom
 
 var PROJECTS = [
   {id: 1, name: 'Code', dir: '~/Code', execs: []}

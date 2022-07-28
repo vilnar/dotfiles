@@ -1,9 +1,5 @@
 vim9script
 
-# https://github.com/junegunn/fzf.vim
-g:fzf_history_dir = '~/.fzf-history'
-
-
 def RunMyTags(query: string)
   var spec = {"options": ["--preview-window", "down", "--nth", "1,2,3", "+i"], "placeholder": "--tag {2}:{-1}:{3..}"}
   call fzf#vim#tags(query, fzf#vim#with_preview(spec), 0)

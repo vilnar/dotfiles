@@ -3,7 +3,7 @@ vim/pack/
 vim/syntax/
 
 # custom variables
-vim/plugin/custom.vim
+vim/lib/custom.vim
 vim/customsnippets/
 
 vim/tmp/

@@ -1,13 +1,13 @@
 vim9script
 
-import "./fzf.vim" as fzf
-import "./grep.vim" as grep
-import "./layout.vim" as layout
-import "./quickfix.vim" as quickfix
-import "./search_replace.vim" as search_replace
-import "./mouse.vim" as mouse
-import "./settings.vim" as settings
-import "./langs.vim" as langs
+import "../lib/fzf.vim" as fzf
+import "../lib/grep.vim" as grep
+import "../lib/layout.vim" as layout
+import "../lib/quickfix.vim" as quickfix
+import "../lib/search_replace.vim" as search_replace
+import "../lib/mouse.vim" as mouse
+import "../lib/settings.vim" as settings
+import "../lib/langs.vim" as langs
 
 # OS clipboard yank and paste
 noremap <Leader>y "+y

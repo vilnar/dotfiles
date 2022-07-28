@@ -1,6 +1,5 @@
 vim9script
 
-set mouse=a
 def MouseToggle()
   if &mouse == 'a'
     execute 'set mouse='

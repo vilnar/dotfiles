@@ -17,3 +17,5 @@ command HexWrite :execute ':%!xxd -r' | setlocal binary | setlocal filetype=xxd
 command Version :enew | put = execute('version')
 command MarksList :enew | put = execute('marks')
 command ColorTest :help group-name
+command ScriptNames :enew | put = execute('scriptnames')
+
