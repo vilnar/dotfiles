@@ -8,7 +8,7 @@ if !exists("g:ReloadConfigs")
       execute 'write'
     endif
     execute 'source ~/.vim/vimrc'
-    execute 'source ~/.vim/plugin/custom.vim'
+    execute 'source ~/.vim/lib/custom.vim'
     execute 'source ~/.vim/plugin/file.vim'
     execute 'source ~/.vim/plugin/macros.vim'
     execute 'source ~/.vim/plugin/plugins.vim'

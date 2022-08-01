@@ -29,12 +29,20 @@ nnoremap <Leader>h :nohlsearch<CR>
 
 
 # Move and indent lines on Ctrl+j and Ctrl+k
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+nnoremap <A-Down> :m .+1<CR>==
+nnoremap <A-Up> :m .-2<CR>==
+inoremap <A-Down> <Esc>:m .+1<CR>==gi
+inoremap <A-Up> <Esc>:m .-2<CR>==gi
+vnoremap <A-Down> :m '>+1<CR>gv=gv
+vnoremap <A-Up> :m '<-2<CR>gv=gv
+
+# key A (alt) with char work only in xterm or gvim
+# nnoremap <A-j> :m .+1<CR>==
+# nnoremap <A-k> :m .-2<CR>==
+# inoremap <A-j> <Esc>:m .+1<CR>==gi
+# inoremap <A-k> <Esc>:m .-2<CR>==gi
+# vnoremap <A-j> :m '>+1<CR>gv=gv
+# vnoremap <A-k> :m '<-2<CR>gv=gv
 
 
 def CopyWithoutNewLine()
@@ -134,6 +142,7 @@ inoremap <C-\> <C-^>
 # LAYOUT -----------------------------------------------------------------------------
 # move selected to new tab
 xnoremap <leader>ms y:vim9cmd <SID>layout.OpenNewTabWithSelectedText()<CR>
+# open buffer in new tab
 nnoremap <Leader>mt :tab split<CR>
 
 # nnoremap <Leader>w <C-w>w
@@ -237,5 +246,26 @@ augroup LspGo
   autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
 augroup END
 
-nnoremap <silent> ,1 :call lsp#enable()<bar>echo "LSP enabled"<CR>
-nnoremap <silent> ,2 :call lsp#disable()<bar>echo "LSP disabled"<CR>
+def LspStartCustom()
+  call lsp#enable()
+  echo "LSP started"
+enddef
+command LspStart :call <SID>LspStartCustom()
+
+def LspStopCustom()
+  call lsp#disable()
+  execute 'LspStopServer'
+  echo "LSP stopped"
+enddef
+command LspStop :call <SID>LspStopCustom()
+
+def LspRestartCustom()
+  call LspStopCustom()
+  call LspStartCustom()
+  echo "LSP restarted"
+enddef
+command LspRestart :call <SID>LspRestartCustom()
+
+nnoremap <silent> ,1 :call <SID>LspStartCustom()<CR>
+nnoremap <silent> ,2 :call <SID>LspStopCustom()<CR>
+nnoremap <silent> ,3 :call <SID>LspRestartCustom()<CR>

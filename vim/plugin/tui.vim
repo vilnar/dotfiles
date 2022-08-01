@@ -2,6 +2,8 @@ vim9script
 # Fix slow O inserts
 set timeout timeoutlen=1000 ttimeoutlen=100
 
+set mouse=a
+
 # set number
 # set signcolumn=number
 # set numberwidth=6
@@ -22,7 +24,11 @@ augroup MyColors
   }
   autocmd ColorScheme lucius {
     highlight CurSearch gui=reverse cterm=reverse
-    highlight phpIdentifier guifg=#d7d7d7
+    if &background == "dark"
+      highlight phpIdentifier guifg=#d7d7d7
+    else
+      highlight phpIdentifier guifg=#444444
+    endif
   }
   autocmd ColorScheme zenburn {
     highlight CurSearch gui=reverse cterm=reverse
@@ -41,13 +47,13 @@ def UseDarkColors()
   # set background=dark
   # colorscheme gruvbox
 
-  # set background=dark
-  # g:lucius_contrast = 'medium'
-  # colorscheme lucius
+  set background=dark
+  g:lucius_contrast = 'medium'
+  colorscheme lucius
 
-  g:zenburn_alternate_Visual = 1
-  g:zenburn_high_Contrast = 1
-  colorscheme zenburn
+  # g:zenburn_alternate_Visual = 1
+  # g:zenburn_high_Contrast = 1
+  # colorscheme zenburn
 enddef
 
 def UseLightColors()

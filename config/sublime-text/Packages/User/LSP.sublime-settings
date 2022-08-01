@@ -3,7 +3,7 @@
   "show_code_actions_in_hover": false,
   "show_symbol_action_links": false,
   "show_code_actions": "",
-  "show_references_in_quick_panel": true,
+  "show_references_in_quick_panel": false,
   "popup_max_characters_width": 80,
   "popup_max_characters_height": 100,
 }

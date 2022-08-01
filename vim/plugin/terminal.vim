@@ -7,6 +7,7 @@ def OpenTerminal()
     return
   endif
   execute 'Start! gnome-terminal --working-directory=' .. path
+  # execute 'Start! xterm -e "cd ' .. path .. ' && bash"'
 enddef
 
 command OpenTerminalHere OpenTerminal()
@@ -30,5 +31,6 @@ def OpenFileInNewTerminal()
     return
   endif
   execute 'Start! gnome-terminal -- vim ' .. path
+  # execute 'Start! xterm -e "vim ' .. path .. '"'
 enddef
 command OpenFileInNewTerminal OpenFileInNewTerminal()
