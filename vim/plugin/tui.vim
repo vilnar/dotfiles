@@ -4,9 +4,12 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 
 set mouse=a
 
-# set number
+set number
+set cursorcolumn
 # set signcolumn=number
 # set numberwidth=6
+set cursorline
+set cursorlineopt=number
 
 if (has("termguicolors"))
   set termguicolors
@@ -37,19 +40,19 @@ augroup end
 
 
 def UseDarkColors()
-  # g:gruvbox_invert_selection = 0
-  # g:gruvbox_italic = 0
-  # g:gruvbox_underline = 1
-  # g:gruvbox_contrast_dark = "soft"
-  # g:gruvbox_guisp_fallback = "bg" # fix spell colors
-  # g:gruvbox_vert_split = "bg1"
-  # g:gruvbox_hls_highlight = "purple"
-  # set background=dark
-  # colorscheme gruvbox
-
+  g:gruvbox_invert_selection = 0
+  g:gruvbox_italic = 0
+  g:gruvbox_underline = 1
+  g:gruvbox_contrast_dark = "soft"
+  g:gruvbox_guisp_fallback = "bg" # fix spell colors
+  g:gruvbox_vert_split = "bg1"
+  g:gruvbox_hls_highlight = "purple"
   set background=dark
-  g:lucius_contrast = 'medium'
-  colorscheme lucius
+  colorscheme gruvbox
+
+  # set background=dark
+  # g:lucius_contrast = 'medium'
+  # colorscheme lucius
 
   # g:zenburn_alternate_Visual = 1
   # g:zenburn_high_Contrast = 1
