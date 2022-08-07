@@ -93,6 +93,7 @@
   "update_check": false,
   "drag_text": false,
   "auto_find_in_selection": false,
+  "find_selected_text": true,
   "auto_match_enabled": false,
   "auto_pair_single_quotes": false,
   "auto_pair_selected": true,
@@ -100,6 +101,7 @@
   "hot_exit": "always",
   // "hot_exit": "only_on_quit",
   "close_deleted_files": true,
+  "close_windows_when_empty": false,
 
   // https://www.sublimetext.com/docs/spell_checking.html
   "dictionary": "Packages/Dictionaries/Ukrainian_uk_UA.dic",

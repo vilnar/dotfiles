@@ -5,7 +5,7 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 set mouse=a
 
 set number
-set cursorcolumn
+# set cursorcolumn
 # set signcolumn=number
 # set numberwidth=6
 set cursorline
@@ -17,9 +17,9 @@ endif
 
 augroup MyColors
   autocmd ColorScheme default {
-    highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
-    highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
-    highlight CurSearch     ctermfg=white ctermbg=black cterm=NONE gui=NONE
+    # highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
+    # highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
+    highlight CurSearch gui=reverse cterm=reverse
   }
   autocmd ColorScheme gruvbox {
     highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
@@ -40,6 +40,8 @@ augroup end
 
 
 def UseDarkColors()
+  set background=dark
+
   g:gruvbox_invert_selection = 0
   g:gruvbox_italic = 0
   g:gruvbox_underline = 1
@@ -47,22 +49,25 @@ def UseDarkColors()
   g:gruvbox_guisp_fallback = "bg" # fix spell colors
   g:gruvbox_vert_split = "bg1"
   g:gruvbox_hls_highlight = "purple"
-  set background=dark
   colorscheme gruvbox
 
-  # set background=dark
   # g:lucius_contrast = 'medium'
   # colorscheme lucius
 
   # g:zenburn_alternate_Visual = 1
   # g:zenburn_high_Contrast = 1
   # colorscheme zenburn
+
+  # colorscheme default
 enddef
 
 def UseLightColors()
   set background=light
+
   g:lucius_contrast = 'medium'
   colorscheme lucius
+
+  # colorscheme default
 enddef
 
 
