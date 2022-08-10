@@ -24,15 +24,36 @@ enddef
 
 command -nargs=1 SearchEscape :vim9cmd EscapeSearchText(<q-args>) | normal! n
 
+
+
 # replace
-def EscapeTextForReplace(is_whole_word: bool)
-  var text = getreg('"')
+def EscapeForReplace(text: string, replace_text: string, is_whole_word: bool)
   var text_esc = escape(text, ESCAPE_CHARS)
+  var replace_text_esc = escape(replace_text, ESCAPE_CHARS)
 
   # ,$  - start from current position cursor
-  var scomm = ":,$s/" .. text_esc .. "//gc"
+  var scomm = ":,$s/" .. text_esc .. "/" .. replace_text_esc .. "/gc"
   if is_whole_word
-    scomm = ":,$s/\<" .. text_esc .. "\\>\\C//gc"
+    scomm = ":,$s/\\<" .. text_esc .. "\\>\\C/" .. replace_text_esc .. "/gc"
   endif
   feedkeys(scomm)
+enddef
+
+
+def ReplaceInput(is_whole_word = false)
+  var text = input('Search: ', '')
+  if empty(text)
+    echoerr "Please type search query"
+    return
+  endif
+  var replace_text = input('Replace: ', '')
+
+  call EscapeForReplace(text, replace_text, is_whole_word)
+enddef
+
+def ReplaceSelectedInput(is_whole_word = false)
+  var text = getreg('"')
+  var replace_text = input('Replace: ', '')
+
+  call EscapeForReplace(text, replace_text, is_whole_word)
 enddef

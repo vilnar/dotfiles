@@ -10,7 +10,7 @@
   // index files
   "index_files": true,
   "index_exclude_gitignore": false,
-  "show_definitions": false,
+  "show_definitions": true,
 
   // ui
   "adaptive_dividers": true,

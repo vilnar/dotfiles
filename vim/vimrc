@@ -35,10 +35,9 @@ Plug 'tpope/vim-surround', { 'commit': 'bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea
 " Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf5' }
 
 " git
-Plug 'tpope/vim-fugitive', { 'commit': '8b39d29d947618913ba1db32de605a6335875b99' }
+Plug 'tpope/vim-fugitive', { 'commit': '66a921bbe38bea19f6b581c8a56d5a8a41209e35' }
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
-Plug 'habamax/vim-dir', { 'commit': '845cbcf547dcc2b53b76c6a56ba72e73690196cb' }
 
 Plug 'SirVer/ultisnips', { 'commit': '1edcb40ce749c47d5da42ab02dcdf21f9279bfbb' }
 Plug 'jparise/vim-graphql', { 'commit': '4bf5d33bda83117537aa3c117dee5b9b14fc9333' }
@@ -64,6 +63,8 @@ Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312caf
 Plug 'gruvbox-community/gruvbox', { 'commit': '95b120a15d0765037d2836d04e3360c273caf111' }
 Plug 'jonathanfilip/vim-lucius', { 'commit': 'b5dea9864ae64714da4635993ad2fc2703e7c832' }
 Plug 'jnurmine/Zenburn', { 'commit': 'de2fa06a93fe1494638ec7b2fdd565898be25de6' }
+
+" Plug 'lifepillar/vim-colortemplate'
 
 
 " LSP

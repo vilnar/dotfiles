@@ -169,12 +169,12 @@ vnoremap <Leader>se y:vim9cmd <SID>search_replace.EscapeSearchText(getreg('"'))<
 
 vnoremap <Leader>ss y/<C-R>"
 
-nnoremap <Leader>rr :%s///gc<left><left><left><left>
-vnoremap <Leader>rr y:vim9cmd <SID>search_replace.EscapeTextForReplace(false)<CR>
+nnoremap <Leader>rr :vim9cmd <SID>search_replace.ReplaceInput()<CR>
+vnoremap <Leader>rr y:vim9cmd <SID>search_replace.ReplaceSelectedInput()<CR>
 vnoremap <Leader>rb <Esc>:'<,'>s///gc<left><left><left><left>
 
-nnoremap <Leader>ru viwy:vim9cmd <SID>search_replace.EscapeTextForReplace(true)<CR>
-vnoremap <Leader>rw y:vim9cmd <SID>search_replace.EscapeTextForReplace(true)<CR>
+nnoremap <Leader>ru viwy:vim9cmd <SID>search_replace.ReplaceSelectedInput(true)<CR>
+vnoremap <Leader>rw y:vim9cmd <SID>search_replace.ReplaceSelectedInput(true)<CR>
 
 vnoremap <Leader>rv <Esc>:'<,'>s/\<\>\C//gc<left><left><left><left><left><left><left><left>
 
@@ -205,6 +205,12 @@ cnoremap <F12> <ESC>:vim9cmd AsyncStop<CR>
 
 # PROJECTS -----------------------------------------------------------------------------
 nnoremap <leader>0 :ProjectsShow<CR>
+
+
+# Tricks
+# repeat last command
+nnoremap <leader>9 @:
+
 
 
 

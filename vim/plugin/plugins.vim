@@ -1,9 +1,8 @@
 vim9script
 
 # :help netrw
-# g:netrw_banner = 0
-# disable plugin netrw
-# loaded_netrwPlugin = 1
+g:loaded_netrw = 0
+g:loaded_netrwPlugin = 0
 
 g:php_special_functions = 0
 g:go_highlight_functions = 1
