@@ -111,7 +111,10 @@
   ],
 
   "light_color_scheme": "Alabaster.sublime-color-scheme",
+  "light_font_face": "Fira Mono",
   "dark_color_scheme": "Mariana.sublime-color-scheme",
+  "dark_font_face": "Dejavu Sans Mono",
+
   "hide_new_tab_button": true,
   "indent_subsequent_lines": true,
   "indent_to_bracket": false,
