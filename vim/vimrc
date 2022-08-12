@@ -70,4 +70,7 @@ Plug 'jnurmine/Zenburn', { 'commit': 'de2fa06a93fe1494638ec7b2fdd565898be25de6' 
 " LSP
 Plug 'prabirshrestha/vim-lsp', { 'commit': 'eb542a379fbb8147ac8ae346f50217df655acc1d' }
 
+" debugger
+" Plug 'vim-vdebug/vdebug', { 'commit': 'f979cc065e63796bdf60f014ae2280ce8e72cded' }
+
 call plug#end()

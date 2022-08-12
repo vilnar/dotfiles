@@ -3,6 +3,7 @@
   "variables":
   {
     "fg-from-original": "#000000",
+    "grey-custom": "#57606a"
   },
   "globals":
   {
@@ -43,12 +44,6 @@
     },
 
     {
-      "name":       "Keyword logical",
-      // "scope":      "keyword",
-      "scope":      "keyword.operator.logical",
-      "foreground": "var(grey)"
-    },
-    {
       "scope": "constant.numeric.line-number.match",
       "foreground": "var(red)"
     },
@@ -75,29 +70,35 @@
 
     // TODO: check colors for languages keywords (fix types)
     {
-      "name": "Keyword",
-      "scope": "keyword - keyword.operator, keyword.operator.word",
-      "foreground": "var(grey)",
-    },
-    {
-      "name": "Storage",
-      "scope": "storage",
-      "foreground": "var(grey)",
-    },
-    {
-      "name": "Library function",
-      "scope": "support.function, support.macro",
-      "foreground": "var(grey)",
-    },
-    {
-      "name": "Library constant",
-      "scope": "support.constant",
-      "foreground": "var(grey)",
+      "name":       "Keyword logical",
+      "scope":      "keyword.operator.logical",
+      "foreground": "var(grey)"
     },
     {
       "name": "Operator assignment",
       "scope": "keyword.operator.assignment",
       "foreground": "var(grey)",
+    },
+
+    {
+      "name": "Keyword",
+      "scope": "keyword - keyword.operator, keyword.operator.word",
+      "foreground": "var(grey-custom)",
+    },
+    {
+      "name": "Storage",
+      "scope": "storage",
+      "foreground": "var(grey-custom)",
+    },
+    {
+      "name": "Library function",
+      "scope": "support.function, support.macro",
+      "foreground": "var(grey-custom)",
+    },
+    {
+      "name": "Library constant",
+      "scope": "support.constant",
+      "foreground": "var(grey-custom)",
     },
   ]
 }
