@@ -5,6 +5,7 @@ import os
 
 DEFAULT_COLOR_SCHEME = "Mariana.sublime-color-scheme"
 DEFAULT_FONT_FACE = "Monospace"
+DEFAULT_FONT_SIZE = 13
 EDITOR_PREFERENCES = "Preferences.sublime-settings"
 MERGE_PREFERENCES = ".config/sublime-merge/Packages/User/Preferences.sublime-settings"
 
@@ -14,8 +15,10 @@ class ColorSchemeToggleCommand(sublime_plugin.TextCommand):
 
         dark_color_scheme = settings.get("dark_color_scheme", DEFAULT_COLOR_SCHEME)
         dark_font_face = settings.get("dark_font_face", DEFAULT_FONT_FACE)
+        dark_font_size = settings.get("dark_font_size", DEFAULT_FONT_SIZE)
         light_color_scheme = settings.get("light_color_scheme", DEFAULT_COLOR_SCHEME)
         light_font_face = settings.get("light_font_face", DEFAULT_FONT_FACE)
+        light_font_size = settings.get("light_font_size", DEFAULT_FONT_SIZE)
 
         current_theme = settings.get("color_scheme", light_color_scheme)
         is_light = current_theme == light_color_scheme
@@ -23,9 +26,11 @@ class ColorSchemeToggleCommand(sublime_plugin.TextCommand):
         if is_light:
             settings.set("color_scheme", dark_color_scheme)
             settings.set("font_face", dark_font_face)
+            settings.set("font_size", dark_font_size)
         else:
             settings.set("color_scheme", light_color_scheme)
             settings.set("font_face", light_font_face)
+            settings.set("font_size", light_font_size)
 
         sublime.save_settings(EDITOR_PREFERENCES)
 
@@ -40,9 +45,11 @@ class ColorSchemeToggleCommand(sublime_plugin.TextCommand):
         if is_light:
             settings_merge["theme"] = dark_theme_merge
             settings_merge["font_face"] = dark_font_face
+            settings_merge["font_size"] = dark_font_size
         else:
             settings_merge["theme"] = light_theme_merge
             settings_merge["font_face"] = light_font_face
+            settings_merge["font_size"] = light_font_size
 
         with open(merge_path, 'w') as file:
             file.write(sublime.encode_value(settings_merge, pretty = True))

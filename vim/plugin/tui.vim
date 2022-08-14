@@ -39,20 +39,23 @@ augroup MyColors
   autocmd ColorScheme zenburn {
     highlight CurSearch gui=reverse cterm=reverse
   }
+  autocmd ColorScheme seoul256 {
+    highlight phpIdentifier guifg=#d0d0d0
+  }
 augroup end
 
 
 def UseDarkColors()
   set background=dark
 
-  g:gruvbox_invert_selection = 0
-  g:gruvbox_italic = 0
-  g:gruvbox_underline = 1
-  g:gruvbox_contrast_dark = "soft"
-  g:gruvbox_guisp_fallback = "bg" # fix spell colors
-  g:gruvbox_vert_split = "bg1"
-  g:gruvbox_hls_highlight = "purple"
-  colorscheme gruvbox
+  # g:gruvbox_invert_selection = 0
+  # g:gruvbox_italic = 0
+  # g:gruvbox_underline = 1
+  # g:gruvbox_contrast_dark = "soft"
+  # g:gruvbox_guisp_fallback = "bg" # fix spell colors
+  # g:gruvbox_vert_split = "bg1"
+  # g:gruvbox_hls_highlight = "purple"
+  # colorscheme gruvbox
 
   # g:lucius_contrast = 'medium'
   # colorscheme lucius
@@ -61,6 +64,14 @@ def UseDarkColors()
   # g:zenburn_high_Contrast = 0
   # g:zenburn_disable_Label_underline = 1
   # colorscheme zenburn
+
+  colorscheme seoul256
+  g:terminal_ansi_colors = [
+    '#4e4e4e', '#d68787', '#5f865f', '#d8af5f',
+    '#85add4', '#d7afaf', '#87afaf', '#d0d0d0',
+    '#626262', '#d75f87', '#87af87', '#ffd787',
+    '#add4fb', '#ffafaf', '#87d7d7', '#e4e4e4'
+  ]
 
   # colorscheme default
 enddef
@@ -75,8 +86,8 @@ def UseLightColors()
 enddef
 
 
-call UseDarkColors()
-# call UseLightColors()
+# call UseDarkColors()
+call UseLightColors()
 
 
 # set linebreak

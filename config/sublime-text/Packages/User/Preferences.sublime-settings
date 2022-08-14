@@ -16,7 +16,7 @@
   "adaptive_dividers": true,
   "gtk_client_side_window_decorations": true,
   "highlight_modified_tabs": true,
-  "color_scheme": "Mariana.sublime-color-scheme",
+  "color_scheme": "Alabaster.sublime-color-scheme",
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
   "show_tab_close_buttons": true,
@@ -70,8 +70,8 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  "font_face": "Dejavu Sans Mono",
-  "font_size": 13.5,
+  "font_face": "Fira Mono",
+  "font_size": 13,
   "line_padding_bottom": 5,
   "line_padding_top": 5,
   "font_options":
@@ -112,8 +112,10 @@
 
   "light_color_scheme": "Alabaster.sublime-color-scheme",
   "light_font_face": "Fira Mono",
+  "light_font_size": 13,
   "dark_color_scheme": "Mariana.sublime-color-scheme",
   "dark_font_face": "Dejavu Sans Mono",
+  "dark_font_size": 13.5,
 
   "hide_new_tab_button": true,
   "indent_subsequent_lines": true,
