@@ -47,7 +47,7 @@ g:goyo_linenr = 1
 # GoImportRun
 g:goimports = 0
 
-g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sh']
+g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sh', 'sql']
 
 
 # LSP settings --------------------------------------------------

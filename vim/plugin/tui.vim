@@ -48,14 +48,15 @@ augroup end
 def UseDarkColors()
   set background=dark
 
-  # g:gruvbox_invert_selection = 0
-  # g:gruvbox_italic = 0
-  # g:gruvbox_underline = 1
-  # g:gruvbox_contrast_dark = "soft"
-  # g:gruvbox_guisp_fallback = "bg" # fix spell colors
-  # g:gruvbox_vert_split = "bg1"
-  # g:gruvbox_hls_highlight = "purple"
-  # colorscheme gruvbox
+  g:gruvbox_invert_selection = 0
+  g:gruvbox_italic = 0
+  g:gruvbox_underline = 1
+  g:gruvbox_contrast_dark = "soft"
+  # g:gruvbox_contrast_dark = "medium"
+  g:gruvbox_guisp_fallback = "bg" # fix spell colors
+  g:gruvbox_vert_split = "bg1"
+  g:gruvbox_hls_highlight = "purple"
+  colorscheme gruvbox
 
   # g:lucius_contrast = 'medium'
   # colorscheme lucius
@@ -65,29 +66,77 @@ def UseDarkColors()
   # g:zenburn_disable_Label_underline = 1
   # colorscheme zenburn
 
-  colorscheme seoul256
-  g:terminal_ansi_colors = [
-    '#4e4e4e', '#d68787', '#5f865f', '#d8af5f',
-    '#85add4', '#d7afaf', '#87afaf', '#d0d0d0',
-    '#626262', '#d75f87', '#87af87', '#ffd787',
-    '#add4fb', '#ffafaf', '#87d7d7', '#e4e4e4'
-  ]
+  # colorscheme seoul256
+  # g:terminal_ansi_colors = [
+  #   '#4e4e4e', '#d68787', '#5f865f', '#d8af5f',
+  #   '#85add4', '#d7afaf', '#87afaf', '#d0d0d0',
+  #   '#626262', '#d75f87', '#87af87', '#ffd787',
+  #   '#add4fb', '#ffafaf', '#87d7d7', '#e4e4e4'
+  # ]
 
   # colorscheme default
+
+  call SetTheme("dark")
 enddef
 
 def UseLightColors()
   set background=light
 
-  g:lucius_contrast = 'medium'
-  colorscheme lucius
+  # g:lucius_contrast = 'medium'
+  # colorscheme lucius
+
+  g:gruvbox_invert_selection = 0
+  g:gruvbox_italic = 0
+  g:gruvbox_underline = 1
+  g:gruvbox_contrast_dark = "hard"
+  g:gruvbox_guisp_fallback = "bg" # fix spell colors
+  g:gruvbox_vert_split = "bg1"
+  g:gruvbox_hls_highlight = "purple"
+  colorscheme gruvbox
 
   # colorscheme default
+
+  call SetTheme("light")
 enddef
 
+const THEME_PATH = "~/.vim/settings/theme.json"
+def SetTheme(value: string)
+  var theme = {"theme": value}
+  var json = json_encode(theme)
+  writefile([json], expand(THEME_PATH))
+enddef
 
-# call UseDarkColors()
-call UseLightColors()
+def GetTheme(): string
+  var raw = readfile(expand(THEME_PATH))
+  if empty(raw)
+    echoerr "File " .. THEME_PATH .. " not found"
+    return "dark"
+  endif
+
+  var json = json_decode(join(raw))
+  if !has_key(json, "theme")
+    echoerr "Not found key theme in json"
+    return "dark"
+  endif
+  return json.theme
+enddef
+
+if GetTheme() == "dark"
+  call UseDarkColors()
+else
+  call UseLightColors()
+endif
+
+def ToggleTheme()
+  if GetTheme() == "light"
+    call UseDarkColors()
+  else
+    call UseLightColors()
+  endif
+enddef
+command ThemeToggle :vim9cmd call ToggleTheme()
+
+
 
 
 # set linebreak
