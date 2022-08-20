@@ -55,6 +55,12 @@ clean_bash:
 	rm -Rf ~/.ctags
 	rm -Rf ~/.bash_aliases
 
+install_kitty: clear_kitty
+	ln -sf `pwd`/config/kitty   ~/.config/kitty
+
+clear_kitty:
+	rm -Rf ~/.config/kitty
+
 export_bash:
 	dconf dump /org/gnome/terminal/legacy/profiles:/ > `pwd`/gnome-terminal-profiles.dconf
 

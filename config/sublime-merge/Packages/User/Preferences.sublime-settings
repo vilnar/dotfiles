@@ -1,10 +1,11 @@
 {
+	"auto_diff_style_min_chars": 50,
 	"block_caret": false,
 	"caret_extra_bottom": 4,
 	"caret_extra_top": 4,
 	"caret_extra_width": 2,
 	"caret_style": "solid",
-	"diff_style": "side-by-side",
+	"diff_style": "auto",
 	"draw_white_space": "all",
 	"font_face": "Jetbrains Mono NL",
 	"font_options":

@@ -104,6 +104,7 @@ def SetTheme(value: string)
   var theme = {"theme": value}
   var json = json_encode(theme)
   writefile([json], expand(THEME_PATH))
+  # TODO: change terminal color theme?
 enddef
 
 def GetTheme(): string
