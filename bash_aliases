@@ -29,3 +29,5 @@ alias dcbuild='docker-compose up -d --build && docker-compose ps'
 alias e='vim'
 alias hosts='vim /etc/hosts'
 alias shosts='sudo -E vim /etc/hosts'
+
+alias tt='vim -c "ThemeToggle" -c "q"'
