@@ -48,18 +48,18 @@ augroup end
 def UseDarkColors(is_set = false)
   set background=dark
 
-  g:gruvbox_invert_selection = 0
-  g:gruvbox_italic = 0
-  g:gruvbox_underline = 1
-  g:gruvbox_contrast_dark = "soft"
-  # g:gruvbox_contrast_dark = "medium"
-  g:gruvbox_guisp_fallback = "bg" # fix spell colors
-  g:gruvbox_vert_split = "bg1"
-  g:gruvbox_hls_highlight = "purple"
-  colorscheme gruvbox
+  # g:gruvbox_invert_selection = 0
+  # g:gruvbox_italic = 0
+  # g:gruvbox_underline = 1
+  # g:gruvbox_contrast_dark = "soft"
+  # # g:gruvbox_contrast_dark = "medium"
+  # g:gruvbox_guisp_fallback = "bg" # fix spell colors
+  # g:gruvbox_vert_split = "bg1"
+  # g:gruvbox_hls_highlight = "purple"
+  # colorscheme gruvbox
 
-  # g:lucius_contrast = 'medium'
-  # colorscheme lucius
+  g:lucius_contrast = 'medium'
+  colorscheme lucius
 
   # g:zenburn_alternate_Visual = 1
   # g:zenburn_high_Contrast = 0
@@ -86,17 +86,17 @@ enddef
 def UseLightColors(is_set = false)
   set background=light
 
-  # g:lucius_contrast = 'medium'
-  # colorscheme lucius
+  g:lucius_contrast = 'medium'
+  colorscheme lucius
 
-  g:gruvbox_invert_selection = 0
-  g:gruvbox_italic = 0
-  g:gruvbox_underline = 1
-  g:gruvbox_contrast_light = "hard"
-  g:gruvbox_guisp_fallback = "bg" # fix spell colors
-  g:gruvbox_vert_split = "bg1"
-  g:gruvbox_hls_highlight = "purple"
-  colorscheme gruvbox
+  # g:gruvbox_invert_selection = 0
+  # g:gruvbox_italic = 0
+  # g:gruvbox_underline = 1
+  # g:gruvbox_contrast_light = "hard"
+  # g:gruvbox_guisp_fallback = "bg" # fix spell colors
+  # g:gruvbox_vert_split = "bg1"
+  # g:gruvbox_hls_highlight = "purple"
+  # colorscheme gruvbox
 
   # colorscheme default
 
@@ -105,6 +105,7 @@ def UseLightColors(is_set = false)
     call SetTheme("light")
   endif
 enddef
+
 
 const THEME_PATH = "~/.vim/settings/theme.json"
 def SetTheme(value: string)
@@ -115,13 +116,14 @@ def SetTheme(value: string)
   const term_command = "kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf"
   const term_theme_conf = "~/.config/kitty/current-theme.conf"
   if value == "dark"
-    call system("cp ~/.config/kitty/themes/gruvbox-dark-soft.conf " .. term_theme_conf)
+    call system("cp ~/.config/kitty/themes/lucius-dark.conf " .. term_theme_conf)
     call system(term_command)
   else
-    call system("cp ~/.config/kitty/themes/gruvbox-light-hard.conf " .. term_theme_conf)
+    call system("cp ~/.config/kitty/themes/lucius-light.conf " .. term_theme_conf)
     call system(term_command)
   endif
 enddef
+
 
 def GetTheme(): string
   var raw = readfile(expand(THEME_PATH))
@@ -147,6 +149,7 @@ def ToggleTheme()
   endif
 enddef
 command ThemeToggle :vim9cmd call ToggleTheme()
+
 
 if GetTheme() == "dark"
   call UseDarkColors()
