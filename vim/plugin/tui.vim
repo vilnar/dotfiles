@@ -45,7 +45,7 @@ augroup MyColors
 augroup end
 
 
-def UseDarkColors()
+def UseDarkColors(is_set = false)
   set background=dark
 
   g:gruvbox_invert_selection = 0
@@ -76,10 +76,14 @@ def UseDarkColors()
 
   # colorscheme default
 
-  call SetTheme("dark")
+
+  if is_set
+    call SetTheme("dark")
+  endif
 enddef
 
-def UseLightColors()
+
+def UseLightColors(is_set = false)
   set background=light
 
   # g:lucius_contrast = 'medium'
@@ -88,7 +92,7 @@ def UseLightColors()
   g:gruvbox_invert_selection = 0
   g:gruvbox_italic = 0
   g:gruvbox_underline = 1
-  g:gruvbox_contrast_dark = "hard"
+  g:gruvbox_contrast_light = "hard"
   g:gruvbox_guisp_fallback = "bg" # fix spell colors
   g:gruvbox_vert_split = "bg1"
   g:gruvbox_hls_highlight = "purple"
@@ -96,7 +100,10 @@ def UseLightColors()
 
   # colorscheme default
 
-  call SetTheme("light")
+
+  if is_set
+    call SetTheme("light")
+  endif
 enddef
 
 const THEME_PATH = "~/.vim/settings/theme.json"
@@ -104,7 +111,16 @@ def SetTheme(value: string)
   var theme = {"theme": value}
   var json = json_encode(theme)
   writefile([json], expand(THEME_PATH))
-  # TODO: change terminal color theme?
+
+  const term_command = "kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf"
+  const term_theme_conf = "~/.config/kitty/current-theme.conf"
+  if value == "dark"
+    call system("cp ~/.config/kitty/themes/gruvbox-dark-soft.conf " .. term_theme_conf)
+    call system(term_command)
+  else
+    call system("cp ~/.config/kitty/themes/gruvbox-light-hard.conf " .. term_theme_conf)
+    call system(term_command)
+  endif
 enddef
 
 def GetTheme(): string
@@ -122,21 +138,21 @@ def GetTheme(): string
   return json.theme
 enddef
 
+
+def ToggleTheme()
+  if GetTheme() == "light"
+    call UseDarkColors(true)
+  else
+    call UseLightColors(true)
+  endif
+enddef
+command ThemeToggle :vim9cmd call ToggleTheme()
+
 if GetTheme() == "dark"
   call UseDarkColors()
 else
   call UseLightColors()
 endif
-
-def ToggleTheme()
-  if GetTheme() == "light"
-    call UseDarkColors()
-  else
-    call UseLightColors()
-  endif
-enddef
-command ThemeToggle :vim9cmd call ToggleTheme()
-
 
 
 
@@ -172,6 +188,9 @@ if !has('gui_running')
   if &term =~ '^\%(alacritty\)'
     &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  endif
+  if &term == 'xterm-kitty'
+    &t_ut = ''
   endif
 endif
 
