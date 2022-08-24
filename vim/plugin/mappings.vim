@@ -27,22 +27,15 @@ nnoremap <C-LeftMouse> <nop>
 
 nnoremap <Leader>h :nohlsearch<CR>
 
-
-# Move and indent lines on Ctrl+j and Ctrl+k
-nnoremap <A-Down> :m .+1<CR>==
-nnoremap <A-Up> :m .-2<CR>==
-inoremap <A-Down> <Esc>:m .+1<CR>==gi
-inoremap <A-Up> <Esc>:m .-2<CR>==gi
-vnoremap <A-Down> :m '>+1<CR>gv=gv
-vnoremap <A-Up> :m '<-2<CR>gv=gv
-
-# key A (alt) with char work only in xterm or gvim
-# nnoremap <A-j> :m .+1<CR>==
-# nnoremap <A-k> :m .-2<CR>==
-# inoremap <A-j> <Esc>:m .+1<CR>==gi
-# inoremap <A-k> <Esc>:m .-2<CR>==gi
-# vnoremap <A-j> :m '>+1<CR>gv=gv
-# vnoremap <A-k> :m '<-2<CR>gv=gv
+# https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
+execute "set <M-j>=\ej"
+execute "set <M-k>=\ek"
+nnoremap <M-j> :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
+inoremap <M-j> <Esc>:m .+1<CR>==gi
+inoremap <M-k> <Esc>:m .-2<CR>==gi
+vnoremap <M-j> :m '>+1<CR>gv=gv
+vnoremap <M-k> :m '<-2<CR>gv=gv
 
 
 def CopyWithoutNewLine()
