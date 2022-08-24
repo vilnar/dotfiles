@@ -4,7 +4,6 @@ import sublime_plugin
 
 # source https://github.com/sublimehq/sublime_text/issues/5001#issuecomment-958715838
 class CustomFileHistoryCommand(sublime_plugin.WindowCommand):
-
     def run(self):
         items = []
         for file in self.window.file_history():

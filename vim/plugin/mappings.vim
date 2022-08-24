@@ -172,6 +172,7 @@ vnoremap <Leader>ss y/<C-R>"
 nnoremap <Leader>rr :vim9cmd <SID>search_replace.ReplaceInput()<CR>
 vnoremap <Leader>rr y:vim9cmd <SID>search_replace.ReplaceSelectedInput()<CR>
 vnoremap <Leader>rb <Esc>:'<,'>s///gc<left><left><left><left>
+nnoremap <Leader>rg :%s///gc<left><left><left><left>
 
 nnoremap <Leader>ru viwy:vim9cmd <SID>search_replace.ReplaceSelectedInput(true)<CR>
 vnoremap <Leader>rw y:vim9cmd <SID>search_replace.ReplaceSelectedInput(true)<CR>

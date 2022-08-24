@@ -41,19 +41,19 @@ enddef
 
 
 def ReplaceInput(is_whole_word = false)
-  var text = input('Search: ', '')
+  var text = input('Query replace: ', '')
   if empty(text)
-    echoerr "Please type search query"
+    echoerr "Query replace is empty"
     return
   endif
-  var replace_text = input('Replace: ', '')
+  var replace_text = input('Query replace ' .. text .. ' with: ', '')
 
   call EscapeForReplace(text, replace_text, is_whole_word)
 enddef
 
 def ReplaceSelectedInput(is_whole_word = false)
   var text = getreg('"')
-  var replace_text = input('Replace: ', '')
+  var replace_text = input('Query replace ' .. text .. ' with: ', '')
 
   call EscapeForReplace(text, replace_text, is_whole_word)
 enddef

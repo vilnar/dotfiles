@@ -7,5 +7,5 @@
     "gopls.linksInHover": false,
     "gopls.linkTarget": "",
   },
-  "enabled": true,
+  "enabled": false,
 }
