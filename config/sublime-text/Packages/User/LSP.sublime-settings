@@ -6,4 +6,7 @@
   "show_references_in_quick_panel": false,
   "popup_max_characters_width": 80,
   "popup_max_characters_height": 100,
+  "show_diagnostics_panel_on_save": 0,
+  "show_diagnostics_count_in_view_status": false,
+  "show_diagnostics_in_view_status": false,
 }
