@@ -66,6 +66,7 @@ def UseDarkColors(is_set = false)
   # g:zenburn_disable_Label_underline = 1
   # colorscheme zenburn
 
+  g:seoul256_srgb = 1
   colorscheme seoul256
   g:terminal_ansi_colors = [
     '#4e4e4e', '#d68787', '#5f865f', '#d8af5f',
@@ -88,6 +89,8 @@ def UseLightColors(is_set = false)
 
   # g:lucius_contrast = 'medium'
   # colorscheme lucius
+
+  g:seoul256_srgb = 1
   colorscheme seoul256-light
 
   # g:gruvbox_invert_selection = 0
