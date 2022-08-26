@@ -69,7 +69,7 @@ Plug 'junegunn/seoul256.vim', { 'commit': 'd5d61d5033cccc2e9e628b2ce60e1cda6b893
 
 
 " LSP
-Plug 'prabirshrestha/vim-lsp', { 'commit': 'e5d2d3f7440ec109cb157b1b00a4a96030e2a564' }
+Plug 'prabirshrestha/vim-lsp', { 'commit': '4d8a27513daef41915eaf2d315a2662e95d71080' }
 
 " debugger
 " Plug 'vim-vdebug/vdebug', { 'commit': 'f979cc065e63796bdf60f014ae2280ce8e72cded' }
