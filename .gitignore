@@ -7,6 +7,7 @@ vim/lib/custom.vim
 vim/customsnippets/
 
 vim/tmp/
+vim/log/
 
 # vim plug
 vim/plugged/

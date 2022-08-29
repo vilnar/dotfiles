@@ -1,4 +1,7 @@
 vim9script
+
+import "../lib/statusline.vim" as statusline
+
 # Fix slow O inserts
 set timeout timeoutlen=1000 ttimeoutlen=100
 
@@ -13,6 +16,7 @@ set number
 # set numberwidth=6
 set cursorline
 set cursorlineopt=number
+
 
 if (has("termguicolors"))
   set termguicolors
@@ -41,6 +45,11 @@ augroup MyColors
   }
   autocmd ColorScheme seoul256 {
     highlight phpIdentifier guifg=#d0d0d0
+    highlight CurSearch gui=reverse cterm=reverse
+  }
+  autocmd ColorScheme seoul256-light {
+    highlight phpIdentifier guifg=#4e4e4e
+    highlight CurSearch gui=reverse cterm=reverse
   }
 augroup end
 
@@ -205,26 +214,5 @@ endif
 
 set laststatus=2
 
-def GetIndtentation(): string
-  var mess = "T:" # tabs
-  if &expandtab == true
-    mess = "S:" # spaces
-  endif
-  return mess .. shiftwidth()
-enddef
-
-def g:StatuslineExpr(): string
-  var file_path = "%f "
-  var modified = "%{&modified ? '[+] ' : ''}"
-  var readonly  = "%{&readonly ? '[RO] ' : ''}"
-  var separate = " %= "
-  var win_nr = "[%{winnr()}] "
-  # var fencoding  = "%{&fileencoding ? '['.&fileencoding.'] ' : '['.&encoding.'] '}"
-  var ftype  = "%{len(&filetype) ? '['.&filetype.'] ' : ''}"
-  var indentaition = GetIndtentation() .. " "
-  var position = " %l:%c "
-  var percent = " %P"
-
-  return file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
-enddef
-set statusline=%!StatuslineExpr()
+var StatusRef = statusline.StatuslineExpr
+&statusline = '%!' .. expand('<SID>') .. 'StatusRef()'

@@ -1,13 +1,15 @@
-﻿" Source https://github.com/vim-scripts/ukrainian-enhanced.vim
-" Vim Keymap file for ukrainian characters MS Windows enhanced variant.
-" This file is based on russian-jcukenwin.vim by Artem Chuprina <ran@ran.pp.ru>.
+﻿vim9script
 
-" Maintainer:   Ivan Korneliuk <vansha@gmail.com>
-" Last Changed: 2011 oct 26
+# Source https://github.com/vim-scripts/ukrainian-enhanced.vim
+# Vim Keymap file for ukrainian characters MS Windows enhanced variant.
+# This file is based on russian-jcukenwin.vim by Artem Chuprina <ran@ran.pp.ru>.
+
+# Maintainer:   Ivan Korneliuk <vansha@gmail.com>
+# Last Changed: 2011 oct 26
 
 scriptencoding utf-8
 
-let b:keymap_name = "uk"
+b:keymap_name = "uk"
 
 loadkeymap
 ~	’	RIGHT SINGLE QUOTATION MARK
@@ -79,7 +81,7 @@ m	ь	CYRILLIC SMALL LETTER SOFT SIGN
 .	ю	CYRILLIC SMALL LETTER YU
 z	я	CYRILLIC SMALL LETTER YA
 @	"	QUOTATION MARK
-#	№	NUMERO SIGN
+\#	№	NUMERO SIGN
 $	;	SEMICOLON
 ^	:	COLON
 &	?	QUESTION MARK
