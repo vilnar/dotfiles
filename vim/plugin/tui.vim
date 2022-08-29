@@ -29,8 +29,10 @@ augroup MyColors
     highlight CurSearch gui=reverse cterm=reverse
   }
   autocmd ColorScheme gruvbox {
-    highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
-    highlight CurSearch ctermfg=208 ctermbg=235 guifg=#fe8019 guibg=#282828 gui=reverse cterm=reverse
+    highlight CurSearch gui=reverse cterm=reverse
+    if &background == "dark"
+      highlight Ignore ctermbg=NONE ctermfg=245 cterm=NONE guibg=NONE guifg=#928374 gui=NONE
+    endif
   }
   autocmd ColorScheme lucius {
     highlight CurSearch gui=reverse cterm=reverse
