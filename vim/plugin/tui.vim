@@ -59,23 +59,23 @@ augroup end
 def UseDarkColors(is_set = false)
   set background=dark
 
-  g:gruvbox_invert_selection = 0
-  g:gruvbox_italic = 0
-  g:gruvbox_underline = 1
-  g:gruvbox_contrast_dark = "soft"
-  # g:gruvbox_contrast_dark = "medium"
-  g:gruvbox_guisp_fallback = "bg" # fix spell colors
-  g:gruvbox_vert_split = "bg1"
-  g:gruvbox_hls_highlight = "purple"
-  colorscheme gruvbox
+  # g:gruvbox_invert_selection = 0
+  # g:gruvbox_italic = 0
+  # g:gruvbox_underline = 1
+  # g:gruvbox_contrast_dark = "soft"
+  # # g:gruvbox_contrast_dark = "medium"
+  # g:gruvbox_guisp_fallback = "bg" # fix spell colors
+  # g:gruvbox_vert_split = "bg1"
+  # g:gruvbox_hls_highlight = "purple"
+  # colorscheme gruvbox
 
   # g:lucius_contrast = 'medium'
   # colorscheme lucius
 
-  # g:zenburn_alternate_Visual = 1
-  # g:zenburn_high_Contrast = 0
-  # g:zenburn_disable_Label_underline = 1
-  # colorscheme zenburn
+  g:zenburn_alternate_Visual = 1
+  g:zenburn_high_Contrast = 0
+  g:zenburn_disable_Label_underline = 1
+  colorscheme zenburn
 
   # g:seoul256_srgb = 1
   # colorscheme seoul256
@@ -131,7 +131,7 @@ def SetTheme(value: string)
   const term_command = "kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf"
   const term_theme_conf = "~/.config/kitty/current-theme.conf"
   if value == "dark"
-    call system("cp ~/.config/kitty/themes/gruvbox-dark-soft.conf " .. term_theme_conf)
+    call system("cp ~/.config/kitty/themes/zenburn.conf " .. term_theme_conf)
     call system(term_command)
   else
     call system("cp ~/.config/kitty/themes/gruvbox-light-hard.conf " .. term_theme_conf)
