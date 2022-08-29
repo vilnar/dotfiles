@@ -67,7 +67,6 @@ def UseDarkColors(is_set = false)
   g:gruvbox_guisp_fallback = "bg" # fix spell colors
   g:gruvbox_vert_split = "bg1"
   g:gruvbox_hls_highlight = "purple"
-  g:gruvbox_improved_strings = 1
   colorscheme gruvbox
 
   # g:lucius_contrast = 'medium'
@@ -112,7 +111,6 @@ def UseLightColors(is_set = false)
   g:gruvbox_guisp_fallback = "bg" # fix spell colors
   g:gruvbox_vert_split = "bg1"
   g:gruvbox_hls_highlight = "purple"
-  g:gruvbox_improved_strings = 1
   colorscheme gruvbox
 
   # colorscheme default
