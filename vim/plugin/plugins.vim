@@ -15,6 +15,7 @@ g:NERDTreeMouseMode = 2
 g:NERDTreeWinSize = 40
 g:NERDTreeMinimalUI = 0
 g:NERDTreeShowHidden = 1
+g:NERDTreeIgnore = []
 g:NERDTreeDirArrows = 1
 g:NERDTreeShowLineNumbers = 0
 g:NERDTreeNodeDelimiter = "\u00a0"
