@@ -60,10 +60,7 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
-Plug 'gruvbox-community/gruvbox', { 'commit': '95b120a15d0765037d2836d04e3360c273caf111' }
-Plug 'jonathanfilip/vim-lucius', { 'commit': 'b5dea9864ae64714da4635993ad2fc2703e7c832' }
-Plug 'jnurmine/Zenburn', { 'commit': 'de2fa06a93fe1494638ec7b2fdd565898be25de6' }
-Plug 'junegunn/seoul256.vim', { 'commit': 'd5d61d5033cccc2e9e628b2ce60e1cda6b893d1b' }
+Plug 'romainl/Apprentice', { 'commit': '9942d0bb0a5d82f7a24450b00051c1f2cc008659' }
 
 " Plug 'lifepillar/vim-colortemplate'
 
