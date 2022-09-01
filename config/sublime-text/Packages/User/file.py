@@ -70,7 +70,8 @@ class OpenFileInVim(sublime_plugin.TextCommand):
             return
 
         p = subprocess.run(
-            "kitty -- vim {}".format(path),
+            # TODO: fix freeze for term kitty
+            "gnome-terminal -- vim {}".format(path),
             shell=True,
             capture_output=False
         )

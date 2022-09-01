@@ -16,7 +16,7 @@
   "adaptive_dividers": true,
   "gtk_client_side_window_decorations": true,
   "highlight_modified_tabs": true,
-  "color_scheme": "Mariana.sublime-color-scheme",
+  "color_scheme": "Monokai.sublime-color-scheme",
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
   "show_tab_close_buttons": true,
@@ -36,8 +36,8 @@
   // gutter
   "margin": 0,
   "caret_style": "solid",
-  "caret_extra_top": 4,
-  "caret_extra_bottom": 4,
+  "caret_extra_top": 2,
+  "caret_extra_bottom": 2,
   "caret_extra_width": 2,
   "block_caret": false,
   "gutter": true,
@@ -72,8 +72,8 @@
   // font
   "font_face": "Jetbrains Mono NL",
   "font_size": 13.5,
-  "line_padding_bottom": 4,
-  "line_padding_top": 4,
+  "line_padding_bottom": 2,
+  "line_padding_top": 2,
   "font_options":
   [
     "no_liga",
@@ -102,6 +102,7 @@
   // "hot_exit": "only_on_quit",
   "close_deleted_files": true,
   "close_windows_when_empty": false,
+  "reload_file_on_change": true,
 
   // https://www.sublimetext.com/docs/spell_checking.html
   "dictionary": "Packages/Dictionaries/Ukrainian_uk_UA.dic",
@@ -113,7 +114,7 @@
   "light_color_scheme": "Alabaster.sublime-color-scheme",
   "light_font_face": "Jetbrains Mono NL Light",
   "light_font_size": 13.5,
-  "dark_color_scheme": "Mariana.sublime-color-scheme",
+  "dark_color_scheme": "Monokai.sublime-color-scheme",
   "dark_font_face": "Jetbrains Mono NL",
   "dark_font_size": 13.5,
 

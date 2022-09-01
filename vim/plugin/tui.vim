@@ -29,6 +29,7 @@ augroup MyColors
     highlight CurSearch gui=reverse cterm=reverse
   }
   autocmd ColorScheme molokai {
+    highlight CurSearch gui=reverse cterm=reverse
     highlight phpIdentifier guifg=#F8F8F2 guibg=#1B1D1E
   }
 augroup end

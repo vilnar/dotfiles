@@ -46,8 +46,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': '9d041aa58246fbcaf1
 Plug 'junegunn/fzf.vim', { 'commit': 'c491d702b76c6b4918abb80be3cfb57d1b618ffa' }
 Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2' }
 
-" buffers
-Plug 'jlanzarotta/bufexplorer', { 'commit': '1be66e253730fd186a5a789a67a337420f431a71' }
 
 " async
 Plug 'skywind3000/asyncrun.vim', { 'commit': 'aa8a99e87e64276d52556f4d9d4f4a19afd37556' }

@@ -64,8 +64,7 @@ nnoremap <leader>c :close<CR>
 # buffers list
 # nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
 # nnoremap <Leader>b :ls<CR>:b<SPACE>
-# nnoremap <silent> <leader>b :Buffers<CR>
-nnoremap <silent> <leader>b :BufExplorer<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
 
 
 # close current buffer
