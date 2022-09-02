@@ -66,5 +66,10 @@
             "scope": "keyword.operator.assignment",
             "foreground": "var(orange)",
         },
+        {
+            "name": "Comment2",
+            "scope": "punctuation.definition.comment",
+            "foreground": "var(yellow5)"
+        },
     ]
 }

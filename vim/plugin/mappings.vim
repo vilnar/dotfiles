@@ -90,8 +90,8 @@ vnoremap <Leader>fp y:vim9cmd FilesBuffer !find * -not -path "./.git/*" -path "*
 nnoremap <silent><nowait> <leader>; :Commands<CR>
 # nnoremap <leader>tt :Tags '<C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>tt :MyTags <C-R>=expand("<cword>")<CR><CR>
-# nnoremap <leader>tb :BTags '<C-R>=expand("<cword>")<CR><CR> 
-nnoremap <leader>tb :MyBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR> 
+# nnoremap <leader>tb :BTags '<C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>tb :MyBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
 # nnoremap <leader>tf :BTags<CR>
 nnoremap <leader>tf :MyBufferTags<CR>
 nnoremap <silent><nowait> <leader>i :Snippets<CR>
