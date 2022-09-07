@@ -33,30 +33,9 @@ augroup MyColors
     highlight phpIdentifier guifg=#F8F8F2
     highlight ExtraWhitespace guibg=#1E0010
   }
-  autocmd ColorScheme habamax {
-    highlight phpIdentifier guifg=#bcbcbc
-  }
 augroup end
 
-# colorscheme molokai
-
-colorscheme habamax
-highlight ExtraWhitespace guibg=#767676
-
-# g:gruvbox_colors.bright_red = (['#ea6962', 167])
-# g:gruvbox_invert_selection = 0
-# g:gruvbox_italic = 0
-# g:gruvbox_underline = 1
-# g:gruvbox_contrast_dark = "medium"
-# g:gruvbox_guisp_fallback = "bg" # fix spell colors
-# g:gruvbox_vert_split = "bg1"
-# g:gruvbox_hls_highlight = "purple"
-# colorscheme gruvbox
-
-# set background=dark
-# g:gruvbox_material_sign_column_background = "grey"
-# colorscheme gruvbox-material
-# highlight Function guifg=#FE8019
+colorscheme molokai
 
 
 # set linebreak
