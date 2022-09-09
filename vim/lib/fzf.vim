@@ -1,7 +1,7 @@
 vim9script
 
 def RunMyTags(query: string)
-  var spec = {"options": ["--preview-window", "down", "--nth", "1,2,3", "+i"], "placeholder": "--tag {2}:{-1}:{3..}"}
+  var spec = {"options": ["--preview-window", "down", "--nth", "1,2,3", "-i"], "placeholder": "--tag {2}:{-1}:{3..}"}
   call fzf#vim#tags(query, fzf#vim#with_preview(spec), 0)
 enddef
 command -bang -nargs=* MyTags call RunMyTags(<q-args>)
