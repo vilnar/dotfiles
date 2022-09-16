@@ -55,3 +55,11 @@ g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sh', 'sql']
 g:lsp_document_code_action_signs_enabled = 0
 g:lsp_diagnostics_highlights_insert_mode_enabled = 0
 g:lsp_auto_enable = 0
+
+
+
+ # g:vdebug_options = {
+ #  'port': 9000,
+ #  'path_maps': {"remote_folder": "local_folder"}
+# }
+

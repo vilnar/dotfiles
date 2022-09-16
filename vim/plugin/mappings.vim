@@ -232,7 +232,7 @@ augroup LspGo
       "linksInHover": false,
       "linkTarget": "",
     },
-    }
+  }
   autocmd User lsp_setup call lsp#register_server(gopls_settings)
   autocmd FileType go setlocal omnifunc=lsp#complete
   autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
@@ -243,6 +243,45 @@ augroup LspGo
   autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
   autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
   autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+augroup END
+
+augroup LspPhp
+  var phpactor_settings = {
+    'name': 'phpactor',
+    'cmd': ['phpactor', 'language-server'],
+    'allowlist': ['php'],
+  }
+  autocmd User lsp_setup call lsp#register_server(phpactor_settings)
+  autocmd FileType php setlocal omnifunc=lsp#complete
+  autocmd FileType php nmap <buffer> gd <plug>(lsp-definition)
+  autocmd FileType php nmap <buffer> ,r <plug>(lsp-references)
+  autocmd FileType php nmap <buffer> ,i <plug>(lsp-implementation)
+  autocmd FileType php nmap <buffer> ,t <plug>(lsp-type-definition)
+  autocmd FileType php nmap <buffer> ,h <plug>(lsp-hover)
+  autocmd FileType php nmap <buffer> ,d <plug>(lsp-document-diagnostics)
+  autocmd FileType php nmap <buffer> ,n <plug>(lsp-next-error)
+  autocmd FileType php nmap <buffer> ,p <plug>(lsp-previous-error)
+augroup END
+
+augroup LspSh
+  var sh_settings = {
+    'name': 'bash-language-server',
+    'cmd': ['bash-language-server', 'start'],
+    'allowlist': ['sh'],
+    "env": {
+      "SHELLCHECK_PATH": "/usr/bin/shellcheck",
+    }
+  }
+  autocmd User lsp_setup call lsp#register_server(sh_settings)
+  autocmd FileType sh setlocal omnifunc=lsp#complete
+  autocmd FileType sh nmap <buffer> gd <plug>(lsp-definition)
+  autocmd FileType sh nmap <buffer> ,r <plug>(lsp-references)
+  autocmd FileType sh nmap <buffer> ,i <plug>(lsp-implementation)
+  autocmd FileType sh nmap <buffer> ,t <plug>(lsp-type-definition)
+  autocmd FileType sh nmap <buffer> ,h <plug>(lsp-hover)
+  autocmd FileType sh nmap <buffer> ,d <plug>(lsp-document-diagnostics)
+  autocmd FileType sh nmap <buffer> ,n <plug>(lsp-next-error)
+  autocmd FileType sh nmap <buffer> ,p <plug>(lsp-previous-error)
 augroup END
 
 def LspStartCustom()

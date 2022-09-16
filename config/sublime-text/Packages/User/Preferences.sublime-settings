@@ -1,6 +1,6 @@
 {
   // autocomplete
-  "auto_complete": false,
+  "auto_complete": true,
   "auto_complete_use_index": false,
   "auto_complete_commit_on_tab": true,
   // "tab_completion": true,
@@ -43,7 +43,7 @@
   "gutter": true,
   "mini_diff": "auto",
 
-  // word wrap
+  // wrap
   "rulers": [120],
   "word_wrap": false,
 
@@ -70,7 +70,8 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  "font_face": "Jetbrains Mono NL",
+  // "font_face": "Jetbrains Mono NL Light",
+  "font_face": "Fira Mono",
   "font_size": 13.5,
   "line_padding_bottom": 2,
   "line_padding_top": 2,
@@ -111,10 +112,10 @@
   ],
 
   "light_color_scheme": "Alabaster.sublime-color-scheme",
-  "light_font_face": "Jetbrains Mono NL Light",
-  "light_font_size": 13.5,
+  "light_font_face": "Fira Mono",
+  "light_font_size": 13,
   "dark_color_scheme": "Mariana.sublime-color-scheme",
-  "dark_font_face": "Jetbrains Mono NL",
+  "dark_font_face": "Fira Mono",
   "dark_font_size": 13.5,
 
   "hide_new_tab_button": true,

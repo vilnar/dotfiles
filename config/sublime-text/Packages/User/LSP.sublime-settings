@@ -9,4 +9,21 @@
   "show_diagnostics_panel_on_save": 0,
   "show_diagnostics_count_in_view_status": false,
   "show_diagnostics_in_view_status": false,
+  "clients": {
+    "phpactor": {
+      "command": [
+        "phpactor",
+        "language-server",
+      ],
+      "enabled": true,
+      "languageId": "php",
+      "scopes": [
+        "source.php",
+        "embedding.php"
+      ],
+      "syntaxes": [
+        "Packages/PHP/PHP.sublime-syntax"
+      ]
+    }
+  }
 }

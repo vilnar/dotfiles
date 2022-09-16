@@ -36,6 +36,7 @@ Plug 'tpope/vim-surround', { 'commit': 'bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea
 
 " git
 Plug 'tpope/vim-fugitive', { 'commit': 'b411b753f805b969cca856e2ae51fdbab49880df' }
+Plug 'AndrewRadev/linediff.vim', { 'commit': 'c627858c6dd280221df032bbe7f3899ec71e1aaa' }
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
 
@@ -51,7 +52,7 @@ Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2'
 Plug 'skywind3000/asyncrun.vim', { 'commit': 'aa8a99e87e64276d52556f4d9d4f4a19afd37556' }
 Plug 'tpope/vim-dispatch', {'commit': '00e77d90452e3c710014b26dc61ea919bc895e92'}
 
-" format code (command example :FormatLines)
+" format code (command example :'<,'>FormatLines)
 Plug 'google/vim-maktaba', { 'commit': 'f5127b339a9d776f220cc0393783c55def9d8ce0' }
 Plug 'google/vim-codefmt', { 'commit': '605dc002cabfec67eded553298aba21ab392ea78' }
 Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d' }

@@ -28,6 +28,13 @@ augroup MyColors
     # highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
     highlight CurSearch gui=reverse cterm=reverse
   }
+  autocmd ColorScheme evening {
+    highlight phpIdentifier guifg=#ffffff
+    highlight ExtraWhitespace guibg=#80a0ff
+    highlight CurSearch gui=reverse cterm=reverse
+
+    hi LineNr guifg=#7f7f7f guibg=NONE gui=NONE cterm=NONE
+  }
   autocmd ColorScheme molokai {
     highlight CurSearch gui=reverse cterm=reverse
     highlight phpIdentifier guifg=#F8F8F2
@@ -35,7 +42,7 @@ augroup MyColors
   }
 augroup end
 
-colorscheme molokai
+colorscheme evening
 
 
 # set linebreak
