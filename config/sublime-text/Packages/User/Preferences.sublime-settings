@@ -71,7 +71,7 @@
 
   // font
   // "font_face": "Jetbrains Mono NL Light",
-  "font_face": "Fira Mono",
+  "font_face": "Jetbrains Mono NL",
   "font_size": 13.5,
   "line_padding_bottom": 2,
   "line_padding_top": 2,
@@ -112,10 +112,10 @@
   ],
 
   "light_color_scheme": "Alabaster.sublime-color-scheme",
-  "light_font_face": "Fira Mono",
+  "light_font_face": "Jetbrains Mono NL Light",
   "light_font_size": 13,
   "dark_color_scheme": "Mariana.sublime-color-scheme",
-  "dark_font_face": "Fira Mono",
+  "dark_font_face": "Jetbrains Mono NL",
   "dark_font_size": 13.5,
 
   "hide_new_tab_button": true,
