@@ -28,29 +28,26 @@ augroup MyColors
     # highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
     highlight CurSearch gui=reverse cterm=reverse
   }
-  autocmd ColorScheme desert {
-    highlight phpIdentifier guifg=#ffffff
-    highlight ExtraWhitespace guibg=#6dceeb
-    highlight CurSearch gui=reverse cterm=reverse
-
-    hi LineNr guifg=#7f7f7f guibg=NONE gui=NONE cterm=NONE
- }
-  autocmd ColorScheme evening {
-    highlight phpIdentifier guifg=#ffffff
-    highlight ExtraWhitespace guibg=#80a0ff
-    highlight CurSearch gui=reverse cterm=reverse
-
-    hi LineNr guifg=#7f7f7f guibg=NONE gui=NONE cterm=NONE
-  }
   autocmd ColorScheme molokai {
     highlight CurSearch gui=reverse cterm=reverse
     highlight phpIdentifier guifg=#F8F8F2
+    highlight Error guibg=#F92672
+
     highlight ExtraWhitespace guibg=#7E8E91
+
+    highlight DbgBreakptLine guifg=#ffffff guibg=#7aae29
+    highlight DbgBreakptSign guifg=#ffffff guibg=#7aae29
+    highlight DbgCurrentLine guifg=#ffffff guibg=#f5669c
+    highlight DbgCurrentSign guifg=#ffffff guibg=#f5669c
+    highlight DbgDisabledSign guifg=#ffffff guibg=#42a7cf
+    highlight DbgDisabledLine guifg=#ffffff guibg=#42a7cf
+    highlight DbgCurrentStackPositionSign guifg=#ffffff guibg=#42a7cf
+    highlight DbgCurrentStackPositionLine guifg=#ffffff guibg=#42a7cf
   }
 augroup end
 
-colorscheme desert
-
+set background=dark
+colorscheme molokai
 
 # set linebreak
 set showbreak=->
