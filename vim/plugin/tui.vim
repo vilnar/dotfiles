@@ -28,6 +28,13 @@ augroup MyColors
     # highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
     highlight CurSearch gui=reverse cterm=reverse
   }
+  autocmd ColorScheme desert {
+    highlight phpIdentifier guifg=#ffffff
+    highlight ExtraWhitespace guibg=#6dceeb
+    highlight CurSearch gui=reverse cterm=reverse
+
+    hi LineNr guifg=#7f7f7f guibg=NONE gui=NONE cterm=NONE
+ }
   autocmd ColorScheme evening {
     highlight phpIdentifier guifg=#ffffff
     highlight ExtraWhitespace guibg=#80a0ff
@@ -42,7 +49,7 @@ augroup MyColors
   }
 augroup end
 
-colorscheme evening
+colorscheme desert
 
 
 # set linebreak
