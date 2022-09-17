@@ -66,6 +66,6 @@ Plug 'tomasr/molokai', { 'commit': 'c67bdfcdb31415aa0ade7f8c003261700a885476' }
 Plug 'prabirshrestha/vim-lsp', { 'commit': '4d8a27513daef41915eaf2d315a2662e95d71080' }
 
 " debugger
-Plug 'vim-vdebug/vdebug', { 'commit': 'f979cc065e63796bdf60f014ae2280ce8e72cded' }
+" Plug 'vim-vdebug/vdebug', { 'commit': 'f979cc065e63796bdf60f014ae2280ce8e72cded' }
 
 call plug#end()
