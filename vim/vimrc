@@ -67,5 +67,6 @@ Plug 'prabirshrestha/vim-lsp', { 'commit': '4d8a27513daef41915eaf2d315a2662e95d7
 
 " debugger
 " Plug 'vim-vdebug/vdebug', { 'commit': 'f979cc065e63796bdf60f014ae2280ce8e72cded' }
+Plug 'puremourning/vimspector', { 'commit': '3378018bc1cdd1d9b70734c3e970bc52fd983415' }
 
 call plug#end()

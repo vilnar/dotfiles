@@ -307,3 +307,31 @@ command LspRestart :call <SID>LspRestartCustom()
 nnoremap <silent> ,1 :call <SID>LspStartCustom()<CR>
 nnoremap <silent> ,2 :call <SID>LspStopCustom()<CR>
 nnoremap <silent> ,3 :call <SID>LspRestartCustom()<CR>
+
+
+# DEBUGGER
+# g:vdebug_keymap = {
+#   "run": "<Leader><F5>",
+#   "run_to_cursor": "<Leader><F9>",
+#   "step_over": "<Leader><F2>",
+#   "step_into": "<Leader><F3>",
+#   "step_out": "<Leader><F4>",
+#   "close": "<Leader><F6>",
+#   "detach": "<Leader><F7>",
+#   "set_breakpoint": "<Leader><F10>",
+#   "get_context": "<Leader><F11>",
+#   "eval_under_cursor": "<Leader><F12>",
+#   "eval_visual": "<Leader>e",
+# }
+
+nnoremap <Leader><F5> :call vimspector#Launch()<CR>
+nnoremap <Leader><F6> :call vimspector#Reset()<CR>
+nnoremap <Leader><F9> :call vimspector#Continue()<CR>
+
+nnoremap <Leader><F10> :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <Leader><F11> :call vimspector#ClearBreakpoints()<CR>
+
+nmap <Leader><F12> <Plug>VimspectorRestart
+nmap <Leader><F2> <Plug>VimspectorStepOver
+nmap <Leader><F3> <Plug>VimspectorStepInto
+nmap <Leader><F4> <Plug>VimspectorStepOut
