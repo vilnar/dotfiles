@@ -32,7 +32,12 @@ let mapleader="\<Space>"
 call plug#begin()
 Plug 'tpope/vim-commentary', { 'commit': '3654775824337f466109f00eaf6759760f65be34' }
 Plug 'tpope/vim-surround', { 'commit': 'bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea' }
-" Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf5' }
+
+" It works starting with patch 9.0.0506
+Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf5' }
+
+" Plug 'jeetsukumaran/vim-buffergator', { 'commit': '0514af606a3b41bbe82c33875179b53300a3cb86' }
+Plug 'jlanzarotta/bufexplorer', { 'commit': '1be66e253730fd186a5a789a67a337420f431a71' }
 
 " git
 Plug 'tpope/vim-fugitive', { 'commit': 'b411b753f805b969cca856e2ae51fdbab49880df' }
@@ -67,6 +72,6 @@ Plug 'prabirshrestha/vim-lsp', { 'commit': '4d8a27513daef41915eaf2d315a2662e95d7
 
 " debugger
 " Plug 'vim-vdebug/vdebug', { 'commit': 'f979cc065e63796bdf60f014ae2280ce8e72cded' }
-Plug 'puremourning/vimspector', { 'commit': '3378018bc1cdd1d9b70734c3e970bc52fd983415' }
+" Plug 'puremourning/vimspector', { 'commit': '3378018bc1cdd1d9b70734c3e970bc52fd983415' }
 
 call plug#end()

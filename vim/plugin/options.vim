@@ -35,12 +35,17 @@ g:asyncrun_save = 2
 
 g:fugitive_dynamic_colors = 0
 
+# g:buffergator_viewport_split_policy = "n"
+# g:buffergator_sort_regime = "bufnum"
+# g:buffergator_suppress_keymaps = 1
+
 # :help bufexplorer
 g:bufExplorerShowNoName = 1
 g:bufExplorerSortBy = "mru"
 g:bufExplorerShowRelativePath = 1
 g:bufExplorerDisableDefaultKeyMapping = 1
-g:bufExplorerShowTabBuffer = 1
+g:bufExplorerShowTabBuffer = 0
+# g:bufExplorerShowUnlisted = 1
 
 g:goyo_width = 120
 g:goyo_linenr = 1
@@ -65,5 +70,5 @@ g:lsp_auto_enable = 0
 
 
 # DEBUGGER
-g:vimspector_install_gadgets = ['vscode-go', 'vscode-php-debug']
+# g:vimspector_install_gadgets = ['vscode-go', 'vscode-php-debug']
 

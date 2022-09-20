@@ -13,7 +13,7 @@ import "../lib/langs.vim" as langs
 noremap <Leader>y "+y
 noremap <Leader>p "+p
 noremap <Leader>P "+P
-noremap <Leader>d "+d
+# noremap <Leader>d "+d
 
 
 # Easier moving of code blocks
@@ -64,11 +64,15 @@ nnoremap <leader>c :close<CR>
 # buffers list
 # nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
 # nnoremap <Leader>b :ls<CR>:b<SPACE>
-nnoremap <silent> <leader>b :Buffers<CR>
+# nnoremap <silent> <leader>b :Buffers<CR>
+# nnoremap <silent> <leader>b :BuffergatorOpen<CR>
+# nnoremap [b :BuffergatorMruCyclePrev<CR>
+# nnoremap ]b :BuffergatorMruCycleNext<CR>
+nnoremap <silent> <leader>b :ToggleBufExplorer<CR>
 
 
 # close current buffer
-nnoremap <Leader>q :bdelete %<CR>
+nnoremap <Leader>qq :bdelete %<CR>
 
 
 
@@ -243,6 +247,7 @@ augroup LspGo
   autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
   autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
   autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+  autocmd FileType go nmap <buffer> ,s <plug>(lsp-document-symbol-search)
 augroup END
 
 augroup LspPhp
@@ -261,6 +266,7 @@ augroup LspPhp
   autocmd FileType php nmap <buffer> ,d <plug>(lsp-document-diagnostics)
   autocmd FileType php nmap <buffer> ,n <plug>(lsp-next-error)
   autocmd FileType php nmap <buffer> ,p <plug>(lsp-previous-error)
+  autocmd FileType php nmap <buffer> ,s <plug>(lsp-document-symbol-search)
 augroup END
 
 augroup LspSh
@@ -282,6 +288,7 @@ augroup LspSh
   autocmd FileType sh nmap <buffer> ,d <plug>(lsp-document-diagnostics)
   autocmd FileType sh nmap <buffer> ,n <plug>(lsp-next-error)
   autocmd FileType sh nmap <buffer> ,p <plug>(lsp-previous-error)
+  autocmd FileType sh nmap <buffer> ,s <plug>(lsp-document-symbol-search)
 augroup END
 
 def LspStartCustom()
@@ -324,14 +331,16 @@ nnoremap <silent> ,3 :call <SID>LspRestartCustom()<CR>
 #   "eval_visual": "<Leader>e",
 # }
 
-nnoremap <Leader><F5> :call vimspector#Launch()<CR>
-nnoremap <Leader><F6> :call vimspector#Reset()<CR>
-nnoremap <Leader><F9> :call vimspector#Continue()<CR>
+# nnoremap <Leader><F2> <Plug>VimspectorStepOver
+# nnoremap <Leader><F3> <Plug>VimspectorStepInto
+# nnoremap <Leader><F4> <Plug>VimspectorStepOut
 
-nnoremap <Leader><F10> :call vimspector#ToggleBreakpoint()<CR>
-nnoremap <Leader><F11> :call vimspector#ClearBreakpoints()<CR>
+# nnoremap <Leader><F5> :call vimspector#Launch()<CR>
+# nnoremap <Leader><F6> :call vimspector#Reset()<CR>
+# nnoremap <Leader><F7> <Plug>VimspectorRestart
+# nnoremap <Leader><F9> :call vimspector#Continue()<CR>
 
-nmap <Leader><F12> <Plug>VimspectorRestart
-nmap <Leader><F2> <Plug>VimspectorStepOver
-nmap <Leader><F3> <Plug>VimspectorStepInto
-nmap <Leader><F4> <Plug>VimspectorStepOut
+# nnoremap <Leader><F10> :call vimspector#ToggleBreakpoint()<CR>
+# nnoremap <Leader><F11> :call vimspector#ClearBreakpoints()<CR>
+# nnoremap <Leader><F12> <Plug>VimspectorBreakpoints
+
