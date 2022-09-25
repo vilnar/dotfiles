@@ -44,13 +44,18 @@ augroup MyColors
     highlight DbgCurrentStackPositionSign guifg=#ffffff guibg=#42a7cf
     highlight DbgCurrentStackPositionLine guifg=#ffffff guibg=#42a7cf
   }
+  autocmd ColorScheme jellybeans {
+    highlight Special         guifg=#CC8BC9
+    highlight NonText         guifg=#465457
+    highlight SpecialKey      guifg=#465457
+    highlight ExtraWhitespace guibg=#888888
+  }
 augroup end
 
 set background=dark
 # colorscheme molokai
 g:jellybeans_overrides = {
   'background': { 'guibg': '1E1E1E' },
-  'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
 }
 g:jellybeans_use_term_italics = 0
 g:jellybeans_use_gui_italics = 0
@@ -82,7 +87,6 @@ g:terminal_ansi_colors[14] = "#00B3A8"
 # White
 g:terminal_ansi_colors[7] = "#DEDEDE"
 g:terminal_ansi_colors[15] = "#FEFEFE"
-highlight ExtraWhitespace guibg=#888888
 
 # set linebreak
 set showbreak=->

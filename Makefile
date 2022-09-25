@@ -11,7 +11,8 @@ help:
 	@echo '   make install_bash                install bashrc                     '
 	@echo '   make install_vim                 install vim files                  '
 	@echo '   make install_git                 install git files                  '
-	@echo '   make export_bash                 export bash profile                '
+	@echo '   make import_gnome_terminal       import gnome-terminal profile      '
+	@echo '   make export_gnome_terminal       export gnome-terminal profile      '
 	@echo '   make install_gtk                 install gtk files                  '
 	@echo '   make install_sublime_text        install sublime text files         '
 	@echo '   make install_sublime_merge       install sublime merge files        '
@@ -49,7 +50,6 @@ clean_git:
 install_bash: clean_bash
 	ln -sf `pwd`/ctags   ~/.ctags
 	cp `pwd`/bash_aliases ~/.bash_aliases
-	dconf load /org/gnome/terminal/legacy/profiles:/ < `pwd`/gnome-terminal-profiles.dconf
 
 clean_bash:
 	rm -Rf ~/.ctags
@@ -61,7 +61,10 @@ install_kitty: clear_kitty
 clear_kitty:
 	rm -Rf ~/.config/kitty
 
-export_bash:
+import_gnome_terminal:
+	dconf load /org/gnome/terminal/legacy/profiles:/ < `pwd`/gnome-terminal-profiles.dconf
+
+export_gnome_terminal:
 	dconf dump /org/gnome/terminal/legacy/profiles:/ > `pwd`/gnome-terminal-profiles.dconf
 
 
