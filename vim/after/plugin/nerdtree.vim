@@ -59,7 +59,7 @@ function! NERDTreeOpenTerminal()
       echoerr "Not found directory: " . path
       return
     endif
-    execute 'Dispatch kitty --working-directory=' . path
+    execute 'Dispatch gnome-terminal --working-directory=' . path
     " execute 'Start! xterm -e "cd ' .. path .. ' && bash"'
     call nerdtree#echo("Open terminal in " . path)
   endif

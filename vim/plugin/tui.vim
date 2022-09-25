@@ -47,7 +47,42 @@ augroup MyColors
 augroup end
 
 set background=dark
-colorscheme molokai
+# colorscheme molokai
+g:jellybeans_overrides = {
+  'background': { 'guibg': '1E1E1E' },
+  'Special': { 'guifg': 'CC8BC9', 'ctermfg': 'DarkPurple' },
+}
+g:jellybeans_use_term_italics = 0
+g:jellybeans_use_gui_italics = 0
+colorscheme jellybeans
+
+# fix internal terminal colors scheme - jellybeans
+g:terminal_ansi_colors = repeat([0], 16)
+# Black
+g:terminal_ansi_colors[0] = "#414141"
+g:terminal_ansi_colors[8] = "#BDBDBD"
+# Red
+g:terminal_ansi_colors[1] = "#E87174"
+g:terminal_ansi_colors[9] = "#FFA0A2"
+# Green
+g:terminal_ansi_colors[2] = "#93B97E"
+g:terminal_ansi_colors[10] = "#B8BB26"
+# Yellow
+g:terminal_ansi_colors[3] = "#FFB981"
+g:terminal_ansi_colors[11] = "#FFDBA5"
+# Blue
+g:terminal_ansi_colors[4] = "#648699"
+g:terminal_ansi_colors[12] = "#ABD9F3"
+# Magenta
+g:terminal_ansi_colors[5] = "#E1C0F6"
+g:terminal_ansi_colors[13] = "#FBDAFC"
+# Cyan
+g:terminal_ansi_colors[6] = "#00988E"
+g:terminal_ansi_colors[14] = "#00B3A8"
+# White
+g:terminal_ansi_colors[7] = "#DEDEDE"
+g:terminal_ansi_colors[15] = "#FEFEFE"
+highlight ExtraWhitespace guibg=#888888
 
 # set linebreak
 set showbreak=->
