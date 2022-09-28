@@ -23,6 +23,9 @@ g:NERDTreeRemoveFileCmd = "gio trash "
 g:NERDTreeRemoveDirCmd = "gio trash "
 g:NERDTreeHijackNetrw = 0
 
+# vim9 fix issue https://github.com/preservim/nerdtree/issues/1321
+g:NERDTreeMinimalMenu = 1
+
 
 # :help UltiSnips
 g:UltiSnipsSnippetDirectories = ["UltiSnips", "customsnippets"]
@@ -35,17 +38,19 @@ g:asyncrun_save = 2
 
 g:fugitive_dynamic_colors = 0
 
-# g:buffergator_viewport_split_policy = "n"
+g:buffergator_viewport_split_policy = "n"
 # g:buffergator_sort_regime = "bufnum"
-# g:buffergator_suppress_keymaps = 1
+g:buffergator_sort_regime = "mru"
+g:buffergator_suppress_keymaps = 1
+g:buffergator_autodismiss_on_select = 1
 
 # :help bufexplorer
 g:bufExplorerShowNoName = 1
 g:bufExplorerSortBy = "mru"
+# g:bufExplorerSortBy = 'number'
 g:bufExplorerShowRelativePath = 1
 g:bufExplorerDisableDefaultKeyMapping = 1
 g:bufExplorerShowTabBuffer = 0
-# g:bufExplorerShowUnlisted = 1
 
 g:goyo_width = 120
 g:goyo_linenr = 1

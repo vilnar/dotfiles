@@ -56,7 +56,9 @@ nnoremap <silent> <Leader>8 :vim9cmd <SID>RunSearchUnderCursor()<BAR>set hls<CR>
 
 # BUFFER -----------------------------------------------------------------------------
 nnoremap <leader>o :only<CR>
-nnoremap <leader>c :close<CR>
+# nnoremap <leader>cc :close<CR>
+# close current buffer
+nnoremap <Leader>cc :bdelete %<CR>
 
 # tabs switching
 # nnoremap <Leader>t :tabs<CR>:tabnext<Space>
@@ -71,8 +73,6 @@ nnoremap <leader>c :close<CR>
 nnoremap <silent> <leader>b :ToggleBufExplorer<CR>
 
 
-# close current buffer
-nnoremap <Leader>qq :bdelete %<CR>
 
 
 
