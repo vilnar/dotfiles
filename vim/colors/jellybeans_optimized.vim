@@ -848,7 +848,7 @@ hi ColortemplateInfoSp guifg=#e8e8d3 guibg=#1e1e1e gui=NONE cterm=NONE
 hi Comment guifg=#888888 guibg=#1e1e1e gui=NONE cterm=NONE
 hi Constant guifg=#cf6a4c guibg=#1e1e1e gui=NONE cterm=NONE
 hi Cursor guifg=#1e1e1e guibg=#b0d0f0 gui=NONE cterm=NONE
-hi CursorColumn guifg=#e8e8d3 guibg=#1c1c1c gui=NONE cterm=NONE
+hi CursorColumn guifg=NONE guibg=#3E3D32 gui=NONE cterm=NONE
 hi CursorLine guifg=#e8e8d3 guibg=#1c1c1c gui=NONE cterm=NONE
 hi CursorLineNr guifg=#ccc5c4 guibg=#1e1e1e gui=NONE cterm=NONE
 hi DbgBreakPt guifg=#e8e8d3 guibg=#4f0037 gui=NONE cterm=NONE
@@ -915,7 +915,7 @@ hi ToolbarLine guifg=#e8e8d3 guibg=#7f7f7f gui=NONE cterm=NONE
 hi Type guifg=#ffb964 guibg=#1e1e1e gui=NONE cterm=NONE
 hi Underlined guifg=#80a0ff guibg=#1e1e1e gui=underline cterm=underline
 hi VertSplit guifg=#777777 guibg=#403c41 gui=NONE cterm=NONE
-hi Visual guifg=#e8e8d3 guibg=#404040 gui=NONE cterm=NONE
+hi Visual guifg=#e8e8d3 guibg=#264F78 gui=NONE cterm=NONE
 hi VisualNOS guifg=#e8e8d3 guibg=#1e1e1e gui=bold,underline cterm=bold,underline
 hi WarningMsg guifg=#ff0000 guibg=#1e1e1e gui=NONE cterm=NONE
 hi WildMenu guifg=#f0a0c0 guibg=#302028 gui=NONE cterm=NONE
