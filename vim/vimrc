@@ -37,7 +37,7 @@ Plug 'tpope/vim-surround', { 'commit': 'bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea
 Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf5' }
 
 " Plug 'jeetsukumaran/vim-buffergator', { 'commit': '0514af606a3b41bbe82c33875179b53300a3cb86' }
-Plug 'jlanzarotta/bufexplorer', { 'commit': '1be66e253730fd186a5a789a67a337420f431a71' }
+Plug 'jlanzarotta/bufexplorer', { 'commit': 'e782dab0fe9523ac65d9fe4f726f2efe924e3f43' }
 
 " git
 Plug 'tpope/vim-fugitive', { 'commit': 'b411b753f805b969cca856e2ae51fdbab49880df' }
@@ -70,7 +70,7 @@ Plug 'lifepillar/vim-colortemplate', { 'commit': 'ee6043299eef3d346182c30ef1b99f
 
 
 " LSP
-Plug 'prabirshrestha/vim-lsp', { 'commit': '4d8a27513daef41915eaf2d315a2662e95d71080' }
+Plug 'prabirshrestha/vim-lsp', { 'commit': '8fdaf4f78c94c6abba06a907520a5de157c5803b' }
 
 " debugger
 " Plug 'vim-vdebug/vdebug', { 'commit': 'f979cc065e63796bdf60f014ae2280ce8e72cded' }
