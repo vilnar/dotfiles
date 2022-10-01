@@ -91,3 +91,19 @@ install_sublime_merge: clear_sublime_merge
 
 clear_sublime_merge:
 	rm -Rf ~/.config/sublime-merge/Packages/User
+
+
+install_vscode: clear_vscode
+	@echo Place vscode config files
+	ln -sf `pwd`/config/Code/User/settings.json   ~/.config/Code/User/settings.json
+	ln -sf `pwd`/config/Code/User/keybindings.json   ~/.config/Code/User/keybindings.json
+
+export_vscode_extensions:
+	code --list-extensions > `pwd`/config/Code/User/list-extensions.txt
+
+import_vscode_extensions:
+	cat `pwd`/config/Code/User/list-extensions.txt| xargs -L 1 echo code --install-extension
+
+clear_vscode:
+	rm ~/.config/Code/User/settings.json
+	rm ~/.config/Code/User/keybindings.json

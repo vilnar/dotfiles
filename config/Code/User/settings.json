@@ -1,0 +1,292 @@
+{
+    "workbench.iconTheme": "vs-minimal",
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.tree.renderIndentGuides": "none",
+
+    "window.zoomLevel": 1,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
+    "files.associations": {
+        "*.log": "plaintext"
+    },
+
+    "breadcrumbs.enabled": false,
+
+    "extensions.ignoreRecommendations": true,
+    "extensions.autoUpdate": false,
+
+    "update.mode": "none",
+    "update.showReleaseNotes": false,
+
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+
+    "editor.fontFamily": "'Jetbrains Mono NL', 'monospace', monospace",
+    // "editor.fontFamily": "'Jetbrains Mono NL Light', 'monospace', monospace",
+    "editor.fontSize": 15,
+    "editor.lineHeight": 1.5,
+    "terminal.integrated.fontFamily": "'Jetbrains Mono NL', 'monospace', monospace",
+    "terminal.integrated.fontSize": 14,
+    "editor.minimap.enabled": false,
+    "editor.codeLens": false,
+    "editor.dragAndDrop": false,
+    "editor.fontLigatures": false,
+    "editor.formatOnType": false,
+
+    "editor.autoClosingDelete": "never",
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.suggest.filterGraceful": false,
+    "editor.suggest.showWords": false,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorWidth": 4,
+    "editor.wordBasedSuggestionsMode": "currentDocument",
+    "editor.occurrencesHighlight": false,
+    "editor.guides.highlightActiveIndentation": false,
+
+    "editor.hover.enabled": true,
+    "editor.hover.sticky": true,
+    "search.useIgnoreFiles": false,
+
+    // golang
+    "go.buildOnSave": "off",
+    "go.lintOnSave": "package",
+    "[go]": {
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": false,
+            "source.organizeImports": false
+        },
+        "editor.tabSize": 8,
+    },
+    "go.editorContextMenuCommands": {
+        "toggleTestFile": false,
+        "addTags": false,
+        "testAtCursor": false,
+        "generateTestForFunction": false,
+        "addImport": false,
+        "testCoverage": false,
+        "playground": false,
+        "debugTestAtCursor": false
+    },
+    "go.playground": {
+        "openbrowser": false,
+        "share": false,
+        "run": false
+    },
+    "go.testExplorer.enable": false,
+    "go.useLanguageServer": true,
+    "gopls": {
+        "ui.documentation.hoverKind": "FullDocumentation",
+        "ui.documentation.linksInHover": false,
+        "ui.documentation.linkTarget": "",
+    },
+    "go.coverOnTestPackage": false,
+    "go.enableCodeLens": {
+        "runtest": false
+    },
+    "go.survey.prompt": false,
+    "go.testExplorer.concatenateMessages": false,
+    "go.testExplorer.showOutput": false,
+    "go.delveConfig": {
+        "showGlobalVariables": true,
+        "dlvLoadConfig": {
+            "followPointers": true,
+            "maxVariableRecurse": 5,
+            "maxStringLen": 1024,
+            "maxArrayValues": 400,
+            "maxStructFields": -1,
+            "showGlobalVariables": true,
+        }
+    },
+
+
+    // git
+    "macros": {
+        "copyWithoutNewLine": [
+            "cursorLineStart",
+            "cursorLineEndSelect",
+            "editor.action.clipboardCopyAction",
+        ]
+    },
+    "workbench.editorAssociations": {
+        "git-rebase-todo": "default"
+    },
+    "workbench.startupEditor": "none",
+    "terminal.explorerKind": "external",
+    "terminal.external.linuxExec": "gnome-terminal",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.editor.languageDetection": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "telemetry.telemetryLevel": "off",
+    "files.simpleDialog.enable": true,
+    "search.showLineNumbers": true,
+
+    "editor.tokenColorCustomizations": {
+        "[Default Light+]": {
+            "textMateRules":[
+                {
+                    "scope": "constant.character.escape",
+                    "settings": {
+                        "foreground": "#7A3E9D"
+                    }
+                }
+            ]
+        },
+        "[Default Dark+]": {
+            "textMateRules":[
+                {
+                    "scope": "constant.character.escape",
+                    "settings": {
+                        "foreground": "#c695c6"
+                    }
+                }
+            ],
+        }
+    },
+    "workbench.colorCustomizations": {
+        "[Default Light+]": {
+            "editorGutter.background": "#eff3f5",
+        },
+        "[Default Dark+]": {
+            "diffEditor.removedTextBackground": "#480427",
+            "diffEditor.insertedTextBackground": "#7c7c0455",
+            "editorGutter.background": "#343739",
+            // "scrollbarSlider.background": "#5b5b5b",
+        }
+    },
+
+    "search.quickOpen.includeHistory": false,
+    "search.searchOnType": false,
+    "phpactor.path": "/usr/local/bin/phpactor",
+    "bashIde.highlightParsingErrors": false,
+    "files.autoSave": "afterDelay",
+    "editor.autoClosingBrackets": "never",
+    "bookmarks.sideBar.expanded": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.historyBasedLanguageDetection": false,
+    "workbench.tree.indent": 20,
+    "workbench.list.defaultFindMode": "highlight",
+    "explorer.compactFolders": false,
+    "workbench.editor.revealIfOpen": true,
+    "partialDiff.commandsOnContextMenu": {
+        "diffSelectionWithClipboard": false,
+        "diffVisibleEditors": false,
+        "togglePreComparisonTextNormalizationRules": false
+    },
+    "partialDiff.enableTelemetry": false,
+    "search.searchEditor.defaultNumberOfContextLines": 3,
+    "settingsSync.keybindingsPerPlatform": false,
+    "git-graph.repository.commits.initialLoad": 1000,
+    "git-graph.repository.commits.loadMoreAutomatically": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.views.commits.showBranchComparison": false,
+    "gitlens.views.commits.pullRequests.enabled": false,
+    "gitlens.views.repositories.showBranchComparison": false,
+    "gitlens.views.repositories.pullRequests.enabled": false,
+    "gitlens.views.repositories.autoRefresh": false,
+    "gitlens.views.repositories.autoReveal": false,
+    "gitlens.views.repositories.avatars": false,
+    "gitlens.views.fileHistory.avatars": false,
+    "gitlens.views.branches.pullRequests.enabled": false,
+    "gitlens.views.branches.avatars": false,
+    "gitlens.views.remotes.pullRequests.enabled": false,
+    "gitlens.views.remotes.avatars": false,
+    "gitlens.views.tags.avatars": false,
+    "gitlens.views.worktrees.avatars": false,
+    "gitlens.views.worktrees.showBranchComparison": false,
+    "gitlens.views.worktrees.pullRequests.enabled": false,
+    "gitlens.views.contributors.pullRequests.enabled": false,
+    "gitlens.views.contributors.avatars": false,
+    "gitlens.views.searchAndCompare.pullRequests.enabled": false,
+    "gitlens.views.searchAndCompare.avatars": false,
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.format": "${author|10-} ${message|50-} ${committerDate|10-}",
+    "gitlens.defaultDateFormat": "YYYY MM DD",
+    "gitlens.changes.locations": [
+        "gutter"
+    ],
+    "gitlens.heatmap.locations": [],
+    "gitlens.heatmap.fadeLines": false,
+    "gitlens.menus": {
+        "editor": false,
+        "editorGroup": {
+            "blame": true,
+            "compare": false
+        },
+        "editorTab": false,
+        "explorer": false,
+        "scm": false,
+        "scmRepositoryInline": false,
+        "scmRepository": false,
+        "scmGroupInline": false,
+        "scmGroup": false,
+        "scmItemInline": false,
+        "scmItem": false
+    },
+    "gitlens.blame.highlight.locations": [
+        "line",
+        "gutter",
+        "overview"
+    ],
+    "gitlens.hovers.avatars": false,
+    "gitlens.hovers.pullRequests.enabled": false,
+    "gitlens.hovers.currentLine.enabled": false,
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.altClickMovesCursor": false,
+    "debug.console.closeOnEnd": true,
+    "debug.internalConsoleOptions": "neverOpen",
+    "gitlens.graph.statusBar.enabled": false,
+    "workbench.editor.autoLockGroups": {
+        "terminalEditor": false
+    },
+    "terminal.integrated.shellIntegration.enabled": false,
+    "window.autoDetectHighContrast": false,
+    "window.enableMenuBarMnemonics": false,
+    "window.restoreWindows": "none",
+    "gitlens.blame.heatmap.enabled": false,
+    "gitlens.currentLine.pullRequests.enabled": false,
+    "gitlens.gitCommands.search.showResultsInSideBar": false,
+    "workbench.editor.untitled.labelFormat": "name",
+    "files.hotExit": "onExitAndWindowClose",
+    "trailing-spaces.logLevel": "none",
+    "trailing-spaces.showStatusBarMessage": false,
+    "gitlens.fileAnnotations.command": "blame",
+    "gitlens.hovers.annotations.enabled": false,
+    "gitlens.statusBar.alignment": "left",
+    "gitlens.statusBar.reduceFlicker": false,
+    "gitlens.statusBar.pullRequests.enabled": false,
+    "gitlens.statusBar.format": "gitblame",
+    "gitlens.hovers.autolinks.enhanced": false,
+    "gitlens.hovers.currentLine.details": false,
+    "gitlens.hovers.annotations.details": false,
+    "gitlens.codeLens.recentChange.command": "gitlens.showQuickCommitDetails",
+    "gitlens.statusBar.command": "gitlens.showCommitsInView",
+    "gitlens.virtualRepositories.enabled": false,
+    "gitlens.views.commits.pullRequests.showForBranches": false,
+    "gitlens.views.commits.pullRequests.showForCommits": false,
+    "gitlens.views.repositories.showUpstreamStatus": false,
+    "gitlens.views.repositories.pullRequests.showForBranches": false,
+    "gitlens.views.repositories.pullRequests.showForCommits": false,
+    "gitlens.views.repositories.showContributors": false,
+    "gitlens.views.repositories.showWorktrees": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.mode.statusBar.alignment": "left",
+    "gitlens.hovers.autolinks.enabled": false,
+    "gitlens.views.formats.commits.label": "${message}",
+    "gitlens.views.commits.files.compact": false,
+    "gitlens.views.commits.avatars": false,
+    "gitlens.views.repositories.showCommits": false,
+    "gitlens.views.lineHistory.avatars": false,
+    "gitlens.integrations.enabled": false,
+    "gitlens.liveshare.allowGuestAccess": false,
+    "gitlens.views.formats.commits.description": "${author} ${committerDate}",
+    "gitlens.statusBar.tooltipFormat": "&nbsp;__${author}__, ${committerDate} &nbsp; \n\n${message}${\n\n---\n\nfootnotes}\n\n${commands}",
+    "gitlens.hovers.detailsMarkdownFormat": "&nbsp;__${author}__, ${committerDate} &nbsp; \n\n${message}${\n\n---\n\nfootnotes}\n\n${commands}",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.views.repositories.showRemotes": false,
+    "gitlens.terminalLinks.enabled": false,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.scrollbar.horizontal": "visible",
+    "editor.scrollbar.vertical": "visible",
+    "editor.copyWithSyntaxHighlighting": false,
+}
