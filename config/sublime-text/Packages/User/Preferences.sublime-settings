@@ -16,7 +16,7 @@
   "adaptive_dividers": true,
   "gtk_client_side_window_decorations": true,
   "highlight_modified_tabs": true,
-  "color_scheme": "Mariana.sublime-color-scheme",
+  "color_scheme": "Alabaster.sublime-color-scheme",
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
   "show_tab_close_buttons": true,
@@ -71,7 +71,7 @@
 
   // font
   // "font_face": "Jetbrains Mono NL Light",
-  "font_face": "Jetbrains Mono NL",
+  "font_face": "Jetbrains Mono NL Light",
   "font_size": 13.5,
   "line_padding_bottom": 2,
   "line_padding_top": 2,

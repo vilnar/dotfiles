@@ -6,7 +6,7 @@ set guioptions=cM
 set lines=999 columns=999
 
 # set guifont=Dejavu\ Sans\ Mono\ 13.5
-set guifont=Jetbrains\ Mono\ NL\ Regular\ 13.5
+set guifont=Jetbrains\ Mono\ NL\ Light\ 13.5
 # set guifont=Fira\ Mono\ 14
 # set guifont=Ubuntu\ Mono\ 16
 
