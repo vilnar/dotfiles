@@ -289,4 +289,6 @@
     "editor.scrollbar.horizontal": "visible",
     "editor.scrollbar.vertical": "visible",
     "editor.copyWithSyntaxHighlighting": false,
+    "workbench.colorTheme": "Alabaster",
+    "gitlens.plusFeatures.enabled": false,
 }

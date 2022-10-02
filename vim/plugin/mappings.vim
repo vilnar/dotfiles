@@ -66,11 +66,11 @@ nnoremap <Leader>cc :bdelete %<CR>
 # buffers list
 # nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
 # nnoremap <Leader>b :ls<CR>:b<SPACE>
-# nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
 # nnoremap <silent> <leader>b :BuffergatorOpen<CR>
 # nnoremap [b :BuffergatorMruCyclePrev<CR>
 # nnoremap ]b :BuffergatorMruCycleNext<CR>
-nnoremap <silent> <leader>b :ToggleBufExplorer<CR>
+# nnoremap <silent> <leader>b :ToggleBufExplorer<CR>
 
 
 
@@ -247,7 +247,7 @@ augroup LspGo
   autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
   autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
   autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
-  autocmd FileType go nmap <buffer> ,s <plug>(lsp-document-symbol-search)
+  autocmd FileType go nmap <buffer> ,s <plug>(lsp-document-symbol)
 augroup END
 
 augroup LspPhp
@@ -266,7 +266,7 @@ augroup LspPhp
   autocmd FileType php nmap <buffer> ,d <plug>(lsp-document-diagnostics)
   autocmd FileType php nmap <buffer> ,n <plug>(lsp-next-error)
   autocmd FileType php nmap <buffer> ,p <plug>(lsp-previous-error)
-  autocmd FileType php nmap <buffer> ,s <plug>(lsp-document-symbol-search)
+  autocmd FileType php nmap <buffer> ,s <plug>(lsp-document-symbol)
 augroup END
 
 augroup LspSh
@@ -288,7 +288,7 @@ augroup LspSh
   autocmd FileType sh nmap <buffer> ,d <plug>(lsp-document-diagnostics)
   autocmd FileType sh nmap <buffer> ,n <plug>(lsp-next-error)
   autocmd FileType sh nmap <buffer> ,p <plug>(lsp-previous-error)
-  autocmd FileType sh nmap <buffer> ,s <plug>(lsp-document-symbol-search)
+  autocmd FileType sh nmap <buffer> ,s <plug>(lsp-document-symbol)
 augroup END
 
 def LspStartCustom()
