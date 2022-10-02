@@ -355,7 +355,9 @@ hi ColortemplateInfoFg guifg=#000000 guibg=#ffffea gui=NONE cterm=NONE
 hi ColortemplateInfoSp guifg=#000000 guibg=#ffffea gui=NONE cterm=NONE
 hi Comment guifg=#663311 guibg=#ffffea gui=italic cterm=italic
 hi Conceal guifg=#000000 guibg=#ffffea gui=NONE cterm=NONE
-hi Constant guifg=#000000 guibg=#ffffea gui=NONE cterm=NONE
+" Original Constant didn`t highlight
+" hi Constant guifg=#000000 guibg=#ffffea gui=NONE cterm=NONE
+hi Constant guifg=#770077 guibg=#ffffea gui=NONE cterm=NONE
 hi Cursor guifg=#000000 guibg=#ffffea gui=reverse cterm=reverse
 hi CursorColumn guifg=#000000 guibg=#eeeecc gui=NONE cterm=NONE
 hi CursorLine guifg=#000000 guibg=#eeeecc gui=NONE cterm=NONE
@@ -401,7 +403,7 @@ hi SpellBad guifg=#880000 guibg=#ffffea guisp=#ff0000 gui=undercurl cterm=underc
 hi SpellCap guifg=#005500 guibg=#ffffea guisp=#0000ff gui=undercurl cterm=undercurl
 hi SpellLocal guifg=#005500 guibg=#ffffea guisp=#008b8b gui=undercurl cterm=undercurl
 hi SpellRare guifg=#005500 guibg=#ffffea guisp=#ff00ff gui=undercurl cterm=undercurl
-" Original Statement didn`t highligth
+" Original Statement didn`t highlight
 " hi Statement guifg=#000000 guibg=#ffffea gui=NONE cterm=NONE
 hi Statement guifg=#004488 guibg=#ffffea gui=NONE cterm=NONE
 hi StatusLine guifg=#000000 guibg=#eaeaea gui=bold cterm=bold
