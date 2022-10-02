@@ -46,10 +46,8 @@ augroup MyColors
   }
 augroup end
 
-set background=dark
-# colorscheme molokai
-
-colorscheme jellybeans_optimized
+# colorscheme jellybeans_optimized
+colorscheme parchment_optimized
 
 
 # set linebreak
