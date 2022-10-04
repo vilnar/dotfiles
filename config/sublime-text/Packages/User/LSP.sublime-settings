@@ -16,14 +16,7 @@
         "language-server",
       ],
       "enabled": true,
-      "languageId": "php",
-      "scopes": [
-        "source.php",
-        "embedding.php"
-      ],
-      "syntaxes": [
-        "Packages/PHP/PHP.sublime-syntax"
-      ]
+      "selector": "source.php",
     }
   }
 }

@@ -39,7 +39,7 @@
     "editor.cursorBlinking": "solid",
     "editor.cursorWidth": 4,
     "editor.wordBasedSuggestionsMode": "currentDocument",
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": true,
     "editor.guides.highlightActiveIndentation": false,
 
     "editor.hover.enabled": true,
@@ -289,6 +289,5 @@
     "editor.scrollbar.horizontal": "visible",
     "editor.scrollbar.vertical": "visible",
     "editor.copyWithSyntaxHighlighting": false,
-    "workbench.colorTheme": "Alabaster Custom",
     "gitlens.plusFeatures.enabled": false,
 }

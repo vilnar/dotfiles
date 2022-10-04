@@ -24,9 +24,10 @@ endif
 
 augroup MyColors
   autocmd ColorScheme default {
-    # highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
-    # highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
+    highlight CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
+    highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
     highlight CurSearch gui=reverse cterm=reverse
+    highlight ExtraWhitespace guibg=#7E8E91
   }
   autocmd ColorScheme molokai {
     highlight CurSearch gui=reverse cterm=reverse
@@ -46,8 +47,8 @@ augroup MyColors
   }
 augroup end
 
-# colorscheme jellybeans_optimized
-colorscheme parchment_optimized
+colorscheme jellybeans_optimized
+# colorscheme parchment_optimized
 
 
 # set linebreak
