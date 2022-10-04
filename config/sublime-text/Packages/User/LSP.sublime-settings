@@ -16,7 +16,7 @@
         "language-server",
       ],
       "enabled": true,
-      "selector": "source.php",
+      "selector": "embedding.php | source.php",
     }
   }
 }
