@@ -42,6 +42,7 @@ Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf
 " git
 Plug 'tpope/vim-fugitive', { 'commit': 'b411b753f805b969cca856e2ae51fdbab49880df' }
 Plug 'AndrewRadev/linediff.vim', { 'commit': 'c627858c6dd280221df032bbe7f3899ec71e1aaa' }
+Plug 'idanarye/vim-merginal', { 'commit': 'e8740401cdec9199f4676c5a640a785ec094258b' }
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
 
