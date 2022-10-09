@@ -37,6 +37,7 @@ g:asyncrun_save = 2
 
 
 g:fugitive_dynamic_colors = 0
+g:merginal_splitType = ''
 
 # g:buffergator_viewport_split_policy = "n"
 # g:buffergator_sort_regime = "bufnum"

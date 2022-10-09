@@ -1,6 +1,6 @@
 [/]
-default='a1a61a29-d8ab-4f45-abe5-da3f527ccce1'
-list=['b58db4a4-6560-4f30-9b84-5e214968e781', '10464e01-b6fc-4c33-a20a-4cd5e80ba9c6', '9c7c1f0f-dab1-48c0-abc3-7c960eccdf97', 'a1a61a29-d8ab-4f45-abe5-da3f527ccce1', 'c7a4849e-c0da-4d43-a04e-44d1b1a0c0e0', '3c74b490-8725-4149-b360-9e1c263cdbd6']
+default='2cdaf2ca-f744-48a0-b349-7405e2689c2b'
+list=['b58db4a4-6560-4f30-9b84-5e214968e781', '10464e01-b6fc-4c33-a20a-4cd5e80ba9c6', '9c7c1f0f-dab1-48c0-abc3-7c960eccdf97', 'a1a61a29-d8ab-4f45-abe5-da3f527ccce1', 'c7a4849e-c0da-4d43-a04e-44d1b1a0c0e0', '3c74b490-8725-4149-b360-9e1c263cdbd6', 'f3a9cb9c-473c-47fa-828b-5ab5fdda43f3', '2cdaf2ca-f744-48a0-b349-7405e2689c2b']
 
 [:10464e01-b6fc-4c33-a20a-4cd5e80ba9c6]
 audible-bell=false
@@ -20,6 +20,29 @@ use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
 visible-name='gruvbox-light'
+
+[:2cdaf2ca-f744-48a0-b349-7405e2689c2b]
+audible-bell=false
+background-color='rgb(28,27,26)'
+bold-color-same-as-fg=true
+bold-is-bright=true
+cell-height-scale=1.0
+cell-width-scale=1.0
+cursor-background-color='rgb(176,208,240)'
+cursor-blink-mode='off'
+cursor-colors-set=true
+cursor-foreground-color='rgb(30,30,30)'
+default-size-columns=100
+foreground-color='rgb(248,246,242)'
+highlight-background-color='rgb(38,79,120)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(232,232,211)'
+palette=['rgb(65,65,65)', 'rgb(208,101,103)', 'rgb(147,185,126)', 'rgb(255,185,129)', 'rgb(100,134,153)', 'rgb(225,192,246)', 'rgb(0,152,142)', 'rgb(222,222,222)', 'rgb(189,189,189)', 'rgb(255,160,162)', 'rgb(184,187,38)', 'rgb(255,219,165)', 'rgb(171,217,243)', 'rgb(251,218,252)', 'rgb(0,179,168)', 'rgb(254,254,254)']
+text-blink-mode='never'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='badwolf'
 
 [:3c74b490-8725-4149-b360-9e1c263cdbd6]
 audible-bell=false
@@ -131,3 +154,26 @@ use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
 visible-name='parchment'
+
+[:f3a9cb9c-473c-47fa-828b-5ab5fdda43f3]
+audible-bell=false
+background-color='rgb(20,20,19)'
+bold-color-same-as-fg=true
+bold-is-bright=true
+cell-height-scale=1.0
+cell-width-scale=1.0
+cursor-background-color='rgb(176,208,240)'
+cursor-blink-mode='off'
+cursor-colors-set=true
+cursor-foreground-color='rgb(30,30,30)'
+default-size-columns=100
+foreground-color='rgb(248,246,242)'
+highlight-background-color='rgb(38,79,120)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(232,232,211)'
+palette=['rgb(65,65,65)', 'rgb(208,101,103)', 'rgb(147,185,126)', 'rgb(255,185,129)', 'rgb(100,134,153)', 'rgb(225,192,246)', 'rgb(0,152,142)', 'rgb(222,222,222)', 'rgb(189,189,189)', 'rgb(255,160,162)', 'rgb(184,187,38)', 'rgb(255,219,165)', 'rgb(171,217,243)', 'rgb(251,218,252)', 'rgb(0,179,168)', 'rgb(254,254,254)']
+text-blink-mode='never'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='goodwolf'

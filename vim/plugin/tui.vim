@@ -45,11 +45,31 @@ augroup MyColors
     highlight DbgCurrentStackPositionSign guifg=#ffffff guibg=#42a7cf
     highlight DbgCurrentStackPositionLine guifg=#ffffff guibg=#42a7cf
   }
+  autocmd ColorScheme badwolf {
+    highlight phpIdentifier guifg=#f8f6f2
+    highlight CurSearch guifg=#1c1b1a guibg=#ffa724
+    highlight CursorColumn guifg=NONE guibg=#3E3D32
+    highlight ExtraWhitespace guibg=#857f78
+
+    highlight DbgBreakptLine guifg=#ffffff guibg=#7aae29
+    highlight DbgBreakptSign guifg=#ffffff guibg=#7aae29
+    highlight DbgCurrentLine guifg=#ffffff guibg=#f5669c
+    highlight DbgCurrentSign guifg=#ffffff guibg=#f5669c
+    highlight DbgDisabledSign guifg=#ffffff guibg=#42a7cf
+    highlight DbgDisabledLine guifg=#ffffff guibg=#42a7cf
+    highlight DbgCurrentStackPositionSign guifg=#ffffff guibg=#42a7cf
+    highlight DbgCurrentStackPositionLine guifg=#ffffff guibg=#42a7cf
+  }
+  autocmd ColorScheme goodwolf {
+    highlight ExtraWhitespace guibg=#857f78
+  }
 augroup end
 
-colorscheme jellybeans_optimized
+# colorscheme jellybeans_optimized
 # colorscheme parchment_optimized
-
+colorscheme badwolf
+# colorscheme goodwolf
+# colorscheme molokai
 
 # set linebreak
 set showbreak=->

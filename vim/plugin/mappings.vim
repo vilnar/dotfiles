@@ -218,7 +218,6 @@ nnoremap <leader>nf :NERDTreeFind<cr>
 g:UltiSnipsExpandTrigger = "<tab>"
 # list all snippets for current filetype
 g:UltiSnipsListSnippets = "<c-d>"
-g:UltiSnipsExpandTrigger = "<tab>"
 g:UltiSnipsJumpForwardTrigger = "<c-b>"
 g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 

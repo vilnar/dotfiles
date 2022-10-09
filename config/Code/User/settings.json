@@ -139,18 +139,15 @@
                         "foreground": "#c695c6"
                     }
                 }
-            ],
+            ]
         }
     },
     "workbench.colorCustomizations": {
         "[Default Light+]": {
-            "editorGutter.background": "#eff3f5",
+            "editorGutter.background": "#eff3f5"
         },
         "[Default Dark+]": {
-            "diffEditor.removedTextBackground": "#480427",
-            "diffEditor.insertedTextBackground": "#7c7c0455",
-            "editorGutter.background": "#343739",
-            // "scrollbarSlider.background": "#5b5b5b",
+            "editorGutter.background": "#343739"
         }
     },
 
@@ -246,7 +243,7 @@
     "gitlens.blame.heatmap.enabled": false,
     "gitlens.currentLine.pullRequests.enabled": false,
     "gitlens.gitCommands.search.showResultsInSideBar": false,
-    "workbench.editor.untitled.labelFormat": "name",
+    "workbench.editor.untitled.labelFormat": "content",
     "files.hotExit": "onExitAndWindowClose",
     "trailing-spaces.logLevel": "none",
     "trailing-spaces.showStatusBarMessage": false,
@@ -290,4 +287,9 @@
     "editor.scrollbar.vertical": "visible",
     "editor.copyWithSyntaxHighlighting": false,
     "gitlens.plusFeatures.enabled": false,
+    "bookmarks.showCommandsInContextMenu": false,
+    "workbench.enableExperiments": false,
+    "json.schemaDownload.enable": false,
+    "extensions.autoCheckUpdates": false,
+    "npm.fetchOnlinePackageInfo": false
 }
