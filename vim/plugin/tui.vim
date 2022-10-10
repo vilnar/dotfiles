@@ -67,9 +67,9 @@ augroup end
 
 # colorscheme jellybeans_optimized
 # colorscheme parchment_optimized
-colorscheme badwolf
+# colorscheme badwolf
 # colorscheme goodwolf
-# colorscheme molokai
+colorscheme molokai
 
 # set linebreak
 set showbreak=->
