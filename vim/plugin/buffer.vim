@@ -1,14 +1,15 @@
 vim9script
 
+# The idea is taken here https://vi.stackexchange.com/questions/27104/efficient-way-of-cleaning-up-the-buffer-list
 def CloseOtherBuffers()
-  var curr_buff = bufnr("%")
-  var last_buff = bufnr("$")
-
-  if curr_buff > 1
-    execute ":1," .. (curr_buff - 1) .. "bd"
-  endif
-  if curr_buff < last_buff
-    execute ":" .. (curr_buff + 1) .. "," .. last_buff .. "bd"
+  var buffer_list = filter(getbufinfo(), (_, v) => v.bufnr != bufnr("%"))
+  if !empty(buffer_list)
+    var buffer_number = join(mapnew(buffer_list, (_, v) => v.bufnr))
+    execute 'bwipeout ' .. buffer_number
+    echomsg "delete buffers with number " .. buffer_number
+  else
+    echomsg "buffer list is empty"
   endif
 enddef
-command BufferCloseOthers CloseOtherBuffers()
+
+command BufferCloseOthers :call <SID>CloseOtherBuffers()
