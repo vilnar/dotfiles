@@ -40,7 +40,7 @@ Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf
 " Plug 'jlanzarotta/bufexplorer', { 'commit': 'e782dab0fe9523ac65d9fe4f726f2efe924e3f43' }
 
 " git
-Plug 'tpope/vim-fugitive', { 'commit': 'b411b753f805b969cca856e2ae51fdbab49880df' }
+Plug 'tpope/vim-fugitive', { 'commit': 'dd8107cabf5fe85df94d5eedcae52415e543f208' }
 Plug 'AndrewRadev/linediff.vim', { 'commit': 'c627858c6dd280221df032bbe7f3899ec71e1aaa' }
 Plug 'idanarye/vim-merginal', { 'commit': 'e8740401cdec9199f4676c5a640a785ec094258b' }
 
@@ -71,7 +71,7 @@ Plug 'sjl/badwolf', { 'commit': '682b5215be013237f39be14954e6979426724a33' }
 
 
 " LSP
-Plug 'prabirshrestha/vim-lsp', { 'commit': '8fdaf4f78c94c6abba06a907520a5de157c5803b' }
+Plug 'prabirshrestha/vim-lsp', { 'commit': '08f0583c0c9e6a331e6f111d6c2ede0bc87a3179' }
 
 " debugger
 " Plug 'vim-vdebug/vdebug', { 'commit': 'f979cc065e63796bdf60f014ae2280ce8e72cded' }

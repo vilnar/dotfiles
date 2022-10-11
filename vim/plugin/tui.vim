@@ -59,17 +59,22 @@ augroup MyColors
     highlight DbgDisabledLine guifg=#ffffff guibg=#42a7cf
     highlight DbgCurrentStackPositionSign guifg=#ffffff guibg=#42a7cf
     highlight DbgCurrentStackPositionLine guifg=#ffffff guibg=#42a7cf
+
+    hi SpellBad guifg=#e8e8d3 guibg=#902020 guisp=#ff0000 gui=underline cterm=underline
+    hi SpellCap guifg=#e8e8d3 guibg=#0000df guisp=#0000ff gui=underline cterm=underline
+    hi SpellLocal guifg=#e8e8d3 guibg=#2d7067 guisp=#00ffff gui=underline cterm=underline
+    hi SpellRare guifg=#e8e8d3 guibg=#540063 guisp=#ff00ff gui=underline cterm=underline
   }
   autocmd ColorScheme goodwolf {
     highlight ExtraWhitespace guibg=#857f78
   }
 augroup end
 
-# colorscheme jellybeans_optimized
+colorscheme jellybeans_optimized
 # colorscheme parchment_optimized
 # colorscheme badwolf
 # colorscheme goodwolf
-colorscheme molokai
+# colorscheme molokai
 
 # set linebreak
 set showbreak=->

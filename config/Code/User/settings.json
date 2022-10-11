@@ -163,7 +163,6 @@
     "workbench.tree.indent": 20,
     "workbench.list.defaultFindMode": "highlight",
     "explorer.compactFolders": false,
-    "workbench.editor.revealIfOpen": true,
     "partialDiff.commandsOnContextMenu": {
         "diffSelectionWithClipboard": false,
         "diffVisibleEditors": false,
@@ -202,7 +201,6 @@
     "gitlens.changes.locations": [
         "gutter"
     ],
-    "gitlens.heatmap.locations": [],
     "gitlens.heatmap.fadeLines": false,
     "gitlens.menus": {
         "editor": false,
@@ -291,5 +289,8 @@
     "workbench.enableExperiments": false,
     "json.schemaDownload.enable": false,
     "extensions.autoCheckUpdates": false,
-    "npm.fetchOnlinePackageInfo": false
+    "npm.fetchOnlinePackageInfo": false,
+    "workbench.editor.revealIfOpen": true,
+    "go.inlayHints.constantValues": false,
+    "go.inlayHints.parameterNames": false,
 }
