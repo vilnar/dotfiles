@@ -1,5 +1,0 @@
-// These settings override both User and Default settings for the Markdown syntax
-{
-  "word_wrap": true,
-  "trim_trailing_white_space_on_save": "none",
-}

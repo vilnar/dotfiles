@@ -1,6 +1,0 @@
-// These settings override both User and Default settings for the Plain text syntax
-{
-  "word_wrap": false,
-  "auto_complete": true,
-  "auto_complete_selector": "text.plain",
-}

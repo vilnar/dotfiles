@@ -1,6 +1,0 @@
-[
-   { "caption": "-" },
-   { "caption": "Split View Keep Postion", "command": "split_view_keep_postion" },
-   { "caption": "Duplicate", "command": "duplicate_view" },
-   { "caption": "-" }
-]

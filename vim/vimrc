@@ -74,7 +74,6 @@ Plug 'sjl/badwolf', { 'commit': '682b5215be013237f39be14954e6979426724a33' }
 Plug 'prabirshrestha/vim-lsp', { 'commit': '08f0583c0c9e6a331e6f111d6c2ede0bc87a3179' }
 
 " debugger
-" Plug 'vim-vdebug/vdebug', { 'commit': 'f979cc065e63796bdf60f014ae2280ce8e72cded' }
-" Plug 'puremourning/vimspector', { 'commit': '3378018bc1cdd1d9b70734c3e970bc52fd983415' }
+Plug 'vim-vdebug/vdebug', { 'commit': 'f979cc065e63796bdf60f014ae2280ce8e72cded' }
 
 call plug#end()

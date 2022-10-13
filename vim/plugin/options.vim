@@ -80,7 +80,3 @@ g:lsp_inlay_hints_enabled = 1
 #  'path_maps': {"remote_folder": "local_folder"}
 # }
 
-
-# DEBUGGER
-# g:vimspector_install_gadgets = ['vscode-go', 'vscode-php-debug']
-
