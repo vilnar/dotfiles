@@ -293,4 +293,7 @@
     "workbench.editor.revealIfOpen": true,
     "go.inlayHints.constantValues": false,
     "go.inlayHints.parameterNames": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
 }
