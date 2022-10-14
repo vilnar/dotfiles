@@ -31,10 +31,10 @@ enddef
 
 def ToggleWhiteList()
   if &listchars == "tab:> ,space:.,trail:*,precedes:<,extends:>,eol:$"
-    set listchars=precedes:«,extends:»
-    echomsg 'set short listchar'
+    set listchars=precedes:<,extends:>
+    echomsg 'set simple listchars'
   else
-    set listchars=tab:>\ ,space:.,trail:*,precedes:«,extends:»,eol:$
-    echomsg 'set default listchar'
+    set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
+    echomsg 'set extended listchars'
   endif
 enddef
