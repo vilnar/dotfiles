@@ -71,12 +71,7 @@ nnoremap <Leader>cc :bdelete %<CR>
 # nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
 # nnoremap <Leader>b :ls<CR>:b<SPACE>
 # nnoremap <silent> <leader>b :Buffers<CR>
-# nnoremap <silent> <leader>b :BuffergatorOpen<CR>
-# nnoremap [b :BuffergatorMruCyclePrev<CR>
-# nnoremap ]b :BuffergatorMruCycleNext<CR>
 nnoremap <silent> <leader>b :ToggleBufExplorer<CR>
-
-
 
 
 
