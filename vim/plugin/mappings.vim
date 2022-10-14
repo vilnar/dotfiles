@@ -1,13 +1,17 @@
 vim9script
 
-import "../lib/fzf.vim" as fzf
-import "../lib/grep.vim" as grep
-import "../lib/layout.vim" as layout
-import "../lib/quickfix.vim" as quickfix
-import "../lib/search_replace.vim" as search_replace
-import "../lib/mouse.vim" as mouse
-import "../lib/settings.vim" as settings
-import "../lib/langs.vim" as langs
+import "../lib/fzf.vim" as fzfLib
+import "../lib/grep.vim" as grepLib
+import "../lib/layout.vim" as layoutLib
+import "../lib/quickfix.vim" as quickfixLib
+import "../lib/search_replace.vim" as searchReplaceLib
+import "../lib/mouse.vim" as mouseLib
+import "../lib/settings.vim" as settingLib
+import "../lib/langs.vim" as langLib
+import "../lib/file.vim" as fileLib
+import "../lib/find_files.vim" as findFilesLib
+import "../lib/buffer.vim" as bufferLib
+import "../lib/whitespace.vim" as whitespaceLib
 
 # OS clipboard yank and paste
 noremap <Leader>y "+y
@@ -66,11 +70,11 @@ nnoremap <Leader>cc :bdelete %<CR>
 # buffers list
 # nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
 # nnoremap <Leader>b :ls<CR>:b<SPACE>
-nnoremap <silent> <leader>b :Buffers<CR>
+# nnoremap <silent> <leader>b :Buffers<CR>
 # nnoremap <silent> <leader>b :BuffergatorOpen<CR>
 # nnoremap [b :BuffergatorMruCyclePrev<CR>
 # nnoremap ]b :BuffergatorMruCycleNext<CR>
-# nnoremap <silent> <leader>b :ToggleBufExplorer<CR>
+nnoremap <silent> <leader>b :ToggleBufExplorer<CR>
 
 
 
@@ -79,7 +83,10 @@ nnoremap <silent> <leader>b :Buffers<CR>
 # FILE -----------------------------------------------------------------------------
 # Open current file with Encode
 # nnoremap <Leader>ee :edit ++enc= %<left><left>
-
+nnoremap \a :vim9cmd PathFileCopyAbsolute<CR>
+nnoremap \r :vim9cmd PathFileCopyRelative<CR>
+nnoremap \n :vim9cmd FileCopyNameAll<CR>
+nnoremap \q :vim9cmd BufferCloseOthers<CR>
 
 
 # FIND FILE -----------------------------------------------------------------------------
@@ -103,22 +110,22 @@ nnoremap <silent><nowait> <leader>i :Snippets<CR>
 nnoremap <silent><nowait> <leader>ff :MyFiles<CR>
 nnoremap <silent><nowait> <leader>fc :MyFiles <C-R>=expand("%:h")<CR>/<CR>
 nnoremap <expr> <leader>fu ':MyFiles<CR>' .. expand('<cword>')
-xnoremap <leader>ff y:vim9cmd <SID>fzf.GotoSelection()<CR>
+xnoremap <leader>ff y:vim9cmd <SID>fzfLib.GotoSelection()<CR>
 nnoremap <leader>mm :Marks<CR>
 
 
 
 # GREP -----------------------------------------------------------------------------
 noremap <Leader>gg :GrepInProjectEscape<space>
-vnoremap <Leader>gg y:vim9cmd <SID>grep.GrepInProject(getreg('"'))<CR>
+vnoremap <Leader>gg y:vim9cmd <SID>grepLib.GrepInProject(getreg('"'))<CR>
 
 nnoremap <Leader>gd :GrepInDirectoryEscape<space>
-vnoremap <Leader>gd y:vim9cmd <SID>grep.GrepInDirectory(getreg('"'))<CR>
+vnoremap <Leader>gd y:vim9cmd <SID>grepLib.GrepInDirectory(getreg('"'))<CR>
 
 nnoremap <Leader>gb :GrepInBufferEscape<space>
-vnoremap <Leader>gb y:vim9cmd <SID>grep.GrepInBuffer(getreg('"'))<CR>
+vnoremap <Leader>gb y:vim9cmd <SID>grepLib.GrepInBuffer(getreg('"'))<CR>
 
-nnoremap <Leader>gi :vim9cmd <SID>grep.GrepInProjectInput()<CR>
+nnoremap <Leader>gi :vim9cmd <SID>grepLib.GrepInProjectInput()<CR>
 
 # grep for regex (-P is enable PATTERNS are Perl regular expressions)
 # nnoremap <Leader>gr :Dispatch grep -nroHP '' ./<left><left><left><left>
@@ -137,7 +144,7 @@ inoremap <C-\> <C-^>
 
 # LAYOUT -----------------------------------------------------------------------------
 # move selected to new tab
-xnoremap <leader>ms y:vim9cmd <SID>layout.OpenNewTabWithSelectedText()<CR>
+xnoremap <leader>ms y:vim9cmd <SID>layoutLib.OpenNewTabWithSelectedText()<CR>
 # open buffer in new tab
 nnoremap <Leader>mt :tab split<CR>
 
@@ -153,43 +160,43 @@ nnoremap <Leader>6 6<C-w>w
 
 
 # QUICKFIX -----------------------------------------------------------------------------
-nnoremap <silent> <leader>\ :vim9cmd <SID>quickfix.QuickFixToggle()<CR>
+nnoremap <silent> <leader>\ :vim9cmd <SID>quickfixLib.QuickFixToggle()<CR>
 
 
 
 # SEARCH AND REPLACE -----------------------------------------------------------------------------
-vnoremap * y:vim9cmd <SID>search_replace.EscapeSearchTextMultiLines(getreg('"'), '\n')<CR>
+vnoremap * y:vim9cmd <SID>searchReplaceLib.EscapeSearchTextMultiLines(getreg('"'), '\n')<CR>
 nnoremap <Leader>sm :SearchMultiLine<space>
 nnoremap <Leader>se :SearchEscape<space>
-vnoremap <Leader>se y:vim9cmd <SID>search_replace.EscapeSearchText(getreg('"'))<CR>
+vnoremap <Leader>se y:vim9cmd <SID>searchReplaceLib.EscapeSearchText(getreg('"'))<CR>
 
 vnoremap <Leader>ss y/<C-R>"
 
-nnoremap <Leader>rr :vim9cmd <SID>search_replace.ReplaceInput()<CR>
-vnoremap <Leader>rr y:vim9cmd <SID>search_replace.ReplaceSelectedInput()<CR>
+nnoremap <Leader>rr :vim9cmd <SID>searchReplaceLib.ReplaceInput()<CR>
+vnoremap <Leader>rr y:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput()<CR>
 vnoremap <Leader>rb <Esc>:'<,'>s///gc<left><left><left><left>
 nnoremap <Leader>rg :%s///gc<left><left><left><left>
 
-nnoremap <Leader>ru viwy:vim9cmd <SID>search_replace.ReplaceSelectedInput(true)<CR>
-vnoremap <Leader>rw y:vim9cmd <SID>search_replace.ReplaceSelectedInput(true)<CR>
+nnoremap <Leader>ru viwy:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput(true)<CR>
+vnoremap <Leader>rw y:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput(true)<CR>
 
 vnoremap <Leader>rv <Esc>:'<,'>s/\<\>\C//gc<left><left><left><left><left><left><left><left>
 
 
 
 # F keys -----------------------------------------------------------------------------
-nnoremap <F3> :vim9cmd <SID>mouse.MouseToggle()<CR>
-inoremap <F3> <ESC>:vim9cmd <SID>mouse.MouseToggle()<CR>
-cnoremap <F3> <ESC>:vim9cmd <SID>mouse.MouseToggle()<CR>
-nnoremap <F5> :vim9cmd <SID>settings.ReloadConfigs()<CR>
-nnoremap <F6> :vim9cmd <SID>langs.RunSpellUkToggle()<CR>
+nnoremap <F3> :vim9cmd <SID>mouseLib.MouseToggle()<CR>
+inoremap <F3> <ESC>:vim9cmd <SID>mouseLib.MouseToggle()<CR>
+cnoremap <F3> <ESC>:vim9cmd <SID>mouseLib.MouseToggle()<CR>
+nnoremap <F5> :vim9cmd <SID>settingLib.ReloadConfigs()<CR>
+nnoremap <F6> :vim9cmd <SID>langLib.RunSpellUkToggle()<CR>
 noremap <F7> :tabnew<CR>
 noremap <F8> :set wrap!<CR>
 
 # show whitespace
-nnoremap <F9> :set list!<CR>
-inoremap <F9> <ESC>:set list!<CR>
-cnoremap <F9> <ESC>:set list!<CR>
+nnoremap <F9> :vim9cmd <SID>whitespaceLib.ToggleWhiteList()<CR>
+inoremap <F9> <ESC>:vim9cmd <SID>whitespaceLib.ToggleWhiteList()<CR>
+cnoremap <F9> <ESC>:vim9cmd <SID>whitespaceLib.ToggleWhiteList()<CR>
 
 # clear whitespace in block
 vnoremap <F10> <Esc>:'<,'>WhiteSpaceTrailClear<CR>
@@ -239,14 +246,6 @@ augroup LspGo
   autocmd User lsp_setup call lsp#register_server(gopls_settings)
   autocmd FileType go setlocal omnifunc=lsp#complete
   autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
-  autocmd FileType go nmap <buffer> ,r <plug>(lsp-references)
-  autocmd FileType go nmap <buffer> ,i <plug>(lsp-implementation)
-  autocmd FileType go nmap <buffer> ,t <plug>(lsp-type-definition)
-  autocmd FileType go nmap <buffer> ,h <plug>(lsp-hover)
-  autocmd FileType go nmap <buffer> ,d <plug>(lsp-document-diagnostics)
-  autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
-  autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
-  autocmd FileType go nmap <buffer> ,s <plug>(lsp-document-symbol)
 augroup END
 
 augroup LspPhp
@@ -257,15 +256,7 @@ augroup LspPhp
   }
   autocmd User lsp_setup call lsp#register_server(phpactor_settings)
   autocmd FileType php setlocal omnifunc=lsp#complete
-  autocmd FileType php nmap <buffer> gd <plug>(lsp-definition)
-  autocmd FileType php nmap <buffer> ,r <plug>(lsp-references)
-  autocmd FileType php nmap <buffer> ,i <plug>(lsp-implementation)
-  autocmd FileType php nmap <buffer> ,t <plug>(lsp-type-definition)
-  autocmd FileType php nmap <buffer> ,h <plug>(lsp-hover)
-  autocmd FileType php nmap <buffer> ,d <plug>(lsp-document-diagnostics)
-  autocmd FileType php nmap <buffer> ,n <plug>(lsp-next-error)
-  autocmd FileType php nmap <buffer> ,p <plug>(lsp-previous-error)
-  autocmd FileType php nmap <buffer> ,s <plug>(lsp-document-symbol)
+  autocmd FileType php nnoremap <buffer> gd <plug>(lsp-definition)
 augroup END
 
 augroup LspSh
@@ -279,16 +270,16 @@ augroup LspSh
   }
   autocmd User lsp_setup call lsp#register_server(sh_settings)
   autocmd FileType sh setlocal omnifunc=lsp#complete
-  autocmd FileType sh nmap <buffer> gd <plug>(lsp-definition)
-  autocmd FileType sh nmap <buffer> ,r <plug>(lsp-references)
-  autocmd FileType sh nmap <buffer> ,i <plug>(lsp-implementation)
-  autocmd FileType sh nmap <buffer> ,t <plug>(lsp-type-definition)
-  autocmd FileType sh nmap <buffer> ,h <plug>(lsp-hover)
-  autocmd FileType sh nmap <buffer> ,d <plug>(lsp-document-diagnostics)
-  autocmd FileType sh nmap <buffer> ,n <plug>(lsp-next-error)
-  autocmd FileType sh nmap <buffer> ,p <plug>(lsp-previous-error)
-  autocmd FileType sh nmap <buffer> ,s <plug>(lsp-document-symbol)
+  autocmd FileType sh nnoremap <buffer> gd <plug>(lsp-definition)
 augroup END
+nnoremap ,r <plug>(lsp-references)
+nnoremap ,i <plug>(lsp-implementation)
+nnoremap ,t <plug>(lsp-type-definition)
+nnoremap ,h <plug>(lsp-hover)
+nnoremap ,d <plug>(lsp-document-diagnostics)
+nnoremap ,n <plug>(lsp-next-error)
+nnoremap ,p <plug>(lsp-previous-error)
+nnoremap ,s <plug>(lsp-document-symbol)
 
 def LspStartCustom()
   call lsp#enable()
@@ -316,19 +307,19 @@ nnoremap <silent> ,3 :call <SID>LspRestartCustom()<CR>
 
 
 # DEBUGGER
-# g:vdebug_keymap = {
-#   "run": "<Leader><F5>",
-#   "run_to_cursor": "<Leader><F9>",
-#   "step_over": "<Leader><F2>",
-#   "step_into": "<Leader><F3>",
-#   "step_out": "<Leader><F4>",
-#   "close": "<Leader><F6>",
-#   "detach": "<Leader><F7>",
-#   "set_breakpoint": "<Leader><F10>",
-#   "get_context": "<Leader><F11>",
-#   "eval_under_cursor": "<Leader><F12>",
-#   "eval_visual": "<Leader>e",
-# }
+g:vdebug_keymap = {
+  "run": "<Leader><F5>",
+  "run_to_cursor": "<Leader><F9>",
+  "step_over": "<Leader><F2>",
+  "step_into": "<Leader><F3>",
+  "step_out": "<Leader><F4>",
+  "close": "<Leader><F6>",
+  "detach": "<Leader><F7>",
+  "set_breakpoint": "<Leader><F10>",
+  "get_context": "<Leader><F11>",
+  "eval_under_cursor": "<Leader><F12>",
+  "eval_visual": "<Leader>e",
+}
 
 # nnoremap <Leader><F2> <Plug>VimspectorStepOver
 # nnoremap <Leader><F3> <Plug>VimspectorStepInto

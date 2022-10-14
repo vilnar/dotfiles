@@ -17,6 +17,9 @@ set number
 set cursorline
 set cursorlineopt=number
 
+set listchars=precedes:«,extends:»
+set list
+
 
 if (has("termguicolors"))
   set termguicolors

@@ -36,8 +36,7 @@ Plug 'tpope/vim-surround', { 'commit': 'bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea
 " It works starting with patch 9.0.0506
 Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf5' }
 
-" Plug 'jeetsukumaran/vim-buffergator', { 'commit': '0514af606a3b41bbe82c33875179b53300a3cb86' }
-" Plug 'jlanzarotta/bufexplorer', { 'commit': 'e782dab0fe9523ac65d9fe4f726f2efe924e3f43' }
+Plug 'jlanzarotta/bufexplorer', { 'commit': 'e782dab0fe9523ac65d9fe4f726f2efe924e3f43' }
 
 " git
 Plug 'tpope/vim-fugitive', { 'commit': 'dd8107cabf5fe85df94d5eedcae52415e543f208' }

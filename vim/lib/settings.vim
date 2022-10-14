@@ -9,7 +9,6 @@ if !exists("g:ReloadConfigs")
     endif
     execute 'source ~/.vim/vimrc'
     execute 'source ~/.vim/lib/custom.vim'
-    execute 'source ~/.vim/plugin/file.vim'
     execute 'source ~/.vim/plugin/macros.vim'
     execute 'source ~/.vim/plugin/options.vim'
     execute 'source ~/.vim/plugin/test.vim'

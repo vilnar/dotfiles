@@ -27,3 +27,14 @@ def ToggleWhitespaceMatch(mode: string)
     w:whitespace_match_number = matchadd('ExtraWhitespace', pattern)
   endif
 enddef
+
+
+def ToggleWhiteList()
+  if &listchars == "tab:> ,space:.,trail:*,precedes:<,extends:>,eol:$"
+    set listchars=precedes:«,extends:»
+    echomsg 'set short listchar'
+  else
+    set listchars=tab:>\ ,space:.,trail:*,precedes:«,extends:»,eol:$
+    echomsg 'set default listchar'
+  endif
+enddef
