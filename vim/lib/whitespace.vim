@@ -29,9 +29,9 @@ def ToggleWhitespaceMatch(mode: string)
 enddef
 
 
-def ToggleWhiteList()
+def ToggleListChars()
   if &listchars == "tab:> ,space:.,trail:*,precedes:<,extends:>,eol:$"
-    set listchars=precedes:<,extends:>
+    set listchars=tab:\ \ ,precedes:<,extends:>
     echomsg 'set simple listchars'
   else
     set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$

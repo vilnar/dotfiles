@@ -6,7 +6,7 @@ set ruler
 set mouse=
 
 " set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
-set listchars=precedes:<,extends:>
+set listchars=tab:\ \ ,precedes:<,extends:>
 set list
 
 set encoding=utf-8

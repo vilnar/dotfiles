@@ -189,9 +189,9 @@ noremap <F7> :tabnew<CR>
 noremap <F8> :set wrap!<CR>
 
 # show whitespace
-nnoremap <F9> :vim9cmd <SID>whitespaceLib.ToggleWhiteList()<CR>
-inoremap <F9> <ESC>:vim9cmd <SID>whitespaceLib.ToggleWhiteList()<CR>
-cnoremap <F9> <ESC>:vim9cmd <SID>whitespaceLib.ToggleWhiteList()<CR>
+nnoremap <F9> :vim9cmd <SID>whitespaceLib.ToggleListChars()<CR>
+inoremap <F9> <ESC>:vim9cmd <SID>whitespaceLib.ToggleListChars()<CR>
+cnoremap <F9> <ESC>:vim9cmd <SID>whitespaceLib.ToggleListChars()<CR>
 
 # clear whitespace in block
 vnoremap <F10> <Esc>:'<,'>WhiteSpaceTrailClear<CR>
