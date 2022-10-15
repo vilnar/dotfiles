@@ -1380,6 +1380,15 @@ if s:t_Co >= 256
   finish
 endif
 
+highlight DbgBreakptLine guifg=#ffffff guibg=#7aae29
+highlight DbgBreakptSign guifg=#ffffff guibg=#7aae29
+highlight DbgCurrentLine guifg=#ffffff guibg=#f5669c
+highlight DbgCurrentSign guifg=#ffffff guibg=#f5669c
+highlight DbgDisabledSign guifg=#ffffff guibg=#42a7cf
+highlight DbgDisabledLine guifg=#ffffff guibg=#42a7cf
+highlight DbgCurrentStackPositionSign guifg=#ffffff guibg=#42a7cf
+highlight DbgCurrentStackPositionLine guifg=#ffffff guibg=#42a7cf
+
 " Background: dark
 " Color: baldFossa #fad07a ~
 " Color: baldMacaw #0000ff ~

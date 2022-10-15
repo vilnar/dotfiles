@@ -9,17 +9,6 @@ augroup AutoSettingsFileType
   }
 augroup END
 
-# augroup KeepScreenPosition
-#   autocmd BufWinLeave * {
-#     b:winviewCustom = winsaveview()
-#   }
-#   autocmd BufWinEnter * {
-#     if exists('b:winviewCustom')
-#       winrestview(b:winviewCustom)
-#       unlet b:winviewCustom
-#     endif
-#   }
-# augroup END
 
 augroup FugitiveCustom
   autocmd FileType fugitive setlocal bufhidden=
