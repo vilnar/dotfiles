@@ -73,3 +73,18 @@ install_gtk:
 clean_gtk:
 	rm -Rf ~/.config/gtk-3.0/gtk.css
 	rm -Rf ~/.config/gtk-3.0/settings.css
+
+install_codium: clear_codium
+	@echo Place codium config files
+	ln -sf `pwd`/config/VSCodium/User/settings.json   ~/.config/VSCodium/User/settings.json
+	ln -sf `pwd`/config/VSCodium/User/keybindings.json   ~/.config/VSCodium/User/keybindings.json
+
+export_codium_extensions:
+	codium --list-extensions > `pwd`/config/VSCodium/User/list-extensions.txt
+
+import_codium_extensions:
+	cat `pwd`/config/VSCodium/User/list-extensions.txt| xargs -L 1 echo codium --install-extension
+
+clear_codium:
+	rm ~/.config/VSCodium/User/settings.json
+	rm ~/.config/VSCodium/User/keybindings.json
