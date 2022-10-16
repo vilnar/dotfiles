@@ -1389,6 +1389,8 @@ highlight DbgDisabledLine guifg=#ffffff guibg=#42a7cf
 highlight DbgCurrentStackPositionSign guifg=#ffffff guibg=#42a7cf
 highlight DbgCurrentStackPositionLine guifg=#ffffff guibg=#42a7cf
 
+highlight LspErrorHighlight guibg=#c7c7c7
+
 " Background: dark
 " Color: baldFossa #fad07a ~
 " Color: baldMacaw #0000ff ~

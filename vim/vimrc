@@ -70,7 +70,7 @@ Plug 'lifepillar/vim-colortemplate', { 'commit': 'ee6043299eef3d346182c30ef1b99f
 
 " LSP
 Plug 'prabirshrestha/asyncomplete.vim', { 'commit': '9c7651894c2c6d656c0dc71e87cfabbbb71b9c78' }
-Plug 'prabirshrestha/vim-lsp', { 'commit': '08f0583c0c9e6a331e6f111d6c2ede0bc87a3179' }
+Plug 'prabirshrestha/vim-lsp', { 'commit': '1dced335b0dff1bd50aaa2192317b645bc54aca7' }
 Plug 'prabirshrestha/asyncomplete-lsp.vim', { 'commit': 'f6d6a6354ff279ba707c20292aef0dfaadc436a3' }
 
 " debugger
