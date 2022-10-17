@@ -1,0 +1,6 @@
+// SublimeLinter Settings - User
+{
+  "lint_mode": "manual",
+  "show_marks_in_minimap": false,
+  "show_panel_on_save": "view",
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "caption": "Status",
+    "command": "git",
+    "args": {"argv": ["status"]}
+  },
+  {
+    "caption": "Previous branch Checkout",
+    "command": "git",
+    "args": {"argv": ["checkout", "-"]}
+  },
+  {
+    "caption": "Branches Sort",
+    "command": "git",
+    "args": {"argv": ["branch", "--sort=-committerdate"]}
+  },
+  {
+    "caption": "Submodules Update",
+    "command": "git",
+    "args": {"argv": ["submodule", "update", "--recursive"]}
+  },
+  {
+    "caption": "Tags Sort",
+    "command": "git",
+    "args": {"argv": ["tag", "-l", "--sort=-v:refname"]}
+  },
+  {
+    "caption": "Push with Tags",
+    "command": "git",
+    "args": {"argv": ["push", "--tags"]}
+  },
+  {
+      "caption": "Change Theme: Default",
+      "command": "set_preference",
+      "args": { "setting": "theme", "value": "Merge.sublime-theme" },
+  },
+  {
+      "caption": "Change Theme: Merge Dark",
+      "command": "set_preference",
+      "args": { "setting": "theme", "value": "Merge Dark.sublime-theme" },
+  },
+]

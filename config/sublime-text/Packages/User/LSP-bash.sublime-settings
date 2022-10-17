@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "env": {
+    // https://github.com/koalaman/shellcheck
+    "SHELLCHECK_PATH": "/usr/bin/shellcheck",
+  },
+}

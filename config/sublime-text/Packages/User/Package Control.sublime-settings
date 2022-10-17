@@ -1,0 +1,28 @@
+{
+  "installed_packages":
+  [
+    "Alabaster Color Scheme",
+    "Awk",
+    "Case Conversion",
+    "Dockerfile Syntax Highlighting",
+    "Fmt",
+    "GraphQL",
+    "LSP",
+    "LSP-bash",
+    "LSP-gopls",
+    "LSP-json",
+    "Package Control",
+    "Protobuf Syntax Hightlighting",
+    "Repeat Macro",
+    "SideBarTools",
+    "Terminal",
+    "TOML",
+    "View Bookmarks",
+  ],
+  "auto_upgrade": false,
+  "submit_usage": false,
+  "in_process_packages":
+  [
+  ],
+  "bootstrapped": true,
+}

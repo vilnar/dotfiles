@@ -1,0 +1,22 @@
+// Documentation at https://www.sublimetext.com/docs/themes.html
+{
+  "variables":
+  {
+    "font_face": "Ubuntu Regular",
+    "font_size_sm": 15,
+    "font_size": 15,
+    "font_size_lg": 17,
+    "font_size_title": 17,
+  },
+  "rules":
+  [
+    {
+      "class": "tabset_control",
+      "tab_height": 42,
+    },
+    {
+      "class": "status_bar",
+      "content_margin": [5, 5, 5, 5],
+    },
+  ]
+}

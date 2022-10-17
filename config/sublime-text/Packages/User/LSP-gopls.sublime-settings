@@ -1,0 +1,11 @@
+// Settings in here override those in "LSP-gopls/LSP-gopls.sublime-settings"
+
+{
+  "settings": {
+    "gopls.staticcheck": false,
+    "gopls.hoverKind": "FullDocumentation",
+    "gopls.linksInHover": false,
+    "gopls.linkTarget": "",
+  },
+  "enabled": true,
+}

@@ -1,0 +1,17 @@
+[
+  { "caption": "Project: Quick Switch", "command": "prompt_select_workspace" },
+  { "caption": "Markdown View To HTML", "command": "markdown_view_html" },
+  { "caption": "Json Format", "command": "json_format" },
+  { "caption": "Json Minify", "command": "json_format", "args": {"is_minify": true} },
+  { "caption": "Find Files By Part Path", "command": "find_files_by_part_path" },
+  { "caption": "File Delete", "command": "file_delete" },
+  { "caption": "Open File In Window", "command": "open_file_in_new_window" },
+  { "caption": "Open File In Vim", "command": "open_file_in_vim" },
+  { "caption": "Split To Another Layout", "command": "split_to_another_layout" },
+  { "caption": "Selected To New Tab", "command": "open_new_tab_with_selected_text" },
+  { "caption": "Bookmarks Print", "command": "print_bookmarks" },
+  { "caption": "Color Scheme Toggle Day/Night", "command": "color_scheme_toggle" },
+  { "caption": "File Clear", "command": "clear_file" },
+  { "caption": "File History", "command": "custom_file_history" },
+  { "caption": "Project: Restart", "command": "project_restart" },
+]
