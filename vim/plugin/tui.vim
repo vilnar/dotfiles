@@ -11,6 +11,7 @@ set hidden
 set mouse=a
 
 set number
+# set number relativenumber
 # set cursorcolumn
 # set signcolumn=number
 # set numberwidth=6
@@ -27,6 +28,19 @@ augroup MyColors
     highlight CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
     highlight CurSearch gui=reverse cterm=reverse
     highlight ExtraWhitespace guibg=#7E8E91
+  }
+  autocmd ColorScheme jellybeans_optimized {
+    hi DbgBreakptLine guifg=#ffffff guibg=#93B97E
+    hi DbgBreakptSign guifg=#ffffff guibg=#93B97E
+    hi DbgCurrentLine guifg=#ffffff guibg=#D06567
+    hi DbgCurrentSign guifg=#ffffff guibg=#D06567
+    hi DbgDisabledSign guifg=#ffffff guibg=#648699
+    hi DbgDisabledLine guifg=#ffffff guibg=#648699
+    hi DbgCurrentStackPositionSign guifg=#ffffff guibg=#648699
+    hi DbgCurrentStackPositionLine guifg=#ffffff guibg=#648699
+
+    hi LspErrorHighlight guifg=#ffffff guibg=#902020
+    hi LspWarningHighlight guifg=#000000 guibg=#c7c7c7
   }
 augroup end
 

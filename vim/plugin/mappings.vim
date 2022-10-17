@@ -141,7 +141,7 @@ inoremap <C-\> <C-^>
 # move selected to new tab
 xnoremap <leader>ms y:vim9cmd <SID>layoutLib.OpenNewTabWithSelectedText()<CR>
 # open buffer in new tab
-nnoremap <Leader>mt :tab split<CR>
+nnoremap <Leader>mt :tab split<BAR>diffoff<CR>
 
 # nnoremap <Leader>w <C-w>w
 nnoremap <Leader>w <C-w>p
