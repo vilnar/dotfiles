@@ -180,5 +180,9 @@
     {
         "key": "ctrl+,",
         "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "alt+f",
+        "command": "filesExplorer.findInFolder",
     }
 ]

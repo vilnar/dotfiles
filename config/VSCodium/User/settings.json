@@ -310,4 +310,18 @@
         "**/CVS": true,
         "**/Thumbs.db": true
     },
+    "trailing-spaces.backgroundColor": "rgba(136,136,136,0.3)",
+    "trailing-spaces.borderColor": "rgba(67,67,67,0.15)",
+    "git.checkoutType": [
+        "local",
+        "tags"
+    ],
+    "git.confirmEmptyCommits": false,
+    "git.confirmForcePush": false,
+    "git.showActionButton": {
+        "publish": false,
+        "sync": false
+    },
+    "git.showPushSuccessNotification": true,
+    "git.untrackedChanges": "separate",
 }

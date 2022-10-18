@@ -73,6 +73,8 @@ nnoremap <Leader>cc :bdelete %<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> \b :ToggleBufExplorer<CR>
 
+nnoremap ]b <Plug>(buf-surf-forward)
+nnoremap [b <Plug>(buf-surf-back)
 
 
 # FILE -----------------------------------------------------------------------------
