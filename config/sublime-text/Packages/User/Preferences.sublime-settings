@@ -73,8 +73,8 @@
   // "font_face": "Jetbrains Mono NL Light",
   "font_face": "Jetbrains Mono NL",
   "font_size": 13.5,
-  "line_padding_bottom": 2,
-  "line_padding_top": 2,
+  "line_padding_bottom": 1,
+  "line_padding_top": 1,
   "font_options":
   [
     "no_liga",
@@ -99,8 +99,8 @@
   "auto_pair_single_quotes": false,
   "auto_pair_selected": true,
   "remember_workspace": false,
-  "hot_exit": "always",
-  // "hot_exit": "only_on_quit",
+  // "hot_exit": "always",
+  "hot_exit": "only_on_quit",
   "close_deleted_files": true,
   "close_windows_when_empty": false,
 
