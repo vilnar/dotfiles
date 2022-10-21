@@ -152,7 +152,7 @@
     "search.searchOnType": false,
     "phpactor.path": "/usr/local/bin/phpactor",
     "bashIde.highlightParsingErrors": false,
-    "files.autoSave": "afterDelay",
+    "files.autoSave": "onWindowChange",
     "editor.autoClosingBrackets": "never",
     "bookmarks.sideBar.expanded": true,
     "workbench.editor.highlightModifiedTabs": true,
