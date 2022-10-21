@@ -93,17 +93,17 @@ install_sublime_merge: clear_sublime_merge
 clear_sublime_merge:
 	rm -Rf ~/.config/sublime-merge/Packages/User
 
-install_codium: clear_codium
-	@echo Place codium config files
-	ln -sf `pwd`/config/VSCodium/User/settings.json   ~/.config/VSCodium/User/settings.json
-	ln -sf `pwd`/config/VSCodium/User/keybindings.json   ~/.config/VSCodium/User/keybindings.json
+install_vscode: clear_vscode
+	@echo Place vscode config files
+	ln -sf `pwd`/config/Code/User/settings.json   ~/.config/Code/User/settings.json
+	ln -sf `pwd`/config/Code/User/keybindings.json   ~/.config/Code/User/keybindings.json
 
-export_codium_extensions:
-	codium --list-extensions > `pwd`/config/VSCodium/User/list-extensions.txt
+export_vscode_extensions:
+	code --list-extensions > `pwd`/config/Code/User/list-extensions.txt
 
-import_codium_extensions:
-	cat `pwd`/config/VSCodium/User/list-extensions.txt| xargs -L 1 echo codium --install-extension
+import_vscode_extensions:
+	cat `pwd`/config/Code/User/list-extensions.txt| xargs -L 1 echo code --install-extension
 
-clear_codium:
-	rm ~/.config/VSCodium/User/settings.json
-	rm ~/.config/VSCodium/User/keybindings.json
+clear_vscode:
+	rm ~/.config/Code/User/settings.json
+	rm ~/.config/Code/User/keybindings.json

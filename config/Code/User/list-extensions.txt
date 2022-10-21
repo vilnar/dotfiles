@@ -3,7 +3,7 @@ alefragnani.read-only-indicator
 bradymholt.pgformatter
 dantleech.vscode-phpactor
 eamodio.gitlens
-felixfbecker.php-debug
+esbenp.prettier-vscode
 geddski.macros
 golang.go
 gurumukhi.selected-lines-count
@@ -21,4 +21,5 @@ timonwong.shellcheck
 twxs.cmake
 undefined_publisher.user-commands
 xaver.clang-format
+xdebug.php-debug
 zxh404.vscode-proto3
