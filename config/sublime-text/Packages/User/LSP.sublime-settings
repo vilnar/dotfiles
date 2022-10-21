@@ -17,6 +17,6 @@
       ],
       "enabled": true,
       "selector": "embedding.php | source.php",
-    }
-  }
+    },
+  },
 }

@@ -42,7 +42,7 @@ g:merginal_splitType = ''
 
 # :help bufexplorer
 g:bufExplorerShowNoName = 1
-g:bufExplorerSortBy = "number"
+g:bufExplorerSortBy = "mru"
 g:bufExplorerShowRelativePath = 1
 g:bufExplorerDisableDefaultKeyMapping = 1
 g:bufExplorerShowTabBuffer = 0
