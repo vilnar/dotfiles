@@ -48,8 +48,8 @@ Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424
 Plug 'SirVer/ultisnips', { 'commit': '1edcb40ce749c47d5da42ab02dcdf21f9279bfbb' }
 Plug 'jparise/vim-graphql', { 'commit': '4bf5d33bda83117537aa3c117dee5b9b14fc9333' }
 Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f34bf6' }
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': '9d041aa58246fbcaf15ae60224ec8121b86f51cd' }
-Plug 'junegunn/fzf.vim', { 'commit': 'c491d702b76c6b4918abb80be3cfb57d1b618ffa' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': '04d0b0223fd69984a07a641d0e228c0e9e534825' }
+Plug 'junegunn/fzf.vim', { 'commit': '9ceac718026fd39498d95ff04fa04d3e40c465d7' }
 Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2' }
 
 

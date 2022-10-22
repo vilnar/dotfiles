@@ -34,7 +34,7 @@
 
     "editor.autoClosingDelete": "never",
     "editor.formatOnSaveMode": "modificationsIfAvailable",
-    "editor.cursorBlinking": "solid",
+    "editor.cursorBlinking": "smooth",
     "editor.cursorWidth": 4,
     "editor.occurrencesHighlight": true,
     "editor.guides.highlightActiveIndentation": false,
