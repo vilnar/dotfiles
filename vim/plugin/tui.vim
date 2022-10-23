@@ -45,9 +45,23 @@ augroup MyColors
     hi LspErrorHighlight guifg=#ffffff guibg=#902020
     hi LspWarningHighlight guifg=#000000 guibg=#c7c7c7
   }
+  autocmd ColorScheme gruvbox {
+    highlight ExtraWhitespace guibg=#928374
+  }
 augroup end
 
-colorscheme jellybeans_optimized
+# colorscheme jellybeans_optimized
+
+g:gruvbox_invert_selection = 0
+g:gruvbox_italic = 0
+g:gruvbox_underline = 1
+g:gruvbox_contrast_light = "hard"
+g:gruvbox_contrast_dark = "soft"
+g:gruvbox_guisp_fallback = "bg" # fix spell colors
+g:gruvbox_vert_split = "bg1"
+g:gruvbox_hls_highlight = "purple"
+set background=dark
+colorscheme gruvbox
 
 # set linebreak
 set showbreak=->

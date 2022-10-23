@@ -324,4 +324,8 @@
     },
     "git.showPushSuccessNotification": true,
     "git.untrackedChanges": "separate",
+    "phpactor.config": {
+        "language_server.diagnostics_on_update": false,
+        "language_server.diagnostics_on_save": true
+    },
 }
