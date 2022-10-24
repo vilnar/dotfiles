@@ -34,7 +34,7 @@
 
     "editor.autoClosingDelete": "never",
     "editor.formatOnSaveMode": "modificationsIfAvailable",
-    "editor.cursorBlinking": "smooth",
+    "editor.cursorBlinking": "solid",
     "editor.cursorWidth": 4,
     "editor.occurrencesHighlight": true,
     "editor.guides.highlightActiveIndentation": false,
@@ -144,13 +144,15 @@
             "editorGutter.background": "#eff3f5"
         },
         "[Default Dark+]": {
-            "editorGutter.background": "#343739"
+            "editorGutter.background": "#343739",
+            "editorCursor.foreground": "#F8F8F0"
         }
     },
 
     "search.quickOpen.includeHistory": false,
     "search.searchOnType": false,
     "phpactor.path": "/usr/local/bin/phpactor",
+    "php.executablePath": "/usr/bin/php",
     "bashIde.highlightParsingErrors": false,
     "files.autoSave": "onWindowChange",
     "editor.autoClosingBrackets": "never",

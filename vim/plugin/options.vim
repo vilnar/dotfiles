@@ -40,13 +40,6 @@ g:fugitive_dynamic_colors = 0
 g:merginal_splitType = ''
 
 
-# :help bufexplorer
-g:bufExplorerShowNoName = 1
-g:bufExplorerSortBy = "mru"
-g:bufExplorerShowRelativePath = 1
-g:bufExplorerDisableDefaultKeyMapping = 1
-g:bufExplorerShowTabBuffer = 0
-g:bufExplorerFindActive = 0
 
 g:goyo_width = 120
 g:goyo_linenr = 1
