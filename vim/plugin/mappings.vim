@@ -228,6 +228,18 @@ g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 # help codefmt
 vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>
 
+
+# LINT
+nnoremap ,d :ALEGoToDefinition<CR>
+nnoremap ,r :ALEFindReferences<CR>
+nnoremap ,i :ALEGoToImplementation<CR>
+nnoremap ,t :ALEGoToTypeDefinition<CR>
+nnoremap ,h :ALEHover<CR>
+nnoremap ,l :ALEPopulateLocList<CR>
+nnoremap ,n :ALEPreviousWrap<CR>
+nnoremap ,p :ALENextWrap<CR>
+nnoremap ,s :ALENextWrap<CR>
+
 # LSP
 # augroup LspGo
 #   var gopls_settings = {

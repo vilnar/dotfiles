@@ -50,6 +50,19 @@ g:goimports = 0
 g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sh', 'sql']
 
 
+# lint
+g:ale_lint_on_text_changed = 'never'
+g:ale_lint_on_insert_leave = 0
+g:ale_lint_on_enter = 1
+
+# Only run linters named in ale_linters settings.
+g:ale_linters_explicit = 1
+
+# keep the sign gutter open
+g:ale_sign_column_always = 1
+
+
+
 # LSP settings --------------------------------------------------
 # g:lsp_auto_enable = 0
 # g:lsp_diagnostics_signs_enabled = 0
