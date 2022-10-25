@@ -238,7 +238,7 @@ nnoremap ,h :ALEHover<CR>
 nnoremap ,l :ALEPopulateLocList<CR>
 nnoremap ,n :ALEPreviousWrap<CR>
 nnoremap ,p :ALENextWrap<CR>
-nnoremap ,s :ALENextWrap<CR>
+nnoremap ,s :ALESymbolSearch<CR>
 
 # LSP
 # augroup LspGo

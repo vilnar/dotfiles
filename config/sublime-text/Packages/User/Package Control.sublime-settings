@@ -11,6 +11,8 @@
     "Protobuf Syntax Hightlighting",
     "Repeat Macro",
     "SideBarTools",
+    "SublimeLinter",
+    "SublimeLinter-php",
     "Terminal",
     "TOML",
     "View Bookmarks",
