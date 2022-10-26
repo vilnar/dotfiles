@@ -94,11 +94,13 @@
       "name": "Library function",
       "scope": "support.function, support.macro",
       "foreground": "var(grey-custom)",
+      // "font_style": "italic",
     },
     {
       "name": "Library constant",
       "scope": "support.constant",
-      "foreground": "var(grey-custom)",
+      // "foreground": "var(grey-custom)",
+      "foreground": "var(magenta)",
     },
   ]
 }
