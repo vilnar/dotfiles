@@ -7,6 +7,8 @@
     "Dockerfile Syntax Highlighting",
     "Fmt",
     "GraphQL",
+    "LSP",
+    "LSP-gopls",
     "Package Control",
     "Protobuf Syntax Hightlighting",
     "Repeat Macro",

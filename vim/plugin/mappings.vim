@@ -69,7 +69,7 @@ nnoremap <Leader>cc :bdelete %<CR>
 
 # buffers list
 # nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
-# nnoremap <Leader>b :ls<CR>:b<SPACE>
+nnoremap \b :ls<CR>:b
 nnoremap <silent> <leader>b :Buffers<CR>
 
 nnoremap ]b <Plug>(buf-surf-forward)
@@ -230,15 +230,15 @@ vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>
 
 
 # LINT
-nnoremap ,d :ALEGoToDefinition<CR>
-nnoremap ,r :ALEFindReferences<CR>
-nnoremap ,i :ALEGoToImplementation<CR>
-nnoremap ,t :ALEGoToTypeDefinition<CR>
-nnoremap ,h :ALEHover<CR>
-nnoremap ,l :ALEPopulateLocList<CR>
-nnoremap ,n :ALEPreviousWrap<CR>
-nnoremap ,p :ALENextWrap<CR>
-nnoremap ,s :ALESymbolSearch<CR>
+# nnoremap ,d :ALEGoToDefinition<CR>
+# nnoremap ,r :ALEFindReferences<CR>
+# nnoremap ,i :ALEGoToImplementation<CR>
+# nnoremap ,t :ALEGoToTypeDefinition<CR>
+# nnoremap ,h :ALEHover<CR>
+# nnoremap ,l :ALEPopulateLocList<CR>
+# nnoremap ,n :ALEPreviousWrap<CR>
+# nnoremap ,p :ALENextWrap<CR>
+# nnoremap ,s :ALESymbolSearch<CR>
 
 # LSP
 # augroup LspGo

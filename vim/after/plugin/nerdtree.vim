@@ -1,6 +1,3 @@
-" fix vim session + nerdtree
-set sessionoptions-=blank
-
 autocmd VimEnter * call NERDTreeAddKeyMap({
       \ 'key': 'yy',
       \ 'callback': 'NERDTreeYankFullPath',

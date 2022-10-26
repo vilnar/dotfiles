@@ -1,3 +1,3 @@
 vim9script
 
-set sessionoptions=buffers,curdir,folds,winsize,winpos
+set sessionoptions=buffers,curdir,winpos
