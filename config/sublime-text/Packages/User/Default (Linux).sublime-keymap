@@ -82,8 +82,8 @@
   { "keys": ["alt+0"], "command": "goto_definition" },
   { "keys": ["ctrl+alt+0"], "command": "goto_definition", "args": {"side_by_side": true, "clear_to_right": true} },
   { "keys": ["alt+9"], "command": "goto_reference" },
-  { "keys": ["ctlr+alt+9"], "command": "goto_reference", "args": {"side_by_side": true, "clear_to_right": true} },
-/*
+  { "keys": ["ctrl+alt+9"], "command": "goto_reference", "args": {"side_by_side": true, "clear_to_right": true} },
+
   // LSP ----------------------------------------------------
   // revert default behaviour
   { "keys": ["ctrl+s"], "command": "save", "args": { "async": true } },
@@ -181,7 +181,7 @@
     ]
   },
   // End LSP ----------------------------------------------------
-*/
+
   // auto-pair for selection `
   { "keys": ["`"], "command": "insert_snippet", "args": {"contents": "`${0:$SELECTION}`"}, "context":
     [
