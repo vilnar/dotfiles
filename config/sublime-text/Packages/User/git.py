@@ -9,6 +9,8 @@ from .lib import (
     get_first_root_path,
 )
 
+PLUGIN_PATH = "User/git.py"
+
 class OpenFileInCommit(sublime_plugin.TextCommand):
     def run(self, edit):
         sublime.active_window().show_input_panel(

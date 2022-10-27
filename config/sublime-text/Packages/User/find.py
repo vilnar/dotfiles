@@ -2,6 +2,10 @@ import sublime
 import sublime_plugin
 import os
 
+from .lib import (
+    is_exist_view
+)
+
 
 PLUGIN_PATH = "User/find.py"
 
@@ -39,3 +43,8 @@ class FindInCurrentFolderCommand(sublime_plugin.TextCommand):
 
         window.run_command("show_panel", args={"panel": "find_in_files", "where": current_dir})
 
+    def is_enabled(self):
+        return is_exist_view(self.view)
+
+    def is_visible(self):
+        return is_exist_view(self.view)
