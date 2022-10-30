@@ -7,7 +7,7 @@
   { "caption": "File Delete", "command": "file_delete" },
   { "caption": "Open File In Window", "command": "open_file_in_new_window" },
   { "caption": "Open File In Vim", "command": "open_file_in_vim" },
-  { "caption": "Open File In Commit", "command": "open_file_in_commit" },
+  { "caption": "Git Show File By Commit Hash", "command": "git_show_file_by_commit_hash" },
   { "caption": "Split To Another Layout", "command": "split_to_another_layout" },
   { "caption": "Selected To New Tab", "command": "open_new_tab_with_selected_text" },
   { "caption": "Bookmarks Print", "command": "print_bookmarks" },

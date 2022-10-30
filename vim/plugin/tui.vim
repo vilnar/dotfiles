@@ -50,8 +50,6 @@ augroup MyColors
   }
 augroup end
 
-# colorscheme jellybeans_optimized
-
 g:gruvbox_invert_selection = 0
 g:gruvbox_italic = 0
 g:gruvbox_underline = 1
