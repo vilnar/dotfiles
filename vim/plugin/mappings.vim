@@ -235,9 +235,9 @@ vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>
 # nnoremap ,i :ALEGoToImplementation<CR>
 # nnoremap ,t :ALEGoToTypeDefinition<CR>
 # nnoremap ,h :ALEHover<CR>
-# nnoremap ,l :ALEPopulateLocList<CR>
-# nnoremap ,n :ALEPreviousWrap<CR>
-# nnoremap ,p :ALENextWrap<CR>
+nnoremap ,l :ALEPopulateLocList<CR>
+nnoremap ,n :ALEPreviousWrap<CR>
+nnoremap ,p :ALENextWrap<CR>
 # nnoremap ,s :ALESymbolSearch<CR>
 
 # LSP

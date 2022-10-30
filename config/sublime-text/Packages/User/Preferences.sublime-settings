@@ -20,6 +20,7 @@
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
   "show_tab_close_buttons": true,
+  "show_line_column": "compact",
 
   // draw
   "draw_white_space": ["selection", "trailing", "isolated"],
@@ -98,8 +99,8 @@
   "auto_pair_single_quotes": false,
   "auto_pair_selected": true,
   "remember_workspace": false,
-  "hot_exit": "always",
-  // "hot_exit": "only_on_quit",
+  // "hot_exit": "always",
+  "hot_exit": "only_on_quit",
   "close_deleted_files": true,
   "close_windows_when_empty": false,
 

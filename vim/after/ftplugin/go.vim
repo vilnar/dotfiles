@@ -8,4 +8,4 @@ nnoremap <F1> :CtagsGenerateGo<CR>
 nnoremap <F2> :GoImportRun<CR>
 
 
-b:ale_linters = ['gopls']
+b:ale_linters = ['staticcheck']
