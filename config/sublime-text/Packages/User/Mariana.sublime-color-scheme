@@ -28,7 +28,7 @@
         {
             "name": "Entity name",
             "scope": "entity.name.function",
-            "font_style": "glow",
+            // "font_style": "glow",
         },
         // {
         //     "name": "Punctuation",

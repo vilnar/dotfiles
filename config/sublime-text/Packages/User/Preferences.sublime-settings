@@ -108,7 +108,6 @@
   "dictionary": "Packages/Dictionaries/Ukrainian_uk_UA.dic",
   "ignored_packages":
   [
-    "LSP",
     "Vintage",
   ],
 
