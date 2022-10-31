@@ -36,8 +36,13 @@ augroup MyColors
     highlight ExtraWhitespace guibg=#928374
   }
   autocmd ColorScheme solarized8 {
-    hi phpIdentifier guifg=#586e75
-    highlight ExtraWhitespace guibg=#93a1a1
+    if (&background == "light")
+      highlight phpIdentifier guifg=#586e75
+      highlight ExtraWhitespace guibg=#93a1a1
+    else
+      highlight phpIdentifier guifg=#93a1a1
+      highlight ExtraWhitespace guibg=#586e75
+    endif
   }
 augroup end
 
@@ -52,7 +57,8 @@ augroup end
 # set background=dark
 # colorscheme gruvbox
 
-set background=light
+# set background=light
+set background=dark
 colorscheme solarized8
 
 # set linebreak
