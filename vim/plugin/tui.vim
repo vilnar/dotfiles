@@ -32,34 +32,28 @@ augroup MyColors
     highlight CurSearch gui=reverse cterm=reverse
     highlight ExtraWhitespace guibg=#7E8E91
   }
-  autocmd ColorScheme jellybeans_optimized {
-    hi DbgBreakptLine guifg=#ffffff guibg=#93B97E
-    hi DbgBreakptSign guifg=#ffffff guibg=#93B97E
-    hi DbgCurrentLine guifg=#ffffff guibg=#D06567
-    hi DbgCurrentSign guifg=#ffffff guibg=#D06567
-    hi DbgDisabledSign guifg=#ffffff guibg=#648699
-    hi DbgDisabledLine guifg=#ffffff guibg=#648699
-    hi DbgCurrentStackPositionSign guifg=#ffffff guibg=#648699
-    hi DbgCurrentStackPositionLine guifg=#ffffff guibg=#648699
-
-    hi LspErrorHighlight guifg=#ffffff guibg=#902020
-    hi LspWarningHighlight guifg=#000000 guibg=#c7c7c7
-  }
   autocmd ColorScheme gruvbox {
     highlight ExtraWhitespace guibg=#928374
   }
+  autocmd ColorScheme solarized8 {
+    hi phpIdentifier guifg=#586e75
+    highlight ExtraWhitespace guibg=#93a1a1
+  }
 augroup end
 
-g:gruvbox_invert_selection = 0
-g:gruvbox_italic = 0
-g:gruvbox_underline = 1
-g:gruvbox_contrast_light = "hard"
-g:gruvbox_contrast_dark = "hard"
-g:gruvbox_guisp_fallback = "bg" # fix spell colors
-g:gruvbox_vert_split = "bg1"
-g:gruvbox_hls_highlight = "purple"
-set background=dark
-colorscheme gruvbox
+# g:gruvbox_invert_selection = 0
+# g:gruvbox_italic = 0
+# g:gruvbox_underline = 1
+# g:gruvbox_contrast_light = "hard"
+# g:gruvbox_contrast_dark = "hard"
+# g:gruvbox_guisp_fallback = "bg" # fix spell colors
+# g:gruvbox_vert_split = "bg1"
+# g:gruvbox_hls_highlight = "purple"
+# set background=dark
+# colorscheme gruvbox
+
+set background=light
+colorscheme solarized8
 
 # set linebreak
 set showbreak=->

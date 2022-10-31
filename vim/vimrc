@@ -65,6 +65,7 @@ Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312caf
 
 Plug 'lifepillar/vim-colortemplate', { 'commit': 'ee6043299eef3d346182c30ef1b99f280cf6a8d6' }
 Plug 'gruvbox-community/gruvbox', { 'commit': '95b120a15d0765037d2836d04e3360c273caf111' }
+Plug 'lifepillar/vim-solarized8', { 'commit': '9f9b7951975012ce51766356c7c28ba56294f9e8' }
 
 " Lint
 Plug 'dense-analysis/ale', { 'commit': 'e4b20544082ba019d8095cbc24ffab43b15e8fc0' }

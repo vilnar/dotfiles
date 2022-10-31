@@ -21,7 +21,7 @@
 	"overlay_scroll_bars": "disabled",
 	"remember_workspace": false,
 	"side_bar_layout": "tabs",
-	"theme": "Merge Dark.sublime-theme",
+	"theme": "Merge.sublime-theme",
 	"theme_dark": "Merge Dark.sublime-theme",
 	"theme_light": "Merge.sublime-theme",
 	"time_format": "24h",

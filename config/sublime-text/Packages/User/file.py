@@ -14,6 +14,7 @@ PLUGIN_PATH = "User/file.py"
 
 class FileDeleteCommand(sublime_plugin.WindowCommand):
     def run(self):
+        # TODO: add escape for spaces
         path = self.window.extract_variables().get('file')
 
         p = subprocess.run(

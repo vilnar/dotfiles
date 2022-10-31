@@ -29,7 +29,7 @@ class GitShowFileByCommitHash(sublime_plugin.TextCommand):
         root_path = get_first_root_path(window)
         os.chdir(root_path) # by default path, this is sublime installation directory
 
-        hash_with_path = "{}:{}".format(commit_hash, relative_path)
+        hash_with_path = "{}:./{}".format(commit_hash, relative_path)
         p = subprocess.run(
             ['git', 'show', hash_with_path],
             stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
