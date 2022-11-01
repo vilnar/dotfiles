@@ -25,4 +25,11 @@
   [
   ],
   "bootstrapped": true,
+
+  // these packages are manually modified
+  // TODO: fork these packages, and add submodules
+  "ignore_vcs_packages": [
+    "FileDiffs",
+    "Tab Filter",
+  ],
 }
