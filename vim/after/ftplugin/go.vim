@@ -9,3 +9,4 @@ nnoremap <F2> :GoImportRun<CR>
 
 
 b:ale_linters = ['staticcheck']
+g:ale_go_staticcheck_options = '-checks=["all","-ST1000","-ST1003","-ST1016","-ST1020","-ST1021","-ST1022","-ST1006"]'
