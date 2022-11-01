@@ -29,10 +29,9 @@
         "foreground": "var(blue)"
     },
     {
-        "name": "Library function",
-        "scope": "support.function, support.macro",
-        "foreground": "var(yellow)",
-        "font_style": "italic"
+        "name": "Variable Function",
+        "scope": "variable.function",
+        "foreground": "var(base00)"
     },
     {
       "name": "YAML Key",
