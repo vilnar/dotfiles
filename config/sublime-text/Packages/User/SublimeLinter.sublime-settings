@@ -3,4 +3,10 @@
   "lint_mode": "save",
   "show_marks_in_minimap": false,
   "show_panel_on_save": "view",
+  "statusbar.messages_template": "{linter}: {message}",
+  "linters": {
+    "staticcheck": {
+      "executable": ["staticcheck", "-checks=['all','-ST1000','-ST1003','-ST1016','-ST1020','-ST1021','-ST1022','-ST1006']"],
+    }
+  }
 }

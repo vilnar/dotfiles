@@ -13,6 +13,7 @@
     "SideBarTools",
     "Solarized Color Scheme",
     "SublimeLinter",
+    "SublimeLinter-contrib-staticcheck",
     "SublimeLinter-php",
     "Terminal",
     "TOML",
