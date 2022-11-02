@@ -25,8 +25,8 @@ enddef
 command -bang -nargs=? -complete=dir MyFiles call RunMyFiles(<q-args>)
 
 # https://github.com/sharkdp/fd
-# $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --exclude .git --no-ignore'
-$FZF_DEFAULT_COMMAND = 'rg -uuu --files'
+$FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --exclude .git --no-ignore'
+# $FZF_DEFAULT_COMMAND = 'rg -uuu --files'
 
 def GotoSelection()
   var text = getreg('"')

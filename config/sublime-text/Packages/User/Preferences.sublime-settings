@@ -103,6 +103,7 @@
   "hot_exit": "only_on_quit",
   "close_deleted_files": true,
   "close_windows_when_empty": false,
+  "close_find_after_find_all": false,
 
   // https://www.sublimetext.com/docs/spell_checking.html
   "dictionary": "Packages/Dictionaries/Ukrainian_uk_UA.dic",

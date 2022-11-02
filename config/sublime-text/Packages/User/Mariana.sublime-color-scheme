@@ -25,10 +25,15 @@
             "scope": "variable",
             "foreground": "var(white3)"
         },
+        // {
+        //     "name": "Entity name",
+        //     "scope": "entity.name.function",
+        //     "font_style": "glow",
+        // },
         {
-            "name": "Entity name",
-            "scope": "entity.name.function",
-            // "font_style": "glow",
+            "name": "User-defined constant",
+            "scope": "constant.other",
+            "foreground": "var(orange)"
         },
         // {
         //     "name": "Punctuation",
