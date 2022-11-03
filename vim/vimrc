@@ -38,13 +38,13 @@ Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf
 Plug 'ton/vim-bufsurf', { 'commit': 'e6dbc7ad66c7e436e5eb20d304464e378bd7f28c' }
 
 " git
-Plug 'tpope/vim-fugitive', { 'commit': 'dd8107cabf5fe85df94d5eedcae52415e543f208' }
+Plug 'tpope/vim-fugitive', { 'commit': '01f3e0af928857128eec8d998948b80ed1678c18' }
 Plug 'AndrewRadev/linediff.vim', { 'commit': 'c627858c6dd280221df032bbe7f3899ec71e1aaa' }
-Plug 'idanarye/vim-merginal', { 'commit': 'e8740401cdec9199f4676c5a640a785ec094258b' }
+Plug 'idanarye/vim-merginal', { 'commit': '8ec5976aa4bd647c64504ff535eb06a8b709b051' }
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
 
-Plug 'SirVer/ultisnips', { 'commit': '1edcb40ce749c47d5da42ab02dcdf21f9279bfbb' }
+Plug 'SirVer/ultisnips', { 'commit': 'e99fdf15cd55a4a8e0cb0a80a6810c1867a5c401' }
 Plug 'jparise/vim-graphql', { 'commit': '4bf5d33bda83117537aa3c117dee5b9b14fc9333' }
 Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f34bf6' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': '04d0b0223fd69984a07a641d0e228c0e9e534825' }

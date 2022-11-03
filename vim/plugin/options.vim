@@ -59,7 +59,7 @@ g:ale_lint_on_enter = 1
 g:ale_linters_explicit = 1
 
 # keep the sign gutter open
-g:ale_sign_column_always = 1
+g:ale_sign_column_always = 0
 
 
 

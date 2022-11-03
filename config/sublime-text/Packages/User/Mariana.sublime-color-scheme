@@ -68,7 +68,7 @@
         },
         {
             "name": "Don't highlight sql in string",
-            "scope": "source.sql.embedded, source.sql.embedded keyword, source.sql.embedded keyword.operator, source.sql.embedded keyword.operator.assignment, source.sql.embedded keyword.operator.word, source.sql.embedded keyword.operator.logical, source.sql.embedded storage, source.sql.embedded storage.type, source.sql.embedded constant, source.sql.embedded constant.other, source.sql.embedded constant.numeric, source.sql.embedded punctuation.separator",
+            "scope": "source.sql.embedded, source.sql.embedded keyword, source.sql.embedded keyword.operator, source.sql.embedded keyword.operator.assignment, source.sql.embedded keyword.operator.word, source.sql.embedded keyword.operator.logical, source.sql.embedded storage, source.sql.embedded storage.type, source.sql.embedded constant, source.sql.embedded constant.other, source.sql.embedded constant.numeric, source.sql.embedded punctuation.separator, source.sql.embedded entity.name.function",
             "foreground": "var(green)"
         },
 
