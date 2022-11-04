@@ -1,5 +1,6 @@
 alefragnani.Bookmarks
 alefragnani.read-only-indicator
+bmewburn.vscode-intelephense-client
 bradymholt.pgformatter
 dantleech.vscode-phpactor
 eamodio.gitlens

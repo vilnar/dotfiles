@@ -331,4 +331,7 @@
         "language_server.diagnostics_on_save": true
     },
     "gitlens.views.branches.branches.layout": "list",
+    "intelephense.diagnostics.run": "onSave",
+    "intelephense.environment.phpVersion": "7.1.0",
+    "intelephense.telemetry.enabled": false,
 }
