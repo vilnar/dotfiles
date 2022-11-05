@@ -29,8 +29,8 @@ let mapleader="\<Space>"
 
 
 call plug#begin()
-Plug 'tpope/vim-commentary', { 'commit': '3654775824337f466109f00eaf6759760f65be34' }
-Plug 'tpope/vim-surround', { 'commit': 'bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea' }
+Plug 'tpope/vim-commentary', { 'commit': 'e87cd90dc09c2a203e13af9704bd0ef79303d755' }
+Plug 'tpope/vim-surround', { 'commit': '3d188ed2113431cf8dac77be61b842acb64433d9' }
 
 " It works starting with patch 9.0.0506
 Plug 'tpope/vim-obsession', { 'commit': '7d39576149d17bde3c096fd57e3a2cdae65deaf5' }

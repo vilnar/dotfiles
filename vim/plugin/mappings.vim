@@ -62,7 +62,7 @@ nnoremap <silent> <Leader>8 :vim9cmd <SID>RunSearchUnderCursor()<BAR>set hls<CR>
 nnoremap <leader>o :only<CR>
 # nnoremap <leader>cc :close<CR>
 # close current buffer
-nnoremap <Leader>cc :bdelete %<CR>
+nnoremap <Leader>cc :bw %<CR>
 
 # tabs switching
 # nnoremap <Leader>t :tabs<CR>:tabnext<Space>
