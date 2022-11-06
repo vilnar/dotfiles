@@ -22,7 +22,7 @@
 
     // "editor.fontFamily": "'Dejavu Sans Mono', 'monospace', monospace",
     "editor.fontFamily": "'Jetbrains Mono NL', 'monospace', monospace",
-    "editor.fontSize": 13.9,
+    "editor.fontSize": 13.94,
     "editor.lineHeight": 1.5,
     "terminal.integrated.fontFamily": "'Jetbrains Mono NL', 'monospace', monospace",
     "terminal.integrated.fontSize": 14,
@@ -107,7 +107,7 @@
     "workbench.editorAssociations": {
         "git-rebase-todo": "default"
     },
-    "workbench.startupEditor": "none",
+    "workbench.startupEditor": "newUntitledFile",
     "terminal.explorerKind": "external",
     "terminal.external.linuxExec": "gnome-terminal",
     "workbench.editor.untitled.hint": "hidden",
