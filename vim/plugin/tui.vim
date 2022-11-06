@@ -40,12 +40,12 @@ augroup MyColors
       highlight CurSearch guibg=#87ffff
       highlight Identifier guifg=#d7d7d7
       highlight Function guifg=#d7ffaf
-      highlight ExtraWhitespace guibg=#586e75
+      highlight ExtraWhitespace guibg=#6c6c6c
     else
       highlight CurSearch guibg=#5fd7d7
       highlight Identifier guifg=#444444
       highlight Function guifg=#008700
-      highlight ExtraWhitespace guibg=#93a1a1
+      highlight ExtraWhitespace guibg=#c2c0c0
     endif
   }
 augroup end
