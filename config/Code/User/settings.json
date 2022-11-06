@@ -20,11 +20,10 @@
     "security.workspace.trust.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
 
-    "editor.fontFamily": "'Jetbrains Mono NL', 'monospace', monospace",
-    // "editor.fontFamily": "'Jetbrains Mono NL Light', 'monospace', monospace",
-    "editor.fontSize": 15,
+    "editor.fontFamily": "'Dejavu Sans Mono', 'monospace', monospace",
+    "editor.fontSize": 13.5,
     "editor.lineHeight": 1.5,
-    "terminal.integrated.fontFamily": "'Jetbrains Mono NL', 'monospace', monospace",
+    "terminal.integrated.fontFamily": "'Dejavu Sans Mono', 'monospace', monospace",
     "terminal.integrated.fontSize": 14,
     "editor.minimap.enabled": false,
     "editor.codeLens": false,
@@ -334,4 +333,5 @@
     "intelephense.diagnostics.run": "onSave",
     "intelephense.environment.phpVersion": "7.1.0",
     "intelephense.telemetry.enabled": false,
+    "workbench.colorTheme": "Default Light+",
 }

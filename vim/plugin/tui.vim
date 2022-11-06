@@ -35,13 +35,17 @@ augroup MyColors
   autocmd ColorScheme gruvbox {
     highlight ExtraWhitespace guibg=#928374
   }
-  autocmd ColorScheme solarized8 {
-    if (&background == "light")
-      highlight phpIdentifier guifg=#586e75
-      highlight ExtraWhitespace guibg=#93a1a1
-    else
-      highlight phpIdentifier guifg=#93a1a1
+  autocmd ColorScheme lucius {
+    if &background == "dark"
+      highlight CurSearch guibg=#87ffff
+      highlight Identifier guifg=#d7d7d7
+      highlight Function guifg=#d7ffaf
       highlight ExtraWhitespace guibg=#586e75
+    else
+      highlight CurSearch guibg=#5fd7d7
+      highlight Identifier guifg=#444444
+      highlight Function guifg=#008700
+      highlight ExtraWhitespace guibg=#93a1a1
     endif
   }
 augroup end
@@ -54,12 +58,11 @@ g:gruvbox_contrast_dark = "hard"
 g:gruvbox_guisp_fallback = "bg" # fix spell colors
 g:gruvbox_vert_split = "bg1"
 g:gruvbox_hls_highlight = "purple"
-set background=dark
-colorscheme gruvbox
-
-# set background=light
 # set background=dark
-# colorscheme solarized8
+# colorscheme gruvbox
+
+set background=light
+colorscheme lucius
 
 # set linebreak
 set showbreak=->
