@@ -71,7 +71,7 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  "font_face": "Jetbrains Mono NL",
+  "font_face": "Dejavu Sans Mono Book",
   "font_size": 12.54,
   "line_padding_bottom": 1,
   "line_padding_top": 1,
@@ -113,11 +113,12 @@
   ],
 
   "light_color_scheme": "Alabaster.sublime-color-scheme",
-  "light_font_face": "Jetbrains Mono NL",
-  "light_font_size": 12.5,
+  "light_font_face": "Dejavu Sans Mono Book",
+  "light_font_size": 12.54,
   "dark_color_scheme": "Mariana.sublime-color-scheme",
-  "dark_font_face": "Jetbrains Mono NL",
-  "dark_font_size": 13.5,
+  // "dark_font_face": "Jetbrains Mono NL",
+  "dark_font_face": "Dejavu Sans Mono Book",
+  "dark_font_size": 13.54,
 
   "hide_new_tab_button": true,
   "indent_subsequent_lines": true,
