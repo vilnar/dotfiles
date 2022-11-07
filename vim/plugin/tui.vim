@@ -58,11 +58,11 @@ g:gruvbox_contrast_dark = "hard"
 g:gruvbox_guisp_fallback = "bg" # fix spell colors
 g:gruvbox_vert_split = "bg1"
 g:gruvbox_hls_highlight = "purple"
-# set background=dark
-# colorscheme gruvbox
+set background=dark
+colorscheme gruvbox
 
-set background=light
-colorscheme lucius
+# set background=light
+# colorscheme lucius
 
 # set linebreak
 set showbreak=->

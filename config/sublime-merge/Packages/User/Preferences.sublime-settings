@@ -7,13 +7,13 @@
 	"caret_style": "solid",
 	"diff_style": "auto",
 	"draw_white_space": "all",
-	"font_face": "Dejavu Sans Mono Book",
+	"font_face": "Jetbrains Mono NL",
 	"font_options":
 	[
 		"no_liga",
 		"no_calt"
 	],
-	"font_size": 12.54,
+	"font_size": 13.5,
 	"highlight_line": false,
 	"image_diff_style": "onion-skin",
 	"line_padding_bottom": 1,
@@ -21,7 +21,7 @@
 	"overlay_scroll_bars": "disabled",
 	"remember_workspace": false,
 	"side_bar_layout": "tabs",
-	"theme": "Merge.sublime-theme",
+	"theme": "Merge Dark.sublime-theme",
 	"theme_dark": "Merge Dark.sublime-theme",
 	"theme_light": "Merge.sublime-theme",
 	"time_format": "24h",
