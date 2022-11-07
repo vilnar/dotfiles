@@ -1,0 +1,45 @@
+{
+	 "scope": "source.php - string - comment - variable.other.php - meta.embedded.html - punctuation.section.embedded.begin.php",
+
+	"completions":
+	[
+		{
+			"trigger": "var_dump",
+			"contents": "var_dump",
+			"kind": "function",
+			"details": "Dumps information about a variable"
+		},
+		{
+			"trigger": "var_export",
+			"contents": "var_export",
+			"kind": "function",
+			"details": "Outputs or returns a parsable string representation of a variable"
+		},
+		{
+			"trigger": "print_r",
+			"contents": "print_r",
+			"kind": "function",
+			"details": "Prints human-readable information about a variable"
+		},
+    {
+        "trigger": "implements",
+        "contents": "implements",
+        "kind": "keyword"
+    },
+    {
+        "trigger": "extends",
+        "contents": "extends",
+        "kind": "keyword"
+    },
+    {
+        "trigger": "abstract",
+        "contents": "abstract",
+        "kind": "keyword"
+    },
+    {
+        "trigger": "function",
+        "contents": "function",
+        "kind": "keyword"
+    },
+	]
+}

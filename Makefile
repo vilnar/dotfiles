@@ -80,7 +80,11 @@ clean_gtk:
 install_sublime_text: clear_sublime_text
 	@echo Place sublime-text config files
 	ln -sf `pwd`/config/sublime-text/Packages/User   ~/.config/sublime-text/Packages/User
-# 	TODO: add clone packages
+	ln -sf `pwd`/config/sublime-text/Packages/Default   ~/.config/sublime-text/Packages/Default
+	ln -sf `pwd`/config/sublime-text/Packages/Dictionaries   ~/.config/sublime-text/Packages/Dictionaries
+	ln -sf `pwd`/config/sublime-text/Packages/Markdown   ~/.config/sublime-text/Packages/Markdown
+	ln -sf `pwd`/config/sublime-text/Packages/PHP   ~/.config/sublime-text/Packages/PHP
+	# TODO: add fork packages FileDiffs, Tab Filter
 
 clear_sublime_text:
 	rm -Rf ~/.config/sublime-text/Packages/User
