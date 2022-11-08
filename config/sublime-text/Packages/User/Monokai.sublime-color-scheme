@@ -8,11 +8,10 @@
         "beige-custom1": "#cccac2",
         "blue-custom1": "#5ccfe680",
         // colors from molokai
-        "yellow5": "#7E8E91",
+        // "yellow5": "#7E8E91",
     },
     "globals":
     {
-        "background": "#1B1D1E",
         "selection_border_width": "2",
         "selection_corner_radius": "3",
         "brackets_options": "bold glow",

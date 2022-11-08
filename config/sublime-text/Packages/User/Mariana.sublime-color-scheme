@@ -4,6 +4,8 @@
         "blue-custom": "#5ccfe680",
         "gold-custom": "#ffcc00",
         "yellow-custom": "#f1fa8c",
+        "pink": "#d06567",
+        "pink-original": "hsl(300, 30%, 68%)",
     },
     "globals":
     {
@@ -35,6 +37,12 @@
             "scope": "constant.other",
             "foreground": "var(orange)"
         },
+        {
+            "name": "User-defined constant",
+            "scope": "constant.character",
+            "foreground": "var(pink-original)"
+        },
+
         // {
         //     "name": "Punctuation",
         //     "scope": "punctuation.separator, punctuation.terminator",
