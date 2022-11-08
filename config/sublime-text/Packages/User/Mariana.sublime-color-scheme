@@ -43,20 +43,17 @@
             "foreground": "var(pink-original)"
         },
 
-        // {
-        //     "name": "Punctuation",
-        //     "scope": "punctuation.separator, punctuation.terminator",
-        //     "foreground": "var(white3)"
-        // },
-        // {
-        //     "name": "Annotation Punctuation",
-        //     "scope": "punctuation.definition.annotation",
-        //     "foreground": "var(white3)"
-        // },
-        // {
-        //     "name": "Punctuation",
-        //     "foreground": "var(white3)"
-        // },
+        {
+            "name": "Punctuation",
+            "scope": "punctuation.separator, punctuation.terminator",
+            "foreground": "var(white3)"
+        },
+        {
+            "name": "Annotation Punctuation",
+            "scope": "punctuation.definition.annotation",
+            "foreground": "var(white3)"
+        },
+
         {
             "name": "Tag start/end",
             "scope": "punctuation.definition.tag.end, punctuation.definition.tag.begin, punctuation.definition.tag",
