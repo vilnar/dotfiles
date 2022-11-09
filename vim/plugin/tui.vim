@@ -41,6 +41,12 @@ augroup MyColors
       highlight Identifier guifg=#d7d7d7
       highlight Function guifg=#d7ffaf
       highlight ExtraWhitespace guibg=#6c6c6c
+
+      # diff color habit, DiffAdd - green, DiffDelete - red
+      hi DiffAdd guifg=#AFD787 guibg=#303030 gui=reverse cterm=reverse
+      hi diffAdded guifg=#AFD787
+      hi DiffDelete guifg=#FF5F5F guibg=#303030 gui=reverse cterm=reverse
+      hi diffRemoved guifg=#FF5F5F
     else
       highlight CurSearch guibg=#5fd7d7
       highlight Identifier guifg=#444444
@@ -50,20 +56,20 @@ augroup MyColors
   }
 augroup end
 
-# g:gruvbox_invert_selection = 0
-# g:gruvbox_italic = 0
-# g:gruvbox_underline = 1
-# g:gruvbox_contrast_light = "hard"
-# g:gruvbox_contrast_dark = "hard"
-# g:gruvbox_guisp_fallback = "bg" # fix spell colors
-# g:gruvbox_vert_split = "bg1"
-# g:gruvbox_hls_highlight = "purple"
-# set background=dark
-# colorscheme gruvbox
+g:gruvbox_invert_selection = 0
+g:gruvbox_italic = 0
+g:gruvbox_underline = 1
+g:gruvbox_contrast_light = "hard"
+g:gruvbox_contrast_dark = "hard"
+g:gruvbox_guisp_fallback = "bg" # fix spell colors
+g:gruvbox_vert_split = "bg1"
+g:gruvbox_hls_highlight = "purple"
+set background=dark
+colorscheme gruvbox
 
 # set background=light
-set background=dark
-colorscheme lucius
+# set background=dark
+# colorscheme lucius
 
 # set linebreak
 set showbreak=->
