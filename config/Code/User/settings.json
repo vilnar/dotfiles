@@ -132,7 +132,31 @@
                 {
                     "scope": "constant.character.escape",
                     "settings": {
-                        "foreground": "#c695c6"
+                        "foreground": "#D4D4D4"
+                    }
+                },
+                {
+                    "scope": "meta.embedded string keyword",
+                    "settings": {
+                        "foreground": "#ce9178"
+                    }
+                },
+                {
+                    "scope": "meta.embedded.block string variable punctuation.definition.variable",
+                    "settings": {
+                        "foreground": "#9CDCFE"
+                    }
+                },
+                {
+                    "scope": "meta.embedded.block string punctuation.definition.variable",
+                    "settings": {
+                        "foreground": "#D4D4D4"
+                    }
+                },
+                {
+                    "scope": "meta.embedded.block string punctuation.definition.arguments",
+                    "settings": {
+                        "foreground": "#D4D4D4"
                     }
                 }
             ]
@@ -333,4 +357,5 @@
     "intelephense.diagnostics.run": "onSave",
     "intelephense.environment.phpVersion": "7.1.0",
     "intelephense.telemetry.enabled": false,
+    "intelephense.diagnostics.embeddedLanguages": false,
 }

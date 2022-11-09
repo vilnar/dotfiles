@@ -37,25 +37,6 @@ augroup MyColors
     highlight CurSearch guifg=#1D2021 guibg=#fe8019
     hi link gitcommitSummary GruvboxYellow
   }
-  autocmd ColorScheme lucius {
-    if &background == "dark"
-      highlight CurSearch guifg=#303030 guibg=#87ffff
-      highlight Identifier guifg=#d7d7d7
-      highlight Function guifg=#d7ffaf
-      highlight ExtraWhitespace guibg=#6c6c6c
-
-      # diff color habit, DiffAdd - green, DiffDelete - red
-      hi DiffAdd guifg=#AFD787 guibg=#303030 gui=reverse cterm=reverse
-      hi diffAdded guifg=#AFD787
-      hi DiffDelete guifg=#FF5F5F guibg=#303030 gui=reverse cterm=reverse
-      hi diffRemoved guifg=#FF5F5F
-    else
-      highlight CurSearch guibg=#5fd7d7
-      highlight Identifier guifg=#444444
-      highlight Function guifg=#008700
-      highlight ExtraWhitespace guibg=#c2c0c0
-    endif
-  }
 augroup end
 
 g:gruvbox_invert_selection = 0
@@ -67,10 +48,6 @@ g:gruvbox_guisp_fallback = "bg" # fix spell colors
 g:gruvbox_vert_split = "bg1"
 set background=dark
 colorscheme gruvbox
-
-# set background=light
-# set background=dark
-# colorscheme lucius
 
 # set linebreak
 set showbreak=->
