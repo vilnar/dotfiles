@@ -23,7 +23,7 @@ class FileDeleteCommand(sublime_plugin.WindowCommand):
             capture_output=False
         )
         if p.returncode != 0:
-            print("{} gio trash failed. Error code: {}".format(PLUGIN_PATH, p.returncode))
+            print("{} gio trash failed. Error: {}".format(PLUGIN_PATH, p.stderr))
             self.window.run_command("show_panel", args={'panel': 'console'})
             return
 
@@ -66,7 +66,7 @@ class OpenFileInVim(sublime_plugin.TextCommand):
             capture_output=False
         )
         if p.returncode != 0:
-            print("{} run vim failed. Error code: {}".format(PLUGIN_PATH, p.returncode))
+            print("{} run vim failed. Error: {}".format(PLUGIN_PATH, p.stderr))
             self.window.run_command("show_panel", args={'panel': 'console'})
             return
         sublime.set_timeout(lambda: sublime.status_message('Open file in vim'), 0)

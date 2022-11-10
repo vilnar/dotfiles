@@ -68,7 +68,6 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
-Plug 'lifepillar/vim-colortemplate', { 'commit': 'ee6043299eef3d346182c30ef1b99f280cf6a8d6' }
 Plug 'gruvbox-community/gruvbox', { 'commit': '95b120a15d0765037d2836d04e3360c273caf111' }
 
 " Lint

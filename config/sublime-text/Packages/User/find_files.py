@@ -44,7 +44,7 @@ class FindFilesByPartPathCommand(sublime_plugin.WindowCommand):
             '*{}'.format(query)
         ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         if p.returncode != 0:
-            print("{} Bash find: failed, error code: {}".format(PLUGIN_PATH, p.returncode))
+            print("{} Bash find: failed, error: {}".format(PLUGIN_PATH, p.stderr))
             win.run_command("show_panel", args={'panel': 'console'})
             return
 

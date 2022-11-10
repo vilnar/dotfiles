@@ -35,7 +35,7 @@ class MarkdownViewHtmlCommand(sublime_plugin.TextCommand):
             capture_output=False
         )
         if pp.returncode != 0:
-            print("{} Pandoc failed. Error code: {}".format(PLUGIN_PATH, pp.returncode))
+            print("{} Pandoc failed. Error: {}".format(PLUGIN_PATH, pp.stderr))
             self.view.window().run_command("show_panel", args={'panel': 'console'})
             return
 
@@ -47,7 +47,7 @@ class MarkdownViewHtmlCommand(sublime_plugin.TextCommand):
             #     capture_output=False
             # )
             # if fp.returncode != 0:
-            #     print("{} Firefox failed. Error code: {}".format(PLUGIN_PATH, fp.returncode))
+            #     print("{} Firefox failed. Error: {}".format(PLUGIN_PATH, fp.stderr))
             #     self.view.window().run_command("show_panel", args={'panel': 'console'})
             #     return
 

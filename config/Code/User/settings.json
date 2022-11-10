@@ -193,7 +193,7 @@
     "partialDiff.enableTelemetry": false,
     "search.searchEditor.defaultNumberOfContextLines": 3,
     "settingsSync.keybindingsPerPlatform": false,
-    "git-graph.repository.commits.initialLoad": 1000,
+    "git-graph.repository.commits.initialLoad": 2000,
     "git-graph.repository.commits.loadMoreAutomatically": false,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.defaultDateStyle": "absolute",
