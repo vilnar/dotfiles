@@ -2,7 +2,7 @@ alefragnani.Bookmarks
 alefragnani.read-only-indicator
 bmewburn.vscode-intelephense-client
 bradymholt.pgformatter
-dantleech.vscode-phpactor
+CucumberOpen.cucumber-official
 eamodio.gitlens
 esbenp.prettier-vscode
 geddski.macros
@@ -13,9 +13,9 @@ mads-hartmann.bash-ide-vscode
 mblode.twig-language-2
 mhutchie.git-graph
 mrmlnc.vscode-apache
+ms-vscode.cpptools
 ms-vscode.sublime-keybindings
 ryu1kn.partial-diff
-ryuta46.multi-command
 shardulm94.trailing-spaces
 sleistner.vscode-fileutils
 timonwong.shellcheck
