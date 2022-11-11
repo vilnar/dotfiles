@@ -21,6 +21,7 @@ sleistner.vscode-fileutils
 timonwong.shellcheck
 twxs.cmake
 undefined_publisher.user-commands
+wmaurer.change-case
 xaver.clang-format
 xdebug.php-debug
 zxh404.vscode-proto3
