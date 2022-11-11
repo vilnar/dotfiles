@@ -1,2 +1,2 @@
-command CtagsGenerateForC :execute 'Start! ctags `find . -name "*.[ch]" -print`'
+command CtagsGenerateForC :execute "Start! find . -name '*.[ch]' | xargs ctags"
 nnoremap <F1> :CtagsGenerateForC<CR>
