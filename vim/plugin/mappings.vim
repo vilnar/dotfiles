@@ -44,7 +44,18 @@ vnoremap <M-k> :m '<-2<CR>gv=gv
 
 def CopyWithoutNewLine()
   execute ':normal ^vg_"+y'
-  echomsg "copy line: " .. line(".")
+  var lnum = line(".")
+  echomsg "Copied line " .. lnum .. " to clipboard"
+
+  var type = prop_type_get('copied-line-highlight')
+  if type == {}
+    prop_type_add('copied-line-highlight', {highlight: 'Underlined'})
+  endif
+  prop_add(lnum, 1, {type: 'copied-line-highlight', end_col: col("$") })
+  var Clear = (id) => {
+    prop_clear(lnum)
+  }
+  timer_start(2000, Clear)
 enddef
 nnoremap <Leader>l :vim9cmd <SID>CopyWithoutNewLine()<CR>
 
