@@ -158,6 +158,18 @@
                     "settings": {
                         "foreground": "#D4D4D4"
                     }
+                },
+                {
+                    "scope": "meta.function entity.name.function",
+                    "settings": {
+                        "foreground": "#FFCB6B",
+                    }
+                },
+                {
+                    "scope": "meta.function-call support.function",
+                    "settings": {
+                        "fontStyle": "italic"
+                    }
                 }
             ]
         }
@@ -358,4 +370,9 @@
     "intelephense.environment.phpVersion": "7.1.0",
     "intelephense.telemetry.enabled": false,
     "intelephense.diagnostics.embeddedLanguages": false,
+    "debug.allowBreakpointsEverywhere": true,
+    "lldb.launch.sourceLanguages": [
+        "cpp",
+        "rust"
+    ],
 }
