@@ -95,20 +95,15 @@ class CopyCurrentFolderPathCommand(sublime_plugin.TextCommand):
         return is_exist_view(self.view)
 
 
-class CopyFileNameCommand(sublime_plugin.TextCommand):
+class CopyViewNameCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         window = self.view.window()
         path = self.view.file_name()
-
-        name = os.path.split(path)[1]
+        name = self.view.name()
+        if is_exist_view(self.view):
+            name = os.path.split(path)[1]
         sublime.set_clipboard(name)
         window.status_message("Copied {} to clipboard".format(name))
-
-    def is_enabled(self):
-        return is_exist_view(self.view)
-
-    def is_visible(self):
-        return is_exist_view(self.view)
 
 class CopyFilePathWithLineCommand(sublime_plugin.TextCommand):
     def run(self, edit):

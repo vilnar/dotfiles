@@ -21,6 +21,7 @@
   "overlay_scroll_bars": "disabled",
   "show_tab_close_buttons": true,
   "show_line_column": "compact",
+  "hide_new_tab_button": false,
 
   // draw
   "draw_white_space": ["selection", "trailing", "isolated"],
@@ -104,6 +105,7 @@
   "close_deleted_files": true,
   "close_windows_when_empty": false,
   "close_find_after_find_all": false,
+  "update_system_recent_files": false,
 
   // https://www.sublimetext.com/docs/spell_checking.html
   "dictionary": "Packages/Dictionaries/Ukrainian_uk_UA.dic",
@@ -119,7 +121,6 @@
   "dark_font_face": "Jetbrains Mono NL",
   "dark_font_size": 13.5,
 
-  "hide_new_tab_button": true,
   "indent_subsequent_lines": true,
   "indent_to_bracket": false,
   "show_rel_path": true,
