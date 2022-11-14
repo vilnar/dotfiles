@@ -1,6 +1,6 @@
 vim9script
 
-const ESCAPE_CHARS = '\~ \* \$ \[ \] /\ \^'
+const ESCAPE_CHARS = '\~ \* \$ \[ \] /\ \^ \.'
 
 # search multilines
 def EscapeSearchTextMultiLines(text: string, pat: string)
