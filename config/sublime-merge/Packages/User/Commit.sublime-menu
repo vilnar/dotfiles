@@ -1,0 +1,4 @@
+[
+  { "caption": "-", "id": "custom-command" },
+  { "caption": "Show Name Status", "command": "git", "args": {"argv": ["show", "--name-status", "$commit"]} },
+]
