@@ -26,8 +26,9 @@
     "command": "goto_selection",
     "args": {"select_word_under_cursor": true}
   },
-  { "keys": ["ctrl+k", "p"], "command": "find_files_by_part_path" },
 
+  { "keys": ["ctrl+k", "p"], "command": "find_files_by_part_path", "args": {"ignore_case": true} },
+  { "keys": ["ctrl+shift+k", "p"], "command": "find_files_by_part_path", "args": {"ignore_case": false} },
 
   { "keys": ["alt+o"], "command": "open_file_in_new_window" },
 

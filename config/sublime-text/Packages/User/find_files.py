@@ -21,7 +21,10 @@ class GotoSelectionCommand(sublime_plugin.WindowCommand):
 
 
 class FindFilesByPartPathCommand(sublime_plugin.WindowCommand):
-    def run(self):
+    ignore_case = False
+
+    def run(self, ignore_case = False):
+        self.ignore_case = ignore_case
         sublime.active_window().show_input_panel(
             "Enter file or folder part path name",
             "",
@@ -34,13 +37,17 @@ class FindFilesByPartPathCommand(sublime_plugin.WindowCommand):
         win = sublime.active_window()
         folder = win.extract_variables().get("folder")
 
+        case_option = '-iname'
+        if self.ignore_case == False:
+            case_option = '-name'
+
         p = subprocess.run([
             '/usr/bin/find',
             folder,
             '-not',
             '-path',
             './.git/*',
-            '-iname',
+            case_option,
             '*{}'.format(query)
         ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         if p.returncode != 0:
@@ -54,8 +61,8 @@ class FindFilesByPartPathCommand(sublime_plugin.WindowCommand):
             return
 
         scratch = win.new_file()
-        scratch.set_name("__Files__")
-        scratch.set_scratch(True)
+        # scratch.set_name("__Files__")
+        # scratch.set_scratch(True)
         scratch.run_command("insert_content_to_view", {"string": p.stdout})
 
 
