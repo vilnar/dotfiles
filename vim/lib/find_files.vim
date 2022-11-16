@@ -9,14 +9,8 @@ def CreateScratchByName(name: string)
 enddef
 
 def CreateFilesScratch()
-  var name = '__Files__'
-  var bufnumber = bufnr(name)
-  if bufnumber == -1
-    CreateScratchByName(name)
-  else
-    execute 'bdelete ' .. name
-    CreateScratchByName(name)
-  endif
+  var name = string(rand(srand(123456789)))
+  CreateScratchByName(name)
 enddef
 
 # Read from shell and move to new buffer
