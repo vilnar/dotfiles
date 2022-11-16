@@ -1,8 +1,12 @@
 vim9script
 
 # :help netrw
-g:loaded_netrw = 0
-g:loaded_netrwPlugin = 0
+# g:loaded_netrw = 0
+# g:loaded_netrwPlugin = 0
+
+
+# https://github.com/junegunn/vim-plug/issues/276
+# g:plug_shallow = 0
 
 g:php_special_functions = 0
 g:go_highlight_functions = 1
@@ -23,8 +27,9 @@ g:NERDTreeRemoveFileCmd = "gio trash "
 g:NERDTreeRemoveDirCmd = "gio trash "
 g:NERDTreeHijackNetrw = 0
 
+# fixed in patch 9.0.0665
 # vim9 fix issue https://github.com/preservim/nerdtree/issues/1321
-g:NERDTreeMinimalMenu = 1
+# g:NERDTreeMinimalMenu = 1
 
 
 # :help UltiSnips

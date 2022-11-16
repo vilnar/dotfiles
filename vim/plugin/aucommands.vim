@@ -10,11 +10,11 @@ augroup AutoSettingsFileType
 augroup END
 
 
-augroup FugitiveCustom
-  autocmd FileType fugitive setlocal bufhidden=
-  autocmd FileType git {
-    setlocal foldmethod=syntax
-    setlocal bufhidden=
-    setlocal buflisted
-  }
-augroup END
+# augroup FugitiveCustom
+#   autocmd FileType fugitive setlocal bufhidden=
+#   autocmd FileType git {
+#     setlocal foldmethod=syntax
+#     setlocal bufhidden=
+#     setlocal buflisted
+#   }
+# augroup END

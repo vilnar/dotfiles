@@ -19,5 +19,6 @@ command MarksList :enew | put = execute('marks')
 command ColorTest :help group-name
 command ScriptNames :enew | put = execute('scriptnames')
 
-# types fix
+# type fix
 command Vs :vs
+command Wq :wq
