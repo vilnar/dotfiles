@@ -65,12 +65,12 @@ class MarkdownViewHtmlListener(sublime_plugin.EventListener):
                 # re-execute markdown conversion
                 # TODO: check if browser still opened and reopen it if needed
                 view.run_command('markdown_view_html', {'target': 'disk'})
-                print('{} User/markdown.py updated file: {}'.format(PLUGIN_PATH, html))
+                print('{} updated file: {}'.format(PLUGIN_PATH, html))
 
     def on_close(self, view):
         if is_markdown(view):
             html = get_temp_preview_path(view)
             if os.path.isfile(html):
                 os.remove(html)
-                print("{} User/markdown.py remove file: {}".format(PLUGIN_PATH, html))
+                print("{} remove file: {}".format(PLUGIN_PATH, html))
                 return

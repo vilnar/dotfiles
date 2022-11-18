@@ -22,8 +22,8 @@ enddef
 def GenerateHtml()
   execute ':w!'
   execute ':w! ' .. GetMarkdownTmpPath()
-  # execute 'Start pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' .. GetHtmlTmpPath() .. ' ' .. GetMarkdownTmpPath()
-  execute 'AsyncRun -pos=hide pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' .. GetHtmlTmpPath() .. ' ' .. GetMarkdownTmpPath()
+  execute 'Start! pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' .. GetHtmlTmpPath() .. ' ' .. GetMarkdownTmpPath()
+  # execute 'AsyncRun -pos=hide pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' .. GetHtmlTmpPath() .. ' ' .. GetMarkdownTmpPath()
 enddef
 
 def GenerateHtmlWithCheckRunPreview()
@@ -38,10 +38,10 @@ enddef
 
 def RunPreview()
   GenerateHtml()
-  # execute 'Start! firefox ' .. GetHtmlTmpPath() .. ' > /dev/null 2> /dev/null&'
   # wait generate html
   execute 'sleep 1'
-  execute 'AsyncRun -pos=hide firefox ' .. GetHtmlTmpPath() .. ' > /dev/null 2> /dev/null&'
+  execute 'Start! firefox ' .. GetHtmlTmpPath()
+  # execute 'AsyncRun -pos=hide firefox ' .. GetHtmlTmpPath() .. ' > /dev/null 2> /dev/null&'
 enddef
 command MarkdownPreview RunPreview()
 

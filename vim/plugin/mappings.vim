@@ -9,7 +9,6 @@ import "../lib/mouse.vim" as mouseLib
 import "../lib/settings.vim" as settingLib
 import "../lib/langs.vim" as langLib
 import "../lib/file.vim" as fileLib
-import "../lib/find_files.vim" as findFilesLib
 import "../lib/buffer.vim" as bufferLib
 import "../lib/whitespace.vim" as whitespaceLib
 
@@ -97,8 +96,15 @@ nnoremap \q :vim9cmd BufferCloseOthers<CR>
 
 
 # FIND FILE -----------------------------------------------------------------------------
-# nnoremap <Leader>ff :FilesBuffer !find * -not -path "./.git/*" -iname ""<left>
-# nnoremap <Leader>fu :FilesBuffer !find * -not -path "./.git/*" -name "<C-R><C-W>*"<left>
+def CreateScratch()
+  enew
+  setlocal buftype=nofile
+  setlocal bufhidden=hide
+  setlocal noswapfile
+enddef
+# Read from shell and move to new buffer
+command -nargs=* -complete=shellcmd FilesBuffer CreateScratch() | read <args>
+
 nnoremap <Leader>fp :vim9cmd FilesBuffer !find * -not -path "./.git/*" -iname "**"<left><left>
 vnoremap <Leader>fp y:vim9cmd FilesBuffer !find * -not -path "./.git/*" -path "*<C-R>"*"<left><left>
 

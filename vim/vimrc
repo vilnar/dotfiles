@@ -52,13 +52,13 @@ Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424
 Plug 'SirVer/ultisnips', { 'commit': 'e99fdf15cd55a4a8e0cb0a80a6810c1867a5c401' }
 Plug 'jparise/vim-graphql', { 'commit': '4bf5d33bda83117537aa3c117dee5b9b14fc9333' }
 Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f34bf6' }
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': '04d0b0223fd69984a07a641d0e228c0e9e534825' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': 'b55f5554871e548c9c00a49df7a92f980c0191c2' }
 Plug 'junegunn/fzf.vim', { 'commit': '9ceac718026fd39498d95ff04fa04d3e40c465d7' }
 Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2' }
 
 
 " async
-Plug 'skywind3000/asyncrun.vim', { 'commit': 'aa8a99e87e64276d52556f4d9d4f4a19afd37556' }
+" Plug 'skywind3000/asyncrun.vim', { 'commit': 'aa8a99e87e64276d52556f4d9d4f4a19afd37556' }
 Plug 'tpope/vim-dispatch', {'commit': '00e77d90452e3c710014b26dc61ea919bc895e92'}
 
 " format code (command example :'<,'>FormatLines)

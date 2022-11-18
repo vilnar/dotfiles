@@ -21,12 +21,19 @@ class GotoSelectionCommand(sublime_plugin.WindowCommand):
 
 
 class FindFilesByPartPathCommand(sublime_plugin.WindowCommand):
-    ignore_case = False
+    is_case_sensitive = False
 
-    def run(self, ignore_case = False):
-        self.ignore_case = ignore_case
+    def run(self, is_case_sensitive = False):
+        self.is_case_sensitive = is_case_sensitive
+
+        caption = "Enter file or folder part path name"
+        if self.is_case_sensitive:
+            caption += " (case sensitive)"
+        else:
+            caption += " (case ignore)"
+
         sublime.active_window().show_input_panel(
-            "Enter file or folder part path name",
+            caption,
             "",
             self.done,
             None,
@@ -38,7 +45,7 @@ class FindFilesByPartPathCommand(sublime_plugin.WindowCommand):
         folder = win.extract_variables().get("folder")
 
         case_option = '-iname'
-        if self.ignore_case == False:
+        if self.is_case_sensitive:
             case_option = '-name'
 
         p = subprocess.run([
