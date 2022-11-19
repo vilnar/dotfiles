@@ -15,6 +15,7 @@
     "SublimeLinter-contrib-staticcheck",
     "SublimeLinter-php",
     "Terminal",
+    "Text Marker",
     "TOML",
     "View Bookmarks",
   ],

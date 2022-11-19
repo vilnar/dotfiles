@@ -69,6 +69,7 @@ Plug 'google/vim-glaive', { 'commit': 'c17bd478c1bc358dddf271a13a4a025efb30514d'
 Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312cafc' }
 
 Plug 'gruvbox-community/gruvbox', { 'commit': '95b120a15d0765037d2836d04e3360c273caf111' }
+Plug 'azabiong/vim-highlighter', { 'commit': 'e0d7c6c5b2584eac0cbd92eb967e1f3a44cea0ab' }
 
 " Lint
 Plug 'dense-analysis/ale', { 'commit': 'e4b20544082ba019d8095cbc24ffab43b15e8fc0' }

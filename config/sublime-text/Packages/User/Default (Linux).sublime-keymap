@@ -278,4 +278,8 @@
   // View All Bookmarks
   { "keys": ["alt+b"], "command": "view_bookmarks" },
 
+  // Text Marker
+  { "keys": [ "alt+m" ], "command": "text_marker",  },
+  { "keys": [ "alt+\\" ], "command": "text_marker_clear" }
+
 ]
