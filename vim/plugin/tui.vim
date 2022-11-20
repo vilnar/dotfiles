@@ -37,21 +37,33 @@ augroup MyColors
     highlight CurSearch guifg=#1D2021 guibg=#fe8019
     hi link gitcommitSummary GruvboxYellow
   }
+  autocmd ColorScheme lunaperche {
+    if &background == "dark"
+      hi Cursor guifg=#ffffff guibg=#000000 gui=reverse cterm=reverse
+      highlight ExtraWhitespace guibg=#767676
+    endif
+  }
 augroup end
 
-g:gruvbox_invert_selection = 0
-g:gruvbox_italic = 0
-g:gruvbox_underline = 1
-g:gruvbox_contrast_light = "hard"
-g:gruvbox_contrast_dark = "hard"
-g:gruvbox_guisp_fallback = "bg" # fix spell colors
-g:gruvbox_vert_split = "bg1"
+# g:gruvbox_invert_selection = 0
+# g:gruvbox_italic = 0
+# g:gruvbox_underline = 1
+# g:gruvbox_contrast_light = "hard"
+# g:gruvbox_contrast_dark = "hard"
+# g:gruvbox_guisp_fallback = "bg" # fix spell colors
+# g:gruvbox_vert_split = "bg1"
+# set background=dark
+# colorscheme gruvbox
+
 set background=dark
-colorscheme gruvbox
+colorscheme lunaperche
 
 # set linebreak
 set showbreak=->
 set nowrap
+# set wrap
+# set linebreak   # wrap lines at convenient points
+# set breakindent # wrap lines such that vertical indent is not broken
 
 set history=1000
 set wildmenu wildmode=full

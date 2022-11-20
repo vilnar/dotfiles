@@ -8,6 +8,7 @@ esbenp.prettier-vscode
 geddski.macros
 golang.go
 gurumukhi.selected-lines-count
+hogashi.crontab-syntax-highlight
 kokororin.vscode-phpfmt
 mads-hartmann.bash-ide-vscode
 mblode.twig-language-2
@@ -15,7 +16,9 @@ mhutchie.git-graph
 mrmlnc.vscode-apache
 ms-vscode.cpptools
 ms-vscode.sublime-keybindings
+rust-lang.rust-analyzer
 ryu1kn.partial-diff
+ryu1kn.text-marker
 shardulm94.trailing-spaces
 sleistner.vscode-fileutils
 timonwong.shellcheck

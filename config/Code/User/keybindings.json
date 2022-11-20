@@ -194,5 +194,13 @@
         "key": "ctrl+shift+m",
         "command": "-workbench.actions.view.problems",
         "when": "workbench.panel.markers.view.active"
+    },
+    {
+        "key": "alt+m",
+        "command": "textmarker.toggleHighlight"
+    },
+    {
+        "key": "alt+\\",
+        "command": "textmarker.clearAllHighlight"
     }
 ]

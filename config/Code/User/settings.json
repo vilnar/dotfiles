@@ -160,12 +160,6 @@
                     }
                 },
                 {
-                    "scope": "meta.function entity.name.function",
-                    "settings": {
-                        "foreground": "#FFCB6B",
-                    }
-                },
-                {
                     "scope": "meta.function-call support.function",
                     "settings": {
                         "fontStyle": "italic"
@@ -367,12 +361,23 @@
     },
     "gitlens.views.branches.branches.layout": "list",
     "intelephense.diagnostics.run": "onSave",
-    "intelephense.environment.phpVersion": "7.1.0",
+    "intelephense.environment.phpVersion": "7.4.0",
     "intelephense.telemetry.enabled": false,
-    "intelephense.diagnostics.embeddedLanguages": false,
+    "intelephense.maxMemory": 1024,
     "debug.allowBreakpointsEverywhere": true,
     "lldb.launch.sourceLanguages": [
         "cpp",
         "rust"
     ],
+    "textmarker.enableTelemetry": false,
+    "textmarker.commandsOnContextMenu": {
+        "toggleHighlight": false,
+        "updateHighlight": false,
+        "goToNextHighlight": false,
+        "goToPreviousHighlight": false
+    },
+    "gitlens.telemetry.enabled": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
 }
