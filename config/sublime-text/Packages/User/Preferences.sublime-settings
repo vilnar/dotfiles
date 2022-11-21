@@ -16,7 +16,7 @@
   "adaptive_dividers": true,
   "gtk_client_side_window_decorations": true,
   "highlight_modified_tabs": true,
-  "color_scheme": "Monokai.sublime-color-scheme",
+  "color_scheme": "Mariana.sublime-color-scheme",
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
   "show_tab_close_buttons": true,
@@ -117,7 +117,7 @@
   "light_color_scheme": "Alabaster.sublime-color-scheme",
   "light_font_face": "Jetbrains Mono NL Light",
   "light_font_size": 13.5,
-  "dark_color_scheme": "Monokai.sublime-color-scheme",
+  "dark_color_scheme": "Mariana.sublime-color-scheme",
   "dark_font_face": "Jetbrains Mono NL",
   "dark_font_size": 13.5,
 

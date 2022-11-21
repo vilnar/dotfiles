@@ -1,8 +1,8 @@
 {
     "variables":
     {
-        "pink": "hsl(300, 30%, 68%)",
-        "blue5": "hsl(180, 36%, 54%)",
+        "blue": "hsl(190, 71%, 67%)",
+        "red2": "hsl(338, 85%, 56%)",
         "grey-custom1": "#cbccc6",
         "green-custom1": "#a6e22e",
         "beige-custom1": "#cccac2",
