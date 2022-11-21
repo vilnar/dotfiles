@@ -7,8 +7,6 @@
         "green-custom1": "#a6e22e",
         "beige-custom1": "#cccac2",
         "blue-custom1": "#5ccfe680",
-        // colors from molokai
-        // "yellow5": "#7E8E91",
     },
     "globals":
     {
@@ -69,6 +67,17 @@
             "name": "Comment2",
             "scope": "punctuation.definition.comment",
             "foreground": "var(yellow5)"
+        },
+
+        {
+            "name": "Don't highlight regex in string",
+            "scope": "string.quoted keyword.control.anchor.regexp, string.quoted keyword.operator.or.regexp, string.quoted keyword.operator.negation.regexp, string.quoted keyword.operator.quantifier.regexp, string.quoted constant.character.character-class.regexp, string.quoted constant.other.character-class.set.regexp, string.quoted meta.assertion.look-behind.regexp, string.quoted meta.assertion.look-ahead.regexp, string.quoted meta.assertion.no-capture-group.regexp, string.quoted punctuation.definition.group, string.quoted punctuation.definition.string.regex-delimiter, string.quoted punctuation.definition.character-class",
+            "foreground": "var(yellow)",
+        },
+        {
+            "name": "Don't highlight sql in string",
+            "scope": "source.sql.embedded, source.sql.embedded keyword, source.sql.embedded keyword.operator, source.sql.embedded keyword.operator.assignment, source.sql.embedded keyword.operator.word, source.sql.embedded keyword.operator.logical, source.sql.embedded storage, source.sql.embedded storage.type, source.sql.embedded constant, source.sql.embedded constant.other, source.sql.embedded constant.numeric, source.sql.embedded punctuation.separator, source.sql.embedded entity.name.function",
+            "foreground": "var(yellow)"
         },
     ]
 }

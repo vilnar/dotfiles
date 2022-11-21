@@ -4,7 +4,7 @@
         "blue-custom": "#5ccfe680",
         "gold-custom": "#ffcc00",
         "yellow-custom": "#f1fa8c",
-        "pink": "#d06567",
+        // "pink": "#d06567",
         "pink-original": "hsl(300, 30%, 68%)",
     },
     "globals":
