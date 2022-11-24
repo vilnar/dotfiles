@@ -18,8 +18,10 @@ command -bang -nargs=* MyBufferTags call RunMyBufferTags(<q-args>, false)
 
 
 def RunMyFiles(query: string)
-  # hide preview window
-  var spec = {"options": ['--preview-window', 'hidden']}
+  # var window = 'hidden'
+  var window = '+{2}-/2'
+  # var window = 'down'
+  var spec = {"options": ['--preview-window', window]}
   call fzf#vim#files(query, fzf#vim#with_preview(spec), 0)
 enddef
 command -bang -nargs=? -complete=dir MyFiles call RunMyFiles(<q-args>)
