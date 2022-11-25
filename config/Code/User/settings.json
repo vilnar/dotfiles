@@ -118,7 +118,7 @@
 
     "editor.tokenColorCustomizations": {
         "[Default Light+]": {
-            "textMateRules":[
+            "textMateRules": [
                 {
                     "scope": "constant.character.escape",
                     "settings": {
@@ -128,7 +128,7 @@
             ]
         },
         "[Default Dark+]": {
-            "textMateRules":[
+            "textMateRules": [
                 {
                     "scope": "constant.character.escape",
                     "settings": {
@@ -136,25 +136,19 @@
                     }
                 },
                 {
-                    "scope": "meta.embedded string keyword",
+                    "scope": "string source.sql keyword, string source.sql keyword.operator, string source.sql constant.numeric",
                     "settings": {
                         "foreground": "#ce9178"
                     }
                 },
                 {
-                    "scope": "meta.embedded.block string variable punctuation.definition.variable",
+                    "scope": "string variable punctuation.definition.variable",
                     "settings": {
                         "foreground": "#9CDCFE"
                     }
                 },
                 {
-                    "scope": "meta.embedded.block string punctuation.definition.variable",
-                    "settings": {
-                        "foreground": "#D4D4D4"
-                    }
-                },
-                {
-                    "scope": "meta.embedded.block string punctuation.definition.arguments",
+                    "scope": "string punctuation.definition.variable, string punctuation.definition.arguments",
                     "settings": {
                         "foreground": "#D4D4D4"
                     }
@@ -380,4 +374,13 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+    },
+    "phpfmt.passes": [
+        "ShortArray"
+    ]
 }

@@ -4,7 +4,6 @@ bmewburn.vscode-intelephense-client
 bradymholt.pgformatter
 CucumberOpen.cucumber-official
 eamodio.gitlens
-esbenp.prettier-vscode
 geddski.macros
 golang.go
 gurumukhi.selected-lines-count

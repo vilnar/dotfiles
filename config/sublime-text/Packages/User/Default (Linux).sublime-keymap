@@ -1,4 +1,6 @@
 [
+  { "keys": ["ctrl+v"], "command": "paste_and_indent" },
+  { "keys": ["ctrl+shift+v"], "command": "paste" },
   { "keys": ["ctrl+7"], "command": "toggle_side_bar" },
   { "keys": ["ctrl+8"], "command": "reveal_in_side_bar" },
   { "keys": ["alt+s"], "command": "save_all" },

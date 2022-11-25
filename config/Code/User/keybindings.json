@@ -22,7 +22,7 @@
     {
         "key": "ctrl+alt+l",
         "command": "macros.copyWithoutNewLine",
-        "when": "editorTextFocus && !editorHasSelection"
+        "when": "editorTextFocus"
     },
     {
         "key": "meta+tab",
@@ -202,5 +202,10 @@
     {
         "key": "alt+\\",
         "command": "textmarker.clearAllHighlight"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "-bookmarks.jumpToNext",
+        "when": "editorTextFocus"
     }
 ]

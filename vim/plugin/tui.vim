@@ -49,6 +49,9 @@ g:gruvbox_vert_split = "bg1"
 set background=dark
 colorscheme gruvbox
 
+# colorscheme default
+# set background=dark
+
 
 # set linebreak
 set showbreak=->
