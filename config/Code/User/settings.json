@@ -175,7 +175,8 @@
     "search.quickOpen.includeHistory": false,
     "search.searchOnType": false,
     "phpactor.path": "/usr/local/bin/phpactor",
-    "php.executablePath": "/usr/bin/php",
+    // "php.executablePath": "/usr/bin/php",
+    "php.executablePath": "/usr/local/bin/php",
     "bashIde.highlightParsingErrors": false,
     "files.autoSave": "onWindowChange",
     "editor.autoClosingBrackets": "never",
@@ -358,7 +359,6 @@
     "intelephense.environment.phpVersion": "7.4.0",
     "intelephense.telemetry.enabled": false,
     "intelephense.maxMemory": 1024,
-    "debug.allowBreakpointsEverywhere": true,
     "lldb.launch.sourceLanguages": [
         "cpp",
         "rust"
@@ -378,9 +378,18 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[php]": {
-        "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+        // "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+        "editor.defaultFormatter": "junstyle.php-cs-fixer"
     },
     "phpfmt.passes": [
         "ShortArray"
-    ]
+    ],
+    "editor.stickyScroll.enabled": false,
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "php-cs-fixer.lastDownload": 1669458602856,
+    "php-cs-fixer.rules": "@PSR12,array_syntax,cast_spaces",
+    "php.suggest.basic": true,
+    "php.validate.enable": true,
+    "php.memoryLimit": "2048M",
+    "php-intellisense.trace.server": "off",
 }
