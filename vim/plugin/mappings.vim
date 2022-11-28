@@ -18,13 +18,14 @@ noremap <Leader>p "+p
 noremap <Leader>P "+P
 # noremap <Leader>d "+d
 
-
 # Easier moving of code blocks
-vnoremap < <gv
-vnoremap > >gv
+# use > and repeat by .
+# vnoremap < <gv
+# vnoremap > >gv
 
 # don't use Ex mode, use Q for formatting
-nnoremap Q gq
+nnoremap Q <nop>
+nnoremap gq <nop>
 nnoremap <C-LeftMouse> <nop>
 
 

@@ -1,4 +1,4 @@
 {
-  "rules": "@PSR12,@Symfony,array_syntax,cast_spaces",
+  "rules": "@PSR12,@Symfony,array_syntax,array_indentation,cast_spaces",
   "path": "/usr/local/bin/php-cs-fixer",
 }

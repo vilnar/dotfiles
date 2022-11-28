@@ -67,6 +67,12 @@ g:ale_linters_explicit = 1
 g:ale_sign_column_always = 0
 
 
+g:php_cs_fixer_enable_default_mapping = 0
+g:php_cs_fixer_rules = "@PSR12,@Symfony,array_syntax,array_indentation,cast_spaces"
+g:php_cs_fixer_php_path = "/usr/local/bin/php"
+g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer"
+command PhpCsFixerFixFile :call PhpCsFixerFixFile()
+
 
 # LSP settings --------------------------------------------------
 # g:lsp_auto_enable = 0

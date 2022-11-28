@@ -387,7 +387,7 @@
     "editor.stickyScroll.enabled": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
     "php-cs-fixer.lastDownload": 1669458602856,
-    "php-cs-fixer.rules": "@PSR12,array_syntax,cast_spaces",
+    "php-cs-fixer.rules": "@PSR12,@Symfony,array_syntax,array_indentation,cast_spaces",
     "php.suggest.basic": true,
     "php.validate.enable": true,
     "php.memoryLimit": "2048M",
