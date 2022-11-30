@@ -1,14 +1,14 @@
 alefragnani.Bookmarks
 alefragnani.read-only-indicator
-bmewburn.vscode-intelephense-client
 bradymholt.pgformatter
 CucumberOpen.cucumber-official
+dantleech.vscode-phpactor
 eamodio.gitlens
 geddski.macros
 golang.go
 gurumukhi.selected-lines-count
 hogashi.crontab-syntax-highlight
-kokororin.vscode-phpfmt
+junstyle.php-cs-fixer
 mads-hartmann.bash-ide-vscode
 mblode.twig-language-2
 mhutchie.git-graph
@@ -26,4 +26,5 @@ undefined_publisher.user-commands
 wmaurer.change-case
 xaver.clang-format
 xdebug.php-debug
+zobo.php-intellisense
 zxh404.vscode-proto3

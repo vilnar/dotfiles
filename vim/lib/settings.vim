@@ -23,8 +23,4 @@ if !exists("g:ReloadConfigs")
     echomsg 'User configuration is overloaded!'
   enddef
 endif
-command ReloadConfigs ReloadConfigs()
-
-
-
-
+command ReloadConfigs g:ReloadConfigs()

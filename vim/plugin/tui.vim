@@ -37,6 +37,11 @@ augroup MyColors
     highlight CurSearch guifg=#1D2021 guibg=#fe8019
     hi link gitcommitSummary GruvboxYellow
   }
+  autocmd ColorScheme afterglow {
+    highlight ExtraWhitespace guibg=#797979
+    highlight phpIdentifier guifg=#d6d6d6 gui=NONE
+    highlight CurSearch guifg=#1D2021 guibg=#fe8019
+  }
 augroup end
 
 g:gruvbox_invert_selection = 0
@@ -48,6 +53,7 @@ g:gruvbox_guisp_fallback = "bg" # fix spell colors
 g:gruvbox_vert_split = "bg1"
 set background=dark
 colorscheme gruvbox
+# colorscheme afterglow
 
 # colorscheme default
 # set background=dark

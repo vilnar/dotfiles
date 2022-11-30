@@ -69,7 +69,7 @@
         "run": false
     },
     "go.testExplorer.enable": false,
-    "go.useLanguageServer": true,
+    "go.useLanguageServer": false,
     "gopls": {
         "ui.documentation.hoverKind": "FullDocumentation",
         "ui.documentation.linksInHover": false,
@@ -385,9 +385,11 @@
         "ShortArray"
     ],
     "editor.stickyScroll.enabled": false,
+    "php-cs-fixer.autoFixByBracket": false,
+    "php-cs-fixer.autoFixBySemicolon": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
     "php-cs-fixer.lastDownload": 1669458602856,
-    "php-cs-fixer.rules": "@PSR12,@Symfony,array_syntax,array_indentation,cast_spaces",
+    "php-cs-fixer.rules": "@PSR12,@PhpCsFixer,@Symfony,array_syntax,array_indentation",
     "php.suggest.basic": true,
     "php.validate.enable": true,
     "php.memoryLimit": "2048M",

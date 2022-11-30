@@ -207,5 +207,10 @@
         "key": "ctrl+alt+l",
         "command": "-bookmarks.jumpToNext",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-acceptSelectedSuggestion",
+        "when": "acceptSuggestionOnEnter && suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
     }
 ]

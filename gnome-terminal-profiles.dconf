@@ -1,6 +1,6 @@
 [/]
-default='56a02b7c-1b18-4d90-913a-5e86c57a07e0'
-list=['10464e01-b6fc-4c33-a20a-4cd5e80ba9c6', '9c7c1f0f-dab1-48c0-abc3-7c960eccdf97', 'a1a61a29-d8ab-4f45-abe5-da3f527ccce1', 'c7a4849e-c0da-4d43-a04e-44d1b1a0c0e0', '3c74b490-8725-4149-b360-9e1c263cdbd6', 'f3a9cb9c-473c-47fa-828b-5ab5fdda43f3', '2cdaf2ca-f744-48a0-b349-7405e2689c2b', '56a02b7c-1b18-4d90-913a-5e86c57a07e0', '1986772b-3bd6-44e6-9a28-7dda6319e91c', 'bba8d6b1-18fb-4c6b-9cdc-a35827263c00', '58bc5d39-1873-445a-b188-ce9d32d791fe', '4f79be98-b093-435d-8004-170466b60f5d', '5fef72eb-142e-4dc3-9545-9a14f19a49d5', '49031345-87e8-4f84-a2cd-2538985a54ab']
+default='b53bf4f3-7470-4e3c-9880-f2e2694363ed'
+list=['10464e01-b6fc-4c33-a20a-4cd5e80ba9c6', '9c7c1f0f-dab1-48c0-abc3-7c960eccdf97', 'a1a61a29-d8ab-4f45-abe5-da3f527ccce1', 'c7a4849e-c0da-4d43-a04e-44d1b1a0c0e0', '3c74b490-8725-4149-b360-9e1c263cdbd6', 'f3a9cb9c-473c-47fa-828b-5ab5fdda43f3', '2cdaf2ca-f744-48a0-b349-7405e2689c2b', '56a02b7c-1b18-4d90-913a-5e86c57a07e0', '1986772b-3bd6-44e6-9a28-7dda6319e91c', 'bba8d6b1-18fb-4c6b-9cdc-a35827263c00', '58bc5d39-1873-445a-b188-ce9d32d791fe', '4f79be98-b093-435d-8004-170466b60f5d', '5fef72eb-142e-4dc3-9545-9a14f19a49d5', '49031345-87e8-4f84-a2cd-2538985a54ab', '46bb6b12-2b6f-4915-aff4-1efcafcd5988', 'b53bf4f3-7470-4e3c-9880-f2e2694363ed']
 
 [:10464e01-b6fc-4c33-a20a-4cd5e80ba9c6]
 audible-bell=false
@@ -89,6 +89,29 @@ use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
 visible-name='alabaster'
+
+[:46bb6b12-2b6f-4915-aff4-1efcafcd5988]
+audible-bell=false
+background-color='rgb(51,51,51)'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cell-height-scale=1.0
+cell-width-scale=1.0
+cursor-background-color='rgb(255,255,255)'
+cursor-blink-mode='off'
+cursor-colors-set=true
+cursor-foreground-color='rgb(29,32,33)'
+default-size-columns=100
+foreground-color='rgb(235,219,178)'
+highlight-background-color='rgb(102,92,84)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(235,219,178)'
+palette=['rgb(127,127,140)', 'rgb(204,36,29)', 'rgb(152,151,26)', 'rgb(215,153,33)', 'rgb(69,133,136)', 'rgb(177,98,134)', 'rgb(104,157,106)', 'rgb(208,208,208)', 'rgb(146,131,116)', 'rgb(251,73,52)', 'rgb(184,187,38)', 'rgb(250,189,47)', 'rgb(131,165,152)', 'rgb(211,134,155)', 'rgb(142,192,124)', 'rgb(235,219,178)']
+text-blink-mode='never'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='desert'
 
 [:49031345-87e8-4f84-a2cd-2538985a54ab]
 audible-bell=false
@@ -250,6 +273,29 @@ use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
 visible-name='jellybeans'
+
+[:b53bf4f3-7470-4e3c-9880-f2e2694363ed]
+audible-bell=false
+background-color='rgb(26,26,26)'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cell-height-scale=1.0
+cell-width-scale=1.0
+cursor-background-color='rgb(208,208,208)'
+cursor-blink-mode='off'
+cursor-colors-set=true
+cursor-foreground-color='rgb(26,26,26)'
+default-size-columns=100
+foreground-color='rgb(208,208,208)'
+highlight-background-color='rgb(238,203,139)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(35,35,35)'
+palette=['rgb(40,40,40)', 'rgb(172,65,66)', 'rgb(126,141,80)', 'rgb(229,181,102)', 'rgb(108,153,186)', 'rgb(158,78,133)', 'rgb(125,213,207)', 'rgb(208,208,208)', 'rgb(80,80,80)', 'rgb(172,65,66)', 'rgb(126,141,80)', 'rgb(229,181,102)', 'rgb(108,153,186)', 'rgb(158,78,133)', 'rgb(125,213,207)', 'rgb(245,245,245)']
+text-blink-mode='never'
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='afterglow'
 
 [:bba8d6b1-18fb-4c6b-9cdc-a35827263c00]
 audible-bell=false
