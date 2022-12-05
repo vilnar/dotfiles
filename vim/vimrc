@@ -56,6 +56,7 @@ Plug 'idanarye/vim-merginal', { 'commit': '8ec5976aa4bd647c64504ff535eb06a8b709b
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
 Plug 'justinmk/vim-dirvish', { 'commit': '81b40878f286f370df2a2b3a52c4d860643d2142' }
+Plug 'kristijanhusak/vim-dirvish-git', { 'commit': '1d938c826503059660d89f186d2e8affc686a0e8' }
 
 Plug 'SirVer/ultisnips', { 'commit': 'e99fdf15cd55a4a8e0cb0a80a6810c1867a5c401' }
 Plug 'jparise/vim-graphql', { 'commit': '4bf5d33bda83117537aa3c117dee5b9b14fc9333' }
