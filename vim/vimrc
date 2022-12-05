@@ -34,6 +34,11 @@ xnoremap <space> <nop>
 let mapleader="\<Space>"
 
 
+
+if has('syntax') && has('eval')
+  packadd! matchit
+endif
+
 call plug#begin()
 Plug 'tpope/vim-commentary', { 'commit': 'e87cd90dc09c2a203e13af9704bd0ef79303d755' }
 Plug 'tpope/vim-surround', { 'commit': '3d188ed2113431cf8dac77be61b842acb64433d9' }
@@ -50,6 +55,7 @@ Plug 'AndrewRadev/linediff.vim', { 'commit': 'c627858c6dd280221df032bbe7f3899ec7
 Plug 'idanarye/vim-merginal', { 'commit': '8ec5976aa4bd647c64504ff535eb06a8b709b051' }
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
+Plug 'justinmk/vim-dirvish', { 'commit': '81b40878f286f370df2a2b3a52c4d860643d2142' }
 
 Plug 'SirVer/ultisnips', { 'commit': 'e99fdf15cd55a4a8e0cb0a80a6810c1867a5c401' }
 Plug 'jparise/vim-graphql', { 'commit': '4bf5d33bda83117537aa3c117dee5b9b14fc9333' }

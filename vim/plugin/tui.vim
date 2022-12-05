@@ -63,8 +63,8 @@ colorscheme gruvbox
 set showbreak=->
 set nowrap
 # set wrap
-# set linebreak   # wrap lines at convenient points
-# set breakindent # wrap lines such that vertical indent is not broken
+set linebreak   # wrap lines at convenient points
+set breakindent # wrap lines such that vertical indent is not broken
 
 set history=1000
 set wildmenu wildmode=full

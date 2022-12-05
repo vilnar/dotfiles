@@ -11,6 +11,7 @@ endif
 if executable('sort')
   command SortThis :%!sort
 endif
+command SortUniqThis :sort u
 
 command HexRead :execute ':%!xxd' | setlocal filetype=xxd
 command HexWrite :execute ':%!xxd -r' | setlocal binary | setlocal filetype=xxd
