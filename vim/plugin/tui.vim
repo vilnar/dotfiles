@@ -42,18 +42,35 @@ augroup MyColors
     highlight phpIdentifier guifg=#d6d6d6 gui=NONE
     highlight CurSearch guifg=#1D2021 guibg=#fe8019
   }
+  autocmd ColorScheme zenburn {
+    highlight CurSearch guifg=#0f0f0f guibg=#f8f893
+  }
 augroup end
 
-g:gruvbox_invert_selection = 0
-g:gruvbox_italic = 0
-g:gruvbox_underline = 1
-g:gruvbox_contrast_light = "hard"
-g:gruvbox_contrast_dark = "hard"
-g:gruvbox_guisp_fallback = "bg" # fix spell colors
-g:gruvbox_vert_split = "bg1"
-set background=dark
-colorscheme gruvbox
+
+# g:gruvbox_invert_selection = 0
+# g:gruvbox_italic = 0
+# g:gruvbox_underline = 1
+# g:gruvbox_contrast_light = "hard"
+# g:gruvbox_contrast_dark = "hard"
+# g:gruvbox_guisp_fallback = "bg" # fix spell colors
+# g:gruvbox_vert_split = "bg1"
+# set background=dark
+# colorscheme gruvbox
 # colorscheme afterglow
+
+g:zenburn_alternate_Visual = 1
+g:zenburn_high_Contrast = 1
+g:zenburn_disable_Label_underline = 1
+colorscheme zenburn
+
+# different color depending on focus
+# hi NormalNC guibg=#1f1f1f
+hi NormalNC guibg=#3f3f3f
+augroup WinBg
+    au WinEnter * setl wincolor=
+    au WinLeave * setl wincolor=NormalNC
+augroup end
 
 # colorscheme default
 # set background=dark

@@ -233,8 +233,9 @@ nnoremap <leader>9 @:
 
 
 # PLUGINS -----------------------------------------------------------------------------
-nnoremap <leader>nt :NERDTreeToggle<cr>
-nnoremap <leader>nf :NERDTreeFind<cr>
+nnoremap <leader>e :Dirvish<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
 
 g:UltiSnipsExpandTrigger = "<tab>"
 # list all snippets for current filetype

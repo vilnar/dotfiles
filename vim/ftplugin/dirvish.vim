@@ -5,7 +5,7 @@ def CopyAbsolutePathUnderCursor()
   @+ = yanked
   echo 'Copy absolute path ' .. yanked
 enddef
-nnoremap <buffer> yy :vim9cmd <SID>CopyAbsolutePathUnderCursor()<CR>
+nnoremap <buffer> ya :vim9cmd <SID>CopyAbsolutePathUnderCursor()<CR>
 
 
 def CopyRelativePathUnderCursor()
@@ -39,3 +39,16 @@ if !exists('g:OpenTerminalUnderCursor')
   enddef
 endif
 nnoremap <buffer> yt :vim9cmd <SID>OpenTerminalUnderCursor()<CR>
+
+if !exists('g:OpenExplorerUnderCursor')
+  def g:OpenExplorerUnderCursor()
+    var path = trim(getline('.'))
+    if !isdirectory(path)
+      echoerr "Not found directory: " .. path
+      return
+    endif
+    execute 'Dispatch nautilus ' .. path
+    echo 'Open explorer in ' .. path
+  enddef
+endif
+nnoremap <buffer> ye :vim9cmd <SID>OpenExplorerUnderCursor()<CR>
