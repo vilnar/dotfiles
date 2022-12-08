@@ -43,7 +43,10 @@ augroup MyColors
     highlight CurSearch guifg=#1D2021 guibg=#fe8019
   }
   autocmd ColorScheme zenburn {
+    highlight ExtraWhitespace guibg=#797979
     highlight CurSearch guifg=#0f0f0f guibg=#f8f893
+    # hi NormalNC guibg=#1f1f1f
+    hi NormalNC guibg=#3f3f3f
   }
 augroup end
 
@@ -65,11 +68,9 @@ g:zenburn_disable_Label_underline = 1
 colorscheme zenburn
 
 # different color depending on focus
-# hi NormalNC guibg=#1f1f1f
-hi NormalNC guibg=#3f3f3f
 augroup WinBg
-    au WinEnter * setl wincolor=
-    au WinLeave * setl wincolor=NormalNC
+    autocmd WinEnter,BufEnter * setlocal wincolor=
+    autocmd WinLeave,BufLeave * setlocal wincolor=NormalNC
 augroup end
 
 # colorscheme default
