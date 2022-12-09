@@ -20,7 +20,7 @@
   "theme": "Adaptive.sublime-theme",
   "overlay_scroll_bars": "disabled",
   "show_tab_close_buttons": true,
-  "show_line_column": "compact",
+  "show_line_column": "enabled",
   "hide_new_tab_button": false,
 
   // draw

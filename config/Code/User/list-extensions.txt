@@ -1,5 +1,6 @@
 alefragnani.Bookmarks
 alefragnani.read-only-indicator
+bmewburn.vscode-intelephense-client
 bradymholt.pgformatter
 CucumberOpen.cucumber-official
 dantleech.vscode-phpactor
@@ -9,10 +10,9 @@ golang.go
 gurumukhi.selected-lines-count
 hogashi.crontab-syntax-highlight
 junstyle.php-cs-fixer
-mads-hartmann.bash-ide-vscode
 mblode.twig-language-2
 mhutchie.git-graph
-mrmlnc.vscode-apache
+mikestead.dotenv
 ms-vscode.cpptools
 ms-vscode.sublime-keybindings
 rust-lang.rust-analyzer
@@ -20,9 +20,13 @@ ryu1kn.partial-diff
 ryu1kn.text-marker
 shardulm94.trailing-spaces
 sleistner.vscode-fileutils
+tamasfe.even-better-toml
 timonwong.shellcheck
 twxs.cmake
+undefined_publisher.generic-conf
+undefined_publisher.generic-plain-text
 undefined_publisher.user-commands
+vadimcn.vscode-lldb
 wmaurer.change-case
 xaver.clang-format
 xdebug.php-debug

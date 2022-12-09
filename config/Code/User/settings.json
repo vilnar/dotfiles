@@ -414,4 +414,8 @@
     "php.memoryLimit": "2048M",
     "php-intellisense.trace.server": "off",
     "editor.unicodeHighlight.ambiguousCharacters": false,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
 }
