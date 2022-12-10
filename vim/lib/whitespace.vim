@@ -27,14 +27,3 @@ def ToggleWhitespaceMatch(mode: string)
     w:whitespace_match_number = matchadd('ExtraWhitespace', pattern)
   endif
 enddef
-
-
-def ToggleListChars()
-  if &listchars == "tab:> ,space:.,trail:*,precedes:<,extends:>,eol:$"
-    set listchars=tab:\ \ ,precedes:<,extends:>
-    echomsg 'set simple listchars'
-  else
-    set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
-    echomsg 'set extended listchars'
-  endif
-enddef
