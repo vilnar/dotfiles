@@ -17,9 +17,9 @@
     show-files-in-commit = diff-tree --no-commit-id --name-only -r
     tagsort = tag -l --sort=v:refname
     last-before-merge = log HEAD@{1} -1
-    review-main = "!vim -c 'G diff main'"
-    review-master = "!vim -c 'G diff master'"
-    review-dev = "!vim -c 'G diff dev'"
+    review-main = "!git-cola diff HEAD..main"
+    review-master = "!git-cola diff HEAD..master"
+    review-dev = "!git-cola diff HEAD..dev"
 [core]
     editor = vim
 [diff]

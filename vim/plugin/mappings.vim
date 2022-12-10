@@ -349,16 +349,3 @@ nnoremap ,p :ALENextWrap<CR>
 #   "eval_visual": "<Leader>e",
 # }
 
-# nnoremap <Leader><F2> <Plug>VimspectorStepOver
-# nnoremap <Leader><F3> <Plug>VimspectorStepInto
-# nnoremap <Leader><F4> <Plug>VimspectorStepOut
-
-# nnoremap <Leader><F5> :call vimspector#Launch()<CR>
-# nnoremap <Leader><F6> :call vimspector#Reset()<CR>
-# nnoremap <Leader><F7> <Plug>VimspectorRestart
-# nnoremap <Leader><F9> :call vimspector#Continue()<CR>
-
-# nnoremap <Leader><F10> :call vimspector#ToggleBreakpoint()<CR>
-# nnoremap <Leader><F11> :call vimspector#ClearBreakpoints()<CR>
-# nnoremap <Leader><F12> <Plug>VimspectorBreakpoints
-

@@ -81,7 +81,7 @@
 (defalias 'gst 'magit-status)
 (defalias 'gblame 'magit-blame)
 (defalias 'glog 'magit-log-current)
-(defalias 'gdiff 'magit-ediff-compare)
+(defalias 'gdiff 'magit-diff-range)
 (defalias 'gsub 'magit-submodule-update-all)
 (defalias 'gbcheckout 'magit-branch-checkout)
 (defalias 'gshowcommit 'magit-diff-show-or-scroll-up)
