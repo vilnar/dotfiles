@@ -1,0 +1,5 @@
+(defun yr:json-jq-format-buffer ()
+  (interactive)
+  (let ((begin (if mark-active (min (point) (mark)) (point-min)))
+	(end (if mark-active (max (point) (mark)) (point-max))))
+    (shell-command-on-region begin end "jq" (current-buffer) t)))

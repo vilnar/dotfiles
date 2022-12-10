@@ -1,0 +1,11 @@
+auto-save-list/
+autosaves/
+backups/
+eln-cache/
+elpa/
+games/
+transient/
+url/
+history
+projectile-bookmarks.eld
+projectile.cache

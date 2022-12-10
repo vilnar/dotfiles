@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: prepare print_r() for console
+# key: ddco
+# --
+echo PHP_EOL;
+print_r(${1:$var});
+echo PHP_EOL;
+exit('debug-console');

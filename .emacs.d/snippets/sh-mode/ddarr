@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: debug array
+# key: ddarr
+# --
+printf '%s\n' "\${${1:array}[@]}

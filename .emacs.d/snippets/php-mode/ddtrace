@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: stack trace debug
+# key: ddtrace
+# --
+var_dump((new \Exception())->getTraceAsString());

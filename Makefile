@@ -111,3 +111,10 @@ import_vscode_extensions:
 clear_vscode:
 	rm ~/.config/Code/User/settings.json
 	rm ~/.config/Code/User/keybindings.json
+
+install_emacs: clear_emacs
+	@echo Place emacs config files
+	ln -sf `pwd`/.emacs.d   ~/.emacs.d
+
+clear_emacs:
+	rm -Rf ~/.emacs.d

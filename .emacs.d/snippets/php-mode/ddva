@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: prepare var_dump() exit
+# key: ddva
+# --
+echo '<pre>';
+var_dump(${1:$var});
+echo '</pre>';
+exit('debug');

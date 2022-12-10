@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: prepare print_r() exit
+# key: ddpr
+# --
+echo '<pre>';
+print_r(${1:$var});
+echo '</pre>';
+exit('debug');
