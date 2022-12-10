@@ -84,7 +84,6 @@ install_sublime_text: clear_sublime_text
 	ln -sf `pwd`/config/sublime-text/Packages/Dictionaries   ~/.config/sublime-text/Packages/Dictionaries
 	ln -sf `pwd`/config/sublime-text/Packages/Markdown   ~/.config/sublime-text/Packages/Markdown
 	ln -sf `pwd`/config/sublime-text/Packages/PHP   ~/.config/sublime-text/Packages/PHP
-	# TODO: add fork packages FileDiffs, Tab Filter
 
 clear_sublime_text:
 	rm -Rf ~/.config/sublime-text/Packages/User
@@ -114,7 +113,7 @@ clear_vscode:
 
 install_emacs: clear_emacs
 	@echo Place emacs config files
-	ln -sf `pwd`/.emacs.d   ~/.emacs.d
+	ln -sf `pwd`/emacs.d   ~/.emacs.d
 
 clear_emacs:
 	rm -Rf ~/.emacs.d
