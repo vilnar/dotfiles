@@ -92,6 +92,7 @@ nnoremap [b <Plug>(buf-surf-back)
 # nnoremap <Leader>ee :edit ++enc= %<left><left>
 nnoremap \a :vim9cmd PathFileCopyAbsolute<CR>
 nnoremap \r :vim9cmd PathFileCopyRelative<CR>
+nnoremap \l :vim9cmd PathFileWithLine<CR>
 nnoremap \n :vim9cmd FileCopyNameAll<CR>
 nnoremap \q :vim9cmd BufferCloseOthers<CR>
 

@@ -1,30 +1,54 @@
 {
-    "workbench.iconTheme": "vs-minimal",
-    "workbench.settings.enableNaturalLanguageSearch": false,
-    "workbench.tree.renderIndentGuides": "none",
-
-    "window.zoomLevel": 1,
-    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
-    "files.associations": {
-        "untitled-*": "generic-plain-text"
-    },
-
-    "breadcrumbs.enabled": false,
-
-    "extensions.ignoreRecommendations": true,
-    "extensions.autoUpdate": false,
-
+    // update
     "update.mode": "none",
     "update.showReleaseNotes": false,
+    "extensions.ignoreRecommendations": true,
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+
+    // telemetry
+    "telemetry.telemetryLevel": "off",
+    "gitlens.telemetry.enabled": false,
+    "partialDiff.enableTelemetry": false,
+    "intelephense.telemetry.enabled": false,
+    "textmarker.enableTelemetry": false,
+    "settingsSync.keybindingsPerPlatform": false,
+    "json.schemaDownload.enable": false,
+    "npm.fetchOnlinePackageInfo": false,
 
     "security.workspace.trust.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
 
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.editorAssociations": {
+        "git-rebase-todo": "default"
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.editor.untitled.labelFormat": "content",
+    "files.associations": {
+        "untitled-*": "generic-plain-text"
+    },
+    "workbench.editor.languageDetection": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.historyBasedLanguageDetection": false,
+    "workbench.list.defaultFindMode": "highlight",
+    "workbench.enableExperiments": false,
+
+    "window.zoomLevel": 1,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}Code",
+    "window.autoDetectHighContrast": false,
+    "window.enableMenuBarMnemonics": false,
+    "window.restoreWindows": "none",
+
+    "files.simpleDialog.enable": false,
+    "files.hotExit": "onExitAndWindowClose",
+    "files.autoSave": "onWindowChange",
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+
     "editor.fontFamily": "'Jetbrains Mono NL', 'monospace', monospace",
     "editor.fontSize": 15,
     "editor.lineHeight": 1.3,
-    "terminal.integrated.fontFamily": "'Jetbrains Mono NL', 'monospace', monospace",
-    "terminal.integrated.fontSize": 14,
     "editor.minimap.enabled": false,
     "editor.codeLens": false,
     "editor.dragAndDrop": false,
@@ -32,90 +56,74 @@
     "editor.formatOnType": false,
 
     "editor.autoClosingDelete": "never",
-    "editor.formatOnSaveMode": "modificationsIfAvailable",
     "editor.cursorBlinking": "solid",
     "editor.cursorWidth": 4,
     "editor.occurrencesHighlight": true,
     "editor.guides.highlightActiveIndentation": false,
+    "editor.autoClosingBrackets": "never",
+    "breadcrumbs.enabled": false,
 
     "editor.hover.enabled": true,
     "editor.hover.sticky": true,
+
+    "editor.bracketPairColorization.enabled": false,
+    "editor.scrollbar.horizontal": "visible",
+    "editor.scrollbar.vertical": "visible",
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.stickyScroll.enabled": true,
+
     "search.useIgnoreFiles": false,
-
-    // golang
-    "go.buildOnSave": "off",
-    "go.lintOnSave": "package",
-    "[go]": {
-        "editor.formatOnSave": false,
-        "editor.codeActionsOnSave": {
-            "source.fixAll": false,
-            "source.organizeImports": false
-        },
-        "editor.tabSize": 8,
-    },
-    "go.editorContextMenuCommands": {
-        "toggleTestFile": false,
-        "addTags": false,
-        "testAtCursor": false,
-        "generateTestForFunction": false,
-        "addImport": false,
-        "testCoverage": false,
-        "playground": false,
-        "debugTestAtCursor": false
-    },
-    "go.playground": {
-        "openbrowser": false,
-        "share": false,
-        "run": false
-    },
-    "go.testExplorer.enable": false,
-    "go.useLanguageServer": false,
-    "gopls": {
-        "ui.documentation.hoverKind": "FullDocumentation",
-        "ui.documentation.linksInHover": false,
-        "ui.documentation.linkTarget": "",
-    },
-    "go.coverOnTestPackage": false,
-    "go.enableCodeLens": {
-        "runtest": false
-    },
-    "go.survey.prompt": false,
-    "go.testExplorer.concatenateMessages": false,
-    "go.testExplorer.showOutput": false,
-    "go.delveConfig": {
-        "showGlobalVariables": true,
-        "dlvLoadConfig": {
-            "followPointers": true,
-            "maxVariableRecurse": 5,
-            "maxStringLen": 1024,
-            "maxArrayValues": 400,
-            "maxStructFields": -1,
-            "showGlobalVariables": true,
-        }
-    },
-
-
-    // git
-    "macros": {
-        "copyWithoutNewLine": [
-            "cursorLineStart",
-            "cursorLineEndSelect",
-            "editor.action.clipboardCopyAction",
-        ]
-    },
-    "workbench.editorAssociations": {
-        "git-rebase-todo": "default"
-    },
-    "workbench.startupEditor": "newUntitledFile",
-    "terminal.explorerKind": "external",
-    "terminal.external.linuxExec": "gnome-terminal",
-    "workbench.editor.untitled.hint": "hidden",
-    "workbench.editor.languageDetection": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "telemetry.telemetryLevel": "off",
-    "files.simpleDialog.enable": false,
+    "search.quickOpen.includeHistory": false,
+    "search.searchOnType": false,
+    "search.searchEditor.defaultNumberOfContextLines": 3,
     "search.showLineNumbers": true,
 
+    // tree explorer ==============================================================
+    "workbench.iconTheme": "vs-minimal",
+    "explorer.compactFolders": false,
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.editor.revealIfOpen": true,
+    // display all files in explorer
+    "files.exclude": {
+        "**/.git": false,
+        "**/.DS_Store": false,
+        "**/.hg": false,
+        "**/.svn": false,
+        "**/CVS": false,
+        "**/Thumbs.db": false
+    },
+    "search.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        "**/Thumbs.db": true
+    },
+
+    // terminal ==============================================================
+    "terminal.integrated.fontFamily": "'Jetbrains Mono NL', 'monospace', monospace",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.altClickMovesCursor": false,
+    "terminal.integrated.shellIntegration.enabled": false,
+    "terminal.explorerKind": "external",
+    "terminal.external.linuxExec": "gnome-terminal",
+    "workbench.editor.autoLockGroups": {
+        "terminalEditor": false
+    },
+
+    // colors ==============================================================
+    "workbench.colorCustomizations": {
+        "[Default Light+]": {
+            "editorGutter.background": "#eff3f5"
+        },
+        "[Default Dark+]": {
+            "editorGutter.background": "#343739",
+            "editorCursor.foreground": "#F8F8F0"
+        }
+    },
     "editor.tokenColorCustomizations": {
         "[Default Light+]": {
             "textMateRules": [
@@ -164,44 +172,29 @@
                     "settings": {
                         "foreground": "#B5CEA8"
                     }
-                },
+                }
             ]
         }
     },
-    "workbench.colorCustomizations": {
-        "[Default Light+]": {
-            "editorGutter.background": "#eff3f5"
-        },
-        "[Default Dark+]": {
-            "editorGutter.background": "#343739",
-            "editorCursor.foreground": "#F8F8F0"
-        }
-    },
 
-    "search.quickOpen.includeHistory": false,
-    "search.searchOnType": false,
-    "phpactor.path": "/usr/local/bin/phpactor",
-    // "php.executablePath": "/usr/bin/php",
-    "php.executablePath": "/usr/local/bin/php",
-    "bashIde.highlightParsingErrors": false,
-    "files.autoSave": "onWindowChange",
-    "editor.autoClosingBrackets": "never",
-    "bookmarks.sideBar.expanded": true,
-    "workbench.editor.highlightModifiedTabs": true,
-    "workbench.editor.historyBasedLanguageDetection": false,
-    "workbench.tree.indent": 20,
-    "workbench.list.defaultFindMode": "highlight",
-    "explorer.compactFolders": false,
-    "partialDiff.commandsOnContextMenu": {
-        "diffSelectionWithClipboard": false,
-        "diffVisibleEditors": false,
-        "togglePreComparisonTextNormalizationRules": false
+    // git ==============================================================
+    "git.checkoutType": [
+        "local",
+        "tags"
+    ],
+    "git.confirmEmptyCommits": false,
+    "git.confirmForcePush": false,
+    "git.showActionButton": {
+        "publish": false,
+        "sync": false
     },
-    "partialDiff.enableTelemetry": false,
-    "search.searchEditor.defaultNumberOfContextLines": 3,
-    "settingsSync.keybindingsPerPlatform": false,
+    "git.showPushSuccessNotification": true,
+    "git.untrackedChanges": "separate",
+    "diffEditor.ignoreTrimWhitespace": false,
+    // git extensions
     "git-graph.repository.commits.initialLoad": 2000,
     "git-graph.repository.commits.loadMoreAutomatically": false,
+    "gitlens.plusFeatures.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.defaultDateStyle": "absolute",
     "gitlens.views.commits.showBranchComparison": false,
@@ -255,25 +248,10 @@
     "gitlens.hovers.avatars": false,
     "gitlens.hovers.pullRequests.enabled": false,
     "gitlens.hovers.currentLine.enabled": false,
-    "terminal.integrated.allowChords": false,
-    "terminal.integrated.altClickMovesCursor": false,
-    "debug.console.closeOnEnd": true,
-    "debug.internalConsoleOptions": "neverOpen",
     "gitlens.graph.statusBar.enabled": false,
-    "workbench.editor.autoLockGroups": {
-        "terminalEditor": false
-    },
-    "terminal.integrated.shellIntegration.enabled": false,
-    "window.autoDetectHighContrast": false,
-    "window.enableMenuBarMnemonics": false,
-    "window.restoreWindows": "none",
     "gitlens.blame.heatmap.enabled": false,
     "gitlens.currentLine.pullRequests.enabled": false,
     "gitlens.gitCommands.search.showResultsInSideBar": false,
-    "workbench.editor.untitled.labelFormat": "content",
-    "files.hotExit": "onExitAndWindowClose",
-    "trailing-spaces.logLevel": "none",
-    "trailing-spaces.showStatusBarMessage": false,
     "gitlens.fileAnnotations.command": "blame",
     "gitlens.hovers.annotations.enabled": false,
     "gitlens.statusBar.alignment": "left",
@@ -309,101 +287,87 @@
     "gitlens.codeLens.enabled": false,
     "gitlens.views.repositories.showRemotes": false,
     "gitlens.terminalLinks.enabled": false,
-    "editor.bracketPairColorization.enabled": false,
-    "editor.scrollbar.horizontal": "visible",
-    "editor.scrollbar.vertical": "visible",
-    "editor.copyWithSyntaxHighlighting": false,
-    "gitlens.plusFeatures.enabled": false,
-    "bookmarks.showCommandsInContextMenu": false,
-    "workbench.enableExperiments": false,
-    "json.schemaDownload.enable": false,
-    "extensions.autoCheckUpdates": false,
-    "npm.fetchOnlinePackageInfo": false,
-    "workbench.editor.revealIfOpen": true,
+    "gitlens.views.branches.branches.layout": "list",
+
+    // debug
+    "debug.console.closeOnEnd": true,
+    "debug.internalConsoleOptions": "neverOpen",
+
+    // langs ==============================================================
+    "go.buildOnSave": "off",
+    "go.lintOnSave": "package",
+    "[go]": {
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": false,
+            "source.organizeImports": false
+        },
+        "editor.tabSize": 8
+    },
+    "go.editorContextMenuCommands": {
+        "toggleTestFile": false,
+        "addTags": false,
+        "testAtCursor": false,
+        "generateTestForFunction": false,
+        "addImport": false,
+        "testCoverage": false,
+        "playground": false,
+        "debugTestAtCursor": false
+    },
+    "go.playground": {
+        "openbrowser": false,
+        "share": false,
+        "run": false
+    },
+    "go.testExplorer.enable": false,
+    "go.useLanguageServer": false,
+    "gopls": {
+        "ui.documentation.hoverKind": "FullDocumentation",
+        "ui.documentation.linksInHover": false,
+        "ui.documentation.linkTarget": ""
+    },
+    "go.coverOnTestPackage": false,
+    "go.enableCodeLens": {
+        "runtest": false
+    },
+    "go.survey.prompt": false,
+    "go.testExplorer.concatenateMessages": false,
+    "go.testExplorer.showOutput": false,
+    "go.delveConfig": {
+        "showGlobalVariables": true,
+        "dlvLoadConfig": {
+            "followPointers": true,
+            "maxVariableRecurse": 5,
+            "maxStringLen": 1024,
+            "maxArrayValues": 400,
+            "maxStructFields": -1,
+            "showGlobalVariables": true
+        }
+    },
     "go.inlayHints.constantValues": false,
     "go.inlayHints.parameterNames": false,
+
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    // display all files in explorer
-    "files.exclude": {
-        "**/.git": false,
-        "**/.DS_Store": false,
-        "**/.hg": false,
-        "**/.svn": false,
-        "**/CVS": false,
-        "**/Thumbs.db": false
-    },
-    "search.exclude": {
-        "**/.git": true,
-        "**/.DS_Store": true,
-        "**/.hg": true,
-        "**/.svn": true,
-        "**/CVS": true,
-        "**/Thumbs.db": true
-    },
-    "trailing-spaces.backgroundColor": "rgba(136,136,136,0.3)",
-    "trailing-spaces.borderColor": "rgba(67,67,67,0.15)",
-    "git.checkoutType": [
-        "local",
-        "tags"
-    ],
-    "git.confirmEmptyCommits": false,
-    "git.confirmForcePush": false,
-    "git.showActionButton": {
-        "publish": false,
-        "sync": false
-    },
-    "git.showPushSuccessNotification": true,
-    "git.untrackedChanges": "separate",
-    "phpactor.config": {
-        "language_server.diagnostics_on_update": false,
-        "language_server.diagnostics_on_save": true
-    },
-    "gitlens.views.branches.branches.layout": "list",
-    "intelephense.diagnostics.run": "onSave",
-    "intelephense.environment.phpVersion": "7.4.0",
-    "intelephense.telemetry.enabled": false,
-    "intelephense.maxMemory": 1024,
-    "lldb.launch.sourceLanguages": [
-        "cpp",
-        "rust"
-    ],
-    "textmarker.enableTelemetry": false,
-    "textmarker.commandsOnContextMenu": {
-        "toggleHighlight": false,
-        "updateHighlight": false,
-        "goToNextHighlight": false,
-        "goToPreviousHighlight": false
-    },
-    "gitlens.telemetry.enabled": false,
-    "[c]": {
-        "editor.detectIndentation": false,
-        "editor.insertSpaces": true,
-        "editor.tabSize": 8,
-        "editor.indentSize": 4,
-    },
     "[yaml]": {
-        "editor.indentSize": 2,
+        "editor.indentSize": 2
     },
     "[dockercompose]": {
-        "editor.indentSize": 2,
+        "editor.indentSize": 2
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features",
-        "editor.indentSize": 2,
+        "editor.indentSize": 2
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+
     "[php]": {
         // "editor.defaultFormatter": "kokororin.vscode-phpfmt"
         "editor.defaultFormatter": "junstyle.php-cs-fixer"
     },
-    "phpfmt.passes": [
-        "ShortArray"
-    ],
-    "editor.stickyScroll.enabled": true,
     "php-cs-fixer.autoFixByBracket": false,
     "php-cs-fixer.autoFixBySemicolon": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
@@ -411,11 +375,65 @@
     "php-cs-fixer.rules": "@PSR12,@PhpCsFixer,@Symfony,array_syntax,array_indentation",
     "php.suggest.basic": true,
     "php.validate.enable": true,
+    "intelephense.diagnostics.run": "onSave",
+    "intelephense.environment.phpVersion": "7.4.0",
+    "intelephense.maxMemory": 1024,
     "php.memoryLimit": "2048M",
     "php-intellisense.trace.server": "off",
-    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "phpactor.path": "/usr/local/bin/phpactor",
+    // "php.executablePath": "/usr/bin/php",
+    "php.executablePath": "/usr/local/bin/php",
+    "phpactor.config": {
+        "language_server.diagnostics_on_update": false,
+        "language_server.diagnostics_on_save": true
+    },
+    "phpfmt.passes": [
+        "ShortArray"
+    ],
+
+    "bashIde.highlightParsingErrors": false,
+
     "rust-analyzer.inlayHints.chainingHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
+    "lldb.launch.sourceLanguages": [
+        "cpp",
+        "rust"
+    ],
+
+    "[c]": {
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 8,
+        "editor.indentSize": 4
+    },
+
+    // macros ==============================================================
+    "macros": {
+        "copyWithoutNewLine": [
+            "cursorLineStart",
+            "cursorLineEndSelect",
+            "editor.action.clipboardCopyAction",
+        ]
+    },
+
+    // other extensions ==============================================================
+    "bookmarks.sideBar.expanded": true,
+    "bookmarks.showCommandsInContextMenu": false,
+    "partialDiff.commandsOnContextMenu": {
+        "diffSelectionWithClipboard": false,
+        "diffVisibleEditors": false,
+        "togglePreComparisonTextNormalizationRules": false
+    },
+    "trailing-spaces.logLevel": "none",
+    "trailing-spaces.showStatusBarMessage": false,
+    "trailing-spaces.backgroundColor": "rgba(136,136,136,0.3)",
+    "trailing-spaces.borderColor": "rgba(67,67,67,0.15)",
+    "textmarker.commandsOnContextMenu": {
+        "toggleHighlight": false,
+        "updateHighlight": false,
+        "goToNextHighlight": false,
+        "goToPreviousHighlight": false
+    }
 }
