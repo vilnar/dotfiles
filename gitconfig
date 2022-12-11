@@ -22,7 +22,15 @@
     review-dev = "!git-cola diff HEAD..dev"
 [core]
     editor = vim
+    excludesfile = ~/.gitignore_global
 [diff]
     tool = gvimdiff
+    mnemonicprefix = true
+[difftool]
+    prompt = true
 [merge]
     tool = gvimdiff
+[cola]
+    spellcheck = true
+    statusshowtotals = true
+    startupmode = list
