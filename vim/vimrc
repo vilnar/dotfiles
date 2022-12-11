@@ -64,7 +64,8 @@ Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': 'b55f5554871e548c9c00a49df7a92f980c0191c2' }
 Plug 'junegunn/fzf.vim', { 'commit': '9ceac718026fd39498d95ff04fa04d3e40c465d7' }
 Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2' }
-
+" TODO: check this
+Plug 'ludovicchabant/vim-gutentags', { 'commit': '1337b1891b9d98d6f4881982f27aa22b02c80084' }
 
 " async
 " Plug 'skywind3000/asyncrun.vim', { 'commit': 'aa8a99e87e64276d52556f4d9d4f4a19afd37556' }
