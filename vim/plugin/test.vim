@@ -10,3 +10,12 @@ def ToggleVerbose()
   endif
 enddef
 command VerboseToggle :vim9cmd call ToggleVerbose()
+
+
+def VerboseMap()
+  redir! > ~/.vim/log/vim_keys.txt
+  silent verbose imap
+  # silent verbose map
+  redir END
+enddef
+command VerboseMap :vim9cmd call VerboseMap()

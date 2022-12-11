@@ -24,9 +24,9 @@ noremap <Leader>P "+P
 # vnoremap > >gv
 
 # don't use Ex mode, use Q for formatting
-nnoremap Q <nop>
-nnoremap gq <nop>
-nnoremap <C-LeftMouse> <nop>
+nnoremap Q <NOP>
+nnoremap gq <NOP>
+nnoremap <C-LeftMouse> <NOP>
 
 
 nnoremap <Leader>h :nohlsearch<CR>
@@ -152,7 +152,7 @@ nnoremap <expr> <Leader>gr ":Dispatch grep -nroHP '' " .. expand('%')
 # ctrl+^ for change keymap in INSERT mode
 set keymap=ukrainian-enhanced
 set iminsert=0 # Default - latin layout
-set imsearch=0 # Default - latin layout in sea
+set imsearch=0 # Default - latin layout in search
 inoremap <C-\> <C-^>
 
 
