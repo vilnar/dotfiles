@@ -17,9 +17,11 @@
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
 (global-set-key (kbd "M-c g") 'grep)
+(global-set-key (kbd "M-c p") 'projectile-command-map)
 (global-set-key (kbd "M-c f") 'fzf-directory)
 (global-set-key (kbd "M-c h") 'lazy-highlight-cleanup)
 
+(global-unset-key (kbd "M-r"))
 (global-set-key (kbd "M-r") 'query-replace)
 
 (global-set-key (kbd "C-x C-b") #'ibuffer)
@@ -28,13 +30,15 @@
 
 (global-set-key [(control shift up)]  'yr:move-text-up)
 (global-set-key [(control shift down)]	'yr:move-text-down)
+(global-unset-key (kbd "C-d"))
 (global-set-key (kbd "C-d") 'yr:duplicate-line)
 
 (global-set-key (kbd "M-6") 'yr:set-input-method-english)
 (global-set-key (kbd "M-7") 'yr:set-input-method-ukraine)
 (global-set-key (kbd "<C-return>") 'yr:end-of-line-and-indented-new-line)
 
-(global-set-key (kbd "M-.") 'yr:toggle-mark-word-at-point)
+(global-unset-key (kbd "M-m"))
+(global-set-key (kbd "M-m") 'yr:toggle-mark-word-at-point)
 (global-set-key (kbd "M-c w") 'yr:mark-whole-word)
 
 ;; Window switching. (C-x o goes to the next window)

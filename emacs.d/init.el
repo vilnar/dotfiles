@@ -61,6 +61,11 @@
 (delete-selection-mode 1)
 
 
+(setq-default
+ case-fold-search t
+ indicate-empty-lines t)
+
+
 ;; saving history
 (savehist-mode 1)
 (setq savehist-additional-variables
