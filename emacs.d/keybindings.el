@@ -4,7 +4,6 @@
 
 (global-set-key (kbd "M-g") 'goto-line)
 
-(global-set-key (kbd "C-x f") 'find-file)
 
 (global-set-key (kbd "<f6>") 'flyspell-buffer)
 (global-set-key (kbd "<f7>") 'yr:new-empty-buffer)
@@ -16,7 +15,7 @@
 ;; (global-set-key (kbd "<f12>") 'bookmark-bmenu-list)
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
-(global-set-key (kbd "M-c g") 'grep)
+(global-set-key (kbd "M-c g") 'rgrep)
 (global-set-key (kbd "M-c p") 'projectile-command-map)
 (global-set-key (kbd "M-c f") 'fzf-directory)
 (global-set-key (kbd "M-c h") 'lazy-highlight-cleanup)
@@ -24,17 +23,16 @@
 (global-unset-key (kbd "M-r"))
 (global-set-key (kbd "M-r") 'query-replace)
 
-(global-set-key (kbd "C-x C-b") #'ibuffer)
-(global-set-key (kbd "M-c b") 'ibuffer-other-window)
-
 
 (global-set-key [(control shift up)]  'yr:move-text-up)
 (global-set-key [(control shift down)]	'yr:move-text-down)
 (global-unset-key (kbd "C-d"))
 (global-set-key (kbd "C-d") 'yr:duplicate-line)
 
-(global-set-key (kbd "M-6") 'yr:set-input-method-english)
-(global-set-key (kbd "M-7") 'yr:set-input-method-ukraine)
+(global-unset-key (kbd "M-\\"))
+(global-set-key (kbd "M-\\") 'yr:set-input-method-ukraine)
+(global-set-key (kbd "C-M-\\") 'yr:set-input-method-english)
+
 (global-set-key (kbd "<C-return>") 'yr:end-of-line-and-indented-new-line)
 
 (global-unset-key (kbd "M-m"))
@@ -68,6 +66,16 @@
   (define-key company-active-map (kbd "<return>") nil)
   (define-key company-active-map (kbd "RET") nil)
   (define-key company-active-map (kbd "TAB") nil))
+
+
+;; (global-set-key (kbd "C-x f") 'find-file)
+(global-set-key (kbd "C-x C-b") #'ibuffer)
+(global-set-key (kbd "M-c b") 'ibuffer-other-window)
+
+;; helm
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x f") 'helm-find-files)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ;; todo: fix
 ;; (define-key php-mode-map (kbd "C-d") nil)

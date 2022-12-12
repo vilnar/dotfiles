@@ -15,9 +15,9 @@
   (if (display-graphic-p frame)
       (progn
         (message "window system")
-        ;; (load-theme 'leuven t)
+        (load-theme 'leuven t)
         ;; (load-theme 'tango t)
-        (load-theme 'tango-dark t)
+        ;; (load-theme 'tango-dark t)
         ;; (disable-theme 'tango-dark)
         (menu-bar-mode 1))))
 
