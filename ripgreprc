@@ -1,0 +1,5 @@
+--glob=!git/*
+
+# -u will disable .gitignore handling,
+# -uu will search hidden files and directories
+-uu
