@@ -87,10 +87,6 @@
   (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 
-(use-package helm
-  :config
-  (helm-mode 1))
-
 ;; ----------------------------------------------------------------------------
 ;; programming languages
 

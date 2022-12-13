@@ -6,8 +6,14 @@
   (ispell-hunspell-add-multi-dic "en_US,uk_UA")
   (setq ispell-personal-dictionary "~/.hunspell_personal"))
 
+(defun yr:toggle-flyspell ()
+  "Toggle flyspell-mode."
+  (interactive)
+  (flyspell-mode)
+  (flyspell-buffer))
 
-;; autocomplete
+
+;; autocomplete (default)
 (global-company-mode 1)
 (setq company-minimum-prefix-length 2)
 (setq company-idle-delay 0.2)
@@ -26,3 +32,8 @@ Taken from https://github.com/syl20bnr/spacemacs/pull/179."
 ;; add yasnippet to all backends
 (setq company-backends
       (mapcar #'mars/company-backend-with-yas company-backends))
+
+
+;; enhances name completion when in minibuffer prompts (default)
+(icomplete-vertical-mode)
+;; (fido-vertical-mode)

@@ -49,6 +49,12 @@
   (interactive)
   (set-input-method nil))
 
+(defun yr:toggle-input-method ()
+   (interactive)
+   (if (equal current-input-method "ukrainian-computer")
+       (set-input-method nil)
+     (set-input-method "ukrainian-computer")))
+
 
 (defun yr:end-of-line-and-indented-new-line ()
   (interactive)

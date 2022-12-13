@@ -5,7 +5,8 @@
 (global-set-key (kbd "M-g") 'goto-line)
 
 
-(global-set-key (kbd "<f6>") 'flyspell-buffer)
+;; (global-set-key (kbd "<f6>") 'flyspell-buffer)
+(global-set-key (kbd "<f6>") 'yr:toggle-flyspell)
 (global-set-key (kbd "<f7>") 'yr:new-empty-buffer)
 (global-set-key (kbd "<f8>") 'toggle-truncate-lines)
 (global-set-key (kbd "<f9>") 'whitespace-mode)
@@ -29,9 +30,9 @@
 (global-unset-key (kbd "C-d"))
 (global-set-key (kbd "C-d") 'yr:duplicate-line)
 
-(global-unset-key (kbd "M-\\"))
-(global-set-key (kbd "M-\\") 'yr:set-input-method-ukraine)
-(global-set-key (kbd "C-M-\\") 'yr:set-input-method-english)
+;; (global-set-key (kbd "C-\\") 'yr:set-input-method-ukraine)
+;; (global-set-key (kbd "M-\\") 'yr:set-input-method-english)
+(global-set-key (kbd "M-\\") 'yr:toggle-input-method)
 
 (global-set-key (kbd "<C-return>") 'yr:end-of-line-and-indented-new-line)
 
@@ -68,14 +69,9 @@
   (define-key company-active-map (kbd "TAB") nil))
 
 
-;; (global-set-key (kbd "C-x f") 'find-file)
+(global-set-key (kbd "C-x f") 'find-file)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 (global-set-key (kbd "M-c b") 'ibuffer-other-window)
-
-;; helm
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x f") 'helm-find-files)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ;; todo: fix
 ;; (define-key php-mode-map (kbd "C-d") nil)
