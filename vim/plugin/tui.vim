@@ -45,6 +45,9 @@ augroup MyColors
     # hi NormalNC guibg=#1f1f1f
     hi NormalNC guibg=#3f3f3f
     highlight InsertColor guifg=#313633 guibg=#7f9f7f gui=bold cterm=bold
+    hi link markdownCode String
+    hi link markdownCodeBlock String
+    hi link markdownCodeDelimiter String
   }
 augroup end
 
