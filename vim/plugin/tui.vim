@@ -44,6 +44,7 @@ augroup MyColors
     highlight CurSearch guifg=#0f0f0f guibg=#f8f893
     # hi NormalNC guibg=#1f1f1f
     hi NormalNC guibg=#3f3f3f
+    highlight InsertColor guifg=#313633 guibg=#7f9f7f gui=bold cterm=bold
   }
 augroup end
 
@@ -101,8 +102,9 @@ set display+=lastline
 
 if !has('gui_running')
   # cursor shape in difference mode
-  &t_SI = "\<esc>[6 q"
-  &t_SR = "\<esc>[3 q"
+  # &t_SI = "\<esc>[6 q"
+  &t_SI = "\<esc>[2 q"
+  &t_SR = "\<esc>[4 q"
   &t_EI = "\<esc>[2 q"
 
   if &term =~ '^\%(alacritty\)'
