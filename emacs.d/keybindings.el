@@ -92,8 +92,7 @@
 (defalias 'glog 'magit-log-current)
 (defalias 'gdiff 'magit-diff-range)
 (defalias 'gsub 'magit-submodule-update-all)
-(defalias 'gbcheckout 'magit-branch-checkout)
-(defalias 'gshowcommit 'magit-diff-show-or-scroll-up)
+(defalias 'gblameshow 'magit-show-commit)
 (defalias 'gbranches 'magit-show-refs-popup)
 
 (defalias 'modeshow 'describe-mode)
