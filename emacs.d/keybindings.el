@@ -49,6 +49,11 @@
 (define-key winum-keymap (kbd "M-3") 'winum-select-window-3)
 (define-key winum-keymap (kbd "M-4") 'winum-select-window-4)
 
+;; go to last change, unfortunately, only local buffer
+(global-set-key (kbd "M-9") 'goto-last-change)
+(global-set-key (kbd "M-0") 'goto-last-change-reverse)
+
+
 (global-unset-key (kbd "C-z"))
 (global-set-key (kbd "C-z")   'undo-fu-only-undo)
 (global-set-key (kbd "C-S-z") 'undo-fu-only-redo)
