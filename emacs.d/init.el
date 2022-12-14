@@ -15,6 +15,8 @@
   (if (display-graphic-p frame)
       (progn
         (message "window system")
+        (add-to-list 'default-frame-alist (cons 'width 120))
+        (add-to-list 'default-frame-alist (cons 'width 80))
         (load-theme 'leuven t)
         ;; (load-theme 'tango t)
         ;; (load-theme 'tango-dark t)
@@ -46,12 +48,14 @@
 ;; search
 (setq isearch-lazy-count 1)
 (setq isearch-highlight 1)
+(setq highlight-nonselected-windows t)
+(setq-default case-fold-search t)
 
 ;; diff
-(setq-default ediff-forward-word-function 'forward-char)
-(setq ediff-split-window-function 'split-window-horizontally)
-(setq ediff-diff-options "-w")
-;; (setq ediff-window-setup-function 'ediff-setup-windows-plain)
+(setq
+ ediff-split-window-function 'split-window-horizontally
+ ediff-window-setup-function 'ediff-setup-windows-plain
+ auto-window-vscroll nil)
 
 ;; edit
 (show-paren-mode 1)
@@ -60,10 +64,7 @@
 ;; replace selected region with yank buffer
 (delete-selection-mode 1)
 
-
-(setq-default
- case-fold-search t
- indicate-empty-lines t)
+(setq-default indicate-empty-lines t)
 
 
 ;; saving history

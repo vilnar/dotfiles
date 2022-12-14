@@ -69,6 +69,7 @@
   (define-key company-active-map (kbd "TAB") nil))
 
 
+(global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "C-x f") 'find-file)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 (global-set-key (kbd "M-c b") 'ibuffer-other-window)

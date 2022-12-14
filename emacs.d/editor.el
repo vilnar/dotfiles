@@ -35,5 +35,5 @@ Taken from https://github.com/syl20bnr/spacemacs/pull/179."
 
 
 ;; enhances name completion when in minibuffer prompts (default)
-(icomplete-vertical-mode)
+;; (icomplete-vertical-mode)
 ;; (fido-vertical-mode)

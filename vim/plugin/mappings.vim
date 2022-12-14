@@ -188,12 +188,12 @@ vnoremap <Leader>se y:vim9cmd <SID>searchReplaceLib.EscapeSearchText(getreg('"')
 vnoremap <Leader>ss y/<C-R>"
 
 nnoremap <Leader>rr :vim9cmd <SID>searchReplaceLib.ReplaceInput()<CR>
-vnoremap <Leader>rr "+y:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput()<CR>
+vnoremap <Leader>rr y:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput()<CR>
 vnoremap <Leader>rb <Esc>:'<,'>s///gc<left><left><left><left>
 nnoremap <Leader>rg :%s///gc<left><left><left><left>
 
-nnoremap <Leader>ru viw"+y:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput(true)<CR>
-vnoremap <Leader>rw "+y:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput(true)<CR>
+nnoremap <Leader>ru viwy:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput(true)<CR>
+vnoremap <Leader>rw y:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput(true)<CR>
 
 vnoremap <Leader>rv <Esc>:'<,'>s/\<\>\C//gc<left><left><left><left><left><left><left><left>
 

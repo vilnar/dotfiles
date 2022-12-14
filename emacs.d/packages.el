@@ -66,6 +66,16 @@
    :config
    (progn (add-to-list 'load-path "/usr/bin/fzf")))
 
+(use-package ivy
+  :demand t
+  :config
+  (ivy-mode))
+
+(use-package swiper
+  :commands (swiper)
+  :config
+  (setq swiper-goto-start-of-match t))
+
 
 (use-package projectile
   :commands projectile-mode
@@ -81,11 +91,12 @@
   :init (add-hook 'prog-mode-hook #'hl-prog-extra-mode))
 
 
+
+;; Use `diff-hl'. Why?
+;; .. shows lines you have modified from the last commit.
 (use-package diff-hl
-  :config
-  (global-diff-hl-mode +1)
-  (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
-  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
+  :demand t
+  :config (global-diff-hl-mode))
 
 ;; ----------------------------------------------------------------------------
 ;; programming languages

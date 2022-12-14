@@ -53,6 +53,7 @@ enddef
 
 def ReplaceSelectedInput(is_whole_word = false)
   var text = getreg('"')
+  @v = text # copy to register v
   var replace_text = input('Query replace ' .. text .. ' with: ', '')
 
   call EscapeForReplace(text, replace_text, is_whole_word)
