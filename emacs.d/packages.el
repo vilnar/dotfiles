@@ -59,12 +59,10 @@
   :init
   (winum-mode))
 
-
-(use-package fzf
-   :init
-   (setenv "FZF_DEFAULT_COMMAND" "fdfind --type f --hidden --exclude .git --no-ignore")
-   :config
-   (progn (add-to-list 'load-path "/usr/bin/fzf")))
+;; Find file in project. Why?
+;; .. interactively narrowing down other files in the project is very useful.
+(use-package find-file-in-project
+  :commands (find-file-in-project))
 
 (use-package ivy
   :demand t

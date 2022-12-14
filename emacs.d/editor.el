@@ -9,15 +9,21 @@
 (defun yr:toggle-flyspell ()
   "Toggle flyspell-mode."
   (interactive)
-  (flyspell-mode)
-  (flyspell-buffer))
+  ;; (message "debug %s"  (symbol-value flyspell-mode))
+  (if (symbol-value flyspell-mode)
+      (progn
+        (flyspell-mode 0)
+        (message "speller disable"))
+    (flyspell-mode 1)
+    (flyspell-buffer)
+    (message "speller enable")))
 
 
 ;; autocomplete (default)
 (global-company-mode 1)
-(setq company-minimum-prefix-length 2)
-(setq company-idle-delay 0.2)
-
+(setq
+ company-idle-delay 0.2
+ company-minimum-prefix-length 3)
 
 (defun mars/company-backend-with-yas (backends)
   "Add :with company-yasnippet to company BACKENDS.
