@@ -48,6 +48,10 @@ augroup MyColors
     hi link markdownCode String
     hi link markdownCodeBlock String
     hi link markdownCodeDelimiter String
+
+    hi link diffAdded Comment
+    hi link diffRemoved String
+    hi link diffChanged Number
   }
 augroup end
 

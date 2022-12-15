@@ -59,12 +59,13 @@
  ediff-window-setup-function 'ediff-setup-windows-plain
  auto-window-vscroll nil)
 
-;; edit
+;; editor
 (show-paren-mode 1)
 (global-subword-mode 1)
 (electric-indent-mode -1) ;; stop trail whitespace
 ;; replace selected region with yank buffer
 (delete-selection-mode 1)
+(global-superword-mode 1) ;; select whole word
 
 (setq-default indicate-empty-lines t)
 
