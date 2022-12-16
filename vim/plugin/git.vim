@@ -1,4 +1,4 @@
-vim9script 
+vim9script
 
 def RunFileHistory()
   var path = expand('%:p')

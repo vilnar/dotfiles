@@ -52,6 +52,9 @@ augroup MyColors
     hi link diffAdded Comment
     hi link diffRemoved String
     hi link diffChanged Number
+
+    hi Ignore guifg=#8F8F8F
+    hi link DirvishGitIgnored Ignore
   }
 augroup end
 

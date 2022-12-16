@@ -55,7 +55,7 @@ Plug 'AndrewRadev/linediff.vim', { 'commit': 'c627858c6dd280221df032bbe7f3899ec7
 " use git-cola to compare commits :)
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
-Plug 'justinmk/vim-dirvish', { 'commit': '81b40878f286f370df2a2b3a52c4d860643d2142' }
+Plug 'justinmk/vim-dirvish', { 'commit': '6233243f0caa71d27d27ea102540a88bce8eb6ea' }
 Plug 'kristijanhusak/vim-dirvish-git', { 'commit': '1d938c826503059660d89f186d2e8affc686a0e8' }
 
 Plug 'SirVer/ultisnips', { 'commit': 'e99fdf15cd55a4a8e0cb0a80a6810c1867a5c401' }
