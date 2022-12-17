@@ -50,8 +50,6 @@ Plug 'ton/vim-bufsurf', { 'commit': 'e6dbc7ad66c7e436e5eb20d304464e378bd7f28c' }
 
 " git
 Plug 'tpope/vim-fugitive', { 'commit': '5b0b138483de17a8fd8dfcec0b491782c8fbf102' }
-Plug 'junegunn/gv.vim', { 'commit': '320cc8c477c5acc4fa0e52a460d87b2af54fa051' }
-Plug 'AndrewRadev/linediff.vim', { 'commit': 'c627858c6dd280221df032bbe7f3899ec71e1aaa' }
 " use git-cola to compare commits :)
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
@@ -63,8 +61,6 @@ Plug 'jparise/vim-graphql', { 'commit': '4bf5d33bda83117537aa3c117dee5b9b14fc933
 Plug 'arthurxavierx/vim-caser', { 'commit': '6bc9f41d170711c58e0157d882a5fe8c30f34bf6' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': 'b55f5554871e548c9c00a49df7a92f980c0191c2' }
 Plug 'junegunn/fzf.vim', { 'commit': '9ceac718026fd39498d95ff04fa04d3e40c465d7' }
-Plug 'junegunn/goyo.vim', { 'commit': 'a9c7283dce60ffcdec952384f6451ff42f8914f2' }
-" Plug 'ludovicchabant/vim-gutentags', { 'commit': '1337b1891b9d98d6f4881982f27aa22b02c80084' }
 
 " async
 " Plug 'skywind3000/asyncrun.vim', { 'commit': 'aa8a99e87e64276d52556f4d9d4f4a19afd37556' }
@@ -85,7 +81,7 @@ Plug 'jnurmine/Zenburn', { 'commit': '8df765342b2a33c728ce147d6c8e66359378f9d5' 
 Plug 'azabiong/vim-highlighter', { 'commit': 'e0d7c6c5b2584eac0cbd92eb967e1f3a44cea0ab' }
 
 " Lint
-Plug 'dense-analysis/ale', { 'commit': 'e4b20544082ba019d8095cbc24ffab43b15e8fc0' }
+Plug 'dense-analysis/ale', { 'commit': '8bcbb2995822c4062d00cb41df713fd76092f04f' }
 
 " LSP
 " Plug 'prabirshrestha/asyncomplete.vim', { 'commit': '9c7651894c2c6d656c0dc71e87cfabbbb71b9c78' }
