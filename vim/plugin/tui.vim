@@ -30,21 +30,18 @@ augroup MyColors
     highlight ExtraWhitespace guibg=#7E8E91
   }
   autocmd ColorScheme gruvbox {
-    highlight ExtraWhitespace guibg=#928374
     highlight CurSearch guifg=#1D2021 guibg=#fe8019
     hi link gitcommitSummary GruvboxYellow
-  }
-  autocmd ColorScheme afterglow {
-    highlight ExtraWhitespace guibg=#797979
-    highlight phpIdentifier guifg=#d6d6d6 gui=NONE
-    highlight CurSearch guifg=#1D2021 guibg=#fe8019
+
+    hi Ignore guifg=#8F8F8F
+    hi link DirvishGitIgnored Ignore
+
+    highlight ExtraWhitespace guibg=#928374
+    hi NormalNC guibg=#32302f
+    highlight InsertColor guifg=#282828 guibg=#83a598
   }
   autocmd ColorScheme zenburn {
-    highlight ExtraWhitespace guibg=#797979
     highlight CurSearch guifg=#0f0f0f guibg=#f8f893
-    # hi NormalNC guibg=#1f1f1f
-    hi NormalNC guibg=#3f3f3f
-    highlight InsertColor guifg=#313633 guibg=#7f9f7f gui=bold cterm=bold
     hi link markdownCode String
     hi link markdownCodeBlock String
     hi link markdownCodeDelimiter String
@@ -55,25 +52,29 @@ augroup MyColors
 
     hi Ignore guifg=#8F8F8F
     hi link DirvishGitIgnored Ignore
+
+    highlight ExtraWhitespace guibg=#797979
+    # hi NormalNC guibg=#1f1f1f
+    hi NormalNC guibg=#3f3f3f
+    highlight InsertColor guifg=#313633 guibg=#7f9f7f gui=bold cterm=bold
   }
 augroup end
 
 
-# g:gruvbox_invert_selection = 0
-# g:gruvbox_italic = 0
-# g:gruvbox_underline = 1
-# g:gruvbox_contrast_light = "hard"
-# g:gruvbox_contrast_dark = "hard"
-# g:gruvbox_guisp_fallback = "bg" # fix spell colors
-# g:gruvbox_vert_split = "bg1"
-# set background=dark
-# colorscheme gruvbox
-# colorscheme afterglow
+g:gruvbox_invert_selection = 0
+g:gruvbox_italic = 0
+g:gruvbox_underline = 1
+g:gruvbox_contrast_light = "hard"
+g:gruvbox_contrast_dark = "medium"
+g:gruvbox_guisp_fallback = "bg" # fix spell colors
+g:gruvbox_vert_split = "bg1"
+set background=dark
+colorscheme gruvbox
 
-g:zenburn_alternate_Visual = 1
-g:zenburn_high_Contrast = 1
-g:zenburn_disable_Label_underline = 1
-colorscheme zenburn
+# g:zenburn_alternate_Visual = 1
+# g:zenburn_high_Contrast = 1
+# g:zenburn_disable_Label_underline = 1
+# colorscheme zenburn
 
 # different color depending on focus
 augroup WinBg
