@@ -17,6 +17,14 @@ set number
 # set numberwidth=6
 set cursorline
 set cursorlineopt=number
+augroup InsertHl
+  autocmd InsertEnter * set cursorlineopt=number,line
+  autocmd InsertLeave * set cursorlineopt=number
+augroup END
+
+set smoothscroll
+# horizontal scroll
+set sidescroll=1
 
 if (has("termguicolors"))
   set termguicolors
@@ -36,7 +44,7 @@ augroup MyColors
     hi Ignore guifg=#8F8F8F
     hi link DirvishGitIgnored Ignore
 
-    highlight ExtraWhitespace guibg=#928374
+    highlight ExtraWhitespace guibg=#7c6f64
     hi NormalNC guibg=#32302f
     highlight InsertColor guifg=#282828 guibg=#83a598
   }
@@ -54,7 +62,6 @@ augroup MyColors
     hi link DirvishGitIgnored Ignore
 
     highlight ExtraWhitespace guibg=#797979
-    # hi NormalNC guibg=#1f1f1f
     hi NormalNC guibg=#3f3f3f
     highlight InsertColor guifg=#313633 guibg=#7f9f7f gui=bold cterm=bold
   }

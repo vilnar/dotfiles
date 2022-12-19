@@ -41,11 +41,6 @@
     "args": {"add_to_selection": true}
   },
 
-  {
-    "keys": ["alt+7"],
-    "command": "split_to_another_layout",
-  },
-
   // fast copy line wihout eol
   {
     "keys": ["ctrl+alt+l"], "command": "run_macro_file",

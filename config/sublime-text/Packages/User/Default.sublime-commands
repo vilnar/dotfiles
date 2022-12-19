@@ -9,7 +9,6 @@
   { "caption": "Open File In Vim", "command": "open_file_in_vim" },
   { "caption": "Git Show By Hash", "command": "git_show_by_hash" },
   { "caption": "Git Show By Hash With Path", "command": "git_show_by_hash_with_path" },
-  { "caption": "Split To Another Layout", "command": "split_to_another_layout" },
   { "caption": "Selected To New Tab", "command": "open_new_tab_with_selected_text" },
   { "caption": "Bookmarks Print", "command": "print_bookmarks" },
   { "caption": "Color Scheme Toggle Day/Night", "command": "color_scheme_toggle" },
