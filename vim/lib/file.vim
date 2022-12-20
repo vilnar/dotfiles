@@ -56,7 +56,7 @@ def RenameFile()
     return
   endif
 
-  execute "bwipeout " .. prev_path
+  execute "bwipeout " .. fnameescape(prev_path)
   delete(prev_path)
 
   # dect new file type
@@ -72,7 +72,11 @@ def RemoveFile()
     return
   endif
   execute "bwipeout " .. expand('%')
-  execute "!gio trash " .. path
+  execute "!gio trash " .. shellescape(path)
+  if v:shell_error != 0
+    echomsg printf("File %s not removed. Shell error %s", path, v:shell_error)
+    return
+  endif
   echomsg printf("File %s moved to trash!", path)
 enddef
 command FileRemove RemoveFile()
