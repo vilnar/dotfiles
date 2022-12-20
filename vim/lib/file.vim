@@ -35,14 +35,32 @@ command FileCopyName :vim9cmd CopyPath(expand('%:t:r'))
 command EditorShowLineEncoding :echo &fileformat
 command EditorShowType :echo &filetype
 
+
 def RenameFile()
-  var prev_path = expand('%')
-  var current_path = input('New file name: ', expand('%'), 'file')
-  if current_path != '' && current_path != prev_path
-    execute 'saveas ' .. current_path
-    delete(prev_path)
-    execute 'edit'
+  const wrong_names = ["", ".", ".."]
+  var prev_path = expand("%")
+  var new_path = input("New file name: ", prev_path, "file")
+  if new_path == prev_path || index(wrong_names, new_path) >= 0
+    echoerr printf("file %s was not renamed, input is wrong", prev_path)
+    return
   endif
+
+  execute "saveas " .. new_path
+  if expand('%') == prev_path
+    echoerr printf("file %s was not renamed, command saveas canceled", prev_path)
+    return
+  endif
+
+  if !filereadable(new_path)
+    echoerr printf("file %s was not renamed, file %s not saved", prev_path, new_path)
+    return
+  endif
+
+  execute "bwipeout " .. prev_path
+  delete(prev_path)
+
+  # dect new file type
+  execute "edit"
 enddef
 command FileRename RenameFile()
 
@@ -53,9 +71,9 @@ def RemoveFile()
     echoerr "Not found file: " .. path
     return
   endif
-  execute "bdelete " .. expand('%')
+  execute "bwipeout " .. expand('%')
   execute "!gio trash " .. path
-  echomsg "File removed!"
+  echomsg printf("File %s moved to trash!", path)
 enddef
 command FileRemove RemoveFile()
 
