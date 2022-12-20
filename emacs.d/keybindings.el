@@ -29,6 +29,8 @@
 (global-set-key [(control shift down)]	'yr:move-text-down)
 (global-unset-key (kbd "C-d"))
 (global-set-key (kbd "C-d") 'yr:duplicate-line)
+(eval-after-load "php-mode"
+  '(define-key php-mode-map (kbd "C-d") 'yr:duplicate-line))
 
 ;; (global-set-key (kbd "C-\\") 'yr:set-input-method-ukraine)
 ;; (global-set-key (kbd "M-\\") 'yr:set-input-method-english)
@@ -74,14 +76,10 @@
   (define-key company-active-map (kbd "TAB") nil))
 
 
-(global-set-key (kbd "C-s") 'swiper)
+;; (global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "C-x f") 'find-file)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 (global-set-key (kbd "M-c b") 'ibuffer-other-window)
-
-;; todo: fix
-;; (define-key php-mode-map (kbd "C-d") nil)
-;; (define-key php-mode-map (kbd "C-.") nil)
 
 
 ;; alias  -------------------------------------------------------------

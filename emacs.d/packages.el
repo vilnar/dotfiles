@@ -7,7 +7,7 @@
 ;; Auto-install use-package. Why?
 ;; .. this is a defacto-standard package manager, useful to isolate each package's configuration.
 (unless (package-installed-p 'use-package)
-  (package-refresh-contents)
+  (package-refresh-contents t)
   (package-install 'use-package))
 
 ;; This is only needed once, near the top of the file
@@ -178,7 +178,6 @@
   :ensure t)
 
 (use-package web-mode
-  :ensure t
   :mode (("\\.html?\\'" . web-mode)
          ("\\.erb\\'" . web-mode)
          ("\\.hbs\\'" . web-mode))
@@ -187,5 +186,4 @@
   (web-mode-css-indent-offset 2)
   (web-mode-code-indent-offset 2))
 
-(use-package yaml-mode
-  :ensure t)
+(use-package yaml-mode)

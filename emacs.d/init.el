@@ -9,6 +9,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-display-line-numbers-mode 1)
 (blink-cursor-mode -1)
+(xterm-mouse-mode 1)
 
 (menu-bar-mode -1)
 (defun yr:new-frame-setup (frame)
@@ -57,6 +58,7 @@
 (setq
  ediff-split-window-function 'split-window-horizontally
  ediff-window-setup-function 'ediff-setup-windows-plain
+ ediff-diff-options "-w"
  auto-window-vscroll nil)
 
 ;; editor
