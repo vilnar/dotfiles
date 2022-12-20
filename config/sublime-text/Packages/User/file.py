@@ -14,11 +14,11 @@ PLUGIN_PATH = "User/file.py"
 
 class FileDeleteCommand(sublime_plugin.WindowCommand):
     def run(self):
-        # TODO: add escape for spaces
         path = self.window.extract_variables().get('file')
+        raw_path = repr(path)
 
         p = subprocess.run(
-            "gio trash {}".format(path),
+            "gio trash {}".format(raw_path),
             shell=True,
             capture_output=False
         )
@@ -57,11 +57,12 @@ class OpenFileInVim(sublime_plugin.TextCommand):
     def run(self, edit):
         window = self.view.window()
         path = self.view.file_name()
+        raw_path = repr(path)
 
         root_path = get_first_root_path(window)
         os.chdir(root_path) # by default path, this is sublime installation directory
         p = subprocess.run(
-            "gnome-terminal -- vim {}".format(path),
+            "gnome-terminal -- vim {}".format(raw_path),
             shell=True,
             capture_output=False
         )
