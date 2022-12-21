@@ -18,7 +18,8 @@
 
 (global-set-key (kbd "M-c g") 'rgrep)
 (global-set-key (kbd "M-c p") 'projectile-command-map)
-(global-set-key (kbd "M-c f") 'find-file-in-project)
+;; (global-set-key (kbd "M-c f") 'find-file-in-project)
+(global-set-key (kbd "M-c f") 'fzf-directory)
 (global-set-key (kbd "M-c h") 'lazy-highlight-cleanup)
 
 (global-unset-key (kbd "M-r"))

@@ -70,7 +70,7 @@
     "editor.scrollbar.horizontal": "visible",
     "editor.scrollbar.vertical": "visible",
     "editor.copyWithSyntaxHighlighting": false,
-    "editor.stickyScroll.enabled": true,
+    "editor.stickyScroll.enabled": false,
 
     "search.useIgnoreFiles": false,
     "search.quickOpen.includeHistory": false,

@@ -120,8 +120,6 @@ nnoremap <leader>tt :MyTags <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>tb :MyBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
 # nnoremap <leader>tf :BTags<CR>
 nnoremap <leader>tf :MyBufferTags<CR>
-nnoremap <silent><nowait> <C-i> :Snippets<CR>
-inoremap <silent><nowait> <C-i> <ESC>:Snippets<CR>
 
 nnoremap <silent><nowait> <leader>ff :MyFiles<CR>
 nnoremap <silent><nowait> <leader>fc :MyFiles <C-R>=expand("%:h")<CR>/<CR>
@@ -204,6 +202,8 @@ vnoremap <Leader>rv <Esc>:'<,'>s/\<\>\C//gc<left><left><left><left><left><left><
 nnoremap <F3> :vim9cmd <SID>mouseLib.MouseToggle()<CR>
 inoremap <F3> <ESC>:vim9cmd <SID>mouseLib.MouseToggle()<CR>
 cnoremap <F3> <ESC>:vim9cmd <SID>mouseLib.MouseToggle()<CR>
+nnoremap <F4> :Snippets<CR>
+inoremap <F4> <ESC>:Snippets<CR>
 nnoremap <F5> :vim9cmd <SID>settingLib.ReloadConfigs()<CR>
 nnoremap <F6> :vim9cmd <SID>langLib.RunSpellUkToggle()<CR>
 noremap <F7> :tabnew<CR>
@@ -235,12 +235,6 @@ nnoremap <leader><backspace> @:
 # PLUGINS -----------------------------------------------------------------------------
 nnoremap <leader>nt :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
-
-g:UltiSnipsExpandTrigger = "<tab>"
-# list all snippets for current filetype
-g:UltiSnipsListSnippets = "<c-d>"
-g:UltiSnipsJumpForwardTrigger = "<c-b>"
-g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 
 
 # help codefmt

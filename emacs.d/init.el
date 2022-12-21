@@ -68,6 +68,7 @@
 ;; replace selected region with yank buffer
 (delete-selection-mode 1)
 (global-superword-mode 1) ;; select whole word
+(global-auto-revert-mode t)
 
 (setq-default indicate-empty-lines t)
 
