@@ -7,6 +7,8 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 
 # needed for work undo/redo, otherwise history (undo/redo) will not be saved
 set hidden
+# keep cursor column position
+set nostartofline
 
 set mouse=a
 

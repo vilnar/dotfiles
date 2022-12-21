@@ -120,7 +120,8 @@ nnoremap <leader>tt :MyTags <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>tb :MyBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
 # nnoremap <leader>tf :BTags<CR>
 nnoremap <leader>tf :MyBufferTags<CR>
-nnoremap <silent><nowait> <leader>i :Snippets<CR>
+nnoremap <silent><nowait> <C-i> :Snippets<CR>
+inoremap <silent><nowait> <C-i> <ESC>:Snippets<CR>
 
 nnoremap <silent><nowait> <leader>ff :MyFiles<CR>
 nnoremap <silent><nowait> <leader>fc :MyFiles <C-R>=expand("%:h")<CR>/<CR>
