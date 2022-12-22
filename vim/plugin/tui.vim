@@ -27,6 +27,7 @@ augroup END
 set smoothscroll
 # horizontal scroll
 set sidescroll=1
+set sidescrolloff=3
 
 if (has("termguicolors"))
   set termguicolors
