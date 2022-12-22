@@ -24,7 +24,6 @@ augroup InsertHl
   autocmd InsertLeave * set cursorlineopt=number
 augroup END
 
-set smoothscroll
 # horizontal scroll
 set sidescroll=1
 set sidescrolloff=3
@@ -48,7 +47,7 @@ augroup MyColors
     hi link DirvishGitIgnored Ignore
 
     highlight ExtraWhitespace guibg=#7c6f64
-    hi NormalNC guibg=#32302f
+    hi NormalNC guibg=#648699
     highlight InsertColor guifg=#282828 guibg=#83a598
   }
   autocmd ColorScheme zenburn {
@@ -68,23 +67,31 @@ augroup MyColors
     hi NormalNC guibg=#3f3f3f
     highlight InsertColor guifg=#313633 guibg=#7f9f7f gui=bold cterm=bold
   }
+  autocmd ColorScheme nord {
+    highlight ExtraWhitespace guibg=#616E88
+    hi NormalNC guibg=#242832
+    highlight InsertColor guifg=#3B4252 guibg=#a3be8c
+  }
 augroup end
 
 
-g:gruvbox_invert_selection = 0
-g:gruvbox_italic = 0
-g:gruvbox_underline = 1
-g:gruvbox_contrast_light = "hard"
-g:gruvbox_contrast_dark = "medium"
-g:gruvbox_guisp_fallback = "bg" # fix spell colors
-g:gruvbox_vert_split = "bg1"
-set background=dark
-colorscheme gruvbox
+# g:gruvbox_invert_selection = 0
+# g:gruvbox_italic = 0
+# g:gruvbox_underline = 1
+# g:gruvbox_contrast_light = "hard"
+# g:gruvbox_contrast_dark = "medium"
+# g:gruvbox_guisp_fallback = "bg" # fix spell colors
+# g:gruvbox_vert_split = "bg1"
+# set background=dark
+# colorscheme gruvbox
 
 # g:zenburn_alternate_Visual = 1
 # g:zenburn_high_Contrast = 1
 # g:zenburn_disable_Label_underline = 1
 # colorscheme zenburn
+
+colorscheme nord
+
 
 # different color depending on focus
 augroup WinBg
