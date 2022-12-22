@@ -57,9 +57,7 @@
 ;; diff
 (setq
  ediff-split-window-function 'split-window-horizontally
- ediff-window-setup-function 'ediff-setup-windows-plain
- ediff-diff-options "-w"
- auto-window-vscroll nil)
+ ediff-window-setup-function 'ediff-setup-windows-plain)
 
 ;; editor
 (show-paren-mode 1)

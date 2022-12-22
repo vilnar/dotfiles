@@ -29,15 +29,16 @@
 (global-set-key [(control shift up)]  'yr:move-text-up)
 (global-set-key [(control shift down)]	'yr:move-text-down)
 (global-unset-key (kbd "C-d"))
-(global-set-key (kbd "C-d") 'yr:duplicate-line)
+(global-set-key (kbd "C-S-d") 'yr:duplicate-line)
 (eval-after-load "php-mode"
-  '(define-key php-mode-map (kbd "C-d") 'yr:duplicate-line))
+  '(define-key php-mode-map (kbd "C-S-d") 'yr:duplicate-line))
 
 ;; (global-set-key (kbd "C-\\") 'yr:set-input-method-ukraine)
 ;; (global-set-key (kbd "M-\\") 'yr:set-input-method-english)
 (global-set-key (kbd "M-\\") 'yr:toggle-input-method)
 
-(global-set-key (kbd "<C-return>") 'yr:end-of-line-and-indented-new-line)
+(global-set-key (kbd "<C-S-return>") 'yr:new-line-above)
+(global-set-key (kbd "<C-return>") 'yr:new-line-below)
 
 (global-unset-key (kbd "M-m"))
 (global-set-key (kbd "M-m") 'yr:toggle-mark-word-at-point)

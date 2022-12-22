@@ -44,13 +44,22 @@
   (message "Loading Magit!")
   :config
   (message "After loaded Magit!")
+
   (defun magit-submodule-update-all ()
     "Update all submodules"
     :description "Update All (git submodule update --init --recursive)"
     (interactive)
     (magit-with-toplevel
      (magit-run-git-async "submodule" "update" "--init" "--recursive")))
-  (setq magit-list-refs-sortby "-committerdate")
+
+  (setq
+   magit-list-refs-sortby "-committerdate"
+   ;; show whitespace for diff
+   magit-diff-refine-ignore-whitespace nil
+   magit-diff-refine-hunk nil       
+   magit-diff-paint-whitespace t
+   magit-diff-paint-whitespace-lines 'all)
+
   (define-key magit-hunk-section-map (kbd "RET") 'magit-diff-visit-file-other-window)
   (define-key magit-file-section-map (kbd "RET") 'magit-diff-visit-file-other-window))
 

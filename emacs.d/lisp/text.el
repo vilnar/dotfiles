@@ -56,7 +56,13 @@
      (set-input-method "ukrainian-computer")))
 
 
-(defun yr:end-of-line-and-indented-new-line ()
+(defun yr:new-line-above ()
+  (interactive)
+  (beginning-of-line)
+  (newline-and-indent)
+  (previous-line))
+
+(defun yr:new-line-below ()
   (interactive)
   (end-of-line)
   (newline-and-indent))
