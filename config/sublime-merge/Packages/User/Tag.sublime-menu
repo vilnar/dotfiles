@@ -1,0 +1,7 @@
+[
+  {
+    "caption": "View Tag Details",
+    "command": "git",
+    "args": { "argv": ["tag", "-l", "--format='%(refname:strip=2): %(contents:subject)'", "$tag_name"] }
+  },
+]

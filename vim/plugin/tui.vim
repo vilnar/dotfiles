@@ -71,6 +71,7 @@ augroup MyColors
     highlight link CurSearch IncSearch
 
     highlight ExtraWhitespace guibg=#616E88
+    highlight Comment guifg=#a6acb9
     hi NormalNC guibg=#242832
     highlight InsertColor guifg=#3B4252 guibg=#a3be8c
   }

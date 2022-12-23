@@ -1,0 +1,36 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+  "variables":
+  {
+    "nord3_bright": "hsl(221, 12%, 69%)", // #a6acb9, from mariana theme
+  },
+  "globals":
+  {
+    "brackets_options": "bold glow",
+    "selection_border_width": "2",
+    "selection_corner_radius": "3",
+  },
+  "rules":
+  [
+    {
+      "scope": "string punctuation.section.interpolation",
+      "foreground": "var(nord_variable)"
+    },
+    {
+      "name": "[Keyword] Control",
+      "scope": "keyword.declaration",
+      "foreground": "var(nord_keyword)"
+    },
+
+    {
+      "name": "Don't highlight regex in string",
+      "scope": "string.quoted keyword.control.anchor.regexp, string.quoted keyword.operator.or.regexp, string.quoted keyword.operator.negation.regexp, string.quoted keyword.operator.quantifier.regexp, string.quoted constant.character.character-class.regexp, string.quoted constant.other.character-class.set.regexp, string.quoted meta.assertion.look-behind.regexp, string.quoted meta.assertion.look-ahead.regexp, string.quoted meta.assertion.no-capture-group.regexp, string.quoted punctuation.definition.group, string.quoted punctuation.definition.string.regex-delimiter, string.quoted punctuation.definition.character-class",
+      "foreground": "var(nord14)",
+    },
+    {
+      "name": "Don't highlight sql in string",
+      "scope": "meta.string source.sql, meta.string source.sql keyword, meta.string source.sql keyword.operator, meta.string source.sql  keyword.operator.assignment, meta.string source.sql keyword.operator.word, meta.string source.sql keyword.operator.logical, meta.string source.sql storage, meta.string source.sql storage.type, meta.string source.sql constant, meta.string source.sql constant.other, meta.string source.sql constant.numeric, meta.string source.sql punctuation.separator, meta.string source.sql entity.name.function, meta.string source.sql variable.language, meta.string source.sql punctuation.terminator",
+      "foreground": "var(nord14)"
+    },
+  ]
+}

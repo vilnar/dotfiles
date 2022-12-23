@@ -20,7 +20,7 @@
     "rules":
     [
         {
-            "scope": "string punctuation.definition.expression",
+            "scope": "string punctuation.section.interpolation",
             "foreground": "var(white3)"
         },
         {
