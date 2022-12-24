@@ -12,31 +12,10 @@
 (xterm-mouse-mode 1)
 
 (menu-bar-mode -1)
-(defun yr:new-frame-setup (frame)
-  (if (display-graphic-p frame)
-      (progn
-        ;; (load-theme 'leuven t)
-        ;; (load-theme 'tango t)
-        (load-theme 'tango-dark t)
-        ;; (disable-theme 'tango-dark)
-        (menu-bar-mode 1))))
+
 
 ;; maximize window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-
-;; Run for already-existing frames
-(mapc 'yr:new-frame-setup (frame-list))
-;; Run when a new frame is created
-(add-hook 'after-make-frame-functions 'yr:new-frame-setup)
-
-
-(set-face-attribute 'default nil :family "Jetbrains Mono NL" :height 135)
-(set-face-attribute 'fixed-pitch nil :family "Jetbrains Mono NL")
-(set-face-attribute 'variable-pitch nil :family "Jetbrains Mono NL")
-;; (set-face-attribute 'default nil :family "Dejavu Sans Mono" :height 135)
-;; (set-face-attribute 'fixed-pitch nil :family "Dejavu Sans Mono")
-;; (set-face-attribute 'variable-pitch nil :family "Dejavu Sans Mono")
-
 
 ;; eol type
 (setq eol-mnemonic-unix "LF")
@@ -102,3 +81,15 @@
 (load "~/.emacs.d/lisp/search.el" t)
 (load "~/.emacs.d/lisp/text.el" t)
 (load "~/.emacs.d/keybindings.el" t)
+
+
+(defun yr:new-frame-setup (frame)
+  ;; (message "DEBUG: frame setup")
+  (if (display-graphic-p frame)
+      (progn
+        ;; (message "DEBUG load ui")
+        (load "~/.emacs.d/ui.el" t))))
+;; Run for already-existing frames
+(mapc 'yr:new-frame-setup (frame-list))
+;; Run when a new frame is created
+(add-hook 'after-make-frame-functions 'yr:new-frame-setup)
