@@ -74,6 +74,9 @@ augroup MyColors
     highlight Comment guifg=#a6acb9
     hi NormalNC guibg=#242832
     highlight InsertColor guifg=#3B4252 guibg=#a3be8c
+
+    hi Ignore guifg=#616E88
+    hi link DirvishGitIgnored Ignore
   }
 augroup end
 

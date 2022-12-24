@@ -1,5 +1,5 @@
 autocmd VimEnter * call NERDTreeAddKeyMap({
-      \ 'key': 'yy',
+      \ 'key': 'ya',
       \ 'callback': 'NERDTreeYankFullPath',
       \ 'quickhelpText': 'put full path of current node into the default register' })
 
