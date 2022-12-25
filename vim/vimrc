@@ -24,7 +24,7 @@ set directory=~/.vim/tmp,/tmp
 " Persistent undo, even if you close and reopen Vim
 " set undofile
 
-" file change detection for watching tools (like docker volumes)
+" save mode: file change detection for watching tools (like docker volumes)
 set backupcopy=yes
 
 nnoremap <space> <nop>

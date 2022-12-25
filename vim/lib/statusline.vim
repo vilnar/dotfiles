@@ -17,6 +17,6 @@ export def StatuslineExpr(): string
   if m == "i" || m == "R"
     color = "%#InsertColor#"
   endif
-
   return color .. file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
+  # return file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
 enddef
