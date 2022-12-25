@@ -16,7 +16,8 @@
 ;; (global-set-key (kbd "<f12>") 'bookmark-bmenu-list)
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
-(global-set-key (kbd "M-c g") 'rgrep)
+;; (global-set-key (kbd "M-c g") 'rgrep)
+(global-set-key (kbd "M-c g") 'deadgrep)
 (global-set-key (kbd "M-c p") 'projectile-command-map)
 ;; (global-set-key (kbd "M-c f") 'find-file-in-project)
 (global-set-key (kbd "M-c f") 'fzf-directory)
@@ -80,6 +81,7 @@
 
 ;; (global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "C-x f") 'find-file)
+(global-set-key (kbd "C-x b") #'counsel-switch-buffer)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 (global-set-key (kbd "M-c b") 'ibuffer-other-window)
 

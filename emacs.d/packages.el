@@ -1,13 +1,12 @@
 (with-eval-after-load 'package
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/")))
 
 (package-initialize)
 
 ;; Auto-install use-package. Why?
 ;; .. this is a defacto-standard package manager, useful to isolate each package's configuration.
 (unless (package-installed-p 'use-package)
-  (package-refresh-contents t)
+  (package-refresh-contents)
   (package-install 'use-package))
 
 ;; This is only needed once, near the top of the file
@@ -114,6 +113,14 @@
 
 ;; go to last change, unfortunately, only local buffer
 (use-package goto-chg)
+
+;; interactive functions for ivy
+(use-package counsel
+  :commands (counsel-switch-buffer))
+
+(use-package deadgrep)
+
+(use-package zenburn-theme)
 
 ;; ----------------------------------------------------------------------------
 ;; programming languages
