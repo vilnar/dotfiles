@@ -24,9 +24,7 @@ set directory=~/.vim/tmp,/tmp
 " Persistent undo, even if you close and reopen Vim
 " set undofile
 
-" Fix work with docker volumes.
-" When writing a file a backup is made.
-" This option make a copy of the file and overwirte the original one.
+" file change detection for watching tools (like docker volumes)
 set backupcopy=yes
 
 nnoremap <space> <nop>

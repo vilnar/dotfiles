@@ -1,0 +1,8 @@
+export VISUAL=vim
+export EDITOR=vim
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
