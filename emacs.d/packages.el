@@ -118,7 +118,10 @@
 (use-package counsel
   :commands (counsel-switch-buffer))
 
-(use-package deadgrep)
+(use-package rg)
+(with-eval-after-load 'rg
+   (setq rg-ignore-ripgreprc nil)
+)
 
 (use-package zenburn-theme)
 

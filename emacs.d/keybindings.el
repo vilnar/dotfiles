@@ -17,7 +17,7 @@
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
 ;; (global-set-key (kbd "M-c g") 'rgrep)
-(global-set-key (kbd "M-c g") 'deadgrep)
+(global-set-key (kbd "M-c g") #'rg-menu)
 (global-set-key (kbd "M-c p") 'projectile-command-map)
 ;; (global-set-key (kbd "M-c f") 'find-file-in-project)
 (global-set-key (kbd "M-c f") 'fzf-directory)
