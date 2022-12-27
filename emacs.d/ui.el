@@ -1,7 +1,7 @@
 ;; (load-theme 'leuven t)
-(load-theme 'zenburn)
+;; (load-theme 'zenburn)
 ;; (load-theme 'tango t)
-;; (load-theme 'tango-dark t)
+(load-theme 'tango-dark t)
 ;; (disable-theme 'tango-dark)
 
 

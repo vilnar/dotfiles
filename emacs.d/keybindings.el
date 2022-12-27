@@ -10,6 +10,7 @@
 (global-set-key (kbd "<f7>") 'yr:new-empty-buffer)
 (global-set-key (kbd "<f8>") 'toggle-truncate-lines)
 (global-set-key (kbd "<f9>") 'whitespace-mode)
+(global-set-key (kbd "<f10>") 'dired-sidebar-toggle-sidebar)
 ;; (global-set-key (kbd "<f8>") 'tab-new)
 ;; (global-set-key (kbd "<f9>") 'bookmark-set)
 ;; (global-set-key (kbd "<f10>") 'bookmark-jump)
@@ -19,7 +20,6 @@
 ;; (global-set-key (kbd "M-c g") 'rgrep)
 (global-set-key (kbd "M-c g") #'rg-menu)
 (global-set-key (kbd "M-c p") 'projectile-command-map)
-;; (global-set-key (kbd "M-c f") 'find-file-in-project)
 (global-set-key (kbd "M-c f") 'fzf-directory)
 (global-set-key (kbd "M-c h") 'lazy-highlight-cleanup)
 
@@ -80,6 +80,7 @@
 
 
 ;; (global-set-key (kbd "C-s") 'swiper)
+(global-set-key (kbd "C-s") 'yr:swiper-or-region)
 (global-set-key (kbd "C-x f") 'find-file)
 (global-set-key (kbd "C-x b") #'counsel-switch-buffer)
 (global-set-key (kbd "C-x C-b") #'ibuffer)

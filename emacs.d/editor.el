@@ -43,3 +43,16 @@ Taken from https://github.com/syl20bnr/spacemacs/pull/179."
 ;; enhances name completion when in minibuffer prompts (default)
 ;; (icomplete-vertical-mode)
 ;; (fido-vertical-mode)
+
+
+;; taken from https://emacs.stackexchange.com/questions/28355/how-to-unmark-selection-in-elisp
+(defun yr:swiper-or-region (beg end)
+  "Swiper region or 'empty string' if none highlighted."
+  (interactive (if (use-region-p)
+                   (list (region-beginning) (region-end))
+                 (list nil nil)))
+  (if (and beg end)
+      (progn
+        (deactivate-mark)
+        (swiper (buffer-substring-no-properties beg end)))
+    (swiper)))

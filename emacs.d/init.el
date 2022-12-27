@@ -1,8 +1,5 @@
 ;; Title formatting
 (setq frame-title-format (list "emacs - "  '(buffer-file-name "%f" "%b")))
-(setq icon-title-format frame-title-format)
-
-(setq fast-but-imprecise-scrolling t)
 
 (tool-bar-mode 0)
 (scroll-bar-mode -1)
@@ -30,7 +27,6 @@
 ;; search
 (setq isearch-lazy-count 1)
 (setq isearch-highlight 1)
-(setq highlight-nonselected-windows t)
 (setq-default case-fold-search t)
 
 ;; diff
@@ -75,6 +71,7 @@
 
 
 (load "~/.emacs.d/packages.el" t)
+(load "~/.emacs.d/modes.el" t)
 (load "~/.emacs.d/editor.el" t)
 (load "~/.emacs.d/lisp/files.el" t)
 (load "~/.emacs.d/lisp/json.el" t)

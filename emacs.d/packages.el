@@ -79,23 +79,35 @@
    (progn (add-to-list 'load-path "/usr/bin/fzf")))
 
 
-(use-package ivy
-  :demand t
-  :config
-  (ivy-mode))
+;; counsel -> swiper -> ivy
+(use-package counsel
+  :init
+  (counsel-mode 1))
 
 (use-package swiper
   :commands (swiper)
   :config
   (setq swiper-goto-start-of-match t))
 
+(use-package ivy
+  :demand t
+  :config
+  (ivy-mode 1)
+  (setq ivy-use-virutal-buffers t)
+  (setq enable-recursive-minibuffers t)
+  (setq ivy-display-style 'fancy)
+  (setq ivy-count-format "(%d/%d) ")
+)
+
+
+(use-package dired-sidebar
+  :commands (dired-sidebar-toggle-sidebar))
 
 (use-package projectile
-  :commands projectile-mode
   :init
-  (setq projectile-enable-caching t)
-  (setq projectile-completion-system 'default)
-  (projectile-mode 1))
+  (projectile-mode 1)
+  :bind ("M-p" . projectile-command-map)
+)
 
 
 ;; Highlight terms in code-comments such as TODO, FIXME, URL's & email. Why?
@@ -114,16 +126,24 @@
 ;; go to last change, unfortunately, only local buffer
 (use-package goto-chg)
 
-;; interactive functions for ivy
-(use-package counsel
-  :commands (counsel-switch-buffer))
-
 (use-package rg)
 (with-eval-after-load 'rg
    (setq rg-ignore-ripgreprc nil)
 )
 
 (use-package zenburn-theme)
+
+(use-package flycheck
+  :init (global-flycheck-mode t)
+  :config
+  (add-hook 'go-mode-hook (lambda ()
+                          (setq flycheck-checker 'go-staticcheck)))
+  (add-hook 'php-mode-hook (lambda ()
+                          (setq flycheck-checker 'php)))
+  ;; (setq flycheck-check-syntax-automatically '(mode-enabled save))
+  ;; (add-hook 'after-init-hook #'global-flycheck-mode)
+  ;; (setq flycheck-idle-change-delay 2.0)
+)
 
 ;; ----------------------------------------------------------------------------
 ;; programming languages
@@ -213,3 +233,4 @@
   (web-mode-code-indent-offset 2))
 
 (use-package yaml-mode)
+
