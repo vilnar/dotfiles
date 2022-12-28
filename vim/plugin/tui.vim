@@ -65,7 +65,7 @@ augroup MyColors
 
     highlight ExtraWhitespace guibg=#797979
     hi NormalNC guibg=#3f3f3f
-    highlight InsertColor guifg=#313633 guibg=#7f9f7f gui=bold cterm=bold
+    highlight InsertColor guifg=#DCDCCC guibg=#304A3D gui=bold cterm=bold
   }
   autocmd ColorScheme nord {
     highlight link CurSearch IncSearch
