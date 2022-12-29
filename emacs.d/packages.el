@@ -1,28 +1,14 @@
-(with-eval-after-load 'package
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/")))
-
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
-;; Auto-install use-package. Why?
-;; .. this is a defacto-standard package manager, useful to isolate each package's configuration.
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+(eval-and-compile
+  (setq use-package-always-ensure t
+        use-package-always-defer t))
 
-;; This is only needed once, near the top of the file
-(eval-when-compile (require 'use-package))
-
-;; Download automatically. Why?
-;; .. convenience, so on first start all packages are installed.
-(setq use-package-always-ensure t)
-;; Defer loading packages by default. Why?
-;; .. faster startup for packages which are only activated on certain modes or key bindings.
-(setq use-package-always-defer t)
-
-;; Add the ability to upgrade all packages. Why?
-;; .. adds a quick way to upgrade everything at once.
-(use-package package-utils
-  :commands (package-utils-upgrade-all-and-recompile))
 
 
 
@@ -132,6 +118,7 @@
 )
 
 (use-package zenburn-theme)
+(use-package leuven-theme)
 
 (use-package flycheck
   :init (global-flycheck-mode t)
