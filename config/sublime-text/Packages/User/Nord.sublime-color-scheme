@@ -21,6 +21,17 @@
       "scope": "keyword.declaration",
       "foreground": "var(nord_keyword)"
     },
+    {
+      "name": "Operator assignment",
+      "scope": "keyword.operator.assignment",
+      "foreground": "var(nord13)",
+    },
+    {
+      "name": "Operator assignment",
+      "scope": "keyword.operator.logical",
+      "foreground": "var(nord13)",
+    },
+
 
     {
       "name": "Don't highlight regex in string",
@@ -31,6 +42,28 @@
       "name": "Don't highlight sql in string",
       "scope": "meta.string source.sql, meta.string source.sql keyword, meta.string source.sql keyword.operator, meta.string source.sql  keyword.operator.assignment, meta.string source.sql keyword.operator.word, meta.string source.sql keyword.operator.logical, meta.string source.sql storage, meta.string source.sql storage.type, meta.string source.sql constant, meta.string source.sql constant.other, meta.string source.sql constant.numeric, meta.string source.sql punctuation.separator, meta.string source.sql entity.name.function, meta.string source.sql variable.language, meta.string source.sql punctuation.terminator",
       "foreground": "var(nord14)"
+    },
+
+
+    {
+      "scope": "diff.deleted",
+      "background": "hsla(357, 45%, 60%, 0.15)",
+      "foreground_adjust": "l(+ 5%)"
+    },
+    {
+      "scope": "diff.deleted.char",
+      "background": "hsla(357, 60%, 60%, 0.20)",
+      "foreground_adjust": "l(+ 10%)"
+    },
+    {
+      "scope": "diff.inserted",
+      "background": "hsla(180, 45%, 60%, 0.15)",
+      "foreground_adjust": "l(+ 5%)"
+    },
+    {
+      "scope": "diff.inserted.char",
+      "background": "hsla(180, 60%, 60%, 0.20)",
+      "foreground_adjust": "l(+ 10%)"
     },
   ]
 }
