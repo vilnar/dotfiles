@@ -103,10 +103,13 @@ augroup end
 g:zenburn_alternate_Visual = 1
 g:zenburn_high_Contrast = 1
 g:zenburn_disable_Label_underline = 1
-# colorscheme zenburn
+colorscheme zenburn
 
-g:nord_uniform_diff_background = 1
-colorscheme nord
+# g:nord_uniform_diff_background = 1
+# colorscheme nord
+
+# colorscheme default
+# set background=light
 
 
 # different color depending on focus
@@ -115,8 +118,6 @@ augroup WinBg
     autocmd WinLeave,BufLeave * setlocal wincolor=NormalNC
 augroup end
 
-# colorscheme default
-# set background=dark
 
 
 # set linebreak

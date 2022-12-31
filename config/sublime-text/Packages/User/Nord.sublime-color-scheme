@@ -13,7 +13,20 @@
   "rules":
   [
     {
-      "scope": "string punctuation.section.interpolation",
+      "scope": "punctuation.section",
+      "foreground": "var(nord_variable)"
+    },
+    {
+      "scope": "variable",
+      "foreground": "var(nord_variable)"
+    },
+    {
+      "scope": "source.php variable.other punctuation.definition",
+      "foreground": "var(nord_variable)"
+    },
+    {
+      "name": "Punctuation",
+      "scope": "punctuation.separator, punctuation.terminator",
       "foreground": "var(nord_variable)"
     },
     {
@@ -40,7 +53,7 @@
     },
     {
       "name": "Don't highlight sql in string",
-      "scope": "meta.string source.sql, meta.string source.sql keyword, meta.string source.sql keyword.operator, meta.string source.sql  keyword.operator.assignment, meta.string source.sql keyword.operator.word, meta.string source.sql keyword.operator.logical, meta.string source.sql storage, meta.string source.sql storage.type, meta.string source.sql constant, meta.string source.sql constant.other, meta.string source.sql constant.numeric, meta.string source.sql punctuation.separator, meta.string source.sql entity.name.function, meta.string source.sql variable.language, meta.string source.sql punctuation.terminator",
+      "scope": "meta.string source.sql, meta.string source.sql keyword, meta.string source.sql keyword.operator, meta.string source.sql  keyword.operator.assignment, meta.string source.sql keyword.operator.word, meta.string source.sql keyword.operator.logical, meta.string source.sql storage, meta.string source.sql storage.type, meta.string source.sql constant, meta.string source.sql constant.other, meta.string source.sql constant.numeric, meta.string source.sql punctuation.separator, meta.string source.sql entity.name.function, meta.string source.sql variable.language, meta.string source.sql punctuation.terminator, meta.string keyword.other, meta.string keyword.control",
       "foreground": "var(nord14)"
     },
 
