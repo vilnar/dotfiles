@@ -44,6 +44,11 @@
       "scope": "keyword.operator.logical",
       "foreground": "var(nord13)",
     },
+    {
+      "name": "YAML keys",
+      "scope": "source.yaml meta.mapping.key meta.string string.unquoted",
+      "foreground": "var(nord7)"
+    },
 
 
     {

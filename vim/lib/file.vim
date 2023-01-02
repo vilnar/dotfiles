@@ -32,9 +32,6 @@ command FileCopyNameAll :vim9cmd CopyPath(expand('%:t'))
 command FileCopyName :vim9cmd CopyPath(expand('%:t:r'))
 # command FileCopyName :vim9cmd exe "@+ = expand('%:t')"
 
-command EditorShowLineEncoding :echo &fileformat
-command EditorShowType :echo &filetype
-
 
 def RenameFile()
   const wrong_names = ["", ".", ".."]
@@ -82,9 +79,4 @@ enddef
 command FileRemove RemoveFile()
 
 
-
 # command FileEncodeReopenWithWinCyrilic :e ++enc=cp1251
-command EncodeDetectThis :!chardet3 %
-command EncodingSupportedShow :help encoding-values
-command EncodingShow :echo exists(&fileencoding) ? &fileencoding : &encoding
-command CdToFile :execute 'cd ' .. expand('%:p:h')

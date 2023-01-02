@@ -115,15 +115,15 @@ vnoremap <Leader>fp y:vim9cmd FilesBuffer !find * -not -path "./.git/*" -path "*
 # FZF -----------------------------------------------------------------------------
 nnoremap <silent><nowait> <leader>; :Commands<CR>
 # nnoremap <leader>tt :Tags '<C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>tt :MyTags <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>tt :CustomFzfTags <C-R>=expand("<cword>")<CR><CR>
 # nnoremap <leader>tb :BTags '<C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>tb :MyBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>tb :CustomFzfBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
 # nnoremap <leader>tf :BTags<CR>
-nnoremap <leader>tf :MyBufferTags<CR>
+nnoremap <leader>tf :CustomFzfBufferTags<CR>
 
-nnoremap <silent><nowait> <leader>ff :MyFiles<CR>
-nnoremap <silent><nowait> <leader>fc :MyFiles <C-R>=expand("%:h")<CR>/<CR>
-nnoremap <expr> <leader>fu ':MyFiles<CR>' .. expand('<cword>')
+nnoremap <silent><nowait> <leader>ff :CustomFzfFiles<CR>
+nnoremap <silent><nowait> <leader>fc :CustomFzfFiles <C-R>=expand("%:h")<CR>/<CR>
+nnoremap <expr> <leader>fu ':CustomFzfFiles<CR>' .. expand('<cword>')
 xnoremap <leader>ff y:vim9cmd <SID>fzfLib.GotoSelection()<CR>
 nnoremap <leader>mm :Marks<CR>
 

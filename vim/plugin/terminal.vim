@@ -10,7 +10,7 @@ def OpenTerminal()
   # execute 'Start! xterm -e "cd ' .. path .. ' && bash"'
 enddef
 
-command OpenTerminalHere OpenTerminal()
+command TerminalOpenHere OpenTerminal()
 
 def OpenInternalTerminal()
   var path = expand('%:p:h')
@@ -21,7 +21,7 @@ def OpenInternalTerminal()
   execute 'terminal'
   execute 'cd ' .. path
 enddef
-command OpenInternalTerminalHere OpenInternalTerminal()
+command TerminalInternalOpenHere OpenInternalTerminal()
 
 
 def OpenFileInNewTerminal()
@@ -33,4 +33,4 @@ def OpenFileInNewTerminal()
   execute 'Start! gnome-terminal -- vim ' .. path
   # execute 'Start! xterm -e "vim ' .. path .. '"'
 enddef
-command OpenFileInNewTerminal OpenFileInNewTerminal()
+command TerminalOpenFileInNew OpenFileInNewTerminal()

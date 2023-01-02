@@ -17,3 +17,11 @@ command IndentUse2Spaces :setlocal tabstop=8 softtabstop=2 shiftwidth=2 expandta
 command IndentUse8Tab :setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 command EditorShowTabSize :echo &tabstop
 command EditorLastLineEndsNewLineToggle :setlocal nofixendofline!
+command EditorShowLineEncoding :echo &fileformat
+command EditorShowType :echo &filetype
+
+
+command EncodeDetectThis :!chardet3 %
+command EncodingSupportedShow :help encoding-values
+command EncodingShow :echo exists(&fileencoding) ? &fileencoding : &encoding
+command CdToFile :execute 'cd ' .. expand('%:p:h')
