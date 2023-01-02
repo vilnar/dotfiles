@@ -73,19 +73,23 @@ augroup MyColors
   }
   autocmd ColorScheme nord {
     hi link CurSearch IncSearch
-
-    hi ExtraWhitespace guibg=#616E88
-    hi Comment guifg=#a6acb9
-    hi NormalNC guibg=#242832
-    hi InsertColor guifg=#3B4252 guibg=#81976e
-
-    hi Ignore guifg=#616E88
-    hi link DirvishGitIgnored Ignore
+    hi link markdownCode String
+    hi link markdownCodeBlock String
+    hi link markdownCodeDelimiter String
+    hi link gitcommitSummary SpecialChar
 
     hi DiffAdd    guifg=NONE gui=NONE cterm=NONE
     hi DiffDelete gui=NONE cterm=NONE
     hi DiffChange guifg=NONE gui=NONE cterm=NONE
     hi DiffText   guibg=#593e4c guifg=NONE gui=bold cterm=bold
+
+    hi Ignore guifg=#616E88
+    hi link DirvishGitIgnored Ignore
+
+    hi ExtraWhitespace guibg=#616E88
+    hi Comment guifg=#a6acb9
+    hi NormalNC guibg=#242832
+    hi InsertColor guifg=#3B4252 guibg=#81976e
   }
 augroup end
 
@@ -100,14 +104,15 @@ augroup end
 # set background=dark
 # colorscheme gruvbox
 
-g:zenburn_alternate_Visual = 1
-g:zenburn_high_Contrast = 1
-g:zenburn_disable_Label_underline = 1
-colorscheme zenburn
+# g:zenburn_alternate_Visual = 1
+# g:zenburn_high_Contrast = 1
+# g:zenburn_disable_Label_underline = 1
+# colorscheme zenburn
 
-# g:nord_uniform_diff_background = 1
-# colorscheme nord
+g:nord_uniform_diff_background = 1
+colorscheme nord
 
+# colorscheme desert
 # colorscheme default
 # set background=light
 

@@ -8,5 +8,9 @@ nnoremap <buffer> <F1> :CtagsGenerateGo<CR>
 nnoremap <buffer> <F2> :GoImportRun<CR>
 
 
-b:ale_linters = ['staticcheck']
-g:ale_go_staticcheck_options = '-checks=["all","-ST1000","-ST1003","-ST1016","-ST1020","-ST1021","-ST1022","-ST1006"]'
+# b:ale_linters = ['staticcheck']
+# g:ale_go_staticcheck_options = '-checks=["all","-ST1000","-ST1003","-ST1016","-ST1020","-ST1021","-ST1022","-ST1006"]'
+
+b:ale_linters = ['golangci-lint']
+g:ale_go_golangci_lint_options = '--disable-all -E revive -E errcheck -E nilerr -E gosec'
+
