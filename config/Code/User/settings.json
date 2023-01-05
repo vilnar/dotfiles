@@ -322,6 +322,9 @@
     },
     "go.testExplorer.enable": false,
     "go.useLanguageServer": false,
+    "go.languageServerExperimentalFeatures": {
+        "diagnostics": false
+    },
     "gopls": {
         "ui.documentation.hoverKind": "FullDocumentation",
         "ui.documentation.linksInHover": false,
@@ -436,5 +439,5 @@
         "updateHighlight": false,
         "goToNextHighlight": false,
         "goToPreviousHighlight": false
-    }
+    },
 }

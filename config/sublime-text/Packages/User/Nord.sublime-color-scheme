@@ -45,6 +45,11 @@
       "foreground": "var(nord13)",
     },
     {
+      "name": "string",
+      "scope": "string.quoted.backtick, string.interpolated",
+      "foreground": "var(nord_string)"
+    },
+    {
       "name": "YAML keys",
       "scope": "source.yaml meta.mapping.key meta.string string.unquoted",
       "foreground": "var(nord7)"

@@ -1,3 +1,4 @@
 vim9script
 
-set sessionoptions=buffers,curdir,winpos
+set sessionoptions-=options
+set viewoptions-=options

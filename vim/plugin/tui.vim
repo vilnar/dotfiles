@@ -3,12 +3,15 @@ vim9script
 import "../lib/statusline.vim" as statusline
 
 # Fix slow O inserts
-set timeout timeoutlen=1000 ttimeoutlen=100
+set ttimeout
+set ttimeoutlen=100
 
 # needed for work undo/redo, otherwise history (undo/redo) will not be saved
 set hidden
 # keep cursor column position
 set nostartofline
+
+set autoread
 
 set mouse=a
 
@@ -26,7 +29,7 @@ augroup END
 
 # horizontal scroll
 set sidescroll=1
-set sidescrolloff=3
+set sidescrolloff=2
 
 if (has("termguicolors"))
   set termguicolors
@@ -148,7 +151,7 @@ set title
 set confirm
 
 
-set display+=lastline
+set display+=truncate
 
 if !has('gui_running')
   # cursor shape in difference mode

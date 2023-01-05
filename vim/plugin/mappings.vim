@@ -81,7 +81,8 @@ nnoremap <Leader>cc :bw %<CR>
 # buffers list
 # nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
 nnoremap \b :ls<CR>:b
-nnoremap <silent> <leader>b :Buffers<CR>
+# nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>b :ToggleBufExplorer<CR>
 
 nnoremap ]b <Plug>(buf-surf-forward)
 nnoremap [b <Plug>(buf-surf-back)

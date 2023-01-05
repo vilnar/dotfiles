@@ -19,6 +19,15 @@ g:go_highlight_functions = 1
 # fzf
 g:fzf_history_dir = '~/.fzf-history'
 
+# :help bufexplorer
+# WARNING: works correctly only with the option - set autoread
+g:bufExplorerShowNoName = 1
+#g:bufExplorerSortBy = "number"
+g:bufExplorerSortBy = "mru"
+g:bufExplorerShowRelativePath = 1
+g:bufExplorerDisableDefaultKeyMapping = 1
+g:bufExplorerShowTabBuffer = 0
+
 # :help NERDTree
 g:NERDTreeMouseMode = 2
 g:NERDTreeWinSize = 40
