@@ -75,7 +75,7 @@ Plug 'mattn/vim-goimports', { 'commit': '5db0dcf7a11f6b5b89169b2e13aa7a376312caf
 
 Plug 'stephpy/vim-php-cs-fixer', { 'commit': 'c993a1381454e97048383a8ff6f18eecafc763dc' }
 
-Plug 'gruvbox-community/gruvbox', { 'commit': '95b120a15d0765037d2836d04e3360c273caf111' }
+Plug 'gruvbox-community/gruvbox', { 'commit': '2b5b1f777f0583ffb39086d6c16f39e6e37459c0' }
 Plug 'arcticicestudio/nord-vim', { 'commit': '0748955e9e8d9770b44f2bec8456189430b37d9d' }
 Plug 'jnurmine/Zenburn', { 'commit': '8df765342b2a33c728ce147d6c8e66359378f9d5' }
 Plug 'azabiong/vim-highlighter', { 'commit': 'e0d7c6c5b2584eac0cbd92eb967e1f3a44cea0ab' }
