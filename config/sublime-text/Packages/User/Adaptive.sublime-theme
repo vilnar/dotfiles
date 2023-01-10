@@ -7,7 +7,7 @@
     "font_size": 15,
     "font_size_lg": 17,
     "font_size_title": 17,
-    "--greenish": "#a3be8c", // from nord color scheme
+    // "--greenish": "#a3be8c", // from nord color scheme
   },
   "rules":
   [
