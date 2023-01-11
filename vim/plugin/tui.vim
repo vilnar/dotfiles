@@ -55,7 +55,7 @@ augroup MyColors
     hi InsertColor guifg=#282828 guibg=#83a598
   }
   autocmd ColorScheme zenburn {
-    hi CurSearch guifg=#0f0f0f guibg=#f8f893
+    hi link CurSearch IncSearch
     hi link markdownCode String
     hi link markdownCodeBlock String
     hi link markdownCodeDelimiter String
@@ -107,13 +107,13 @@ augroup end
 # set background=dark
 # colorscheme gruvbox
 
-# g:zenburn_alternate_Visual = 1
-# g:zenburn_high_Contrast = 1
-# g:zenburn_disable_Label_underline = 1
-# colorscheme zenburn
+g:zenburn_alternate_Visual = 0
+g:zenburn_high_Contrast = 0
+g:zenburn_disable_Label_underline = 1
+colorscheme zenburn
 
-g:nord_uniform_diff_background = 1
-colorscheme nord
+# g:nord_uniform_diff_background = 1
+# colorscheme nord
 
 # colorscheme desert
 # colorscheme default
