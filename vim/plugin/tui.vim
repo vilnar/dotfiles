@@ -42,10 +42,10 @@ augroup MyColors
     hi CurSearch gui=reverse cterm=reverse
     hi ExtraWhitespace guibg=#7E8E91
   }
-  autocmd ColorScheme gruvbox {
+  autocmd ColorScheme gruvbox8 {
     hi CurSearch guifg=#1D2021 guibg=#fe8019
-    hi link gitcommitSummary GruvboxYellow
-    hi link Function GruvboxYellow
+    hi gitcommitSummary guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
+    hi Function guifg=#fe8019 guibg=NONE gui=NONE cterm=NONE
 
     hi Ignore guifg=#8F8F8F
     hi link DirvishGitIgnored Ignore
@@ -54,66 +54,11 @@ augroup MyColors
     hi NormalNC guibg=#32302f
     hi InsertColor guifg=#282828 guibg=#83a598
   }
-  autocmd ColorScheme zenburn {
-    hi link CurSearch IncSearch
-    hi link markdownCode String
-    hi link markdownCodeBlock String
-    hi link markdownCodeDelimiter String
-
-    hi link diffAdded Comment
-    hi link diffRemoved String
-    hi link diffChanged Number
-    hi DiffAdd    guifg=NONE gui=NONE cterm=NONE
-    hi DiffDelete gui=NONE cterm=NONE
-    hi DiffChange guifg=NONE gui=NONE cterm=NONE
-    hi DiffText   guibg=#593e4c guifg=NONE gui=bold cterm=bold
-
-    hi Ignore guifg=#8F8F8F
-    hi link DirvishGitIgnored Ignore
-
-    hi ExtraWhitespace guibg=#797979
-    hi NormalNC guibg=#3f3f3f
-    hi InsertColor guifg=#DCDCCC guibg=#304A3D gui=bold cterm=bold
-  }
-  autocmd ColorScheme nord {
-    hi link CurSearch IncSearch
-    hi link markdownCode String
-    hi link markdownCodeBlock String
-    hi link markdownCodeDelimiter String
-    hi link gitcommitSummary SpecialChar
-
-    hi DiffAdd    guifg=NONE gui=NONE cterm=NONE
-    hi DiffDelete gui=NONE cterm=NONE
-    hi DiffChange guifg=NONE gui=NONE cterm=NONE
-    hi DiffText   guibg=#593e4c guifg=NONE gui=bold cterm=bold
-
-    hi Ignore guifg=#616E88
-    hi link DirvishGitIgnored Ignore
-
-    hi ExtraWhitespace guibg=#616E88
-    hi Comment guifg=#a6acb9
-    hi NormalNC guibg=#242832
-    hi InsertColor guifg=#3B4252 guibg=#81976e
-  }
 augroup end
 
-g:gruvbox_invert_selection = 0
-g:gruvbox_italic = 0
-g:gruvbox_underline = 1
-g:gruvbox_contrast_light = "hard"
-g:gruvbox_contrast_dark = "medium"
-g:gruvbox_guisp_fallback = "bg" # fix spell colors
-g:gruvbox_vert_split = "bg1"
+g:gruvbox_italics = 0
 set background=dark
-colorscheme gruvbox
-
-# g:zenburn_alternate_Visual = 0
-# g:zenburn_high_Contrast = 0
-# g:zenburn_disable_Label_underline = 1
-# colorscheme zenburn
-
-# g:nord_uniform_diff_background = 1
-# colorscheme nord
+colorscheme gruvbox8
 
 # colorscheme desert
 # colorscheme default
