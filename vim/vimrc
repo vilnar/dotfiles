@@ -17,12 +17,12 @@ set modelines=0
 set nomodeline
 
 
-set backupdir=~/.vim/tmp,/tmp
-set directory=~/.vim/tmp,/tmp
+set backupdir=$HOME/.vim/tmp//,/tmp//
+set directory=$HOME/.vim/tmp//,/tmp//
 
-" set undodir=~/.vim/tmp,/tmp
+set undodir=$HOME/.vim/tmp//,/tmp//
 " Persistent undo, even if you close and reopen Vim
-" set undofile
+set undofile
 
 " save mode: file change detection for watching tools (like docker volumes)
 set backupcopy=yes
@@ -48,7 +48,7 @@ Plug 'ton/vim-bufsurf', { 'commit': 'e6dbc7ad66c7e436e5eb20d304464e378bd7f28c' }
 Plug 'jlanzarotta/bufexplorer', { 'commit': 'e782dab0fe9523ac65d9fe4f726f2efe924e3f43' }
 
 " git
-Plug 'tpope/vim-fugitive', { 'commit': '99cdb88bc64063dc4656ae53496f06fb2a394cd4' }
+Plug 'tpope/vim-fugitive', { 'commit': '9c5f675db54139c18ed4a1a18989ea2da37d6cae' }
 " use git-cola to compare commits :)
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
@@ -81,7 +81,7 @@ Plug 'jnurmine/Zenburn', { 'commit': '8df765342b2a33c728ce147d6c8e66359378f9d5' 
 Plug 'azabiong/vim-highlighter', { 'commit': 'e0d7c6c5b2584eac0cbd92eb967e1f3a44cea0ab' }
 
 " Lint
-Plug 'dense-analysis/ale', { 'commit': '8bcbb2995822c4062d00cb41df713fd76092f04f' }
+Plug 'dense-analysis/ale', { 'commit': '69c1dc8b5f3d215d4a0538265b2d257c2ed7a8fa' }
 
 " LSP
 " Plug 'prabirshrestha/asyncomplete.vim', { 'commit': '9c7651894c2c6d656c0dc71e87cfabbbb71b9c78' }

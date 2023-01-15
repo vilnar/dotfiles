@@ -97,20 +97,20 @@ augroup MyColors
   }
 augroup end
 
-# g:gruvbox_invert_selection = 0
-# g:gruvbox_italic = 0
-# g:gruvbox_underline = 1
-# g:gruvbox_contrast_light = "hard"
-# g:gruvbox_contrast_dark = "medium"
-# g:gruvbox_guisp_fallback = "bg" # fix spell colors
-# g:gruvbox_vert_split = "bg1"
-# set background=dark
-# colorscheme gruvbox
+g:gruvbox_invert_selection = 0
+g:gruvbox_italic = 0
+g:gruvbox_underline = 1
+g:gruvbox_contrast_light = "hard"
+g:gruvbox_contrast_dark = "medium"
+g:gruvbox_guisp_fallback = "bg" # fix spell colors
+g:gruvbox_vert_split = "bg1"
+set background=dark
+colorscheme gruvbox
 
-g:zenburn_alternate_Visual = 0
-g:zenburn_high_Contrast = 0
-g:zenburn_disable_Label_underline = 1
-colorscheme zenburn
+# g:zenburn_alternate_Visual = 0
+# g:zenburn_high_Contrast = 0
+# g:zenburn_disable_Label_underline = 1
+# colorscheme zenburn
 
 # g:nord_uniform_diff_background = 1
 # colorscheme nord

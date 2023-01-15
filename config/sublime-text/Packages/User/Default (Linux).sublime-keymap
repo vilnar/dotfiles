@@ -1,6 +1,10 @@
 [
   // { "keys": ["ctrl+v"], "command": "paste_and_indent" },
   // { "keys": ["ctrl+shift+v"], "command": "paste" },
+  { "keys": ["alt+a"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+  { "keys": ["alt+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+
+
   { "keys": ["ctrl+7"], "command": "toggle_side_bar" },
   { "keys": ["ctrl+8"], "command": "reveal_in_side_bar" },
   { "keys": ["alt+s"], "command": "save_all" },

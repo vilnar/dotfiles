@@ -11,6 +11,7 @@ class ViewInStatusBar(sublime_plugin.EventListener):
             return
         file_name = view.file_name()
         if not file_name:
+            # untitled
             view.set_status(STATUS_KEY, "TEMP \U00002705") # ✅
             return
         if not os.path.exists(file_name):
