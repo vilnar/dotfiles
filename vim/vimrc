@@ -16,13 +16,14 @@ set nocompatible
 set modelines=0
 set nomodeline
 
+" set backupdir=$HOME/.vim/tmp//,/tmp//
+set nobackup
+" set directory=$HOME/.vim/tmp//,/tmp//
+set noswapfile
 
-set backupdir=$HOME/.vim/tmp//,/tmp//
-set directory=$HOME/.vim/tmp//,/tmp//
-
-set undodir=$HOME/.vim/tmp//,/tmp//
 " Persistent undo, even if you close and reopen Vim
-set undofile
+" set undodir=$HOME/.vim/tmp//,/tmp//
+" set undofile
 
 " save mode: file change detection for watching tools (like docker volumes)
 set backupcopy=yes

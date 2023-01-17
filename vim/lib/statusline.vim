@@ -12,12 +12,12 @@ export def StatuslineExpr(): string
   var percent = " %P"
 
 
-  # var color = ""
-  # var m = mode()
-  # if m == "i" || m == "R"
-  #   color = "%#InsertColor#"
-  # endif
-  # return color .. file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
+  var color = ""
+  var m = mode()
+  if m == "i" || m == "R"
+    color = "%#InsertColor#"
+  endif
+  return color .. file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
 
-  return file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
+  # return file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
 enddef

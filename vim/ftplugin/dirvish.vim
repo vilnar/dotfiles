@@ -64,3 +64,5 @@ if !exists('g:OpenExplorerUnderCursor')
   enddef
 endif
 nnoremap <buffer> ye :vim9cmd <SID>OpenExplorerUnderCursor()<CR>
+
+nnoremap - <Plug>(dirvish_up)

@@ -32,6 +32,9 @@
     "draw_active_single"
   ],
 
+  // fold
+  "fold_style": "force_indentation",
+
   // lines
   "line_numbers": true,
   "highlight_line": false,
@@ -119,13 +122,7 @@
   "light_color_scheme": "Alabaster.sublime-color-scheme",
   "light_font_face": "Jetbrains Mono NL Light",
   "light_font_size": 13.5,
-  "dark_color_scheme": "Nord.sublime-color-scheme",
+  "dark_color_scheme": "Monokai.sublime-color-scheme",
   "dark_font_face": "Jetbrains Mono NL",
   "dark_font_size": 13.5,
-
-  "indent_subsequent_lines": true,
-  "indent_to_bracket": false,
-  "show_rel_path": true,
-  // "control_character_style": "hex",
-  "control_character_style": "names",
 }
