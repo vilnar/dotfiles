@@ -45,7 +45,7 @@ augroup MyColors
   autocmd ColorScheme gruvbox8 {
     hi CurSearch guifg=#1D2021 guibg=#fe8019
     hi gitcommitSummary guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
-    hi Function guifg=#fe8019 guibg=NONE gui=NONE cterm=NONE
+    # hi Function guifg=#fe8019 guibg=NONE gui=NONE cterm=NONE
 
     hi Ignore guifg=#8F8F8F
     hi link DirvishGitIgnored Ignore
@@ -53,6 +53,11 @@ augroup MyColors
     hi ExtraWhitespace guibg=#7c6f64
     hi NormalNC guibg=#32302f
     hi InsertColor guifg=#282828 guibg=#83a598
+
+    hi DiffAdd    guibg=#59644c guifg=NONE gui=NONE cterm=NONE
+    hi DiffDelete gui=NONE cterm=NONE
+    hi DiffChange guibg=#445a3d guifg=NONE gui=NONE cterm=NONE
+    hi DiffText   guibg=#846418 guifg=NONE gui=bold cterm=bold
   }
 augroup end
 
