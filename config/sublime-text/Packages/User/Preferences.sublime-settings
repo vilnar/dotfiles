@@ -31,6 +31,7 @@
     "draw_normal",
     "draw_active_single"
   ],
+  "control_character_style": "names",
 
   // fold
   "fold_style": "force_indentation",

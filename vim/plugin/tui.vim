@@ -31,6 +31,9 @@ augroup END
 set sidescroll=1
 set sidescrolloff=2
 
+# scroll with wrap, work with CTRL-E, CTRL-Y, mouse
+set smoothscroll
+
 if (has("termguicolors"))
   set termguicolors
 endif
