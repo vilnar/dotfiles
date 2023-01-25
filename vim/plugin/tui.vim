@@ -56,6 +56,7 @@ augroup MyColors
     hi ExtraWhitespace guibg=#7c6f64
     hi NormalNC guibg=#32302f
     hi InsertColor guifg=#282828 guibg=#83a598
+    hi ImInsertColor guifg=#282828 guibg=#D79921
 
     hi DiffAdd    guibg=#59644c guifg=NONE gui=NONE cterm=NONE
     hi DiffDelete gui=NONE cterm=NONE

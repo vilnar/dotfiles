@@ -16,6 +16,9 @@ export def StatuslineExpr(): string
   var m = mode()
   if m == "i" || m == "R"
     color = "%#InsertColor#"
+    if &iminsert
+      color = "%#ImInsertColor#"
+    endif
   endif
   return color .. file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
 

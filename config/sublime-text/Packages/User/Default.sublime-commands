@@ -15,4 +15,5 @@
   { "caption": "File Clear", "command": "clear_file" },
   { "caption": "File History", "command": "custom_file_history" },
   { "caption": "Project: Restart", "command": "project_restart" },
+  { "caption": "Repeat Paste", "command": "repeat_paste" },
 ]
