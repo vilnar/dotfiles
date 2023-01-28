@@ -46,7 +46,6 @@ Plug 'tpope/vim-surround', { 'commit': '3d188ed2113431cf8dac77be61b842acb64433d9
 Plug 'tpope/vim-obsession', { 'commit': 'fe9d3e1a9a50171e7d316a52e1e56d868e4c1fe5' }
 
 Plug 'ton/vim-bufsurf', { 'commit': 'e6dbc7ad66c7e436e5eb20d304464e378bd7f28c' }
-Plug 'jlanzarotta/bufexplorer', { 'commit': 'e782dab0fe9523ac65d9fe4f726f2efe924e3f43' }
 
 " git
 Plug 'tpope/vim-fugitive', { 'commit': '9c5f675db54139c18ed4a1a18989ea2da37d6cae' }

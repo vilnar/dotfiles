@@ -24,6 +24,11 @@
             "foreground": "var(white3)"
         },
         {
+            "name": "Punctuation",
+            "scope": "punctuation.section",
+            "foreground": "var(white3)"
+        },
+        {
             "scope": "variable",
             "foreground": "var(white3)"
         },

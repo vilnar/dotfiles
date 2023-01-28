@@ -10,6 +10,7 @@
   { "keys": ["alt+s"], "command": "save_all" },
   { "keys": ["alt+z"], "command": "show_at_center" },
   { "keys": ["ctrl+shift+o"], "command": "prompt_open_folder" },
+  { "keys": ["f7"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
   { "keys": ["f8"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
   { "keys": ["f10"], "command": "trim_trailing_white_space" },
   { "keys": ["ctrl+alt+="], "command": "reindent" },

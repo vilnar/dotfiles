@@ -11,7 +11,8 @@ set hidden
 # keep cursor column position
 set nostartofline
 
-set autoread
+# noticed delays if the file is updated very often
+# set autoread
 
 set mouse=a
 
@@ -27,9 +28,6 @@ augroup InsertHl
   autocmd InsertLeave * set cursorlineopt=number
 augroup END
 
-# horizontal scroll
-set sidescroll=1
-set sidescrolloff=2
 
 # scroll with wrap, work with CTRL-E, CTRL-Y, mouse
 set smoothscroll
