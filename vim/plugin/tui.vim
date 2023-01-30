@@ -49,7 +49,7 @@ augroup MyColors
     # hi Function guifg=#fe8019 guibg=NONE gui=NONE cterm=NONE
 
     hi Ignore guifg=#8F8F8F
-    hi EndOfBuffer guifg=#8F8F8F
+    hi EndOfBuffer guifg=#665c54
 
     hi ExtraWhitespace guibg=#7c6f64
     hi NormalNC guibg=#32302f
