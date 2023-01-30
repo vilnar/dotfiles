@@ -1,11 +1,7 @@
 vim/.netrwhist
-vim/pack/
 vim/syntax/
 
 # custom variables
 vim/lib/custom.vim
 vim/customsnippets/
 
-# vim plug
-vim/plugged/
-vim/autoload/

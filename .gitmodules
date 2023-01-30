@@ -1,0 +1,60 @@
+[submodule "vim/pack/plugins/start/vim-commentary"]
+	path = vim/pack/plugins/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/pack/plugins/start/vim-surround"]
+	path = vim/pack/plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/pack/plugins/start/vim-obsession"]
+	path = vim/pack/plugins/start/vim-obsession
+	url = https://github.com/tpope/vim-obsession.git
+[submodule "vim/pack/plugins/start/vim-bufsurf"]
+	path = vim/pack/plugins/start/vim-bufsurf
+	url = https://github.com/ton/vim-bufsurf.git
+[submodule "vim/pack/plugins/start/vim-fugitive"]
+	path = vim/pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/pack/plugins/start/nerdtree"]
+	path = vim/pack/plugins/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/pack/plugins/start/vim-gruvbox8"]
+	path = vim/pack/plugins/start/vim-gruvbox8
+	url = https://github.com/lifepillar/vim-gruvbox8.git
+[submodule "vim/pack/plugins/start/fzf"]
+	path = vim/pack/plugins/start/fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "vim/pack/plugins/start/fzf-vim"]
+	path = vim/pack/plugins/start/fzf-vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "vim/pack/plugins/start/ultisnips"]
+	path = vim/pack/plugins/start/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim/pack/plugins/start/vim-graphql"]
+	path = vim/pack/plugins/start/vim-graphql
+	url = https://github.com/jparise/vim-graphql.git
+[submodule "vim/pack/plugins/start/vim-caser"]
+	path = vim/pack/plugins/start/vim-caser
+	url = https://github.com/arthurxavierx/vim-caser.git
+[submodule "vim/pack/plugins/start/goyo-vim"]
+	path = vim/pack/plugins/start/goyo-vim
+	url = https://github.com/junegunn/goyo.vim.git
+[submodule "vim/pack/plugins/start/vim-dispatch"]
+	path = vim/pack/plugins/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
+[submodule "vim/pack/plugins/start/vim-ale"]
+	path = vim/pack/plugins/start/vim-ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "vim/pack/plugins/start/vim-maktaba"]
+	path = vim/pack/plugins/start/vim-maktaba
+	url = https://github.com/google/vim-maktaba.git
+[submodule "vim/pack/plugins/start/vim-codefmt"]
+	path = vim/pack/plugins/start/vim-codefmt
+	url = https://github.com/google/vim-codefmt.git
+[submodule "vim/pack/plugins/start/vim-glaive"]
+	path = vim/pack/plugins/start/vim-glaive
+	url = https://github.com/google/vim-glaive.git
+[submodule "vim/pack/plugins/start/vim-goimports"]
+	path = vim/pack/plugins/start/vim-goimports
+	url = https://github.com/mattn/vim-goimports.git
+[submodule "vim/pack/plugins/start/vim-php-cs-fixer"]
+	path = vim/pack/plugins/start/vim-php-cs-fixer
+	url = https://github.com/stephpy/vim-php-cs-fixer.git
