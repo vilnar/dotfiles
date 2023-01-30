@@ -41,5 +41,10 @@
         "contents": "function",
         "kind": "keyword"
     },
+    {
+        "trigger": "instanceof",
+        "contents": "instanceof",
+        "kind": "keyword"
+    },
 	]
 }

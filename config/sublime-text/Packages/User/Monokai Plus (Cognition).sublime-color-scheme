@@ -18,6 +18,11 @@
         "foreground": "var(darken)"
     },
     {
+        "name": "Function support",
+        "scope": "support.function, support.function.builtin.python",
+        "foreground": "var(blue)"
+    },
+    {
         "name": "Don't highlight regex in string",
         "scope": "string.quoted keyword.control.anchor.regexp, string.quoted keyword.operator.or.regexp, string.quoted keyword.operator.negation.regexp, string.quoted keyword.operator.quantifier.regexp, string.quoted constant.character.character-class.regexp, string.quoted constant.other.character-class.set.regexp, string.quoted meta.assertion.look-behind.regexp, string.quoted meta.assertion.look-ahead.regexp, string.quoted meta.assertion.no-capture-group.regexp, string.quoted punctuation.definition.group, string.quoted punctuation.definition.string.regex-delimiter, string.quoted punctuation.definition.character-class",
         "foreground": "var(yellow)",

@@ -3,11 +3,6 @@ vim9script
 # :help netrw
 g:loaded_netrw = 0
 g:loaded_netrwPlugin = 0
-command Ex :Dirvish
-command EX :Dirvish
-g:dirvish_git_show_ignored = 1
-g:dirvish_git_show_icons = 0
-g:dirvish_mode = ':sort ,^.*[\/],'
 
 
 # https://github.com/junegunn/vim-plug/issues/276

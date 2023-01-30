@@ -236,10 +236,6 @@ nnoremap <leader><backspace> @:
 nnoremap <leader>nt :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 
-# fix miss key
-nnoremap - <NOP>
-nnoremap <leader>- :Dirvish<CR>
-
 
 # help codefmt
 vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>

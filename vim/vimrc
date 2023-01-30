@@ -52,8 +52,6 @@ Plug 'tpope/vim-fugitive', { 'commit': '9c5f675db54139c18ed4a1a18989ea2da37d6cae
 " use git-cola to compare commits :)
 
 Plug 'preservim/nerdtree', { 'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424' }
-Plug 'justinmk/vim-dirvish', { 'commit': '6233243f0caa71d27d27ea102540a88bce8eb6ea' }
-Plug 'kristijanhusak/vim-dirvish-git', { 'commit': '1d938c826503059660d89f186d2e8affc686a0e8' }
 
 Plug 'SirVer/ultisnips', { 'commit': 'e99fdf15cd55a4a8e0cb0a80a6810c1867a5c401' }
 Plug 'jparise/vim-graphql', { 'commit': '4bf5d33bda83117537aa3c117dee5b9b14fc9333' }
