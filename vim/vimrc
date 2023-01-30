@@ -30,8 +30,11 @@ endif
 
 " set backupdir=$HOME/.vim/tmp//,/tmp//
 set nobackup
-" set directory=$HOME/.vim/tmp//,/tmp//
-set noswapfile
+
+" for swap files
+" swap files is to act as a lock mechanism:
+" if you open a file, which is already opened in another Vim session, you’ll be warned
+set directory=$HOME/.vim/tmp//,/tmp//
 
 " Persistent undo, even if you close and reopen Vim
 " set undodir=$HOME/.vim/tmp//,/tmp//
