@@ -29,7 +29,7 @@ if has('syntax') && has('eval')
 endif
 
 " set backupdir=$HOME/.vim/tmp//,/tmp//
-set nobackup
+" set nobackup
 
 " for swap files
 " swap files is to act as a lock mechanism:
