@@ -20,7 +20,13 @@
     {
         "name": "Function support",
         "scope": "support.function, support.function.builtin.python",
-        "foreground": "var(blue)"
+        "foreground": "var(blue)",
+        "font_style": "italic",
+    },
+    {
+        "name": "Functions",
+        "scope": "entity.name.function, entity.name.function.templated, entity.name.function.member.static",
+        "font_style": "underline",
     },
     {
         "name": "Don't highlight regex in string",
