@@ -4,6 +4,7 @@
   "variables":
   {
     "selection": "hsl(225, 15.385%, 30%)",
+    "comment": "hsl(300, 1%, 44%)",
   },
   "globals":
   {
@@ -26,9 +27,14 @@
         "font_style": "italic",
     },
     {
+        "name": "Class name",
+        "scope": "entity.name.class",
+        "font_style": "stippled_underline",
+    },
+    {
         "name": "Functions",
         "scope": "entity.name.function, entity.name.function.templated, entity.name.function.member.static",
-        "font_style": "underline",
+        "font_style": "stippled_underline",
     },
     {
         "name": "Don't highlight regex in string",
