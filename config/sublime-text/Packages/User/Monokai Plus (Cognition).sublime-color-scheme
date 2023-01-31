@@ -1,7 +1,9 @@
 // Documentation at https://www.sublimetext.com/docs/color_schemes.html
+// theme source https://github.com/bitsper2nd/sublime-monokai-scheme
 {
   "variables":
   {
+    "selection": "hsl(225, 15.385%, 30%)",
   },
   "globals":
   {
