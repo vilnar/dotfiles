@@ -181,6 +181,7 @@ nnoremap <silent> <leader>\ :vim9cmd <SID>quickfixLib.QuickFixToggle()<CR>
 # SEARCH AND REPLACE -----------------------------------------------------------------------------
 vnoremap * y:vim9cmd <SID>searchReplaceLib.EscapeSearchTextMultiLines(getreg('"'), '\n')<CR>
 nnoremap <Leader>sm :SearchMultiLine<space>
+vnoremap <Leader>sm y:vim9cmd SearchMultiLine<space><C-R>"<CR>
 nnoremap <Leader>se :SearchEscape<space>
 vnoremap <Leader>se y:vim9cmd <SID>searchReplaceLib.EscapeSearchText(getreg('"'))<CR>
 

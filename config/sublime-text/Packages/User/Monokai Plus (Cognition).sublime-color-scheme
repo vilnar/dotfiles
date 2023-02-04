@@ -46,5 +46,17 @@
         "scope": "meta.string source.sql, meta.string source.sql keyword, meta.string source.sql keyword.operator, meta.string source.sql  keyword.operator.assignment, meta.string source.sql keyword.operator.word, meta.string source.sql keyword.operator.logical, meta.string source.sql storage, meta.string source.sql storage.type, meta.string source.sql constant, meta.string source.sql constant.other, meta.string source.sql constant.numeric, meta.string source.sql punctuation.separator, meta.string source.sql entity.name.function, meta.string source.sql variable.language, meta.string source.sql punctuation.terminator, meta.string keyword.other, meta.string keyword.control, meta.string source.sql constant.language, meta.string source.sql storage.modifier",
         "foreground": "var(yellow)"
     },
+
+
+    {
+        "name": "markup code",
+        "scope": "markup.raw",
+        "background": "color(var(block-caret) alpha(0.12))"
+    },
+    {
+        "name": "markup code",
+        "scope": "markup.raw.inline",
+        "background": "color(var(block-caret) alpha(0.12))"
+    },
   ]
 }

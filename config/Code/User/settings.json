@@ -440,4 +440,5 @@
         "goToNextHighlight": false,
         "goToPreviousHighlight": false
     },
+    "gitlens.views.commitDetails.files.layout": "list",
 }
