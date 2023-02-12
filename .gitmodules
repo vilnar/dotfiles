@@ -58,3 +58,6 @@
 [submodule "vim/pack/plugins/start/vim-php-cs-fixer"]
 	path = vim/pack/plugins/start/vim-php-cs-fixer
 	url = https://github.com/stephpy/vim-php-cs-fixer.git
+[submodule "vim/pack/plugins/start/vim-mustache-handlebars"]
+	path = vim/pack/plugins/start/vim-mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars.git
