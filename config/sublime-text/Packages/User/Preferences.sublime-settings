@@ -69,8 +69,7 @@
   "fallback_encoding": "Cyrillic (Windows 1251)",
   "tab_size": 4,
   "translate_tabs_to_spaces": true,
-  // TODO: test it!!!
-  "detect_indentation": false,
+  "detect_indentation": true,
   "trim_trailing_white_space_on_save": "none",
   // "trim_trailing_white_space_on_save": "not_on_caret",
   // "trim_only_modified_white_space": true,

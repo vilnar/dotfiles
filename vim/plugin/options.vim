@@ -1,8 +1,8 @@
 vim9script
 
 # :help netrw
-g:loaded_netrw = 0
-g:loaded_netrwPlugin = 0
+# g:loaded_netrw = 0
+# g:loaded_netrwPlugin = 0
 
 
 # https://github.com/junegunn/vim-plug/issues/276
