@@ -63,6 +63,8 @@ class OpenFileInVim(sublime_plugin.TextCommand):
         os.chdir(root_path) # by default path, this is sublime installation directory
         p = subprocess.run(
             "gnome-terminal -- vim {}".format(raw_path),
+            # alacritty freezes text editor
+            # "alacritty --command vim {}".format(raw_path),
             shell=True,
             capture_output=False
         )

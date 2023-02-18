@@ -440,4 +440,21 @@
         "goToNextHighlight": false,
         "goToPreviousHighlight": false
     },
+    "ltex.enabled": [
+        "html",
+        "latex",
+        "markdown",
+    ],
+    "ltex.language": "uk-UA",
+    // "ltex.checkFrequency": "save",
+    "ltex.checkFrequency": "manual",
+    "ltex.disabledRules": {"en-US": ["UPPERCASE_SENTENCE_START"], "uk-UA": ["UPPERCASE_SENTENCE_START"]},
+    "ltex.statusBarItem": false,
+    "ltex.completionEnabled": false,
+    "ltex.markdown.nodes":{
+        "CodeBlock": "ignore",
+        "FencedCodeBlock": "ignore",
+        "AutoLink": "ignore",
+        "Code": "ignore"
+    }
 }

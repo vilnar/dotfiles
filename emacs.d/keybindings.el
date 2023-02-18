@@ -80,11 +80,15 @@
 
 
 ;; (global-set-key (kbd "C-s") 'swiper)
-(global-set-key (kbd "C-s") 'yr:swiper-or-region)
+;; (global-set-key (kbd "C-s") 'yr:swiper-or-region)
+(global-set-key (kbd "C-s") 'isearch-forward)
 (global-set-key (kbd "C-x f") 'find-file)
-(global-set-key (kbd "C-x b") #'counsel-switch-buffer)
+;; (global-set-key (kbd "C-x b") #'counsel-switch-buffer)
+(global-set-key (kbd "C-x b") 'switch-to-buffer)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 (global-set-key (kbd "M-c b") 'ibuffer-other-window)
+
+(global-set-key [(meta down)] 'tear-off-window)
 
 
 ;; alias  -------------------------------------------------------------

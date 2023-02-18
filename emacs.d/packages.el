@@ -66,24 +66,26 @@
 
 
 ;; counsel -> swiper -> ivy
-(use-package counsel
-  :init
-  (counsel-mode 1))
+;; (use-package counsel
+;;   :init
+;;   (counsel-mode 1))
 
-(use-package swiper
-  :commands (swiper)
-  :config
-  (setq swiper-goto-start-of-match t))
+;; (use-package swiper
+;;   :commands (swiper)
+;;   :config
+;;   (setq swiper-goto-start-of-match t))
 
-(use-package ivy
-  :demand t
-  :config
-  (ivy-mode 1)
-  (setq ivy-use-virutal-buffers t)
-  (setq enable-recursive-minibuffers t)
-  (setq ivy-display-style 'fancy)
-  (setq ivy-count-format "(%d/%d) ")
-)
+;; (use-package ivy
+;;   :demand t
+;;   :config
+;;   (ivy-mode 1)
+;;   (setq ivy-use-virutal-buffers t)
+;;   (setq enable-recursive-minibuffers t)
+;;   (setq ivy-display-style 'fancy)
+;;   (setq ivy-count-format "(%d/%d) ")
+;; )
+
+(fido-vertical-mode 1)
 
 
 (use-package dired-sidebar

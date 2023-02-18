@@ -57,6 +57,7 @@ function! NERDTreeOpenTerminal()
       return
     endif
     execute 'Dispatch gnome-terminal --working-directory=' . path
+    " execute 'Dispatch alacritty --working-directory ' . path
     " execute 'Start! xterm -e "cd ' .. path .. ' && bash"'
     call nerdtree#echo("Open terminal in " . path)
   endif

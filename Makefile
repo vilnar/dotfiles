@@ -67,6 +67,11 @@ import_gnome_terminal:
 export_gnome_terminal:
 	dconf dump /org/gnome/terminal/legacy/profiles:/ > `pwd`/gnome-terminal-profiles.dconf
 
+install_alacritty: clear_alacritty
+	ln -sf `pwd`/config/alacritty ~/.config/alacritty
+
+clear_alacritty:
+	rm -Rf ~/.config/alacritty
 
 install_gtk:
 	ln -sf `pwd`/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/gtk.css

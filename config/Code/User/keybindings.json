@@ -212,5 +212,15 @@
         "key": "enter",
         "command": "-acceptSelectedSuggestion",
         "when": "acceptSuggestionOnEnter && suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+    },
+    {
+        "key": "shift+f6",
+        "command": "ltex.checkCurrentDocument",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+f6",
+        "command": "ltex.checkSelection",
+        "when": "editorHasSelection"
     }
 ]
