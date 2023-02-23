@@ -28,6 +28,7 @@
 (setq isearch-lazy-count 1)
 (setq isearch-highlight 1)
 (setq-default case-fold-search t)
+(setq lazy-highlight-cleanup nil)
 
 ;; diff
 (setq
@@ -35,6 +36,9 @@
  ediff-window-setup-function 'ediff-setup-windows-plain)
 
 ;; editor
+(global-hl-line-mode 1)
+;; (setq-default cursor-type 'bar)
+(setq-default cursor-type t)
 (show-paren-mode 1)
 (global-subword-mode 1)
 (electric-indent-mode -1) ;; stop trail whitespace

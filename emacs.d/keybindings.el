@@ -44,6 +44,7 @@
 (global-unset-key (kbd "M-m"))
 (global-set-key (kbd "M-m") 'yr:toggle-mark-word-at-point)
 (global-set-key (kbd "M-c w") 'yr:mark-whole-word)
+(global-set-key (kbd "C-M-l") 'yr:copy-line)
 
 ;; Window switching. (C-x o goes to the next window)
 (global-set-key (kbd "C-x O") (lambda ()
@@ -89,6 +90,10 @@
 (global-set-key (kbd "M-c b") 'ibuffer-other-window)
 
 (global-set-key [(meta down)] 'tear-off-window)
+
+;; multiple-cursors
+(global-unset-key (kbd "M-<down-mouse-1>"))
+(global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 
 
 ;; alias  -------------------------------------------------------------

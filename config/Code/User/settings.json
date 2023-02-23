@@ -121,9 +121,10 @@
         },
         "[Default Dark+]": {
             "editorGutter.background": "#343739",
-            "editorCursor.foreground": "#F8F8F0"
+            "editorCursor.foreground": "#F8F8F0",
         }
     },
+
     "editor.tokenColorCustomizations": {
         "[Default Light+]": {
             "textMateRules": [
@@ -376,7 +377,7 @@
     "php-cs-fixer.autoFixByBracket": false,
     "php-cs-fixer.autoFixBySemicolon": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1675537130045,
+    "php-cs-fixer.lastDownload": 1676896133568,
     "php-cs-fixer.rules": "@PSR12,@PhpCsFixer,@Symfony,array_syntax,array_indentation",
     "php.suggest.basic": true,
     "php.validate.enable": true,
@@ -384,9 +385,9 @@
     "intelephense.environment.phpVersion": "7.4.0",
     "intelephense.maxMemory": 1024,
     "php.memoryLimit": "2048M",
-    "php-intellisense.trace.server": "off",
+    "php-intellisense.trace.server": "messages",
     // "php.executablePath": "/usr/bin/php",
-    "php.executablePath": "/usr/local/bin/php",
+    "php.executablePath": "/usr/bin/php",
     "phpactor.config": {
         "language_server.diagnostics_on_update": false,
         "language_server.diagnostics_on_save": true
@@ -456,5 +457,7 @@
         "FencedCodeBlock": "ignore",
         "AutoLink": "ignore",
         "Code": "ignore"
-    }
+    },
+    "gitlens.graph.avatars": false,
+    "gitlens.graph.dateStyle": "absolute",
 }

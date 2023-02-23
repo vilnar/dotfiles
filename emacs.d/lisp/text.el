@@ -66,3 +66,11 @@
   (interactive)
   (end-of-line)
   (newline-and-indent))
+
+
+(defun yr:copy-line ()
+  (interactive)
+  (move-beginning-of-line 1)
+  (set-mark (line-end-position))
+  (kill-ring-save (region-beginning) (region-end))
+  (message "%s line copied" (line-number-at-pos)))

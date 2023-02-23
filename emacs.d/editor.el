@@ -42,7 +42,7 @@ Taken from https://github.com/syl20bnr/spacemacs/pull/179."
 
 ;; enhances name completion when in minibuffer prompts (default)
 ;; (icomplete-vertical-mode)
-;; (fido-vertical-mode)
+(fido-vertical-mode)
 
 
 ;; taken from https://emacs.stackexchange.com/questions/28355/how-to-unmark-selection-in-elisp
@@ -56,3 +56,19 @@ Taken from https://github.com/syl20bnr/spacemacs/pull/179."
         (deactivate-mark)
         (swiper (buffer-substring-no-properties beg end)))
     (swiper)))
+
+
+
+;; highlight brackets
+(defun show-paren--locate-near-paren-ad ()
+  "Locate an unescaped paren \"near\" point to show.
+If one is found, return the cons (DIR . OUTSIDE), where DIR is 1
+for an open paren, -1 for a close paren, and OUTSIDE is the buffer
+position of the outside of the paren.  Otherwise return nil."
+  (let* ((before (show-paren--categorize-paren (point))))
+    (when (or
+       (eq (car before) 1)
+       (eq (car before) -1))
+      before)))
+
+(advice-add 'show-paren--locate-near-paren :override #'show-paren--locate-near-paren-ad)

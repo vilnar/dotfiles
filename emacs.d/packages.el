@@ -41,7 +41,6 @@
    magit-list-refs-sortby "-committerdate"
    ;; show whitespace for diff
    magit-diff-refine-ignore-whitespace nil
-   magit-diff-refine-hunk nil       
    magit-diff-paint-whitespace t
    magit-diff-paint-whitespace-lines 'all)
 
@@ -85,7 +84,6 @@
 ;;   (setq ivy-count-format "(%d/%d) ")
 ;; )
 
-(fido-vertical-mode 1)
 
 
 (use-package dired-sidebar
@@ -126,13 +124,20 @@
   :init (global-flycheck-mode t)
   :config
   (add-hook 'go-mode-hook (lambda ()
-                          (setq flycheck-checker 'go-staticcheck)))
+                            (setq flycheck-checker 'go-staticcheck)))
   (add-hook 'php-mode-hook (lambda ()
-                          (setq flycheck-checker 'php)))
+                             (setq flycheck-checker 'php)))
   ;; (setq flycheck-check-syntax-automatically '(mode-enabled save))
   ;; (add-hook 'after-init-hook #'global-flycheck-mode)
   ;; (setq flycheck-idle-change-delay 2.0)
 )
+;; don't hightlight info, warning
+(set-face-attribute 'flycheck-info nil :underline nil :bold nil)
+(set-face-attribute 'flycheck-warning nil :underline nil :bold nil)
+
+
+(use-package multiple-cursors)
+
 
 ;; ----------------------------------------------------------------------------
 ;; programming languages
