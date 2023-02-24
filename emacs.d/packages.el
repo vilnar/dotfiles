@@ -107,7 +107,10 @@
 ;; .. shows lines you have modified from the last commit.
 (use-package diff-hl
   :demand t
-  :config (global-diff-hl-mode))
+  :config
+  (global-diff-hl-mode))
+(add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refreshy)
 
 ;; go to last change, unfortunately, only local buffer
 (use-package goto-chg)
