@@ -85,9 +85,10 @@
 (global-set-key (kbd "C-s") 'isearch-forward)
 (global-set-key (kbd "C-x f") 'find-file)
 ;; (global-set-key (kbd "C-x b") #'counsel-switch-buffer)
-(global-set-key (kbd "C-x b") 'switch-to-buffer)
-(global-set-key (kbd "C-x C-b") #'ibuffer)
-(global-set-key (kbd "M-c b") 'ibuffer-other-window)
+;; (global-set-key (kbd "C-x b") 'switch-to-buffer)
+(global-set-key (kbd "s-<tab>") 'switch-to-buffer)
+(global-set-key (kbd "C-<tab>") #'ibuffer)
+;; (global-set-key (kbd "M-c b") 'ibuffer-other-window)
 
 (global-set-key [(meta down)] 'tear-off-window)
 
@@ -114,3 +115,4 @@
 
 (defalias 'modeshow 'describe-mode)
 (defalias 'rename-file-buffer 'yr:rename-file-and-buffer)
+(defalias 'rev 'revert-buffer-quick)

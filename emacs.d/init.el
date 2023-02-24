@@ -47,6 +47,9 @@
 (global-superword-mode 1) ;; select whole word
 (global-auto-revert-mode t)
 
+;; wrap
+(setq-default truncate-lines t)
+
 (setq-default indicate-empty-lines t)
 
 

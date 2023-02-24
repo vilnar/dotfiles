@@ -151,6 +151,8 @@
 
 
 (use-package markdown-mode
+  :init
+  (setq markdown-mouse-follow-link nil)
   :config
   (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
   (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
