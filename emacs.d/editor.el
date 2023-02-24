@@ -25,9 +25,9 @@
  company-idle-delay 0.2
  company-minimum-prefix-length 3)
 
+;; source https://github.com/syl20bnr/spacemacs/pull/179
 (defun mars/company-backend-with-yas (backends)
-  "Add :with company-yasnippet to company BACKENDS.
-Taken from https://github.com/syl20bnr/spacemacs/pull/179."
+  "Add :with company-yasnippet to company BACKENDS."
   (if (and (listp backends) (memq 'company-yasnippet backends))
 	    backends
 	  (append (if (consp backends)
@@ -45,21 +45,7 @@ Taken from https://github.com/syl20bnr/spacemacs/pull/179."
 (fido-vertical-mode)
 
 
-;; taken from https://emacs.stackexchange.com/questions/28355/how-to-unmark-selection-in-elisp
-(defun yr:swiper-or-region (beg end)
-  "Swiper region or 'empty string' if none highlighted."
-  (interactive (if (use-region-p)
-                   (list (region-beginning) (region-end))
-                 (list nil nil)))
-  (if (and beg end)
-      (progn
-        (deactivate-mark)
-        (swiper (buffer-substring-no-properties beg end)))
-    (swiper)))
-
-
-
-;; highlight brackets
+;; source https://emacs.stackexchange.com/questions/51986/show-paren-mode-only-highlights-when-cursor-is-one-character-after-closing-paren
 (defun show-paren--locate-near-paren-ad ()
   "Locate an unescaped paren \"near\" point to show.
 If one is found, return the cons (DIR . OUTSIDE), where DIR is 1
@@ -72,3 +58,12 @@ position of the outside of the paren.  Otherwise return nil."
       before)))
 
 (advice-add 'show-paren--locate-near-paren :override #'show-paren--locate-near-paren-ad)
+
+
+;; source: https://stackoverflow.com/questions/3417438/close-all-buffers-besides-the-current-one-in-emacs
+(defun kill-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (mapc 'kill-buffer
+        (delq (current-buffer)
+              (remove-if-not 'buffer-file-name (buffer-list)))))

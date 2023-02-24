@@ -10,7 +10,6 @@
 
 (menu-bar-mode -1)
 
-
 ;; maximize window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -52,7 +51,6 @@
 
 (setq-default indicate-empty-lines t)
 
-
 ;; saving history
 (savehist-mode 1)
 (setq savehist-additional-variables
@@ -62,7 +60,6 @@
         file-name-history
         command-history
         shell-command-history))
-
 
 ;; ----------------------------------------------------------------------------
 ;; Load packages
@@ -76,7 +73,6 @@
 (setq custom-file "~/.emacs.d/customizations.el")
 (load custom-file)
 
-
 (load "~/.emacs.d/packages.el" t)
 (load "~/.emacs.d/modes.el" t)
 (load "~/.emacs.d/editor.el" t)
@@ -87,8 +83,8 @@
 (load "~/.emacs.d/keybindings.el" t)
 
 
+;; load ui for all frames
 (defun yr:new-frame-setup (frame)
-  ;; (message "DEBUG: frame setup")
   (if (display-graphic-p frame)
       (progn
         ;; (message "DEBUG load ui")

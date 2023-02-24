@@ -9,20 +9,17 @@
   (setq use-package-always-ensure t
         use-package-always-defer t))
 
-
-
+;; ui
+(use-package zenburn-theme)
+(use-package leuven-theme)
 
 ;; http://www.emacswiki.org/emacs/Yasnippet
 (use-package yasnippet
   :init
   (yas-global-mode 1))
 
-
 ;; https://github.com/emacsmirror/undo-fu
-;; Use a thin wrapper for undo. Why?
-;; .. By default undo doesn't support redo as most users would expect from other software.
 (use-package undo-fu)
-
 
 (use-package magit
   :init
@@ -52,38 +49,11 @@
   :init
   (winum-mode))
 
-;; Find file in project. Why?
-;; .. interactively narrowing down other files in the project is very useful.
-;; (use-package find-file-in-project
-;;   :commands (find-file-in-project))
-
 (use-package fzf
    :init
    (setenv "FZF_DEFAULT_COMMAND" "fdfind --type f --hidden --exclude .git --no-ignore")
    :config
    (progn (add-to-list 'load-path "/usr/bin/fzf")))
-
-
-;; counsel -> swiper -> ivy
-;; (use-package counsel
-;;   :init
-;;   (counsel-mode 1))
-
-;; (use-package swiper
-;;   :commands (swiper)
-;;   :config
-;;   (setq swiper-goto-start-of-match t))
-
-;; (use-package ivy
-;;   :demand t
-;;   :config
-;;   (ivy-mode 1)
-;;   (setq ivy-use-virutal-buffers t)
-;;   (setq enable-recursive-minibuffers t)
-;;   (setq ivy-display-style 'fancy)
-;;   (setq ivy-count-format "(%d/%d) ")
-;; )
-
 
 
 (use-package dired-sidebar
@@ -95,16 +65,12 @@
   :bind ("M-p" . projectile-command-map)
 )
 
-
-;; Highlight terms in code-comments such as TODO, FIXME, URL's & email. Why?
-;; .. these are common conventions in software that it's useful to highlight them.
+;; Highlight terms in code-comments such as TODO, FIXME
 (use-package hl-prog-extra
   :init (add-hook 'prog-mode-hook #'hl-prog-extra-mode))
 
 
-
-;; Use `diff-hl'. Why?
-;; .. shows lines you have modified from the last commit.
+;; shows lines you have modified from the last commit.
 (use-package diff-hl
   :demand t
   :config
@@ -115,14 +81,13 @@
 ;; go to last change, unfortunately, only local buffer
 (use-package goto-chg)
 
+;; grep
 (use-package rg)
 (with-eval-after-load 'rg
    (setq rg-ignore-ripgreprc nil)
 )
 
-(use-package zenburn-theme)
-(use-package leuven-theme)
-
+;; linters
 (use-package flycheck
   :init (global-flycheck-mode t)
   :config
@@ -148,7 +113,6 @@
 (use-package dockerfile-mode
   :config
   (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode)))
-
 
 (use-package markdown-mode
   :init

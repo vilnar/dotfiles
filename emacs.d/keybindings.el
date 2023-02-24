@@ -1,9 +1,7 @@
 (global-unset-key (kbd "M-c"))
 (global-unset-key (kbd "C-."))
 
-
 (global-set-key (kbd "M-g") 'goto-line)
-
 
 ;; (global-set-key (kbd "<f6>") 'flyspell-buffer)
 (global-set-key (kbd "<f6>") 'yr:toggle-flyspell)
@@ -80,16 +78,13 @@
   (define-key company-active-map (kbd "TAB") nil))
 
 
-;; (global-set-key (kbd "C-s") 'swiper)
-;; (global-set-key (kbd "C-s") 'yr:swiper-or-region)
 (global-set-key (kbd "C-s") 'isearch-forward)
 (global-set-key (kbd "C-x f") 'find-file)
-;; (global-set-key (kbd "C-x b") #'counsel-switch-buffer)
-;; (global-set-key (kbd "C-x b") 'switch-to-buffer)
 (global-set-key (kbd "s-<tab>") 'switch-to-buffer)
 (global-set-key (kbd "C-<tab>") #'ibuffer)
 ;; (global-set-key (kbd "M-c b") 'ibuffer-other-window)
 
+;; duplicate workspace
 (global-set-key [(meta down)] 'tear-off-window)
 
 ;; multiple-cursors
@@ -98,12 +93,9 @@
 
 
 ;; alias  -------------------------------------------------------------
-;; (defalias 'ff 'yr:wrap-find-name-with-name)
-;; (defalias 'rs 'replace-string)
-;; (defalias 'gr 'rgrep)
-;; (defalias 'noh 'lazy-highlight-cleanup)
-;; (defalias 'rep 'query-replace)
-;; (defalias 'wrap-toggle 'toggle-truncate-lines)
+(defalias 'noh 'lazy-highlight-cleanup)
+(defalias 'rep 'query-replace)
+(defalias 'wrap-toggle 'toggle-truncate-lines)
 
 (defalias 'gst 'magit-status)
 (defalias 'gblame 'magit-blame)
