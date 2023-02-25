@@ -5,9 +5,6 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-(eval-and-compile
-  (setq use-package-always-ensure t
-        use-package-always-defer t))
 
 ;; ui
 (use-package zenburn-theme)
@@ -61,9 +58,7 @@
 
 (use-package projectile
   :init
-  (projectile-mode 1)
-  :bind ("M-p" . projectile-command-map)
-)
+  (projectile-mode 1))
 
 ;; Highlight terms in code-comments such as TODO, FIXME
 (use-package hl-prog-extra
@@ -87,6 +82,8 @@
    (setq rg-ignore-ripgreprc nil)
 )
 
+(use-package multiple-cursors)
+
 ;; linters
 (use-package flycheck
   :init (global-flycheck-mode t)
@@ -99,12 +96,10 @@
   ;; (add-hook 'after-init-hook #'global-flycheck-mode)
   ;; (setq flycheck-idle-change-delay 2.0)
 )
-;; don't hightlight info, warning
-(set-face-attribute 'flycheck-info nil :underline nil :bold nil)
-(set-face-attribute 'flycheck-warning nil :underline nil :bold nil)
-
-
-(use-package multiple-cursors)
+(with-eval-after-load 'flycheck
+  ;; don't hightlight info
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
+)
 
 
 ;; ----------------------------------------------------------------------------

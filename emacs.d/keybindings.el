@@ -3,6 +3,11 @@
 
 (global-set-key (kbd "M-g") 'goto-line)
 
+;; comment toggle
+(global-unset-key (kbd "C-/"))
+(global-set-key (kbd "C-/") 'comment-line)
+
+
 ;; (global-set-key (kbd "<f6>") 'flyspell-buffer)
 (global-set-key (kbd "<f6>") 'yr:toggle-flyspell)
 (global-set-key (kbd "<f7>") 'yr:new-empty-buffer)
@@ -79,17 +84,17 @@
 
 
 (global-set-key (kbd "C-s") 'isearch-forward)
-(global-set-key (kbd "C-x f") 'find-file)
+;; (global-set-key (kbd "C-x f") 'find-file)
+(global-set-key (kbd "M-o") 'find-file)
 (global-set-key (kbd "s-<tab>") 'switch-to-buffer)
 (global-set-key (kbd "C-<tab>") #'ibuffer)
 ;; (global-set-key (kbd "M-c b") 'ibuffer-other-window)
 
-;; duplicate workspace
-(global-set-key [(meta down)] 'tear-off-window)
 
 ;; multiple-cursors
 (global-unset-key (kbd "M-<down-mouse-1>"))
 (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
+(global-set-key [(meta down)] 'mc/mark-next-like-this)
 
 
 ;; alias  -------------------------------------------------------------
