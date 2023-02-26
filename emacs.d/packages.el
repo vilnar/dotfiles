@@ -70,8 +70,6 @@
   :demand t
   :config
   (global-diff-hl-mode))
-(add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
-(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refreshy)
 
 ;; go to last change, unfortunately, only local buffer
 (use-package goto-chg)
@@ -83,6 +81,12 @@
 )
 
 (use-package multiple-cursors)
+
+(use-package highlight-indent-guides
+  :ensure t
+  :config
+  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+  (setq highlight-indent-guides-method 'character))
 
 ;; linters
 (use-package flycheck
