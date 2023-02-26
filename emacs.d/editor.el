@@ -22,6 +22,7 @@
 ;; autocomplete (default)
 (global-company-mode 1)
 (setq
+ company-dabbrev-code-ignore-case t
  company-idle-delay 0.2
  company-minimum-prefix-length 3)
 

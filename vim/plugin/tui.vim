@@ -56,10 +56,10 @@ augroup MyColors
     hi InsertColor guifg=#282828 guibg=#83a598
     hi ImInsertColor guifg=#282828 guibg=#D79921
 
-    hi DiffAdd    guibg=#59644c guifg=NONE gui=NONE cterm=NONE
+    hi DiffAdd    guibg=#464e3b guifg=NONE gui=NONE cterm=NONE
     hi DiffDelete gui=NONE cterm=NONE
-    hi DiffChange guibg=#445a3d guifg=NONE gui=NONE cterm=NONE
-    hi DiffText   guibg=#846418 guifg=NONE gui=bold cterm=bold
+    hi DiffChange guibg=#3f4735 guifg=NONE gui=NONE cterm=NONE
+    hi DiffText   guibg=#624a12 guifg=NONE gui=bold cterm=bold
   }
 augroup end
 

@@ -153,6 +153,7 @@ set keymap=ukrainian-enhanced
 set iminsert=0 # Default - latin layout
 set imsearch=0 # Default - latin layout in search
 inoremap <C-\> <C-^>
+cnoremap <C-\> <C-^>
 
 
 

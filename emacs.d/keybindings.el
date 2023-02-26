@@ -20,19 +20,16 @@
 ;; (global-set-key (kbd "<f12>") 'bookmark-bmenu-list)
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
-;; (global-set-key (kbd "M-c g") 'rgrep)
 (global-set-key (kbd "M-c g") #'rg-menu)
+(global-set-key (kbd "C-S-f") #'rg-literal)
 (global-set-key (kbd "M-c p") 'projectile-command-map)
 (global-set-key (kbd "M-c f") 'fzf-directory)
 (global-set-key (kbd "M-c h") 'lazy-highlight-cleanup)
 
-(global-unset-key (kbd "M-r"))
-(global-set-key (kbd "M-r") 'query-replace)
-
 
 (global-set-key [(control shift up)]  'yr:move-text-up)
 (global-set-key [(control shift down)]	'yr:move-text-down)
-(global-unset-key (kbd "C-d"))
+
 (global-set-key (kbd "C-S-d") 'yr:duplicate-line)
 (eval-after-load "php-mode"
   '(define-key php-mode-map (kbd "C-S-d") 'yr:duplicate-line))
@@ -83,7 +80,10 @@
   (define-key company-active-map (kbd "TAB") nil))
 
 
-(global-set-key (kbd "C-s") 'isearch-forward)
+(global-unset-key (kbd "M-r"))
+(global-set-key (kbd "M-r") 'query-replace)
+;; (global-set-key (kbd "C-s") 'isearch-forward)
+
 ;; (global-set-key (kbd "C-x f") 'find-file)
 (global-set-key (kbd "M-o") 'find-file)
 (global-set-key (kbd "s-<tab>") 'switch-to-buffer)
@@ -95,6 +95,9 @@
 (global-unset-key (kbd "M-<down-mouse-1>"))
 (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 (global-set-key [(meta down)] 'mc/mark-next-like-this)
+(global-unset-key (kbd "C-d"))
+(global-set-key (kbd "C-d") 'mc/mark-next-like-this-word)
+(global-set-key (kbd "M-c C-d") 'mc/skip-to-next-like-this)
 
 
 ;; alias  -------------------------------------------------------------
@@ -106,10 +109,13 @@
 (defalias 'gblame 'magit-blame)
 (defalias 'glog 'magit-log-current)
 (defalias 'gdiff 'magit-diff-range)
+(defalias 'gdiff-file 'magit-diff-buffer-file)
 (defalias 'gsub 'magit-submodule-update-all)
 (defalias 'gblameshow 'magit-show-commit)
 (defalias 'gbranches 'magit-show-refs-popup)
 
 (defalias 'modeshow 'describe-mode)
-(defalias 'rename-file-buffer 'yr:rename-file-and-buffer)
 (defalias 'rev 'revert-buffer-quick)
+(defalias 'rename-file-buffer 'yr:rename-file-and-buffer)
+(defalias 'file-copy-name 'yr:file-name-to-clipboard)
+(defalias 'path-file-copy-absolute 'yr:path-file-absolute-to-clipboard)
