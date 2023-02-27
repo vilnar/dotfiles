@@ -86,7 +86,8 @@
 
 ;; (global-set-key (kbd "C-x f") 'find-file)
 (global-set-key (kbd "M-o") 'find-file)
-(global-set-key (kbd "s-<tab>") 'switch-to-buffer)
+;; (global-set-key (kbd "s-<tab>") 'switch-to-buffer)
+(global-set-key (kbd "s-<tab>") 'consult-buffer)
 (global-set-key (kbd "C-<tab>") #'ibuffer)
 ;; (global-set-key (kbd "M-c b") 'ibuffer-other-window)
 

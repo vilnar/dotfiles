@@ -10,8 +10,6 @@
       ;; for default theme
       (set-face-attribute 'region nil :background "#c6dcf9")))
 
-(set-face-foreground 'highlight-indent-guides-character-face "#4d4d4d")
-
 (menu-bar-mode 1)
 
 (set-face-attribute 'default nil :family "Jetbrains Mono NL" :height 135)

@@ -43,7 +43,7 @@
 
 ;; enhances name completion when in minibuffer prompts (default)
 ;; (icomplete-vertical-mode)
-(fido-vertical-mode)
+;; (fido-vertical-mode)
 
 
 ;; source https://emacs.stackexchange.com/questions/51986/show-paren-mode-only-highlights-when-cursor-is-one-character-after-closing-paren

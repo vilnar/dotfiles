@@ -24,8 +24,8 @@
 (set-keyboard-coding-system 'utf-8)
 
 ;; search
+;; WTF: why emacs don't keep search highlight???
 (setq isearch-lazy-count 1)
-(setq isearch-highlight 1)
 (setq-default case-fold-search t)
 (setq lazy-highlight-cleanup nil)
 
@@ -45,6 +45,10 @@
 (delete-selection-mode 1)
 (global-superword-mode 1) ;; select whole word
 (global-auto-revert-mode t)
+
+;; autosave
+(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
+;; (add-hook 'focus-out-hook 'save-buffer)
 
 ;; wrap
 (setq-default truncate-lines t)
