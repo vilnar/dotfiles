@@ -42,10 +42,10 @@ vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
 
 # for wrap lines
-nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
-nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
-# nnoremap <silent> <Up> gk
-# nnoremap <silent> <Down> gj
+# nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+# nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+nnoremap <silent> <Up> gk
+nnoremap <silent> <Down> gj
 
 
 def CopyWithoutNewLine()

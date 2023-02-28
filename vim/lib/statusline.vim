@@ -12,15 +12,16 @@ export def StatuslineExpr(): string
   var percent = " %P"
 
 
-  var color = ""
-  var m = mode()
-  if m == "i" || m == "R"
-    color = "%#InsertColor#"
-    if &iminsert
-      color = "%#ImInsertColor#"
-    endif
-  endif
-  return color .. file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
+  # BUG: when split window, and changes modes, non active split status line color isn't correct
+  # var color = ""
+  # var m = mode()
+  # if m == "i" || m == "R"
+  #   color = "%#InsertColor#"
+  #   if &iminsert
+  #     color = "%#ImInsertColor#"
+  #   endif
+  # endif
+  # return color .. file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
 
-  # return file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
+  return file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
 enddef

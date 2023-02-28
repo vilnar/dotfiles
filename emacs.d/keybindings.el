@@ -1,7 +1,15 @@
 (global-unset-key (kbd "M-c"))
 (global-unset-key (kbd "C-."))
 
-(global-set-key (kbd "M-g") 'goto-line)
+;; (global-set-key (kbd "M-g") 'goto-line)
+(global-unset-key (kbd "M-g"))
+(global-set-key (kbd "M-g g") 'consult-line)
+(global-set-key (kbd "M-g l") 'consult-goto-line)
+(global-set-key (kbd "M-g m") 'consult-mark)
+(global-set-key (kbd "M-g M-m") 'consult-global-mark)
+(global-set-key (kbd "M-g o") 'consult-outline)
+(global-set-key (kbd "C-c C-k") 'consult-kmacro)
+(global-set-key (kbd "M-y") 'consult-yank-pop)
 
 ;; comment toggle
 (global-unset-key (kbd "C-/"))

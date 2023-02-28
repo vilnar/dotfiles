@@ -22,6 +22,7 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
+(setq delete-by-moving-to-trash t)
 
 ;; search
 ;; WTF: why emacs don't keep search highlight???
@@ -45,6 +46,9 @@
 (delete-selection-mode 1)
 (global-superword-mode 1) ;; select whole word
 (global-auto-revert-mode t)
+
+;; show brackets, parens in inside
+(setq show-paren-when-point-inside-paren t)
 
 ;; autosave
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
