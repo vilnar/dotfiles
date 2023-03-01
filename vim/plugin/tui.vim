@@ -61,11 +61,33 @@ augroup MyColors
     hi DiffChange guibg=#3f4735 guifg=NONE gui=NONE cterm=NONE
     hi DiffText   guibg=#624a12 guifg=NONE gui=bold cterm=bold
   }
+  autocmd ColorScheme nord {
+    hi link CurSearch IncSearch
+    hi link markdownCode String
+    hi link markdownCodeBlock String
+    hi link markdownCodeDelimiter String
+    hi link gitcommitSummary SpecialChar
+
+    hi DiffAdd    guibg=#4c5147 guifg=NONE gui=NONE cterm=NONE
+    hi DiffDelete gui=NONE cterm=NONE
+    hi DiffChange guibg=#534e43 guifg=NONE gui=NONE cterm=NONE
+    hi DiffText   guibg=#593e4c guifg=NONE gui=bold cterm=bold
+
+    hi Ignore guifg=#616E88
+
+    hi ExtraWhitespace guibg=#616E88
+    # hi Comment guifg=#a6acb9
+    hi NormalNC guibg=#242832
+    hi InsertColor guifg=#3B4252 guibg=#81976e
+  }
 augroup end
 
 g:gruvbox_italics = 0
 set background=dark
 colorscheme gruvbox8
+
+g:nord_uniform_diff_background = 1
+colorscheme nord
 
 # colorscheme desert
 # colorscheme default

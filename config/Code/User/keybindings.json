@@ -222,5 +222,9 @@
         "key": "shift+f6",
         "command": "ltex.checkSelection",
         "when": "editorHasSelection"
+    },
+    {
+        "key": "ctrl+6",
+        "command": "workbench.action.toggleActivityBarVisibility"
     }
 ]

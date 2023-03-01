@@ -61,3 +61,6 @@
 [submodule "vim/pack/plugins/start/vim-mustache-handlebars"]
 	path = vim/pack/plugins/start/vim-mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars.git
+[submodule "vim/pack/plugins/start/nord-vim"]
+	path = vim/pack/plugins/start/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim.git
