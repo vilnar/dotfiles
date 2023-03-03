@@ -436,29 +436,6 @@
     "trailing-spaces.showStatusBarMessage": false,
     "trailing-spaces.backgroundColor": "rgba(136,136,136,0.3)",
     "trailing-spaces.borderColor": "rgba(67,67,67,0.15)",
-    "textmarker.commandsOnContextMenu": {
-        "toggleHighlight": false,
-        "updateHighlight": false,
-        "goToNextHighlight": false,
-        "goToPreviousHighlight": false
-    },
-    "ltex.enabled": [
-        "html",
-        "latex",
-        "markdown",
-    ],
-    "ltex.language": "uk-UA",
-    // "ltex.checkFrequency": "save",
-    "ltex.checkFrequency": "manual",
-    "ltex.disabledRules": {"en-US": ["UPPERCASE_SENTENCE_START"], "uk-UA": ["UPPERCASE_SENTENCE_START"]},
-    "ltex.statusBarItem": false,
-    "ltex.completionEnabled": false,
-    "ltex.markdown.nodes":{
-        "CodeBlock": "ignore",
-        "FencedCodeBlock": "ignore",
-        "AutoLink": "ignore",
-        "Code": "ignore"
-    },
     "gitlens.graph.avatars": false,
     "gitlens.graph.dateStyle": "absolute",
 }

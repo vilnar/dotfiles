@@ -18,7 +18,7 @@
 
 ;; (global-set-key (kbd "<f6>") 'flyspell-buffer)
 (global-set-key (kbd "<f6>") 'yr:toggle-flyspell)
-(global-set-key (kbd "<f7>") 'tab-new)
+(global-set-key (kbd "<f7>") 'switch-to-buffer-other-tab)
 (global-set-key (kbd "<f8>") 'toggle-truncate-lines)
 (global-set-key (kbd "<f9>") 'whitespace-mode)
 (global-set-key (kbd "<f10>") 'dired-sidebar-toggle-sidebar)

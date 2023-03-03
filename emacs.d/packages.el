@@ -46,6 +46,11 @@
   (define-key magit-hunk-section-map (kbd "RET") 'magit-diff-visit-file-other-window)
   (define-key magit-file-section-map (kbd "RET") 'magit-diff-visit-file-other-window))
 
+;; mode line, hide all minor-modes under a nice menu
+(use-package minions
+  :ensure t
+  :config
+  (minions-mode 1))
 
 (use-package winum
   :ensure t

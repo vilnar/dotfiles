@@ -56,12 +56,25 @@
     {
         "name": "markup code",
         "scope": "markup.raw",
-        "background": "color(var(block-caret) alpha(0.12))"
+        "foreground": "var(foreground)",
+        "background": "color(var(block-caret) alpha(15%))"
     },
     {
         "name": "markup code",
         "scope": "markup.raw.inline",
-        "background": "color(var(block-caret) alpha(0.12))"
+        "foreground": "var(foreground)",
+        "background": "color(var(block-caret) alpha(15%))"
     },
+
+    {
+        "scope": "diff.deleted.char",
+        "background": "color(var(red) a(15%))",
+        "foreground_adjust": "l(+ 10%)"
+    },
+    {
+        "scope": "diff.inserted.char",
+        "background": "color(var(green) a(15%))",
+        "foreground_adjust": "l(+ 10%)"
+    }
   ]
 }

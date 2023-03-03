@@ -4,7 +4,6 @@
 (tool-bar-mode 0)
 (scroll-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
-(global-display-line-numbers-mode 1)
 (blink-cursor-mode -1)
 (xterm-mouse-mode 1)
 
@@ -36,12 +35,15 @@
  ediff-window-setup-function 'ediff-setup-windows-plain)
 
 ;; editor
+(global-display-line-numbers-mode 1)
+(column-number-mode 1)
 (global-hl-line-mode 1)
 ;; (setq-default cursor-type 'bar)
 (setq-default cursor-type t)
 (show-paren-mode 1)
 (global-subword-mode 1)
 (electric-indent-mode -1) ;; stop trail whitespace
+(setq whitespace-line-column 120)
 ;; replace selected region with yank buffer
 (delete-selection-mode 1)
 (global-superword-mode 1) ;; select whole word
