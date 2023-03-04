@@ -92,6 +92,7 @@
 (global-set-key (kbd "M-r") 'query-replace)
 ;; (global-set-key (kbd "C-s") 'isearch-forward)
 (global-set-key (kbd "C-s") 'yr:isearch-forward-improve)
+(global-set-key (kbd "C-r") 'yr:isearch-backward-improve)
 (global-set-key (kbd "C-S-s") 'yr:occur-improve)
 
 
