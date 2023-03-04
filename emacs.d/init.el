@@ -24,9 +24,9 @@
 (setq delete-by-moving-to-trash t)
 
 ;; search
-;; WTF: why emacs don't keep search highlight???
 (setq isearch-lazy-count 1)
 (setq lazy-highlight-cleanup nil)
+(setq lazy-highlight-buffer t)
 
 ;; case sensitive
 (setq-default case-fold-search nil)
