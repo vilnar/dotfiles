@@ -55,3 +55,8 @@ Doesn't mess with special buffers."
     (seq-each
      #'kill-buffer
      (delete (current-buffer) (seq-filter #'buffer-file-name (buffer-list))))))
+
+
+(defun yr:open-gnome-terminal ()
+  (interactive)
+  (shell-command "gnome-terminal"))

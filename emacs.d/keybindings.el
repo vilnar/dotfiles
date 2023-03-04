@@ -110,8 +110,9 @@
 (global-set-key (kbd "M-c C-d") 'mc/skip-to-next-like-this)
 
 
-(global-set-key (kbd "M-c t") 'google-translate-at-point)
-(global-set-key (kbd "M-c T") 'google-translate-at-point-reverse)
+(global-set-key (kbd "M-c 1") 'google-translate-at-point)
+(global-set-key (kbd "M-c 2") 'google-translate-at-point-reverse)
+(global-set-key (kbd "M-c t") 'yr:open-gnome-terminal)
 
 
 ;; alias  -------------------------------------------------------------
@@ -134,3 +135,4 @@
 (defalias 'file-name-copy 'yr:file-name-to-clipboard)
 (defalias 'file-absolute-name-copy 'yr:path-file-absolute-to-clipboard)
 (defalias 'new-buffer 'yr:new-empty-buffer)
+(defalias 'gnome-terminal 'yr:open-gnome-terminal)
