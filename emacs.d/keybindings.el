@@ -7,7 +7,7 @@
 
 ;; (global-set-key (kbd "M-g") 'goto-line)
 (global-unset-key (kbd "M-g"))
-(global-set-key (kbd "C-;") 'consult-line)
+(global-set-key (kbd "C-;") 'yr:consult-line-improve)
 (global-set-key (kbd "M-g") 'consult-goto-line)
 (global-set-key (kbd "M-y") 'consult-yank-pop)
 

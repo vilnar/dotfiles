@@ -37,10 +37,10 @@
  ediff-window-setup-function 'ediff-setup-windows-plain)
 
 ;; editor
-(global-display-line-numbers-mode 1)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (column-number-mode 1)
 (global-hl-line-mode 1)
-;; (setq-default cursor-type 'bar)
+;; (setq-default cursor-type 'hollow)
 (setq-default cursor-type t)
 (show-paren-mode 1)
 (global-subword-mode 1)

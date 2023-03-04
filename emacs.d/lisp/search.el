@@ -16,9 +16,19 @@
   (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
       (progn
         (let ((selection (buffer-substring-no-properties (mark) (point))))
-          (occur selection)
-          (deactivate-mark)))
+          (deactivate-mark)
+          (occur selection)))
     (call-interactively #'occur)))
+
+(defun yr:consult-line-improve ()
+  "consult-line with selected text"
+  (interactive)
+  (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
+      (progn
+        (let ((selection (buffer-substring-no-properties (mark) (point))))
+          (deactivate-mark)
+          (consult-line selection)))
+    (call-interactively #'consult-line)))
 
 
 (require 'hi-lock)

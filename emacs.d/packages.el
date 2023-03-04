@@ -90,7 +90,9 @@
         prescient-history-length 1000))
 
 (use-package consult
-  :ensure t)
+  :ensure t
+  :config
+  (setq consult-line-start-from-top t))
 
 
 (use-package fzf
@@ -273,5 +275,8 @@
   (web-mode-code-indent-offset 2))
 
 (use-package yaml-mode
+  :ensure t)
+
+(use-package cmake-mode
   :ensure t)
 
