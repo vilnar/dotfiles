@@ -162,6 +162,14 @@
 )
 
 
+(use-package wrap-region
+  :ensure t
+  :init
+  :config
+  (wrap-region-global-mode 1)
+  (wrap-region-add-wrapper "`" "`" nil '(markdown-mode ruby-mode)))
+
+
 ;; ----------------------------------------------------------------------------
 ;; programming languages
 

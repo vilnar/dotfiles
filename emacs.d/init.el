@@ -26,8 +26,10 @@
 ;; search
 ;; WTF: why emacs don't keep search highlight???
 (setq isearch-lazy-count 1)
-(setq-default case-fold-search t)
 (setq lazy-highlight-cleanup nil)
+
+;; case sensitive
+(setq-default case-fold-search nil)
 
 ;; diff
 (setq

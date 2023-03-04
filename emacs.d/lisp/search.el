@@ -1,23 +1,26 @@
-(defadvice isearch-search (after isearch-no-fail activate)
-  (unless isearch-success
-    (ad-disable-advice 'isearch-search 'after 'isearch-no-fail)
-    (ad-activate 'isearch-search)
-    (isearch-repeat (if isearch-forward 'forward))
-    (ad-enable-advice 'isearch-search 'after 'isearch-no-fail)
-    (ad-activate 'isearch-search)))
-
-;; search selected
-(defadvice isearch-mode (around isearch-mode-default-string (forward &optional regexp op-fun recursive-edit word-p) activate)
+(defun yr:isearch-forward-improve ()
+  "search with selected text"
+  (interactive)
   (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
       (progn
-        (isearch-update-ring (buffer-substring-no-properties (mark) (point)))
-        (deactivate-mark)
-        ad-do-it
-        (if (not forward)
-            (isearch-repeat-backward)
-          (goto-char (mark))
-          (isearch-repeat-forward)))
-    ad-do-it))
+        (let ((selection (buffer-substring-no-properties (mark) (point))))
+          ;; (debug selection)
+          (deactivate-mark)
+          (isearch-mode t)
+          (isearch-yank-string selection)))
+    (call-interactively #'isearch-forward)
+    ))
+
+(defun yr:occur-improve ()
+  "occur with selected text"
+  (interactive)
+  (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
+      (progn
+        (let ((selection (buffer-substring-no-properties (mark) (point))))
+          (occur selection)
+          (deactivate-mark)))
+    (call-interactively #'occur)
+    ))
 
 
 (require 'hi-lock)

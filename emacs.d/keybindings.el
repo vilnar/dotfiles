@@ -1,14 +1,14 @@
 (global-unset-key (kbd "M-c"))
 (global-unset-key (kbd "C-."))
 
+(global-set-key (kbd "M-s M-s") 'save-buffer)
+;; (global-set-key (kbd "C-x f") 'find-file)
+(global-set-key (kbd "M-o") 'find-file)
+
 ;; (global-set-key (kbd "M-g") 'goto-line)
 (global-unset-key (kbd "M-g"))
-(global-set-key (kbd "M-g g") 'consult-line)
-(global-set-key (kbd "M-g l") 'consult-goto-line)
-(global-set-key (kbd "M-g m") 'consult-mark)
-(global-set-key (kbd "M-g M-m") 'consult-global-mark)
-(global-set-key (kbd "M-g o") 'consult-outline)
-(global-set-key (kbd "C-c C-k") 'consult-kmacro)
+(global-set-key (kbd "C-;") 'consult-line)
+(global-set-key (kbd "M-g") 'consult-goto-line)
 (global-set-key (kbd "M-y") 'consult-yank-pop)
 
 ;; comment toggle
@@ -28,8 +28,8 @@
 ;; (global-set-key (kbd "<f12>") 'bookmark-bmenu-list)
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
-(global-set-key (kbd "M-c g") #'rg-menu)
 (global-set-key (kbd "C-S-f") #'rg-literal)
+(global-set-key (kbd "M-c g") #'rg-menu)
 (global-set-key (kbd "M-c p") 'projectile-command-map)
 (global-set-key (kbd "M-c f") 'fzf-directory)
 (global-set-key (kbd "M-c h") 'lazy-highlight-cleanup)
@@ -91,9 +91,10 @@
 (global-unset-key (kbd "M-r"))
 (global-set-key (kbd "M-r") 'query-replace)
 ;; (global-set-key (kbd "C-s") 'isearch-forward)
+(global-set-key (kbd "C-s") 'yr:isearch-forward-improve)
+(global-set-key (kbd "C-S-s") 'yr:occur-improve)
 
-;; (global-set-key (kbd "C-x f") 'find-file)
-(global-set-key (kbd "M-o") 'find-file)
+
 ;; (global-set-key (kbd "s-<tab>") 'switch-to-buffer)
 (global-set-key (kbd "s-<tab>") 'consult-buffer)
 (global-set-key (kbd "C-<tab>") #'ibuffer)
