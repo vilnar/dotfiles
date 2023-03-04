@@ -157,7 +157,7 @@
   ;; (setq flycheck-idle-change-delay 2.0)
 )
 (with-eval-after-load 'flycheck
-  ;; don't hightlight info
+  ;; don't highlight info
   (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
 )
 
@@ -168,6 +168,15 @@
   :config
   (wrap-region-global-mode 1)
   (wrap-region-add-wrapper "`" "`" nil '(markdown-mode ruby-mode)))
+
+
+(use-package google-translate
+  :ensure t
+  :config
+  (setq google-translate-default-source-language "en")
+  (setq google-translate-default-target-language "uk")
+  (setq google-translate-translation-directions-alist
+      '(("uk" . "en") ("en" . "uk"))))
 
 
 ;; ----------------------------------------------------------------------------

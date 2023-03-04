@@ -8,8 +8,7 @@
           (deactivate-mark)
           (isearch-mode t)
           (isearch-yank-string selection)))
-    (call-interactively #'isearch-forward)
-    ))
+    (call-interactively #'isearch-forward)))
 
 (defun yr:occur-improve ()
   "occur with selected text"
@@ -19,8 +18,7 @@
         (let ((selection (buffer-substring-no-properties (mark) (point))))
           (occur selection)
           (deactivate-mark)))
-    (call-interactively #'occur)
-    ))
+    (call-interactively #'occur)))
 
 
 (require 'hi-lock)

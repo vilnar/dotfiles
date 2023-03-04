@@ -110,6 +110,10 @@
 (global-set-key (kbd "M-c C-d") 'mc/skip-to-next-like-this)
 
 
+(global-set-key (kbd "M-c t") 'google-translate-at-point)
+(global-set-key (kbd "M-c T") 'google-translate-at-point-reverse)
+
+
 ;; alias  -------------------------------------------------------------
 (defalias 'noh 'lazy-highlight-cleanup)
 (defalias 'rep 'query-replace)
@@ -118,7 +122,7 @@
 (defalias 'gst 'magit-status)
 (defalias 'gblame 'magit-blame)
 (defalias 'glog 'magit-log-current)
-(defalias 'gdiff 'magit-diff-range)
+(defalias 'gdiff-range 'magit-diff-range)
 (defalias 'gdiff-file 'magit-diff-buffer-file)
 (defalias 'gsub 'magit-submodule-update-all)
 (defalias 'gblameshow 'magit-show-commit)
@@ -127,6 +131,6 @@
 (defalias 'modeshow 'describe-mode)
 (defalias 'rev 'revert-buffer-quick)
 (defalias 'rename-file-buffer 'yr:rename-file-and-buffer)
-(defalias 'file-copy-name 'yr:file-name-to-clipboard)
-(defalias 'path-file-copy-absolute 'yr:path-file-absolute-to-clipboard)
+(defalias 'file-name-copy 'yr:file-name-to-clipboard)
+(defalias 'file-absolute-name-copy 'yr:path-file-absolute-to-clipboard)
 (defalias 'new-buffer 'yr:new-empty-buffer)

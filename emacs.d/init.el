@@ -60,6 +60,7 @@
 
 ;; wrap
 (setq-default truncate-lines t)
+(setq-default word-wrap t)
 
 (setq-default indicate-empty-lines t)
 
