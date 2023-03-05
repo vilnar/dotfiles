@@ -125,9 +125,6 @@
   :config
   (global-diff-hl-mode))
 
-;; go to last change, unfortunately, only local buffer
-(use-package goto-chg
-  :ensure t)
 
 ;; grep
 (use-package rg
