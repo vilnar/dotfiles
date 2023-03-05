@@ -16,7 +16,15 @@
  'zenburn
  '(region ((t (:background "#0f0f0f"))))
  '(lazy-highlight ((t (:background "#385f38"))))
- '(highlight ((t (:background "#284f28")))))
+ '(highlight ((t (:background "#284f28"))))
+ '(ediff-current-diff-A ((t (:background "#543838"))))
+ '(ediff-current-diff-B ((t (:background "#3f4735"))))
+ '(ediff-current-diff-C ((t (:background "#364d4d"))))
+ '(ediff-fine-diff-A ((t (:background "#8C5353" :weight bold))))
+ '(ediff-fine-diff-B ((t (:background "#526a52" :weight bold))))
+ '(ediff-fine-diff-C ((t (:background "#486b6e" :weight bold))))
+)
+
 
 (menu-bar-mode 1)
 (context-menu-mode 1)
