@@ -40,6 +40,16 @@
           (consult-line selection)))
     (call-interactively #'consult-line)))
 
+(defun yr:fzf-directory-improve ()
+  "fzf-directory with copy selected text"
+  (interactive)
+  (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
+      (progn
+        (kill-ring-save (mark) (point))
+        (deactivate-mark)
+        (call-interactively #'fzf-directory))
+    (call-interactively #'fzf-directory)))
+
 
 (require 'hi-lock)
 (defun yr:toggle-mark-word-at-point ()

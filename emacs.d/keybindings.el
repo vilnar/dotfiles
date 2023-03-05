@@ -31,7 +31,7 @@
 (global-set-key (kbd "C-S-f") #'rg-literal)
 (global-set-key (kbd "M-c g") #'rg-menu)
 (global-set-key (kbd "M-c p") 'projectile-command-map)
-(global-set-key (kbd "M-c f") 'fzf-directory)
+(global-set-key (kbd "M-c f") 'yr:fzf-directory-improve)
 (global-set-key (kbd "M-c h") 'lazy-highlight-cleanup)
 
 
@@ -137,3 +137,4 @@
 (defalias 'file-absolute-name-copy 'yr:path-file-absolute-to-clipboard)
 (defalias 'new-buffer 'yr:new-empty-buffer)
 (defalias 'gnome-terminal 'yr:open-gnome-terminal)
+(defalias 'close-other-buffers 'yr:kill-other-buffers)
