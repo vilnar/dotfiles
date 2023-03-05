@@ -88,7 +88,7 @@
 
 
 (global-unset-key (kbd "M-r"))
-(global-set-key (kbd "M-r") 'query-replace)
+(global-set-key (kbd "M-r") 'yr:query-replace-improve)
 ;; (global-set-key (kbd "C-s") 'isearch-forward)
 (global-set-key (kbd "C-s") 'yr:isearch-forward-improve)
 (global-set-key (kbd "C-r") 'yr:isearch-backward-improve)

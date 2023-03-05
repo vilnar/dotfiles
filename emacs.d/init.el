@@ -29,7 +29,7 @@
 (setq lazy-highlight-buffer t)
 
 ;; case sensitive
-(setq-default case-fold-search nil)
+(setq-default case-fold-search t)
 
 ;; diff
 (setq

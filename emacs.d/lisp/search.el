@@ -50,6 +50,16 @@
         (call-interactively #'fzf-directory))
     (call-interactively #'fzf-directory)))
 
+(defun yr:query-replace-improve ()
+  "query-replace with copy selected text"
+  (interactive)
+  (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
+      (progn
+        (kill-ring-save (mark) (point))
+        (deactivate-mark)
+        (goto-char (mark))
+        (call-interactively #'query-replace))
+    (call-interactively #'query-replace)))
 
 (require 'hi-lock)
 (defun yr:toggle-mark-word-at-point ()
