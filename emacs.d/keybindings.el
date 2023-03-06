@@ -1,13 +1,20 @@
 (global-unset-key (kbd "M-c"))
 (global-unset-key (kbd "C-."))
 
-(global-set-key (kbd "M-s M-s") 'save-buffer)
+(global-set-key (kbd "M-s") 'save-buffer)
 ;; (global-set-key (kbd "C-x f") 'find-file)
 (global-set-key (kbd "M-o") 'find-file)
+
+(global-set-key (kbd "M-q") 'kill-buffer)
+(global-set-key (kbd "C-q") 'kill-buffer)
+
+(global-set-key (kbd "M-[") 'previous-buffer)
+(global-set-key (kbd "M-]") 'next-buffer)
 
 ;; (global-set-key (kbd "M-g") 'goto-line)
 (global-unset-key (kbd "M-g"))
 (global-set-key (kbd "M-;") 'yr:consult-line-improve)
+(global-set-key (kbd "C-;") 'yr:consult-line-improve)
 (global-set-key (kbd "M-g") 'consult-goto-line)
 (global-set-key (kbd "M-y") 'consult-yank-pop)
 
@@ -28,11 +35,12 @@
 ;; (global-set-key (kbd "<f12>") 'bookmark-bmenu-list)
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
-(global-set-key (kbd "C-S-f") #'rg-literal)
+(global-set-key (kbd "M-l") #'rg-literal)
 (global-set-key (kbd "M-c g") #'rg-menu)
 (global-set-key (kbd "M-c p") 'projectile-command-map)
-(global-set-key (kbd "M-c f") 'yr:fzf-directory-improve)
-(global-set-key (kbd "M-c h") 'lazy-highlight-cleanup)
+(global-set-key (kbd "C-M-p") 'projectile-switch-project)
+(global-set-key (kbd "M-p") 'yr:fzf-directory-improve)
+(global-set-key (kbd "M-h") 'lazy-highlight-cleanup)
 
 
 (global-set-key [(control shift up)]  'yr:move-text-up)
@@ -45,17 +53,19 @@
 ;; (global-set-key (kbd "C-\\") 'yr:set-input-method-ukraine)
 ;; (global-set-key (kbd "M-\\") 'yr:set-input-method-english)
 (global-set-key (kbd "M-\\") 'yr:toggle-input-method)
+(global-set-key (kbd "C-\\") 'yr:toggle-input-method)
 
 (global-set-key (kbd "<C-S-return>") 'yr:new-line-above)
 (global-set-key (kbd "<C-return>") 'yr:new-line-below)
 
 (global-unset-key (kbd "M-m"))
 (global-set-key (kbd "M-m") 'yr:toggle-mark-word-at-point)
-(global-set-key (kbd "M-c w") 'yr:mark-whole-word)
+;; (global-set-key (kbd "C-M-SPC") 'er/mark-word)
+;; (global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-M-SPC") 'er/expand-region)
 (global-set-key (kbd "C-M-l") 'yr:copy-line)
 
-;; Window switching. (C-x o goes to the next window)
-(global-set-key (kbd "C-x O") (lambda ()
+(global-set-key (kbd "M-5") (lambda ()
                                 (interactive)
                                 (other-window -1))) ;; back one
 (define-key winum-keymap (kbd "M-1") 'winum-select-window-1)
@@ -70,6 +80,8 @@
 (global-unset-key (kbd "C-z"))
 (global-set-key (kbd "C-z")   'undo-fu-only-undo)
 (global-set-key (kbd "C-S-z") 'undo-fu-only-redo)
+(global-set-key (kbd "M-z")   'undo-fu-only-undo)
+(global-set-key (kbd "C-M-z") 'undo-fu-only-redo)
 
 
 ;; Font size
@@ -77,11 +89,12 @@
 (global-set-key (kbd "C--") 'text-scale-decrease)
 
 ;; autocomplete
+(global-set-key (kbd "M-SPC") 'company-complete)
 (with-eval-after-load 'company
-  (define-key company-active-map (kbd "M-/") #'company-complete)
-  (define-key company-active-map (kbd "C-n") #'company-select-next)
-  (define-key company-active-map (kbd "C-p") #'company-select-previous)
-  (define-key company-active-map (kbd "C-y") #'company-complete-selection)
+  (define-key company-active-map (kbd "M-SPC") #'company-complete)
+  (define-key company-active-map (kbd "M-n") #'company-select-next)
+  (define-key company-active-map (kbd "M-p") #'company-select-previous)
+  (define-key company-active-map (kbd "M-y") #'company-complete-selection)
   (define-key company-active-map (kbd "<return>") nil)
   (define-key company-active-map (kbd "RET") nil)
   (define-key company-active-map (kbd "TAB") nil))
@@ -92,7 +105,7 @@
 ;; (global-set-key (kbd "C-s") 'isearch-forward)
 (global-set-key (kbd "C-s") 'yr:isearch-forward-improve)
 (global-set-key (kbd "C-r") 'yr:isearch-backward-improve)
-(global-set-key (kbd "C-S-s") 'yr:occur-improve)
+(global-set-key (kbd "M-c b") 'yr:occur-improve)
 
 
 ;; (global-set-key (kbd "s-<tab>") 'switch-to-buffer)
@@ -137,3 +150,4 @@
 (defalias 'new-buffer 'yr:new-empty-buffer)
 (defalias 'gnome-terminal 'yr:open-gnome-terminal)
 (defalias 'close-other-buffers 'yr:kill-other-buffers)
+(defalias 'zen-mode 'olivetti-mode)

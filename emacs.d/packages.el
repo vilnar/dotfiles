@@ -38,6 +38,8 @@
 
   (setq
    magit-list-refs-sortby "-committerdate"
+   magit-section-initial-visibility-alist '((hide))
+   magit-ediff-show-stash-with-index nil
    ;; show whitespace for diff
    magit-diff-refine-ignore-whitespace nil
    magit-diff-paint-whitespace t
@@ -176,6 +178,14 @@
   (setq google-translate-default-target-language "uk")
   (setq google-translate-translation-directions-alist
       '(("uk" . "en") ("en" . "uk"))))
+
+(use-package olivetti
+  :ensure t
+  :config
+  (setq olivetti-minimum-body-width 120))
+
+(use-package expand-region
+  :ensure t)
 
 
 ;; ----------------------------------------------------------------------------
