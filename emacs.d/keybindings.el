@@ -41,8 +41,8 @@
 
 (global-set-key (kbd "M-l") #'rg-literal)
 (global-set-key (kbd "M-c g") #'rg-menu)
-(global-set-key (kbd "M-c p") 'projectile-command-map)
-(global-set-key (kbd "C-M-p") 'projectile-switch-project)
+;; (global-set-key (kbd "M-c p") 'projectile-command-map)
+(global-set-key (kbd "M-c p") 'projectile-switch-project)
 (global-set-key (kbd "M-p") 'yr:fzf-directory-improve)
 (global-set-key (kbd "M-h") 'lazy-highlight-cleanup)
 
