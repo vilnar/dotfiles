@@ -17,6 +17,7 @@
  '(region ((t (:background "#0f0f0f"))))
  '(lazy-highlight ((t (:background "#385f38"))))
  '(highlight ((t (:background "#284f28"))))
+ '(trailing-whitespace ((t (:background "#797979"))))
  '(ediff-current-diff-A ((t (:background "#543838"))))
  '(ediff-current-diff-B ((t (:background "#3f4735"))))
  '(ediff-current-diff-C ((t (:background "#364d4d"))))

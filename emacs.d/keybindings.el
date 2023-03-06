@@ -7,6 +7,7 @@
 
 (global-set-key (kbd "M-q") 'kill-buffer)
 (global-set-key (kbd "C-q") 'kill-buffer)
+(global-set-key (kbd "C-M-q") 'save-buffers-kill-emacs)
 
 (global-set-key (kbd "M-[") 'previous-buffer)
 (global-set-key (kbd "M-]") 'next-buffer)
@@ -21,11 +22,14 @@
 ;; comment toggle
 (global-unset-key (kbd "M-/"))
 (global-set-key (kbd "M-/") 'comment-line)
+(global-unset-key (kbd "C-/"))
+(global-set-key (kbd "C-/") 'comment-line)
 
 
 ;; (global-set-key (kbd "<f6>") 'flyspell-buffer)
 (global-set-key (kbd "<f6>") 'yr:toggle-flyspell)
-(global-set-key (kbd "<f7>") 'switch-to-buffer-other-tab)
+;; (global-set-key (kbd "<f7>") 'switch-to-buffer-other-tab)
+(global-set-key (kbd "<f7>") 'tab-new)
 (global-set-key (kbd "<f8>") 'toggle-truncate-lines)
 (global-set-key (kbd "<f9>") 'whitespace-mode)
 (global-set-key (kbd "<f10>") 'dired-sidebar-toggle-sidebar)

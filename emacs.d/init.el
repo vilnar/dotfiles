@@ -47,6 +47,7 @@
 (electric-indent-mode -1) ;; stop trail whitespace
 (setq whitespace-line-column 120)
 ;; replace selected region with yank buffer
+(setq-default show-trailing-whitespace t)
 (delete-selection-mode 1)
 (global-superword-mode 1) ;; select whole word
 (global-auto-revert-mode t)
