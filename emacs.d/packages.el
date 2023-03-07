@@ -209,9 +209,10 @@
 (use-package php-mode
   :ensure t
   :config
+  (setq php-mode-coding-style 'psr2)
+  (setq php-mode-map nil)
   (add-hook 'php-mode-hook
 	    (lambda ()
-	      (php-enable-psr2-coding-style)
 	      (setq-local indent-tabs-mode nil)
 	      (setq-local tab-width 4))))
 
@@ -232,7 +233,7 @@
 
 (add-hook 'python-mode-hook
   (lambda ()
-    (setq-local fill-column 80)
+    (setq-local fill-column 120)
     (setq-local tab-width 4)
     (setq-local evil-shift-width 4)
     (setq-local indent-tabs-mode nil)

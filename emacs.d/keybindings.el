@@ -1,3 +1,32 @@
+;; Globally override key binding for all minor modes
+;; sources:
+;; https://stackoverflow.com/questions/683425/globally-override-key-binding-in-emacs
+;; https://shallowsky.com/blog/linux/editors/emacs-global-key-bindings.html
+(defvar my-keys-minor-mode-map (make-sparse-keymap)
+  "my-keys-minor-mode keymap.")
+
+(define-minor-mode my-keys-minor-mode
+  "A minor mode so that global key settings override annoying major modes."
+  t "global-keys" 'my-keys-minor-mode-map)
+
+(my-keys-minor-mode 1)
+
+(defconst global-minor-mode-alist (list (cons 'my-keys-minor-mode
+                                              my-keys-minor-mode-map)))
+
+(setf emulation-mode-map-alists '(global-minor-mode-alist))
+
+;; turn off for minibuffer
+(defun my-minibuffer-setup-hook ()
+  (my-keys-minor-mode 0))
+(add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
+
+;; examples
+;; (define-key my-keys-minor-mode-map (kbd "C-d") #'mc/mark-next-like-this-word)
+
+
+;; ====================================================================
+
 (global-unset-key (kbd "M-c"))
 (global-unset-key (kbd "C-."))
 
@@ -12,10 +41,10 @@
 (global-set-key (kbd "M-[") 'previous-buffer)
 (global-set-key (kbd "M-]") 'next-buffer)
 
-;; (global-set-key (kbd "M-g") 'goto-line)
-(global-unset-key (kbd "M-g"))
+
 (global-set-key (kbd "M-;") 'yr:consult-line-improve)
 (global-set-key (kbd "C-;") 'yr:consult-line-improve)
+(global-unset-key (kbd "M-g"))
 (global-set-key (kbd "M-g") 'consult-goto-line)
 (global-set-key (kbd "M-y") 'consult-yank-pop)
 
@@ -39,20 +68,18 @@
 ;; (global-set-key (kbd "<f12>") 'bookmark-bmenu-list)
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
-(global-set-key (kbd "M-l") #'rg-literal)
+(global-set-key (kbd "M-j") 'yr:fzf-directory-improve)
+(global-set-key (kbd "M-k") #'rg-literal)
 (global-set-key (kbd "M-c g") #'rg-menu)
 ;; (global-set-key (kbd "M-c p") 'projectile-command-map)
 (global-set-key (kbd "M-c p") 'projectile-switch-project)
-(global-set-key (kbd "M-p") 'yr:fzf-directory-improve)
 (global-set-key (kbd "M-h") 'lazy-highlight-cleanup)
 
 
 (global-set-key [(control shift up)]  'yr:move-text-up)
 (global-set-key [(control shift down)]	'yr:move-text-down)
 
-(global-set-key (kbd "C-S-d") 'yr:duplicate-line)
-(eval-after-load "php-mode"
-  '(define-key php-mode-map (kbd "C-S-d") 'yr:duplicate-line))
+(define-key my-keys-minor-mode-map (kbd "C-S-d") 'yr:duplicate-line)
 
 ;; (global-set-key (kbd "C-\\") 'yr:set-input-method-ukraine)
 ;; (global-set-key (kbd "M-\\") 'yr:set-input-method-english)
@@ -82,10 +109,10 @@
 (global-set-key (kbd "M-+") 'consult-global-mark)
 
 (global-unset-key (kbd "C-z"))
-(global-set-key (kbd "C-z")   'undo-fu-only-undo)
-(global-set-key (kbd "C-S-z") 'undo-fu-only-redo)
-(global-set-key (kbd "M-z")   'undo-fu-only-undo)
-(global-set-key (kbd "C-M-z") 'undo-fu-only-redo)
+(define-key my-keys-minor-mode-map (kbd "C-z")   'undo-fu-only-undo)
+(define-key my-keys-minor-mode-map (kbd "C-S-z") 'undo-fu-only-redo)
+(define-key my-keys-minor-mode-map (kbd "M-z")   'undo-fu-only-undo)
+(define-key my-keys-minor-mode-map (kbd "C-M-z") 'undo-fu-only-redo)
 
 
 ;; Font size
@@ -120,11 +147,10 @@
 
 ;; multiple-cursors
 (global-unset-key (kbd "M-<down-mouse-1>"))
-(global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
-(global-set-key [(meta down)] 'mc/mark-next-like-this)
-(global-unset-key (kbd "C-d"))
-(global-set-key (kbd "C-d") 'mc/mark-next-like-this-word)
-(global-set-key (kbd "M-c C-d") 'mc/skip-to-next-like-this)
+(define-key my-keys-minor-mode-map (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
+(define-key my-keys-minor-mode-map [(meta down)] 'mc/mark-next-like-this)
+(define-key my-keys-minor-mode-map (kbd "C-d") #'mc/mark-next-like-this-word)
+(define-key my-keys-minor-mode-map (kbd "M-c C-d") 'mc/skip-to-next-like-this)
 
 
 (global-set-key (kbd "M-c 1") 'google-translate-at-point)
