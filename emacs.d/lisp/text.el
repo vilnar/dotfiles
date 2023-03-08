@@ -35,7 +35,6 @@
   (move-beginning-of-line 1)
   (set-mark (line-end-position))
   (kill-ring-save (region-beginning) (region-end))
-  (next-line 1)
   (open-line 1)
   (yank))
 

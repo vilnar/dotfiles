@@ -40,8 +40,12 @@ def RunPreview()
   GenerateHtml()
   # wait generate html
   execute 'sleep 1'
-  execute 'Start! firefox ' .. GetHtmlTmpPath()
-  # execute 'AsyncRun -pos=hide firefox ' .. GetHtmlTmpPath() .. ' > /dev/null 2> /dev/null&'
+  var path = GetHtmlTmpPath()
+  if !filereadable(path)
+    echoerr printf("Not generated html %s", path)
+    return
+  endif
+  execute 'Start! google-chrome ' .. path
 enddef
 command MarkdownPreview RunPreview()
 

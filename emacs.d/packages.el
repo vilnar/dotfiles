@@ -67,6 +67,31 @@
   :init
   (winum-mode))
 
+;; autocomplete
+(use-package company
+  :ensure t
+  :init
+  (global-company-mode 1)
+  :config
+  (setq
+   company-dabbrev-code-ignore-case t
+   company-idle-delay 0.2
+   company-minimum-prefix-length 3))
+
+;; source https://github.com/syl20bnr/spacemacs/pull/179
+(defun mars/company-backend-with-yas (backends)
+  "Add :with company-yasnippet to company BACKENDS."
+  (if (and (listp backends) (memq 'company-yasnippet backends))
+	    backends
+	  (append (if (consp backends)
+		            backends
+		          (list backends))
+		        '(:with company-yasnippet))))
+
+;; add yasnippet to all backends
+(setq company-backends
+      (mapcar #'mars/company-backend-with-yas company-backends))
+
 
 (use-package vertico
   :ensure t
@@ -210,7 +235,6 @@
   :ensure t
   :config
   (setq php-mode-coding-style 'psr2)
-  (setq php-mode-map nil)
   (add-hook 'php-mode-hook
 	    (lambda ()
 	      (setq-local indent-tabs-mode nil)

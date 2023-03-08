@@ -107,3 +107,4 @@
 (mapc 'yr:new-frame-setup (frame-list))
 ;; Run when a new frame is created
 (add-hook 'after-make-frame-functions 'yr:new-frame-setup)
+(put 'upcase-region 'disabled nil)

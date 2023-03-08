@@ -120,6 +120,7 @@
 (global-set-key (kbd "C--") 'text-scale-decrease)
 
 ;; autocomplete
+;; (global-set-key (kbd "M-SPC") 'dabbrev-completion)
 (global-set-key (kbd "M-SPC") 'company-complete)
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-SPC") #'company-complete)
@@ -181,3 +182,4 @@
 (defalias 'gnome-terminal 'yr:open-gnome-terminal)
 (defalias 'close-other-buffers 'yr:kill-other-buffers)
 (defalias 'zen-mode 'olivetti-mode)
+(defalias 'markdown-preview-now 'markdown-live-preview-mode)
