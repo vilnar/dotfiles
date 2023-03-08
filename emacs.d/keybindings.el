@@ -137,6 +137,7 @@
 ;; (global-set-key (kbd "C-s") 'isearch-forward)
 (global-set-key (kbd "C-s") 'yr:isearch-forward-improve)
 (global-set-key (kbd "C-r") 'yr:isearch-backward-improve)
+(global-set-key (kbd "M-c w") 'isearch-toggle-word)
 (global-set-key (kbd "M-c b") 'yr:occur-improve)
 
 
