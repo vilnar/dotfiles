@@ -31,11 +31,6 @@
 ;; case sensitive
 (setq-default case-fold-search t)
 
-;; diff
-(setq
- ediff-split-window-function 'split-window-horizontally
- ediff-window-setup-function 'ediff-setup-windows-plain)
-
 ;; editor
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (column-number-mode 1)
@@ -50,14 +45,9 @@
 (setq-default show-trailing-whitespace t)
 (delete-selection-mode 1)
 (global-superword-mode 1) ;; select whole word
-(global-auto-revert-mode t)
 
 ;; show brackets, parens in inside
 (setq show-paren-when-point-inside-paren t)
-
-;; autosave
-(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
-;; (add-hook 'focus-out-hook 'save-buffer)
 
 ;; wrap
 (setq-default truncate-lines t)
@@ -65,15 +55,13 @@
 
 (setq-default indicate-empty-lines t)
 
-;; saving history
-(savehist-mode 1)
-(setq savehist-additional-variables
-      '(search-ring
-        regexp-search-ring
-        kill-ring
-        file-name-history
-        command-history
-        shell-command-history))
+(global-auto-revert-mode t)
+;; autosave
+(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
+;; (add-hook 'focus-out-hook 'save-buffer)
+
+
+
 
 ;; ----------------------------------------------------------------------------
 ;; Load packages
@@ -87,9 +75,9 @@
 (setq custom-file "~/.emacs.d/customizations.el")
 (load custom-file)
 
+(load "~/.emacs.d/default-packages.el" t)
 (load "~/.emacs.d/packages.el" t)
-(load "~/.emacs.d/modes.el" t)
-(load "~/.emacs.d/editor.el" t)
+(load "~/.emacs.d/func.el" t)
 (load "~/.emacs.d/lisp/files.el" t)
 (load "~/.emacs.d/lisp/json.el" t)
 (load "~/.emacs.d/lisp/search.el" t)

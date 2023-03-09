@@ -19,17 +19,20 @@
     (message "speller enable")))
 
 
-;; source: https://github.com/bbatsov/crux/blob/master/crux.el
-(defun yr:kill-other-buffers ()
-  "Kill all buffers but the current one.
-Doesn't mess with special buffers."
-  (interactive)
-  (when (y-or-n-p "Are you sure you want to kill all buffers but the current one? ")
-    (seq-each
-     #'kill-buffer
-     (delete (current-buffer) (seq-filter #'buffer-file-name (buffer-list))))))
+;; saving history
+(savehist-mode 1)
+(setq savehist-additional-variables
+      '(search-ring
+        regexp-search-ring
+        kill-ring
+        file-name-history
+        command-history
+        shell-command-history))
+
+;; diff
+(setq
+ ediff-split-window-function 'split-window-horizontally
+ ediff-window-setup-function 'ediff-setup-windows-plain)
 
 
-(defun yr:open-gnome-terminal ()
-  (interactive)
-  (shell-command "gnome-terminal"))
+(setq dired-listing-switches "-lah --group-directories-first")
