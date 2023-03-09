@@ -8,7 +8,7 @@ if !executable('pandoc')
 endif
 
 def GetName(): string
-  return expand("%:t:r")
+  return printf("%s-%s-%s", expand("%:t:r"), buffer_number(), getpid())
 enddef
 
 def GetMarkdownTmpPath(): string
