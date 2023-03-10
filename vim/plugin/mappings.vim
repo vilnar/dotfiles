@@ -161,11 +161,10 @@ set imsearch=0 # Default - latin layout in search
 inoremap <C-\> <C-^>
 cnoremap <C-\> <C-^>
 
-# alt+\
-execute "set <M-\\>=\e\\"
-execute "set <M-\\>=\e\\"
-inoremap <M-\> <C-^>
-cnoremap <M-\> <C-^>
+# alt+l
+execute "set <M-l>=\el"
+inoremap <M-l> <C-^>
+cnoremap <M-l> <C-^>
 
 
 
