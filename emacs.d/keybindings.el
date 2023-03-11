@@ -69,8 +69,8 @@
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
 (global-set-key (kbd "M-j") 'yr:fzf-directory-improve)
-(global-set-key (kbd "M-k") #'rg-literal)
-(global-set-key (kbd "M-c g") #'rg-menu)
+;; (global-set-key (kbd "M-k") #'rg-literal)
+(global-set-key (kbd "M-k") #'rg-menu)
 ;; (global-set-key (kbd "M-c p") 'projectile-command-map)
 (global-set-key (kbd "M-c p") 'projectile-switch-project)
 (global-set-key (kbd "M-h") 'lazy-highlight-cleanup)
@@ -83,8 +83,7 @@
 
 ;; (global-set-key (kbd "C-\\") 'yr:set-input-method-ukraine)
 ;; (global-set-key (kbd "M-\\") 'yr:set-input-method-english)
-(global-set-key (kbd "M-\\") 'yr:toggle-input-method)
-(global-set-key (kbd "C-\\") 'yr:toggle-input-method)
+(global-set-key (kbd "M-l") 'yr:toggle-input-method)
 
 (global-set-key (kbd "<C-S-return>") 'yr:new-line-above)
 (global-set-key (kbd "<C-return>") 'yr:new-line-below)

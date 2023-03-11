@@ -24,6 +24,7 @@
  '(ediff-fine-diff-A ((t (:background "#8C5353" :weight bold))))
  '(ediff-fine-diff-B ((t (:background "#526a52" :weight bold))))
  '(ediff-fine-diff-C ((t (:background "#486b6e" :weight bold))))
+ '(doom-modeline-input-method ((t (:foreground "#EBCB8B" :weight bold))))
 )
 
 

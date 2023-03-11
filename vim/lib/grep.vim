@@ -39,14 +39,16 @@ enddef
 
 
 def GrepInProject(text: string)
-  var template = 'Dispatch grep -rni --exclude="tags" --exclude-dir=".git" %s ./'
+  # var template = 'Dispatch grep -rni --exclude="tags" --exclude-dir=".git" %s ./'
+  var template = 'Dispatch rg --vimgrep --smart-case --glob="!tags" --glob="!.git" %s ./'
   call GrepWithEscaped(text, template)
 enddef
 command -nargs=1 GrepInProjectEscape :vim9cmd GrepInProject(<q-args>) | normal! n
 
 
 def GrepInDirectory(text: string)
-  var template = 'Dispatch grep -rni --exclude="tags" --exclude-dir=".git" %s ' .. GetRelativePathForGrep()
+  # var template = 'Dispatch grep -rni --exclude="tags" --exclude-dir=".git" %s ' .. GetRelativePathForGrep()
+  var template = 'Dispatch rg --vimgrep --smart-case --glob="!tags" --glob="!.git" %s ' .. GetRelativePathForGrep()
   call GrepWithEscaped(text, template)
 enddef
 command -nargs=1 GrepInDirectoryEscape :vim9cmd GrepInDirectory(<q-args>) | normal! n
