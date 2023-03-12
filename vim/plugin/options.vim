@@ -85,6 +85,7 @@ command PhpCsFixerFixFile :call PhpCsFixerFixFile()
 g:translator_target_lang = "uk"
 g:translator_default_engines = ["google"]
 g:translator_window_type = "preview"
+g:translator_window_preview_is_keep_open = true
 
 # LSP settings --------------------------------------------------
 # g:lsp_auto_enable = 0

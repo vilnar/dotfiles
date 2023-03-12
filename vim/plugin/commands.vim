@@ -19,6 +19,7 @@ command Version :enew | put = execute('version')
 command MarksList :enew | put = execute('marks')
 command ColorTest :help group-name
 command ScriptNames :enew | put = execute('scriptnames')
+command Messages :enew | put = execute('messages')
 
 # type fix
 command Vs :vs

@@ -66,6 +66,7 @@ augroup MyColors
     hi link markdownCode String
     hi link markdownCodeBlock String
     hi link markdownCodeDelimiter String
+    hi markdownError guibg=#593e4c
     hi link gitcommitSummary SpecialChar
 
     hi DiffAdd    guibg=#4c5147 guifg=NONE gui=NONE cterm=NONE
@@ -79,6 +80,7 @@ augroup MyColors
     # hi Comment guifg=#a6acb9
     hi NormalNC guibg=#242832
     hi InsertColor guifg=#3B4252 guibg=#81976e
+    hi ImInsertColor guifg=#3B4252 guibg=#EBCB8B
   }
 augroup end
 
