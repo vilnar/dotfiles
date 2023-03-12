@@ -82,6 +82,9 @@ g:php_cs_fixer_php_path = "/usr/local/bin/php"
 g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer"
 command PhpCsFixerFixFile :call PhpCsFixerFixFile()
 
+g:translator_target_lang = "uk"
+g:translator_default_engines = ["google"]
+g:translator_window_type = "preview"
 
 # LSP settings --------------------------------------------------
 # g:lsp_auto_enable = 0

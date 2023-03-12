@@ -199,7 +199,8 @@
 (use-package google-translate
   :ensure t
   :config
-  (setq google-translate-default-source-language "en")
+  ;; (setq google-translate-default-source-language "en")
+  (setq google-translate-default-source-language "auto")
   (setq google-translate-default-target-language "uk")
   (setq google-translate-translation-directions-alist
       '(("uk" . "en") ("en" . "uk"))))

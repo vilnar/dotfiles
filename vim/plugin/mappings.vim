@@ -265,6 +265,11 @@ nnoremap ,n :ALEPreviousWrap<CR>
 nnoremap ,p :ALENextWrap<CR>
 # nnoremap ,s :ALESymbolSearch<CR>
 
+
+vnoremap ,1 <Esc>:'<,'>TranslateW<CR>
+vnoremap ,2 <Esc>:'<,'>TranslateW --target_lang=en<CR>
+
+
 # LSP
 # augroup LspGo
 #   var gopls_settings = {
