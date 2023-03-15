@@ -73,24 +73,18 @@
   :init
   (global-company-mode 1)
   :config
+  (setq company-frontends
+        '(company-pseudo-tooltip-frontend
+          company-echo-metadata-frontend))
+  (setq company-backends
+        '((company-capf company-dabbrev company-yasnippet)))
   (setq
    company-dabbrev-code-ignore-case t
+   company-dabbrev-ignore-case t
+   company-keywords-ignore-case t
+   company-dabbrev-downcase nil
    company-idle-delay 0.2
    company-minimum-prefix-length 3))
-
-;; source https://github.com/syl20bnr/spacemacs/pull/179
-(defun mars/company-backend-with-yas (backends)
-  "Add :with company-yasnippet to company BACKENDS."
-  (if (and (listp backends) (memq 'company-yasnippet backends))
-	    backends
-	  (append (if (consp backends)
-		            backends
-		          (list backends))
-		        '(:with company-yasnippet))))
-
-;; add yasnippet to all backends
-(setq company-backends
-      (mapcar #'mars/company-backend-with-yas company-backends))
 
 
 (use-package vertico
@@ -137,7 +131,12 @@
 (use-package projectile
   :ensure t
   :init
-  (projectile-mode 1))
+  (projectile-mode 1)
+  :config
+  (setq projectile-indexing-method 'alien)
+  (setq projectile-git-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+  (setq projectile-generic-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+)
 
 ;; Highlight terms in code-comments such as TODO, FIXME
 (use-package hl-prog-extra
@@ -146,11 +145,11 @@
 
 
 ;; shows lines you have modified from the last commit.
-(use-package diff-hl
-  :ensure t
-  :demand t
-  :config
-  (global-diff-hl-mode))
+;; (use-package diff-hl
+;;   :ensure t
+;;   :demand t
+;;   :config
+;;   (global-diff-hl-mode))
 
 
 ;; grep

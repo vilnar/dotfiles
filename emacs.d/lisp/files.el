@@ -14,7 +14,7 @@
   (interactive)
   (let (($buf (generate-new-buffer "untitled")))
     (switch-to-buffer $buf)
-    (setq text-mode t)
+    (text-mode)
     (setq buffer-offer-save t)
     $buf))
 

@@ -28,7 +28,7 @@
 (setq lazy-highlight-cleanup nil)
 (setq lazy-highlight-buffer t)
 
-;; case sensitive
+;; case sensitive for search
 (setq-default case-fold-search t)
 
 ;; editor

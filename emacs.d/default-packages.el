@@ -12,10 +12,12 @@
   ;; (message "debug %s"  (symbol-value flyspell-mode))
   (if (symbol-value flyspell-mode)
       (progn
-        (flyspell-mode 0)
+        (turn-off-flyspell)
+        ;; (flyspell-mode 0)
         (message "speller disable"))
-    (flyspell-mode 1)
-    (flyspell-buffer)
+    ;; (flyspell-mode 1)
+    ;; (flyspell-buffer)
+    (turn-on-flyspell)
     (message "speller enable")))
 
 
