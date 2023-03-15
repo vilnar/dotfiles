@@ -39,19 +39,30 @@
       (error "Buffer not visiting a file"))))
 
 
-(defun yr:rename-file-and-buffer (new-name)
-  "Renames both current buffer and file it's visiting to NEW-NAME."
-  (interactive "sNew name: ")
+(defcustom yr:old-name-arg ""
+  "old file name"
+  :type 'string)
+
+(defun yr:rename-file-and-buffer ()
+  "Renames current buffer and file"
+  (interactive)
   (let ((name (buffer-name))
 	      (filename (buffer-file-name)))
     (if (not filename)
 	      (message "Buffer '%s' is not visiting a file!" name)
-      (if (get-buffer new-name)
-	        (message "A buffer named '%s' already exists!" new-name)
-	      (progn
-	        (rename-file filename new-name 1)
-	        (rename-buffer new-name)
-	        (set-visited-file-name new-name)
-	        (set-buffer-modified-p nil))))))
+      (setq yr:old-name-arg name)
+      (call-interactively 'yr:rename-file-and-buffer-to-new-name))))
+
+
+(defun yr:rename-file-and-buffer-to-new-name (new-name)
+  "Renames current buffer and file to NEW-NAME."
+  (interactive (list (read-string "New name: " yr:old-name-arg)))
+  (if (get-buffer new-name)
+	    (message "A buffer named '%s' already exists!" new-name)
+	  (progn
+	    (rename-file buffer-file-name new-name 1)
+	    (rename-buffer new-name)
+	    (set-visited-file-name new-name)
+	    (set-buffer-modified-p nil))))
 
 
