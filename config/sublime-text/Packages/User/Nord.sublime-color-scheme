@@ -2,16 +2,22 @@
 {
   "variables":
   {
-    "nord3_bright": "hsl(221, 12%, 69%)", // #a6acb9, from mariana theme
+    // "nord3_bright": "hsl(221, 12%, 69%)", // #a6acb9, from mariana theme
   },
   "globals":
   {
     "brackets_options": "bold glow",
     "selection_border_width": "2",
     "selection_corner_radius": "3",
+    "caret": "hsl(32, 93%, 66%)",
   },
   "rules":
   [
+    {
+      "name": "string",
+      "scope": "string.quoted.backtick, string.interpolated",
+      "foreground": "var(nord_string)"
+    },
     {
       "scope": "punctuation.section",
       "foreground": "var(nord_variable)"
@@ -30,26 +36,6 @@
       "foreground": "var(nord_variable)"
     },
     {
-      "name": "[Keyword] Control",
-      "scope": "keyword.declaration",
-      "foreground": "var(nord_keyword)"
-    },
-    {
-      "name": "Operator assignment",
-      "scope": "keyword.operator.assignment",
-      "foreground": "var(nord13)",
-    },
-    {
-      "name": "Operator assignment",
-      "scope": "keyword.operator.logical",
-      "foreground": "var(nord13)",
-    },
-    {
-      "name": "string",
-      "scope": "string.quoted.backtick, string.interpolated",
-      "foreground": "var(nord_string)"
-    },
-    {
       "name": "YAML keys",
       "scope": "source.yaml meta.mapping.key meta.string string.unquoted",
       "foreground": "var(nord7)"
@@ -61,15 +47,38 @@
     },
 
     {
-      "name": "markup code",
-      "scope": "markup.raw",
-      "background": "color(var(nord10) alpha(0.15))"
+      "name": "[Keyword] Control",
+      "scope": "keyword.declaration",
+      "foreground": "var(nord_keyword)"
     },
     {
-      "name": "markup code",
-      "scope": "markup.raw.inline",
-      "background": "color(var(nord10) alpha(0.15))"
+      "name": "Function support",
+      "scope": "support.function, support.function.builtin.python",
+      "font_style": "italic",
     },
+    {
+      "name": "Class name",
+      "scope": "entity.name.class",
+      "font_style": "stippled_underline",
+    },
+    {
+      "name": "Functions",
+      "scope": "entity.name.function, entity.name.function.templated, entity.name.function.member.static",
+      "font_style": "stippled_underline",
+    },
+
+
+    {
+      "name": "Operator assignment",
+      "scope": "keyword.operator.assignment",
+      "foreground": "var(nord13)",
+    },
+    {
+      "name": "Operator assignment",
+      "scope": "keyword.operator.logical",
+      "foreground": "var(nord13)",
+    },
+
 
     {
       "name": "Don't highlight regex in string",
@@ -80,6 +89,18 @@
       "name": "Don't highlight sql in string",
       "scope": "meta.string source.sql, meta.string source.sql keyword, meta.string source.sql keyword.operator, meta.string source.sql  keyword.operator.assignment, meta.string source.sql keyword.operator.word, meta.string source.sql keyword.operator.logical, meta.string source.sql storage, meta.string source.sql storage.type, meta.string source.sql constant, meta.string source.sql constant.other, meta.string source.sql constant.numeric, meta.string source.sql punctuation.separator, meta.string source.sql entity.name.function, meta.string source.sql variable.language, meta.string source.sql punctuation.terminator, meta.string keyword.other, meta.string keyword.control, meta.string source.sql constant.language, meta.string source.sql storage.modifier",
       "foreground": "var(nord14)"
+    },
+
+
+    {
+      "name": "markup code",
+      "scope": "markup.raw",
+      "background": "color(var(nord10) alpha(0.15))"
+    },
+    {
+      "name": "markup code",
+      "scope": "markup.raw.inline",
+      "background": "color(var(nord10) alpha(0.15))"
     },
 
 

@@ -3,8 +3,7 @@ vim9script
 import "../lib/statusline.vim" as statusline
 
 # Fix slow O inserts
-set ttimeout
-set ttimeoutlen=100
+set timeout timeoutlen=3000 ttimeoutlen=100
 
 # needed for work undo/redo, otherwise history (undo/redo) will not be saved
 set hidden

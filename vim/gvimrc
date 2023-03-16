@@ -9,6 +9,6 @@ set guifont=Jetbrains\ Mono\ NL\ Regular\ 13.5
 # set guifont=Jetbrains\ Mono\ NL\ Light\ 13.5
 
 # disable blink cursor
-set guicursor+=a:blinkon0
+set guicursor=a:blinkon0-block-Cursor/lCursor
 
 # colorscheme lightsimple
