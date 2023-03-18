@@ -43,7 +43,7 @@
     {
       "name": "constant",
       "scope": "entity.name.constant, constant.other.member, variable.other.constant.declaration",
-      "foreground": "var(nord13)",
+      "foreground": "var(nord_variable)",
     },
 
     {
@@ -53,7 +53,7 @@
     },
     {
       "name": "Function support",
-      "scope": "support.function, support.function.builtin.python",
+      "scope": "support.function",
       "font_style": "italic",
     },
     {
@@ -71,12 +71,7 @@
     {
       "name": "Operator assignment",
       "scope": "keyword.operator.assignment",
-      "foreground": "var(nord13)",
-    },
-    {
-      "name": "Operator assignment",
-      "scope": "keyword.operator.logical",
-      "foreground": "var(nord13)",
+      "foreground": "var(nord12)",
     },
 
 

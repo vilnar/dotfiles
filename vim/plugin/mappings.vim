@@ -246,8 +246,8 @@ nnoremap <leader><backspace> @:
 
 
 # PLUGINS -----------------------------------------------------------------------------
-nnoremap <leader>nt :NERDTreeToggle<CR>
-nnoremap <leader>nf :NERDTreeFind<CR>
+# nnoremap <leader>nt :NERDTreeToggle<CR>
+# nnoremap <leader>nf :NERDTreeFind<CR>
 
 
 # help codefmt
