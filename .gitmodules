@@ -67,9 +67,3 @@
 [submodule "vim/pack/plugins/start/vim-translator"]
 	path = vim/pack/plugins/start/vim-translator
 	url = https://github.com/voldikss/vim-translator
-[submodule "vim/pack/plugins/start/vim-dirvish"]
-	path = vim/pack/plugins/start/vim-dirvish
-	url = https://github.com/justinmk/vim-dirvish
-[submodule "vim/pack/plugins/start/vim-sneak"]
-	path = vim/pack/plugins/start/vim-sneak
-	url = https://github.com/justinmk/vim-sneak
