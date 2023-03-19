@@ -22,7 +22,7 @@ enddef
 def GenerateHtml()
   execute ':w!'
   execute ':w! ' .. GetMarkdownTmpPath()
-  execute 'Start! pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' .. GetHtmlTmpPath() .. ' ' .. GetMarkdownTmpPath()
+  execute 'Dispatch! pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' .. GetHtmlTmpPath() .. ' ' .. GetMarkdownTmpPath()
   # execute 'AsyncRun -pos=hide pandoc -s --metadata pagetitle="temp markdown" -f markdown -t html -o ' .. GetHtmlTmpPath() .. ' ' .. GetMarkdownTmpPath()
 enddef
 
@@ -45,12 +45,12 @@ def RunPreview()
     echoerr printf("Not generated html %s", path)
     return
   endif
-  execute 'Start! google-chrome ' .. path
+  execute 'Dispatch! google-chrome ' .. path
 enddef
 command MarkdownPreview RunPreview()
 
 def ClearGeneratedFiles()
-  execute 'Start! rm -f ' .. GetMarkdownTmpPath() .. ' ' .. GetHtmlTmpPath()
+  execute 'Dispatch! rm -f ' .. GetMarkdownTmpPath() .. ' ' .. GetHtmlTmpPath()
 enddef
 command MarkdownPreviewClear ClearGeneratedFiles()
 
