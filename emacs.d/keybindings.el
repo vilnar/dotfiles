@@ -42,8 +42,8 @@
 (global-set-key (kbd "M-]") 'next-buffer)
 
 
-(global-set-key (kbd "M-;") 'yr:consult-line-improve)
-(global-set-key (kbd "C-;") 'yr:consult-line-improve)
+(global-set-key (kbd "M-;") 'yr-consult-line-improve)
+(global-set-key (kbd "C-;") 'yr-consult-line-improve)
 (global-unset-key (kbd "M-g"))
 (global-set-key (kbd "M-g") 'consult-goto-line)
 (global-set-key (kbd "M-y") 'consult-yank-pop)
@@ -56,7 +56,7 @@
 
 
 ;; (global-set-key (kbd "<f6>") 'flyspell-buffer)
-(global-set-key (kbd "<f6>") 'yr:toggle-flyspell)
+(global-set-key (kbd "<f6>") 'yr-toggle-flyspell)
 ;; (global-set-key (kbd "<f7>") 'switch-to-buffer-other-tab)
 (global-set-key (kbd "<f7>") 'tab-new)
 (global-set-key (kbd "<f8>") 'toggle-truncate-lines)
@@ -68,9 +68,9 @@
 ;; (global-set-key (kbd "<f12>") 'bookmark-bmenu-list)
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
-;; (global-set-key (kbd "M-c f f") 'yr:fzf-directory-improve)
-;; (global-set-key (kbd "M-c f f") 'yr:fzf-projectile-improve)
-(global-set-key (kbd "M-c f f") #'yr:projectile-find-file-improve)
+;; (global-set-key (kbd "M-c f f") 'yr-fzf-directory-improve)
+;; (global-set-key (kbd "M-c f f") 'yr-fzf-projectile-improve)
+(global-set-key (kbd "M-c f f") #'yr-projectile-find-file-improve)
 (global-set-key (kbd "M-c f c") #'projectile-find-file-in-directory)
 ;; (global-set-key (kbd "M-k") #'rg-literal)
 (global-set-key (kbd "M-c g m") #'rg-menu)
@@ -80,24 +80,24 @@
 (global-set-key (kbd "M-h") 'lazy-highlight-cleanup)
 
 
-(global-set-key [(control shift up)]  'yr:move-text-up)
-(global-set-key [(control shift down)]	'yr:move-text-down)
+(global-set-key [(control shift up)]  'yr-move-text-up)
+(global-set-key [(control shift down)]	'yr-move-text-down)
 
-(define-key my-keys-minor-mode-map (kbd "C-S-d") 'yr:duplicate-line)
+(define-key my-keys-minor-mode-map (kbd "C-S-d") 'yr-duplicate-line)
 
-;; (global-set-key (kbd "C-\\") 'yr:set-input-method-ukraine)
-;; (global-set-key (kbd "M-\\") 'yr:set-input-method-english)
-(global-set-key (kbd "M-l") 'yr:toggle-input-method)
+;; (global-set-key (kbd "C-\\") 'yr-set-input-method-ukraine)
+;; (global-set-key (kbd "M-\\") 'yr-set-input-method-english)
+(global-set-key (kbd "M-l") 'yr-toggle-input-method)
 
-(global-set-key (kbd "<C-S-return>") 'yr:new-line-above)
-(global-set-key (kbd "<C-return>") 'yr:new-line-below)
+(global-set-key (kbd "<C-S-return>") 'yr-new-line-above)
+(global-set-key (kbd "<C-return>") 'yr-new-line-below)
 
 (global-unset-key (kbd "M-m"))
-(global-set-key (kbd "M-m") 'yr:toggle-mark-word-at-point)
+(global-set-key (kbd "M-m") 'yr-toggle-mark-word-at-point)
 ;; (global-set-key (kbd "C-M-SPC") 'er/mark-word)
 ;; (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-M-SPC") 'er/expand-region)
-(global-set-key (kbd "C-M-l") 'yr:copy-line)
+(global-set-key (kbd "C-M-l") 'yr-copy-line)
 
 (global-set-key (kbd "M-5") (lambda ()
                                 (interactive)
@@ -136,12 +136,12 @@
 
 
 (global-unset-key (kbd "M-r"))
-(global-set-key (kbd "M-r") 'yr:query-replace-improve)
+(global-set-key (kbd "M-r") 'yr-query-replace-improve)
 ;; (global-set-key (kbd "C-s") 'isearch-forward)
-(global-set-key (kbd "C-s") 'yr:isearch-forward-improve)
-(global-set-key (kbd "C-r") 'yr:isearch-backward-improve)
+(global-set-key (kbd "C-s") 'yr-isearch-forward-improve)
+(global-set-key (kbd "C-r") 'yr-isearch-backward-improve)
 (global-set-key (kbd "M-c w") 'isearch-toggle-word)
-(global-set-key (kbd "M-c b") 'yr:occur-improve)
+(global-set-key (kbd "M-c b") 'yr-occur-improve)
 
 
 ;; (global-set-key (kbd "s-<tab>") 'switch-to-buffer)
@@ -160,7 +160,7 @@
 
 (global-set-key (kbd "M-c 1") 'google-translate-at-point)
 (global-set-key (kbd "M-c 2") 'google-translate-at-point-reverse)
-(global-set-key (kbd "M-c t") 'yr:open-gnome-terminal)
+(global-set-key (kbd "M-c t") 'yr-open-gnome-terminal)
 
 
 ;; alias  -------------------------------------------------------------
@@ -179,11 +179,11 @@
 
 (defalias 'modeshow 'describe-mode)
 (defalias 'rev 'revert-buffer-quick)
-(defalias 'rename-file-buffer 'yr:rename-file-and-buffer)
-(defalias 'name-copy 'yr:file-name-to-clipboard)
-(defalias 'absolute-copy 'yr:path-file-absolute-to-clipboard)
-(defalias 'new-buffer 'yr:new-empty-buffer)
-(defalias 'gnome-terminal 'yr:open-gnome-terminal)
-(defalias 'close-other-buffers 'yr:kill-other-buffers)
+(defalias 'rename-file-buffer 'yr-rename-file-and-buffer)
+(defalias 'name-copy 'yr-file-name-to-clipboard)
+(defalias 'absolute-copy 'yr-path-file-absolute-to-clipboard)
+(defalias 'new-buffer 'yr-new-empty-buffer)
+(defalias 'gnome-terminal 'yr-open-gnome-terminal)
+(defalias 'close-other-buffers 'yr-kill-other-buffers)
 (defalias 'zen-mode 'olivetti-mode)
 (defalias 'markdown-preview-now 'markdown-live-preview-mode)

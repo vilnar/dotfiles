@@ -1,4 +1,4 @@
-(defun yr:isearch-improve (arg-forward)
+(defun yr-isearch-improve (arg-forward)
   (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
       (progn
         (let ((selection (buffer-substring-no-properties (mark) (point))))
@@ -10,17 +10,17 @@
         (call-interactively #'isearch-forward)
       (call-interactively #'isearch-backward))))
 
-(defun yr:isearch-forward-improve ()
+(defun yr-isearch-forward-improve ()
   "isearch forward with selected text"
   (interactive)
-  (yr:isearch-improve t))
+  (yr-isearch-improve t))
 
-(defun yr:isearch-backward-improve ()
+(defun yr-isearch-backward-improve ()
   "isearch backward with selected text"
   (interactive)
-  (yr:isearch-improve nil))
+  (yr-isearch-improve nil))
 
-(defun yr:occur-improve ()
+(defun yr-occur-improve ()
   "occur with selected text"
   (interactive)
   (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
@@ -30,7 +30,7 @@
           (occur selection)))
     (call-interactively #'occur)))
 
-(defun yr:consult-line-improve ()
+(defun yr-consult-line-improve ()
   "consult-line with selected text"
   (interactive)
   (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
@@ -40,7 +40,7 @@
           (consult-line selection)))
     (call-interactively #'consult-line)))
 
-(defun yr:fzf-directory-improve ()
+(defun yr-fzf-directory-improve ()
   "fzf-directory with copy selected text"
   (interactive)
   (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
@@ -50,7 +50,7 @@
         (call-interactively #'fzf-directory))
     (call-interactively #'fzf-directory)))
 
-(defun yr:fzf-projectile-improve ()
+(defun yr-fzf-projectile-improve ()
   "fzf-directory with copy selected text"
   (interactive)
   (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
@@ -60,7 +60,7 @@
         (call-interactively #'fzf-projectile))
     (call-interactively #'fzf-projectile)))
 
-(defun yr:projectile-find-file-improve ()
+(defun yr-projectile-find-file-improve ()
   "projectile-find-file with copy selected text"
   (interactive)
   (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
@@ -70,7 +70,7 @@
         (call-interactively #'projectile-find-file))
     (call-interactively #'projectile-find-file)))
 
-(defun yr:query-replace-improve ()
+(defun yr-query-replace-improve ()
   "query-replace with copy selected text"
   (interactive)
   (if (and transient-mark-mode mark-active (not (eq (mark) (point))))
@@ -82,7 +82,7 @@
     (call-interactively #'query-replace)))
 
 (require 'hi-lock)
-(defun yr:toggle-mark-word-at-point ()
+(defun yr-toggle-mark-word-at-point ()
   "Highlighting the current word."
   (interactive)
   (if hi-lock-interactive-patterns

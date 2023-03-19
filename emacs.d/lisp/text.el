@@ -1,4 +1,4 @@
-(defun yr:move-text-internal (arg)
+(defun yr-move-text-internal (arg)
    (cond
     ((and mark-active transient-mark-mode)
      (if (> (point) (mark))
@@ -19,18 +19,18 @@
 	    (transpose-lines arg))
        (forward-line -1)))))
 
-(defun yr:move-text-down (arg)
+(defun yr-move-text-down (arg)
    "Move region (transient-mark-mode active) or current line arg lines down."
    (interactive "*p")
-   (yr:move-text-internal arg))
+   (yr-move-text-internal arg))
 
-(defun yr:move-text-up (arg)
+(defun yr-move-text-up (arg)
    "Move region (transient-mark-mode active) or current line arg lines up."
    (interactive "*p")
-   (yr:move-text-internal (- arg)))
+   (yr-move-text-internal (- arg)))
 
 
-(defun yr:duplicate-line()
+(defun yr-duplicate-line()
   (interactive)
   (move-beginning-of-line 1)
   (set-mark (line-end-position))
@@ -39,37 +39,39 @@
   (yank))
 
 ;; (setq default-input-method "ukrainian-computer")
-(defun yr:set-input-method-ukraine ()
+(defun yr-set-input-method-ukraine ()
   (interactive)
   (set-input-method "ukrainian-computer"))
 
 
-(defun yr:set-input-method-english ()
+(defun yr-set-input-method-english ()
   (interactive)
   (set-input-method nil))
 
-(defun yr:toggle-input-method ()
+(defun yr-toggle-input-method ()
    (interactive)
    (if (equal current-input-method "ukrainian-computer")
        (set-input-method nil)
      (set-input-method "ukrainian-computer")))
 
 
-(defun yr:new-line-above ()
+(defun yr-new-line-above ()
   (interactive)
   (beginning-of-line)
   (newline-and-indent)
-  (previous-line))
+  (forward-line))
 
-(defun yr:new-line-below ()
+(defun yr-new-line-below ()
   (interactive)
   (end-of-line)
   (newline-and-indent))
 
 
-(defun yr:copy-line ()
+(defun yr-copy-line ()
   (interactive)
   (move-beginning-of-line 1)
   (set-mark (line-end-position))
+  (setq pulse-delay 0.1)
+  (pulse-momentary-highlight-region (region-beginning) (region-end))
   (kill-ring-save (region-beginning) (region-end))
   (message "%s line copied" (line-number-at-pos)))

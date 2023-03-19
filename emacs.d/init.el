@@ -87,13 +87,13 @@
 
 
 ;; load ui for all frames
-(defun yr:new-frame-setup (frame)
+(defun yr-new-frame-setup (frame)
   (if (display-graphic-p frame)
       (progn
         ;; (message "DEBUG load ui")
         (load "~/.emacs.d/ui.el" t))))
 ;; Run for already-existing frames
-(mapc 'yr:new-frame-setup (frame-list))
+(mapc 'yr-new-frame-setup (frame-list))
 ;; Run when a new frame is created
-(add-hook 'after-make-frame-functions 'yr:new-frame-setup)
+(add-hook 'after-make-frame-functions 'yr-new-frame-setup)
 (put 'upcase-region 'disabled nil)

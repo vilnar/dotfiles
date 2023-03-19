@@ -6,7 +6,7 @@
   (ispell-hunspell-add-multi-dic "en_US,uk_UA")
   (setq ispell-personal-dictionary "~/.hunspell_personal"))
 
-(defun yr:toggle-flyspell ()
+(defun yr-toggle-flyspell ()
   "Toggle flyspell-mode."
   (interactive)
   ;; (message "debug %s"  (symbol-value flyspell-mode))

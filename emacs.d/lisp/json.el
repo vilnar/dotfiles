@@ -1,4 +1,4 @@
-(defun yr:json-jq-format-buffer ()
+(defun yr-json-jq-format-buffer ()
   (interactive)
   (let ((begin (point-min))
 	      (end (point-max)))
