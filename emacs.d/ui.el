@@ -18,6 +18,7 @@
  '(lazy-highlight ((t (:background "#385f38"))))
  '(highlight ((t (:background "#284f28"))))
  '(trailing-whitespace ((t (:background "#797979"))))
+ '(whitespace-tab ((t (:background "#494949" :foreground "#6F6F6F"))))
  '(ediff-current-diff-A ((t (:background "#543838"))))
  '(ediff-current-diff-B ((t (:background "#3f4735"))))
  '(ediff-current-diff-C ((t (:background "#364d4d"))))

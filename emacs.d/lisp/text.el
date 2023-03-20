@@ -71,7 +71,7 @@
   (interactive)
   (move-beginning-of-line 1)
   (set-mark (line-end-position))
-  (setq pulse-delay 0.1)
+  (setq pulse-delay 0.2)
   (pulse-momentary-highlight-region (region-beginning) (region-end))
   (kill-ring-save (region-beginning) (region-end))
   (message "%s line copied" (line-number-at-pos)))

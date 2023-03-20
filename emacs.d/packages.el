@@ -29,17 +29,11 @@
   :config
   (message "After loaded Magit!")
 
-  (defun magit-submodule-update-all ()
-    "Update all submodules"
-    :description "Update All (git submodule update --init --recursive)"
-    (interactive)
-    (magit-with-toplevel
-     (magit-run-git-async "submodule" "update" "--init" "--recursive")))
+  (defvar magit-ediff-show-stash-with-index nil)
 
   (setq
    magit-list-refs-sortby "-committerdate"
    magit-section-initial-visibility-alist '((hide))
-   magit-ediff-show-stash-with-index nil
    ;; show whitespace for diff
    magit-diff-refine-ignore-whitespace nil
    magit-diff-paint-whitespace t
@@ -47,6 +41,9 @@
 
   (define-key magit-hunk-section-map (kbd "RET") 'magit-diff-visit-file-other-window)
   (define-key magit-file-section-map (kbd "RET") 'magit-diff-visit-file-other-window))
+
+(with-eval-after-load "magit-diff"
+  (define-key magit-file-section-map [C-return] 'magit-diff-visit-worktree-file))
 
 ;; mode line, hide all minor-modes under a nice menu
 (use-package minions
@@ -59,6 +56,7 @@
   :init (doom-modeline-mode 1)
   :config
   (setq doom-modeline-minor-modes t) ;; with minions-mode
+  (setq doom-modeline-indent-info t)
   (setq doom-modeline-vcs-max-length 35)
   (setq doom-modeline-enable-word-count t))
 
@@ -78,6 +76,7 @@
           company-echo-metadata-frontend))
   (setq company-backends
         '((company-capf company-dabbrev company-yasnippet)))
+
   (setq
    company-dabbrev-code-ignore-case t
    company-dabbrev-ignore-case t
@@ -189,7 +188,6 @@
 
 (use-package wrap-region
   :ensure t
-  :init
   :config
   (wrap-region-global-mode 1)
   (wrap-region-add-wrapper "`" "`" nil '(markdown-mode ruby-mode)))

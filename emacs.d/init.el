@@ -43,6 +43,7 @@
 (setq whitespace-line-column 120)
 ;; replace selected region with yank buffer
 (setq-default show-trailing-whitespace t)
+(setq whitespace-style '(face spaces tabs newline space-mark tab-mark newline-mark ))
 (delete-selection-mode 1)
 (global-superword-mode 1) ;; select whole word
 

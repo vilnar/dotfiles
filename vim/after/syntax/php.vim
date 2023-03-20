@@ -1,1 +1,1 @@
-syntax sync minlines=20000
+syntax sync minlines=5000
