@@ -36,9 +36,9 @@
  ediff-split-window-function 'split-window-horizontally
  ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq-default ediff-auto-refine 'on)
-(add-hook 'ediff-prepare-buffer-hook (
-                                      lambda()
-                                      (whitespace-mode)))
+(add-hook 'ediff-prepare-buffer-hook
+          (lambda()
+            (whitespace-mode)))
 
 
 (setq dired-listing-switches "-lah --group-directories-first")

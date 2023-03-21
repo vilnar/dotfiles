@@ -5,9 +5,6 @@ vim9script
 # g:loaded_netrwPlugin = 0
 
 
-# https://github.com/junegunn/vim-plug/issues/276
-# g:plug_shallow = 0
-
 g:php_special_functions = 0
 g:go_highlight_functions = 1
 
@@ -55,8 +52,8 @@ g:merginal_splitType = ''
 
 
 
-g:goyo_width = 120
-g:goyo_linenr = 1
+g:goyo_width = 100
+g:goyo_linenr = 0
 
 # GoImportRun
 g:goimports = 0

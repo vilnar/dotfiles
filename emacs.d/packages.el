@@ -40,10 +40,11 @@
    magit-diff-paint-whitespace-lines 'all)
 
   (define-key magit-hunk-section-map (kbd "RET") 'magit-diff-visit-file-other-window)
-  (define-key magit-file-section-map (kbd "RET") 'magit-diff-visit-file-other-window))
+  (define-key magit-file-section-map (kbd "RET") 'magit-diff-visit-file-other-window)
 
-(with-eval-after-load "magit-diff"
-  (define-key magit-file-section-map [C-return] 'magit-diff-visit-worktree-file))
+  (with-eval-after-load "magit-diff"
+    (define-key magit-file-section-map [C-return] 'magit-diff-visit-worktree-file)))
+
 
 ;; mode line, hide all minor-modes under a nice menu
 (use-package minions
@@ -104,10 +105,11 @@
   (vertico-prescient-mode 1)
   (prescient-persist-mode 1)
   :config
-  (setq prescient-filter-method '(literal regexp literal-prefix prefix initialism)
-        prescient-sort-full-matches-first t
-        prescient-sort-length-enable t
-        prescient-history-length 1000))
+  (setq
+   prescient-filter-method '(literal regexp literal-prefix prefix initialism)
+   prescient-sort-full-matches-first t
+   prescient-sort-length-enable t
+   prescient-history-length 1000))
 
 (use-package consult
   :ensure t
@@ -125,7 +127,10 @@
 
 (use-package dired-sidebar
   :ensure t
-  :commands (dired-sidebar-toggle-sidebar))
+  :config
+  (setq
+   dired-sidebar-width 40
+   dired-sidebar-theme 'ascii))
 
 (use-package projectile
   :ensure t
@@ -134,29 +139,22 @@
   :config
   (setq projectile-indexing-method 'alien)
   (setq projectile-git-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
-  (setq projectile-generic-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
-)
+  (setq projectile-generic-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore"))
 
 ;; Highlight terms in code-comments such as TODO, FIXME
 (use-package hl-prog-extra
   :ensure t
-  :init (add-hook 'prog-mode-hook #'hl-prog-extra-mode))
+  :init
+  (add-hook 'prog-mode-hook #'hl-prog-extra-mode))
 
-
-;; shows lines you have modified from the last commit.
-;; (use-package diff-hl
-;;   :ensure t
-;;   :demand t
-;;   :config
-;;   (global-diff-hl-mode))
 
 
 ;; grep
 (use-package rg
-  :ensure t)
-(with-eval-after-load 'rg
-   (setq rg-ignore-ripgreprc nil)
-)
+  :ensure t
+  :config
+  (with-eval-after-load 'rg
+    (setq rg-ignore-ripgreprc nil)))
 
 (use-package multiple-cursors
   :ensure t)
@@ -172,18 +170,18 @@
   :ensure t
   :init (global-flycheck-mode t)
   :config
-  (add-hook 'go-mode-hook (lambda ()
-                            (setq flycheck-checker 'go-staticcheck)))
-  (add-hook 'php-mode-hook (lambda ()
-                             (setq flycheck-checker 'php)))
+  (add-hook 'go-mode-hook
+            (lambda ()
+              (setq flycheck-checker 'go-staticcheck)))
+  (add-hook 'php-mode-hook
+            (lambda ()
+              (setq flycheck-checker 'php)))
   ;; (setq flycheck-check-syntax-automatically '(mode-enabled save))
   ;; (add-hook 'after-init-hook #'global-flycheck-mode)
   ;; (setq flycheck-idle-change-delay 2.0)
-)
-(with-eval-after-load 'flycheck
-  ;; don't highlight info
-  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
-)
+  (with-eval-after-load 'flycheck
+    ;; don't highlight info
+    (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))))
 
 
 (use-package wrap-region
@@ -200,7 +198,7 @@
   (setq google-translate-default-source-language "auto")
   (setq google-translate-default-target-language "uk")
   (setq google-translate-translation-directions-alist
-      '(("uk" . "en") ("en" . "uk"))))
+        '(("uk" . "en") ("en" . "uk"))))
 
 (use-package olivetti
   :ensure t
@@ -234,55 +232,58 @@
   :config
   (setq php-mode-coding-style 'psr2)
   (add-hook 'php-mode-hook
-	    (lambda ()
-	      (setq-local indent-tabs-mode nil)
-	      (setq-local tab-width 4))))
+            (lambda ()
+              (setq-local indent-tabs-mode nil)
+              (setq-local tab-width 4))))
 
 
 (add-hook 'emacs-lisp-mode-hook
-  (lambda ()
-    (setq-local fill-column 120)
-    (setq-local tab-width 2)
-    (setq-local evil-shift-width 2)
-    (setq-local indent-tabs-mode nil)
+          (lambda ()
+            (setq-local fill-column 120)
+            (setq-local tab-width 2)
+            (setq-local evil-shift-width 2)
+            (setq-local indent-tabs-mode nil)
+            (setq-local indent-line-function 'insert-tab)
 
-    (setq-local ffip-patterns '("*.el"))
+            (setq-local ffip-patterns '("*.el"))
 
-    ;; Don't delimit on dashes or underscores. Why?
-    ;; .. makes searching for variable names inconvenient.
-    (modify-syntax-entry ?- "w")
-    (modify-syntax-entry ?_ "w")))
+            ;; Don't delimit on dashes or underscores. Why?
+            ;; .. makes searching for variable names inconvenient.
+            (modify-syntax-entry ?- "w")
+            (modify-syntax-entry ?_ "w")))
 
 (add-hook 'python-mode-hook
-  (lambda ()
-    (setq-local fill-column 120)
-    (setq-local tab-width 4)
-    (setq-local evil-shift-width 4)
-    (setq-local indent-tabs-mode nil)
+          (lambda ()
+            (setq-local fill-column 120)
+            (setq-local tab-width 4)
+            (setq-local evil-shift-width 4)
+            (setq-local indent-tabs-mode nil)
 
-    (setq-local ffip-patterns '("*.py"))))
+            (setq-local ffip-patterns '("*.py"))))
+
 
 (add-hook 'sh-mode-hook
-  (lambda ()
-    (setq-local fill-column 120)
-    (setq-local tab-width 4)
-    (setq-local evil-shift-width 4)
-    (setq-local indent-tabs-mode nil)
+          (lambda ()
+            (setq-local fill-column 120)
+            (setq-local tab-width 4)
+            (setq-local evil-shift-width 4)
+            (setq-local indent-tabs-mode nil)
 
-    (setq-local ffip-patterns '("*.sh"))))
+            (setq-local ffip-patterns '("*.sh"))))
 
 (add-to-list 'auto-mode-alist '("\\.bash_aliases\\'" . sh-mode))
 
+
 (add-hook 'js-mode-hook
-	  (lambda ()
-	    (setq-local indent-tabs-mode nil)
-	    (setq-local js-indent-level 2) 
-	    (setq-local tab-width 2)))
+          (lambda ()
+            (setq-local indent-tabs-mode nil)
+            (setq-local js-indent-level 2)
+            (setq-local tab-width 2)))
 
 (add-hook 'conf-mode-hook
-	  (lambda ()
-	    (interactive)
-	    (conf-quote-normal nil)))
+          (lambda ()
+            (interactive)
+            (conf-quote-normal nil)))
 
 
 (use-package go-mode

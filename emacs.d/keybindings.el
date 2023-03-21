@@ -11,8 +11,10 @@
 
 (my-keys-minor-mode 1)
 
-(defconst global-minor-mode-alist (list (cons 'my-keys-minor-mode
-                                              my-keys-minor-mode-map)))
+(defconst global-minor-mode-alist
+  (list (cons
+         'my-keys-minor-mode
+         my-keys-minor-mode-map)))
 
 (setf emulation-mode-map-alists '(global-minor-mode-alist))
 
@@ -99,9 +101,10 @@
 (global-set-key (kbd "C-M-SPC") 'er/expand-region)
 (global-set-key (kbd "C-M-l") 'yr-copy-line)
 
-(global-set-key (kbd "M-5") (lambda ()
-                                (interactive)
-                                (other-window -1))) ;; back one
+(global-set-key (kbd "M-5")
+                (lambda ()
+                  (interactive)
+                  (other-window -1))) ;; back one
 (define-key winum-keymap (kbd "M-1") 'winum-select-window-1)
 (define-key winum-keymap (kbd "M-2") 'winum-select-window-2)
 (define-key winum-keymap (kbd "M-3") 'winum-select-window-3)
