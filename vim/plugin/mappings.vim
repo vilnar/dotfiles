@@ -130,20 +130,20 @@ nnoremap <leader>tf :CustomFzfBufferTags<CR>
 nnoremap <silent><nowait> <leader>ff :CustomFzfFiles<CR>
 nnoremap <silent><nowait> <leader>fc :CustomFzfFiles <C-R>=expand("%:h")<CR>/<CR>
 nnoremap <expr> <leader>fu ':CustomFzfFiles<CR>' .. expand('<cword>')
-xnoremap <leader>ff y:vim9cmd <SID>fzfLib.GotoSelection()<CR>
+xnoremap <leader>ff :<C-U> vim9cmd <SID>fzfLib.GotoSelection()<CR>
 nnoremap <leader>mm :Marks<CR>
 
 
 
 # GREP -----------------------------------------------------------------------------
 noremap <Leader>gg :GrepInProjectEscape<space>
-vnoremap <Leader>gg y:vim9cmd <SID>grepLib.GrepInProject(getreg('"'))<CR>
+vnoremap <Leader>gg :<C-U> vim9cmd <SID>grepLib.GrepInProjectVisual()<CR>
 
 nnoremap <Leader>gd :GrepInDirectoryEscape<space>
-vnoremap <Leader>gd y:vim9cmd <SID>grepLib.GrepInDirectory(getreg('"'))<CR>
+vnoremap <Leader>gd :<C-U> vim9cmd <SID>grepLib.GrepInDirectoryVisual()<CR>
 
 nnoremap <Leader>gb :GrepInBufferEscape<space>
-vnoremap <Leader>gb y:vim9cmd <SID>grepLib.GrepInBuffer(getreg('"'))<CR>
+vnoremap <Leader>gb :<C-U> vim9cmd <SID>grepLib.GrepInBufferVisual()<CR>
 
 nnoremap <Leader>gi :vim9cmd <SID>grepLib.GrepInProjectInput()<CR>
 
@@ -170,7 +170,7 @@ cnoremap <M-l> <C-^>
 
 # LAYOUT -----------------------------------------------------------------------------
 # move selected to new tab
-xnoremap <leader>ms y:vim9cmd <SID>layoutLib.OpenNewTabWithSelectedText()<CR>
+xnoremap <leader>ms :<C-U> vim9cmd <SID>layoutLib.OpenNewTabWithSelectedText()<CR>
 # open buffer in new tab
 nnoremap <Leader>mt :tab split<BAR>diffoff<CR>
 
@@ -191,20 +191,19 @@ nnoremap <silent> <leader>\ :vim9cmd <SID>quickfixLib.QuickFixToggle()<CR>
 
 
 # SEARCH AND REPLACE -----------------------------------------------------------------------------
-vnoremap * y:vim9cmd <SID>searchReplaceLib.EscapeSearchTextMultiLines(getreg('"'), '\n')<CR>
+vnoremap * :<C-U> vim9cmd <SID>searchReplaceLib.EscapeSearchTextMultiLinesVisual('\n')<CR>
 nnoremap <Leader>sm :SearchMultiLine<space>
-vnoremap <Leader>sm y:vim9cmd SearchMultiLine<space><C-R>"<CR>
+vnoremap <Leader>sm :<C-U> vim9cmd <SID>searchReplaceLib.EscapeSearchTextMultiLinesVisual('\n')<CR>
 nnoremap <Leader>se :SearchEscape<space>
-vnoremap <Leader>se y:vim9cmd <SID>searchReplaceLib.EscapeSearchText(getreg('"'))<CR>
+vnoremap <Leader>se :<C-U> vim9cmd <SID>searchReplaceLib.EscapeSearchTextVisual()<CR>
 
-vnoremap <Leader>ss y/<C-R>"
+vnoremap <Leader>ss :<C-U> vim9cmd <SID>searchReplaceLib.SearchTextVisual()<CR>
 
 nnoremap <Leader>rr :vim9cmd <SID>searchReplaceLib.ReplaceInput()<CR>
 vnoremap <Leader>rr y:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput()<CR>
 vnoremap <Leader>rb <Esc>:'<,'>s///gc<left><left><left><left>
 nnoremap <Leader>rg :%s///gc<left><left><left><left>
 
-nnoremap <Leader>ru viwy:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput(true)<CR>
 vnoremap <Leader>rw y:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput(true)<CR>
 
 vnoremap <Leader>rv <Esc>:'<,'>s/\<\>\C//gc<left><left><left><left><left><left><left><left>

@@ -1,5 +1,8 @@
 vim9script
 
+import "./func.vim" as funcLib
+
+
 def GetRelativePathForGrep(): string
   var path = expand('%:h')
   if path == '.'
@@ -38,6 +41,11 @@ def GrepWithEscaped(text: string, template: string)
 enddef
 
 
+def GrepInProjectVisual()
+  var text = funcLib.GetVisualSelection(visualmode())
+  call GrepInProject(text)
+enddef
+
 def GrepInProject(text: string)
   var template = 'Dispatch grep -rni --exclude="tags" --exclude-dir=".git" %s ./'
   # var template = 'Dispatch rg --vimgrep --smart-case --glob="!tags" --glob="!.git" %s ./'
@@ -46,6 +54,11 @@ enddef
 command -nargs=1 GrepInProjectEscape :vim9cmd GrepInProject(<q-args>) | normal! n
 
 
+def GrepInDirectoryVisual()
+  var text = funcLib.GetVisualSelection(visualmode())
+  call GrepInDirectory(text)
+enddef
+
 def GrepInDirectory(text: string)
   var template = 'Dispatch grep -rni --exclude="tags" --exclude-dir=".git" %s ' .. GetRelativePathForGrep()
   # var template = 'Dispatch rg --vimgrep --smart-case --glob="!tags" --glob="!.git" %s ' .. GetRelativePathForGrep()
@@ -53,6 +66,11 @@ def GrepInDirectory(text: string)
 enddef
 command -nargs=1 GrepInDirectoryEscape :vim9cmd GrepInDirectory(<q-args>) | normal! n
 
+
+def GrepInBufferVisual()
+  var text = funcLib.GetVisualSelection(visualmode())
+  call GrepInBuffer(text)
+enddef
 
 def GrepInBuffer(text: string)
   var template = 'Dispatch grep -nirH %s ' .. expand('%')

@@ -1,6 +1,22 @@
 vim9script
 
+import "./func.vim" as funcLib
+
+def SearchTextVisual()
+  var text = funcLib.GetVisualSelection(visualmode())
+  @/ = text
+  histadd('/', text)
+  # execute "normal /\<CR>"
+enddef
+
 const ESCAPE_CHARS = '\~ \* \$ \[ \] /\ \^ \.'
+
+def EscapeSearchTextMultiLinesVisual(pat: string)
+  var text = funcLib.GetVisualSelection(visualmode())
+  call EscapeSearchTextMultiLines(text, pat)
+enddef
+command -nargs=1 SearchMultiLineVisual :vim9cmd EscapeSearchTextMultiLinesVisual('\r') | normal! n
+
 
 # search multilines
 def EscapeSearchTextMultiLines(text: string, pat: string)
@@ -12,6 +28,12 @@ def EscapeSearchTextMultiLines(text: string, pat: string)
 enddef
 
 command -nargs=1 SearchMultiLine :vim9cmd EscapeSearchTextMultiLines(<q-args>, '\r') | normal! n
+
+
+def EscapeSearchTextVisual()
+  var text = funcLib.GetVisualSelection(visualmode())
+  call EscapeSearchText(text)
+enddef
 
 # search
 def EscapeSearchText(text: string)

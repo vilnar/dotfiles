@@ -1,5 +1,8 @@
 vim9script
 
+import "./func.vim" as funcLib
+
+
 def RunCustomFzfTags(query: string)
   var spec = {"options": ["--preview-window", "down", "--nth", "1,2,3", "-i"], "placeholder": "--tag {2}:{-1}:{3..}"}
   call fzf#vim#tags(query, fzf#vim#with_preview(spec), 0)
@@ -30,8 +33,10 @@ command -bang -nargs=? -complete=dir CustomFzfFiles call RunCustomFzfFiles(<q-ar
 $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --exclude .git --no-ignore'
 # $FZF_DEFAULT_COMMAND = 'rg -uuu --files'
 
+
 def GotoSelection()
-  var text = getreg('"')
+  # var text = getreg('"')
+  var text = funcLib.GetVisualSelection(visualmode())
   # replace for php namespaces
   text = substitute(text, '\', '/', 'g')
   exec ":CustomFzfFiles"
