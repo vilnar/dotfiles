@@ -32,6 +32,8 @@
 (global-unset-key (kbd "M-c"))
 (global-unset-key (kbd "C-."))
 
+(global-set-key (kbd "M-u") 'avy-goto-char-2)
+
 (global-set-key (kbd "M-s") 'save-buffer)
 ;; (global-set-key (kbd "C-x f") 'find-file)
 (global-set-key (kbd "M-o") 'find-file)

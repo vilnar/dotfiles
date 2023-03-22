@@ -22,7 +22,8 @@ export def StatuslineExpr(): string
       color = "%#ImInsertColor#"
     endif
   endif
-  return color .. file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
+  var lang = &iminsert ? "UK " : "EN "
+  return color .. file_path .. modified .. readonly .. separate .. lang .. win_nr  .. indentaition .. ftype .. position .. percent
 
   # return file_path .. modified .. readonly .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
 enddef

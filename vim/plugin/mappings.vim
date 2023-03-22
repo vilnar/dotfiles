@@ -166,6 +166,15 @@ execute "set <M-l>=\el"
 inoremap <M-l> <C-^>
 cnoremap <M-l> <C-^>
 
+def ToggleImInsert()
+  if &iminsert == 1
+    &iminsert = 0
+  else
+    &iminsert = 1
+  endif
+enddef
+nnoremap <M-l> :vim9cmd <SID>ToggleImInsert()<CR>
+
 
 
 # LAYOUT -----------------------------------------------------------------------------

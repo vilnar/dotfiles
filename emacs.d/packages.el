@@ -209,6 +209,10 @@
   :ensure t)
 
 
+(use-package avy
+  :ensure t)
+
+
 ;; ----------------------------------------------------------------------------
 ;; programming languages
 
