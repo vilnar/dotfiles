@@ -87,14 +87,14 @@
 (global-set-key [(control shift up)]  'yr-move-text-up)
 (global-set-key [(control shift down)]	'yr-move-text-down)
 
-(define-key my-keys-minor-mode-map (kbd "C-S-d") 'yr-duplicate-line)
+(define-key my-keys-minor-mode-map (kbd "C-S-d") 'crux-duplicate-current-line-or-region)
 
 ;; (global-set-key (kbd "C-\\") 'yr-set-input-method-ukraine)
 ;; (global-set-key (kbd "M-\\") 'yr-set-input-method-english)
 (global-set-key (kbd "M-l") 'yr-toggle-input-method)
 
-(global-set-key (kbd "<C-S-return>") 'yr-new-line-above)
-(global-set-key (kbd "<C-return>") 'yr-new-line-below)
+(global-set-key (kbd "<C-S-return>") 'crux-smart-open-line-above)
+(global-set-key (kbd "<C-return>") 'crux-smart-open-line)
 
 (global-unset-key (kbd "M-m"))
 (global-set-key (kbd "M-m") 'yr-toggle-mark-word-at-point)
@@ -114,7 +114,7 @@
 
 ;; go to last mark
 (global-set-key (kbd "M--") 'consult-mark)
-(global-set-key (kbd "M-+") 'consult-global-mark)
+(global-set-key (kbd "M-=") 'consult-global-mark)
 
 (global-unset-key (kbd "C-z"))
 (define-key my-keys-minor-mode-map (kbd "C-z")   'undo-fu-only-undo)
@@ -165,7 +165,17 @@
 
 (global-set-key (kbd "M-c 1") 'google-translate-at-point)
 (global-set-key (kbd "M-c 2") 'google-translate-at-point-reverse)
-(global-set-key (kbd "M-c t") 'yr-open-gnome-terminal)
+
+
+;; ctags
+(global-set-key (kbd "M-c t j") 'citre-jump)
+(global-set-key (kbd "M-c t J") 'citre-jump-back)
+(global-set-key (kbd "M-c t p") 'citre-peek)
+(global-set-key (kbd "M-c t u") 'citre-update-this-tags-file)
+
+(define-key citre-peek-keymap (kbd "<up>") 'citre-peek-prev-tag)
+(define-key citre-peek-keymap (kbd "<down>") 'citre-peek-next-tag)
+(define-key citre-peek-keymap (kbd "M-j") 'citre-peek-jump)
 
 
 ;; alias  -------------------------------------------------------------
@@ -184,7 +194,9 @@
 
 (defalias 'modeshow 'describe-mode)
 (defalias 'rev 'revert-buffer-quick)
-(defalias 'rename-file-buffer 'yr-rename-file-and-buffer)
+(defalias 'rename-file-buffer 'crux-rename-file-and-buffer)
+(defalias 'delete-file-buffer 'crux-delete-file-and-buffer)
+(defalias 'remove-file-buffer 'crux-delete-file-and-buffer)
 (defalias 'name-copy 'yr-file-name-to-clipboard)
 (defalias 'absolute-copy 'yr-path-file-absolute-to-clipboard)
 (defalias 'new-buffer 'yr-new-empty-buffer)
@@ -192,3 +204,6 @@
 (defalias 'close-other-buffers 'yr-kill-other-buffers)
 (defalias 'zen-mode 'olivetti-mode)
 (defalias 'markdown-preview-now 'markdown-live-preview-mode)
+(defalias 'ctags-create 'citre-create-tags-file)
+(defalias 'ctags-update 'citre-update-tags-file)
+(defalias 'line-current-what 'what-line)

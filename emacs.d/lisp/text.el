@@ -30,13 +30,14 @@
   (yr-move-text-internal (- arg)))
 
 
-(defun yr-duplicate-line()
-  (interactive)
-  (move-beginning-of-line 1)
-  (set-mark (line-end-position))
-  (kill-ring-save (region-beginning) (region-end))
-  (open-line 1)
-  (yank))
+;; (defun yr-duplicate-line()
+;;   (interactive)
+;;   (move-beginning-of-line 1)
+;;   (set-mark (line-end-position))
+;;   (let ((selection (buffer-substring-no-properties (mark) (point))))
+;;     (deactivate-mark)
+;;     (open-line 1)
+;;     (insert selection)))
 
 ;; (setq default-input-method "ukrainian-computer")
 (defun yr-set-input-method-ukraine ()
@@ -55,16 +56,16 @@
     (set-input-method "ukrainian-computer")))
 
 
-(defun yr-new-line-above ()
-  (interactive)
-  (beginning-of-line)
-  (newline-and-indent)
-  (forward-line))
+;; (defun yr-new-line-above ()
+;;   (interactive)
+;;   (beginning-of-line)
+;;   (newline-and-indent)
+;;   (forward-line))
 
-(defun yr-new-line-below ()
-  (interactive)
-  (end-of-line)
-  (newline-and-indent))
+;; (defun yr-new-line-below ()
+;;   (interactive)
+;;   (end-of-line)
+;;   (newline-and-indent))
 
 
 (defun yr-copy-line ()

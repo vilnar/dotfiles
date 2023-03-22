@@ -213,6 +213,19 @@
   :ensure t)
 
 
+(use-package citre
+  :ensure t
+  :defer t
+  :init
+  (require 'citre-config)
+  :config
+  (setq
+   citre-project-root-function #'projectile-project-root))
+
+(use-package crux
+  :ensure t)
+
+
 ;; ----------------------------------------------------------------------------
 ;; programming languages
 
