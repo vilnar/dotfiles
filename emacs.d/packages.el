@@ -221,6 +221,7 @@
   :config
   (setq
    citre-project-root-function #'projectile-project-root))
+(setq xref-backend-functions #'citre-xref-backend)
 
 (use-package crux
   :ensure t)
@@ -263,6 +264,9 @@
             (setq-local indent-line-function 'insert-tab)
 
             (setq-local ffip-patterns '("*.el"))
+
+            ;; disable elisp--xref-backend, because sometimes emacs freeze
+            (setq-local xref-backend-functions #'citre-xref-backend)
 
             ;; Don't delimit on dashes or underscores. Why?
             ;; .. makes searching for variable names inconvenient.
