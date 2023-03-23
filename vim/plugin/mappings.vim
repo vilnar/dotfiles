@@ -157,7 +157,7 @@ nnoremap <expr> <Leader>gr ":Dispatch grep -nroHP '' " .. expand('%')
 # ctrl+^ for change keymap in INSERT mode
 set keymap=ukrainian-enhanced
 set iminsert=0 # Default - latin layout
-set imsearch=0 # Default - latin layout in search
+# set imsearch=0 # Default - latin layout in search
 inoremap <C-\> <C-^>
 cnoremap <C-\> <C-^>
 
@@ -168,9 +168,9 @@ cnoremap <M-l> <C-^>
 
 def ToggleImInsert()
   if &iminsert == 1
-    &iminsert = 0
+    set iminsert=0
   else
-    &iminsert = 1
+    set iminsert=1
   endif
 enddef
 nnoremap <M-l> :vim9cmd <SID>ToggleImInsert()<CR>

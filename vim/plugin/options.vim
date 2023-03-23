@@ -4,6 +4,8 @@ vim9script
 # g:loaded_netrw = 0
 # g:loaded_netrwPlugin = 0
 
+# don't open archive files
+g:loaded_gzip = 0
 
 g:php_special_functions = 0
 g:go_highlight_functions = 1

@@ -2,10 +2,10 @@ vim9script
 
 def MouseToggle()
   if &mouse == 'a'
-    execute 'set mouse='
+    set mouse=
     echomsg 'Disable mouse'
   else
-    execute 'set mouse=a'
+    set mouse=a
     echomsg 'Enable mouse'
   endif
 enddef
