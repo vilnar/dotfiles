@@ -118,8 +118,8 @@ set showcmd
 # set complete=.,t
 set complete=.,w
 
-# set splitbelow
-set splitright
+set splitbelow
+# set splitright
 set title
 
 set confirm

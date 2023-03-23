@@ -273,9 +273,9 @@ nnoremap ,n :ALEPreviousWrap<CR>
 nnoremap ,p :ALENextWrap<CR>
 # nnoremap ,s :ALESymbolSearch<CR>
 
-
-vnoremap ,1 <Esc>:'<,'>Trans -brief :uk -e google<CR>
-vnoremap ,2 <Esc>:'<,'>Trans -brief :en -e google<CR>
+# translate-shell
+vnoremap ,1 <Esc>:'<,'>Trans -brief -e google :uk<CR>
+vnoremap ,2 <Esc>:'<,'>Trans -brief -e google :en<CR>
 
 
 # LSP
