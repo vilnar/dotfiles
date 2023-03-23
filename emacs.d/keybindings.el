@@ -73,9 +73,10 @@
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
 ;; (global-set-key (kbd "M-c f f") 'yr-fzf-directory-improve)
-;; (global-set-key (kbd "M-c f f") 'yr-fzf-projectile-improve)
-(global-set-key (kbd "M-c f f") #'yr-projectile-find-file-improve)
-(global-set-key (kbd "M-c f c") #'projectile-find-file-in-directory)
+(global-set-key (kbd "M-c f f") 'yr-fzf-projectile-improve)
+(global-set-key (kbd "M-c f c") 'yr-fzf-directory-improve)
+;; (global-set-key (kbd "M-c f f") #'yr-projectile-find-file-improve)
+;; (global-set-key (kbd "M-c f c") #'projectile-find-file-in-directory)
 ;; (global-set-key (kbd "M-k") #'rg-literal)
 (global-set-key (kbd "M-c g m") #'rg-menu)
 (global-set-key (kbd "M-c g g") #'rg-project)

@@ -137,9 +137,11 @@
   :init
   (projectile-mode 1)
   :config
-  (setq projectile-indexing-method 'alien)
-  (setq projectile-git-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
-  (setq projectile-generic-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore"))
+  ;; (setq projectile-indexing-method 'alien)
+  ;; (setq projectile-enable-caching nil)
+  ;; (setq projectile-git-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+  ;; (setq projectile-generic-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+)
 
 ;; Highlight terms in code-comments such as TODO, FIXME
 (use-package hl-prog-extra

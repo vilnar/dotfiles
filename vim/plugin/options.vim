@@ -81,10 +81,13 @@ g:php_cs_fixer_php_path = "/usr/local/bin/php"
 g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer"
 command PhpCsFixerFixFile :call PhpCsFixerFixFile()
 
-g:translator_target_lang = "uk"
-g:translator_default_engines = ["google"]
-g:translator_window_type = "preview"
-g:translator_window_preview_is_keep_open = true
+g:trans_default_direction = "en:uk"
+g:trans_directions_list = [
+  ['en', 'uk'],
+  ['uk', 'en'],
+]
+g:trans_win_position = "right"
+g:trans_win_width = 70
 
 # LSP settings --------------------------------------------------
 # g:lsp_auto_enable = 0

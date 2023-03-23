@@ -67,3 +67,6 @@
 [submodule "vim/pack/plugins/start/vim-sneak"]
 	path = vim/pack/plugins/start/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
+[submodule "vim/pack/plugins/start/translate-shell-vim"]
+	path = vim/pack/plugins/start/translate-shell-vim
+	url = https://github.com/echuraev/translate-shell.vim
