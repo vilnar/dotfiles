@@ -75,4 +75,9 @@
   (setq pulse-delay 0.2)
   (pulse-momentary-highlight-region (region-beginning) (region-end))
   (kill-ring-save (region-beginning) (region-end))
-  (message "%s line copied" (line-number-at-pos)))
+  (message "%s line copied to clipboard" (line-number-at-pos)))
+
+(defun yr-copy-all()
+  (interactive)
+  (clipboard-kill-ring-save (point-min) (point-max))
+  (message "Current buffer copied to clipboard"))

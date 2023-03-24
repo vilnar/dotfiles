@@ -73,10 +73,10 @@
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
 ;; (global-set-key (kbd "M-c f f") 'yr-fzf-directory-improve)
-(global-set-key (kbd "M-c f f") 'yr-fzf-projectile-improve)
-(global-set-key (kbd "M-c f c") 'yr-fzf-directory-improve)
-;; (global-set-key (kbd "M-c f f") #'yr-projectile-find-file-improve)
-;; (global-set-key (kbd "M-c f c") #'projectile-find-file-in-directory)
+;; (global-set-key (kbd "M-c f f") 'yr-fzf-projectile-improve)
+;; (global-set-key (kbd "M-c f c") 'yr-fzf-directory-improve)
+(global-set-key (kbd "M-c f f") #'yr-projectile-find-file-improve)
+(global-set-key (kbd "M-c f c") #'projectile-find-file-in-directory)
 ;; (global-set-key (kbd "M-k") #'rg-literal)
 (global-set-key (kbd "M-c g m") #'rg-menu)
 (global-set-key (kbd "M-c g g") #'rg-project)
@@ -103,6 +103,7 @@
 ;; (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-M-SPC") 'er/expand-region)
 (global-set-key (kbd "C-M-l") 'yr-copy-line)
+(global-set-key (kbd "M-c a") 'yr-copy-all)
 
 (global-set-key (kbd "M-5")
                 (lambda ()
@@ -169,8 +170,8 @@
 
 
 ;; ctags
-(global-set-key (kbd "M-c t j") 'citre-jump)
-(global-set-key (kbd "M-c t J") 'citre-jump-back)
+(global-set-key (kbd "M-j") 'citre-jump)
+(global-set-key (kbd "M-J") 'citre-jump-back)
 (global-set-key (kbd "M-c t p") 'citre-peek)
 (global-set-key (kbd "M-c t u") 'citre-update-this-tags-file)
 

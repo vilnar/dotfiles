@@ -31,6 +31,12 @@ nnoremap <C-LeftMouse> <NOP>
 
 nnoremap <Leader>h :nohlsearch<CR>
 
+def CopyAll()
+  execute ":normal 1GVG\"+y"
+  echo "Current buffer copied to clipboard"
+enddef
+nnoremap <Leader>a :vim9cmd <SID>CopyAll()<CR>
+
 # https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
 execute "set <M-j>=\ej"
 execute "set <M-k>=\ek"

@@ -86,7 +86,7 @@
    company-idle-delay 0.2
    company-minimum-prefix-length 3))
 
-
+;; complete command
 (use-package vertico
   :ensure t
   :bind (:map vertico-map
@@ -107,6 +107,7 @@
   :config
   (setq
    prescient-filter-method '(literal regexp literal-prefix prefix initialism)
+   ;; prescient-filter-method '(literal)
    prescient-sort-full-matches-first t
    prescient-sort-length-enable t
    prescient-history-length 1000))
@@ -137,10 +138,11 @@
   :init
   (projectile-mode 1)
   :config
-  ;; (setq projectile-indexing-method 'alien)
+  (setq projectile-indexing-method 'alien)
   ;; (setq projectile-enable-caching nil)
-  ;; (setq projectile-git-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
-  ;; (setq projectile-generic-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+  (setq projectile-git-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+  (setq projectile-git-fd-args " . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+  (setq projectile-generic-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
 )
 
 ;; Highlight terms in code-comments such as TODO, FIXME
