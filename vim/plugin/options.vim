@@ -35,9 +35,11 @@ g:NERDTreeRemoveFileCmd = "gio trash "
 g:NERDTreeRemoveDirCmd = "gio trash "
 g:NERDTreeHijackNetrw = 0
 
-# fixed in patch 9.0.0665
-# vim9 fix issue https://github.com/preservim/nerdtree/issues/1321
-# g:NERDTreeMinimalMenu = 1
+# easytree is a simple tree file manager
+# g:easytree_show_hidden_files = 1
+# g:easytree_git_indicators = {'Unmerged': '═', 'Untracked': '✭', 'Deleted': '✖', 'Ignored': '☒', 'Unknown': '?', 'Added': '✚', 'Modified': '✹', 'Renamed': '➜', 'Separator': '|', 'Unstaged': '✗', 'Staged': '✔︎', 'Copied': '➜', 'Branch': '*'}
+# g:easytree_ignore_files = []
+# g:easytree_auto_load_settings = 0
 
 
 # :help UltiSnips

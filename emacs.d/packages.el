@@ -245,6 +245,7 @@
   (setq markdown-mouse-follow-link nil)
   :config
   ;; (add-hook 'markdown-mode-hook 'flyspell-mode) ;; it's slow
+  (add-hook 'markdown-mode-hook 'turn-on-flyspell)
   (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
   (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
   (setq markdown-command "/usr/bin/pandoc"))

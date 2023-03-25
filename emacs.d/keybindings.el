@@ -83,6 +83,7 @@
 ;; (global-set-key (kbd "M-c p") 'projectile-command-map)
 (global-set-key (kbd "M-c p") 'projectile-switch-project)
 (global-set-key (kbd "M-h") 'lazy-highlight-cleanup)
+(global-set-key (kbd "C-M-n") 'yr-new-empty-buffer)
 
 
 (global-set-key [(control shift up)]  'yr-move-text-up)
@@ -102,6 +103,7 @@
 ;; (global-set-key (kbd "C-M-SPC") 'er/mark-word)
 ;; (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-M-SPC") 'er/expand-region)
+(global-set-key (kbd "C-S-l") 'yr-mark-line)
 (global-set-key (kbd "C-M-l") 'yr-copy-line)
 (global-set-key (kbd "M-c a") 'yr-copy-all)
 
@@ -157,7 +159,9 @@
 ;; (global-set-key (kbd "M-c b") 'ibuffer-other-window)
 
 
-;; multiple-cursors
+;; Tips for multiple-cursors:
+;; - insert a newline in multiple-cursors-mode, use C-j
+;; - copy, exit multiple-cursor (enter) and paste (set multiple-cursor) hit C-x r y (only vertical)
 (global-unset-key (kbd "M-<down-mouse-1>"))
 (define-key my-keys-minor-mode-map (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 (define-key my-keys-minor-mode-map [(meta down)] 'mc/mark-next-like-this)

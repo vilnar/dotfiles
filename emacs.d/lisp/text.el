@@ -77,6 +77,15 @@
   (kill-ring-save (region-beginning) (region-end))
   (message "%s line copied to clipboard" (line-number-at-pos)))
 
+(defun yr-mark-line ()
+  (interactive )
+  ;; (move-beginning-of-line 1)
+  ;; (set-mark (line-end-position))
+
+  (move-beginning-of-line nil)
+  (set-mark-command nil)
+  (move-end-of-line nil))
+
 (defun yr-copy-all()
   (interactive)
   (clipboard-kill-ring-save (point-min) (point-max))

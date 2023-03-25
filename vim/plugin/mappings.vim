@@ -31,12 +31,6 @@ nnoremap <C-LeftMouse> <NOP>
 
 nnoremap <Leader>h :nohlsearch<CR>
 
-def CopyAll()
-  execute ":normal 1GVG\"+y"
-  echo "Current buffer copied to clipboard"
-enddef
-nnoremap <Leader>a :vim9cmd <SID>CopyAll()<CR>
-
 # https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
 execute "set <M-j>=\ej"
 execute "set <M-k>=\ek"
@@ -69,7 +63,13 @@ def CopyWithoutNewLine()
   }
   timer_start(2000, Clear)
 enddef
-nnoremap <Leader>l :vim9cmd <SID>CopyWithoutNewLine()<CR>
+nnoremap <Leader>cl :vim9cmd <SID>CopyWithoutNewLine()<CR>
+
+def CopyAll()
+  execute ":normal 1GVG\"+y"
+  echo "Current buffer copied to clipboard"
+enddef
+nnoremap <Leader>ca :vim9cmd <SID>CopyAll()<CR>
 
 # highlight
 def RunSearchUnderCursor()
@@ -80,12 +80,15 @@ enddef
 nnoremap <silent> <Leader>8 :vim9cmd <SID>RunSearchUnderCursor()<BAR>set hls<CR>
 
 
+nnoremap s <Plug>(easymotion-prefix)
+
+
 
 # BUFFER -----------------------------------------------------------------------------
 nnoremap <leader>o :only<CR>
-# nnoremap <leader>cc :close<CR>
+# nnoremap <leader>qq :close<CR>
 # close current buffer
-nnoremap <Leader>cc :bw %<CR>
+nnoremap <Leader>qq :bw %<CR>
 
 # tabs switching
 # nnoremap <Leader>t :tabs<CR>:tabnext<Space>
@@ -164,8 +167,8 @@ nnoremap <expr> <Leader>gr ":Dispatch grep -nroHP '' " .. expand('%')
 set keymap=ukrainian-enhanced
 set iminsert=0 # Default - latin layout
 # set imsearch=0 # Default - latin layout in search
-inoremap <C-\> <C-^>
-cnoremap <C-\> <C-^>
+# inoremap <C-\> <C-^>
+# cnoremap <C-\> <C-^>
 
 # alt+l
 execute "set <M-l>=\el"
@@ -263,6 +266,8 @@ nnoremap <leader><backspace> @:
 nnoremap <leader>nt :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 
+# nnoremap <leader>nt :EasyTreeToggle<CR>
+# nnoremap <leader>nf :EasyTreeBufferReveal<CR>
 
 # help codefmt
 vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>
