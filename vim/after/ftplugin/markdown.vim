@@ -1,6 +1,6 @@
 vim9script
 
-setlocal spell! spelllang=uk,en_us
+# setlocal spell! spelllang=uk,en_us
 # setlocal wrap
 
 if !executable('pandoc')

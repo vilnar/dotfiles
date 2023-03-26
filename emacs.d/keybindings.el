@@ -32,7 +32,7 @@
 (global-unset-key (kbd "M-c"))
 (global-unset-key (kbd "C-."))
 
-(global-set-key (kbd "M-u") 'avy-goto-char-2)
+(global-set-key (kbd "M-u") 'avy-goto-char)
 
 (global-set-key (kbd "M-s") 'save-buffer)
 ;; (global-set-key (kbd "C-x f") 'find-file)
@@ -51,6 +51,7 @@
 (global-unset-key (kbd "M-g"))
 (global-set-key (kbd "M-g") 'consult-goto-line)
 (global-set-key (kbd "M-y") 'consult-yank-pop)
+(global-set-key (kbd "C-M-y") 'yank-rectangle)
 
 ;; comment toggle
 (global-unset-key (kbd "M-/"))
@@ -161,7 +162,7 @@
 
 ;; Tips for multiple-cursors:
 ;; - insert a newline in multiple-cursors-mode, use C-j
-;; - copy, exit multiple-cursor (enter) and paste (set multiple-cursor) hit C-x r y (only vertical)
+;; - copy, exit multiple-cursor (enter) and paste (set multiple-cursor) hit C-x r y (yank-rectangle)
 (global-unset-key (kbd "M-<down-mouse-1>"))
 (define-key my-keys-minor-mode-map (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 (define-key my-keys-minor-mode-map [(meta down)] 'mc/mark-next-like-this)
