@@ -80,7 +80,7 @@ enddef
 nnoremap <silent> <Leader>8 :vim9cmd <SID>RunSearchUnderCursor()<BAR>set hls<CR>
 
 
-nnoremap s <Plug>(easymotion-prefix)
+nnoremap \s <Plug>(easymotion-prefix)
 
 
 

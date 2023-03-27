@@ -76,7 +76,7 @@
         '(company-pseudo-tooltip-frontend
           company-echo-metadata-frontend))
   (setq company-backends
-        '((company-capf company-dabbrev company-yasnippet)))
+        '((company-dabbrev company-yasnippet)))
 
   (setq
    company-dabbrev-code-ignore-case t
@@ -84,7 +84,7 @@
    company-keywords-ignore-case t
    company-dabbrev-downcase nil
    company-idle-delay 0.2
-   company-minimum-prefix-length 3))
+   company-minimum-prefix-length 1))
 
 ;; complete command
 (use-package vertico
