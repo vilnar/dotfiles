@@ -171,6 +171,7 @@
 
 ;; linters
 (use-package flycheck
+  ;; :disabled t
   :ensure t
   :init (global-flycheck-mode t)
   :config

@@ -2,6 +2,8 @@ vim9script
 
 setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 
+g:go_highlight_functions = 1
+
 
 command CtagsGenerateGo :execute 'Start! ctags `find . -name "*.go" -print && find . -name "*.proto" -print`'
 nnoremap <buffer> <F1> :CtagsGenerateGo<CR>

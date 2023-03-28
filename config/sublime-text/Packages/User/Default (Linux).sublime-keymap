@@ -21,7 +21,7 @@
 
   { "keys": ["f9"], "command": "toggle_white_space"},
 
-  { "keys": ["alt+u"], "command": "find_under_cursor" }, // find word under cursor whithout checkout to find panel
+  { "keys": ["alt+w"], "command": "find_under_cursor" }, // find word under cursor whithout checkout to find panel
   { "keys": ["alt+f"], "command": "find_in_current_file" },
   { "keys": ["ctrl+k", "f"], "command": "find_in_current_folder" },
 
@@ -36,6 +36,8 @@
 
   { "keys": ["ctrl+k", "1"], "command": "find_files_by_part_path", "args": {"is_case_sensitive": false} },
   { "keys": ["ctrl+k", "2"], "command": "find_files_by_part_path", "args": {"is_case_sensitive": true} },
+  { "keys": ["alt+c", "1"], "command": "st_translate", "args": {"source_language": "", "target_language": "uk"} },
+  { "keys": ["alt+c", "2"], "command": "st_translate", "args": {"source_language": "", "target_language": "en"} },
 
   { "keys": ["alt+o"], "command": "open_file_in_new_window" },
 

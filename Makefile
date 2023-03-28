@@ -89,6 +89,9 @@ install_sublime_text: clear_sublime_text
 	ln -sf `pwd`/config/sublime-text/Packages/Dictionaries   ~/.config/sublime-text/Packages/Dictionaries
 	ln -sf `pwd`/config/sublime-text/Packages/Markdown   ~/.config/sublime-text/Packages/Markdown
 	ln -sf `pwd`/config/sublime-text/Packages/PHP   ~/.config/sublime-text/Packages/PHP
+	ln -sf `pwd`/config/sublime-text/Packages/FileDiffs   ~/.config/sublime-text/Packages/FileDiffs
+	ln -sf `pwd`/config/sublime-text/Packages/Tab\ Filter   ~/.config/sublime-text/Packages/Tab\ Filter
+	ln -sf `pwd`/config/sublime-text/Packages/sublimetext-translate   ~/.config/sublime-text/Packages/sublimetext-translate
 
 clear_sublime_text:
 	rm -Rf ~/.config/sublime-text/Packages/User

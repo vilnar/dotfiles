@@ -3,6 +3,10 @@ vim9script
 # setlocal spell! spelllang=uk,en_us
 # setlocal wrap
 
+# g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sh', 'sql']
+g:markdown_fenced_languages = []
+
+
 if !executable('pandoc')
   # echoerr 'pandoc not installed!'
   finish

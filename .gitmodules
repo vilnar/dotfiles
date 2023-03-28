@@ -70,3 +70,9 @@
 [submodule "vim/pack/plugins/start/vim-easymotion"]
 	path = vim/pack/plugins/start/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
+[submodule "config/sublime-text/Packages/Tab Filter"]
+	path = config/sublime-text/Packages/Tab Filter
+	url = git@github.com:vilnar/sublime-tabfilter.git
+[submodule "config/sublime-text/Packages/sublimetext-translate"]
+	path = config/sublime-text/Packages/sublimetext-translate
+	url = git@github.com:vilnar/SublimeText-Translate.git

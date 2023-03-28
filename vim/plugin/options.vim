@@ -7,9 +7,6 @@ vim9script
 # don't open archive files
 g:loaded_gzip = 0
 
-g:php_special_functions = 0
-g:go_highlight_functions = 1
-
 # fzf
 g:fzf_history_dir = '~/.fzf-history'
 
@@ -56,14 +53,12 @@ g:fugitive_dynamic_colors = 0
 g:merginal_splitType = ''
 
 
-
 g:goyo_width = 100
 g:goyo_linenr = 0
 
+
 # GoImportRun
 g:goimports = 0
-
-g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sh', 'sql']
 
 
 # lint
