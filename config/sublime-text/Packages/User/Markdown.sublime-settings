@@ -2,5 +2,5 @@
 {
   "word_wrap": true,
   "trim_trailing_white_space_on_save": "none",
-  "spell_check": true,
+  "spell_check": false,
 }
