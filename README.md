@@ -16,8 +16,6 @@ sudo apt install git make fd-find
 
 [ctags](https://github.com/universal-ctags/ctags)
 
-[translate-shell](https://github.com/soimort/translate-shell)
-
 ## submodules
 
 ### add plugin

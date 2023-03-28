@@ -10,14 +10,15 @@ def copy_position_and_selections(source, destination):
     destination.sel().add_all(source.sel())
 
 # https://stackoverflow.com/questions/23957730/showing-the-same-file-in-both-columns-of-a-sublime-text-window
-class SplitViewKeepPostionCommand(sublime_plugin.WindowCommand):
-    def run(self):
-        view1 = self.window.active_view()
-        self.window.run_command('clone_file', args={"add_to_selection": "true"})
-        self.window.run_command('select_to_left')
-        self.window.run_command('focus_to_right')
-        view2 = self.window.active_view()
-        copy_position_and_selections(view1, view2)
+# seems to be fixed in version 4148
+# class SplitViewKeepPostionCommand(sublime_plugin.WindowCommand):
+#     def run(self):
+#         view1 = self.window.active_view()
+#         self.window.run_command('clone_file', args={"add_to_selection": "true"})
+#         self.window.run_command('select_to_left')
+#         self.window.run_command('focus_to_right')
+#         view2 = self.window.active_view()
+#         copy_position_and_selections(view1, view2)
 
 
 class DuplicateViewCommand(sublime_plugin.WindowCommand):
