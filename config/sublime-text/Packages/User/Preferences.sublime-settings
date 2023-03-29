@@ -31,7 +31,7 @@
     "draw_normal",
     "draw_active_single"
   ],
-  "control_character_style": "names",
+  "control_character_style": "hex",
 
   // fold
   "fold_style": "force_indentation",
@@ -61,8 +61,10 @@
   // sidebar
   // "preview_on_click": "only_left",
   "bold_folder_labels": true,
-  // "file_exclude_patterns": [],
-  // "folder_exclude_patterns": [],
+  "file_exclude_patterns": [],
+  "folder_exclude_patterns": [],
+  // hack, show files in the sidebar, but not index
+  "binary_file_patterns": [".svn/*", ".git/*", ".hg/*", "CVS/*", ".Trash/*", ".Trash-*/*"],
 
   // file
   "ensure_newline_at_eof_on_save": false,
