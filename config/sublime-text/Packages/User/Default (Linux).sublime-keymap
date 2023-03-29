@@ -1,21 +1,33 @@
 [
   // emacs style
   { "keys": ["alt+a"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+  { "keys": ["altgr+a"], "command": "move_to", "args": {"to": "bol", "extend": false} },
   { "keys": ["alt+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+  { "keys": ["altgr+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
 
   { "keys": ["alt+b"], "command": "move", "args": {"by": "characters", "forward": false} },
+  { "keys": ["altgr+b"], "command": "move", "args": {"by": "characters", "forward": false} },
   { "keys": ["alt+f"], "command": "move", "args": {"by": "characters", "forward": true} },
+  { "keys": ["altgr+f"], "command": "move", "args": {"by": "characters", "forward": true} },
   { "keys": ["alt+p"], "command": "move", "args": {"by": "lines", "forward": false} },
+  { "keys": ["altgr+p"], "command": "move", "args": {"by": "lines", "forward": false} },
   { "keys": ["alt+n"], "command": "move", "args": {"by": "lines", "forward": true} },
+  { "keys": ["altgr+n"], "command": "move", "args": {"by": "lines", "forward": true} },
 
   { "keys": ["alt+]"], "command": "move", "args": {"by": "pages", "forward": false} },
+  { "keys": ["altgr+]"], "command": "move", "args": {"by": "pages", "forward": false} },
   { "keys": ["alt+["], "command": "move", "args": {"by": "pages", "forward": true} },
+  { "keys": ["altgr+["], "command": "move", "args": {"by": "pages", "forward": true} },
+
+  { "keys": ["alt+s"], "command": "save_all" },
+  { "keys": ["altgr+s"], "command": "save_all" },
+  { "keys": ["alt+z"], "command": "show_at_center" },
+  { "keys": ["altgr+z"], "command": "show_at_center" },
+
 
 
   { "keys": ["ctrl+7"], "command": "toggle_side_bar" },
   { "keys": ["ctrl+8"], "command": "reveal_in_side_bar" },
-  { "keys": ["alt+s"], "command": "save_all" },
-  { "keys": ["alt+z"], "command": "show_at_center" },
   { "keys": ["ctrl+shift+o"], "command": "prompt_open_folder" },
   { "keys": ["f7"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
   { "keys": ["f8"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
@@ -28,15 +40,23 @@
 
   { "keys": ["f9"], "command": "toggle_white_space"},
 
-  { "keys": ["alt+w"], "command": "find_under_cursor" }, // find word under cursor whithout checkout to find panel
-  { "keys": ["alt+c", "g", "c"], "command": "find_in_current_file" },
-  { "keys": ["alt+c", "g", "d"], "command": "find_in_current_folder" },
-
   { "keys": ["ctrl+alt+m"], "command": "open_new_tab_with_selected_text" },
   { "keys": ["alt+backspace"], "command": "color_scheme_toggle" },
 
+  { "keys": ["alt+w"], "command": "find_under_cursor" }, // find word under cursor whithout checkout to find panel
+  { "keys": ["altgr+w"], "command": "find_under_cursor" }, // find word under cursor whithout checkout to find panel
+  { "keys": ["alt+c", "g", "c"], "command": "find_in_current_file" },
+  { "keys": ["altgr+c", "g", "c"], "command": "find_in_current_file" },
+  { "keys": ["alt+c", "g", "d"], "command": "find_in_current_folder" },
+  { "keys": ["altgr+c", "g", "d"], "command": "find_in_current_folder" },
+
   {
     "keys": ["alt+c", "f"],
+    "command": "goto_selection",
+    "args": {"select_word_under_cursor": true}
+  },
+  {
+    "keys": ["altgr+c", "f"],
     "command": "goto_selection",
     "args": {"select_word_under_cursor": true}
   },
@@ -44,9 +64,12 @@
   { "keys": ["ctrl+k", "1"], "command": "find_files_by_part_path", "args": {"is_case_sensitive": false} },
   { "keys": ["ctrl+k", "2"], "command": "find_files_by_part_path", "args": {"is_case_sensitive": true} },
   { "keys": ["alt+c", "1"], "command": "st_translate", "args": {"source_language": "", "target_language": "uk"} },
+  { "keys": ["altgr+c", "1"], "command": "st_translate", "args": {"source_language": "", "target_language": "uk"} },
   { "keys": ["alt+c", "2"], "command": "st_translate", "args": {"source_language": "", "target_language": "en"} },
+  { "keys": ["altgr+c", "2"], "command": "st_translate", "args": {"source_language": "", "target_language": "en"} },
 
   { "keys": ["alt+o"], "command": "open_file_in_new_window" },
+  { "keys": ["altgr+o"], "command": "open_file_in_new_window" },
 
   // split view (current)
   {
@@ -292,8 +315,11 @@
   { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
   { "keys": ["ctrl+shift+alt+t"], "command": "noop" },
   { "keys": ["alt+t"], "command": "open_terminal" },
+  { "keys": ["altgr+t"], "command": "open_terminal" },
   { "keys": ["alt+c", "t"], "command": "open_terminal_project_folder" },
+  { "keys": ["altgr+c", "t"], "command": "open_terminal_project_folder" },
 
   // View All Bookmarks
   { "keys": ["alt+c", "b"], "command": "view_bookmarks" },
+  { "keys": ["altgr+c", "b"], "command": "view_bookmarks" },
 ]
