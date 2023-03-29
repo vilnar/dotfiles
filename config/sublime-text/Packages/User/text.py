@@ -31,3 +31,14 @@ class RepeatPasteCommand(sublime_plugin.TextCommand):
         sublime.set_clipboard(text);
         self.view.run_command('paste');
         sublime.set_clipboard(clip);
+
+
+class ClearViewCommand(sublime_plugin.WindowCommand):
+    def run(self):
+        self.window.run_command("run_macro_file", {"file": "res://Packages/User/macros/clear_view.sublime-macro"})
+        v = self.window.active_view()
+        file_name = v.file_name()
+        if v.is_scratch() or not file_name:
+            return
+
+        self.window.run_command("save", {"encoding": "utf-8" })

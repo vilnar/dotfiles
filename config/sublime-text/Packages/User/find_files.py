@@ -68,13 +68,9 @@ class FindFilesByPartPathCommand(sublime_plugin.WindowCommand):
             return
 
         scratch = win.new_file()
-        # scratch.set_name("__Files__")
-        # scratch.set_scratch(True)
         scratch.run_command("insert_content_to_view", {"string": p.stdout})
 
 
 class InsertContentToViewCommand(sublime_plugin.TextCommand):
     def run(self, edit, string):
-        self.view.set_read_only(False)
         self.view.replace(edit, sublime.Region(0, self.view.size()), string)
-        self.view.set_read_only(True)

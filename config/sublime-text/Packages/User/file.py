@@ -125,7 +125,3 @@ class CopyFilePathWithLineCommand(sublime_plugin.TextCommand):
     def is_visible(self):
         return is_exist_view(self.view)
 
-class ClearFileCommand(sublime_plugin.WindowCommand):
-    def run(self):
-        self.window.run_command("run_macro_file", {"file": "res://Packages/User/macros/clear_file.sublime-macro"})
-        self.window.run_command("save", {"encoding": "utf-8" })

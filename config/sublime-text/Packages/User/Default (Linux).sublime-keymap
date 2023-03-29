@@ -1,29 +1,14 @@
 [
-  // emacs style
-  { "keys": ["alt+a"], "command": "move_to", "args": {"to": "bol", "extend": false} },
-  { "keys": ["altgr+a"], "command": "move_to", "args": {"to": "bol", "extend": false} },
-  { "keys": ["alt+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
-  { "keys": ["altgr+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
-
-  { "keys": ["alt+b"], "command": "move", "args": {"by": "characters", "forward": false} },
-  { "keys": ["altgr+b"], "command": "move", "args": {"by": "characters", "forward": false} },
-  { "keys": ["alt+f"], "command": "move", "args": {"by": "characters", "forward": true} },
-  { "keys": ["altgr+f"], "command": "move", "args": {"by": "characters", "forward": true} },
-  { "keys": ["alt+p"], "command": "move", "args": {"by": "lines", "forward": false} },
-  { "keys": ["altgr+p"], "command": "move", "args": {"by": "lines", "forward": false} },
-  { "keys": ["alt+n"], "command": "move", "args": {"by": "lines", "forward": true} },
-  { "keys": ["altgr+n"], "command": "move", "args": {"by": "lines", "forward": true} },
-
   { "keys": ["alt+]"], "command": "move", "args": {"by": "pages", "forward": false} },
   { "keys": ["altgr+]"], "command": "move", "args": {"by": "pages", "forward": false} },
   { "keys": ["alt+["], "command": "move", "args": {"by": "pages", "forward": true} },
   { "keys": ["altgr+["], "command": "move", "args": {"by": "pages", "forward": true} },
 
+
   { "keys": ["alt+s"], "command": "save_all" },
   { "keys": ["altgr+s"], "command": "save_all" },
   { "keys": ["alt+z"], "command": "show_at_center" },
   { "keys": ["altgr+z"], "command": "show_at_center" },
-
 
 
   { "keys": ["ctrl+7"], "command": "toggle_side_bar" },
@@ -40,43 +25,49 @@
 
   { "keys": ["f9"], "command": "toggle_white_space"},
 
-  { "keys": ["ctrl+alt+m"], "command": "open_new_tab_with_selected_text" },
-  { "keys": ["alt+backspace"], "command": "color_scheme_toggle" },
+  { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
 
-  { "keys": ["alt+w"], "command": "find_under_cursor" }, // find word under cursor whithout checkout to find panel
-  { "keys": ["altgr+w"], "command": "find_under_cursor" }, // find word under cursor whithout checkout to find panel
-  { "keys": ["alt+c", "g", "c"], "command": "find_in_current_file" },
-  { "keys": ["altgr+c", "g", "c"], "command": "find_in_current_file" },
-  { "keys": ["alt+c", "g", "d"], "command": "find_in_current_folder" },
-  { "keys": ["altgr+c", "g", "d"], "command": "find_in_current_folder" },
+  // find word under cursor whithout checkout to find panel
+  { "keys": ["alt+w"], "command": "find_under_cursor" },
+  { "keys": ["altgr+w"], "command": "find_under_cursor" },
+
+
+  { "keys": ["ctrl+k", "g", "c"], "command": "find_in_current_file" },
+  { "keys": ["ctrl+k", "g", "d"], "command": "find_in_current_folder" },
 
   {
-    "keys": ["alt+c", "f"],
-    "command": "goto_selection",
-    "args": {"select_word_under_cursor": true}
-  },
-  {
-    "keys": ["altgr+c", "f"],
+    "keys": ["ctrl+k", "f"],
     "command": "goto_selection",
     "args": {"select_word_under_cursor": true}
   },
 
-  { "keys": ["ctrl+k", "1"], "command": "find_files_by_part_path", "args": {"is_case_sensitive": false} },
-  { "keys": ["ctrl+k", "2"], "command": "find_files_by_part_path", "args": {"is_case_sensitive": true} },
-  { "keys": ["alt+c", "1"], "command": "st_translate", "args": {"source_language": "", "target_language": "uk"} },
-  { "keys": ["altgr+c", "1"], "command": "st_translate", "args": {"source_language": "", "target_language": "uk"} },
-  { "keys": ["alt+c", "2"], "command": "st_translate", "args": {"source_language": "", "target_language": "en"} },
-  { "keys": ["altgr+c", "2"], "command": "st_translate", "args": {"source_language": "", "target_language": "en"} },
+  { "keys": ["ctrl+k", "1"], "command": "st_translate", "args": {"source_language": "", "target_language": "uk"} },
+  { "keys": ["ctrl+k", "2"], "command": "st_translate", "args": {"source_language": "", "target_language": "en"} },
 
-  { "keys": ["alt+o"], "command": "open_file_in_new_window" },
-  { "keys": ["altgr+o"], "command": "open_file_in_new_window" },
+
+  { "keys": ["ctrl+k", "o"], "command": "open_file_in_new_window" },
+
+  { "keys": ["ctrl+k", "m"], "command": "open_new_tab_with_selected_text" },
 
   // split view (current)
   {
-    "keys": ["alt+6"],
+    "keys": ["ctrl+k", "v"],
     "command": "clone_file",
     "args": {"add_to_selection": true}
   },
+
+  {
+    "keys": ["ctrl+k", "c"], "command": "clear_view",
+  },
+
+  // View All Bookmarks
+  { "keys": ["ctrl+k", "b"], "command": "view_bookmarks" },
+
+  // override sublime_terminal
+  { "keys": ["ctrl+shift+alt+t"], "command": "noop" },
+  { "keys": ["alt+t"], "command": "open_terminal_project_folder" },
+  { "keys": ["altgr+t"], "command": "open_terminal_project_folder" },
+
 
   // fast copy line wihout eol
   {
@@ -89,9 +80,15 @@
       },
     ],
   },
-
   {
-    "keys": ["ctrl+k", "c"], "command": "clear_file",
+    "keys": ["ctrl+l"], "command": "run_macro_file",
+    "args": {"file": "res://Packages/User/macros/select_line_no_eol.sublime-macro"},
+    "context": [
+      {
+        "key": "selection_empty", "operator": "equal",
+        "operand": true, "match_all": false,
+      },
+    ],
   },
 
   {
@@ -100,6 +97,18 @@
     "context": [
       { "key": "selector", "operator": "equal", "operand": "text.html.markdown" },
     ],
+  },
+
+  {
+    "keys": ["super+tab"],
+    "command": "tab_filter" 
+  },
+  {
+    "keys": ["shift+super+tab"],
+    "command": "tab_filter",
+    "args": {
+      "active_group_only": true,
+    }
   },
 
 
@@ -288,38 +297,4 @@
       { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
     ]
   },
-
-
-  // override Tab Filter plugin
-  { 
-    "keys": ["shift+alt+p"],
-    "command": "noop"
-  },
-  {
-    "keys": ["shift+alt+a"],
-    "command": "noop",
-  },
-  {
-    "keys": ["super+tab"],
-    "command": "tab_filter" 
-  },
-  {
-    "keys": ["shift+super+tab"],
-    "command": "tab_filter",
-    "args": {
-      "active_group_only": true,
-    }
-  },
-
-  // override sublime_terminal
-  { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
-  { "keys": ["ctrl+shift+alt+t"], "command": "noop" },
-  { "keys": ["alt+t"], "command": "open_terminal" },
-  { "keys": ["altgr+t"], "command": "open_terminal" },
-  { "keys": ["alt+c", "t"], "command": "open_terminal_project_folder" },
-  { "keys": ["altgr+c", "t"], "command": "open_terminal_project_folder" },
-
-  // View All Bookmarks
-  { "keys": ["alt+c", "b"], "command": "view_bookmarks" },
-  { "keys": ["altgr+c", "b"], "command": "view_bookmarks" },
 ]
