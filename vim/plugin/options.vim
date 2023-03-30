@@ -80,6 +80,12 @@ g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer"
 command PhpCsFixerFixFile :call PhpCsFixerFixFile()
 
 
+g:translator_target_lang = "uk"
+g:translator_default_engines = ["google"]
+g:translator_window_type = "preview"
+g:translator_window_preview_keep_open = true
+
+
 # LSP settings --------------------------------------------------
 # g:lsp_auto_enable = 0
 # g:lsp_diagnostics_signs_enabled = 0

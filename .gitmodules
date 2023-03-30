@@ -73,3 +73,6 @@
 [submodule "config/sublime-text/Packages/sublimetext-translate"]
 	path = config/sublime-text/Packages/sublimetext-translate
 	url = git@github.com:vilnar/SublimeText-Translate.git
+[submodule "vim/pack/plugins/start/vim-translator"]
+	path = vim/pack/plugins/start/vim-translator
+	url = git@github.com:vilnar/vim-translator.git

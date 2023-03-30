@@ -438,4 +438,5 @@
     "trailing-spaces.borderColor": "rgba(67,67,67,0.15)",
     "gitlens.graph.avatars": false,
     "gitlens.graph.dateStyle": "absolute",
+    "workbench.colorTheme": "Nord",
 }
