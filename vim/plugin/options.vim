@@ -38,7 +38,6 @@ g:NERDTreeHijackNetrw = 0
 # g:easytree_ignore_files = []
 # g:easytree_auto_load_settings = 0
 
-g:EasyMotion_smartcase = 1
 
 # :help UltiSnips
 g:UltiSnipsSnippetDirectories = ["UltiSnips", "customsnippets"]

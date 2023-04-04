@@ -65,11 +65,18 @@ def CopyWithoutNewLine()
 enddef
 nnoremap <Leader>cl :vim9cmd <SID>CopyWithoutNewLine()<CR>
 
+
 def CopyAll()
   execute ":normal 1GVG\"+y"
   echo "Current buffer copied to clipboard"
 enddef
 nnoremap <Leader>ca :vim9cmd <SID>CopyAll()<CR>
+
+def SelectAll()
+  execute ":normal 1GVG"
+  echo "Current buffer selected"
+enddef
+nnoremap <Leader>a :vim9cmd <SID>SelectAll()<CR>
 
 # highlight
 def RunSearchUnderCursor()
@@ -78,9 +85,6 @@ def RunSearchUnderCursor()
   histadd('/', scom)
 enddef
 nnoremap <silent> <Leader>8 :vim9cmd <SID>RunSearchUnderCursor()<BAR>set hls<CR>
-
-
-nnoremap \s <Plug>(easymotion-prefix)
 
 
 

@@ -67,7 +67,7 @@
   "binary_file_patterns": [".svn/*", ".git/*", ".hg/*", "CVS/*", ".Trash/*", ".Trash-*/*"],
 
   // file
-  "ensure_newline_at_eof_on_save": false,
+  "ensure_newline_at_eof_on_save": true,
   "fallback_encoding": "Cyrillic (Windows 1251)",
   "tab_size": 4,
   "translate_tabs_to_spaces": true,
