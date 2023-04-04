@@ -238,8 +238,14 @@
     ]
   },
 
-  // auto-pair for selection <
+  // auto-pair for selection < or >
   { "keys": ["<"], "command": "insert_snippet", "args": {"contents": "<${0:$SELECTION}>"}, "context":
+    [
+      { "key": "setting.auto_pair_selected", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+  },
+  { "keys": [">"], "command": "insert_snippet", "args": {"contents": "<${0:$SELECTION}>"}, "context":
     [
       { "key": "setting.auto_pair_selected", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
@@ -274,24 +280,42 @@
     ]
   },
 
-  // auto-pair for selection {
+  // auto-pair for selection { or }
   { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{${0:$SELECTION}}"}, "context":
     [
       { "key": "setting.auto_pair_selected", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
     ]
   },
-
-  // auto-pair for selection (
-  { "keys": ["("], "command": "insert_snippet", "args": {"contents": "(${0:$SELECTION})"}, "context":
+  { "keys": ["}"], "command": "insert_snippet", "args": {"contents": "{${0:$SELECTION}}"}, "context":
     [
       { "key": "setting.auto_pair_selected", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
     ]
   },
 
-  // auto-pair for selection [
+  // auto-pair for selection ( or )
+  { "keys": ["("], "command": "insert_snippet", "args": {"contents": "(${0:$SELECTION})"}, "context":
+    [
+      { "key": "setting.auto_pair_selected", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+  },
+  { "keys": [")"], "command": "insert_snippet", "args": {"contents": "(${0:$SELECTION})"}, "context":
+    [
+      { "key": "setting.auto_pair_selected", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+  },
+
+  // auto-pair for selection [ or ]
   { "keys": ["["], "command": "insert_snippet", "args": {"contents": "[${0:$SELECTION}]"}, "context":
+    [
+      { "key": "setting.auto_pair_selected", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+  },
+  { "keys": ["]"], "command": "insert_snippet", "args": {"contents": "[${0:$SELECTION}]"}, "context":
     [
       { "key": "setting.auto_pair_selected", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
