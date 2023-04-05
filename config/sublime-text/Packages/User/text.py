@@ -23,13 +23,13 @@ class RepeatPasteCommand(sublime_plugin.TextCommand):
     def on_done(self, user_input):
         pasteCount = int(float(user_input))
         clip = sublime.get_clipboard();
-        text = '';
+        text = "";
 
-        for x in range(0,pasteCount):
+        for x in range(0, pasteCount):
             text += clip
 
         sublime.set_clipboard(text);
-        self.view.run_command('paste');
+        self.view.run_command("paste");
         sublime.set_clipboard(clip);
 
 
