@@ -73,3 +73,6 @@
 [submodule "vim/pack/plugins/start/vim-translator"]
 	path = vim/pack/plugins/start/vim-translator
 	url = git@github.com:vilnar/vim-translator.git
+[submodule "vim/pack/plugins/start/bufexplorer"]
+	path = vim/pack/plugins/start/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer

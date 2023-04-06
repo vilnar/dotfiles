@@ -98,6 +98,11 @@
       "scope": "markup.raw.inline",
       "background": "color(var(nord10) alpha(0.15))"
     },
+    {
+      "name": "[Markup] Other",
+      "scope": "markup.other",
+      "background": "color(var(nord10) alpha(0.15))"
+    },
 
 
     {

@@ -48,7 +48,7 @@
 
     "editor.fontFamily": "'Jetbrains Mono NL', 'monospace', monospace",
     "editor.fontSize": 15,
-    "editor.lineHeight": 1.3,
+    "editor.lineHeight": 1.4,
     "editor.minimap.enabled": false,
     "editor.codeLens": false,
     "editor.dragAndDrop": false,
@@ -441,5 +441,5 @@
     "C_Cpp.default.includePath": [
         "/usr/include/python3.10/"
     ],
-    "workbench.colorTheme": "Default Dark+ Experimental",
+    "workbench.colorTheme": "Nord",
 }
