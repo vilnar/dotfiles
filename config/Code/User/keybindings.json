@@ -20,8 +20,12 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
+        "key": "ctrl+l",
+        "command": "macros.selectLineWithoutNewLine"
+    },
+    {
         "key": "ctrl+alt+l",
-        "command": "macros.copyWithoutNewLine",
+        "command": "macros.copyLineWithoutNewLine",
         "when": "editorTextFocus"
     },
     {
@@ -61,7 +65,7 @@
         "command": "editor.action.goToTypeDefinition"
     },
     {
-        "key": "alt+p",
+        "key": "alt+t",
         "command": "workbench.action.terminal.openNativeConsole",
         "when": "!terminalFocus"
     },
@@ -226,5 +230,23 @@
     {
         "key": "ctrl+6",
         "command": "workbench.action.toggleActivityBarVisibility"
-    }
+    },
+    {
+        "key": "ctrl+k 1",
+        "command": "translateIt.run",
+        "when": "editorHasSelection"
+    },
+    {
+        "key": "shift+alt+t",
+        "command": "-translateIt.run",
+        "when": "editorHasSelection"
+    },
+    {
+        "key": "ctrl+k 2",
+        "command": "translateIt.changeTargetLanguage"
+    },
+    {
+        "key": "f6",
+        "command": "cSpell.toggleEnableForGlobal"
+    },
 ]

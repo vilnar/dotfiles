@@ -58,7 +58,7 @@
     "editor.autoClosingDelete": "never",
     "editor.cursorBlinking": "solid",
     "editor.cursorWidth": 4,
-    "editor.occurrencesHighlight": true,
+    "editor.occurrencesHighlight": false,
     "editor.guides.highlightActiveIndentation": false,
     "editor.autoClosingBrackets": "never",
     "breadcrumbs.enabled": false,
@@ -377,7 +377,7 @@
     "php-cs-fixer.autoFixByBracket": false,
     "php-cs-fixer.autoFixBySemicolon": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1680244926394,
+    "php-cs-fixer.lastDownload": 1680860211189,
     "php-cs-fixer.phar": 0,
     "php-cs-fixer.rules": "@PSR12,@PhpCsFixer,@Symfony,array_syntax,array_indentation",
     "php.suggest.basic": true,
@@ -417,11 +417,16 @@
 
     // macros ==============================================================
     "macros": {
-        "copyWithoutNewLine": [
+        "selectLineWithoutNewLine": [
             "cursorLineStart",
             "cursorLineEndSelect",
             "editor.action.clipboardCopyAction",
-        ]
+        ],
+        "copyLineWithoutNewLine": [
+            "cursorLineStart",
+            "cursorLineEndSelect",
+            "editor.action.clipboardCopyAction",
+        ],
     },
 
     // other extensions ==============================================================
@@ -442,4 +447,18 @@
         "/usr/include/python3.10/"
     ],
     "workbench.colorTheme": "Nord",
+    "translateIt.hoverDisplay": false,
+    "translateIt.targetLanguage": "Ukrainian",
+    "editor.renderWhitespace": "none",
+    "cSpell.enabledLanguageIds":[
+        "asciidoc",
+        "markdown",
+        "plaintext",
+        "generic-plain-text",
+        "restructuredtext",
+        "text",
+    ],
+    "cSpell.language": "en,uk",
+    "cSpell.maxNumberOfProblems": 1000,
+    "cSpell.enabled": false,
 }
