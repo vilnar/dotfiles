@@ -9,4 +9,4 @@ command CtagsGeneratePhp :execute 'Start! ctags `find . -name "*.php" -print`'
 nnoremap <buffer> <F1> :CtagsGeneratePhp<CR>
 
 
-b:ale_linters = ['php']
+# b:ale_linters = ['php']

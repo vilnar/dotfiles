@@ -40,9 +40,6 @@
 [submodule "vim/pack/plugins/start/vim-dispatch"]
 	path = vim/pack/plugins/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
-[submodule "vim/pack/plugins/start/vim-ale"]
-	path = vim/pack/plugins/start/vim-ale
-	url = https://github.com/dense-analysis/ale.git
 [submodule "vim/pack/plugins/start/vim-maktaba"]
 	path = vim/pack/plugins/start/vim-maktaba
 	url = https://github.com/google/vim-maktaba.git
@@ -73,6 +70,6 @@
 [submodule "vim/pack/plugins/start/vim-translator"]
 	path = vim/pack/plugins/start/vim-translator
 	url = git@github.com:vilnar/vim-translator.git
-[submodule "vim/pack/plugins/start/bufexplorer"]
-	path = vim/pack/plugins/start/bufexplorer
-	url = https://github.com/jlanzarotta/bufexplorer
+[submodule "vim/pack/plugins/start/editorconfig-vim"]
+	path = vim/pack/plugins/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git

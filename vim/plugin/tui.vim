@@ -78,6 +78,9 @@ augroup MyColors
     hi NormalNC guibg=#242832
     hi InsertColor guifg=#D8DEE9 guibg=#525d48
     hi ImInsertColor guifg=#3B4252 guibg=#C3BF9F
+
+    hi LineNr guibg=#242832
+    hi CursorLineNr guibg=#242832
   }
 augroup end
 

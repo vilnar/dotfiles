@@ -10,14 +10,13 @@ g:loaded_gzip = 0
 # fzf
 g:fzf_history_dir = '~/.fzf-history'
 
-# :help bufexplorer
-# WARNING: works correctly only with the option - set autoread
-g:bufExplorerShowNoName = 1
-#g:bufExplorerSortBy = "number"
-g:bufExplorerSortBy = "mru"
-g:bufExplorerShowRelativePath = 1
-g:bufExplorerDisableDefaultKeyMapping = 1
-g:bufExplorerShowTabBuffer = 0
+## :help bufexplorer
+## WARNING: works correctly only with the option - set autoread
+# g:bufExplorerShowNoName = 1
+# g:bufExplorerSortBy = "mru"
+# g:bufExplorerShowRelativePath = 1
+# g:bufExplorerDisableDefaultKeyMapping = 1
+# g:bufExplorerShowTabBuffer = 0
 
 # :help NERDTree
 g:NERDTreeMouseMode = 2
@@ -60,16 +59,15 @@ g:goyo_linenr = 0
 g:goimports = 0
 
 
-# lint
-g:ale_lint_on_text_changed = 'never'
-g:ale_lint_on_insert_leave = 0
-g:ale_lint_on_enter = 1
-
-# Only run linters named in ale_linters settings.
-g:ale_linters_explicit = 1
-
-# keep the sign gutter open
-g:ale_sign_column_always = 0
+## lint
+# g:ale_lint_on_text_changed = 'never'
+# g:ale_lint_on_insert_leave = 0
+# g:ale_lint_on_enter = 1
+## Only run linters named in ale_linters settings.
+# g:ale_linters_explicit = 1
+## keep the sign gutter open
+# g:ale_sign_column_always = 0
+# g:ale_virtualtext_cursor = 'disabled'
 
 
 g:php_cs_fixer_enable_default_mapping = 0
@@ -77,6 +75,9 @@ g:php_cs_fixer_rules = "@PSR12,@PhpCsFixer,@Symfony,array_syntax,array_indentati
 g:php_cs_fixer_php_path = "/usr/local/bin/php"
 g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer"
 command PhpCsFixerFixFile :call PhpCsFixerFixFile()
+
+
+g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 
 g:translator_target_lang = "uk"

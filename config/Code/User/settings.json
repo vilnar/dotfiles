@@ -36,7 +36,7 @@
     "workbench.enableExperiments": false,
 
     "window.zoomLevel": 1,
-    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}Code",
+    "window.title": "${dirty}${activeEditorLong}${separator}${rootName}${separator}vscode",
     "window.autoDetectHighContrast": false,
     "window.enableMenuBarMnemonics": false,
     "window.restoreWindows": "none",
@@ -192,6 +192,8 @@
     },
     "git.showPushSuccessNotification": true,
     "git.untrackedChanges": "separate",
+    "workbench.editor.decorations.colors": false,
+    // "workbench.editor.decorations.badges": false,
     "diffEditor.ignoreTrimWhitespace": false,
     // git extensions
     "git-graph.repository.commits.initialLoad": 2000,
@@ -410,9 +412,10 @@
 
     "[c]": {
         "editor.detectIndentation": false,
-        "editor.insertSpaces": true,
+        "editor.insertSpaces": false,
         "editor.tabSize": 8,
-        "editor.indentSize": 4
+        "editor.indentSize": 4,
+        "editor.defaultFormatter": "xaver.clang-format"
     },
 
     // macros ==============================================================
@@ -461,4 +464,5 @@
     "cSpell.language": "en,uk",
     "cSpell.maxNumberOfProblems": 1000,
     "cSpell.enabled": false,
+    "C_Cpp.codeAnalysis.clangTidy.enabled": false,
 }

@@ -6,6 +6,7 @@
     "CMake",
     "Crontab",
     "Dockerfile Syntax Highlighting",
+    "EditorConfig",
     "FileDiffs",
     "Fmt",
     "GraphQL",
