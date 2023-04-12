@@ -9,7 +9,7 @@ set hidden
 set nostartofline
 
 # noticed delays if the file is updated very often
-set autoread
+# set autoread
 
 set mouse=a
 
