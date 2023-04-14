@@ -44,4 +44,13 @@
     "command": "git",
     "args": {"argv": ["remote", "-v"]}
   },
+  {
+    "caption": "Refresh",
+    "command": "refresh",
+  },
+  {
+    "caption": "New Multiinstance",
+    "command": "git",
+    "args": {"argv": ["smerge-m"]}
+  },
 ]
