@@ -9,6 +9,7 @@ g:loaded_gzip = 0
 
 # fzf
 g:fzf_history_dir = '~/.fzf-history'
+g:fzf_buffer_tags_is_sort = false
 
 ## :help bufexplorer
 ## WARNING: works correctly only with the option - set autoread

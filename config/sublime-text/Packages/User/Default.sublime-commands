@@ -18,4 +18,5 @@
   { "caption": "Recent Folder", "command": "custom_open_recent_folders" },
   { "caption": "Project: Restart", "command": "project_restart" },
   { "caption": "Repeat Paste", "command": "repeat_paste" },
+  { "caption": "Test Command", "command": "test" },
 ]
