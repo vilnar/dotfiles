@@ -9,6 +9,16 @@ augroup AutoSettingsFileType
   }
 augroup END
 
+augroup DiffOption
+  autocmd OptionSet diff {
+    if &diff
+      setlocal syntax=OFF
+    else
+      setlocal syntax=ON
+    endif
+  }
+augroup END
+
 
 # augroup FugitiveCustom
 #   autocmd FileType fugitive setlocal bufhidden=
