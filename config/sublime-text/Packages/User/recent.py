@@ -60,10 +60,11 @@ class CustomOpenRecentFoldersCommand(sublime_plugin.WindowCommand):
         selected_folder = sublime.folder_history()[id]
         if os.path.exists(selected_folder):
             params = [sublime.executable_path(), "-n", selected_folder]
-            folder_current_window = self.window.extract_variables().get('folder')
-            if not folder_current_window:
+            folder = self.window.extract_variables().get('folder')
+            views = self.window.views()
+            if not folder and not views:
                 params = [sublime.executable_path(), "-a", selected_folder]
 
             subprocess.Popen(params)
         else:
-            sublime.status_message("File doesn't exist on disk.")
+            sublime.status_message("Folder doesn't exist on disk.")

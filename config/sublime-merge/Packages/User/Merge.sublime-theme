@@ -9,5 +9,10 @@
   },
   "rules":
   [
+    {
+      "class": "commit_summary_control",
+      "parents": [{"class": "commit_table_row", "attributes": ["selected"]}],
+      "layer0.tint": "#45474d",
+    },
   ]
 }
