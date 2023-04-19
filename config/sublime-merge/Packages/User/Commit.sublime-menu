@@ -1,4 +1,5 @@
 [
   { "caption": "-", "id": "custom-command" },
   { "caption": "Show Name Status", "command": "git", "args": {"argv": ["show", "--name-status", "$commit"]} },
+  { "caption": "Show Parent Commit", "command": "git", "args": {"argv": ["rev-parse", "$commit^"]} },
 ]

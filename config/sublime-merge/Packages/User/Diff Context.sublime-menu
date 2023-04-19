@@ -1,4 +1,5 @@
 [
   { "caption": "-", "id": "custom-command" },
   { "caption": "Copy File Path", "command": "copy_to_clipboard", "args": { "text": "$path" } },
+  { "caption": "Copy Commit with Path", "command": "copy_to_clipboard", "args": { "text": "$commit:$path" } },
 ]

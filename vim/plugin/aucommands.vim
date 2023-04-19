@@ -13,8 +13,10 @@ augroup DiffOption
   autocmd OptionSet diff {
     if &diff
       setlocal syntax=OFF
+      setlocal list
     else
       setlocal syntax=ON
+      setlocal list!
     endif
   }
 augroup END
