@@ -103,6 +103,11 @@
       "scope": "markup.other",
       "background": "color(var(nord10) alpha(0.15))"
     },
+    {
+      "name": "[Invalid] Deprecated",
+      "scope": "invalid.deprecated",
+      "background": "color(var(nord13) alpha(0.55))"
+    },
 
 
     {

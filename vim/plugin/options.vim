@@ -81,10 +81,10 @@ command PhpCsFixerFixFile :call PhpCsFixerFixFile()
 g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 
-g:translator_target_lang = "uk"
-g:translator_default_engines = ["google"]
-g:translator_window_type = "preview"
-g:translator_window_preview_keep_open = true
+g:translate#default_languages = {
+  'en': 'uk',
+  'uk': 'en'
+}
 
 
 # LSP settings --------------------------------------------------

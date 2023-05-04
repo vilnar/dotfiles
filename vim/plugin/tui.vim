@@ -77,7 +77,7 @@ augroup MyColors
     # hi Comment guifg=#a6acb9
     hi NormalNC guibg=#242832
     hi InsertColor guifg=#D8DEE9 guibg=#525d48
-    hi ImInsertColor guifg=#3B4252 guibg=#C3BF9F
+    hi ImInsertColor guifg=#3B4252 guibg=#8d8758
 
     hi LineNr guibg=#242832
     hi CursorLineNr guibg=#242832
@@ -86,7 +86,7 @@ augroup end
 
 g:gruvbox_italics = 0
 set background=dark
-colorscheme gruvbox8
+# colorscheme gruvbox8
 
 g:nord_uniform_diff_background = 1
 colorscheme nord

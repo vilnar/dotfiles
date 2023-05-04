@@ -290,8 +290,10 @@ nnoremap ,p :ALENextWrap<CR>
 # nnoremap ,s :ALESymbolSearch<CR>
 
 
-vnoremap ,1 <Esc>:'<,'>TranslateW<CR>
-vnoremap ,2 <Esc>:'<,'>TranslateW --target_lang=en<CR>
+# translate-shell
+vnoremap ,1 <Esc>:'<,'>TranslateVisual -brief -e google :uk<CR>
+vnoremap ,2 <Esc>:'<,'>TranslateVisual -brief -e google :en<CR>
+
 
 
 # LSP

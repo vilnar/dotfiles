@@ -122,6 +122,10 @@
         "[Default Dark+]": {
             "editorGutter.background": "#343739",
             "editorCursor.foreground": "#F8F8F0",
+        },
+        "[Default Dark Modern]": {
+            "editorGutter.background": "#343739",
+            "editorCursor.foreground": "#F8F8F0",
         }
     },
 
@@ -144,6 +148,40 @@
                         "foreground": "#D4D4D4"
                     }
                 },
+                {
+                    "scope": "string source.sql keyword, string source.sql keyword.operator, string source.sql constant.numeric",
+                    "settings": {
+                        "foreground": "#ce9178"
+                    }
+                },
+                {
+                    "scope": "string variable punctuation.definition.variable",
+                    "settings": {
+                        "foreground": "#9CDCFE"
+                    }
+                },
+                {
+                    "scope": "string punctuation.definition.variable, string punctuation.definition.arguments",
+                    "settings": {
+                        "foreground": "#D4D4D4"
+                    }
+                },
+                {
+                    "scope": "meta.function-call support.function",
+                    "settings": {
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "keyword.operator.assignment",
+                    "settings": {
+                        "foreground": "#B5CEA8"
+                    }
+                }
+            ]
+        },
+        "[Default Dark Modern]": {
+            "textMateRules": [
                 {
                     "scope": "string source.sql keyword, string source.sql keyword.operator, string source.sql constant.numeric",
                     "settings": {
@@ -379,7 +417,7 @@
     "php-cs-fixer.autoFixByBracket": false,
     "php-cs-fixer.autoFixBySemicolon": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1681539703942,
+    "php-cs-fixer.lastDownload": 1682950225454,
     "php-cs-fixer.phar": 0,
     "php-cs-fixer.rules": "@PSR12,@PhpCsFixer,@Symfony,array_syntax,array_indentation",
     "php.suggest.basic": true,
@@ -409,13 +447,14 @@
         "cpp",
         "rust"
     ],
+    "editor.detectIndentation": true,
 
     "[c]": {
-        "editor.detectIndentation": false,
-        "editor.insertSpaces": false,
-        "editor.tabSize": 8,
-        "editor.indentSize": 4,
-        "editor.defaultFormatter": "xaver.clang-format"
+        "editor.detectIndentation": true,
+        // "editor.insertSpaces": false,
+        // "editor.tabSize": 8,
+        // "editor.indentSize": 4,
+        // "editor.defaultFormatter": "xaver.clang-format"
     },
 
     // macros ==============================================================
@@ -449,7 +488,6 @@
     "C_Cpp.default.includePath": [
         "/usr/include/python3.10/"
     ],
-    "workbench.colorTheme": "Nord",
     "translateIt.hoverDisplay": false,
     "translateIt.targetLanguage": "Ukrainian",
     "editor.renderWhitespace": "all",
@@ -463,7 +501,6 @@
     ],
     "cSpell.language": "en,uk",
     "cSpell.maxNumberOfProblems": 1000,
-    "cSpell.enabled": false,
     "C_Cpp.codeAnalysis.clangTidy.enabled": false,
     "C_Cpp.codeAnalysis.clangTidy.checks.enabled": [
         "clang-analyzer-*",
