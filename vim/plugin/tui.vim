@@ -82,14 +82,42 @@ augroup MyColors
     hi LineNr guibg=#242832
     hi CursorLineNr guibg=#242832
   }
+  autocmd ColorScheme zenburn {
+    hi link CurSearch IncSearch
+    hi link markdownCode String
+    hi link markdownCodeBlock String
+    hi link markdownCodeDelimiter String
+
+    hi link diffAdded Comment
+    hi link diffRemoved String
+    hi link diffChanged Number
+    hi DiffAdd    guibg=#3e4d45 guifg=NONE gui=NONE cterm=NONE
+    hi DiffDelete gui=NONE cterm=NONE
+    hi DiffText   guibg=#57474f guifg=NONE gui=NONE cterm=NONE
+
+    hi SpecialKey guibg=NONE
+
+    hi Ignore guifg=#8F8F8F
+
+    hi ExtraWhitespace guibg=#797979
+    hi NormalNC guibg=#2F2F2F
+    hi InsertColor guifg=#8cd0d3 guibg=#313633 gui=bold cterm=bold
+    hi ImInsertColor guifg=#dfdfdf guibg=#313633 gui=bold cterm=bold
+  }
 augroup end
 
 g:gruvbox_italics = 0
 set background=dark
 # colorscheme gruvbox8
 
-g:nord_uniform_diff_background = 1
-colorscheme nord
+# g:nord_uniform_diff_background = 1
+# colorscheme nord
+
+
+g:zenburn_alternate_Visual = 0
+g:zenburn_high_Contrast = 0
+g:zenburn_disable_Label_underline = 1
+colorscheme zenburn
 
 # colorscheme desert
 # colorscheme default

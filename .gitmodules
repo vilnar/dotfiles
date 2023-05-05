@@ -73,3 +73,6 @@
 [submodule "vim/pack/plugins/start/vim-translate"]
 	path = vim/pack/plugins/start/vim-translate
 	url = https://github.com/VincentCordobes/vim-translate
+[submodule "vim/pack/plugins/start/Zenburn"]
+	path = vim/pack/plugins/start/Zenburn
+	url = https://github.com/jnurmine/Zenburn
