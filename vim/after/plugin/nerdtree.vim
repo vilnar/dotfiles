@@ -48,12 +48,25 @@ autocmd VimEnter * call NERDTreeAddKeyMap({
       \ 'callback': 'NERDTreeOpenTerminal',
       \ 'quickhelpText': 'open terminal in current node' })
 
+
+function! GetDirectoryPath(path)
+    if isdirectory(a:path)
+      return a:path
+    endif
+
+    let path = fnamemodify(a:path, ':p:h')
+    if isdirectory(path)
+      return path
+    endif
+    echoerr "Not found directory: " . path
+    return ''
+endfunction
+
 function! NERDTreeOpenTerminal()
   let n = g:NERDTreeFileNode.GetSelected()
   if n != {}
-    let path = n.path.str()
-    if !isdirectory(path)
-      echoerr "Not found directory: " . path
+    let path = GetDirectoryPath(n.path.str())
+    if path == ''
       return
     endif
     execute 'Dispatch gnome-terminal --working-directory=' . path

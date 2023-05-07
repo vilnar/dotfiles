@@ -47,10 +47,12 @@ augroup MyColors
 
     hi Ignore guifg=#8F8F8F
     hi EndOfBuffer guifg=#665c54
+    hi NonText guifg=#665c54
 
     hi ExtraWhitespace guibg=#7c6f64
     hi NormalNC guibg=#32302f
-    hi InsertColor guifg=#83a598 guibg=#504945 gui=bold cterm=bold
+    hi StatusLine guifg=#ebdbb2 guibg=#504945 gui=bold cterm=bold
+    hi InsertColor guifg=#B8BB26 guibg=#504945 gui=bold cterm=bold
     hi ImInsertColor guifg=#fabd2f guibg=#504945 gui=bold cterm=bold
 
     hi DiffAdd    guibg=#464e3b guifg=NONE gui=NONE cterm=NONE
@@ -125,10 +127,10 @@ colorscheme gruvbox8
 
 
 # different color depending on focus
-augroup WinBg
-    autocmd WinEnter,BufEnter * setlocal wincolor=
-    autocmd WinLeave,BufLeave * setlocal wincolor=NormalNC
-augroup end
+# augroup WinBg
+#     autocmd WinEnter,BufEnter * setlocal wincolor=
+#     autocmd WinLeave,BufLeave * setlocal wincolor=NormalNC
+# augroup end
 
 
 
