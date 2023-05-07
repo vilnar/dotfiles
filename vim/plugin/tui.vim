@@ -41,7 +41,7 @@ augroup MyColors
     hi ExtraWhitespace guibg=#7E8E91
   }
   autocmd ColorScheme gruvbox8 {
-    hi CurSearch guifg=#1D2021 guibg=#fe8019
+    hi link CurSearch IncSearch
     hi gitcommitSummary guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
     # hi Function guifg=#fe8019 guibg=NONE gui=NONE cterm=NONE
 
@@ -50,8 +50,8 @@ augroup MyColors
 
     hi ExtraWhitespace guibg=#7c6f64
     hi NormalNC guibg=#32302f
-    hi InsertColor guifg=#282828 guibg=#83a598
-    hi ImInsertColor guifg=#282828 guibg=#D79921
+    hi InsertColor guifg=#83a598 guibg=#504945 gui=bold cterm=bold
+    hi ImInsertColor guifg=#fabd2f guibg=#504945 gui=bold cterm=bold
 
     hi DiffAdd    guibg=#464e3b guifg=NONE gui=NONE cterm=NONE
     hi DiffDelete gui=NONE cterm=NONE
@@ -108,16 +108,16 @@ augroup end
 
 g:gruvbox_italics = 0
 set background=dark
-# colorscheme gruvbox8
+colorscheme gruvbox8
 
 # g:nord_uniform_diff_background = 1
 # colorscheme nord
 
 
-g:zenburn_alternate_Visual = 0
-g:zenburn_high_Contrast = 0
-g:zenburn_disable_Label_underline = 1
-colorscheme zenburn
+# g:zenburn_alternate_Visual = 0
+# g:zenburn_high_Contrast = 0
+# g:zenburn_disable_Label_underline = 1
+# colorscheme zenburn
 
 # colorscheme desert
 # colorscheme default
