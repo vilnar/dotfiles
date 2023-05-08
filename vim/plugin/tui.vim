@@ -93,8 +93,7 @@ augroup MyColors
     hi link diffAdded Comment
     hi link diffRemoved String
     hi link diffChanged Number
-    hi DiffAdd    guibg=#3e4d45 guifg=NONE gui=NONE cterm=NONE
-    hi DiffDelete gui=NONE cterm=NONE
+    hi DiffAdd    guifg=NONE gui=NONE cterm=NONE
     hi DiffText   guibg=#57474f guifg=NONE gui=NONE cterm=NONE
 
     hi SpecialKey guibg=NONE
@@ -104,7 +103,7 @@ augroup MyColors
     hi ExtraWhitespace guibg=#797979
     hi NormalNC guibg=#2F2F2F
     hi InsertColor guifg=#dfdfdf guibg=#313633 gui=bold cterm=bold
-    hi ImInsertColor guifg=#8cd0d3 guibg=#313633 gui=bold cterm=bold
+    hi ImInsertColor guifg=#8CB0D3 guibg=#313633 gui=bold cterm=bold
   }
 augroup end
 
