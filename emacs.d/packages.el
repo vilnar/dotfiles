@@ -47,10 +47,10 @@
 
 
 ;; mode line, hide all minor-modes under a nice menu
-(use-package minions
-  :ensure t
-  :config
-  (minions-mode 1))
+;; (use-package minions
+;;   :ensure t
+;;   :config
+;;   (minions-mode 1))
 
 ;; (use-package doom-modeline
 ;;   :ensure t
@@ -154,11 +154,14 @@
 
 
 ;; grep
-(use-package rg
-  :ensure t
-  :config
-  (with-eval-after-load 'rg
-    (setq rg-ignore-ripgreprc nil)))
+;; (use-package rg
+;;   :ensure t
+;;   :config
+;;   (with-eval-after-load 'rg
+;;     (setq rg-ignore-ripgreprc nil)))
+
+(use-package deadgrep
+  :ensure t)
 
 (use-package multiple-cursors
   :ensure t)
@@ -170,23 +173,20 @@
 ;;   (setq highlight-indent-guides-method 'character))
 
 ;; linters
-(use-package flycheck
-  ;; :disabled t
-  :ensure t
-  :init (global-flycheck-mode t)
-  :config
-  (add-hook 'go-mode-hook
-            (lambda ()
-              (setq flycheck-checker 'go-staticcheck)))
-  (add-hook 'php-mode-hook
-            (lambda ()
-              (setq flycheck-checker 'php)))
-  ;; (setq flycheck-check-syntax-automatically '(mode-enabled save))
-  ;; (add-hook 'after-init-hook #'global-flycheck-mode)
-  ;; (setq flycheck-idle-change-delay 2.0)
-  (with-eval-after-load 'flycheck
-    ;; don't highlight info
-    (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))))
+;; (use-package flycheck
+;;   :disabled t
+;;   :ensure t
+;;   :init (global-flycheck-mode t)
+;;   :config
+;;   (add-hook 'go-mode-hook
+;;             (lambda ()
+;;               (setq flycheck-checker 'go-staticcheck)))
+;;   (add-hook 'php-mode-hook
+;;             (lambda ()
+;;               (setq flycheck-checker 'php)))
+;;   (with-eval-after-load 'flycheck
+;;     ;; don't highlight info
+;;     (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))))
 
 
 (use-package wrap-region
@@ -210,23 +210,23 @@
   :config
   (setq olivetti-minimum-body-width 120))
 
-(use-package expand-region
-  :ensure t)
+;; (use-package expand-region
+;;   :ensure t)
 
 
-(use-package avy
-  :ensure t)
+;; (use-package avy
+;;   :ensure t)
 
 
-(use-package citre
-  :ensure t
-  :defer t
-  :init
-  (require 'citre-config)
-  :config
-  (setq
-   citre-project-root-function #'projectile-project-root))
-(setq xref-backend-functions #'citre-xref-backend)
+;; (use-package citre
+;;   :ensure t
+;;   :defer t
+;;   :init
+;;   (require 'citre-config)
+;;   :config
+;;   (setq
+;;    citre-project-root-function #'projectile-project-root))
+;; (setq xref-backend-functions #'citre-xref-backend)
 
 (use-package crux
   :ensure t)
@@ -246,7 +246,7 @@
   (setq markdown-mouse-follow-link nil)
   :config
   ;; (add-hook 'markdown-mode-hook 'flyspell-mode) ;; it's slow
-  (add-hook 'markdown-mode-hook 'turn-on-flyspell)
+  ;; (add-hook 'markdown-mode-hook 'turn-on-flyspell)
   (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
   (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
   (setq markdown-command "/usr/bin/pandoc"))

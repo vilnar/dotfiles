@@ -175,14 +175,14 @@
 
 
 ;; ctags
-(global-set-key (kbd "M-j") 'citre-jump)
-(global-set-key (kbd "M-J") 'citre-jump-back)
-(global-set-key (kbd "M-c t p") 'citre-peek)
-(global-set-key (kbd "M-c t u") 'citre-update-this-tags-file)
+;; (global-set-key (kbd "M-j") 'citre-jump)
+;; (global-set-key (kbd "M-J") 'citre-jump-back)
+;; (global-set-key (kbd "M-c t p") 'citre-peek)
+;; (global-set-key (kbd "M-c t u") 'citre-update-this-tags-file)
 
-(define-key citre-peek-keymap (kbd "<up>") 'citre-peek-prev-tag)
-(define-key citre-peek-keymap (kbd "<down>") 'citre-peek-next-tag)
-(define-key citre-peek-keymap (kbd "M-j") 'citre-peek-jump)
+;; (define-key citre-peek-keymap (kbd "<up>") 'citre-peek-prev-tag)
+;; (define-key citre-peek-keymap (kbd "<down>") 'citre-peek-next-tag)
+;; (define-key citre-peek-keymap (kbd "M-j") 'citre-peek-jump)
 
 
 ;; alias  -------------------------------------------------------------
