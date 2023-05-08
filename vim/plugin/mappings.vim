@@ -63,14 +63,15 @@ def CopyWithoutNewLine()
   }
   timer_start(2000, Clear)
 enddef
-nnoremap <Leader>cl :vim9cmd <SID>CopyWithoutNewLine()<CR>
+nnoremap <Leader>l :vim9cmd <SID>CopyWithoutNewLine()<CR>
+vnoremap <Leader>l <Esc>:vim9cmd <SID>CopyWithoutNewLine()<CR>
 
 
 def CopyAll()
   execute ":normal 1GVG\"+y"
   echo "Current buffer copied to clipboard"
 enddef
-nnoremap <Leader>ca :vim9cmd <SID>CopyAll()<CR>
+nnoremap <Leader>a :vim9cmd <SID>CopyAll()<CR>
 
 def SelectAll()
   execute ":normal 1GVG"
