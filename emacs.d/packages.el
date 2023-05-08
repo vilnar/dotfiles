@@ -52,14 +52,14 @@
   :config
   (minions-mode 1))
 
-(use-package doom-modeline
-  :ensure t
-  :init (doom-modeline-mode 1)
-  :config
-  (setq doom-modeline-minor-modes t) ;; with minions-mode
-  (setq doom-modeline-indent-info t)
-  (setq doom-modeline-vcs-max-length 35)
-  (setq doom-modeline-enable-word-count t))
+;; (use-package doom-modeline
+;;   :ensure t
+;;   :init (doom-modeline-mode 1)
+;;   :config
+;;   (setq doom-modeline-minor-modes t) ;; with minions-mode
+;;   (setq doom-modeline-indent-info t)
+;;   (setq doom-modeline-vcs-max-length 35)
+;;   (setq doom-modeline-enable-word-count t))
 
 (use-package winum
   :ensure t
