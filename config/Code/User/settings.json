@@ -71,6 +71,12 @@
     "editor.scrollbar.vertical": "visible",
     "editor.copyWithSyntaxHighlighting": false,
     "editor.stickyScroll.enabled": false,
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on"
+    },
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.quickSuggestionsDelay": 100,
 
     "search.useIgnoreFiles": false,
     "search.quickOpen.includeHistory": false,
@@ -210,6 +216,12 @@
                     "scope": "keyword.operator.assignment",
                     "settings": {
                         "foreground": "#B5CEA8"
+                    }
+                },
+                {
+                    "scope": "markup.fenced_code.block.markdown",
+                    "settings": {
+                        "foreground": "#CE9178"
                     }
                 }
             ]
