@@ -26,9 +26,9 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.editor.untitled.hint": "hidden",
     "workbench.editor.untitled.labelFormat": "content",
-    "files.associations": {
-        "untitled-*": "generic-plain-text"
-    },
+    // "files.associations": {
+    //     "untitled-*": "generic-plain-text"
+    // },
     "workbench.editor.languageDetection": false,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.historyBasedLanguageDetection": false,
@@ -417,7 +417,7 @@
     "php-cs-fixer.autoFixByBracket": false,
     "php-cs-fixer.autoFixBySemicolon": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1682950225454,
+    "php-cs-fixer.lastDownload": 1683625111106,
     "php-cs-fixer.phar": 0,
     "php-cs-fixer.rules": "@PSR12,@PhpCsFixer,@Symfony,array_syntax,array_indentation",
     "php.suggest.basic": true,
@@ -495,7 +495,6 @@
         "asciidoc",
         "markdown",
         "plaintext",
-        "generic-plain-text",
         "restructuredtext",
         "text",
     ],
