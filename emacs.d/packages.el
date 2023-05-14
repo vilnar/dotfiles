@@ -47,10 +47,10 @@
 
 
 ;; mode line, hide all minor-modes under a nice menu
-;; (use-package minions
-;;   :ensure t
-;;   :config
-;;   (minions-mode 1))
+(use-package minions
+  :ensure t
+  :config
+  (minions-mode 1))
 
 ;; (use-package doom-modeline
 ;;   :ensure t

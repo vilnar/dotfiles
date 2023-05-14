@@ -1,0 +1,7 @@
+[
+    {
+        "caption": "External Diff",
+        "command": "git",
+        "args": {"argv": ["difftool", "$commit^!", "--", "$path"]}
+    },
+]

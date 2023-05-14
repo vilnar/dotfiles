@@ -132,6 +132,9 @@
         "[Default Dark Modern]": {
             "editorGutter.background": "#343739",
             "editorCursor.foreground": "#F8F8F0",
+            "scrollbarSlider.activeBackground": "#6e768191",
+            "scrollbarSlider.background": "#6e768191",
+            "scrollbarSlider.hoverBackground": "#6e7681cf",
         }
     },
 
