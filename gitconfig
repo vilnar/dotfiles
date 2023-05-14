@@ -28,7 +28,7 @@
     tool = gvimdiff
     mnemonicprefix = true
 [difftool]
-    prompt = true
+    prompt = false
 [merge]
     tool = gvimdiff
 [cola]

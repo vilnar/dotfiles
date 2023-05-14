@@ -96,7 +96,7 @@ augroup MyColors
     hi DiffAdd    guifg=NONE gui=NONE cterm=NONE
     hi DiffText   guibg=#57474f guifg=NONE gui=NONE cterm=NONE
 
-    hi SpecialKey guibg=NONE
+    # hi SpecialKey guibg=NONE
 
     hi Ignore guifg=#8F8F8F
 
@@ -115,8 +115,8 @@ g:nord_uniform_diff_background = 1
 # colorscheme nord
 
 
-g:zenburn_alternate_Visual = 0
-g:zenburn_high_Contrast = 0
+g:zenburn_alternate_Visual = 1
+g:zenburn_high_Contrast = 1
 g:zenburn_disable_Label_underline = 1
 colorscheme zenburn
 
