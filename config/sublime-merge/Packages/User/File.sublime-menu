@@ -1,7 +1,22 @@
 [
     {
-        "caption": "External Diff",
-        "command": "git",
-        "args": {"argv": ["difftool", "$commit^!", "--", "$path"]}
-    },
+        "caption": "External Diff ...",
+        "children": [
+            {
+                "caption": "with Modified",
+                "command": "git",
+                "args": {"argv": ["difftool", "--", "$path"]}
+            },
+            {
+                "caption": "with Staged",
+                "command": "git",
+                "args": {"argv": ["difftool", "--staged", "--", "$path"]}
+            },
+            {
+                "caption": "with Commits",
+                "command": "git",
+                "args": {"argv": ["difftool", "$commit^!", "--", "$path"]}
+            },
+        ]
+    }
 ]
