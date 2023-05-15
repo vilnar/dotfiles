@@ -68,10 +68,10 @@ augroup MyColors
     hi markdownError guibg=#593e4c
     hi link gitcommitSummary SpecialChar
 
-    hi DiffAdd    guibg=#4c5147 guifg=NONE gui=NONE cterm=NONE
-    hi DiffDelete gui=NONE cterm=NONE
-    hi DiffChange guibg=#534e43 guifg=NONE gui=NONE cterm=NONE
-    hi DiffText   guibg=#593e4c guifg=NONE gui=bold cterm=bold
+    # hi DiffAdd    guibg=#4c5147 guifg=NONE gui=NONE cterm=NONE
+    # hi DiffDelete gui=NONE cterm=NONE
+    # hi DiffChange guibg=#534e43 guifg=NONE gui=NONE cterm=NONE
+    # hi DiffText   guibg=#593e4c guifg=NONE gui=bold cterm=bold
 
     hi Ignore guifg=#616E88
 
@@ -89,6 +89,10 @@ augroup MyColors
     hi link markdownCode String
     hi link markdownCodeBlock String
     hi link markdownCodeDelimiter String
+    hi Boolean guifg=#8cd0d3
+    hi PreProc gui=NONE cterm=NONE
+    hi Define gui=NONE cterm=NONE
+    hi StorageClass gui=NONE cterm=NONE
 
     hi link diffAdded Comment
     hi link diffRemoved String
@@ -112,14 +116,14 @@ set background=dark
 # colorscheme gruvbox8
 
 g:nord_uniform_diff_background = 1
-# colorscheme nord
+colorscheme nord
 
 
 g:zenburn_alternate_Visual = 1
 g:zenburn_high_Contrast = 1
 g:zenburn_disable_Label_underline = 1
 g:zenburn_disable_bold_CursorBars = 1
-colorscheme zenburn
+# colorscheme zenburn
 
 # colorscheme desert
 # colorscheme default

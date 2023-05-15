@@ -13,16 +13,16 @@ augroup DiffOption
   autocmd OptionSet diff {
     if &diff
       setlocal syntax=OFF
-      # setlocal list
+      setlocal list
     else
       setlocal syntax=ON
-      # setlocal list!
+      setlocal list!
     endif
   }
   # vimdiff
   autocmd VimEnter * {
     if &diff
-      getwininfo()->map((_, v) => win_execute(v.winid, 'setlocal syntax=OFF'))
+      getwininfo()->map((_, v) => win_execute(v.winid, 'setlocal syntax=OFF list'))
     endif
   }
 augroup END
