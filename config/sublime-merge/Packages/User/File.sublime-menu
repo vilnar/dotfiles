@@ -1,6 +1,6 @@
 [
     {
-        "caption": "External Diff ...",
+        "caption": "External Diff...",
         "children": [
             {
                 "caption": "with Modified",
@@ -13,7 +13,7 @@
                 "args": {"argv": ["difftool", "--staged", "--", "$path"]}
             },
             {
-                "caption": "with Commits",
+                "caption": "with Previous Commit",
                 "command": "git",
                 "args": {"argv": ["difftool", "$commit^!", "--", "$path"]}
             },

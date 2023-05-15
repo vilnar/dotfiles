@@ -122,12 +122,12 @@
     },
     {
       "scope": "diff.inserted",
-      "background": "hsla(180, 45%, 60%, 0.15)",
+      "background": "hsla(180, 45%, 60%, 0.10)",
       "foreground_adjust": "l(+ 5%)"
     },
     {
       "scope": "diff.inserted.char",
-      "background": "hsla(180, 60%, 60%, 0.20)",
+      "background": "hsla(180, 60%, 60%, 0.15)",
       "foreground_adjust": "l(+ 10%)"
     },
   ]
