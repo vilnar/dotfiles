@@ -48,6 +48,7 @@ export_gnome_terminal:
 
 install_alacritty:
 	ln -sf `pwd`/config/alacritty ~/.config/alacritty
+	ln -sf `pwd`/config/alacritty/nord.yml ~/.config/nord.yml
 
 
 install_gtk:
