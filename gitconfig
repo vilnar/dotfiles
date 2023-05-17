@@ -25,12 +25,12 @@
     editor = vim
     excludesfile = ~/.gitignore_global
 [diff]
-    tool = meld
+    tool = gvimdiff
     mnemonicprefix = true
 [difftool]
     prompt = false
 [merge]
-    tool = meld
+    tool = gvimdiff
 [cola]
     spellcheck = true
     statusshowtotals = true

@@ -8,9 +8,6 @@ set hidden
 # keep cursor column position
 set nostartofline
 
-# noticed delays if the file is updated very often
-# set autoread
-
 set mouse=a
 
 set number

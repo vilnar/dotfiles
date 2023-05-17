@@ -12,12 +12,17 @@ g:fzf_history_dir = '~/.fzf-history'
 g:fzf_buffer_tags_is_sort = false
 
 ## :help bufexplorer
-## WARNING: works correctly only with the option - set autoread
+## WARNING: works correctly only with the option - autoread
+# noticed delays if the file is updated very often
+## set autoread
 # g:bufExplorerShowNoName = 1
 # g:bufExplorerSortBy = "mru"
 # g:bufExplorerShowRelativePath = 1
 # g:bufExplorerDisableDefaultKeyMapping = 1
 # g:bufExplorerShowTabBuffer = 0
+# g:bufExplorerShowUnlisted = 0
+# g:bufExplorerFindActive = 1
+
 
 # :help NERDTree
 g:NERDTreeMouseMode = 2
