@@ -17,6 +17,11 @@
                 "command": "git",
                 "args": {"argv": ["difftool", "$commit^!", "--", "$path"]}
             },
+            {
+                "caption": "with Selected Commits",
+                "command": "git",
+                "args": {"argv": ["difftool", "$last_selected_commit", "$commit", "--", "$path"]}
+            },
         ]
     }
 ]
