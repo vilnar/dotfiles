@@ -10,8 +10,9 @@ set nostartofline
 
 set mouse=a
 
-# showing line numbers slows scrolling of long lines
+# Performance for long lines
 set nonumber
+# let g:loaded_matchparen = 0
 
 set cursorline
 set cursorlineopt=number
