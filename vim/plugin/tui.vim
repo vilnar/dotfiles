@@ -10,11 +10,9 @@ set nostartofline
 
 set mouse=a
 
-set number
-# set number relativenumber
-# set cursorcolumn
-# set signcolumn=number
-# set numberwidth=6
+# showing line numbers slows scrolling of long lines
+set nonumber
+
 set cursorline
 set cursorlineopt=number
 augroup InsertHl

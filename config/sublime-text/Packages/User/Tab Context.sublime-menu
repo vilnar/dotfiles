@@ -1,5 +1,5 @@
 [
-   { "caption": "-" },
-   { "caption": "Duplicate", "command": "duplicate_view" },
-   { "caption": "-" }
+   // { "caption": "-" },
+   // { "caption": "Duplicate", "command": "duplicate_view" },
+   // { "caption": "-" }
 ]
