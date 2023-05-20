@@ -70,6 +70,7 @@ augroup MyColors
     # hi DiffText   guibg=#593e4c guifg=NONE gui=bold cterm=bold
 
     hi Ignore guifg=#616E88
+    hi EndOfBuffer guifg=#616E88
 
     hi ExtraWhitespace guibg=#616E88
     # hi Comment guifg=#a6acb9
@@ -161,11 +162,17 @@ set confirm
 set display+=truncate
 
 if !has('gui_running')
-  # cursor shape in difference mode
-  # &t_SI = "\<esc>[6 q"
-  &t_SI = "\<esc>[2 q"
-  &t_SR = "\<esc>[4 q"
-  &t_EI = "\<esc>[2 q"
+  &t_SI = "\<esc>[5 q"
+  &t_SR = "\<esc>[3 q"
+  &t_EI = "\<esc>[1 q"
+
+# 0  -> blinking block.
+# 1  -> blinking block (default).
+# 2  -> steady block.
+# 3  -> blinking underline.
+# 4  -> steady underline.
+# 5  -> blinking bar (xterm).
+# 6  -> steady bar (xterm).
 
   if &term =~ '^\%(alacritty\)'
     &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

@@ -41,7 +41,7 @@
   "highlight_line": false,
   // gutter
   "margin": 0,
-  "caret_style": "solid",
+  "caret_style": "smooth",
   "caret_extra_top": 2,
   "caret_extra_bottom": 2,
   "caret_extra_width": 2,

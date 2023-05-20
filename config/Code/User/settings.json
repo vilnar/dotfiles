@@ -56,7 +56,7 @@
     "editor.formatOnType": false,
 
     "editor.autoClosingDelete": "never",
-    "editor.cursorBlinking": "solid",
+    "editor.cursorBlinking": "smooth",
     "editor.cursorWidth": 4,
     "editor.occurrencesHighlight": false,
     "editor.guides.highlightActiveIndentation": false,
