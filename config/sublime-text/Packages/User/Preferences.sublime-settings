@@ -68,7 +68,9 @@
 
   // file
   "ensure_newline_at_eof_on_save": true,
-  "fallback_encoding": "Cyrillic (Windows 1251)",
+  "fallback_encoding": "UTF-8",
+  "enable_hexadecimal_encoding": false,
+  // "fallback_encoding": "Cyrillic (Windows 1251)",
   "tab_size": 4,
   "translate_tabs_to_spaces": true,
   "detect_indentation": true,

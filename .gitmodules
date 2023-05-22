@@ -76,3 +76,6 @@
 [submodule "vim/pack/plugins/start/Zenburn"]
 	path = vim/pack/plugins/start/Zenburn
 	url = https://github.com/jnurmine/Zenburn
+[submodule "vim/pack/plugins/start/buffergator"]
+	path = vim/pack/plugins/start/buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator

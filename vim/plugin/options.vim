@@ -23,6 +23,10 @@ g:fzf_buffer_tags_is_sort = false
 # g:bufExplorerShowUnlisted = 0
 # g:bufExplorerFindActive = 1
 
+g:buffergator_suppress_keymaps = 1
+g:buffergator_viewport_split_policy = "n"
+g:buffergator_sort_regime = "mru"
+
 
 # :help NERDTree
 g:NERDTreeMouseMode = 2

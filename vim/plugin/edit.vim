@@ -21,7 +21,7 @@ command EditorShowLineEncoding :echo &fileformat
 command EditorShowType :echo &filetype
 
 
-command EncodeDetectThis :!chardet3 %
+command EncodeDetectThis :!chardet %
 command EncodingSupportedShow :help encoding-values
 command EncodingShow :echo exists(&fileencoding) ? &fileencoding : &encoding
 command CdToFile :execute 'cd ' .. expand('%:p:h')

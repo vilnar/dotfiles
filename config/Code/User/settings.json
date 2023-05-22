@@ -432,7 +432,7 @@
     "php-cs-fixer.autoFixByBracket": false,
     "php-cs-fixer.autoFixBySemicolon": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1683625111106,
+    "php-cs-fixer.lastDownload": 1684745387558,
     "php-cs-fixer.phar": 0,
     "php-cs-fixer.rules": "@PSR12,@PhpCsFixer,@Symfony,array_syntax,array_indentation",
     "php.suggest.basic": true,
@@ -500,9 +500,6 @@
     "trailing-spaces.borderColor": "rgba(67,67,67,0.15)",
     "gitlens.graph.avatars": false,
     "gitlens.graph.dateStyle": "absolute",
-    "C_Cpp.default.includePath": [
-        "/usr/include/python3.10/"
-    ],
     "translateIt.hoverDisplay": false,
     "translateIt.targetLanguage": "Ukrainian",
     "editor.renderWhitespace": "all",
@@ -515,15 +512,20 @@
     ],
     "cSpell.language": "en,uk",
     "cSpell.maxNumberOfProblems": 1000,
+    "C_Cpp.default.includePath": [
+        "/usr/include/python3.10/"
+    ],
     "C_Cpp.codeAnalysis.clangTidy.enabled": false,
     "C_Cpp.codeAnalysis.clangTidy.checks.enabled": [
-        "clang-analyzer-*",
-        "bugprone-*",
-        "cppcoreguidelines-narrowing-conversions",
-        "portability-*",
+        // "clang-analyzer-*",
+        // "bugprone-*",
+        // "cppcoreguidelines-narrowing-conversions",
+        // "portability-*",
         // "misc-*",
     ],
+    "C_Cpp.autocomplete": "disabled",
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
+    "workbench.editor.defaultBinaryEditor": "default",
 }
