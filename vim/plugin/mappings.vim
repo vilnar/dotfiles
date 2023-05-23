@@ -102,8 +102,8 @@ nnoremap <Leader>qq :bw %<CR>
 # nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
 nnoremap \b :ls<CR>:b
 # nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>b :BuffergatorOpen<CR>
-# nnoremap <leader>b :BufExplorer<CR>
+# nnoremap <leader>b :BuffergatorOpen<CR>
+nnoremap <leader>b :BufExplorer<CR>
 
 nnoremap ]b <Plug>(buf-surf-forward)
 nnoremap [b <Plug>(buf-surf-back)

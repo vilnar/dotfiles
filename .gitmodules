@@ -79,3 +79,6 @@
 [submodule "vim/pack/plugins/start/buffergator"]
 	path = vim/pack/plugins/start/buffergator
 	url = https://github.com/vilnar/vim-buffergator
+[submodule "vim/pack/plugins/start/bufexplorer"]
+	path = vim/pack/plugins/start/bufexplorer
+	url = https://github.com/vilnar/bufexplorer

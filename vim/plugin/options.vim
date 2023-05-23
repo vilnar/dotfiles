@@ -15,13 +15,13 @@ g:fzf_buffer_tags_is_sort = false
 ## WARNING: works correctly only with the option - autoread
 # noticed delays if the file is updated very often
 ## set autoread
-# g:bufExplorerShowNoName = 1
-# g:bufExplorerSortBy = "mru"
-# g:bufExplorerShowRelativePath = 1
-# g:bufExplorerDisableDefaultKeyMapping = 1
-# g:bufExplorerShowTabBuffer = 0
-# g:bufExplorerShowUnlisted = 0
-# g:bufExplorerFindActive = 1
+g:bufExplorerShowNoName = 1
+g:bufExplorerSortBy = "mru"
+g:bufExplorerShowRelativePath = 1
+g:bufExplorerDisableDefaultKeyMapping = 1
+g:bufExplorerShowTabBuffer = 0
+g:bufExplorerShowUnlisted = 0
+g:bufExplorerFindActive = 1
 
 g:buffergator_suppress_keymaps = 1
 g:buffergator_viewport_split_policy = "n"
