@@ -7,18 +7,12 @@
 [submodule "vim/pack/plugins/start/vim-obsession"]
 	path = vim/pack/plugins/start/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
-[submodule "vim/pack/plugins/start/vim-bufsurf"]
-	path = vim/pack/plugins/start/vim-bufsurf
-	url = https://github.com/ton/vim-bufsurf.git
 [submodule "vim/pack/plugins/start/vim-fugitive"]
 	path = vim/pack/plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/pack/plugins/start/nerdtree"]
 	path = vim/pack/plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
-[submodule "vim/pack/plugins/start/vim-gruvbox8"]
-	path = vim/pack/plugins/start/vim-gruvbox8
-	url = https://github.com/lifepillar/vim-gruvbox8.git
 [submodule "vim/pack/plugins/start/fzf"]
 	path = vim/pack/plugins/start/fzf
 	url = https://github.com/junegunn/fzf.git
@@ -40,21 +34,6 @@
 [submodule "vim/pack/plugins/start/vim-dispatch"]
 	path = vim/pack/plugins/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
-[submodule "vim/pack/plugins/start/vim-maktaba"]
-	path = vim/pack/plugins/start/vim-maktaba
-	url = https://github.com/google/vim-maktaba.git
-[submodule "vim/pack/plugins/start/vim-codefmt"]
-	path = vim/pack/plugins/start/vim-codefmt
-	url = https://github.com/google/vim-codefmt.git
-[submodule "vim/pack/plugins/start/vim-glaive"]
-	path = vim/pack/plugins/start/vim-glaive
-	url = https://github.com/google/vim-glaive.git
-[submodule "vim/pack/plugins/start/vim-goimports"]
-	path = vim/pack/plugins/start/vim-goimports
-	url = https://github.com/mattn/vim-goimports.git
-[submodule "vim/pack/plugins/start/vim-php-cs-fixer"]
-	path = vim/pack/plugins/start/vim-php-cs-fixer
-	url = https://github.com/stephpy/vim-php-cs-fixer.git
 [submodule "vim/pack/plugins/start/vim-mustache-handlebars"]
 	path = vim/pack/plugins/start/vim-mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars.git
@@ -63,22 +42,13 @@
 	url = https://github.com/nordtheme/vim.git
 [submodule "config/sublime-text/Packages/Tab Filter"]
 	path = config/sublime-text/Packages/Tab Filter
-	url = git@github.com:vilnar/sublime-tabfilter.git
+	url = https://github.com/vilnar/sublime-tabfilter
 [submodule "config/sublime-text/Packages/sublimetext-translate"]
 	path = config/sublime-text/Packages/sublimetext-translate
-	url = git@github.com:vilnar/SublimeText-Translate.git
-[submodule "vim/pack/plugins/start/editorconfig-vim"]
-	path = vim/pack/plugins/start/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim.git
+	url = https://github.com/vilnar/SublimeText-Translate
 [submodule "vim/pack/plugins/start/vim-translate"]
 	path = vim/pack/plugins/start/vim-translate
 	url = https://github.com/VincentCordobes/vim-translate
-[submodule "vim/pack/plugins/start/Zenburn"]
-	path = vim/pack/plugins/start/Zenburn
-	url = https://github.com/jnurmine/Zenburn
-[submodule "vim/pack/plugins/start/buffergator"]
-	path = vim/pack/plugins/start/buffergator
-	url = https://github.com/vilnar/vim-buffergator
 [submodule "vim/pack/plugins/start/bufexplorer"]
 	path = vim/pack/plugins/start/bufexplorer
 	url = https://github.com/vilnar/bufexplorer

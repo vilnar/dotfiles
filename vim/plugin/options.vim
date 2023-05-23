@@ -23,9 +23,9 @@ g:bufExplorerShowTabBuffer = 0
 g:bufExplorerShowUnlisted = 0
 g:bufExplorerFindActive = 1
 
-g:buffergator_suppress_keymaps = 1
-g:buffergator_viewport_split_policy = "n"
-g:buffergator_sort_regime = "mru"
+# g:buffergator_suppress_keymaps = 1
+# g:buffergator_viewport_split_policy = "n"
+# g:buffergator_sort_regime = "mru"
 
 
 # :help NERDTree

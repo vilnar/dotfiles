@@ -105,9 +105,6 @@ nnoremap \b :ls<CR>:b
 # nnoremap <leader>b :BuffergatorOpen<CR>
 nnoremap <leader>b :BufExplorer<CR>
 
-nnoremap ]b <Plug>(buf-surf-forward)
-nnoremap [b <Plug>(buf-surf-back)
-
 
 # FILE -----------------------------------------------------------------------------
 # Open current file with Encode
@@ -275,9 +272,6 @@ nnoremap <leader>nf :NERDTreeFind<CR>
 
 # nnoremap <leader>nt :EasyTreeToggle<CR>
 # nnoremap <leader>nf :EasyTreeBufferReveal<CR>
-
-# help codefmt
-vnoremap <leader>= <Esc>:'<,'>FormatLines<CR>
 
 
 # LINT

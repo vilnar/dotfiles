@@ -36,26 +36,6 @@ augroup MyColors
     hi CurSearch gui=reverse cterm=reverse
     hi ExtraWhitespace guibg=#7E8E91
   }
-  autocmd ColorScheme gruvbox8 {
-    hi link CurSearch IncSearch
-    hi gitcommitSummary guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
-    # hi Function guifg=#fe8019 guibg=NONE gui=NONE cterm=NONE
-
-    hi Ignore guifg=#8F8F8F
-    hi EndOfBuffer guifg=#665c54
-    hi NonText guifg=#665c54
-
-    hi ExtraWhitespace guibg=#7c6f64
-    hi NormalNC guibg=#32302f
-    hi StatusLine guifg=#ebdbb2 guibg=#504945 gui=bold cterm=bold
-    hi InsertColor guifg=#B8BB26 guibg=#504945 gui=bold cterm=bold
-    hi ImInsertColor guifg=#fabd2f guibg=#504945 gui=bold cterm=bold
-
-    hi DiffAdd    guibg=#464e3b guifg=NONE gui=NONE cterm=NONE
-    hi DiffDelete gui=NONE cterm=NONE
-    hi DiffChange guibg=#3f4735 guifg=NONE gui=NONE cterm=NONE
-    hi DiffText   guibg=#624a12 guifg=NONE gui=bold cterm=bold
-  }
   autocmd ColorScheme nord {
     hi link CurSearch IncSearch
     hi link markdownCode String
@@ -81,46 +61,13 @@ augroup MyColors
     hi LineNr guibg=#242832
     hi CursorLineNr guibg=#242832
   }
-  autocmd ColorScheme zenburn {
-    hi link CurSearch IncSearch
-    hi link markdownCode String
-    hi link markdownCodeBlock String
-    hi link markdownCodeDelimiter String
-    hi Boolean guifg=#8cd0d3
-    hi PreProc gui=NONE cterm=NONE
-    hi Define gui=NONE cterm=NONE
-    hi StorageClass gui=NONE cterm=NONE
-
-    hi link diffAdded Comment
-    hi link diffRemoved String
-    hi link diffChanged Number
-    hi DiffAdd    guifg=NONE gui=NONE cterm=NONE
-    hi DiffText   guibg=#57474f guifg=NONE gui=NONE cterm=NONE
-
-    # hi SpecialKey guibg=NONE
-
-    hi Ignore guifg=#8F8F8F
-
-    hi ExtraWhitespace guibg=#797979
-    hi NormalNC guibg=#2F2F2F
-    hi InsertColor guifg=#dfdfdf guibg=#313633 gui=bold cterm=bold
-    hi ImInsertColor guifg=#8CB0D3 guibg=#313633 gui=bold cterm=bold
-  }
 augroup end
 
 g:gruvbox_italics = 0
 set background=dark
-# colorscheme gruvbox8
 
 g:nord_uniform_diff_background = 1
 colorscheme nord
-
-
-g:zenburn_alternate_Visual = 1
-g:zenburn_high_Contrast = 1
-g:zenburn_disable_Label_underline = 1
-g:zenburn_disable_bold_CursorBars = 1
-# colorscheme zenburn
 
 # colorscheme desert
 # colorscheme default
