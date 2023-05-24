@@ -23,6 +23,10 @@ export def StatuslineExpr(): string
       color = "%#ImInsertColor#"
     endif
   endif
+  const visual_modes = ["v", "vs", "V", "Vs"]
+  if is_active && index(visual_modes, m) >= 0
+    color = "%#VisualColor#"
+  endif
   # echomsg printf("debug %s", color)
   return color .. file_path .. modified .. readonly .. separate .. lang .. win_nr  .. indentaition .. ftype .. position .. percent
 enddef

@@ -55,8 +55,9 @@ augroup MyColors
     hi ExtraWhitespace guibg=#616E88
     # hi Comment guifg=#a6acb9
     hi NormalNC guibg=#242832
-    hi InsertColor guifg=#D8DEE9 guibg=#525d48
-    hi ImInsertColor guifg=#3B4252 guibg=#8d8758
+    hi InsertColor guifg=#a3be8c guibg=#4C566A gui=bold cterm=bold
+    hi ImInsertColor guifg=#ebcb8b guibg=#4C566A gui=bold cterm=bold
+    hi VisualColor guifg=#d08770 guibg=#4C566A gui=bold cterm=bold
 
     hi LineNr guibg=#242832
     hi CursorLineNr guibg=#242832
