@@ -274,4 +274,8 @@
         "command": "editor.action.triggerSuggest",
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
     },
+    {
+        "key": "ctrl+k m",
+        "command": "workbench.action.toggleMenuBar"
+    },
 ]

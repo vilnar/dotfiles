@@ -10,9 +10,8 @@ set nostartofline
 
 set mouse=a
 
-# Performance for long lines
+# fix performance for long lines
 set nonumber
-# let g:loaded_matchparen = 0
 
 set cursorline
 set cursorlineopt=number

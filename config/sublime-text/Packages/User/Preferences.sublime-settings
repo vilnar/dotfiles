@@ -81,8 +81,6 @@
   // font
   "font_face": "Jetbrains Mono NL",
   "font_size": 13.5,
-  "line_padding_bottom": 1,
-  "line_padding_top": 1,
   "font_options":
   [
     "no_liga",

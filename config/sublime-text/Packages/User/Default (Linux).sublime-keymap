@@ -47,7 +47,9 @@
 
   { "keys": ["ctrl+k", "o"], "command": "open_file_in_new_window" },
 
-  { "keys": ["ctrl+k", "m"], "command": "open_new_tab_with_selected_text" },
+  { "keys": ["ctrl+k", "n"], "command": "open_new_tab_with_selected_text" },
+  { "keys": ["ctrl+k", "m"], "command": "toggle_menu" },
+  { "keys": ["ctrl+k", "s"], "command": "toggle_side_bar" },
 
   // split view (current)
   {

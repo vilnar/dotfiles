@@ -528,4 +528,6 @@
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
     "workbench.editor.defaultBinaryEditor": "default",
+    "gitlens.graph.layout": "panel",
+    "window.menuBarVisibility": "toggle",
 }
