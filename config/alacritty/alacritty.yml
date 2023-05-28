@@ -16,3 +16,8 @@ window:
      columns: 100
      lines: 24
 
+cursor:
+  vi_mode_style: Block
+  style:
+    blinking: On
+    blink_interval: 750

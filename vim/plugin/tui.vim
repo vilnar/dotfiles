@@ -50,13 +50,14 @@ augroup MyColors
 
     hi Ignore guifg=#616E88
     hi EndOfBuffer guifg=#616E88
+    hi CursorLine guibg=#363c4a
 
     hi ExtraWhitespace guibg=#616E88
     # hi Comment guifg=#a6acb9
     hi NormalNC guibg=#242832
-    hi InsertColor guifg=#a3be8c guibg=#4C566A gui=bold cterm=bold
-    hi ImInsertColor guifg=#ebcb8b guibg=#4C566A gui=bold cterm=bold
-    hi VisualColor guifg=#d08770 guibg=#4C566A gui=bold cterm=bold
+    hi User1 guifg=#4C566A guibg=#a3be8c gui=NONE cterm=NONE
+    hi User2 guifg=#4C566A guibg=#ebcb8b gui=NONE cterm=NONE
+    hi User3 guifg=#4C566A guibg=#d08770 gui=NONE cterm=NONE
 
     hi LineNr guibg=#242832
     hi CursorLineNr guibg=#242832
