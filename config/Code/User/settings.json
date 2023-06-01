@@ -45,6 +45,7 @@
     "files.hotExit": "onExitAndWindowClose",
     "files.autoSave": "onWindowChange",
     "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "files.insertFinalNewline": true,
 
     "editor.fontFamily": "'Jetbrains Mono NL', 'monospace', monospace",
     "editor.fontSize": 15,
@@ -87,7 +88,7 @@
     // tree explorer ==============================================================
     "workbench.iconTheme": "vs-minimal",
     "explorer.compactFolders": false,
-    "workbench.tree.indent": 20,
+    "workbench.tree.indent": 25,
     "workbench.tree.renderIndentGuides": "none",
     "workbench.editor.revealIfOpen": true,
     // display all files in explorer
@@ -248,6 +249,7 @@
     "workbench.editor.decorations.colors": false,
     // "workbench.editor.decorations.badges": false,
     "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.diffAlgorithm": "advanced",
     // git extensions
     "git-graph.repository.commits.initialLoad": 2000,
     "git-graph.repository.commits.loadMoreAutomatically": false,
@@ -432,7 +434,7 @@
     "php-cs-fixer.autoFixByBracket": false,
     "php-cs-fixer.autoFixBySemicolon": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1684745387558,
+    "php-cs-fixer.lastDownload": 1685378008711,
     "php-cs-fixer.phar": 0,
     "php-cs-fixer.rules": "@PSR12,@PhpCsFixer,@Symfony,array_syntax,array_indentation",
     "php.suggest.basic": true,

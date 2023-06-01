@@ -5,7 +5,7 @@ export def StatuslineExpr(): string
   var modified = "%{&modified ? '[+] ' : ''}"
   var readonly  = "%{&readonly ? '[RO] ' : ''}"
   var separate = " %= "
-  var win_nr = "[%{winnr()}] "
+  var win_nr = " [%{winnr()}] "
   var indentaition = "%{&expandtab ? 'S:' .. shiftwidth() : 'T:' .. shiftwidth()}"
   var ftype  = "%{empty(&filetype) ? '' : '  [' .. &filetype .. '] '}"
   var position = " %l:%c "
