@@ -506,14 +506,27 @@
     "translateIt.targetLanguage": "Ukrainian",
     "editor.renderWhitespace": "all",
     "cSpell.enabledLanguageIds":[
-        "asciidoc",
         "markdown",
         "plaintext",
-        "restructuredtext",
-        "text",
     ],
     "cSpell.language": "en,uk",
     "cSpell.maxNumberOfProblems": 1000,
+    "cSpell.enabled": false,
+    "cSpell.enableFiletypes": [
+        "!sql",
+        "!json",
+    ],
+    // "cSpell.ignoreRegExpList": [
+    //     ".*"
+    // ],
+    "spellright.documentTypes": [
+        "markdown",
+        "plaintext"
+    ],
+    "spellright.language": [
+        "en_US",
+        "uk_UA"
+    ],
     "C_Cpp.default.includePath": [
         "/usr/include/python3.10/"
     ],
