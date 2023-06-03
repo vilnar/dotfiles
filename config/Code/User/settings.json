@@ -431,6 +431,9 @@
         // "editor.defaultFormatter": "kokororin.vscode-phpfmt"
         "editor.defaultFormatter": "junstyle.php-cs-fixer"
     },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
     "php-cs-fixer.autoFixByBracket": false,
     "php-cs-fixer.autoFixBySemicolon": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",

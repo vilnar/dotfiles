@@ -278,4 +278,14 @@
         "key": "ctrl+k m",
         "command": "workbench.action.toggleMenuBar"
     },
+    {
+        "key": "ctrl+alt+=",
+        "command": "editor.action.formatSelection",
+        "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k ctrl+f",
+        "command": "-editor.action.formatSelection",
+        "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+    },
 ]

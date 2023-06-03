@@ -58,6 +58,7 @@ augroup MyColors
     hi User1 guifg=#4C566A guibg=#a3be8c gui=NONE cterm=NONE
     hi User2 guifg=#4C566A guibg=#ebcb8b gui=NONE cterm=NONE
     hi User3 guifg=#4C566A guibg=#d08770 gui=NONE cterm=NONE
+    hi User4 guifg=#4C566A guibg=#e5e9f0 gui=NONE cterm=NONE
 
     hi LineNr guibg=#242832
     hi CursorLineNr guibg=#242832

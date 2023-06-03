@@ -12,7 +12,7 @@ export def StatuslineExpr(): string
   var percent = " %P"
 
 
-  var lang = "%{&iminsert ? ' UK ' : ''}"
+  var lang = "%{&iminsert ? '[UK] ' : ''}"
   var color = ""
   var m = mode()
   # source: https://github.com/lacygoill/vim-statusline/blob/f45aa31670be3285633c09861bf7f9836731fa5e/plugin/statusline.vim#L437-L448
@@ -23,12 +23,15 @@ export def StatuslineExpr(): string
       color = "%2*"
     endif
   endif
-  const visual_modes = ["v", "vs", "V", "Vs", "\<C-V>"]
-  if is_active && index(visual_modes, m) >= 0
+  if is_active && m == "c"
     color = "%3*"
   endif
+  const visual_modes = ["v", "vs", "V", "Vs", "\<C-V>"]
+  if is_active && index(visual_modes, m) >= 0
+    color = "%4*"
+  endif
   # echomsg printf("debug %s", color)
-  return color .. file_path .. modified .. readonly .. "%0*" .. separate .. color .. lang .. win_nr  .. indentaition .. ftype .. position .. percent
+  return color .. file_path .. modified .. readonly .. lang .. "%0*" .. separate .. win_nr  .. indentaition .. ftype .. position .. percent
 enddef
 
 
