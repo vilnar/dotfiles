@@ -52,7 +52,7 @@ augroup MyColors
     hi EndOfBuffer guifg=#616E88
     hi CursorLine guibg=#363c4a
 
-    hi ExtraWhitespace guibg=#616E88
+    hi ExtraWhitespace guibg=#434C5E
     # hi Comment guifg=#a6acb9
     hi NormalNC guibg=#242832
     hi User1 guifg=#4C566A guibg=#a3be8c gui=NONE cterm=NONE

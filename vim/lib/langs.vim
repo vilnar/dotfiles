@@ -4,12 +4,20 @@ vim9script
 # `z=` - Finding suggestions for bad words
 def RunSpellEnToggle()
   execute 'setlocal spell! spelllang=en_us,uk'
-  echomsg "Toggle spell EN"
+  if &spell
+    echomsg "EN spelling is enabled"
+  else
+    echomsg "Spelling disabled"
+  endif
 enddef
 command SpellEnToggle RunSpellEnToggle()
 
 def RunSpellUkToggle()
   execute 'setlocal spell! spelllang=uk,en_us'
-  echomsg "Toggle spell UK"
+  if &spell
+    echomsg "UK spelling is enabled"
+  else
+    echomsg "Spelling disabled"
+  endif
 enddef
 command SpellUkToggle RunSpellUkToggle()

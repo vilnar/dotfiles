@@ -514,7 +514,6 @@
     ],
     "cSpell.language": "en,uk",
     "cSpell.maxNumberOfProblems": 1000,
-    "cSpell.enabled": false,
     "cSpell.enableFiletypes": [
         "!sql",
         "!json",
@@ -548,4 +547,5 @@
     "workbench.editor.defaultBinaryEditor": "default",
     "gitlens.graph.layout": "panel",
     "window.menuBarVisibility": "toggle",
+    "cSpell.enabled": false,
 }
