@@ -6,7 +6,7 @@ set guioptions=cM
 set lines=999 columns=999
 
 # set guifont=Jetbrains\ Mono\ NL\ Regular\ 13.5
-set guifont=Jetbrains\ Mono\ NL\ Regular\ 12.5
+set guifont=Consolas:h11
 # set guifont=Dejavu\ Sans\ Mono\ 12.5
 
 # disable blink cursor
