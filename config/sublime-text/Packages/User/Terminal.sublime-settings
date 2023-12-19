@@ -1,3 +1,4 @@
 {
-  "terminal": "/usr/bin/gnome-terminal",
+  "terminal": "C:\\Program Files\\Git\\git-bash.exe",
+  "parameters": ["-c", "cd \"%CWD%\" && \"C:\\Program Files\\Git\\bin\\sh.exe\" -i -l"]
 }

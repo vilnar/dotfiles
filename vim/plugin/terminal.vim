@@ -36,3 +36,7 @@ def OpenFileInNewTerminal()
   # execute 'Start! xterm -e "vim ' .. path .. '"'
 enddef
 command TerminalOpenFileInNew OpenFileInNewTerminal()
+
+if has("win32")
+  set shell="C:\Program\ Files\Git\bin\bash.exe"
+endif

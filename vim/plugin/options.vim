@@ -10,6 +10,10 @@ g:loaded_gzip = 0
 # fzf
 g:fzf_history_dir = '~/.fzf-history'
 g:fzf_buffer_tags_is_sort = false
+if has("win32")
+  g:fzf_vim = {}
+  g:fzf_vim.preview_bash = 'C:\Program Files\Git\bin\bash.exe'
+endif
 
 ## :help bufexplorer
 ## WARNING: works correctly only with the option - autoread

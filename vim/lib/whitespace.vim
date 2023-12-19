@@ -8,22 +8,22 @@ enddef
 command -range WhiteSpaceTrailClear call WhiteSpaceTrailClearInRange(<line1>, <line2>)
 
 
-augroup WhitespaceMatch
-  # Remove ALL autocommands for the WhitespaceMatch group.
-  autocmd BufWinEnter * {
-    w:whitespace_match_number = matchadd('ExtraWhitespace', '\s\+$')
-  }
-  autocmd InsertEnter * call ToggleWhitespaceMatch('i')
-  autocmd InsertLeave * call ToggleWhitespaceMatch('n')
-augroup END
+# augroup WhitespaceMatch
+#   # Remove ALL autocommands for the WhitespaceMatch group.
+#   autocmd BufWinEnter * {
+#     w:whitespace_match_number = matchadd('ExtraWhitespace', '\s\+$')
+#   }
+#   autocmd InsertEnter * call ToggleWhitespaceMatch('i')
+#   autocmd InsertLeave * call ToggleWhitespaceMatch('n')
+# augroup END
 
-def ToggleWhitespaceMatch(mode: string)
-  var pattern = (mode == 'i') ? '\s\+\%#\@<!$' : '\s\+$'
-  if exists('w:whitespace_match_number')
-    call matchdelete(w:whitespace_match_number)
-    call matchadd('ExtraWhitespace', pattern, 10, w:whitespace_match_number)
-  else
-    # Something went wrong, try to be graceful.
-    w:whitespace_match_number = matchadd('ExtraWhitespace', pattern)
-  endif
-enddef
+# def ToggleWhitespaceMatch(mode: string)
+#   var pattern = (mode == 'i') ? '\s\+\%#\@<!$' : '\s\+$'
+#   if exists('w:whitespace_match_number')
+#     call matchdelete(w:whitespace_match_number)
+#     call matchadd('ExtraWhitespace', pattern, 10, w:whitespace_match_number)
+#   else
+#     # Something went wrong, try to be graceful.
+#     w:whitespace_match_number = matchadd('ExtraWhitespace', pattern)
+#   endif
+# enddef

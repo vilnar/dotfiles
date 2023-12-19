@@ -21,3 +21,6 @@ def RunSpellUkToggle()
   endif
 enddef
 command SpellUkToggle RunSpellUkToggle()
+
+set langmenu=en_US
+$LANG = 'en_US'

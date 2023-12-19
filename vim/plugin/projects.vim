@@ -1,6 +1,8 @@
 vim9script
 
-import "../lib/custom.vim" as custom
+if filereadable("../lib/custom.vim")
+  import "../lib/custom.vim" as custom
+endif
 
 var PROJECTS = [
   {id: 1, name: 'Code', dir: '~/Code', execs: []}

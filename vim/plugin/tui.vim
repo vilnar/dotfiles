@@ -30,8 +30,8 @@ endif
 
 augroup MyColors
   autocmd ColorScheme default {
-    hi CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
-    hi CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
+    # hi CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
+    # hi CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
     hi CurSearch gui=reverse cterm=reverse
     hi ExtraWhitespace guibg=#7E8E91
   }
@@ -64,9 +64,6 @@ augroup MyColors
     hi CursorLineNr guibg=#242832
   }
 augroup end
-
-g:gruvbox_italics = 0
-set background=dark
 
 g:nord_uniform_diff_background = 1
 colorscheme nord
