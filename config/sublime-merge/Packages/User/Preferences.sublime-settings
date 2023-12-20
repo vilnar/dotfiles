@@ -8,13 +8,14 @@
 	"caret_style": "solid",
 	"diff_style": "auto",
 	"draw_white_space": "all",
-	"font_face": "Jetbrains Mono NL",
+	"font_face": "Dejavu Sans Mono",
 	"font_options":
 	[
+		"gdi",
 		"no_liga",
 		"no_calt"
 	],
-	"font_size": 13.5,
+	"font_size": 10,
 	"highlight_line": false,
 	"image_diff_style": "onion-skin",
 	"line_padding_bottom": 1,

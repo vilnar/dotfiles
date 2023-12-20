@@ -38,5 +38,11 @@ enddef
 command TerminalOpenFileInNew OpenFileInNewTerminal()
 
 if has("win32")
-  set shell="C:\Program\ Files\Git\bin\bash.exe"
+  set shell=cmd
+  # set shell="C:\Program\ Files\Git\bin\bash.exe"
+
+  # set shell=C:\cygwin64\bin\bash.exe
+  # set shellcmdflag=--login\ -c
+  # set shellxquote=\"
+  # set shellslash
 endif

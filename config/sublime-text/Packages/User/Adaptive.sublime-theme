@@ -2,11 +2,11 @@
 {
   "variables":
   {
-    "font_face": "Ubuntu Regular",
-    "font_size_sm": 15,
-    "font_size": 15,
-    "font_size_lg": 17,
-    "font_size_title": 17,
+    // "font_face": "Ubuntu Regular",
+    // "font_size_sm": 15,
+    // "font_size": 15,
+    // "font_size_lg": 17,
+    // "font_size_title": 17,
     "--greenish": "#a3be8c", // from nord color scheme
   },
   "rules":
@@ -14,12 +14,12 @@
     {
       "class": "tabset_control",
       "layer0.opacity": 1.0,
-      "tab_height": 45,
+      "tab_height": 35,
     },
-    {
-      "class": "tab_control",
-      "content_margin": [25, 5, 20, 5],
-    },
+    // {
+    //   "class": "tab_control",
+    //   "content_margin": [25, 5, 20, 5],
+    // },
     {
       "class": "tab_label",
       "parents": [{"class": "tab_control", "attributes": ["selected"]}],
@@ -27,7 +27,7 @@
     },
     {
       "class": "status_bar",
-      "content_margin": [5, 5, 5, 5],
+      "content_margin": [3, 3, 3, 3],
     },
     {
       "class": "sidebar_tree",

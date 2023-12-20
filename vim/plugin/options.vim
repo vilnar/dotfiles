@@ -10,10 +10,6 @@ g:loaded_gzip = 0
 # fzf
 g:fzf_history_dir = '~/.fzf-history'
 g:fzf_buffer_tags_is_sort = false
-if has("win32")
-  g:fzf_vim = {}
-  g:fzf_vim.preview_bash = 'C:\Program Files\Git\bin\bash.exe'
-endif
 
 ## :help bufexplorer
 ## WARNING: works correctly only with the option - autoread
@@ -43,6 +39,10 @@ g:NERDTreeShowLineNumbers = 0
 g:NERDTreeNodeDelimiter = "\u00a0"
 g:NERDTreeRemoveFileCmd = "gio trash "
 g:NERDTreeRemoveDirCmd = "gio trash "
+if has("win32")
+  g:NERDTreeRemoveFileCmd = "recycle-bin "
+  g:NERDTreeRemoveDirCmd = "recycle-bin "
+endif
 g:NERDTreeHijackNetrw = 0
 
 # easytree is a simple tree file manager
