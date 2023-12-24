@@ -218,6 +218,8 @@ nnoremap <Leader>sm :SearchMultiLine<space>
 vnoremap <Leader>sm :<C-U> vim9cmd <SID>searchReplaceLib.EscapeSearchTextMultiLinesVisual('\n')<CR>
 nnoremap <Leader>se :SearchEscape<space>
 vnoremap <Leader>se :<C-U> vim9cmd <SID>searchReplaceLib.EscapeSearchTextVisual()<CR>
+# search in selected block
+vnoremap <Leader>sb <Esc>/\%V
 
 vnoremap <Leader>ss :<C-U> vim9cmd <SID>searchReplaceLib.SearchTextVisual()<CR>
 

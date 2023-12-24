@@ -134,4 +134,7 @@
   "dark_font_face": "Jetbrains Mono NL",
   "dark_font_size": 13.5,
   "color_scheme": "Nord.sublime-color-scheme",
+  // vintage
+  "vintage_start_in_command_mode": true,
+  "vintage_ctrl_keys": true,
 }
