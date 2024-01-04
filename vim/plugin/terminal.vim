@@ -38,7 +38,8 @@ enddef
 command TerminalOpenFileInNew OpenFileInNewTerminal()
 
 if has("win32")
-  set shell=cmd
+  # set shell=cmd
+  # set shell=powershell
   # set shell="C:\Program\ Files\Git\bin\bash.exe"
 
   # set shell=C:\cygwin64\bin\bash.exe

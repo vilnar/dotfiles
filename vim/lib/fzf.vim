@@ -32,7 +32,7 @@ command -bang -nargs=? -complete=dir CustomFzfFiles call RunCustomFzfFiles(<q-ar
 # https://github.com/sharkdp/fd
 # $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --exclude .git --no-ignore'
 # $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git --no-ignore'
-$FZF_DEFAULT_COMMAND = 'rg -uuu --files -g "!.git/"'
+# $FZF_DEFAULT_COMMAND = 'rg -uuu --files -g "!.git/"'
 
 
 def GotoSelection()
@@ -40,6 +40,8 @@ def GotoSelection()
   var text = funcLib.GetVisualSelection(visualmode())
   # replace for php namespaces
   text = substitute(text, '\', '/', 'g')
-  exec ":CustomFzfFiles"
-  feedkeys(text)
+  # exec ":CustomFzfFiles"
+  # feedkeys(text)
+  feedkeys(":find **/*" .. text)
 enddef
+

@@ -8,14 +8,13 @@
 	"caret_style": "solid",
 	"diff_style": "auto",
 	"draw_white_space": "all",
-	"font_face": "Dejavu Sans Mono",
+	"font_face": "Consolas",
 	"font_options":
 	[
-		"gdi",
 		"no_liga",
 		"no_calt"
 	],
-	"font_size": 10,
+	"font_size": 11,
 	"highlight_line": false,
 	"image_diff_style": "onion-skin",
 	"line_padding_bottom": 1,

@@ -55,8 +55,9 @@ augroup MyColors
     hi ExtraWhitespace guibg=#434C5E
     # hi Comment guifg=#a6acb9
     hi NormalNC guibg=#242832
-    hi User1 guifg=#4C566A guibg=#a3be8c gui=NONE cterm=NONE
-    hi User2 guifg=#4C566A guibg=#ebcb8b gui=NONE cterm=NONE
+    hi User1 guifg=#4C566A guibg=#99c276 gui=NONE cterm=NONE
+    hi User2 guifg=#4C566A guibg=#64bab1 gui=NONE cterm=NONE
+
     hi User3 guifg=#4C566A guibg=#d08770 gui=NONE cterm=NONE
     hi User4 guifg=#4C566A guibg=#e5e9f0 gui=NONE cterm=NONE
 
@@ -91,7 +92,9 @@ set breakindent # wrap lines such that vertical indent is not broken
 set history=1000
 set wildmenu wildmode=full
 set wildignorecase
-set wildoptions=pum pumheight=20
+set path=,,
+set wildoptions=pum pumheight=20 pumwidth=50
+set wildoptions+=fuzzy
 set shortmess-=S
 set showcmd
 # set complete=.,b,u,t

@@ -78,13 +78,17 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  // "font_face": "Consolas",
-  // "font_size": 11,
-  "font_face": "Dejavu Sans Mono",
-  "font_size": 10,
+  // "font_face": "Inconsolata LGC Nerd Font Mono",
+  // "font_size": 10,
+  // "font_face": "Dejavu Sans Mono",
+  // "font_size": 10,
+  // "font_face": "Cascadia Mono",
+  // "font_size": 10,
+  "font_face": "Consolas",
+  "font_size": 11,
   "font_options":
   [
-    "gdi",
+    // "gdi",
     "no_liga",
     "no_calt",
     // "ss01", // r

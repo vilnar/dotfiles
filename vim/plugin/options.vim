@@ -11,6 +11,11 @@ g:loaded_gzip = 0
 g:fzf_history_dir = '~/.fzf-history'
 g:fzf_buffer_tags_is_sort = false
 
+
+g:enable_fuzzyy_keymaps = 0
+g:files_respect_gitignore = 0
+g:fuzzyy_devicons = 0
+
 ## :help bufexplorer
 ## WARNING: works correctly only with the option - autoread
 # noticed delays if the file is updated very often

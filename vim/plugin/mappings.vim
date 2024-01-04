@@ -11,6 +11,7 @@ import "../lib/langs.vim" as langLib
 import "../lib/file.vim" as fileLib
 import "../lib/buffer.vim" as bufferLib
 import "../lib/whitespace.vim" as whitespaceLib
+import "../lib/func.vim" as funcLib
 
 # OS clipboard yank and paste
 noremap <Leader>y "+y
@@ -30,6 +31,14 @@ nnoremap <C-LeftMouse> <NOP>
 
 
 nnoremap <Leader>h :nohlsearch<CR>
+
+
+def EvalSelected()
+  # var text = getreg('"')
+  var text = funcLib.GetVisualSelection(visualmode())
+  exec ":" .. text
+enddef
+vnoremap <Leader>e :<C-U> vim9cmd <SID>EvalSelected()<CR>
 
 # https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
 execute "set <M-j>=\ej"
@@ -132,20 +141,21 @@ vnoremap <Leader>fp y:vim9cmd FilesBuffer !find * -not -path "./.git/*" -path "*
 
 
 # FZF -----------------------------------------------------------------------------
-nnoremap <silent><nowait> <leader>; :Commands<CR>
-# nnoremap <leader>tt :Tags '<C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>tt :CustomFzfTags <C-R>=expand("<cword>")<CR><CR>
-# nnoremap <leader>tb :BTags '<C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>tb :CustomFzfBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
-# nnoremap <leader>tf :BTags<CR>
-nnoremap <leader>tf :CustomFzfBufferTags<CR>
+# nnoremap <leader>; :Commands<CR>
+nnoremap <leader>; :
+# nnoremap <leader>tt :CustomFzfTags <C-R>=expand("<cword>")<CR><CR>
+# nnoremap <leader>tb :CustomFzfBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
+# nnoremap <leader>tf :CustomFzfBufferTags<CR>
 
-nnoremap <silent><nowait> <leader>ff :CustomFzfFiles<CR>
-nnoremap <silent><nowait> <leader>fc :CustomFzfFiles <C-R>=expand("%:h")<CR>/<CR>
-nnoremap <expr> <leader>fu ':CustomFzfFiles<CR>' .. expand('<cword>')
+# nnoremap <leader>ff :CustomFzfFiles<CR>
+# nnoremap <leader>fc :CustomFzfFiles <C-R>=expand("%:h")<CR>/<CR>
+# nnoremap <expr> <leader>fu ':CustomFzfFiles<CR>' .. expand('<cword>')
+
+#
+nnoremap <leader>ff :find **/*
+nnoremap <expr> <leader>fu ':find **/*' .. expand('<cword>')
 xnoremap <leader>ff :<C-U> vim9cmd <SID>fzfLib.GotoSelection()<CR>
-nnoremap <leader>mm :Marks<CR>
-
+nnoremap <leader>mm :marks<CR>
 
 
 # GREP -----------------------------------------------------------------------------

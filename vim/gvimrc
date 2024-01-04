@@ -6,10 +6,12 @@ set guioptions=cM
 set lines=999 columns=999
 autocmd GUIEnter * simalt ~x
 
-# set guifont=Jetbrains\ Mono\ NL:h10
-# set guifont=Consolas:h11
-set guifont=Dejavu\ Sans\ Mono:h10
-# set guifont=Dejavu\ Sans\ Mono\ 12.5
+
+if has("win32")
+	set guifont=Consolas:h11
+else
+	set guifont=Dejavu\ Sans\ Mono\ 12.5
+endif
 
 # disable blink cursor
 # set guicursor+=a:blinkon0
