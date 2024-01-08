@@ -58,6 +58,11 @@
       "font_style": "italic",
     },
     {
+      "name": "[Variable] Function",
+      "scope": "variable.function",
+      "foreground": "var(nord4)"
+    },
+    {
       "name": "Class name",
       "scope": "entity.name.class",
       "font_style": "stippled_underline",

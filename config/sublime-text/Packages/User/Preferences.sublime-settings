@@ -50,7 +50,7 @@
 
   // wrap
   "rulers": [120],
-  "word_wrap": true,
+  "word_wrap": false,
 
   // status line
   "show_encoding": true,

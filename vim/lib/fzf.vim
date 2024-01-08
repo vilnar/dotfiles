@@ -34,6 +34,14 @@ command -bang -nargs=? -complete=dir CustomFzfFiles call RunCustomFzfFiles(<q-ar
 # $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git --no-ignore'
 # $FZF_DEFAULT_COMMAND = 'rg -uuu --files -g "!.git/"'
 
+def GotoSelectionFzf()
+  # var text = getreg('"')
+  var text = funcLib.GetVisualSelection(visualmode())
+  # replace for php namespaces
+  text = substitute(text, '\', '/', 'g')
+  exec ":CustomFzfFiles"
+  feedkeys(text)
+enddef
 
 def GotoSelection()
   # var text = getreg('"')
