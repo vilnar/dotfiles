@@ -2,16 +2,18 @@ import sublime
 import sublime_plugin
 import subprocess
 import os
+import shutil
 
 
 PLUGIN_PATH = "User/json_format.py"
-JQ_PATH = "/usr/bin/jq"
+JQ_EXE = "jq"
 
 class JsonFormatCommand(sublime_plugin.TextCommand):
 
     def run(self, edit, is_minify = False):
-        if not os.path.exists(JQ_PATH):
-            print("{} JQ not found in path: {}".format(PLUGIN_PATH, JQ_PATH))
+        path = shutil.which(JQ_EXE)
+        if path is None:
+            print("{} JQ not found in path: {}".format(PLUGIN_PATH, JQ_EXE))
             self.view.window().run_command("show_panel", args={'panel': 'console'})
             return
 
@@ -30,7 +32,7 @@ class JsonFormatCommand(sublime_plugin.TextCommand):
 
     def parse_region(self, edit, region, is_minify):
         raw_json = self.view.substr(region)
-        commands = [JQ_PATH]
+        commands = [JQ_EXE]
         if is_minify:
             commands.append("-c")
         p = subprocess.Popen(

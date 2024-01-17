@@ -94,7 +94,6 @@ set wildmenu wildmode=full
 set wildignorecase
 set path=,,
 set wildoptions=pum pumheight=20 pumwidth=50
-set wildoptions+=fuzzy
 set shortmess-=S
 set showcmd
 # set complete=.,b,u,t
