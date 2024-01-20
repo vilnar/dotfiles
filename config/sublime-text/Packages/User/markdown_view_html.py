@@ -4,18 +4,22 @@ import subprocess
 from shutil import copyfile
 import os
 import webbrowser
+import tempfile
 
 
-PLUGIN_PATH = "User/markdown.py"
-DEFAULT_TEMP_DIR = "/tmp/markdown_to_html/"
+PLUGIN_PATH = "User/markdown_view_html.py"
 MARKDOWN_FILETYPES = ['.md', '.markdown', '.mdown']
+
+def get_default_temp_dir():
+    tmp_dir = tempfile.gettempdir()
+    return os.path.join(tmp_dir, "markdown_to_html")
 
 def is_markdown(view):
     file_path = view.file_name()
     return file_path is not None and file_path.endswith(tuple(MARKDOWN_FILETYPES))
 
 def get_temp_preview_path(view):
-    tmp_dir = DEFAULT_TEMP_DIR
+    tmp_dir = get_default_temp_dir()
     if not os.path.isdir(tmp_dir):
         os.makedirs(tmp_dir)
 
