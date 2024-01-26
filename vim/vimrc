@@ -39,3 +39,7 @@ set directory=$HOME/.vim/tmp//,/tmp//
 " Persistent undo, even if you close and reopen Vim
 " set undodir=$HOME/.vim/tmp//,/tmp//
 " set undofile
+
+if has("win32")
+  set shellxescape="\"&|<>()@^"
+endif
