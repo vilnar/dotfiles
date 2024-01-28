@@ -59,7 +59,7 @@ enddef
 def RunPreview()
   GenerateHtml()
   # wait generate html
-  execute 'sleep 1'
+  execute 'sleep 2'
   var path = GetHtmlTmpPath()
   if !filereadable(path)
     echoerr printf("Not generated html %s", path)

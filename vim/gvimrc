@@ -8,7 +8,7 @@ autocmd GUIEnter * simalt ~x
 
 
 if has("win32")
-	set guifont=Consolas:h11
+	set guifont=Consolas:h12
 else
 	set guifont=Dejavu\ Sans\ Mono\ 12.5
 endif
