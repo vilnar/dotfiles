@@ -17,13 +17,17 @@ class FileDeleteCommand(sublime_plugin.WindowCommand):
         path = self.window.extract_variables().get('file')
         raw_path = repr(path)
 
+        command = "gio trash {}".format(raw_path)
+        if os.name == "nt":
+            command = "recycle-bin \"{}\"".format(path)
+
         p = subprocess.run(
-            "gio trash {}".format(raw_path),
+            command,
             shell=True,
             capture_output=False
         )
         if p.returncode != 0:
-            print("{} gio trash failed. Error: {}".format(PLUGIN_PATH, p.stderr))
+            print("{} FileDelete failed. Code: {}, Error: {}".format(PLUGIN_PATH, p.returncode, p.stderr))
             self.window.run_command("show_panel", args={'panel': 'console'})
             return
 
@@ -59,12 +63,14 @@ class OpenFileInVim(sublime_plugin.TextCommand):
         path = self.view.file_name()
         raw_path = repr(path)
 
+        if os.name == "nt":
+            print("needs to be implemented for other platforms")
+            return
+
         root_path = get_first_root_path(window)
         os.chdir(root_path) # by default path, this is sublime installation directory
         p = subprocess.run(
             "gnome-terminal -- vim {}".format(raw_path),
-            # alacritty freezes text editor
-            # "alacritty --command vim {}".format(raw_path),
             shell=True,
             capture_output=False
         )
