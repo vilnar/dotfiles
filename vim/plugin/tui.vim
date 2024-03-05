@@ -66,8 +66,10 @@ augroup MyColors
   }
 augroup end
 
-g:nord_uniform_diff_background = 1
-colorscheme nord
+# g:nord_uniform_diff_background = 1
+# colorscheme nord
+# set background=dark
+colorscheme elflord
 
 # colorscheme desert
 # colorscheme default
@@ -105,6 +107,7 @@ set splitbelow
 set title
 
 set confirm
+
 
 
 set display+=truncate

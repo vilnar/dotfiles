@@ -1,0 +1,7 @@
+// Terminal OS Specific Settings - User
+{
+  "terminal": "C:\\msys64\\msys2_shell.cmd",
+  "parameters": ["-mingw64", "-where", "%CWD%"]
+  // "terminal": "C:\\Program Files\\Git\\git-bash.exe",
+  // "parameters": ["-c", "cd \"%CWD%\" && \"C:\\Program Files\\Git\\bin\\sh.exe\" -i -l"]
+}
