@@ -1,4 +1,3 @@
 {
-  "cmd": ["meld", "$file1", "$file2"],
-  // "cmd": ["gvimdiff", "$file1", "$file2"],
+  "cmd": ["C:\\Program Files\\Meld\\Meld.exe", "$file1", "$file2"],
 }

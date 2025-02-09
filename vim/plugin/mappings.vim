@@ -114,7 +114,6 @@ nnoremap \b :ls<CR>:b
 # nnoremap <leader>b :BuffergatorOpen<CR>
 nnoremap <leader>b :BufExplorer<CR>
 
-
 # FILE -----------------------------------------------------------------------------
 # Open current file with Encode
 # nnoremap <Leader>ee :edit ++enc= %<left><left>
@@ -141,24 +140,23 @@ vnoremap <Leader>fp y:vim9cmd FilesBuffer !find * -not -path "./.git/*" -path "*
 
 
 # FZF -----------------------------------------------------------------------------
-if has("unix")
-  nnoremap <leader>; :Commands<CR>
-  nnoremap <leader>tt :CustomFzfTags <C-R>=expand("<cword>")<CR><CR>
-  nnoremap <leader>tb :CustomFzfBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
-  nnoremap <leader>tf :CustomFzfBufferTags<CR>
+# if has("unix")
+#   nnoremap <leader>; :Commands<CR>
+#   nnoremap <leader>tt :CustomFzfTags <C-R>=expand("<cword>")<CR><CR>
+#   nnoremap <leader>tb :CustomFzfBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
+#   nnoremap <leader>tf :CustomFzfBufferTags<CR>
 
-  nnoremap <leader>ff :CustomFzfFiles<CR>
-  xnoremap <leader>ff :<C-U> vim9cmd <SID>fzfLib.GotoSelectionFzf()<CR>
-  nnoremap <leader>fc :CustomFzfFiles <C-R>=expand("%:h")<CR>/<CR>
-  nnoremap <expr> <leader>fu ':CustomFzfFiles<CR>' .. expand('<cword>')
-else
+#   xnoremap <leader>ff :<C-U> vim9cmd <SID>fzfLib.GotoSelectionFzf()<CR>
+#   nnoremap <leader>fc :CustomFzfFiles <C-R>=expand("%:h")<CR>/<CR>
+#   nnoremap <expr> <leader>fu ':CustomFzfFiles<CR>' .. expand('<cword>')
+# else
   # default find
   nnoremap <leader>; :
   nnoremap <leader>ff :find **/*
   nnoremap <expr> <leader>fu ':find **/*' .. expand('<cword>')
-  xnoremap <leader>ff :<C-U> vim9cmd <SID>fzfLib.GotoSelection()<CR>
-  nnoremap <leader>mm :marks<CR>
-endif
+  # xnoremap <leader>ff :<C-U> vim9cmd <SID>fzfLib.GotoSelection()<CR>
+  # nnoremap <leader>mm :marks<CR>
+# endif
 
 
 

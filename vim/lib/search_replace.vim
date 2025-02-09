@@ -4,6 +4,8 @@ import "./func.vim" as funcLib
 
 def SearchTextVisual()
   var text = funcLib.GetVisualSelection(visualmode())
+  # echomsg "DEBUG"
+  # echomsg text
   @/ = text
   histadd('/', text)
   # execute "normal /\<CR>"

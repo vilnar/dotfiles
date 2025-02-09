@@ -8,7 +8,7 @@
   // "auto_complete_preserve_order": "none",
 
   // index files
-  "index_files": true,
+  "index_files": false,
   "index_exclude_gitignore": false,
   "show_definitions": false,
 
@@ -50,7 +50,7 @@
 
   // wrap
   "rulers": [120],
-  "word_wrap": false,
+  "word_wrap": true,
 
   // status line
   "show_encoding": true,
@@ -80,12 +80,12 @@
   // font
   // "font_face": "Inconsolata LGC Nerd Font Mono",
   // "font_size": 10,
-  // "font_face": "Dejavu Sans Mono",
+  // "font_face": "DejaVu Sans Mono",
   // "font_size": 10,
   // "font_face": "Cascadia Mono",
   // "font_size": 10,
   "font_face": "Consolas",
-  "font_size": 12,
+  "font_size": 15,
   "font_options":
   [
     // "gdi",
@@ -120,6 +120,7 @@
   "find_in_files_side_by_side": false,
   "find_in_files_context_lines": 3,
   // "scroll_context_lines": 5,
+  "goto_anything_file_preview": false,
 
   // https://www.sublimetext.com/docs/spell_checking.html
   "dictionary": "Packages/Dictionaries/uk_UA.dic",
@@ -137,7 +138,7 @@
   "dark_color_scheme": "Mariana.sublime-color-scheme",
   "dark_font_face": "Jetbrains Mono NL",
   "dark_font_size": 13.5,
-  "color_scheme": "Nord.sublime-color-scheme",
+  "color_scheme": "Mariana.sublime-color-scheme",
   // vintage
   "vintage_start_in_command_mode": true,
   "vintage_ctrl_keys": true,

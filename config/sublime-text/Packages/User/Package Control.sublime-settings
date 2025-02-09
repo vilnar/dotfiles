@@ -1,12 +1,14 @@
 {
   "installed_packages":
   [
+    "Alabaster Color Scheme",
     "Awk",
     "Case Conversion",
     "CMake",
     "Crontab",
     "Dockerfile Syntax Highlighting",
     "EditorConfig",
+    "Excel formula",
     "FileDiffs",
     "Fmt",
     "GraphQL",

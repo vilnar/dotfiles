@@ -21,6 +21,19 @@ g:fuzzyy_devicons = 0
 # noticed delays if the file is updated very often
 set autoread
 
+var options = {
+    completor: { shuffleEqualPriority: true, postfixHighlight: true },
+    buffer: { enable: true, priority: 10, urlComplete: true, envComplete: true },
+    abbrev: { enable: true, priority: 10 },
+    lsp: { enable: false},
+    omnifunc: { enable: false },
+    vsnip: { enable: false },
+    vimscript: { enable: true, priority: 11 },
+    ngram: { enable: false },
+}
+autocmd VimEnter * g:VimCompleteOptionsSet(options)
+
+
 g:bufExplorerShowNoName = 1
 g:bufExplorerSortBy = "mru"
 g:bufExplorerShowRelativePath = 1
@@ -75,28 +88,6 @@ g:goyo_width = 100
 g:goyo_linenr = 0
 
 
-# GoImportRun
-g:goimports = 0
-
-
-## lint
-# g:ale_lint_on_text_changed = 'never'
-# g:ale_lint_on_insert_leave = 0
-# g:ale_lint_on_enter = 1
-## Only run linters named in ale_linters settings.
-# g:ale_linters_explicit = 1
-## keep the sign gutter open
-# g:ale_sign_column_always = 0
-# g:ale_virtualtext_cursor = 'disabled'
-
-
-g:php_cs_fixer_enable_default_mapping = 0
-g:php_cs_fixer_rules = "@PSR12,@PhpCsFixer,@Symfony,array_syntax,array_indentation"
-g:php_cs_fixer_php_path = "/usr/local/bin/php"
-g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer"
-command PhpCsFixerFixFile :call PhpCsFixerFixFile()
-
-
 g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 
@@ -104,23 +95,3 @@ g:translate#default_languages = {
   'en': 'uk',
   'uk': 'en'
 }
-
-
-# LSP settings --------------------------------------------------
-# g:lsp_auto_enable = 0
-# g:lsp_diagnostics_signs_enabled = 0
-# g:lsp_document_code_action_signs_enabled = 0
-# g:lsp_diagnostics_virtual_text_enabled = 1
-# g:lsp_diagnostics_virtual_text_insert_mode_enabled = 0
-# g:lsp_inlay_hints_enabled = 1
-
-# g:asyncomplete_min_chars = 2
-# g:asyncomplete_popup_delay = 100
-
-
-# see lib/custom.vim
-# g:vdebug_options = {
-#  'port': 9000,
-#  'path_maps': {"remote_folder": "local_folder"}
-# }
-

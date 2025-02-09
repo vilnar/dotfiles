@@ -21,6 +21,13 @@ command ColorTest :help group-name
 command ScriptNames :enew | put = execute('scriptnames')
 command Messages :enew | put = execute('messages')
 
+
+def RunFeeMode()
+  set guifont=Courier\ New:h14
+  Goyo
+enddef
+command FreeMode RunFeeMode()
+
 # type fix
 command Vs :vs
 command Wq :wq

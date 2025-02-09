@@ -10,15 +10,6 @@
 [submodule "vim/pack/plugins/start/vim-fugitive"]
 	path = vim/pack/plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/pack/plugins/start/nerdtree"]
-	path = vim/pack/plugins/start/nerdtree
-	url = https://github.com/preservim/nerdtree.git
-[submodule "vim/pack/plugins/start/fzf"]
-	path = vim/pack/plugins/start/fzf
-	url = https://github.com/junegunn/fzf.git
-[submodule "vim/pack/plugins/start/fzf-vim"]
-	path = vim/pack/plugins/start/fzf-vim
-	url = https://github.com/junegunn/fzf.vim.git
 [submodule "vim/pack/plugins/start/vim-graphql"]
 	path = vim/pack/plugins/start/vim-graphql
 	url = https://github.com/jparise/vim-graphql.git
@@ -34,21 +25,21 @@
 [submodule "vim/pack/plugins/start/vim-mustache-handlebars"]
 	path = vim/pack/plugins/start/vim-mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars.git
-[submodule "vim/pack/plugins/start/nord-vim"]
-	path = vim/pack/plugins/start/nord-vim
-	url = https://github.com/nordtheme/vim.git
 [submodule "config/sublime-text/Packages/Tab Filter"]
 	path = config/sublime-text/Packages/Tab Filter
 	url = https://github.com/vilnar/sublime-tabfilter
 [submodule "config/sublime-text/Packages/sublimetext-translate"]
 	path = config/sublime-text/Packages/sublimetext-translate
 	url = https://github.com/vilnar/SublimeText-Translate
-[submodule "vim/pack/plugins/start/vim-translate"]
-	path = vim/pack/plugins/start/vim-translate
-	url = https://github.com/VincentCordobes/vim-translate
+[submodule "vim/pack/plugins/start/vimcomplete"]
+	path = vim/pack/plugins/start/vimcomplete
+	url = https://github.com/girishji/vimcomplete
+[submodule "vim/pack/plugins/start/Zenburn"]
+	path = vim/pack/plugins/start/Zenburn
+	url = https://github.com/jnurmine/Zenburn
+[submodule "vim/pack/plugins/start/nerdtree"]
+	path = vim/pack/plugins/start/nerdtree
+	url = https://github.com/preservim/nerdtree
 [submodule "vim/pack/plugins/start/bufexplorer"]
 	path = vim/pack/plugins/start/bufexplorer
-	url = https://github.com/vilnar/bufexplorer
-[submodule "vim/pack/plugins/start/fuzzyy"]
-	path = vim/pack/plugins/start/fuzzyy
-	url = https://github.com/Donaldttt/fuzzyy
+	url = https://github.com/jlanzarotta/bufexplorer

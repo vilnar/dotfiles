@@ -35,6 +35,9 @@ augroup MyColors
     hi CurSearch gui=reverse cterm=reverse
     hi ExtraWhitespace guibg=#7E8E91
   }
+  autocmd ColorScheme zenburn {
+    hi CurSearch gui=reverse cterm=reverse
+  }
   autocmd ColorScheme nord {
     hi link CurSearch IncSearch
     hi link markdownCode String
@@ -66,14 +69,8 @@ augroup MyColors
   }
 augroup end
 
-# g:nord_uniform_diff_background = 1
-# colorscheme nord
-# set background=dark
-colorscheme elflord
-
-# colorscheme desert
-# colorscheme default
-# set background=light
+# g:zenburn_high_Contrast = 1
+colorscheme zenburn
 
 
 # different color depending on focus

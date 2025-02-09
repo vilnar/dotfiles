@@ -9,7 +9,7 @@ def ToggleVerbose()
     set verbosefile=
   endif
 enddef
-command VerboseToggle :vim9cmd call ToggleVerbose()
+command! VerboseToggle ToggleVerbose()
 
 
 def VerboseMap()
@@ -18,4 +18,4 @@ def VerboseMap()
   # silent verbose map
   redir END
 enddef
-command VerboseMap :vim9cmd call VerboseMap()
+command! VerboseMap VerboseMap()
