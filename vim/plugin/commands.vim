@@ -31,3 +31,4 @@ command FreeMode RunFeeMode()
 # type fix
 command Vs :vs
 command Wq :wq
+command EX :Ex

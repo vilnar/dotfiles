@@ -13,7 +13,11 @@ def GetRelativePathForGrep(): string
   if rel_path_match != -1 || abs_path_match != -1
     return path
   endif
-  return './' .. path .. '/'
+  var result = './' .. path .. '/'
+  if has('win32')
+    result = path
+  endif
+  return result
 enddef
 
 def SearchInOpenedBuffers(pattern: string)
@@ -47,8 +51,8 @@ def GrepInProjectVisual()
 enddef
 
 def GrepInProject(text: string)
-  var template = 'Dispatch grep -rIni --exclude="tags" --exclude-dir=".git" %s ./'
-  # var template = 'Dispatch rg --vimgrep --smart-case --glob="!tags" --glob="!.git" %s ./'
+  # var template = 'Dispatch grep -rIni --exclude="tags" --exclude-dir=".git" %s ./'
+  var template = 'Dispatch rg --vimgrep --smart-case --glob="!.git" %s ./'
   call GrepWithEscaped(text, template)
 enddef
 command -nargs=1 GrepInProjectEscape :vim9cmd GrepInProject(<q-args>) | normal! n
@@ -60,8 +64,8 @@ def GrepInDirectoryVisual()
 enddef
 
 def GrepInDirectory(text: string)
-  var template = 'Dispatch grep -rIni --exclude="tags" --exclude-dir=".git" %s ' .. GetRelativePathForGrep()
-  # var template = 'Dispatch rg --vimgrep --smart-case --glob="!tags" --glob="!.git" %s ' .. GetRelativePathForGrep()
+  # var template = 'Dispatch grep -rIni --exclude="tags" --exclude-dir=".git" %s ' .. GetRelativePathForGrep()
+  var template = 'Dispatch rg --vimgrep --smart-case --glob="!.git" %s ' .. GetRelativePathForGrep()
   call GrepWithEscaped(text, template)
 enddef
 command -nargs=1 GrepInDirectoryEscape :vim9cmd GrepInDirectory(<q-args>) | normal! n
@@ -73,7 +77,8 @@ def GrepInBufferVisual()
 enddef
 
 def GrepInBuffer(text: string)
-  var template = 'Dispatch grep -nirH %s ' .. expand('%')
+  # var template = 'Dispatch grep -nirH %s ' .. expand('%')
+  var template = 'Dispatch rg --vimgrep --smart-case  %s ' .. GetRelativePathForGrep()
   call GrepWithEscaped(text, template)
 enddef
 command -nargs=1 GrepInBufferEscape :vim9cmd GrepInBuffer(<q-args>) | normal! n
@@ -90,7 +95,8 @@ def GrepInProjectInput()
     echoerr "empty file type"
     return
   endif
-  var template = 'Dispatch grep -rn --include=*.%s %s ./'
+  # var template = 'Dispatch grep -rn --include=*.%s %s ./'
+  var template = 'Dispatch rg --vimgrep --smart-case --type=%s %s ./'
   var text_esc = EscapeText(text)
   var scom = printf(template, file_type, text_esc)
   histadd('cmd', scom)

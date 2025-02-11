@@ -2,11 +2,6 @@ vim9script
 # hide menu
 set guioptions=cM
 
-# make gVim automatically maximize
-set lines=999 columns=999
-autocmd GUIEnter * simalt ~x
-
-
 if has("win32")
 	# set guifont=Consolas:h12
 	# set guifont=Courier\ New:h12
@@ -17,4 +12,3 @@ endif
 # disable blink cursor
 # set guicursor+=a:blinkon0
 
-# colorscheme lightsimple
