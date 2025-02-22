@@ -71,14 +71,7 @@ augroup end
 
 # g:zenburn_high_Contrast = 1
 colorscheme zenburn
-
-
-# different color depending on focus
-# augroup WinBg
-#     autocmd WinEnter,BufEnter * setlocal wincolor=
-#     autocmd WinLeave,BufLeave * setlocal wincolor=NormalNC
-# augroup end
-
+# colorscheme unokai
 
 
 # set linebreak

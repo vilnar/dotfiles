@@ -50,6 +50,8 @@ inoremap <M-k> <Esc>:m .-2<CR>==gi
 vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
 
+inoremap <M-[> <Esc>
+
 # for wrap lines
 # nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 # nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -200,6 +202,29 @@ def ToggleImInsert()
 enddef
 nnoremap <M-l> :vim9cmd <SID>ToggleImInsert()<CR>
 
+def RunKeyboardWaring()
+  echohl WarningMsg
+  echo "В normal mode введені lowercase символи. Перевірте розкладку клавіатури ОС!"
+  echohl None
+enddef
+command KeyboardWaring RunKeyboardWaring()
+
+def RunUppperCaseKeyboardWaring()
+  echohl WarningMsg
+  echo "В normal mode введені UPPERCASE символи. Відключіть CAPSLOCK. Перевірте розкладку клавіатури ОС!"
+  echohl None
+enddef
+command UppperCaseKeyboardWaring RunUppperCaseKeyboardWaring()
+
+for c in range(char2nr('а'), char2nr('я'))
+  execute 'nnoremap ' .. nr2char(c) .. ' :KeyboardWaring<CR>'
+  execute 'vnoremap ' .. nr2char(c) .. ' :KeyboardWaring<CR>'
+endfor
+
+for c in range(char2nr('А'), char2nr('Я'))
+  execute 'nnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardWaring<CR>'
+  execute 'vnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardWaring<CR>'
+endfor
 
 
 # LAYOUT -----------------------------------------------------------------------------
@@ -247,6 +272,9 @@ vnoremap <Leader>rv <Esc>:'<,'>s/\<\>\C//gc<left><left><left><left><left><left><
 
 
 # F keys -----------------------------------------------------------------------------
+inoremap <F1> <Esc>
+nnoremap <F1> <Esc>
+vnoremap <F1> <Esc>
 nnoremap <F3> :vim9cmd <SID>mouseLib.MouseToggle()<CR>
 inoremap <F3> <ESC>:vim9cmd <SID>mouseLib.MouseToggle()<CR>
 cnoremap <F3> <ESC>:vim9cmd <SID>mouseLib.MouseToggle()<CR>
