@@ -70,8 +70,10 @@ augroup MyColors
 augroup end
 
 # g:zenburn_high_Contrast = 1
-colorscheme zenburn
-# colorscheme unokai
+# colorscheme zenburn
+colorscheme unokai
+# colorscheme default
+# set background=light
 
 
 # set linebreak

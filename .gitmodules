@@ -43,3 +43,9 @@
 [submodule "vim/pack/plugins/start/bufexplorer"]
 	path = vim/pack/plugins/start/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer
+[submodule "vim/pack/plugins/start/fzf"]
+	path = vim/pack/plugins/start/fzf
+	url = https://github.com/junegunn/fzf
+[submodule "vim/pack/plugins/start/fzf.vim"]
+	path = vim/pack/plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim

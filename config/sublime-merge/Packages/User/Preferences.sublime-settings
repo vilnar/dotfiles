@@ -8,7 +8,7 @@
 	"caret_style": "solid",
 	"diff_style": "auto",
 	"draw_white_space": "all",
-	"font_face": "Consolas",
+	"font_face": "DejaVu LGC Sans Mono",
 	"font_options":
 	[
 		"no_liga",
@@ -26,5 +26,5 @@
 	"theme_dark": "Merge Dark.sublime-theme",
 	"theme_light": "Merge.sublime-theme",
 	"time_format": "24h",
-	"update_check": false
+	"update_check": false,
 }

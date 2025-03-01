@@ -1,0 +1,110 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+  "variables":
+  {
+    "fg-from-original": "#000000",
+  },
+  "globals":
+  {
+    "brackets_options": "bold glow",
+    "highlight": "#CB9000",
+    "caret": "var(active)",
+    "line_highlight": "#e6e6e6",
+    "selection_border_width": "2",
+    "selection_corner_radius": "3",
+    "brackets_foreground": "var(orange)",
+  },
+  "rules":
+  [
+
+    {
+      "scope": "variable",
+      "foreground": "var(fg-from-original)"
+    },
+    {
+      "name": "Don't highlight regex in string",
+      "scope": "string.quoted keyword.control.anchor.regexp, string.quoted keyword.operator.or.regexp, string.quoted keyword.operator.negation.regexp, string.quoted keyword.operator.quantifier.regexp, string.quoted constant.character.character-class.regexp, string.quoted constant.other.character-class.set.regexp, string.quoted meta.assertion.look-behind.regexp, string.quoted meta.assertion.look-ahead.regexp, string.quoted meta.assertion.no-capture-group.regexp, string.quoted punctuation.definition.group, string.quoted punctuation.definition.string.regex-delimiter, string.quoted punctuation.definition.character-class",
+      "foreground": "var(green)",
+    },
+    {
+      "name": "Don't highlight sql in string",
+      "scope": "meta.string source.sql, meta.string source.sql keyword, meta.string source.sql keyword.operator, meta.string source.sql  keyword.operator.assignment, meta.string source.sql keyword.operator.word, meta.string source.sql keyword.operator.logical, meta.string source.sql storage, meta.string source.sql storage.type, meta.string source.sql constant, meta.string source.sql constant.other, meta.string source.sql constant.numeric, meta.string source.sql punctuation.separator, meta.string source.sql entity.name.function, meta.string source.sql variable.language, meta.string source.sql punctuation.terminator, meta.string keyword.other, meta.string keyword.control, meta.string source.sql constant.language, meta.string source.sql storage.modifier",
+      "foreground": "var(green)"
+    },
+    {
+      "name":       "Definitions",
+      "scope":      "entity.name",
+      "foreground": "#000",
+      "font_style": "bold",
+    },
+    {
+      "name": "String quoted",
+      "scope": "punctuation.definition.string",
+      "foreground": "var(green)"
+    },
+
+    {
+      "name":       "Escapes",
+      "scope":      "constant.character.escape, constant.other.placeholder",
+      "foreground": "var(magenta)"
+    },
+
+    {
+      "name":       "Keyword logical",
+      // "scope":      "keyword",
+      "scope":      "keyword.operator.logical",
+      "foreground": "var(blue)"
+    },
+    {
+      "scope": "constant.numeric.line-number.match",
+      "foreground": "var(red)"
+    },
+    {
+      "name": "markup code",
+      "scope": "markup.raw",
+      "background": "color(var(selection) alpha(0.20))",
+    },
+    {
+      "name": "markup code",
+      "scope": "markup.raw.inline",
+      "background": "color(var(selection) alpha(0.20))",
+    },
+    {
+      "name": "YAML Key",
+      "scope": "entity.name.tag.yaml",
+      "foreground": "var(blue)"
+    },
+    {
+      "name": "YAML String",
+      "scope": "source.yaml string.unquoted",
+      "foreground": "var(fg-from-original)"
+    },
+
+    // TODO: check colors for languages keywords (fix types)
+    {
+      "name": "Keyword",
+      "scope": "keyword - keyword.operator, keyword.operator.word",
+      "foreground": "var(blue)",
+    },
+    {
+      "name": "Storage",
+      "scope": "storage",
+      "foreground": "var(blue)",
+    },
+    {
+      "name": "Library function",
+      "scope": "support.function, support.macro",
+      "foreground": "var(blue)",
+    },
+    {
+      "name": "Library constant",
+      "scope": "support.constant",
+      "foreground": "var(blue)",
+    },
+    {
+      "name": "Operator assignment",
+      "scope": "keyword.operator.assignment",
+      "foreground": "var(blue)",
+    },
+  ]
+}

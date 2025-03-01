@@ -1,4 +1,5 @@
 {
+  "disable_plugin_host_3.3": true,
   // autocomplete
   "auto_complete": true,
   "auto_complete_use_index": false,
@@ -84,8 +85,10 @@
   // "font_size": 10,
   // "font_face": "Cascadia Mono",
   // "font_size": 10,
-  "font_face": "Consolas",
-  "font_size": 15,
+  // "font_face": "Consolas",
+  "font_face": "DejaVu LGC Sans Mono",
+  "font_size": 11,
+  "default_font_size": 11,
   "font_options":
   [
     // "gdi",
@@ -126,6 +129,7 @@
   "dictionary": "Packages/Dictionaries/uk_UA.dic",
   "ignored_packages":
   [
+    "Crontab",
     "SublimeLinter",
     "SublimeLinter-contrib-staticcheck",
     "SublimeLinter-php",

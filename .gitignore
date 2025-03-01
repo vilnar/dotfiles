@@ -5,3 +5,12 @@ vim/syntax/
 vim/lib/custom.vim
 vim/customsnippets/
 
+# subl
+config/sublime-text/Packages/markupsafe
+config/sublime-text/Packages/mdpopups
+config/sublime-text/Packages/pygments
+config/sublime-text/Packages/pymdownx
+config/sublime-text/Packages/python-jinja2
+config/sublime-text/Packages/python-markdown
+config/sublime-text/Packages/pyyaml
+
