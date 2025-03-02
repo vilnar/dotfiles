@@ -21,6 +21,8 @@ g:fuzzyy_devicons = 0
 # noticed delays if the file is updated very often
 set autoread
 
+g:fern#default_hidden = 1
+
 var options = {
     completor: { shuffleEqualPriority: true, postfixHighlight: true },
     buffer: { enable: true, priority: 10, urlComplete: true, envComplete: true },
