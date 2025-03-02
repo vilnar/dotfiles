@@ -311,8 +311,10 @@ nnoremap <leader><backspace> @:
 
 # PLUGINS -----------------------------------------------------------------------------
 # nnoremap <leader>nt :Ex<CR>
-nnoremap <leader>nt :NERDTreeToggle<CR>
-nnoremap <leader>nf :NERDTreeFind<CR>
+# nnoremap <leader>nt :NERDTreeToggle<CR>
+# nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>nt :Fern . -drawer<CR>
+nnoremap <leader>nf :Fern . -drawer -reveal=%<CR>
 
 # nnoremap <leader>nt :EasyTreeToggle<CR>
 # nnoremap <leader>nf :EasyTreeBufferReveal<CR>

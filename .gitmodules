@@ -37,9 +37,6 @@
 [submodule "vim/pack/plugins/start/Zenburn"]
 	path = vim/pack/plugins/start/Zenburn
 	url = https://github.com/jnurmine/Zenburn
-[submodule "vim/pack/plugins/start/nerdtree"]
-	path = vim/pack/plugins/start/nerdtree
-	url = https://github.com/preservim/nerdtree
 [submodule "vim/pack/plugins/start/bufexplorer"]
 	path = vim/pack/plugins/start/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer
@@ -49,3 +46,6 @@
 [submodule "vim/pack/plugins/start/fzf.vim"]
 	path = vim/pack/plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "vim/pack/plugins/start/vim-fern"]
+	path = vim/pack/plugins/start/vim-fern
+	url = https://github.com/lambdalisue/vim-fern.git
