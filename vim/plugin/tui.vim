@@ -69,9 +69,9 @@ augroup MyColors
   }
 augroup end
 
+g:zenburn_alternate_Visual = 1
 g:zenburn_high_Contrast = 1
-# colorscheme zenburn
-colorscheme unokai
+colorscheme zenburn
 # colorscheme default
 # set background=light
 
