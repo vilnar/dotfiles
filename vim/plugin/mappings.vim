@@ -212,7 +212,7 @@ command KeyboardWaring RunKeyboardWaring()
 
 def RunUppperCaseKeyboardWaring()
   echohl WarningMsg
-  echo "В normal mode введені UPPERCASE символи. Відключіть CAPSLOCK. Перевірте розкладку клавіатури ОС!"
+  echo "В normal mode введені UPPERCASE символи. Перевірте розкладку клавіатури ОС!"
   echohl None
 enddef
 command UppperCaseKeyboardWaring RunUppperCaseKeyboardWaring()

@@ -12,30 +12,25 @@
     "Fmt",
     "GraphQL",
     "HexViewer",
-    "Nord",
     "Package Control",
-    "PHP CS Fixer",
     "PowerShell",
     "Protobuf Syntax Hightlighting",
     "Repeat Macro",
     "SideBarTools",
     "Spreadsheet Formula",
     "SSH Config",
-    "SublimeLinter",
-    "SublimeLinter-contrib-staticcheck",
-    "SublimeLinter-php",
     "TOML",
     "View Bookmarks",
   ],
   "auto_upgrade": false,
   "submit_usage": false,
-  "in_process_packages":
-  [
-  ],
   "bootstrapped": true,
 
   // these packages are manually modified
   "ignore_vcs_packages": [
     "Tab Filter",
+  ],
+  "in_process_packages":
+  [
   ],
 }

@@ -85,10 +85,10 @@
   // "font_size": 10,
   // "font_face": "Cascadia Mono",
   // "font_size": 10,
-  // "font_face": "Consolas",
-  "font_face": "DejaVu LGC Sans Mono",
-  "font_size": 11,
-  "default_font_size": 11,
+  "font_face": "Consolas",
+  // "font_face": "DejaVu LGC Sans Mono",
+  "font_size": 13,
+  "default_font_size": 13,
   "font_options":
   [
     // "gdi",
@@ -129,10 +129,7 @@
   "dictionary": "Packages/Dictionaries/uk_UA.dic",
   "ignored_packages":
   [
-    "Crontab",
     "SublimeLinter",
-    "SublimeLinter-contrib-staticcheck",
-    "SublimeLinter-php",
     "Vintage",
   ],
 
@@ -142,7 +139,7 @@
   "dark_color_scheme": "Mariana.sublime-color-scheme",
   "dark_font_face": "Jetbrains Mono NL",
   "dark_font_size": 13.5,
-  "color_scheme": "Mariana.sublime-color-scheme",
+  "color_scheme": "Alabaster Dark.sublime-color-scheme",
   // vintage
   "vintage_start_in_command_mode": true,
   "vintage_ctrl_keys": true,

@@ -3,11 +3,11 @@ vim9script
 set guioptions=cM
 
 if has("win32")
-	# set guifont=Consolas:h12
-	# set guifont=Courier\ New:h12
-	set guifont=Dejavu\ LGC\ Sans\ Mono:h11
+  set guifont=Consolas:h12
+  # set guifont=Courier\ New:h12
+  # set guifont=Dejavu\ LGC\ Sans\ Mono:h12
 else
-	set guifont=Dejavu\ Sans\ Mono\ 12.5
+  set guifont=Dejavu\ Sans\ Mono\ 12.5
 endif
 
 # disable blink cursor

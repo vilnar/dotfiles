@@ -22,6 +22,9 @@ g:fuzzyy_devicons = 0
 set autoread
 
 g:fern#default_hidden = 1
+g:fern#disable_drawer_smart_quit = 1
+g:fern#drawer_width = 35
+g:fern#renderer#default#leading = "  "
 
 var options = {
     completor: { shuffleEqualPriority: true, postfixHighlight: true },

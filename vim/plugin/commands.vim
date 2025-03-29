@@ -9,24 +9,63 @@ augroup AutoSettingsFileType
   }
 augroup END
 
-augroup DiffOption
-  autocmd OptionSet diff {
-    if &diff
-      setlocal syntax=OFF
-      setlocal list
-    else
-      setlocal syntax=ON
-      setlocal list!
-    endif
-  }
-  # vimdiff
-  autocmd VimEnter * {
-    if &diff
-      getwininfo()->map((_, v) => win_execute(v.winid, 'setlocal syntax=OFF list'))
-    endif
-  }
+# augroup DiffOption
+#   autocmd OptionSet diff {
+#     if &diff
+#       setlocal syntax=OFF
+#       setlocal list
+#     else
+#       setlocal syntax=ON
+#       setlocal list!
+#     endif
+#   }
+#   # vimdiff
+#   autocmd VimEnter * {
+#     if &diff
+#       getwininfo()->map((_, v) => win_execute(v.winid, 'setlocal syntax=OFF list'))
+#     endif
+#   }
+# augroup END
+
+augroup netrw_mapping
+  autocmd filetype netrw call NetrwMapping()
 augroup END
 
+
+def NetrwCopyPath()
+  var path = netrw#Call('NetrwFile', netrw#Call('NetrwGetWord')) 
+  @+ = path
+  echo "copied to clipboard path: " .. path
+enddef
+
+def NetrwMapping()
+  noremap <buffer> y :vim9cmd <SID>NetrwCopyPath()<CR>
+enddef
+
+augroup fern_mapping
+  autocmd filetype fern call FernMapping()
+augroup END
+
+def FernCopyPath()
+  var helper = fern#helper#new()
+  var node = helper.sync.get_cursor_node()
+  var path = node._path
+  @+ = path
+  echo "copied to clipboard path: " .. path
+enddef
+
+def FernCopyName()
+  var helper = fern#helper#new()
+  var node = helper.sync.get_cursor_node()
+  var path = node.name
+  @+ = path
+  echo "copied to clipboard name: " .. path
+enddef
+
+def FernMapping()
+  noremap <buffer> yy :vim9cmd <SID>FernCopyPath()<CR>
+  noremap <buffer> yn :vim9cmd <SID>FernCopyName()<CR>
+enddef
 
 # augroup FugitiveCustom
 #   autocmd FileType fugitive setlocal bufhidden=

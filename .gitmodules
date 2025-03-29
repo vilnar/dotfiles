@@ -34,9 +34,6 @@
 [submodule "vim/pack/plugins/start/vimcomplete"]
 	path = vim/pack/plugins/start/vimcomplete
 	url = https://github.com/girishji/vimcomplete
-[submodule "vim/pack/plugins/start/Zenburn"]
-	path = vim/pack/plugins/start/Zenburn
-	url = https://github.com/jnurmine/Zenburn
 [submodule "vim/pack/plugins/start/fzf"]
 	path = vim/pack/plugins/start/fzf
 	url = https://github.com/junegunn/fzf
