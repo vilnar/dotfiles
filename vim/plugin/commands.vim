@@ -7,6 +7,9 @@ augroup AutoSettingsFileType
   autocmd BufRead,BufNewFile www.conf {
     setlocal filetype=dosini
   }
+  autocmd BufRead,BufNewFile *.gohtml {
+    setlocal filetype=html
+  }
 augroup END
 
 # augroup DiffOption

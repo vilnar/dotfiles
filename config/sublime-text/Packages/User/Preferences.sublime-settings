@@ -2,14 +2,14 @@
   "disable_plugin_host_3.3": true,
   // autocomplete
   "auto_complete": true,
-  "auto_complete_use_index": false,
+  "auto_complete_use_index": true,
   "auto_complete_commit_on_tab": true,
   // "tab_completion": true,
   // "auto_complete_cycle": true,
   // "auto_complete_preserve_order": "none",
 
   // index files
-  "index_files": false,
+  "index_files": true,
   "index_exclude_gitignore": false,
   "show_definitions": false,
 

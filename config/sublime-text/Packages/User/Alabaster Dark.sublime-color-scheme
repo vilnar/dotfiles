@@ -5,10 +5,24 @@
   },
   "globals":
   {
-    "brackets_options": "bold glow",
+    "brackets_options": "bold glow underline",
   },
   "rules":
   [
-    
+    {"name":       "Definitions",
+     "scope":      "entity.name",
+     "foreground": "#CD974B"},
+
+    {"name":       "keyword",
+     "scope":      "keyword",
+     "foreground": "#71ADE7"},
+
+    {"name":       "type",
+     "scope":      "support.type, storage.type",
+     "foreground": "#71ADE7"},
+
+     {"name":       "entity Other",
+      "scope":      "entity.other",
+      "foreground": "#71ADE7"},
   ]
 }
