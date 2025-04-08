@@ -38,7 +38,8 @@ augroup MyColors
   }
 augroup end
 
-colorscheme retrobox
+# colorscheme retrobox
+colorscheme apprentice
 # colorscheme default
 # set background=light
 

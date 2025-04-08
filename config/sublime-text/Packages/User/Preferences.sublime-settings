@@ -79,16 +79,10 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  // "font_face": "Inconsolata LGC Nerd Font Mono",
-  // "font_size": 10,
-  // "font_face": "DejaVu Sans Mono",
-  // "font_size": 10,
-  // "font_face": "Cascadia Mono",
-  // "font_size": 10,
-  "font_face": "Consolas",
-  // "font_face": "DejaVu LGC Sans Mono",
-  "font_size": 13,
-  "default_font_size": 13,
+  "font_face": "Fira Code",
+  "default_font_size": 11,
+  "line_padding_top": 3,
+  "line_padding_bottom": 3,
   "font_options":
   [
     // "gdi",
@@ -133,12 +127,12 @@
     "Vintage",
   ],
 
-  "light_color_scheme": "Celeste.sublime-color-scheme",
-  "light_font_face": "Jetbrains Mono NL Light",
-  "light_font_size": 13.5,
-  "dark_color_scheme": "Mariana.sublime-color-scheme",
-  "dark_font_face": "Jetbrains Mono NL",
-  "dark_font_size": 13.5,
+  "light_color_scheme": "Alabaster.sublime-color-scheme",
+  "light_font_face": "Fira Code",
+  "light_font_size": 11,
+  "dark_color_scheme": "Alabaster Dark.sublime-color-scheme",
+  "dark_font_face": "Fira Code",
+  "dark_font_size": 11,
   "color_scheme": "Alabaster Dark.sublime-color-scheme",
   // vintage
   "vintage_start_in_command_mode": true,

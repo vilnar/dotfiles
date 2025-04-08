@@ -68,6 +68,7 @@ enddef
 def FernMapping()
   noremap <buffer> yy :vim9cmd <SID>FernCopyPath()<CR>
   noremap <buffer> yn :vim9cmd <SID>FernCopyName()<CR>
+  noremap <buffer> o <Plug>(fern-action-preview)
 enddef
 
 # augroup FugitiveCustom

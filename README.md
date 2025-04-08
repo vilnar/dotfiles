@@ -22,6 +22,7 @@ sudo apt install git make fd-find
 
 ```
 git submodule add {plugin_repo} vim/pack/plugins/start/{plugin_name}
+git submodule add https://github.com/romainl/Apprentice vim/pack/plugins/start/Apprentice
 ```
 
 ### remove plugin

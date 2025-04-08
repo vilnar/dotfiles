@@ -5,7 +5,7 @@ export def StatuslineExpr(): string
   var modified = "%{&modified ? '[+] ' : ''}"
   var readonly  = "%{&readonly ? '[RO] ' : ''}"
   var separate = " %= "
-  var win_nr = " [%{winnr()}] "
+  # var win_nr = " [%{winnr()}] "
   var indentaition = "%{&expandtab ? 'S:' .. shiftwidth() : 'T:' .. shiftwidth()}"
   var ftype  = "%{empty(&filetype) ? '' : '  [' .. &filetype .. '] '}"
   var fformat  = "%{empty(&fileformat) ? '' : '[' .. &fileformat .. '] '}"
@@ -33,7 +33,7 @@ export def StatuslineExpr(): string
   # endif
   # echomsg printf("debug %s", color)
   # return color .. file_path .. modified .. readonly .. lang .. "%0*" .. separate .. win_nr .. fformat .. indentaition .. ftype .. position .. percent
-  return file_path .. modified .. readonly .. win_nr .. "%0*" .. separate .. lang ..  fformat .. indentaition .. ftype .. position .. percent
+  return file_path .. modified .. readonly .. "%0*" .. separate .. lang ..  fformat .. indentaition .. ftype .. position .. percent
 enddef
 
 

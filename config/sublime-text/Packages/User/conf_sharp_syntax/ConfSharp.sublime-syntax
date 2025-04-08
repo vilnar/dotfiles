@@ -11,6 +11,7 @@ file_extensions:
   - .env.local
   - .env.sample
   - .env.example
+  - .env-example
   - .env.test
   - .env.test.local
   - .env.testing
