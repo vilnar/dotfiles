@@ -26,9 +26,12 @@ g:fern#disable_drawer_smart_quit = 1
 g:fern#drawer_width = 35
 g:fern#renderer#default#leading = "  "
 
+set complete=.,b,u,t
+# set complete=.,t
 var options = {
     completor: { shuffleEqualPriority: true, postfixHighlight: true },
-    buffer: { enable: true, priority: 10, urlComplete: true, envComplete: true },
+    # buffer: { enable: true, priority: 10, completionMatcher: "fuzzy" },
+    buffer: { enable: true, priority: 10 },
     abbrev: { enable: true, priority: 10 },
     lsp: { enable: false},
     omnifunc: { enable: false },

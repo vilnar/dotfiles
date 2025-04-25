@@ -5,7 +5,7 @@ set ignorecase smartcase incsearch hlsearch
 set ruler
 set mouse=
 
-set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$
+set listchars=tab:>\ ,space:.,trail:*,precedes:<,extends:>,eol:$,nbsp:␣
 
 set encoding=utf-8
 set fileencoding=utf-8

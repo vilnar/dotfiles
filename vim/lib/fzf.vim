@@ -21,13 +21,13 @@ command -bang -nargs=* CustomFzfBufferTags call RunCustomFzfBufferTags(<q-args>,
 
 
 def RunCustomFzfFiles(query: string)
-  var window = 'hidden'
-  # var window = '+{2}-/2'
+  # var window = 'hidden'
+  var window = '+{2}-/2'
   # var window = 'down'
   var spec = {"options": ['--preview-window', window]}
   call fzf#vim#files(query, fzf#vim#with_preview(spec), 0)
 enddef
-command -bang -nargs=? -complete=dir CustomFzfFiles call RunCustomFzfFiles(<q-args>)
+command! -bang -nargs=? -complete=dir CustomFzfFiles call RunCustomFzfFiles(<q-args>)
 
 # https://github.com/sharkdp/fd
 # $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --exclude .git --no-ignore'

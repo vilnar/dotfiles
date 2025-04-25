@@ -38,7 +38,7 @@ def EvalSelected()
   var text = funcLib.GetVisualSelection(visualmode())
   exec ":" .. text
 enddef
-vnoremap <Leader>e :<C-U> vim9cmd <SID>EvalSelected()<CR>
+vnoremap <Leader>ee :<C-U> vim9cmd <SID>EvalSelected()<CR>
 
 # https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
 execute "set <M-j>=\ej"
@@ -113,7 +113,6 @@ nnoremap <Leader>qq :bw %<CR>
 # nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
 nnoremap \b :ls<CR>:b
 # nnoremap <leader>b :Buffers<CR>
-# nnoremap <leader>b :BuffergatorOpen<CR>
 nnoremap <leader>b :BufExplorer<CR>
 
 # FILE -----------------------------------------------------------------------------

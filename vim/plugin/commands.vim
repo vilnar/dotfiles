@@ -103,7 +103,6 @@ command Messages :enew | put = execute('messages')
 
 
 def RunFeeMode()
-  set guifont=Courier\ New:h14
   Goyo
 enddef
 command FreeMode RunFeeMode()

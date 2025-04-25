@@ -8,15 +8,15 @@
 	"caret_style": "solid",
 	"diff_style": "auto",
 	"draw_white_space": "all",
-	"font_face": "Fira Code",
+	"font_face": "JetBrains Mono NL",
 	"font_options":
 	[
 		"no_liga",
 		"no_calt"
 	],
 	"font_size": 11,
-	"line_padding_top": 3,
-	"line_padding_bottom": 3,
+	"line_padding_top": 1,
+	"line_padding_bottom": 1,
 	"highlight_line": false,
 	"image_diff_style": "onion-skin",
 	"line_padding_bottom": 1,

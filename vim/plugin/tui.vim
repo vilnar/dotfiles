@@ -20,8 +20,6 @@ augroup InsertHl
   autocmd InsertLeave * set cursorlineopt=number
 augroup END
 
-set diffopt+=inline:char
-
 # scroll with wrap, work with CTRL-E, CTRL-Y, mouse
 set smoothscroll
 
@@ -38,10 +36,23 @@ augroup MyColors
   }
 augroup end
 
+
+if (v:versionlong > 9011243)
+  set diffopt+=inline:char
+endif
+# colorscheme apprentice
 # colorscheme retrobox
-colorscheme apprentice
-# colorscheme default
-# set background=light
+colorscheme lunaperche
+
+def RunBackgroundToggle()
+  if &background == "dark"
+    set background=light
+  else
+    set background=dark
+  endif
+enddef
+command BackgroundToggle RunBackgroundToggle()
+
 
 
 # set linebreak
@@ -58,9 +69,6 @@ set path=,,
 set wildoptions=pum pumheight=20 pumwidth=50
 set shortmess-=S
 set showcmd
-# set complete=.,b,u,t
-# set complete=.,t
-set complete=.,w
 
 set splitbelow
 # set splitright
