@@ -29,7 +29,7 @@ enddef
 command -nargs=1 SearchInOpenedBuffers SearchInOpenedBuffers(<f-args>)
 
 
-const ESCAPE_CHARS = '\- \* \$ \[ \] \.'
+const ESCAPE_CHARS = '\- \* \$ \[ \] \. \( \) \+'
 
 def EscapeText(text: string): string
   var text_esc = escape(text, ESCAPE_CHARS)

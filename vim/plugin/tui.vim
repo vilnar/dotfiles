@@ -32,7 +32,9 @@ augroup MyColors
     # hi CursorLine    cterm=NONE ctermfg=NONE guifg=NONE
     # hi CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
     hi CurSearch gui=reverse cterm=reverse
-    hi ExtraWhitespace guibg=#7E8E91
+  }
+  autocmd ColorScheme unokai {
+    hi! link markdownCode String
   }
 augroup end
 
@@ -40,9 +42,8 @@ augroup end
 if (v:versionlong > 9011243)
   set diffopt+=inline:char
 endif
-# colorscheme apprentice
 # colorscheme retrobox
-colorscheme lunaperche
+colorscheme unokai
 
 def RunBackgroundToggle()
   if &background == "dark"
@@ -51,7 +52,7 @@ def RunBackgroundToggle()
     set background=dark
   endif
 enddef
-command BackgroundToggle RunBackgroundToggle()
+command BackgroundToggleLightDark RunBackgroundToggle()
 
 
 

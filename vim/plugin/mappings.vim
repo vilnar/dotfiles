@@ -17,6 +17,7 @@ import "../lib/func.vim" as funcLib
 noremap <Leader>y "+y
 noremap <Leader>p "+p
 noremap <Leader>P "+P
+vnoremap <Leader>y "+y
 # noremap <Leader>d "+d
 
 # Easier moving of code blocks
@@ -310,6 +311,7 @@ nnoremap <leader><backspace> @:
 
 # PLUGINS -----------------------------------------------------------------------------
 # nnoremap <leader>nt :Ex<CR>
+# nnoremap <leader>nf :Vex<CR>
 # nnoremap <leader>nt :NERDTreeToggle<CR>
 # nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nt :Fern . -drawer<CR>
@@ -325,9 +327,9 @@ nnoremap <leader>nf :Fern . -drawer -reveal=%<CR>
 # nnoremap ,i :ALEGoToImplementation<CR>
 # nnoremap ,t :ALEGoToTypeDefinition<CR>
 # nnoremap ,h :ALEHover<CR>
-nnoremap ,l :ALEPopulateLocList<CR>
-nnoremap ,n :ALEPreviousWrap<CR>
-nnoremap ,p :ALENextWrap<CR>
+# nnoremap ,l :ALEPopulateLocList<CR>
+# nnoremap ,n :ALEPreviousWrap<CR>
+# nnoremap ,p :ALENextWrap<CR>
 # nnoremap ,s :ALESymbolSearch<CR>
 
 

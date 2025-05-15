@@ -82,13 +82,13 @@
   "font_face": "JetBrains Mono NL",
   "font_size": 11,
   "default_font_size": 11,
-  "line_padding_top": 1,
-  "line_padding_bottom": 1,
+  // "line_padding_top": 1,
+  // "line_padding_bottom": 1,
   "font_options":
   [
     // "gdi",
-    "no_liga",
-    "no_calt",
+    // "no_liga",
+    // "no_calt",
     // "ss01", // r
     // "ss02", // <= >=
     // "ss03", // &
@@ -129,12 +129,12 @@
   ],
 
   "light_color_scheme": "Alabaster.sublime-color-scheme",
-  "light_font_face": "Fira Code",
-  "light_font_size": 11,
+  "light_font_face": "JetBrains Mono NL",
+  "light_font_size": 10.5,
   "dark_color_scheme": "Alabaster Dark.sublime-color-scheme",
-  "dark_font_face": "Fira Code",
-  "dark_font_size": 11,
-  "color_scheme": "Alabaster Dark.sublime-color-scheme",
+  "dark_font_face": "JetBrains Mono NL",
+  "dark_font_size": 10.5,
+  "color_scheme": "Monokai.sublime-color-scheme",
   // vintage
   "vintage_start_in_command_mode": true,
   "vintage_ctrl_keys": true,

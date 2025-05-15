@@ -48,7 +48,7 @@ g:bufExplorerShowRelativePath = 1
 g:bufExplorerDisableDefaultKeyMapping = 1
 g:bufExplorerShowTabBuffer = 0
 g:bufExplorerShowUnlisted = 0
-g:bufExplorerFindActive = 1
+g:bufExplorerFindActive = 0
 
 # g:buffergator_suppress_keymaps = 1
 # g:buffergator_viewport_split_policy = "n"

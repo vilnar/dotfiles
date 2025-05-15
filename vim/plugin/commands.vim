@@ -12,6 +12,7 @@ augroup AutoSettingsFileType
   }
 augroup END
 
+
 # augroup DiffOption
 #   autocmd OptionSet diff {
 #     if &diff
@@ -41,8 +42,21 @@ def NetrwCopyPath()
   echo "copied to clipboard path: " .. path
 enddef
 
+def NetrwCopyFileName()
+  var path = netrw#Call('NetrwFile', netrw#Call('NetrwGetWord')) 
+  var name = ""
+  if isdirectory(path)
+    name = fnamemodify(path, ':p:h')
+  else
+    name = fnamemodify(path, ':t')
+  endif
+  @+ = name
+  echo "copied to clipboard name: " .. name
+enddef
+
 def NetrwMapping()
-  noremap <buffer> y :vim9cmd <SID>NetrwCopyPath()<CR>
+  noremap <buffer> yy :vim9cmd <SID>NetrwCopyPath()<CR>
+  noremap <buffer> yn :vim9cmd <SID>NetrwCopyFileName()<CR>
 enddef
 
 augroup fern_mapping
