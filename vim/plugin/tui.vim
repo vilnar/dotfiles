@@ -34,6 +34,7 @@ augroup MyColors
     hi CurSearch gui=reverse cterm=reverse
   }
   autocmd ColorScheme unokai {
+    hi! link Label PreProc
     hi! link markdownCode String
   }
 augroup end
@@ -41,9 +42,10 @@ augroup end
 
 if (v:versionlong > 9011243)
   set diffopt+=inline:char
+  colorscheme unokai
+else
+  colorscheme apprentice
 endif
-# colorscheme retrobox
-colorscheme unokai
 
 def RunBackgroundToggle()
   if &background == "dark"
