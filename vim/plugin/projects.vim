@@ -1,12 +1,13 @@
 vim9script
 
-if filereadable("../lib/custom.vim")
+if filereadable(expand("$MYVIMDIR/lib/custom.vim"))
   import "../lib/custom.vim" as custom
 endif
 
 var PROJECTS = [
   {id: 1, name: 'Code', dir: '~/Code', execs: []}
 ]
+# echomsg printf("debug %s", custom.PROJECTS)
 if exists("custom.PROJECTS")
   PROJECTS = custom.PROJECTS
 endif
