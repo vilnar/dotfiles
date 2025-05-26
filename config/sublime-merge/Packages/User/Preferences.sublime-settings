@@ -14,13 +14,11 @@
 		"no_liga",
 		"no_calt"
 	],
-	"font_size": 10,
-	"line_padding_top": 1,
-	"line_padding_bottom": 1,
+	"font_size": 11,
 	"highlight_line": false,
 	"image_diff_style": "onion-skin",
-	/*"line_padding_bottom": 1,*/
-	/*"line_padding_top": 1,*/
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
 	"overlay_scroll_bars": "disabled",
 	"remember_workspace": false,
 	"side_bar_layout": "tabs",
@@ -28,5 +26,5 @@
 	"theme_dark": "Merge Dark.sublime-theme",
 	"theme_light": "Merge.sublime-theme",
 	"time_format": "24h",
-	"update_check": false,
+	"update_check": false
 }

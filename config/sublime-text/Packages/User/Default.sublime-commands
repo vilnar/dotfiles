@@ -19,4 +19,6 @@
   { "caption": "Project: Restart", "command": "project_restart" },
   { "caption": "Repeat Paste", "command": "repeat_paste" },
   { "caption": "Test Command", "command": "test" },
+  { "caption": "Next Misspelling", "command": "next_misspelling" },
+  { "caption": "Prev Misspelling", "command": "prev_misspelling" },
 ]

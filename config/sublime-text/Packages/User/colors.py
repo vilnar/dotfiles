@@ -7,7 +7,14 @@ DEFAULT_COLOR_SCHEME = "Mariana.sublime-color-scheme"
 DEFAULT_FONT_FACE = "Monospace"
 DEFAULT_FONT_SIZE = 13
 EDITOR_PREFERENCES = "Preferences.sublime-settings"
-MERGE_PREFERENCES = ".config/sublime-merge/Packages/User/Preferences.sublime-settings"
+
+
+def GET_MERGE_PREFERENCES():
+    if os.name == 'nt':
+        return "~\\AppData\\Roaming\\Sublime Merge\\Packages\\User\\Preferences.sublime-settings"
+    else:
+        return "~/.config/sublime-merge/Packages/User/Preferences.sublime-settings"
+
 
 class ColorSchemeToggleCommand(sublime_plugin.TextCommand):
     def run(self, edit, **args):
@@ -56,7 +63,8 @@ class ColorSchemeToggleCommand(sublime_plugin.TextCommand):
 
     @staticmethod
     def get_smerge_path():
-        return "{}/{}".format(str(Path.home()), MERGE_PREFERENCES)
+        return os.path.abspath(os.path.expanduser(GET_MERGE_PREFERENCES()))
 
     def is_enabled(self):
+        # print("debug")
         return os.path.exists(self.get_smerge_path())

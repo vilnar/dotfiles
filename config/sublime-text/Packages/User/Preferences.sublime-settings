@@ -130,10 +130,10 @@
 
   "light_color_scheme": "Alabaster.sublime-color-scheme",
   "light_font_face": "JetBrains Mono NL",
-  "light_font_size": 10.5,
-  "dark_color_scheme": "Alabaster Dark.sublime-color-scheme",
+  "light_font_size": 11,
+  "dark_color_scheme": "Monokai.sublime-color-scheme",
   "dark_font_face": "JetBrains Mono NL",
-  "dark_font_size": 10.5,
+  "dark_font_size": 11,
   "color_scheme": "Monokai.sublime-color-scheme",
   // vintage
   "vintage_start_in_command_mode": true,
