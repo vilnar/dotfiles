@@ -13,10 +13,21 @@ if exists("custom.PROJECTS")
 endif
 
 
-def FzfCallback(name: string)
+def ShowProjects()
+  echo printf("Project list:\n")
+  for i in PROJECTS
+    echo printf(" %d %s\n", i.id, i.name)
+  endfor
+
+  feedkeys(':P ')
+enddef
+command ProjectsShow :vim9cmd ShowProjects()
+
+
+def PCallback(id: string)
   var project = {}
   for i in PROJECTS
-    if i.name == name
+    if i.id == str2nr(id)
       project = i
     endif
   endfor
@@ -31,15 +42,4 @@ def FzfCallback(name: string)
   endfor
   echo "Opened selected project " .. project.name
 enddef
-
-
-def ShowProjects()
-  var items = []
-  for i in PROJECTS
-    add(items, i.name)
-  endfor
-
-  call fzf#run(fzf#wrap({'source': items, 'sink': function('FzfCallback')}))
-enddef
-
-command ProjectsShow :vim9cmd ShowProjects()
+command -bang -nargs=* P call PCallback(<q-args>)

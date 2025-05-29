@@ -42,10 +42,9 @@ augroup end
 
 if (v:versionlong > 9011243)
   set diffopt+=inline:char
-  colorscheme unokai
-else
-  colorscheme andrew
 endif
+
+colorscheme andrew
 
 def RunBackgroundToggle()
   if &background == "dark"
