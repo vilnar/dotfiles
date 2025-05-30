@@ -13,6 +13,8 @@ import "../lib/buffer.vim" as bufferLib
 import "../lib/whitespace.vim" as whitespaceLib
 import "../lib/func.vim" as funcLib
 
+import autoload 'scope/fuzzy.vim'
+
 # OS clipboard yank and paste
 noremap <Leader>y "+y
 noremap <Leader>p "+p
@@ -157,11 +159,16 @@ vnoremap <Leader>fp y:vim9cmd FilesBuffer !find * -not -path "./.git/*" -path "*
   # nnoremap <expr> <leader>fu ':CustomFzfFiles<CR>' .. expand('<cword>')
 # else
   # default find
-  nnoremap <leader>; :
-  nnoremap <leader>ff :find **/*
-  nnoremap <expr> <leader>fu ':find **/*' .. expand('<cword>')
-  xnoremap <leader>ff :<C-U> vim9cmd <SID>fzfLib.GotoSelection()<CR>
-  nnoremap <leader>mm :marks<CR>
+  # nnoremap <leader>; :
+  # nnoremap <leader>ff :find **/*
+  # nnoremap <expr> <leader>fu ':find **/*' .. expand('<cword>')
+  # nnoremap <leader>mm :marks<CR>
+  
+  # scope vim
+  nnoremap <leader>; <SCRIPTCMD>fuzzy.Command()<CR>
+  nnoremap <LEADER>ff <SCRIPTCMD>fuzzy.File()<CR>
+  nnoremap <LEADER>jj <SCRIPTCMD>fuzzy.Jumplist()<CR>
+  nnoremap <leader>mm <SCRIPTCMD>fuzzy.Mark()<CR>
 # endif
 
 
