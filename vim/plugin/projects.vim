@@ -19,15 +19,15 @@ def ShowProjects()
     echo printf(" %d %s\n", i.id, i.name)
   endfor
 
-  feedkeys(':P ')
+  feedkeys(':ProjectMy ')
 enddef
 command ProjectsShow :vim9cmd ShowProjects()
 
 
-def PCallback(id: string)
+def GoToProject(query: string)
   var project = {}
   for i in PROJECTS
-    if i.id == str2nr(id)
+    if i.id == str2nr(query) || i.name == query
       project = i
     endif
   endfor
@@ -42,4 +42,12 @@ def PCallback(id: string)
   endfor
   echo "Opened selected project " .. project.name
 enddef
-command -bang -nargs=* P call PCallback(<q-args>)
+
+def ProjectCompletion(arglead: string, cmdline: string, curpos: number): list<string>
+  var names: list<string>
+  for i in PROJECTS
+    add(names, printf("%s", i.name))
+  endfor
+  return filter(names, 'v:val =~ "^' .. arglead .. '"')
+enddef
+command -nargs=* -complete=customlist,ProjectCompletion ProjectMy GoToProject(<q-args>)
