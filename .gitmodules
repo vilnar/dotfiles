@@ -34,12 +34,6 @@
 [submodule "vim/pack/plugins/start/vimcomplete"]
 	path = vim/pack/plugins/start/vimcomplete
 	url = https://github.com/girishji/vimcomplete
-[submodule "vim/pack/plugins/start/fzf"]
-	path = vim/pack/plugins/start/fzf
-	url = https://github.com/junegunn/fzf
-[submodule "vim/pack/plugins/start/fzf.vim"]
-	path = vim/pack/plugins/start/fzf.vim
-	url = https://github.com/junegunn/fzf.vim
 [submodule "vim/pack/plugins/start/vim-fern"]
 	path = vim/pack/plugins/start/vim-fern
 	url = https://github.com/lambdalisue/vim-fern.git
@@ -49,6 +43,3 @@
 [submodule "vim/pack/plugins/start/emmet"]
 	path = vim/pack/plugins/start/emmet
 	url = https://github.com/mattn/emmet-vim.git
-[submodule "vim/pack/plugins/start/Apprentice"]
-	path = vim/pack/plugins/start/Apprentice
-	url = https://github.com/romainl/Apprentice

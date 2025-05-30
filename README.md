@@ -9,12 +9,11 @@ make help
 ## Requirements
 
 ```
-sudo apt install git make fd-find
+git
+make
+rg
 ```
 
-[fzf](https://github.com/junegunn/fzf)
-
-[ctags](https://github.com/universal-ctags/ctags)
 
 ## submodules
 
