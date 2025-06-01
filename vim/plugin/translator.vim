@@ -6,21 +6,25 @@ import "../lib/func.vim" as funcLib
 g:translator_buffer_id = 0
 
 def RunTranslate()
-  var text = funcLib.GetVisualSelectionForCLI(visualmode())
-  var command = printf('translator -text="%s"', text)
-  # echomsg printf("debug command\\n%s\\n", command)
-  var output = system(command)
-
   if g:translator_buffer_id > 0
     execute 'bwipeout ' .. g:translator_buffer_id
   endif
 
-  execute ':new [translator]'
+  var text = funcLib.GetVisualSelectionForCLI(visualmode())
+  # echomsg printf("debug command\\n%s\\n", command)
+  # var output = system(command)
+
+  # run async job and move output to buffer
+  var command = printf('translator -text="%s"', text)
+  var job = job_start(command, {'out_io': 'buffer', 'out_name': 'translator'})
+
+  split | buffer translator
   g:translator_buffer_id = bufnr()
   setlocal buftype=nofile
   setlocal bufhidden=hide
   setlocal noswapfile
-  append(0, split(output, '\n'))
+  # go to prev window
+  feedkeys("\<C-w>p")
 enddef
 
 
