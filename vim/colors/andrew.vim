@@ -16,7 +16,8 @@ hi Normal guifg=#dddddd guibg=Black
 
 " Grayish comments
 hi Comment ctermfg=248
-hi Comment guifg=#777777
+" hi Comment guifg=#777777
+hi Comment guifg=#8c8c8c
 
 " Bluish constants: strings, numbers
 hi Constant ctermfg=43
