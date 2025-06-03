@@ -5,7 +5,7 @@ import "../lib/func.vim" as funcLib
 
 g:translator_buffer_id = 0
 
-def RunTranslate()
+def RunTranslate(target: string)
   if g:translator_buffer_id > 0
     execute 'bwipeout ' .. g:translator_buffer_id
   endif
@@ -15,7 +15,7 @@ def RunTranslate()
   # var output = system(command)
 
   # run async job and move output to buffer
-  var command = printf('translator -text="%s"', text)
+  var command = printf('translator -text="%s" -to="%s"', text, target)
   var job = job_start(command, {'out_io': 'buffer', 'out_name': 'translator'})
 
   split | buffer translator
@@ -28,4 +28,5 @@ def RunTranslate()
 enddef
 
 
-vnoremap <Leader>tt :<C-U> vim9cmd <SID>RunTranslate()<CR>
+vnoremap <Leader>t1 :<C-U> vim9cmd <SID>RunTranslate('uk')<CR>
+vnoremap <Leader>t2 :<C-U> vim9cmd <SID>RunTranslate('en')<CR>

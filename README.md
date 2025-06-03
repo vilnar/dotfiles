@@ -12,6 +12,7 @@ make help
 git
 make
 rg
+fzf
 ```
 
 

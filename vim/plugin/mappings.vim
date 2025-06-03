@@ -13,7 +13,6 @@ import "../lib/buffer.vim" as bufferLib
 import "../lib/whitespace.vim" as whitespaceLib
 import "../lib/func.vim" as funcLib
 
-import autoload 'scope/fuzzy.vim'
 
 # OS clipboard yank and paste
 noremap <Leader>y "+y
@@ -148,27 +147,21 @@ vnoremap <Leader>fp y:vim9cmd FilesBuffer !find * -not -path "./.git/*" -path "*
 
 # FZF -----------------------------------------------------------------------------
 # if has("unix")
-  # nnoremap <leader>; :Commands<CR>
-  # nnoremap <leader>tt :CustomFzfTags <C-R>=expand("<cword>")<CR><CR>
-  # nnoremap <leader>tb :CustomFzfBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
-  # nnoremap <leader>tf :CustomFzfBufferTags<CR>
+  nnoremap <leader>; :Commands<CR>
+  nnoremap <leader>tt :CustomFzfTags <C-R>=expand("<cword>")<CR><CR>
+  nnoremap <leader>tb :CustomFzfBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
+  nnoremap <leader>tf :CustomFzfBufferTags<CR>
 
-  # nnoremap <leader>ff :CustomFzfFiles<CR>
-  # xnoremap <leader>ff :<C-U> vim9cmd <SID>fzfLib.GotoSelectionFzf()<CR>
-  # nnoremap <leader>fc :CustomFzfFiles <C-R>=expand("%:h")<CR>/<CR>
-  # nnoremap <expr> <leader>fu ':CustomFzfFiles<CR>' .. expand('<cword>')
+  nnoremap <leader>ff :CustomFzfFiles<CR>
+  xnoremap <leader>ff :<C-U> vim9cmd <SID>fzfLib.GotoSelectionFzf()<CR>
+  nnoremap <leader>fc :CustomFzfFiles <C-R>=expand("%:h")<CR>/<CR>
+  nnoremap <expr> <leader>fu ':CustomFzfFiles<CR>' .. expand('<cword>')
 # else
   # default find
   # nnoremap <leader>; :
   # nnoremap <leader>ff :find **/*
   # nnoremap <expr> <leader>fu ':find **/*' .. expand('<cword>')
   # nnoremap <leader>mm :marks<CR>
-  
-  # scope vim
-  nnoremap <leader>; <SCRIPTCMD>fuzzy.Command()<CR>
-  nnoremap <LEADER>ff <SCRIPTCMD>fuzzy.File()<CR>
-  nnoremap <LEADER>jj <SCRIPTCMD>fuzzy.Jumplist()<CR>
-  nnoremap <leader>mm <SCRIPTCMD>fuzzy.Mark()<CR>
 # endif
 
 
