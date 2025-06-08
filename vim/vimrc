@@ -25,6 +25,3 @@ let mapleader="\<Space>"
 
 set directory=$TEMP//
 set belloff=all
-
-" default plugins
-packadd comment
