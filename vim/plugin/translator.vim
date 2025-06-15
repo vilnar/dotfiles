@@ -23,6 +23,7 @@ def RunTranslate(target: string)
   setlocal buftype=nofile
   setlocal bufhidden=hide
   setlocal noswapfile
+  setlocal wrap
   # go to prev window
   feedkeys("\<C-w>p")
 enddef

@@ -45,7 +45,7 @@ def GrepWithEscaped(text: string, template: string)
 enddef
 
 
-def GrepInProjectVisual()
+export def GrepInProjectVisual()
   var text = funcLib.GetVisualSelection(visualmode())
   call GrepInProject(text)
 enddef
@@ -58,7 +58,7 @@ enddef
 command -nargs=1 GrepInProjectEscape :vim9cmd GrepInProject(<q-args>) | normal! n
 
 
-def GrepInDirectoryVisual()
+export def GrepInDirectoryVisual()
   var text = funcLib.GetVisualSelection(visualmode())
   call GrepInDirectory(text)
 enddef
@@ -71,7 +71,7 @@ enddef
 command -nargs=1 GrepInDirectoryEscape :vim9cmd GrepInDirectory(<q-args>) | normal! n
 
 
-def GrepInBufferVisual()
+export def GrepInBufferVisual()
   var text = funcLib.GetVisualSelection(visualmode())
   call GrepInBuffer(text)
 enddef
@@ -84,7 +84,7 @@ enddef
 command -nargs=1 GrepInBufferEscape :vim9cmd GrepInBuffer(<q-args>) | normal! n
 
 
-def GrepInProjectInput()
+export def GrepInProjectInput()
   var text = input('Query: ', '')
   if text == ''
     echoerr "empty text"

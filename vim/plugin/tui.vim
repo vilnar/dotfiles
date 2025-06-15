@@ -15,7 +15,7 @@ set nonumber
 
 set cursorline
 # set cursorlineopt=number
-set cursorlineopt=number,line
+set cursorlineopt=number,screenline
 augroup InsertHl
   autocmd InsertEnter * set cursorlineopt=number,line
   autocmd InsertLeave * set cursorlineopt=number

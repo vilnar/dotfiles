@@ -2,7 +2,7 @@ vim9script
 
 import "./func.vim" as funcLib
 
-def SearchTextVisual()
+export def SearchTextVisual()
   var text = funcLib.GetVisualSelection(visualmode())
   # echomsg "DEBUG"
   # echomsg text
@@ -13,7 +13,7 @@ enddef
 
 const ESCAPE_CHARS = '\~ \* \$ \[ \] /\ \^ \.'
 
-def EscapeSearchTextMultiLinesVisual(pat: string)
+export def EscapeSearchTextMultiLinesVisual(pat: string)
   var text = funcLib.GetVisualSelection(visualmode())
   call EscapeSearchTextMultiLines(text, pat)
 enddef
@@ -32,7 +32,7 @@ enddef
 command -nargs=1 SearchMultiLine :vim9cmd EscapeSearchTextMultiLines(<q-args>, '\r') | normal! n
 
 
-def EscapeSearchTextVisual()
+export def EscapeSearchTextVisual()
   var text = funcLib.GetVisualSelection(visualmode())
   call EscapeSearchText(text)
 enddef
@@ -64,7 +64,7 @@ def EscapeForReplace(text: string, replace_text: string, is_whole_word: bool)
 enddef
 
 
-def ReplaceInput(is_whole_word = false)
+export def ReplaceInput(is_whole_word = false)
   var text = input('Query replace: ', '')
   if empty(text)
     echoerr "Query replace is empty"
@@ -75,7 +75,7 @@ def ReplaceInput(is_whole_word = false)
   call EscapeForReplace(text, replace_text, is_whole_word)
 enddef
 
-def ReplaceSelectedInput(is_whole_word = false)
+export def ReplaceSelectedInput(is_whole_word = false)
   var text = getreg('"')
   @v = text # copy to register v
   var replace_text = input('Query replace ' .. text .. ' with: ', '')
