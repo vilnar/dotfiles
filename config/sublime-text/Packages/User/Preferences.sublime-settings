@@ -81,7 +81,6 @@
   // font
   // "font_face": "JetBrains Mono NL",
   "font_face": "JetBrains Mono NL Light",
-  // "font_face": "Cascadia Mono Light",
   "font_size": 11,
   "default_font_size": 11,
   // "line_padding_top": 1,

@@ -15,7 +15,7 @@
         // "brackets_foreground": "var(gold-custom)",
         // "bracket_contents_options": "underline",
         // "bracket_contents_foreground": "var(blue5)",
-        // "line_highlight": "#ffffff10",
+        "line_highlight": "#ffffff10",
     },
     "rules":
     [

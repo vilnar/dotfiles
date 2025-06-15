@@ -49,3 +49,6 @@
 [submodule "vim/pack/plugins/start/vim-commentary"]
 	path = vim/pack/plugins/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
+[submodule "config/sublime-text/Packages/FileDiffs"]
+	path = config/sublime-text/Packages/FileDiffs
+	url = https://github.com/colinta/SublimeFileDiffs.git
