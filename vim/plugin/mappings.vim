@@ -45,12 +45,18 @@ vnoremap <Leader>ee :<C-U> vim9cmd <SID>EvalSelected()<CR>
 # https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
 execute "set <M-j>=\ej"
 execute "set <M-k>=\ek"
+execute "set <M-s>=\es"
 nnoremap <M-j> :m .+1<CR>==
 nnoremap <M-k> :m .-2<CR>==
 inoremap <M-j> <Esc>:m .+1<CR>==gi
 inoremap <M-k> <Esc>:m .-2<CR>==gi
 vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
+
+# save
+nnoremap <M-s> :w<CR>
+inoremap <M-s> <Esc>:w<CR>
+vnoremap <M-s> :w<CR>
 
 inoremap <M-[> <Esc>
 
