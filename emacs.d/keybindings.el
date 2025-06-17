@@ -63,7 +63,7 @@
 ;; (global-set-key (kbd "<f6>") 'flyspell-buffer)
 (global-set-key (kbd "<f6>") 'yr-toggle-flyspell)
 ;; (global-set-key (kbd "<f7>") 'switch-to-buffer-other-tab)
-(global-set-key (kbd "<f7>") 'tab-new)
+(global-set-key (kbd "<f7>") 'yr-new-empty-buffer)
 (global-set-key (kbd "<f8>") 'toggle-truncate-lines)
 (global-set-key (kbd "<f9>") 'whitespace-mode)
 (global-set-key (kbd "<f10>") 'dired-sidebar-toggle-sidebar)
@@ -114,10 +114,10 @@
                 (lambda ()
                   (interactive)
                   (other-window -1))) ;; back one
-;; (define-key winum-keymap (kbd "M-1") 'winum-select-window-1)
-;; (define-key winum-keymap (kbd "M-2") 'winum-select-window-2)
-;; (define-key winum-keymap (kbd "M-3") 'winum-select-window-3)
-;; (define-key winum-keymap (kbd "M-4") 'winum-select-window-4)
+(define-key winum-keymap (kbd "M-1") 'winum-select-window-1)
+(define-key winum-keymap (kbd "M-2") 'winum-select-window-2)
+(define-key winum-keymap (kbd "M-3") 'winum-select-window-3)
+(define-key winum-keymap (kbd "M-4") 'winum-select-window-4)
 
 ;; go to last mark
 (global-set-key (kbd "M--") 'consult-mark)
@@ -135,7 +135,7 @@
 (global-set-key (kbd "C--") 'text-scale-decrease)
 
 ;; autocomplete
-(global-set-key (kbd "M-SPC") 'dabbrev-completion)
+;; (global-set-key (kbd "M-SPC") 'dabbrev-completion)
 ;; (global-set-key (kbd "M-SPC") 'company-complete)
 ;; (with-eval-after-load 'company
 ;;   (define-key company-active-map (kbd "M-SPC") #'company-complete)
