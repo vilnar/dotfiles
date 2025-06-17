@@ -52,3 +52,30 @@
 [submodule "config/sublime-text/Packages/FileDiffs"]
 	path = config/sublime-text/Packages/FileDiffs
 	url = https://github.com/colinta/SublimeFileDiffs.git
+[submodule "emacs.d/site-lisp/go-mode"]
+	path = emacs.d/site-lisp/go-mode
+	url = https://github.com/dominikh/go-mode.el.git
+[submodule "emacs.d/site-lisp/crux"]
+	path = emacs.d/site-lisp/crux
+	url = https://github.com/bbatsov/crux.git
+[submodule "emacs.d/site-lisp/undo-fu"]
+	path = emacs.d/site-lisp/undo-fu
+	url = https://github.com/emacsmirror/undo-fu
+[submodule "emacs.d/site-lisp/rg"]
+	path = emacs.d/site-lisp/rg
+	url = https://github.com/dajva/rg.el
+[submodule "emacs.d/site-lisp/wgrep"]
+	path = emacs.d/site-lisp/wgrep
+	url = https://github.com/mhayashi1120/Emacs-wgrep
+[submodule "emacs.d/site-lisp/consult"]
+	path = emacs.d/site-lisp/consult
+	url = https://github.com/minad/consult
+[submodule "emacs.d/site-lisp/vertico"]
+	path = emacs.d/site-lisp/vertico
+	url = https://github.com/minad/vertico
+[submodule "emacs.d/site-lisp/projectile"]
+	path = emacs.d/site-lisp/projectile
+	url = https://github.com/bbatsov/projectile
+[submodule "emacs.d/site-lisp/corfu"]
+	path = emacs.d/site-lisp/corfu
+	url = https://github.com/minad/corfu

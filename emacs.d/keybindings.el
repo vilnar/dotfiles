@@ -32,7 +32,7 @@
 (global-unset-key (kbd "M-c"))
 (global-unset-key (kbd "C-."))
 
-(global-set-key (kbd "M-u") 'avy-goto-char)
+;; (global-set-key (kbd "M-u") 'avy-goto-char)
 
 (global-set-key (kbd "M-s") 'save-buffer)
 ;; (global-set-key (kbd "C-x f") 'find-file)
@@ -46,8 +46,8 @@
 (global-set-key (kbd "M-]") 'next-buffer)
 
 
-(global-set-key (kbd "M-;") 'yr-consult-line-improve)
-(global-set-key (kbd "C-;") 'yr-consult-line-improve)
+;; (global-set-key (kbd "M-;") 'yr-consult-line-improve)
+;; (global-set-key (kbd "C-;") 'yr-consult-line-improve)
 (global-unset-key (kbd "M-g"))
 (global-set-key (kbd "M-g") 'consult-goto-line)
 (global-set-key (kbd "M-y") 'consult-yank-pop)
@@ -76,12 +76,14 @@
 ;; (global-set-key (kbd "M-c f f") 'yr-fzf-directory-improve)
 ;; (global-set-key (kbd "M-c f f") 'yr-fzf-projectile-improve)
 ;; (global-set-key (kbd "M-c f c") 'yr-fzf-directory-improve)
-(global-set-key (kbd "M-c f f") #'yr-projectile-find-file-improve)
-(global-set-key (kbd "M-c f c") #'projectile-find-file-in-directory)
 ;; (global-set-key (kbd "M-k") #'rg-literal)
 ;; (global-set-key (kbd "M-c g m") #'rg-menu)
-(global-set-key (kbd "M-c g g") #'deadgrep)
-;; (global-set-key (kbd "M-c p") 'projectile-command-map)
+;; (global-set-key (kbd "M-c g g") #'deadgrep)
+(global-set-key (kbd "M-c g g") 'rg-dwim-project-dir)
+(global-set-key (kbd "M-c g c") 'rg-dwim-current-dir)
+(global-set-key (kbd "M-c f f") #'yr-projectile-find-file-improve)
+(global-set-key (kbd "M-c f c") #'projectile-find-file-in-directory)
+(global-set-key (kbd "M-c p") 'projectile-command-map)
 (global-set-key (kbd "M-c p") 'projectile-switch-project)
 (global-set-key (kbd "M-h") 'lazy-highlight-cleanup)
 (global-set-key (kbd "C-M-n") 'yr-new-empty-buffer)
@@ -112,10 +114,10 @@
                 (lambda ()
                   (interactive)
                   (other-window -1))) ;; back one
-(define-key winum-keymap (kbd "M-1") 'winum-select-window-1)
-(define-key winum-keymap (kbd "M-2") 'winum-select-window-2)
-(define-key winum-keymap (kbd "M-3") 'winum-select-window-3)
-(define-key winum-keymap (kbd "M-4") 'winum-select-window-4)
+;; (define-key winum-keymap (kbd "M-1") 'winum-select-window-1)
+;; (define-key winum-keymap (kbd "M-2") 'winum-select-window-2)
+;; (define-key winum-keymap (kbd "M-3") 'winum-select-window-3)
+;; (define-key winum-keymap (kbd "M-4") 'winum-select-window-4)
 
 ;; go to last mark
 (global-set-key (kbd "M--") 'consult-mark)
@@ -133,16 +135,16 @@
 (global-set-key (kbd "C--") 'text-scale-decrease)
 
 ;; autocomplete
-;; (global-set-key (kbd "M-SPC") 'dabbrev-completion)
-(global-set-key (kbd "M-SPC") 'company-complete)
-(with-eval-after-load 'company
-  (define-key company-active-map (kbd "M-SPC") #'company-complete)
-  (define-key company-active-map (kbd "M-n") #'company-select-next)
-  (define-key company-active-map (kbd "M-p") #'company-select-previous)
-  (define-key company-active-map (kbd "M-y") #'company-complete-selection)
-  (define-key company-active-map (kbd "<return>") nil)
-  (define-key company-active-map (kbd "RET") nil)
-  (define-key company-active-map (kbd "TAB") nil))
+(global-set-key (kbd "M-SPC") 'dabbrev-completion)
+;; (global-set-key (kbd "M-SPC") 'company-complete)
+;; (with-eval-after-load 'company
+;;   (define-key company-active-map (kbd "M-SPC") #'company-complete)
+;;   (define-key company-active-map (kbd "M-n") #'company-select-next)
+;;   (define-key company-active-map (kbd "M-p") #'company-select-previous)
+;;   (define-key company-active-map (kbd "M-y") #'company-complete-selection)
+;;   (define-key company-active-map (kbd "<return>") nil)
+;;   (define-key company-active-map (kbd "RET") nil)
+;;   (define-key company-active-map (kbd "TAB") nil))
 
 
 (global-unset-key (kbd "M-r"))
@@ -163,15 +165,15 @@
 ;; Tips for multiple-cursors:
 ;; - insert a newline in multiple-cursors-mode, use C-j
 ;; - copy, exit multiple-cursor (enter) and paste (set multiple-cursor) hit C-x r y (yank-rectangle)
-(global-unset-key (kbd "M-<down-mouse-1>"))
-(define-key my-keys-minor-mode-map (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
-(define-key my-keys-minor-mode-map [(meta down)] 'mc/mark-next-like-this)
-(define-key my-keys-minor-mode-map (kbd "C-d") #'mc/mark-next-like-this-word)
-(define-key my-keys-minor-mode-map (kbd "M-c C-d") 'mc/skip-to-next-like-this)
+;; (global-unset-key (kbd "M-<down-mouse-1>"))
+;; (define-key my-keys-minor-mode-map (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
+;; (define-key my-keys-minor-mode-map [(meta down)] 'mc/mark-next-like-this)
+;; (define-key my-keys-minor-mode-map (kbd "C-d") #'mc/mark-next-like-this-word)
+;; (define-key my-keys-minor-mode-map (kbd "M-c C-d") 'mc/skip-to-next-like-this)
 
 
-(global-set-key (kbd "M-c 1") 'google-translate-at-point)
-(global-set-key (kbd "M-c 2") 'google-translate-at-point-reverse)
+;; (global-set-key (kbd "M-c 1") 'google-translate-at-point)
+;; (global-set-key (kbd "M-c 2") 'google-translate-at-point-reverse)
 
 
 ;; ctags
