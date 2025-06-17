@@ -297,6 +297,10 @@
 (setq projectile-completion-system 'default)
 
 
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/magit/lisp")
+;; (require 'magit)
+
+
 
 
 
