@@ -271,10 +271,6 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/undo-fu")
 (require 'undo-fu)
 
-;; todo: delete
-(add-to-list 'load-path "~/.emacs.d/site-lisp/fzf")
-(require 'fzf)
-
 (add-to-list 'load-path "~/.emacs.d/site-lisp/wgrep")
 (require 'wgrep)
 
@@ -299,6 +295,10 @@
 (require 'projectile)
 (projectile-mode +1)
 (setq projectile-completion-system 'default)
+
+
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/magit/lisp")
+;; (require 'magit)
 
 
 
