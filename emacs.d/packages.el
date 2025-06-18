@@ -5,10 +5,8 @@
 
 
 ;; ui
-;; (use-package zenburn-theme
-;;   :ensure t)
-;; (use-package leuven-theme
-;;   :ensure t)
+(use-package zenburn-theme
+  :ensure t)
 
 ;; http://www.emacswiki.org/emacs/Yasnippet
 (use-package yasnippet
@@ -23,19 +21,20 @@
 (use-package magit
   :ensure t
   :init
-  (message "Loading Magit!")
+;;  (message "Loading Magit!")
   :config
-  (message "After loaded Magit!")
+;; (message "After loaded Magit!")
 
   (defvar magit-ediff-show-stash-with-index nil)
 
   (setq
    magit-list-refs-sortby "-committerdate"
-   magit-section-initial-visibility-alist '((hide))
+   ;; magit-section-initial-visibility-alist '((hide))
    ;; show whitespace for diff
    magit-diff-refine-ignore-whitespace nil
-   magit-diff-paint-whitespace t
-   magit-diff-paint-whitespace-lines 'all)
+   ;; magit-diff-paint-whitespace t
+   ;; magit-diff-paint-whitespace-lines 'all
+  )
 
   (define-key magit-hunk-section-map (kbd "RET") 'magit-diff-visit-file-other-window)
   (define-key magit-file-section-map (kbd "RET") 'magit-diff-visit-file-other-window)
@@ -48,27 +47,6 @@
   :ensure t
   :init
   (winum-mode))
-
-;; autocomplete
-;; (use-package company
-;;   :ensure t
-;;   :init
-;;   (global-company-mode 1)
-;;   :config
-;;   (setq company-frontends
-;;         '(company-pseudo-tooltip-frontend
-;;           company-echo-metadata-frontend))
-;;   (setq company-backends
-;;         '((company-dabbrev company-yasnippet)))
-;; 
-;;   (setq
-;;    company-dabbrev-code-ignore-case t
-;;    company-dabbrev-ignore-case t
-;;    company-keywords-ignore-case t
-;;    company-dabbrev-downcase nil
-;;    company-idle-delay 0.2
-;;    company-minimum-prefix-length 1))
-
 
 ;; complete command
 (use-package vertico
@@ -103,12 +81,12 @@
 
 
 
-;; (use-package dired-sidebar
-;;   :ensure t
-;;   :config
-;;   (setq
-;;    dired-sidebar-width 40
-;;    dired-sidebar-theme 'ascii))
+(use-package dired-sidebar
+  :ensure t
+  :config
+  (setq
+   dired-sidebar-width 40
+   dired-sidebar-theme 'ascii))
 
 (use-package projectile
   :ensure t
@@ -116,10 +94,10 @@
   (projectile-mode 1)
   :config
   (setq projectile-indexing-method 'alien)
-  ;; (setq projectile-enable-caching nil)
-  ;; (setq projectile-git-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
-  ;; (setq projectile-git-fd-args " . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
-  ;; (setq projectile-generic-command "fdfind . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+  (setq projectile-enable-caching nil)
+  (setq projectile-git-command "fd . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+  (setq projectile-git-fd-args " . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+  (setq projectile-generic-command "fd . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
 )
 
 ;; Highlight terms in code-comments such as TODO, FIXME
@@ -140,28 +118,6 @@
 (use-package multiple-cursors
   :ensure t)
 
-;; (use-package highlight-indent-guides
-;;   :ensure t
-;;   :config
-;;   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-;;   (setq highlight-indent-guides-method 'character))
-
-;; linters
-;; (use-package flycheck
-;;   :disabled t
-;;   :ensure t
-;;   :init (global-flycheck-mode t)
-;;   :config
-;;   (add-hook 'go-mode-hook
-;;             (lambda ()
-;;               (setq flycheck-checker 'go-staticcheck)))
-;;   (add-hook 'php-mode-hook
-;;             (lambda ()
-;;               (setq flycheck-checker 'php)))
-;;   (with-eval-after-load 'flycheck
-;;     ;; don't highlight info
-;;     (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))))
-
 
 (use-package wrap-region
   :ensure t
@@ -179,32 +135,50 @@
   (setq google-translate-translation-directions-alist
         '(("uk" . "en") ("en" . "uk"))))
 
-;; (use-package olivetti
-;;   :ensure t
-;;   :config
-;;   (setq olivetti-minimum-body-width 120))
 
-;; (use-package expand-region
-;;   :ensure t)
+(use-package expand-region
+  :ensure t)
 
-
-;; (use-package avy
-;;   :ensure t)
-
-
-;; (use-package citre
-;;   :ensure t
-;;   :defer t
-;;   :init
-;;   (require 'citre-config)
-;;   :config
-;;   (setq
-;;    citre-project-root-function #'projectile-project-root))
-;; (setq xref-backend-functions #'citre-xref-backend)
 
 (use-package crux
   :ensure t)
 
+
+(use-package doom-modeline
+  :ensure t
+  :hook (after-init . doom-modeline-mode)
+  :custom
+  (doom-modeline-height 25)
+  (doom-modeline-bar-width 1)
+  (doom-modeline-major-mode-icon nil)
+  (doom-modeline-major-mode-color-icon nil)
+  (doom-modeline-buffer-file-name-style 'truncate-upto-project)
+  (doom-modeline-buffer-state-icon t)
+  (doom-modeline-buffer-modification-icon t)
+  (doom-modeline-minor-modes nil)
+  (doom-modeline-enable-word-count nil)
+  (doom-modeline-buffer-encoding t)
+  (doom-modeline-indent-info nil)
+  (doom-modeline-checker-simple-format t)
+  (doom-modeline-vcs-max-length 12)
+  (doom-modeline-env-version t)
+  (doom-modeline-irc-stylize 'identity)
+  (doom-modeline-github-timer nil)
+  (doom-modeline-gnus-timer nil)
+  :config
+  (setq doom-modeline-icon nil)
+)
+
+
+(use-package emojify
+  :ensure t
+  :config
+  (when (member "Segoe UI Emoji" (font-family-list))
+    (set-fontset-font
+     t 'symbol (font-spec :family "Segoe UI Emoji") nil 'prepend))
+  (setq emojify-display-style 'unicode)
+  (setq emojify-emoji-styles '(unicode))
+  (bind-key* (kbd "C-c .") #'emojify-insert-emoji))
 
 ;; ----------------------------------------------------------------------------
 ;; programming languages
@@ -233,13 +207,6 @@
             (lambda ()
               (setq-local indent-tabs-mode nil)
               (setq-local tab-width 4))))
-
-
-
-
-
-
-
 
 
 (add-hook 'emacs-lisp-mode-hook
@@ -325,9 +292,16 @@
 
 
 
+
+;; ==========================================================
+;; autocomplete new
 (use-package corfu
   :ensure t
   :init
+  ;; Enable auto completion and configure quitting
+  (setq corfu-auto t
+      corfu-auto-prefix 2
+      corfu-quit-no-match 'separator) ;; or t
   (global-corfu-mode))
 
 ;; A few more useful configurations...

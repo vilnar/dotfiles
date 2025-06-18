@@ -73,12 +73,7 @@
 ;; (global-set-key (kbd "<f12>") 'bookmark-bmenu-list)
 (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
-;; (global-set-key (kbd "M-c f f") 'yr-fzf-directory-improve)
-;; (global-set-key (kbd "M-c f f") 'yr-fzf-projectile-improve)
-;; (global-set-key (kbd "M-c f c") 'yr-fzf-directory-improve)
-;; (global-set-key (kbd "M-k") #'rg-literal)
-;; (global-set-key (kbd "M-c g m") #'rg-menu)
-;; (global-set-key (kbd "M-c g g") #'deadgrep)
+
 (global-set-key (kbd "M-c g g") 'rg-dwim-project-dir)
 (global-set-key (kbd "M-c g c") 'rg-dwim-current-dir)
 (global-set-key (kbd "M-c f f") #'yr-projectile-find-file-improve)
@@ -120,8 +115,8 @@
 (define-key winum-keymap (kbd "M-4") 'winum-select-window-4)
 
 ;; go to last mark
-(global-set-key (kbd "M--") 'consult-mark)
-(global-set-key (kbd "M-=") 'consult-global-mark)
+(global-set-key (kbd "M-`") 'consult-mark)
+;; (global-set-key (kbd "M-=") 'consult-global-mark)
 
 (global-unset-key (kbd "C-z"))
 (define-key my-keys-minor-mode-map (kbd "C-z")   'undo-fu-only-undo)
@@ -134,18 +129,6 @@
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 
-;; autocomplete
-;; (global-set-key (kbd "M-SPC") 'dabbrev-completion)
-;; (global-set-key (kbd "M-SPC") 'company-complete)
-;; (with-eval-after-load 'company
-;;   (define-key company-active-map (kbd "M-SPC") #'company-complete)
-;;   (define-key company-active-map (kbd "M-n") #'company-select-next)
-;;   (define-key company-active-map (kbd "M-p") #'company-select-previous)
-;;   (define-key company-active-map (kbd "M-y") #'company-complete-selection)
-;;   (define-key company-active-map (kbd "<return>") nil)
-;;   (define-key company-active-map (kbd "RET") nil)
-;;   (define-key company-active-map (kbd "TAB") nil))
-
 
 (global-unset-key (kbd "M-r"))
 (global-set-key (kbd "M-r") 'yr-query-replace-improve)
@@ -157,7 +140,7 @@
 
 
 ;; (global-set-key (kbd "s-<tab>") 'switch-to-buffer)
-(global-set-key (kbd "s-<tab>") 'consult-buffer)
+(global-set-key (kbd "M-\\") 'consult-buffer)
 (global-set-key (kbd "C-<tab>") #'ibuffer)
 ;; (global-set-key (kbd "M-c b") 'ibuffer-other-window)
 
@@ -165,26 +148,15 @@
 ;; Tips for multiple-cursors:
 ;; - insert a newline in multiple-cursors-mode, use C-j
 ;; - copy, exit multiple-cursor (enter) and paste (set multiple-cursor) hit C-x r y (yank-rectangle)
-;; (global-unset-key (kbd "M-<down-mouse-1>"))
-;; (define-key my-keys-minor-mode-map (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
-;; (define-key my-keys-minor-mode-map [(meta down)] 'mc/mark-next-like-this)
-;; (define-key my-keys-minor-mode-map (kbd "C-d") #'mc/mark-next-like-this-word)
-;; (define-key my-keys-minor-mode-map (kbd "M-c C-d") 'mc/skip-to-next-like-this)
+(global-unset-key (kbd "M-<down-mouse-1>"))
+(define-key my-keys-minor-mode-map (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
+(define-key my-keys-minor-mode-map [(meta down)] 'mc/mark-next-like-this)
+(define-key my-keys-minor-mode-map (kbd "C-d") #'mc/mark-next-like-this-word)
+(define-key my-keys-minor-mode-map (kbd "M-c C-d") 'mc/skip-to-next-like-this)
 
 
-;; (global-set-key (kbd "M-c 1") 'google-translate-at-point)
-;; (global-set-key (kbd "M-c 2") 'google-translate-at-point-reverse)
-
-
-;; ctags
-;; (global-set-key (kbd "M-j") 'citre-jump)
-;; (global-set-key (kbd "M-J") 'citre-jump-back)
-;; (global-set-key (kbd "M-c t p") 'citre-peek)
-;; (global-set-key (kbd "M-c t u") 'citre-update-this-tags-file)
-
-;; (define-key citre-peek-keymap (kbd "<up>") 'citre-peek-prev-tag)
-;; (define-key citre-peek-keymap (kbd "<down>") 'citre-peek-next-tag)
-;; (define-key citre-peek-keymap (kbd "M-j") 'citre-peek-jump)
+(global-set-key (kbd "M-c 1") 'google-translate-at-point)
+(global-set-key (kbd "M-c 2") 'google-translate-at-point-reverse)
 
 
 ;; alias  -------------------------------------------------------------
@@ -211,7 +183,7 @@
 (defalias 'file-copy-absolute 'yr-path-file-absolute-to-clipboard)
 (defalias 'file-copy-name 'yr-file-name-to-clipboard)
 
-(defalias 'new-buffer 'yr-new-empty-buffer)
+(defalias 'new 'yr-new-empty-buffer)
 (defalias 'gnome-terminal 'yr-open-gnome-terminal)
 (defalias 'close-other-buffers 'crux-kill-other-buffers)
 (defalias 'zen-mode 'olivetti-mode)

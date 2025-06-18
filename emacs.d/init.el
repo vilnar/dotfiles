@@ -32,7 +32,7 @@
 (setq-default case-fold-search t)
 
 ;; editor
-(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+;; (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (column-number-mode 1)
 (global-hl-line-mode 1)
 ;; (setq-default cursor-type 'hollow)
