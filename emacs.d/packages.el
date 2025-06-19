@@ -4,10 +4,6 @@
 (package-initialize)
 
 
-;; ui
-(use-package zenburn-theme
-  :ensure t)
-
 ;; http://www.emacswiki.org/emacs/Yasnippet
 (use-package yasnippet
   :ensure t

@@ -36,7 +36,8 @@
 
 (global-set-key (kbd "M-s") 'save-buffer)
 ;; (global-set-key (kbd "C-x f") 'find-file)
-(global-set-key (kbd "M-o") 'find-file)
+(global-unset-key (kbd "M-o"))
+(define-key my-keys-minor-mode-map (kbd "M-o") 'find-file)
 
 (global-set-key (kbd "M-q") 'kill-buffer)
 (global-set-key (kbd "C-q") 'kill-buffer)
@@ -141,6 +142,7 @@
 
 ;; (global-set-key (kbd "s-<tab>") 'switch-to-buffer)
 (global-set-key (kbd "M-\\") 'consult-buffer)
+(global-set-key (kbd "C-x b") 'consult-buffer)
 (global-set-key (kbd "C-<tab>") #'ibuffer)
 ;; (global-set-key (kbd "M-c b") 'ibuffer-other-window)
 

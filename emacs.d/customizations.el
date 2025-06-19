@@ -17,9 +17,10 @@
   '(avy citre cmake-mode company company-mode consult corfu crux deadgrep default-font-presets dired-sidebar
         dockerfile-mode doom-modeline emojify expand-region find-file-in-project flycheck fzf fzf.el go-mode
         google-translate groovy-mode helm-mode highlight-indent-guides highlight-numbers hl-prog-extra hl-todo
-        leuven-theme magit markdown-mode minions mode-line-idle mood-line moody multiple-cursors olivetti package-utils
-        php-mode projectile punch-line rg rust-mode smart-mode-line tango-plus telephone-line undo-fu undo-tree
-        unicode-fonts use-package vertico vertico-prescient web-mode winum wrap-region yaml-mode yasnippet zenburn-theme)))
+        leuven-theme magit markdown-mode mindre-theme minions mode-line-idle mood-line moody multiple-cursors olivetti
+        package-utils php-mode projectile punch-line rg rust-mode smart-mode-line stimmung-themes tango-plus
+        telephone-line undo-fu undo-tree unicode-fonts use-package vertico vertico-prescient web-mode winum wrap-region
+        yaml-mode yasnippet zenburn-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
