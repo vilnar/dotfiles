@@ -27,6 +27,7 @@
 ;; (define-key my-keys-minor-mode-map (kbd "C-d") #'mc/mark-next-like-this-word)
 
 
+
 ;; ====================================================================
 
 (global-unset-key (kbd "M-c"))
@@ -39,9 +40,7 @@
 (global-unset-key (kbd "M-o"))
 (define-key my-keys-minor-mode-map (kbd "M-o") 'find-file)
 
-(global-set-key (kbd "M-q") 'kill-buffer)
-(global-set-key (kbd "C-q") 'kill-buffer)
-(global-set-key (kbd "C-M-q") 'save-buffers-kill-emacs)
+(global-set-key (kbd "M-c q") 'kill-buffer)
 
 (global-set-key (kbd "M-[") 'previous-buffer)
 (global-set-key (kbd "M-]") 'next-buffer)
@@ -52,7 +51,7 @@
 (global-unset-key (kbd "M-g"))
 (global-set-key (kbd "M-g") 'consult-goto-line)
 (global-set-key (kbd "M-y") 'consult-yank-pop)
-(global-set-key (kbd "C-M-y") 'yank-rectangle)
+;; (global-set-key (kbd "C-M-y") 'yank-rectangle)
 
 ;; comment toggle
 (global-unset-key (kbd "M-/"))
@@ -71,15 +70,15 @@
 ;; (global-set-key (kbd "<f8>") 'tab-new)
 ;; (global-set-key (kbd "<f9>") 'bookmark-set)
 ;; (global-set-key (kbd "<f10>") 'bookmark-jump)
-;; (global-set-key (kbd "<f12>") 'bookmark-bmenu-list)
-(global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
+(global-set-key (kbd "<f12>") 'bookmark-bmenu-list)
+;; (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
 
 
 (global-set-key (kbd "M-c g g") 'rg-dwim-project-dir)
 (global-set-key (kbd "M-c g c") 'rg-dwim-current-dir)
 (global-set-key (kbd "M-c f f") #'yr-projectile-find-file-improve)
 (global-set-key (kbd "M-c f c") #'projectile-find-file-in-directory)
-(global-set-key (kbd "M-c p") 'projectile-command-map)
+;; (global-set-key (kbd "M-c p") 'projectile-command-map)
 (global-set-key (kbd "M-c p") 'projectile-switch-project)
 (global-set-key (kbd "M-h") 'lazy-highlight-cleanup)
 (global-set-key (kbd "C-M-n") 'yr-new-empty-buffer)
@@ -116,8 +115,8 @@
 (define-key winum-keymap (kbd "M-4") 'winum-select-window-4)
 
 ;; go to last mark
-(global-set-key (kbd "M-`") 'consult-mark)
-;; (global-set-key (kbd "M-=") 'consult-global-mark)
+;; (global-set-key (kbd "M-`") 'consult-mark)
+(global-set-key (kbd "M-`") 'consult-global-mark)
 
 (global-unset-key (kbd "C-z"))
 (define-key my-keys-minor-mode-map (kbd "C-z")   'undo-fu-only-undo)
