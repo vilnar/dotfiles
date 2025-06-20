@@ -38,6 +38,14 @@
   (with-eval-after-load "magit-diff"
     (define-key magit-file-section-map [C-return] 'magit-diff-visit-worktree-file)))
 
+;; fix magit-commit
+(setq git-commit-cd-to-toplevel t)
+(defun git-commit-setup-updir ()
+  ;; This assumes that the the working tree belonging to the current
+  ;; directory, is its parent directory.
+  (setq default-directory (file-name-parent-directory default-directory)))
+(advice-add 'git-commit-setup :before 'git-commit-setup-updir)
+
 
 (use-package winum
   :ensure t
