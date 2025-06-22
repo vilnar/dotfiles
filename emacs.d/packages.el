@@ -276,12 +276,12 @@
 ;; autocomplete new
 (use-package corfu
   :ensure t
-  :init
-  ;; Enable auto completion and configure quitting
-  (setq corfu-auto t
-      corfu-auto-prefix 2
-      corfu-quit-no-match 'separator) ;; or t
-  (global-corfu-mode))
+  :custom
+  (corfu-auto t)
+  (corfu-auto-prefix 2)
+  (corfu-quit-no-match 'separator)
+  :hook
+  (after-init . global-corfu-mode))
 
 ;; A few more useful configurations...
 (use-package emacs
@@ -305,7 +305,7 @@
 ;; Use Dabbrev with Corfu!
 (use-package dabbrev
   :bind (("M-SPC" . dabbrev-completion))
-  :config
+  :custom
   (add-to-list 'dabbrev-ignored-buffer-regexps "\\` ")
   ;; Available since Emacs 29 (Use `dabbrev-ignored-buffer-regexps' on older Emacs)
   (add-to-list 'dabbrev-ignored-buffer-modes 'authinfo-mode)
