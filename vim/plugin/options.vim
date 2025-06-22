@@ -29,7 +29,7 @@ g:fern#renderer#default#leading = "  "
 set complete=.,b,u,t
 # set complete=.,t
 var options = {
-    completor: { shuffleEqualPriority: true, postfixHighlight: true },
+    completor: { shuffleEqualPriority: true, postfixHighlight: true, triggerWordLen: 3 },
     # buffer: { enable: true, priority: 10, completionMatcher: "fuzzy" },
     buffer: { enable: true, priority: 10 },
     abbrev: { enable: true, priority: 10 },
