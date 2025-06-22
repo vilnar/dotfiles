@@ -16,29 +16,12 @@
 
 (use-package magit
   :ensure t
-;;  (message "Loading Magit!")
-  :config
+  :custom
 ;; (message "After loaded Magit!")
-
-  (defvar magit-ediff-show-stash-with-index nil)
-
-  (setq
-   magit-list-refs-sortby "-committerdate"
-   ;; magit-section-initial-visibility-alist '((hide))
-   ;; show whitespace for diff
-   magit-diff-refine-ignore-whitespace nil
-   ;; magit-diff-paint-whitespace t
-   ;; magit-diff-paint-whitespace-lines 'all
-  )
-
-  (define-key magit-hunk-section-map (kbd "RET") 'magit-diff-visit-file-other-window)
-  (define-key magit-file-section-map (kbd "RET") 'magit-diff-visit-file-other-window)
-
-  (with-eval-after-load "magit-diff"
-    (define-key magit-file-section-map [C-return] 'magit-diff-visit-worktree-file)))
-
+  (magit-list-refs-sortby "-committerdate")
+)
 ;; fix magit-commit
-(setq git-commit-cd-to-toplevel t)
+;; (setq git-commit-cd-to-toplevel t)
 (defun git-commit-setup-updir ()
   ;; This assumes that the the working tree belonging to the current
   ;; directory, is its parent directory.
@@ -78,28 +61,27 @@
 
 (use-package consult
   :ensure t
-  :config
-  (setq consult-line-start-from-top t))
+  :custom
+  (consult-line-start-from-top t))
 
 
 
 (use-package dired-sidebar
   :ensure t
-  :config
-  (setq
-   dired-sidebar-width 40
-   dired-sidebar-theme 'ascii))
+  :custom
+  (dired-sidebar-width 40)
+  (dired-sidebar-theme 'ascii))
 
 (use-package projectile
   :ensure t
   :hook
   (after-init . projectile-mode)
   :custom
-  (setq projectile-indexing-method 'alien)
-  (setq projectile-enable-caching nil)
-  (setq projectile-git-command "fd . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
-  (setq projectile-git-fd-args " . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
-  (setq projectile-generic-command "fd . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+  (projectile-indexing-method 'alien)
+  (projectile-enable-caching nil)
+  (projectile-git-command "fd . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+  (projectile-git-fd-args " . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
+  (projectile-generic-command "fd . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
 )
 
 ;; Highlight terms in code-comments such as TODO, FIXME
@@ -130,13 +112,12 @@
 
 (use-package google-translate
   :ensure t
-  :config
+  :custom
   ;; (setq google-translate-default-source-language "en")
-  (setq google-translate-default-source-language "auto")
-  (setq google-translate-default-target-language "uk")
-  (setq google-translate-translation-directions-alist
+  (google-translate-default-source-language "auto")
+  (google-translate-default-target-language "uk")
+  (google-translate-translation-directions-alist
         '(("uk" . "en") ("en" . "uk"))))
-
 
 (use-package expand-region
   :ensure t)
@@ -186,19 +167,17 @@
 
 (use-package dockerfile-mode
   :ensure t
-  :config
-  (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode)))
+  :mode (("Dockerfile\\'" . dockerfile-mode)))
 
 (use-package markdown-mode
   :ensure t
-  :init
-  (setq markdown-mouse-follow-link nil)
-  :config
+  :mode (("\\.md\\'" . markdown-mode)
+        ("\\.markdown\\'" . markdown-mode))
+  :custom
   ;; (add-hook 'markdown-mode-hook 'flyspell-mode) ;; it's slow
   ;; (add-hook 'markdown-mode-hook 'turn-on-flyspell)
-  (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-  (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-  (setq markdown-command "/usr/bin/pandoc"))
+  (markdown-mouse-follow-link nil)
+  (markdown-command "/usr/bin/pandoc"))
 
 (use-package php-mode
   :ensure t
@@ -264,8 +243,7 @@
 
 (use-package go-mode
   :ensure t
-  :config
-  (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
+  :mode (("\\.go\\'" . go-mode)))
 
 
 (use-package rust-mode
