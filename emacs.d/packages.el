@@ -7,8 +7,8 @@
 ;; http://www.emacswiki.org/emacs/Yasnippet
 (use-package yasnippet
   :ensure t
-  :init
-  (yas-global-mode 1))
+  :hook
+  (after-init . yas-global-mode))
 
 ;; https://github.com/emacsmirror/undo-fu
 (use-package undo-fu
@@ -16,7 +16,6 @@
 
 (use-package magit
   :ensure t
-  :init
 ;;  (message "Loading Magit!")
   :config
 ;; (message "After loaded Magit!")
@@ -61,8 +60,7 @@
               ("M-DEL" . vertico-directory-delete-word))
   :hook
   (rfn-eshadow-update-overlay . vertico-directory-tidy)
-  :init
-  (vertico-mode 1))
+  (after-init . vertico-mode))
 
 (use-package vertico-prescient
   :ensure t
@@ -94,9 +92,9 @@
 
 (use-package projectile
   :ensure t
-  :init
-  (projectile-mode 1)
-  :config
+  :hook
+  (after-init . projectile-mode)
+  :custom
   (setq projectile-indexing-method 'alien)
   (setq projectile-enable-caching nil)
   (setq projectile-git-command "fd . -0 --type f --color=never --strip-cwd-prefix --hidden --exclude .git --no-ignore")
@@ -169,8 +167,7 @@
   (doom-modeline-irc-stylize 'identity)
   (doom-modeline-github-timer nil)
   (doom-modeline-gnus-timer nil)
-  :config
-  (setq doom-modeline-icon nil)
+  (doom-modeline-icon nil)
 )
 
 
