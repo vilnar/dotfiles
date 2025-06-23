@@ -71,7 +71,7 @@
 ;; (global-set-key (kbd "<f9>") 'bookmark-set)
 ;; (global-set-key (kbd "<f10>") 'bookmark-jump)
 (global-set-key (kbd "<f12>") 'bookmark-bmenu-list)
-;; (global-set-key (kbd "<f12>") 'save-buffers-kill-emacs)
+(global-set-key (kbd "M-<f4>") 'save-buffers-kill-emacs)
 
 
 (global-set-key (kbd "M-c g g") 'rg-dwim-project-dir)

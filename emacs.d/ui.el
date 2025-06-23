@@ -3,8 +3,10 @@
       ;; for default theme
       (set-face-attribute 'region nil :background "#c6dcf9")))
 
-;; (load-theme 'modus-operandi) ;; light
-(load-theme 'modus-vivendi) ;; dark
+;; light
+(load-theme 'modus-operandi)
+;; dark
+;; (load-theme 'modus-vivendi)
 
 
 (menu-bar-mode 1)

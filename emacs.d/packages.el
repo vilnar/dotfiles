@@ -48,16 +48,14 @@
 (use-package vertico-prescient
   :ensure t
   :commands (vertico-prescient-mode prescient-persist-mode)
-  :init
-  (vertico-prescient-mode 1)
-  (prescient-persist-mode 1)
-  :config
-  (setq
-   prescient-filter-method '(literal regexp literal-prefix prefix initialism)
-   ;; prescient-filter-method '(literal)
-   prescient-sort-full-matches-first t
-   prescient-sort-length-enable t
-   prescient-history-length 1000))
+  :hook
+  (after-init . vertico-prescient-mode)
+  (after-init . prescient-persist-mode)
+  :custom
+  (prescient-filter-method '(literal regexp literal-prefix prefix initialism))
+  (prescient-sort-full-matches-first t)
+  (prescient-sort-length-enable t)
+  (prescient-history-length 1000))
 
 (use-package consult
   :ensure t
@@ -87,17 +85,16 @@
 ;; Highlight terms in code-comments such as TODO, FIXME
 (use-package hl-prog-extra
   :ensure t
-  :init
-  (add-hook 'prog-mode-hook #'hl-prog-extra-mode))
+  :hook
+  (prog-mode . hl-prog-extra-mode))
 
 
 
 ;; grep
 (use-package rg
   :ensure t
-  :config
-  (with-eval-after-load 'rg
-    (setq rg-ignore-ripgreprc nil)))
+  :custom
+    (rg-ignore-ripgreprc nil))
 
 (use-package multiple-cursors
   :ensure t)
@@ -105,7 +102,7 @@
 
 (use-package wrap-region
   :ensure t
-  :config
+  :custom
   (wrap-region-global-mode 1)
   (wrap-region-add-wrapper "`" "`" nil '(markdown-mode ruby-mode)))
 
@@ -181,8 +178,9 @@
 
 (use-package php-mode
   :ensure t
+  :custom
+  (php-mode-coding-style 'psr2)
   :config
-  (setq php-mode-coding-style 'psr2)
   (add-hook 'php-mode-hook
             (lambda ()
               (setq-local indent-tabs-mode nil)
@@ -275,13 +273,15 @@
 ;; ==========================================================
 ;; autocomplete new
 (use-package corfu
-  :ensure t
   :custom
-  (corfu-auto t)
+  (corfu-auto t)          ;; Enable auto completion
+  ;; (corfu-separator ?_) ;; Set to orderless separator, if not using space
   (corfu-auto-prefix 2)
-  (corfu-quit-no-match 'separator)
-  :hook
-  (after-init . global-corfu-mode))
+  :bind
+  ;; Another key binding can be used, such as S-SPC.
+  (:map corfu-map ("M-SPC" . corfu-insert-separator))
+  :init
+  (global-corfu-mode))
 
 ;; A few more useful configurations...
 (use-package emacs
@@ -302,13 +302,13 @@
   ;; useful beyond Corfu.
   (read-extended-command-predicate #'command-completion-default-include-p))
 
-;; Use Dabbrev with Corfu!
-(use-package dabbrev
-  :bind (("M-SPC" . dabbrev-completion))
-  :custom
-  (add-to-list 'dabbrev-ignored-buffer-regexps "\\` ")
-  ;; Available since Emacs 29 (Use `dabbrev-ignored-buffer-regexps' on older Emacs)
-  (add-to-list 'dabbrev-ignored-buffer-modes 'authinfo-mode)
-  (add-to-list 'dabbrev-ignored-buffer-modes 'doc-view-mode)
-  (add-to-list 'dabbrev-ignored-buffer-modes 'pdf-view-mode)
-  (add-to-list 'dabbrev-ignored-buffer-modes 'tags-table-mode))
+
+;; (use-package dabbrev
+;;   :bind (("M-SPC" . dabbrev-completion))
+;;   :custom
+;;   (add-to-list 'dabbrev-ignored-buffer-regexps "\\` ")
+;;   ;; Available since Emacs 29 (Use `dabbrev-ignored-buffer-regexps' on older Emacs)
+;;   (add-to-list 'dabbrev-ignored-buffer-modes 'authinfo-mode)
+;;   (add-to-list 'dabbrev-ignored-buffer-modes 'doc-view-mode)
+;;   (add-to-list 'dabbrev-ignored-buffer-modes 'pdf-view-mode)
+;;   (add-to-list 'dabbrev-ignored-buffer-modes 'tags-table-mode))
