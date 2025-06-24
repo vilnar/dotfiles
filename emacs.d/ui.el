@@ -14,8 +14,8 @@
 
 (scroll-bar-mode -1)
 
-(set-face-attribute 'default nil :family "Jetbrains Mono NL" :height 110)
-(set-face-attribute 'fixed-pitch nil :family "Jetbrains Mono NL")
-(set-face-attribute 'variable-pitch nil :family "Jetbrains Mono NL")
+(set-face-attribute 'default nil :family "JuliaMono" :height 110)
+(set-face-attribute 'fixed-pitch nil :family "JuliaMono")
+(set-face-attribute 'variable-pitch nil :family "JuliaMono")
 
 

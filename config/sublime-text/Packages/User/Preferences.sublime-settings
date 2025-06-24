@@ -79,8 +79,8 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  // "font_face": "JetBrains Mono NL",
-  "font_face": "JetBrains Mono NL Light",
+  // "font_face": "JetBrains Mono NL Light",
+  "font_face": "JuliaMono",
   "font_size": 11,
   "default_font_size": 11,
   // "line_padding_top": 1,
@@ -117,10 +117,10 @@
   ],
 
   "light_color_scheme": "Alabaster.sublime-color-scheme",
-  "light_font_face": "JetBrains Mono NL Light",
+  "light_font_face": "JuliaMono",
   "light_font_size": 11,
   "dark_color_scheme": "Mariana.sublime-color-scheme",
-  "dark_font_face": "JetBrains Mono NL Light",
+  "dark_font_face": "JuliaMono",
   "dark_font_size": 11,
   "color_scheme": "Mariana.sublime-color-scheme",
   // vintage
