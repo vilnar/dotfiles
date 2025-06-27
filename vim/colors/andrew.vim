@@ -153,8 +153,8 @@ hi LineNr ctermfg=102   ctermbg=NONE
 hi LineNr guifg=#818698 guibg=NONE
 
 " Yellow bracket matches
-hi MatchParen ctermfg=Yellow ctermbg=NONE cterm=bold
-hi MatchParen guifg=Yellow   guibg=NONE   gui=bold
+hi MatchParen ctermfg=Yellow ctermbg=NONE cterm=bold,underline
+hi MatchParen guifg=Yellow   guibg=NONE   gui=bold,underline
 
 " Common groups that link to default highlighting.
 hi link String         Constant
