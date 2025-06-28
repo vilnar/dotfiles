@@ -1,5 +1,5 @@
 (with-eval-after-load "ispell"
-  (setenv "LANG" "en_US.UTF-8")
+  (setenv "LANG" "en_US")
   (setq ispell-program-name "hunspell")
   (setq ispell-dictionary "en_US,uk_UA")
   (ispell-set-spellchecker-params)
