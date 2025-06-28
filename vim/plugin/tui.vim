@@ -49,9 +49,9 @@ colorscheme andrew
 
 def RunBackgroundToggle()
   if &background == "dark"
-    set background=light
+    colorscheme andrew-light
   else
-    set background=dark
+    colorscheme andrew
   endif
 enddef
 command BackgroundToggleLightDark RunBackgroundToggle()
