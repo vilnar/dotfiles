@@ -1,5 +1,5 @@
 " Name:             andrew-light
-" Description:      A fork of "morning" with some customizations
+" Description:      A fork of "quiet" with some customizations
 " Original Website: https://github.com/vim/colorschemes
 
 set background=light
