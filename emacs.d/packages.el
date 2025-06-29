@@ -31,8 +31,8 @@
 
 (use-package winum
   :ensure t
-  :init
-  (winum-mode))
+  :hook
+  (after-init . winum-mode))
 
 ;; complete command
 (use-package vertico
@@ -274,9 +274,9 @@
 ;; autocomplete
 (use-package company
   :ensure t
-  :init
-  (global-company-mode 1)
-  :config
+  :hook
+  (after-init . global-company-mode)
+  :custom
   (define-key company-active-map (kbd "C-n") 'company-select-next)
   (define-key company-active-map (kbd "C-p") 'company-select-previous)
   (define-key company-search-map (kbd "C-n") 'company-select-next)
