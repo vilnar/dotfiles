@@ -49,7 +49,8 @@ colorscheme andrew
 
 def RunBackgroundToggle()
   if &background == "dark"
-    colorscheme andrew-light
+    colorscheme lunaperche
+    set background=light
   else
     colorscheme andrew
   endif
