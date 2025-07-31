@@ -153,9 +153,12 @@
 ;; - copy, exit multiple-cursor (enter) and paste (set multiple-cursor) hit C-x r y (yank-rectangle)
 (global-unset-key (kbd "M-<down-mouse-1>"))
 (define-key my-keys-minor-mode-map (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
-(define-key my-keys-minor-mode-map [(meta down)] 'mc/mark-next-like-this)
-(define-key my-keys-minor-mode-map (kbd "C-d") #'mc/mark-next-like-this-word)
+(define-key my-keys-minor-mode-map [(control meta up)] 'mc/mark-previous-like-this)
+(define-key my-keys-minor-mode-map [(control meta down)] 'mc/mark-next-like-this)
+(define-key my-keys-minor-mode-map (kbd "M-c C-d") 'mc/mark-all-like-this)
+(define-key my-keys-minor-mode-map (kbd "C-d") 'mc/mark-next-like-this-word)
 (define-key my-keys-minor-mode-map (kbd "M-c C-d") 'mc/skip-to-next-like-this)
+(define-key my-keys-minor-mode-map (kbd "M-c C-l") 'mc/edit-ends-of-lines)
 
 
 (global-set-key (kbd "M-c 1") 'google-translate-at-point)

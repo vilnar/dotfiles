@@ -12,6 +12,10 @@ set fileencoding=utf-8
 set scrolloff=5
 set nocompatible
 
+set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
+set autoindent
+set backspace=indent,eol,start
+
 " fix security
 set modelines=0
 set nomodeline

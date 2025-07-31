@@ -3,8 +3,8 @@ vim9script
 set guioptions=cM
 
 if has("win32")
-  # set guifont=JetBrains\ Mono\ NL:h11
-  set guifont=JuliaMono:h11
+  set guifont=JetBrains\ Mono\ NL:h11
+  # set guifont=JuliaMono:h11
 
   # set guifont=DejaVu\ LGC\ Sans\ Mono:h11
   # set guifont=DejaVu\ Sans\ Mono:h11

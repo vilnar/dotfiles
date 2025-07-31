@@ -11,6 +11,7 @@ export def StatuslineExpr(): string
   var fformat  = "%{empty(&fileformat) ? '' : '[' .. &fileformat .. '] '}"
   var position = " %l:%c "
   var percent = " %P"
+  var bcount = "[%{len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))}] "
 
 
   var lang = "%{&iminsert ? '<UKR> ' : '<ENG> '}"
@@ -33,7 +34,7 @@ export def StatuslineExpr(): string
   # endif
   # echomsg printf("debug %s", color)
   # return color .. file_path .. modified .. readonly .. lang .. "%0*" .. separate .. win_nr .. fformat .. indentaition .. ftype .. position .. percent
-  return file_path .. modified .. readonly .. "%0*" .. separate .. lang ..  fformat .. indentaition .. ftype .. position .. percent
+  return file_path .. modified .. readonly .. "%0*" .. separate .. bcount .. lang ..  fformat .. indentaition .. ftype .. position .. percent
 enddef
 
 

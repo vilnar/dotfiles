@@ -4,7 +4,8 @@
       (set-face-attribute 'region nil :background "#c6dcf9")))
 
 ;; light
-(load-theme 'modus-operandi)
+(load-theme 'tsdh-light)
+;; (load-theme 'modus-operandi)
 ;; dark
 ;; (load-theme 'modus-vivendi)
 

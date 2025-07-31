@@ -15,11 +15,9 @@ set nonumber
 
 set cursorline
 # set cursorlineopt=number
-set cursorlineopt=number,screenline
-augroup InsertHl
-  autocmd InsertEnter * set cursorlineopt=number,line
-  autocmd InsertLeave * set cursorlineopt=number
-augroup END
+# set cursorlineopt=number,screenline
+set cursorlineopt=number,line
+
 
 # scroll with wrap, work with CTRL-E, CTRL-Y, mouse
 set smoothscroll
@@ -34,6 +32,9 @@ augroup MyColors
     # hi CursorColumn  cterm=NONE ctermfg=NONE guifg=NONE
     hi CurSearch gui=reverse cterm=reverse
   }
+  autocmd ColorScheme retrobox {
+    hi lCursor guifg=#000000 guibg=#c00058 gui=NONE cterm=NONE
+  }
   autocmd ColorScheme unokai {
     hi! link Label PreProc
     hi! link markdownCode String
@@ -45,14 +46,20 @@ if (v:versionlong > 9011243)
   set diffopt+=inline:char
 endif
 
-colorscheme andrew
+# colorscheme andrew
+g:zenburn_disable_Label_underline = 1
+colorscheme zenburn
+
 
 def RunBackgroundToggle()
   if &background == "dark"
-    colorscheme lunaperche
+    colorscheme retrobox
     set background=light
   else
-    colorscheme andrew
+    # colorscheme andrew
+    # colorscheme retrobox
+    # set background=dark
+    colorscheme zenburn
   endif
 enddef
 command BackgroundToggleLightDark RunBackgroundToggle()

@@ -68,9 +68,9 @@
 
   // file
   "ensure_newline_at_eof_on_save": true,
-  "fallback_encoding": "UTF-8",
-  "enable_hexadecimal_encoding": false,
-  // "fallback_encoding": "Cyrillic (Windows 1251)",
+  // "fallback_encoding": "UTF-8",
+  // "enable_hexadecimal_encoding": false,
+  "fallback_encoding": "Cyrillic (Windows 1251)",
   "tab_size": 4,
   "translate_tabs_to_spaces": false,
   "detect_indentation": true,
@@ -79,8 +79,8 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  // "font_face": "JetBrains Mono NL Light",
-  "font_face": "JuliaMono",
+  "font_face": "JetBrains Mono NL",
+  // "font_face": "JuliaMono",
   "font_size": 11,
   "default_font_size": 11,
   // "line_padding_top": 1,
@@ -107,6 +107,7 @@
   "find_in_files_context_lines": 3,
   // "scroll_context_lines": 5,
   "goto_anything_file_preview": false,
+  "word_separators": "./\\()\"-:,.;<>~!@#$%^&*|+=[]{}~?",
 
   // https://www.sublimetext.com/docs/spell_checking.html
   "dictionary": "Packages/Dictionaries/uk_UA.dic",
@@ -116,11 +117,11 @@
     "Vintage",
   ],
 
-  "light_color_scheme": "Alabaster.sublime-color-scheme",
-  "light_font_face": "JuliaMono",
+  "light_color_scheme": "fight-in-the-light.sublime-color-scheme",
+  "light_font_face": "JetBrains Mono NL",
   "light_font_size": 11,
   "dark_color_scheme": "Mariana.sublime-color-scheme",
-  "dark_font_face": "JuliaMono",
+  "dark_font_face": "JetBrains Mono NL",
   "dark_font_size": 11,
   "color_scheme": "Mariana.sublime-color-scheme",
   // vintage

@@ -203,11 +203,14 @@ execute "set <M-l>=\el"
 inoremap <M-l> <C-^>
 cnoremap <M-l> <C-^>
 
+set iskeyword+=\',`
 def ToggleImInsert()
   if &iminsert == 1
     set iminsert=0
+    # set iskeyword-=\'
   else
     set iminsert=1
+    # set iskeyword+=\'
   endif
 enddef
 nnoremap <M-l> :vim9cmd <SID>ToggleImInsert()<CR>

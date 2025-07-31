@@ -1,9 +1,5 @@
 vim9script
 
-set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
-set autoindent
-set backspace=indent,eol,start
-set fileformat=unix
 # set formatoptions=qjl
 augroup CustomFormatOption
   autocmd FileType * {

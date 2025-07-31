@@ -8,7 +8,9 @@ endif
 let g:colors_name = "andrew"
 
 " Red cursor when using an alternative keymap
-hi lCursor guibg=Red
+hi Cursor guifg=#000000 guibg=#87ff87 gui=NONE cterm=NONE
+hi lCursor guifg=#000000 guibg=#ff0000 gui=NONE cterm=NONE
+
 
 " White normal text
 hi Normal cterm=NONE ctermfg=White
@@ -115,8 +117,9 @@ hi CurSearch guibg=#0000ff guifg=#ffffff
 " hi StatusLineNC ctermfg=White ctermbg=NONE  cterm=NONE
 " hi StatusLineNC guifg=White   guibg=NONE gui=NONE
 
-hi StatusLine guifg=#ffffff guibg=#00008b gui=NONE cterm=NONE
-hi StatusLineNC guifg=#ffffff guibg=#3a3a3a gui=NONE cterm=NONE
+hi Statusline guifg=#c6c6c6 guibg=#000000 gui=bold,reverse cterm=bold,reverse
+hi StatuslineNC guifg=#767676 guibg=#000000 gui=reverse cterm=reverse
+
 
 hi VertSplit cterm=NONE ctermfg=White
 hi VertSplit gui=NONE   guifg=White
