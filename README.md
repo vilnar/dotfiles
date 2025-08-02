@@ -27,6 +27,7 @@ git submodule add {plugin_repo} emacs.d/site-lisp/{plugin_name}
 ```
 
 ### remove plugin
+
 ```
 git rm -f vim/pack/plugins/start/{plugin_name}
 rm -rf .git/modules/vim/pack/plugins/start/{plugin_name}

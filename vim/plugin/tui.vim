@@ -48,6 +48,9 @@ endif
 
 # colorscheme andrew
 g:zenburn_disable_Label_underline = 1
+g:zenburn_high_Contrast = 0
+g:zenburn_alternate_Visual = 0
+g:zenburn_disable_bold_CursorBars = 0
 colorscheme zenburn
 
 

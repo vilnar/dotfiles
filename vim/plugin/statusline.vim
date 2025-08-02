@@ -38,7 +38,16 @@ export def StatuslineExpr(): string
 enddef
 
 
-set laststatus=2
+set laststatus=1
 
-var StatusRef = StatuslineExpr
-&statusline = '%!' .. expand('<SID>') .. 'StatusRef()'
+# var StatusRef = StatuslineExpr
+# &statusline = '%!' .. expand('<SID>') .. 'StatusRef()'
+
+def ShowFileInfo()
+  var indentaition = &expandtab ? 'Space:' .. shiftwidth() : 'Tabs:' .. shiftwidth()
+  var ftype  = empty(&filetype) ? '' : 'FileType: ' .. &filetype
+  var fformat  = empty(&fileformat) ? '' : 'FileFormat: ' .. &fileformat
+  var result = printf("\nFILE INFO\n%s\n%s\n%s\n", indentaition, ftype, fformat)
+  echo result
+enddef
+command FileInfo ShowFileInfo()
