@@ -15,11 +15,15 @@ import "../lib/func.vim" as funcLib
 
 
 # OS clipboard yank and paste
-noremap <Leader>y "+y
-noremap <Leader>p "+p
-noremap <Leader>P "+P
-vnoremap <Leader>y "+y
-# noremap <Leader>d "+d
+# for wayland
+xnoremap <Leader>y y:call system("wl-copy", @")<cr>
+nnoremap <Leader>p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
+nnoremap <Leader>P :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>P
+
+# noremap <Leader>y "+y
+# noremap <Leader>p "+p
+# noremap <Leader>P "+P
+# vnoremap <Leader>y "+y
 
 # Easier moving of code blocks
 # use > and repeat by .
@@ -68,7 +72,8 @@ nnoremap <silent> <Down> gj
 
 
 def CopyWithoutNewLine()
-  execute ':normal ^vg_"+y'
+  execute ':normal ^vg_y'
+  call system("wl-copy", @")
   var lnum = line(".")
   echomsg "Copied line " .. lnum .. " to clipboard"
 
@@ -87,7 +92,8 @@ vnoremap <Leader>cl <Esc>:vim9cmd <SID>CopyWithoutNewLine()<CR>
 
 
 def CopyAll()
-  execute ":normal 1GVG\"+y"
+  execute ":normal 1GVG"
+  call system("wl-copy", @")
   echo "Current buffer copied to clipboard"
 enddef
 nnoremap <Leader>ca :vim9cmd <SID>CopyAll()<CR>

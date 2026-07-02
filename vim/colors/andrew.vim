@@ -1,3 +1,6 @@
+" Author Andrew Radev
+" source: https://git.sr.ht/~andrewradev/vimfiles/tree/main/item/colors/andrew.vim
+
 set background=dark
 hi clear
 

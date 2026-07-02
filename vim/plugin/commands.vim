@@ -67,7 +67,8 @@ def FernCopyPath()
   var helper = fern#helper#new()
   var node = helper.sync.get_cursor_node()
   var path = node._path
-  @+ = path
+  @0 = path
+  call system("wl-copy", @")
   echo "copied to clipboard path: " .. path
 enddef
 
@@ -75,7 +76,8 @@ def FernCopyName()
   var helper = fern#helper#new()
   var node = helper.sync.get_cursor_node()
   var path = node.name
-  @+ = path
+  @0 = path
+  call system("wl-copy", @")
   echo "copied to clipboard name: " .. path
 enddef
 
