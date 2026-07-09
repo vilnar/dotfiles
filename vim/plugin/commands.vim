@@ -37,13 +37,13 @@ augroup END
 
 
 def NetrwCopyPath()
-  var path = netrw#Call('NetrwFile', netrw#Call('NetrwGetWord')) 
+  var path = netrw#Call('NetrwFile', netrw#Call('NetrwGetWord'))
   @+ = path
   echo "copied to clipboard path: " .. path
 enddef
 
 def NetrwCopyFileName()
-  var path = netrw#Call('NetrwFile', netrw#Call('NetrwGetWord')) 
+  var path = netrw#Call('NetrwFile', netrw#Call('NetrwGetWord'))
   var name = ""
   if isdirectory(path)
     name = fnamemodify(path, ':p:h')

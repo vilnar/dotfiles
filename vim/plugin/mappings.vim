@@ -19,6 +19,7 @@ import "../lib/func.vim" as funcLib
 xnoremap <Leader>y y:call system("wl-copy", @")<cr>
 nnoremap <Leader>p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
 nnoremap <Leader>P :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>P
+vnoremap <Leader>p c<ESC>:let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
 
 # noremap <Leader>y "+y
 # noremap <Leader>p "+p
