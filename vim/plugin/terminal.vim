@@ -6,7 +6,8 @@ def OpenTerminal()
     echoerr "Not found directory: " .. path
     return
   endif
-  execute 'Start! gnome-terminal --working-directory=' .. path
+  execute 'Start! konsole --workdir=' .. path
+  # execute 'Start! gnome-terminal --working-directory=' .. path
   # execute 'Start! (alacritty --working-directory ' .. path .. ')&'
   # execute 'Start! xterm -e "cd ' .. path .. ' && bash"'
 enddef
@@ -31,7 +32,8 @@ def OpenFileInNewTerminal()
     echoerr "Not found file: " .. path
     return
   endif
-  execute 'Start! gnome-terminal -- vim ' .. path
+  execute 'Start! konsole -e "vim ' .. path .. '"'
+  # execute 'Start! gnome-terminal -- vim ' .. path
   # execute 'Start! (alacritty --command vim ' .. path .. ')&'
   # execute 'Start! xterm -e "vim ' .. path .. '"'
 enddef

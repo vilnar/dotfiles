@@ -42,7 +42,7 @@ augroup MyColors
 augroup end
 
 
-if (v:versionlong > 9011243)
+if (v:versionlong > 9011244)
   set diffopt+=inline:char
 endif
 

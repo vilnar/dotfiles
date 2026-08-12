@@ -210,7 +210,6 @@ execute "set <M-l>=\el"
 inoremap <M-l> <C-^>
 cnoremap <M-l> <C-^>
 
-set iskeyword+=\',`
 def ToggleImInsert()
   if &iminsert == 1
     set iminsert=0
@@ -244,6 +243,19 @@ endfor
 for c in range(char2nr('А'), char2nr('Я'))
   execute 'nnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardWaring<CR>'
   execute 'vnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardWaring<CR>'
+endfor
+
+
+def RunNumberCaseKeyboardWaring(char: string): string
+  echohl WarningMsg
+  echo "В normal mode введені NUMBER символ " .. char .. "! Будьте уважними!"
+  echohl None
+  return char
+enddef
+
+for c in range(char2nr('1'), char2nr('9'))
+  var char = nr2char(c)
+  execute "nnoremap <expr> " .. char .. " RunNumberCaseKeyboardWaring('" .. char .. "')"
 endfor
 
 
