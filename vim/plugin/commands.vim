@@ -38,7 +38,9 @@ augroup END
 
 def NetrwCopyPath()
   var path = netrw#Call('NetrwFile', netrw#Call('NetrwGetWord'))
-  @+ = path
+  # @+ = path
+  @0 = path
+  call system("wl-copy", @")
   echo "copied to clipboard path: " .. path
 enddef
 
@@ -50,7 +52,9 @@ def NetrwCopyFileName()
   else
     name = fnamemodify(path, ':t')
   endif
-  @+ = name
+  # @+ = name
+  @0 = path
+  call system("wl-copy", @")
   echo "copied to clipboard name: " .. name
 enddef
 

@@ -46,7 +46,8 @@ if (v:versionlong > 9011244)
   set diffopt+=inline:char
 endif
 
-colorscheme andrew
+# colorscheme andrew
+colorscheme retrobox
 # g:zenburn_disable_Label_underline = 1
 # g:zenburn_high_Contrast = 0
 # g:zenburn_alternate_Visual = 0

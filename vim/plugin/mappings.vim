@@ -214,23 +214,29 @@ def ToggleImInsert()
   if &iminsert == 1
     set iminsert=0
     # set iskeyword-=\'
+    echohl WarningMsg
+    echo "EN lang is enabled"
+    echohl None
   else
     set iminsert=1
     # set iskeyword+=\'
+    echohl WarningMsg
+    echo "Ukrainian lang is enabled"
+    echohl None
   endif
 enddef
 nnoremap <M-l> :vim9cmd <SID>ToggleImInsert()<CR>
 
 def RunKeyboardWaring()
   echohl WarningMsg
-  echo "В normal mode введені lowercase символи. Перевірте розкладку клавіатури ОС!"
+  echo "В normal mode введені UK - lowercase символи. Перевірте розкладку клавіатури ОС!"
   echohl None
 enddef
 command KeyboardWaring RunKeyboardWaring()
 
 def RunUppperCaseKeyboardWaring()
   echohl WarningMsg
-  echo "В normal mode введені UPPERCASE символи. Перевірте розкладку клавіатури ОС!"
+  echo "В normal mode введені UK - UPPERCASE символи. Перевірте розкладку клавіатури ОС!"
   echohl None
 enddef
 command UppperCaseKeyboardWaring RunUppperCaseKeyboardWaring()
@@ -248,7 +254,7 @@ endfor
 
 def RunNumberCaseKeyboardWaring(char: string): string
   echohl WarningMsg
-  echo "В normal mode введені NUMBER символ " .. char .. "! Будьте уважними!"
+  echo "In normal model NUMBER character " .. char .. " was entered! Be careful!"
   echohl None
   return char
 enddef
@@ -325,9 +331,12 @@ cnoremap <F9> <ESC>:set list!<CR>
 # clear whitespace in block
 vnoremap <F10> <Esc>:'<,'>WhiteSpaceTrailClear<CR>
 
-nnoremap <F12> :vim9cmd AsyncStop<CR>
-inoremap <F12> <ESC>:vim9cmd AsyncStop<CR>
-cnoremap <F12> <ESC>:vim9cmd AsyncStop<CR>
+nnoremap <F2> :vim9cmd AsyncStop<CR>
+inoremap <F2> <ESC>:vim9cmd AsyncStop<CR>
+cnoremap <F2> <ESC>:vim9cmd AsyncStop<CR>
+nnoremap <F12> :vim9cmd Goyo<CR>
+inoremap <F12> <ESC>:vim9cmd Goyo<CR>
+cnoremap <F12> <ESC>:vim9cmd Goyo<CR>
 
 
 

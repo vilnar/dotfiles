@@ -1,7 +1,9 @@
 vim9script
 
 def CopyPath(path: string)
-  @+ = path
+  # @+ = path
+  @0 = path
+  call system("wl-copy", @")
   echo "copied to clipboard path: " .. path
 enddef
 command PathDirCopyAbsolute :vim9cmd CopyPath(expand('%:p:h'))
@@ -22,7 +24,9 @@ def CopyPathWithLine(path: string, is_vim_format = false)
   if is_vim_format
     path_with_line = "+" .. line(".") .. " " .. path
   endif
-  @+ = path_with_line
+  # @+ = path_with_line
+  @0 = path_with_line
+  call system("wl-copy", @")
   echo "copied to clipboard path with line: " .. path_with_line
 enddef
 command PathFileWithLine :vim9cmd CopyPathWithLine(expand('%'))
