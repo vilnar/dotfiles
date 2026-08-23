@@ -47,12 +47,12 @@ if (v:versionlong > 9011244)
 endif
 
 # colorscheme andrew
-colorscheme retrobox
-# g:zenburn_disable_Label_underline = 1
-# g:zenburn_high_Contrast = 0
-# g:zenburn_alternate_Visual = 0
-# g:zenburn_disable_bold_CursorBars = 0
-# colorscheme zenburn
+# colorscheme retrobox
+g:zenburn_disable_Label_underline = 1
+g:zenburn_high_Contrast = 1
+g:zenburn_alternate_Visual = 1
+g:zenburn_disable_bold_CursorBars = 1
+colorscheme zenburn
 
 
 # def RunBackgroundToggle()

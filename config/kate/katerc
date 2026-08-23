@@ -11,13 +11,14 @@ Elide Tab Text=false
 Enable Context ToolView=false
 Expand Tabs=false
 Icon size for left and right sidebar buttons=32
-Last Session=n1
+Last Session=RR
 Modified Notification=false
 Mouse back button action=0
 Mouse forward button action=0
 Open New Tab To The Right Of Current=false
 Output History Limit=100
 Output With Date=false
+PinnedDocuments=
 Quickopen Filter Mode=0
 Quickopen List Mode=true
 Recent File List Entry Count=10
@@ -36,13 +37,16 @@ Show Url Nav Bar=false
 Show output view for message type=1
 Show text for left and right sidebar=false
 Show welcome view for new window=true
-Startup Session=last
+Startup Session=new
 Stash new unsaved files=true
 Stash unsaved file changes=true
 Sync section size with tab positions=false
 Tab Double Click New Document=true
 Tab Middle Click Close Document=true
 Tabbar Tab Limit=0
+
+[KDE]
+widgetStyle=Breeze
 
 [KTextEditor Document]
 Allow End of Line Detection=true
@@ -91,12 +95,12 @@ Fallback Encoding=ISO 8859-6
 
 [KTextEditor Renderer]
 Animate Bracket Matching=true
-Auto Color Theme Selection=true
-Color Theme=Breeze Light
+Auto Color Theme Selection=false
+Color Theme=Breeze Dark
 Line Height Multiplier=1
 Show Indentation Lines=false
 Show Whole Bracket Expression=false
-Text Font=Monospace,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Text Font=Hack,13,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Text Font Features=
 Word Wrap Marker=false
 
@@ -112,6 +116,8 @@ Bracket Match Preview=false
 Chars To Enclose Selection=<>(){}[]'"
 Cycle Through Bookmarks=true
 Default Mark Type=1
+Disable bracket match highlight if inactive=false
+Disable current line highlight if inactive=false
 Dynamic Word Wrap=true
 Dynamic Word Wrap Align Indent=80
 Dynamic Word Wrap At Static Marker=false
@@ -123,11 +129,12 @@ Enter To Insert Completion=true
 Fold First Line=false
 Folding Bar=true
 Folding Preview=true
+Hide cursor if inactive=false
 Icon Bar=false
 Input Mode=0
 Keyword Completion=true
 Line Modification=true
-Line Numbers=true
+Line Numbers=false
 Max Clipboard History Entries=20
 Maximum Search History Size=100
 Mouse Paste At Cursor Position=false
@@ -138,20 +145,20 @@ Scroll Bar Mini Map All=true
 Scroll Bar Mini Map Width=60
 Scroll Bar MiniMap=false
 Scroll Bar Preview=true
-Scroll Past End=false
+Scroll Past End=true
 Search/Replace Flags=140
 Shoe Line Ending Type in Statusbar=false
 Show Documentation With Completion=true
 Show File Encoding=true
 Show Folding Icons On Hover Only=true
-Show Line Count=false
+Show Line Count=true
 Show Scrollbars=0
 Show Statusbar Dictionary=true
 Show Statusbar Highlighting Mode=true
 Show Statusbar Input Mode=true
 Show Statusbar Line Column=true
 Show Statusbar Tab Settings=true
-Show Word Count=false
+Show Word Count=true
 Smart Copy Cut=true
 Statusbar Line Column Compact Mode=true
 Text Drag And Drop=true
@@ -171,18 +178,70 @@ RunPrefix=
 SetEditor=false
 
 [MainWindow]
+1745x982 screen: Height=906
+1745x982 screen: Width=872
 1745x982 screen: Window-Maximized=true
+1920x1080 screen: Height=1003
+1920x1080 screen: Width=959
 2 screens: Window-Maximized=true
+
+[PluginTextFilter]
+Completion list=wc -l
+Copy result=false
+Merge output=true
+New Document=true
+
+[Shortcut Schemes]
+Current Scheme=q
+
+[Shortcuts]
+hamburgerBar=none
+kate_mdi_focus_toolview_bookmarks=none
+kate_mdi_focus_toolview_diagnostics=none
+kate_mdi_focus_toolview_kate_plugin_katesearch=none
+kate_mdi_focus_toolview_kate_private_plugin_katefiletreeplugin=none
+kate_mdi_focus_toolview_kate_private_plugin_katekonsoleplugin=none
+kate_mdi_focus_toolview_kateproject=none
+kate_mdi_focus_toolview_kateprojectgit=none
+kate_mdi_focus_toolview_kateprojectinfo=none
+kate_mdi_focus_toolview_lspclient_symbol_outline=none
+kate_mdi_focus_toolview_output=none
+kate_mdi_hide_toolviews=none
+kate_mdi_show_toolview_button_bookmarks=none
+kate_mdi_show_toolview_button_diagnostics=none
+kate_mdi_show_toolview_button_kate_plugin_katesearch=none
+kate_mdi_show_toolview_button_kate_private_plugin_katefiletreeplugin=none
+kate_mdi_show_toolview_button_kate_private_plugin_katekonsoleplugin=none
+kate_mdi_show_toolview_button_kateproject=none
+kate_mdi_show_toolview_button_kateprojectgit=none
+kate_mdi_show_toolview_button_kateprojectinfo=none
+kate_mdi_show_toolview_button_lspclient_symbol_outline=none
+kate_mdi_show_toolview_button_output=none
+kate_mdi_sidebar_visibility=Ctrl+Alt+Shift+F
+kate_mdi_toolview_bookmarks=none
+kate_mdi_toolview_diagnostics=none
+kate_mdi_toolview_kate_plugin_katesearch=none
+kate_mdi_toolview_kate_private_plugin_katefiletreeplugin=none
+kate_mdi_toolview_kate_private_plugin_katekonsoleplugin=none
+kate_mdi_toolview_kateproject=none
+kate_mdi_toolview_kateprojectgit=none
+kate_mdi_toolview_kateprojectinfo=none
+kate_mdi_toolview_lspclient_symbol_outline=none
+kate_mdi_toolview_output=none
+mainToolBar=none
+
+[UiSettings]
+ColorScheme=BreezeDark
 
 [filetree]
 editShade=178,218,246
-listMode=false
+listMode=true
 middleClickToClose=false
 shadingEnabled=true
-showCloseButton=false
+showCloseButton=true
 showFullPathOnRoots=false
 showToolbar=true
-sortRole=0
+sortRole=259
 viewShade=193,207,208
 
 [lspclient]
@@ -209,3 +268,14 @@ SymbolExpand=true
 SymbolSort=false
 SymbolTree=true
 TypeFormatting=false
+
+[project]
+autoCMake=false
+autorepository=
+gitStatusDoubleClick=0
+gitStatusSingleClick=0
+index=false
+indexDirectory=
+multiProjectCompletion=false
+multiProjectGoto=false
+restoreProjectsForSessions=true

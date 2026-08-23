@@ -1,15 +1,15 @@
 {
   "disable_plugin_host_3.3": true,
   // autocomplete
-  "auto_complete": true,
-  "auto_complete_use_index": true,
+  "auto_complete": false,
+  "auto_complete_use_index": false,
   "auto_complete_commit_on_tab": true,
   // "tab_completion": true,
   // "auto_complete_cycle": true,
   // "auto_complete_preserve_order": "none",
 
   // index files
-  "index_files": true,
+  "index_files": false,
   "index_exclude_gitignore": false,
   "show_definitions": false,
 
@@ -17,7 +17,7 @@
   "adaptive_dividers": true,
   "gtk_client_side_window_decorations": true,
   "highlight_modified_tabs": true,
-  "theme": "Adaptive.sublime-theme",
+  "theme": "Default Dark.sublime-theme",
   "overlay_scroll_bars": "disabled",
   "show_tab_close_buttons": true,
   "show_line_column": "enabled",
@@ -37,10 +37,10 @@
   "fold_style": "force_indentation",
 
   // lines
-  "line_numbers": true,
+  "line_numbers": false,
   "highlight_line": true,
   // gutter
-  "margin": 0,
+  // "margin": 0,
   "caret_style": "smooth",
   "caret_extra_top": 2,
   "caret_extra_bottom": 2,
@@ -79,10 +79,10 @@
   // "trim_only_modified_white_space": true,
 
   // font
-  "font_face": "JetBrains Mono NL",
+  "font_face": "Hack",
   // "font_face": "JuliaMono",
-  "font_size": 11,
-  "default_font_size": 11,
+  "font_size": 13,
+  "default_font_size": 12,
   // "line_padding_top": 1,
   // "line_padding_bottom": 1,
 
@@ -110,7 +110,7 @@
   "word_separators": "./\\()\"-:,.;<>~!@#$%^&*|+=[]{}~?",
 
   // https://www.sublimetext.com/docs/spell_checking.html
-  "dictionary": "Packages/Dictionaries/uk_UA.dic",
+  "dictionary": "Dictionaries/uk_UA.dic",
   "ignored_packages":
   [
     "SublimeLinter",
@@ -118,11 +118,11 @@
   ],
 
   "light_color_scheme": "fight-in-the-light.sublime-color-scheme",
-  "light_font_face": "JetBrains Mono NL",
-  "light_font_size": 11,
+  "light_font_face": "Hack",
+  "light_font_size": 12,
   "dark_color_scheme": "Mariana.sublime-color-scheme",
-  "dark_font_face": "JetBrains Mono NL",
-  "dark_font_size": 11,
+  "dark_font_face": "Hack",
+  "dark_font_size": 12,
   "color_scheme": "Mariana.sublime-color-scheme",
   // vintage
   "vintage_start_in_command_mode": true,

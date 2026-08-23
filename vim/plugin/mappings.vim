@@ -31,6 +31,10 @@ vnoremap <Leader>p c<ESC>:let @"=substitute(system("wl-paste --no-newline"), '<C
 # vnoremap < <gv
 # vnoremap > >gv
 
+nnoremap ]<Space> :call append(line('.'), '')<CR>
+nnoremap [<Space> :call append(line('.') - 1, '')<CR>
+
+
 # don't use Ex mode, use Q for formatting
 nnoremap Q <NOP>
 nnoremap gq <NOP>
@@ -58,12 +62,8 @@ inoremap <M-k> <Esc>:m .-2<CR>==gi
 vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
 
-# save
-nnoremap <M-s> :w<CR>
-inoremap <M-s> <Esc>:w<CR>
-vnoremap <M-s> :w<CR>
-
-inoremap <M-[> <Esc>
+# save faster
+nnoremap <Leader>w :update<CR>
 
 # for wrap lines
 # nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
@@ -227,34 +227,34 @@ def ToggleImInsert()
 enddef
 nnoremap <M-l> :vim9cmd <SID>ToggleImInsert()<CR>
 
-def RunKeyboardWaring()
+def RunKeyboardUkWaring()
   echohl WarningMsg
   echo "В normal mode введені UK - lowercase символи. Перевірте розкладку клавіатури ОС!"
   echohl None
 enddef
-command KeyboardWaring RunKeyboardWaring()
+command KeyboardUkWaring RunKeyboardUkWaring()
 
-def RunUppperCaseKeyboardWaring()
+def RunUppperCaseKeyboardUkWaring()
   echohl WarningMsg
   echo "В normal mode введені UK - UPPERCASE символи. Перевірте розкладку клавіатури ОС!"
   echohl None
 enddef
-command UppperCaseKeyboardWaring RunUppperCaseKeyboardWaring()
+command UppperCaseKeyboardUkWaring RunUppperCaseKeyboardUkWaring()
 
 for c in range(char2nr('а'), char2nr('я'))
-  execute 'nnoremap ' .. nr2char(c) .. ' :KeyboardWaring<CR>'
-  execute 'vnoremap ' .. nr2char(c) .. ' :KeyboardWaring<CR>'
+  execute 'nnoremap ' .. nr2char(c) .. ' :KeyboardUkWaring<CR>'
+  execute 'vnoremap ' .. nr2char(c) .. ' :KeyboardUkWaring<CR>'
 endfor
 
 for c in range(char2nr('А'), char2nr('Я'))
-  execute 'nnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardWaring<CR>'
-  execute 'vnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardWaring<CR>'
+  execute 'nnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardUkWaring<CR>'
+  execute 'vnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardUkWaring<CR>'
 endfor
 
 
 def RunNumberCaseKeyboardWaring(char: string): string
   echohl WarningMsg
-  echo "In normal model NUMBER character " .. char .. " was entered! Be careful!"
+  echo "In normal mode NUMBER character " .. char .. " was entered! Be careful!"
   echohl None
   return char
 enddef
@@ -265,14 +265,24 @@ for c in range(char2nr('1'), char2nr('9'))
 endfor
 
 
+def RunUpperCaseKeyboardWaring(char: string): string
+  echohl WarningMsg
+  echo "In normal mode UPPERCASE character " .. char .. " was entered! Be careful!"
+  echohl None
+  return char
+enddef
+for c in range(char2nr('A'), char2nr('Z'))
+  var char = nr2char(c)
+  execute "nnoremap <expr> " .. char .. " RunUpperCaseKeyboardWaring('" .. char .. "')"
+endfor
+
+
 # LAYOUT -----------------------------------------------------------------------------
 # move selected to new tab
 xnoremap <leader>ms :<C-U> vim9cmd <SID>layoutLib.OpenNewTabWithSelectedText()<CR>
 # open buffer in new tab
 nnoremap <Leader>mt :tab split<BAR>diffoff<CR>
 
-# nnoremap <Leader>w <C-w>w
-nnoremap <Leader>w <C-w>p
 nnoremap <Leader>1 1<C-w>w
 nnoremap <Leader>2 2<C-w>w
 nnoremap <Leader>3 3<C-w>w
@@ -308,6 +318,8 @@ vnoremap <Leader>rw y:vim9cmd <SID>searchReplaceLib.ReplaceSelectedInput(1)<CR>
 vnoremap <Leader>rv <Esc>:'<,'>s/\<\>\C//gc<left><left><left><left><left><left><left><left>
 
 
+# escape
+inoremap <M-[> <Esc>
 
 # F keys -----------------------------------------------------------------------------
 inoremap <F1> <Esc>
