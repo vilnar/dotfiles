@@ -1,6 +1,6 @@
 vim9script
 
-import "../lib/fzf.vim" as fzfLib
+# import "../lib/fzf.vim" as fzfLib
 import "../lib/grep.vim" as grepLib
 import "../lib/layout.vim" as layoutLib
 import "../lib/quickfix.vim" as quickfixLib
@@ -129,9 +129,10 @@ nnoremap <Leader>qq :bw %<CR>
 nnoremap [b :bprev<CR>
 nnoremap ]b :bnext<CR>
 nnoremap \b :ls<CR>:b
-# nnoremap <leader>b :ls<CR>:b<space>
-# nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>b :BufExplorer<CR>
+
+nnoremap <leader>b :ls<CR>:b<space>
+
+# nnoremap <leader>b :BufExplorer<CR>
 
 # FILE -----------------------------------------------------------------------------
 # Open current file with Encode
@@ -159,23 +160,21 @@ vnoremap <Leader>fp y:vim9cmd FilesBuffer !find * -not -path "./.git/*" -path "*
 
 
 # FZF -----------------------------------------------------------------------------
-# if has("unix")
-  nnoremap <leader>; :Commands<CR>
-  nnoremap <leader>tt :CustomFzfTags <C-R>=expand("<cword>")<CR><CR>
-  nnoremap <leader>tb :CustomFzfBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
-  nnoremap <leader>tf :CustomFzfBufferTags<CR>
+#  nnoremap <leader>; :Commands<CR>
+#  nnoremap <leader>tt :CustomFzfTags <C-R>=expand("<cword>")<CR><CR>
+#  nnoremap <leader>tb :CustomFzfBufferTagsCaseSensitive <C-R>=expand("<cword>")<CR><CR>
+#  nnoremap <leader>tf :CustomFzfBufferTags<CR>
+#
+#  nnoremap <leader>ff :CustomFzfFiles<CR>
+#  xnoremap <leader>ff :<C-U> vim9cmd <SID>fzfLib.GotoSelectionFzf()<CR>
+#  nnoremap <leader>fc :CustomFzfFiles <C-R>=expand("%:h")<CR>/<CR>
+#  nnoremap <expr> <leader>fu ':CustomFzfFiles<CR>' .. expand('<cword>')
 
-  nnoremap <leader>ff :CustomFzfFiles<CR>
-  xnoremap <leader>ff :<C-U> vim9cmd <SID>fzfLib.GotoSelectionFzf()<CR>
-  nnoremap <leader>fc :CustomFzfFiles <C-R>=expand("%:h")<CR>/<CR>
-  nnoremap <expr> <leader>fu ':CustomFzfFiles<CR>' .. expand('<cword>')
-# else
-  # default find
-  # nnoremap <leader>; :
-  # nnoremap <leader>ff :find **/*
-  # nnoremap <expr> <leader>fu ':find **/*' .. expand('<cword>')
-  # nnoremap <leader>mm :marks<CR>
-# endif
+# default find
+nnoremap <leader>; :
+nnoremap <leader>ff :find **/*
+nnoremap <expr> <leader>fu ':find **/*' .. expand('<cword>')
+nnoremap <leader>mm :marks<CR>
 
 
 
@@ -343,12 +342,12 @@ cnoremap <F9> <ESC>:set list!<CR>
 # clear whitespace in block
 vnoremap <F10> <Esc>:'<,'>WhiteSpaceTrailClear<CR>
 
-nnoremap <F2> :vim9cmd AsyncStop<CR>
-inoremap <F2> <ESC>:vim9cmd AsyncStop<CR>
-cnoremap <F2> <ESC>:vim9cmd AsyncStop<CR>
-nnoremap <F12> :vim9cmd Goyo<CR>
-inoremap <F12> <ESC>:vim9cmd Goyo<CR>
-cnoremap <F12> <ESC>:vim9cmd Goyo<CR>
+# nnoremap <F2> :vim9cmd AsyncStop<CR>
+# inoremap <F2> <ESC>:vim9cmd AsyncStop<CR>
+# cnoremap <F2> <ESC>:vim9cmd AsyncStop<CR>
+# nnoremap <F12> :vim9cmd Goyo<CR>
+# inoremap <F12> <ESC>:vim9cmd Goyo<CR>
+# cnoremap <F12> <ESC>:vim9cmd Goyo<CR>
 
 
 
@@ -362,10 +361,9 @@ nnoremap <leader><backspace> @:
 
 
 # PLUGINS -----------------------------------------------------------------------------
-# nnoremap <leader>nt :Ex<CR>
-# nnoremap <leader>nf :Vex<CR>
-# nnoremap <leader>nt :NERDTreeToggle<CR>
-# nnoremap <leader>nf :NERDTreeFind<CR>
-nnoremap <leader>nt :Fern . -drawer<CR>
-nnoremap <leader>nf :Fern . -drawer -reveal=%<CR>
+nnoremap <leader>nt :Ex<CR>
+nnoremap <leader>nf :Vex<CR>
+
+# nnoremap <leader>nt :Fern . -drawer<CR>
+# nnoremap <leader>nf :Fern . -drawer -reveal=%<CR>
 

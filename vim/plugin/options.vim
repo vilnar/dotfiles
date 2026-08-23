@@ -39,7 +39,7 @@ var options = {
     vimscript: { enable: true, priority: 11 },
     ngram: { enable: false },
 }
-autocmd VimEnter * g:VimCompleteOptionsSet(options)
+# autocmd VimEnter * g:VimCompleteOptionsSet(options)
 
 
 g:bufExplorerShowNoName = 1

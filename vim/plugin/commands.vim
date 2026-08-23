@@ -123,7 +123,7 @@ command Messages :enew | put = execute('messages')
 
 
 def RunFeeMode()
-  Goyo
+  # Goyo
 enddef
 command FreeMode RunFeeMode()
 
