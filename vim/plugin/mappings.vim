@@ -226,32 +226,32 @@ def ToggleImInsert()
 enddef
 nnoremap <M-l> :vim9cmd <SID>ToggleImInsert()<CR>
 
-def RunKeyboardUkWaring()
+def RunKeyboardUkWarning()
   echohl WarningMsg
   echo "В normal mode введені UK - lowercase символи. Перевірте розкладку клавіатури ОС!"
   echohl None
 enddef
-command KeyboardUkWaring RunKeyboardUkWaring()
+command KeyboardUkWarning RunKeyboardUkWarning()
 
-def RunUppperCaseKeyboardUkWaring()
+def RunUppperCaseKeyboardUkWarning()
   echohl WarningMsg
   echo "В normal mode введені UK - UPPERCASE символи. Перевірте розкладку клавіатури ОС!"
   echohl None
 enddef
-command UppperCaseKeyboardUkWaring RunUppperCaseKeyboardUkWaring()
+command UppperCaseKeyboardUkWarning RunUppperCaseKeyboardUkWarning()
 
 for c in range(char2nr('а'), char2nr('я'))
-  execute 'nnoremap ' .. nr2char(c) .. ' :KeyboardUkWaring<CR>'
-  execute 'vnoremap ' .. nr2char(c) .. ' :KeyboardUkWaring<CR>'
+  execute 'nnoremap ' .. nr2char(c) .. ' :KeyboardUkWarning<CR>'
+  execute 'vnoremap ' .. nr2char(c) .. ' :KeyboardUkWarning<CR>'
 endfor
 
 for c in range(char2nr('А'), char2nr('Я'))
-  execute 'nnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardUkWaring<CR>'
-  execute 'vnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardUkWaring<CR>'
+  execute 'nnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardUkWarning<CR>'
+  execute 'vnoremap ' .. nr2char(c) .. ' :UppperCaseKeyboardUkWarning<CR>'
 endfor
 
 
-def RunNumberCaseKeyboardWaring(char: string): string
+def RunNumberCaseKeyboardWarning(char: string): string
   echohl WarningMsg
   echo "In normal mode NUMBER character " .. char .. " was entered! Be careful!"
   echohl None
@@ -260,11 +260,11 @@ enddef
 
 for c in range(char2nr('1'), char2nr('9'))
   var char = nr2char(c)
-  execute "nnoremap <expr> " .. char .. " RunNumberCaseKeyboardWaring('" .. char .. "')"
+  execute "nnoremap <expr> " .. char .. " RunNumberCaseKeyboardWarning('" .. char .. "')"
 endfor
 
 
-def RunUpperCaseKeyboardWaring(char: string): string
+def RunUpperCaseKeyboardWarning(char: string): string
   echohl WarningMsg
   echo "In normal mode UPPERCASE character " .. char .. " was entered! Be careful!"
   echohl None
@@ -272,7 +272,7 @@ def RunUpperCaseKeyboardWaring(char: string): string
 enddef
 for c in range(char2nr('A'), char2nr('Z'))
   var char = nr2char(c)
-  execute "nnoremap <expr> " .. char .. " RunUpperCaseKeyboardWaring('" .. char .. "')"
+  execute "nnoremap <expr> " .. char .. " RunUpperCaseKeyboardWarning('" .. char .. "')"
 endfor
 
 
