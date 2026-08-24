@@ -62,3 +62,34 @@ enddef
 
 command! -nargs=* -complete=shellcmd Dispatch Dispatch(<q-args>)
 
+
+
+
+def StartCommand(args: string, bang: bool)
+    var cmd = !empty(args) ? args : &makeprg
+    cmd = substitute(cmd, '\s\+\$\*', '', 'g')
+
+    if empty(cmd)
+        echoerr "No command provided and 'makeprg' is empty!"
+        return
+    endif
+
+
+    var current_win_id = win_getid()
+
+    var options = {
+        term_name: 'Start: ' .. cmd,
+        curwin: 0,
+        norestore: 1,
+    }
+
+    var term_buf = term_start(['sh', '-c', cmd], options)
+
+    if bang
+        win_gotoid(current_win_id)
+        echomsg "Started in background: " .. cmd
+    endif
+enddef
+
+command! -nargs=* -bang -complete=shellcmd Start StartCommand(<q-args>, !empty('<bang>'))
+
