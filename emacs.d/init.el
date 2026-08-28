@@ -78,7 +78,7 @@
 (load custom-file)
 
 (load "~/.emacs.d/default-packages.el" t)
-(load "~/.emacs.d/packages.el" t)
+;; (load "~/.emacs.d/packages.el" t)
 (load "~/.emacs.d/func.el" t)
 (load "~/.emacs.d/spec.el" t)
 (load "~/.emacs.d/lisp/files.el" t)

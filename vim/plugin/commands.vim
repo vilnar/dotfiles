@@ -41,7 +41,7 @@ def NetrwCopyPath()
   # @+ = path
   @0 = path
   call system("wl-copy", @")
-  echo "copied to clipboard path: " .. path
+  echomsg "copied to clipboard path: " .. path
 enddef
 
 def NetrwCopyFileName()
@@ -55,7 +55,7 @@ def NetrwCopyFileName()
   # @+ = name
   @0 = path
   call system("wl-copy", @")
-  echo "copied to clipboard name: " .. name
+  echomsg "copied to clipboard name: " .. name
 enddef
 
 def NetrwMapping()

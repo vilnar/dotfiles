@@ -9,7 +9,7 @@ augroup END
 
 command IndentConvertToSpace :setlocal expandtab|retab
 command IndentConvertToTabs :setlocal noexpandtab|%retab!
-command IndentUse4Spaces :set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
+command IndentUse4Spaces :setlocal tabstop=8 softtabstop=4 shiftwidth=4 expandtab
 command IndentUse2Spaces :setlocal tabstop=8 softtabstop=2 shiftwidth=2 expandtab
 command IndentUse8Tab :setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 command EditorShowTabSize :echo &tabstop
@@ -22,3 +22,6 @@ command EncodeDetectThis :!chardet %
 command EncodingSupportedShow :help encoding-values
 command EncodingShow :echo exists(&fileencoding) ? &fileencoding : &encoding
 command CdToFile :execute 'cd ' .. expand('%:p:h')
+
+command EditorSetKeywordUk :setlocal iskeyword+=\',`
+

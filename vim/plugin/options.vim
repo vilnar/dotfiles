@@ -3,6 +3,11 @@ vim9script
 # :help netrw
 # g:loaded_netrw = 0
 # g:loaded_netrwPlugin = 0
+g:netrw_banner = 0
+g:netrw_hide = 0
+g:netrw_liststyle = 3
+g:netrw_browse_split = 4
+g:netrw_winsize = 20
 
 # don't open archive files
 g:loaded_gzip = 0

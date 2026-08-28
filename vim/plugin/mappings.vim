@@ -128,7 +128,7 @@ nnoremap <Leader>qq :bw %<CR>
 # nnoremap <Leader>bl :setlocal nomore <Bar> :ls t <Bar> :setlocal more <CR>:b<Space>
 nnoremap [b :bprev<CR>
 nnoremap ]b :bnext<CR>
-nnoremap \b :ls<CR>:b
+nnoremap \b :b#<CR>
 
 nnoremap <leader>b :ls<CR>:b<space>
 

@@ -35,19 +35,23 @@
 
   // fold
   "fold_style": "force_indentation",
+  "fade_fold_buttons": false,
 
   // lines
-  "line_numbers": false,
+  "line_numbers": true,
   "highlight_line": true,
   // gutter
   // "margin": 0,
+  "gutter": true,
+  "highlight_gutter": true,
+  "mini_diff": "auto",
+
+  // cursor
   "caret_style": "smooth",
   "caret_extra_top": 2,
   "caret_extra_bottom": 2,
   "caret_extra_width": 2,
   "block_caret": false,
-  "gutter": true,
-  "mini_diff": "auto",
 
   // wrap
   "rulers": [120],
@@ -82,7 +86,7 @@
   "font_face": "Hack",
   // "font_face": "JuliaMono",
   "font_size": 13,
-  "default_font_size": 12,
+  "default_font_size": 13,
   // "line_padding_top": 1,
   // "line_padding_bottom": 1,
 
@@ -122,7 +126,7 @@
   "light_font_size": 12,
   "dark_color_scheme": "Mariana.sublime-color-scheme",
   "dark_font_face": "Hack",
-  "dark_font_size": 12,
+  "dark_font_size": 13,
   "color_scheme": "Mariana.sublime-color-scheme",
   // vintage
   "vintage_start_in_command_mode": true,
