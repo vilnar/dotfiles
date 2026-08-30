@@ -16,7 +16,7 @@
 
 (scroll-bar-mode -1)
 
-(set-face-attribute 'default nil :family "Hack" :height 130)
+(set-face-attribute 'default nil :family "Hack" :height 140)
 (set-face-attribute 'fixed-pitch nil :family "Hack")
 (set-face-attribute 'variable-pitch nil :family "Hack")
 

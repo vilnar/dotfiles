@@ -46,27 +46,26 @@ if (v:versionlong > 9011244)
   set diffopt+=inline:char
 endif
 
-# colorscheme andrew
-# colorscheme retrobox
+
 g:zenburn_disable_Label_underline = 1
-g:zenburn_high_Contrast = 1
+g:zenburn_high_Contrast = 0
 g:zenburn_alternate_Visual = 1
 g:zenburn_disable_bold_CursorBars = 1
 colorscheme zenburn
 
 
-# def RunBackgroundToggle()
-#   if &background == "dark"
-#     colorscheme retrobox
-#     set background=light
-#   else
-#     # colorscheme andrew
-#     # colorscheme retrobox
-#     # set background=dark
-#     colorscheme zenburn
-#   endif
-# enddef
-# command BackgroundToggleLightDark RunBackgroundToggle()
+def RunBackgroundToggle()
+  if &background == "dark"
+    # set background=light
+    # colorscheme lunaperche
+    g:zenburn_high_Contrast = 0
+    colorscheme zenburn
+  else
+    g:zenburn_high_Contrast = 1
+    colorscheme zenburn
+  endif
+enddef
+command BackgroundToggleLightDark RunBackgroundToggle()
 
 
 
